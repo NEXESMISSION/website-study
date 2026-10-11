@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Exams · Course Folder</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/exam.css">
+</head>
+<body>
+<header class="x-top"><div class="x-top-in"><nav class="crumbs"><a href="../index.html">Course Folder</a><span class="sep">/</span><span class="here">Exams</span></nav></div></header>
+
+<div class="home">
+  <header class="home-hero">
+    <span class="kicker" style="color:var(--muted)">LBA 1 · Group Sigma · Fall 2026</span>
+    <h1>Exams</h1>
+    <p>Full practice exams built like the real ones: timed, mixed formats, marked out of 20. After each one you get your score per topic and a list of weak spots, with links to the lesson sections to fix them. Do each exam in exam mode first. Your first mark is the honest one.</p>
+  </header>
+
+  <section style="display:flex;flex-direction:column;gap:14px">
+    <h2 style="font-size:1.4rem;font-weight:800">Your weak spots across all exams</h2>
+    <p class="x-note" id="ws-note">Based on your latest attempt of each exam.</p>
+    <div id="ws"></div>
+    <div class="x-actions"><button class="x-btn" id="copy-all">Copy all my results for Claude</button><span class="x-copied" id="copied"></span></div>
+    <textarea class="x-text-copy" id="all-text" readonly style="display:none"></textarea>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:14px">
+    <h2 style="font-size:1.4rem;font-weight:800">This week</h2>
+    <div class="x-hub-grid" id="g-week"></div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:14px">
+    <h2 style="font-size:1.4rem;font-weight:800">Midterm mocks (week of 2 Nov)</h2>
+    <div class="x-hub-grid" id="g-mid"></div>
+  </section>
+
+  <p class="home-foot">Results are saved in this browser. Retake an exam a few days after studying your weak spots: your best mark and your latest mark are both kept.</p>
+</div>
+
+<script>
+const CATALOG = [
+  { id: 'micro-quiz1-A', course: 'Microeconomics', cls: 'micro', title: 'Quiz 1 · Practice exam A', covers: 'Ch 1–2', duration: 45, group: 'week', when: 'Quiz 1 · check the date' },
+  { id: 'micro-quiz1-B', course: 'Microeconomics', cls: 'micro', title: 'Quiz 1 · Practice exam B', covers: 'Ch 1–2', duration: 45, group: 'week', when: 'Quiz 1 · check the date' },
+  { id: 'fa-test1-A', course: 'Financial Accounting I', cls: 'fa', title: 'Test 1 · Practice exam A', covers: 'Ch 1', duration: 60, group: 'week', when: 'Test Fri 9 Oct' },
+  { id: 'fa-test1-B', course: 'Financial Accounting I', cls: 'fa', title: 'Test 1 · Practice exam B', covers: 'Ch 1 + start of Ch 2', duration: 60, group: 'week', when: 'Test Fri 9 Oct' },
+  { id: 'fa-quiz2-A', course: 'Financial Accounting I', cls: 'fa', title: 'Quiz 2 · Practice A', covers: 'Ch 2 · The Recording Process', duration: 45, group: 'week', when: 'Test Fri 16 Oct' },
+  { id: 'math1-quiz2-A', course: 'Mathematics I', cls: 'math', title: 'Quiz Ch 2 · Practice A', covers: 'Ch 2 · The Derivative', duration: 30, group: 'week', when: 'Quiz Ch 2 · date to confirm' },
+  { id: 'math1-quiz1-A', course: 'Mathematics I', cls: 'math', title: 'Quiz Ch 1 · Practice A', covers: 'Ch 1 · Functions and Change', duration: 30, group: 'week', when: 'Quiz Fri 9 Oct' },
+  { id: 'math1-quiz1-B', course: 'Mathematics I', cls: 'math', title: 'Quiz Ch 1 · Practice B', covers: 'Ch 1 · Functions and Change', duration: 30, group: 'week', when: 'Quiz Fri 9 Oct' },
+  { id: 'micro-midterm-A', course: 'Microeconomics', cls: 'micro', title: 'Midterm mock A', covers: 'Ch 1–3', duration: 90, group: 'mid', when: 'Midterm week 8' },
+  { id: 'micro-midterm-B', course: 'Microeconomics', cls: 'micro', title: 'Midterm mock B', covers: 'Ch 1–3 + Ch 6 elasticity', duration: 90, group: 'mid', when: 'Midterm week 8' },
+  { id: 'fa-midterm-A', course: 'Financial Accounting I', cls: 'fa', title: 'Midterm mock A', covers: 'Ch 1–2', duration: 90, group: 'mid', when: 'Midterm week 8' },
+  { id: 'fa-midterm-B', course: 'Financial Accounting I', cls: 'fa', title: 'Midterm mock B', covers: 'Ch 1–3 · adjusting entries & statements', duration: 90, group: 'mid', when: 'Midterm week 8' },
+  { id: 'math1-midterm-A', course: 'Mathematics I', cls: 'math', title: 'Midterm mock A', covers: 'Ch 1–2', duration: 90, group: 'mid', when: 'Midterm week 8' },
+  { id: 'math1-midterm-B', course: 'Mathematics I', cls: 'math', title: 'Midterm mock B', covers: 'Ch 1–3 · derivative rules', duration: 90, group: 'mid', when: 'Midterm week 8' },
+  { id: 'finmath-midterm-A', course: 'Financial Mathematics', cls: 'finmath', title: 'Midterm mock A', covers: 'Ch I · Simple interest', duration: 75, group: 'mid', when: 'Midterm week 8' },
+  { id: 'mgmt-midterm-A', course: 'Principles of Management I', cls: 'mgmt', title: 'Midterm mock A', covers: 'Ch 1–2', duration: 60, group: 'mid', when: 'Midterm week 8' }
+];
+const read = k => { try { return JSON.parse(localStorage.getItem(k) || 'null'); } catch (e) { return null; } };
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const fixLink = l => l ? l.replace(/^\.\.\//, '../') : '';
+
+function card(e) {
+  const h = read('course-folder:exam:' + e.id) || { attempts: [] };
+  const at = h.attempts || [];
+  const best = at.length ? Math.max(...at.map(a => a.score20)) : null;
+  const last = at.length ? at[at.length - 1] : null;
+  const draft = read('course-folder:exam:' + e.id + ':draft');
+  const chip = best === null ? '<span class="chip">Not taken yet</span>' : `<span class="chip ${best >= 14 ? 'solid' : best >= 10 ? 'review' : 'weak'}">Best ${best.toFixed(1)}/20</span>`;
+  return `<article class="x-card ${e.cls}"><div class="row"><span class="chip c">${esc(e.course)}</span><span class="chip hot">${esc(e.when)}</span></div>
+    <h3>${esc(e.title)}</h3><span class="sub">${esc(e.covers)} · ${e.duration} min${last ? ` · last: <span class="score">${last.score20.toFixed(1)}/20</span> (${at.length} attempt${at.length > 1 ? 's' : ''})` : ''}</span>
+    <div class="row">${chip}${draft && draft.start ? '<span class="chip review">In progress</span>' : ''}</div>
+    <div class="row"><a class="x-btn primary small" href="${e.id}.html">${at.length ? 'Retake' : 'Start'}</a></div></article>`;
+}
+document.getElementById('g-week').innerHTML = CATALOG.filter(e => e.group === 'week').map(card).join('');
+document.getElementById('g-mid').innerHTML = CATALOG.filter(e => e.group === 'mid').map(card).join('');
+
+// weak spots: merge topics from the latest attempt of each exam
+const merged = {}; const lines = []; let taken = 0;
+CATALOG.forEach(e => {
+  const h = read('course-folder:exam:' + e.id); const at = h && h.attempts; if (!at || !at.length) return;
+  taken++; const last = at[at.length - 1];
+  lines.push(`${e.course} — ${e.title} (${e.covers}): ${last.score20.toFixed(2)}/20${last.pending ? ' (self-marking unfinished)' : ''}`);
+  Object.values(last.topics || {}).forEach(t => {
+    const k = e.course + '|' + t.label;
+    merged[k] = merged[k] || { course: e.course, cls: e.cls, label: t.label, got: 0, max: 0, review: t.review };
+    merged[k].got += t.got; merged[k].max += t.max;
+  });
+});
+const topics = Object.values(merged).map(t => ({ ...t, pct: t.max ? t.got / t.max : 0 })).sort((a, b) => a.pct - b.pct);
+const ws = document.getElementById('ws');
+if (!taken) {
+  ws.innerHTML = '<div class="x-weak none"><b>No exam taken yet.</b><span>Start with this week\'s practice exams. After your first one, your weak topics will appear here, ranked from weakest to strongest.</span></div>';
+  document.getElementById('ws-note').style.display = 'none';
+} else {
+  const bar = p => p < 0.6 ? 'var(--bad)' : p < 0.8 ? 'var(--warn)' : 'var(--ok)';
+  const chip = p => p < 0.6 ? '<span class="chip weak">Weak</span>' : p < 0.8 ? '<span class="chip review">Review</span>' : '<span class="chip solid">Solid</span>';
+  ws.innerHTML = `<div class="table-wrap"><table class="x-topics"><thead><tr><th>Course</th><th>Topic</th><th class="n">Points</th><th>Level</th><th></th><th></th></tr></thead><tbody>${topics.map(t => `<tr><td>${esc(t.course)}</td><td>${esc(t.label)}</td><td class="n">${Math.round(t.got * 100) / 100}/${Math.round(t.max * 100) / 100}</td><td><div class="x-bar"><i style="width:${Math.round(t.pct * 100)}%;background:${bar(t.pct)}"></i></div></td><td>${chip(t.pct)}</td><td>${t.review ? `<a href="${esc(fixLink(t.review))}">Review</a>` : ''}</td></tr>`).join('')}</tbody></table></div>`;
+}
+const allText = ['MY EXAM RESULTS (latest attempt of each exam)', ...lines, '', 'Topics, weakest first:', ...topics.map(t => `- [${t.course}] ${t.label}: ${Math.round(t.got * 100) / 100}/${Math.round(t.max * 100) / 100} (${Math.round(t.pct * 100)}%)`)].join('\n');
+const ta = document.getElementById('all-text'); ta.value = allText;
+document.getElementById('copy-all').onclick = () => {
+  const done = () => { document.getElementById('copied').textContent = taken ? 'Copied. Paste it in the chat with Claude.' : 'Nothing to copy yet: take an exam first.'; };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(allText).then(done, () => { ta.style.display = 'block'; ta.select(); document.execCommand('copy'); done(); });
+  else { ta.style.display = 'block'; ta.select(); document.execCommand('copy'); done(); }
+};
+</script>
+</body>
+</html>

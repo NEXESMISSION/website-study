@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Quiz Chapter 1 · Practice B · Mathematics I</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/exam.css">
+</head>
+<body class="math">
+<div id="exam"></div>
+<script type="application/json" id="exam-data">
+{
+  "id": "math1-quiz1-B",
+  "title": "Quiz Chapter 1 · Practice B",
+  "shortTitle": "Math I Quiz 1 · B",
+  "course": "Mathematics I",
+  "courseClass": "math",
+  "covers": "Chapter 1",
+  "duration": 30,
+  "hub": "../exams/index.html",
+  "description": "A 30-minute rehearsal of the Chapter 1 quiz (Friday 9 October), set up like Dr. Elaoud's Moodle quizzes: one attempt, marked by the computer. True/false statements in the style of her T/F sheet, multiple choice and short calculations on the whole chapter, with textbook contexts (US companies, populations, a drug, carbon dating, savings accounts). The classic traps are there on purpose.",
+  "instructions": [
+    "30 minutes, one attempt, 20 points, like the Moodle quiz in class. Scientific calculator allowed (with the ln and e<sup>x</sup> keys). No notes, no lessons, no phone.",
+    "Part I: tick True or False (1 point each). Questions 3 and 6 also ask for a one-line justification (0.5 point each): after you submit, you mark it yourself against the model answer.",
+    "Part II: one correct answer per question (1 point each). Read all four options before you choose.",
+    "Part III: work on scrap paper and type only the final number, without units. Decimals: a point or a comma (2.75 or 2,75). Thousands: 12500 or 12,500. Percentages: type the number of percent (type 12.5 for 12.5%). Use a minus sign for a negative answer, a decrease or a loss.",
+    "Keep full calculator precision in intermediate steps (at least 4 decimals for ln values and growth factors, and more digits when a number is very small or very close to 1: 0.0002468, not 0.0002). Round only the final answer, exactly as each question asks.",
+    "A wrong answer costs nothing, so answer every question."
+  ],
+  "sections": [
+    {
+      "title": "Part I · True or false",
+      "intro": "Tick True or False · 1 point each; questions 3 and 6 also need a one-line justification (0.5 point)",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "tf",
+          "points": 1,
+          "topic": "Functions & graphs",
+          "review": "../mathematics-1/ch1-functions-and-change.html#functions",
+          "prompt": "<p>H = f(t) is the height, in feet, of an oak tree t years after it was planted. To find the height of the tree 30 years after it was planted, you must solve the equation f(t) = 30.</p>",
+          "answer": false,
+          "explain": "False.<br>In H = f(t), the input t is the time (in years) and the output H is the height (in feet).<br>“30 years after it was planted” gives the <b>input</b>: t = 30. So the height is the output <b>f(30)</b>: you put 30 into the function, you do not solve an equation.<br>Solving f(t) = 30 answers another question: “after how many years is the tree 30 feet tall?” There, 30 is an output (a height).<br>Trap: mixing up the input and the output. Ask yourself: is the number I know a time (input) or a height (output)?"
+        },
+        {
+          "id": "q2",
+          "type": "tf",
+          "points": 1,
+          "topic": "Linear functions",
+          "review": "../mathematics-1/ch1-functions-and-change.html#linear",
+          "prompt": "<p>The line through the points (−2, 7) and (4, −5) has slope −2 and crosses the vertical axis at y = 3.</p>",
+          "answer": true,
+          "explain": "True.<br>Slope: m = (−5 − 7) ÷ (4 − (−2)) = −12 ÷ 6 = −2.<br>Intercept: put the point (−2, 7) into y = mx + b: 7 = (−2) × (−2) + b = 4 + b, so b = 3.<br>The line is y = −2x + 3. Check with (4, −5): −2 × 4 + 3 = −8 + 3 = −5 ✓.<br>Traps: 4 − (−2) = 6, not 2 (with 2 you get the slope −6); and (−2) × (−2) = +4, so b = 7 − 4 = 3, not 7 + 4 = 11."
+        },
+        {
+          "id": "q3",
+          "type": "tf",
+          "points": 1,
+          "topic": "Rates of change",
+          "review": "../mathematics-1/ch1-functions-and-change.html#rates",
+          "prompt": "<p>The population of a city grew from 40,000 people in 2015 to 46,000 people in 2020. So the average rate of change of the population between 2015 and 2020 was 15% per year.</p>",
+          "answer": false,
+          "justify": {
+            "points": 0.5,
+            "model": "False. The average rate of change is (46,000 − 40,000) ÷ (2020 − 2015) = 6,000 ÷ 5 = <b>1,200 people per year</b>. The 15% (= 6,000 ÷ 40,000) is the <b>relative change</b> over the whole 5 years: it is not a change “per year”, and it has no units.",
+            "rubric": [
+              {
+                "text": "Computes the average rate of change: 6,000 ÷ 5 = 1,200 people per year (with the units)",
+                "points": 0.25
+              },
+              {
+                "text": "Says that 15% (= 6,000 ÷ 40,000) is the relative change over the whole 5 years, not a change per year",
+                "points": 0.25
+              }
+            ]
+          },
+          "explain": "False.<br>Average rate of change = (P(2020) − P(2015)) ÷ (2020 − 2015) = (46,000 − 40,000) ÷ 5 = 6,000 ÷ 5 = <b>1,200 people per year</b>. Its units are people per year.<br>Relative change = (46,000 − 40,000) ÷ 40,000 = 0.15 = 15%. It compares the change with the starting size, it has no units, and it covers the <b>whole</b> 5 years.<br>So the statement mixes the two measures: the city grew by 15% in total, not by 15% each year. (15% per year for 5 years would give 40,000 × 1.15<sup>5</sup> ≈ 80,454 people.)"
+        },
+        {
+          "id": "q4",
+          "type": "tf",
+          "points": 1,
+          "topic": "Cost, revenue, profit",
+          "review": "../mathematics-1/ch1-functions-and-change.html#economics",
+          "prompt": "<p>A US company's monthly cost is C(q) = 12,000 + 45q dollars, where q is the number of units it makes. If its rent (a fixed cost) goes up by $1,500 per month, its marginal cost goes up too.</p>",
+          "answer": false,
+          "explain": "False.<br>The new cost function is C(q) + 1,500 = 13,500 + 45q. The graph moves <b>up</b> by 1,500 (a vertical shift), but its slope is still 45.<br>For a linear cost function, the marginal cost is the slope, so it stays <b>$45 per unit</b>: one more unit still costs $45 more.<br>Rule: fixed costs change the vertical intercept C(0), not the slope. (What does change is the break-even quantity: there are more fixed costs to cover.)"
+        },
+        {
+          "id": "q5",
+          "type": "tf",
+          "points": 1,
+          "topic": "Exponential functions",
+          "review": "../mathematics-1/ch1-functions-and-change.html#exponential",
+          "prompt": "<p>A town's population grows by 6% per year. After 10 years, its population is about 79% larger than at the start.</p>",
+          "answer": true,
+          "explain": "True.<br>Growing by 6% per year means multiplying by the growth factor a = 1 + 0.06 = 1.06 every year: P = P<sub>0</sub>(1.06)<sup>t</sup>.<br>After 10 years: P = P<sub>0</sub> × 1.06<sup>10</sup> ≈ P<sub>0</sub> × 1.7908, which is 79.08% more than P<sub>0</sub>: about 79% ✓.<br>Trap: 10 × 6% = 60% adds the percentages, as if the growth were linear. Exponential growth multiplies: each year's 6% is taken on a bigger population, so the total is more than 60%."
+        },
+        {
+          "id": "q6",
+          "type": "tf",
+          "points": 1,
+          "topic": "New functions from old",
+          "review": "../mathematics-1/ch1-functions-and-change.html#transform",
+          "prompt": "<p>If f(x) = x<sup>2</sup> − 5x, then f(x + 3) = x<sup>2</sup> + x − 6.</p>",
+          "answer": true,
+          "justify": {
+            "points": 0.5,
+            "model": "True. Replace every x by (x + 3): f(x + 3) = (x + 3)<sup>2</sup> − 5(x + 3) = x<sup>2</sup> + 6x + 9 − 5x − 15 = x<sup>2</sup> + x − 6.",
+            "rubric": [
+              {
+                "text": "Replaces every x by (x + 3): f(x + 3) = (x + 3)<sup>2</sup> − 5(x + 3)",
+                "points": 0.25
+              },
+              {
+                "text": "Expands correctly, with (x + 3)<sup>2</sup> = x<sup>2</sup> + 6x + 9 and −5(x + 3) = −5x − 15, to get x<sup>2</sup> + x − 6",
+                "points": 0.25
+              }
+            ]
+          },
+          "explain": "True.<br>f(x + 3) means: put (x + 3) in place of <b>every</b> x.<br>f(x + 3) = (x + 3)<sup>2</sup> − 5(x + 3) = x<sup>2</sup> + 6x + 9 − 5x − 15 = x<sup>2</sup> + x − 6 ✓.<br>Check with x = 1: f(4) = 16 − 20 = −4, and 1 + 1 − 6 = −4 ✓.<br>Traps: f(x) + 3 = x<sup>2</sup> − 5x + 3 adds 3 to the <b>output</b> (the graph moves up 3), while f(x + 3) changes the <b>input</b> (the graph moves 3 units left). Also, (x + 3)<sup>2</sup> is not x<sup>2</sup> + 9: do not forget the middle term 6x."
+        },
+        {
+          "id": "q7",
+          "type": "tf",
+          "points": 1,
+          "topic": "New functions from old",
+          "review": "../mathematics-1/ch1-functions-and-change.html#transform",
+          "prompt": "<p>R(p) is the weekly revenue, in dollars, of a coffee shop that charges p dollars per cup. The owner opens two more coffee shops that are identical to the first one and charge the same price. Then the total weekly revenue of the three shops at price p is R(3p).</p>",
+          "answer": false,
+          "explain": "False.<br>Each shop earns R(p) at price p, so the three shops together earn R(p) + R(p) + R(p) = <b>3R(p)</b>. Every output is multiplied by 3: the graph of R is stretched vertically by 3.<br>R(3p) changes the <b>input</b>: it is the revenue of <i>one</i> shop that charges three times the price, which is a different number.<br>Rule: a number outside the brackets acts on the output (up/down, stretch, reflection); a number inside the brackets acts on the input (a horizontal change)."
+        }
+      ]
+    },
+    {
+      "title": "Part II · Multiple choice",
+      "intro": "One correct answer per question · 1 point each",
+      "questions": [
+        {
+          "id": "q8",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Functions & graphs",
+          "review": "../mathematics-1/ch1-functions-and-change.html#functions",
+          "prompt": "<p>A bottle of water is put in a freezer. T = f(m) is the temperature of the water, in °F, m minutes after it was put in the freezer. On the graph of f, what does the horizontal intercept represent?</p>",
+          "options": [
+            "The temperature of the water, in °F, at the moment it was put in the freezer",
+            "The number of minutes after which the water reaches 32°F and starts to freeze",
+            "The number of minutes after which the temperature of the water is 0°F",
+            "The number of degrees Fahrenheit that the water loses each minute"
+          ],
+          "answer": 2,
+          "explain": "The horizontal intercept is the point where the graph meets the horizontal (m) axis, so there the <b>output is 0</b>: T = 0. Here: the number of minutes after which the water is at 0°F. <b>Answer (c).</b><br>(a) is the vertical intercept, f(0): there the input m is 0, not the output.<br>(b) is the °F trap: water freezes at 32°F, not at 0°F. The time when the water starts to freeze is the solution of f(m) = 32, which is not an intercept.<br>(d) describes a rate of change (a slope, in °F per minute), not an intercept."
+        },
+        {
+          "id": "q9",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Linear functions",
+          "review": "../mathematics-1/ch1-functions-and-change.html#linear",
+          "prompt": "<p>An electrician in Ohio charges a fixed fee for each visit plus a constant price per hour of work. A 2-hour job costs $190 and a 5-hour job costs $385. Which statement is correct?</p>",
+          "options": [
+            "The fixed fee is $60, and each extra hour adds $65 to the bill.",
+            "The fixed fee is $190, and each extra hour adds $65 to the bill.",
+            "The fixed fee is $65, and each extra hour adds $60 to the bill.",
+            "The fixed fee is $60, and each extra hour adds about $0.015 to the bill."
+          ],
+          "answer": 0,
+          "explain": "The cost C(h) of an h-hour job is linear.<br>Slope = (385 − 190) ÷ (5 − 2) = 195 ÷ 3 = <b>$65 per hour</b> (output units per input unit: dollars per hour).<br>Intercept: 190 = b + 65 × 2 = b + 130, so b = <b>$60</b> = C(0), the fee you pay even for 0 hours of work.<br>C(h) = 60 + 65h. Check: C(5) = 60 + 325 = 385 ✓. <b>Answer (a).</b><br>(b) takes the first data point as the intercept, but $190 is the cost of a 2-hour job, not of 0 hours.<br>(c) swaps the slope and the intercept.<br>(d) divides the wrong way: 3 ÷ 195 ≈ 0.015 is in hours per dollar, not dollars per hour."
+        },
+        {
+          "id": "q10",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Exponential functions",
+          "review": "../mathematics-1/ch1-functions-and-change.html#exponential",
+          "prompt": "<p>After an injection, the concentration of a drug in a patient's blood decreases by 30% every 4 hours. C<sub>0</sub> is the concentration just after the injection and t is the time in hours. Which formula gives the concentration C after t hours?</p>",
+          "options": [
+            "C = C<sub>0</sub>(0.7)<sup>4t</sup>",
+            "C = C<sub>0</sub>(0.3)<sup>t/4</sup>",
+            "C = C<sub>0</sub>(0.925)<sup>t</sup>",
+            "C = C<sub>0</sub>(0.7)<sup>t/4</sup>"
+          ],
+          "answer": 3,
+          "explain": "Every 4 hours, 30% of the drug is removed and 70% stays: multiply by the factor a = 1 − 0.30 = 0.7. After t hours, t/4 periods of 4 hours have passed, so C = C<sub>0</sub>(0.7)<sup>t/4</sup>. <b>Answer (d).</b> (Same idea as nicotine in the lesson: Q = 0.4(0.5)<sup>t/2</sup>.)<br>Check: t = 4 → 0.7<sup>1</sup> = 0.7 (−30%) ✓; t = 8 → 0.7<sup>2</sup> = 0.49.<br>(b) uses the decay rate 0.3 as the factor: that would remove 70% every 4 hours. The factor is 1 − r, not r.<br>(c) divides the percentage by 4 (7.5% per hour): 0.925<sup>4</sup> ≈ 0.732, a 26.8% decrease in 4 hours, not 30%. Percentages compound, so you cannot just divide them.<br>(a) at t = 4 gives 0.7<sup>16</sup> ≈ 0.003: it multiplies t by 4 instead of dividing t by 4."
+        },
+        {
+          "id": "q11",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Doubling time & half-life",
+          "review": "../mathematics-1/ch1-functions-and-change.html#base-e",
+          "prompt": "<p>$600 is invested in a fund. Its value after t years is B = 600e<sup>0.09t</sup> dollars (interest compounded continuously). Which statement is correct?</p>",
+          "options": [
+            "The value grows by exactly 9% each year.",
+            "The value grows by about 9.42% each year.",
+            "The value doubles in about 8.04 years.",
+            "The value grows by the same amount, $54, each year."
+          ],
+          "answer": 1,
+          "explain": "Change the base: a = e<sup>k</sup> = e<sup>0.09</sup> ≈ 1.0942, so B = 600(1.0942)<sup>t</sup>. Each year the value is multiplied by 1.0942: it grows by about <b>9.42%</b> per year. <b>Answer (b).</b> Check: after 1 year, 600e<sup>0.09</sup> ≈ $656.50, that is $56.50 more, and 56.50 ÷ 600 ≈ 9.42%.<br>(a) is the trap a = 1 + k: 9% is the <i>continuous</i> rate k. Because interest is added at every instant, the value grows a little more than 9% in a year.<br>(c) 8.04 = ln 2 ÷ ln 1.09 is the doubling time for 9% compounded <i>annually</i>. Here the doubling time is ln 2 ÷ k = 0.6931 ÷ 0.09 ≈ 7.70 years.<br>(d) is linear growth (600 × 0.09 = $54 every year). Exponential growth adds more and more dollars each year."
+        },
+        {
+          "id": "q12",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Power functions",
+          "review": "../mathematics-1/ch1-functions-and-change.html#power",
+          "prompt": "<p>For one species of fish, the weight W (in pounds) is proportional to the cube of the length L (in inches): W = kL<sup>3</sup>, where k is a constant. A 12-inch fish weighs 0.8 pounds. According to this model, how much does an 18-inch fish weigh?</p>",
+          "options": [
+            "1.2 pounds",
+            "1.8 pounds",
+            "2.7 pounds",
+            "3.6 pounds"
+          ],
+          "answer": 2,
+          "explain": "W = kL<sup>3</sup> is a power function (k constant, power p = 3).<br>Find k: 0.8 = k × 12<sup>3</sup> = 1,728k, so k = 0.8 ÷ 1,728 ≈ 0.000463.<br>Then W(18) = k × 18<sup>3</sup> = (0.8 ÷ 1,728) × 5,832 = <b>2.7 pounds</b>. <b>Answer (c).</b><br>Shortcut: the length is multiplied by 18 ÷ 12 = 1.5, so the weight is multiplied by 1.5<sup>3</sup> = 3.375, and 0.8 × 3.375 = 2.7.<br>(a) 1.2 = 0.8 × 1.5 treats W as proportional to L (power 1).<br>(b) 1.8 = 0.8 × 1.5<sup>2</sup> uses the square (power 2).<br>(d) 3.6 = 0.8 × (1.5 × 3) multiplies by 3 instead of cubing: 1.5<sup>3</sup> = 1.5 × 1.5 × 1.5, not 1.5 × 3."
+        }
+      ]
+    },
+    {
+      "title": "Part III · Short calculations",
+      "intro": "Type the final number only, rounded as asked",
+      "questions": [
+        {
+          "id": "q13",
+          "type": "numeric",
+          "points": 1,
+          "topic": "Rates of change",
+          "review": "../mathematics-1/ch1-functions-and-change.html#rates",
+          "prompt": "<p>The table gives the annual sales S = f(t) of a US clothing retailer, in millions of dollars, in year t.</p><div class='table-wrap'><table><tbody><tr><td><strong>Year t</strong></td><td class='n'><strong>2019</strong></td><td class='n'><strong>2020</strong></td><td class='n'><strong>2021</strong></td><td class='n'><strong>2022</strong></td><td class='n'><strong>2023</strong></td><td class='n'><strong>2024</strong></td></tr><tr><td>S (million $)</td><td class='n'>64.0</td><td class='n'>58.5</td><td class='n'>61.2</td><td class='n'>66.8</td><td class='n'>57.3</td><td class='n'>52.0</td></tr></tbody></table></div><p>Find the relative change in sales from 2019 to 2024, as a percentage, to 2 decimal places. (Use a minus sign for a decrease.)</p>",
+          "answer": -18.75,
+          "unit": "%",
+          "tol": 0.005,
+          "explain": "Read the table: f(2019) = 64.0 and f(2024) = 52.0 (million $).<br>Relative change = (new − old) ÷ old = (52.0 − 64.0) ÷ 64.0 = −12.0 ÷ 64.0 = −0.1875 = <b>−18.75%</b>.<br>➜ Sales fell by 18.75% between 2019 and 2024.<br>Traps: −23.08% divides by the new value (−12 ÷ 52); −0.1875 is the decimal, not the percentage; −12 is the total change (in million $); −2.4 million $ per year is the average rate of change; −3.75 divides the percentage by the 5 years (a relative change is not a rate per year)."
+        },
+        {
+          "id": "q14",
+          "type": "problem",
+          "topic": "Cost, revenue, profit",
+          "review": "../mathematics-1/ch1-functions-and-change.html#economics",
+          "prompt": "<p>A company in Ohio makes wooden desks. Its fixed costs are <b>$27,600 per month</b>, each desk costs <b>$85</b> to make (materials and labor), and each desk sells for <b>$145</b>. Let q be the number of desks made and sold in one month.</p>",
+          "parts": [
+            {
+              "type": "numeric",
+              "points": 0.5,
+              "prompt": "<p>Find the break-even quantity.</p>",
+              "answer": 460,
+              "unit": "desks",
+              "tol": 0.5,
+              "explain": "C(q) = 27,600 + 85q and R(q) = 145q.<br>Break-even: revenue = cost.<br>145q = 27,600 + 85q<br>145q − 85q = 27,600 → 60q = 27,600<br>q = 27,600 ÷ 60 = <b>460 desks</b>.<br>Check: R(460) = 145 × 460 = $66,700 and C(460) = 27,600 + 85 × 460 = 27,600 + 39,100 = $66,700 ✓.<br>Traps: 27,600 ÷ 145 ≈ 190 forgets the variable cost (it solves revenue = fixed cost); 27,600 ÷ 85 ≈ 325 divides by the variable cost instead of the margin 145 − 85 = $60 per desk."
+            },
+            {
+              "type": "numeric",
+              "points": 0.5,
+              "prompt": "<p>Find the monthly profit if the company makes and sells 400 desks. (Use a minus sign for a loss.)</p>",
+              "answer": -3600,
+              "unit": "$",
+              "tol": 0.5,
+              "explain": "π(q) = R(q) − C(q) = 145q − (27,600 + 85q) = 60q − 27,600 (keep the brackets!).<br>π(400) = 60 × 400 − 27,600 = 24,000 − 27,600 = <b>−$3,600</b>: a loss of $3,600, as expected below the break-even quantity (400 &lt; 460).<br>Traps: 24,000 forgets the fixed cost; 30,400 (= 145 × 400 − 27,600) forgets the variable cost; +3,600 has the wrong sign: profit = R − C, and here C is larger than R."
+            }
+          ]
+        },
+        {
+          "id": "q15",
+          "type": "problem",
+          "topic": "Supply, demand & depreciation",
+          "review": "../mathematics-1/ch1-functions-and-change.html#market",
+          "prompt": "<p>In a US city, the monthly demand and supply for a model of bicycle helmet are:</p><p>demand: q = 3,000 − 40p<br>supply: q = 60p − 1,200</p><p>where p is the price in dollars and q is the number of helmets per month.</p>",
+          "parts": [
+            {
+              "type": "numeric",
+              "points": 0.5,
+              "prompt": "<p>Find the equilibrium price.</p>",
+              "answer": 42,
+              "unit": "$",
+              "tol": 0.01,
+              "explain": "At equilibrium, quantity demanded = quantity supplied:<br>3,000 − 40p = 60p − 1,200<br>3,000 + 1,200 = 60p + 40p → 4,200 = 100p<br>p* = <b>$42</b>.<br>Traps: 3,000 − 1,200 = 1,800 forgets that −1,200 changes sign when it moves to the other side (p = 18); 60p − 40p = 20p forgets that −40p changes sign too (p = 210)."
+            },
+            {
+              "type": "numeric",
+              "points": 0.5,
+              "prompt": "<p>Find the equilibrium quantity.</p>",
+              "answer": 1320,
+              "unit": "helmets",
+              "tol": 0.5,
+              "explain": "Put p* = 42 into either formula:<br>demand: q = 3,000 − 40 × 42 = 3,000 − 1,680 = 1,320<br>supply: q = 60 × 42 − 1,200 = 2,520 − 1,200 = 1,320 ✓<br>q* = <b>1,320 helmets per month</b>: at $42, buyers and sellers agree on 1,320 helmets.<br>Trap: 42 is the price, not the quantity. Always give both p* and q*, with units."
+            }
+          ]
+        },
+        {
+          "id": "q16",
+          "type": "problem",
+          "topic": "Supply, demand & depreciation",
+          "review": "../mathematics-1/ch1-functions-and-change.html#market",
+          "prompt": "<p>A car is bought new for <b>$37,400</b>. Its value V(t), in dollars, decreases <b>linearly</b>, and t = 6 years after the purchase the car is worth <b>$14,000</b>.</p>",
+          "parts": [
+            {
+              "type": "numeric",
+              "points": 0.5,
+              "prompt": "<p>Find the slope of V(t).</p>",
+              "answer": -3900,
+              "unit": "$ per year",
+              "tol": 0.5,
+              "explain": "Two points: (0, 37,400) and (6, 14,000).<br>Slope = (14,000 − 37,400) ÷ (6 − 0) = −23,400 ÷ 6 = <b>−3,900 dollars per year</b>.<br>So V(t) = 37,400 − 3,900t: the car loses $3,900 of value every year.<br>Trap: +3,900. A value that goes down has a <b>negative</b> slope; the minus sign is part of the answer. (14,000 ÷ 6 ≈ 2,333 and 37,400 ÷ 6 ≈ 6,233 are wrong too: a slope is a change divided by a change.)"
+            },
+            {
+              "type": "numeric",
+              "points": 0.5,
+              "prompt": "<p>How many years after the purchase will the car be worth $5,500? Give t to 2 decimal places.</p>",
+              "answer": 8.18,
+              "unit": "years",
+              "tol": 0.005,
+              "explain": "Solve V(t) = 5,500:<br>37,400 − 3,900t = 5,500<br>3,900t = 31,900<br>t = 31,900 ÷ 3,900 ≈ <b>8.18 years</b> after the purchase.<br>Traps: 2.18 starts from the value at year 6 (14,000 − 3,900t = 5,500 gives the time <i>after year 6</i>, not after the purchase); 9.59 = 37,400 ÷ 3,900 is when the car is worth $0 (the horizontal intercept)."
+            }
+          ]
+        },
+        {
+          "id": "q17",
+          "type": "numeric",
+          "points": 1.5,
+          "topic": "Logs & compound interest",
+          "review": "../mathematics-1/ch1-functions-and-change.html#ln",
+          "prompt": "<p>Sofia deposits <b>€2,500</b> in a savings account that pays <b>3.8% per year, compounded annually</b>. Using logarithms, find how many years it takes for her balance to reach €4,500. Give t to 2 decimal places.</p>",
+          "answer": 15.76,
+          "unit": "years",
+          "tol": 0.005,
+          "explain": "Annual compounding: P = P<sub>0</sub>(1 + r)<sup>t</sup> = 2,500(1.038)<sup>t</sup>.<br>2,500(1.038)<sup>t</sup> = 4,500<br>Isolate the power: (1.038)<sup>t</sup> = 4,500 ÷ 2,500 = 1.8<br>Take ln of both sides and bring the exponent down: t × ln 1.038 = ln 1.8<br>t = ln 1.8 ÷ ln 1.038 = 0.587787 ÷ 0.037296 ≈ <b>15.76 years</b>.<br>(With 4-decimal logs, 0.5878 ÷ 0.0373 ≈ 15.76 too.)<br>Traps: ln 1.8 ÷ 0.038 ≈ 15.47 uses the continuous formula e<sup>rt</sup>, but the interest is compounded annually; 2,000 ÷ (2,500 × 0.038) ≈ 21.05 is simple interest; ln 1.8 ÷ ln 1.38 ≈ 1.82 uses 38% instead of 3.8% (percentage vs decimal)."
+        },
+        {
+          "id": "q18",
+          "type": "numeric",
+          "points": 1.5,
+          "topic": "Doubling time & half-life",
+          "review": "../mathematics-1/ch1-functions-and-change.html#base-e",
+          "prompt": "<p>Carbon-14 decays exponentially, with a half-life of <b>5,730 years</b>. A wooden tool found at an old village site has <b>lost 70%</b> of its original carbon-14. Estimate the age of the tool, in years, rounded to the nearest year.</p>",
+          "answer": 9953,
+          "unit": "years",
+          "tol": 5,
+          "explain": "Lost 70% → 30% is <b>left</b>: Q = 0.30Q<sub>0</sub>.<br>Each half-life multiplies the amount by 0.5, so after t years: Q = Q<sub>0</sub>(0.5)<sup>t/5,730</sup>.<br>(0.5)<sup>t/5,730</sup> = 0.30<br>Take ln: (t ÷ 5,730) × ln 0.5 = ln 0.30<br>t ÷ 5,730 = ln 0.30 ÷ ln 0.5 = (−1.20397) ÷ (−0.69315) ≈ 1.73697<br>t = 5,730 × 1.73697 ≈ <b>9,953 years</b>.<br>Same with base e: k = ln 0.5 ÷ 5,730 ≈ −0.00012097, then e<sup>kt</sup> = 0.30 gives t = ln 0.30 ÷ k ≈ 9,953 years.<br>Traps: using 0.70 (the part that was lost) gives about 2,949 years; “50% is lost every 5,730 years, so 70% is lost after 1.4 half-lives” gives 8,022 years, but the decay is exponential, not linear; rounding k to −0.00012 gives about 10,033 years, and rounding it to 4 decimals (−0.0001) gives about 12,040 years: for a very small k, keep at least 4 significant digits (−0.0001210)."
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../assets/exam.js"></script>
+</body>
+</html>

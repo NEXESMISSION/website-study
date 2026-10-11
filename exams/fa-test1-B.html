@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Test 1 · Practice exam B · Financial Accounting I</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/exam.css">
+</head>
+<body class="fa">
+<div id="exam"></div>
+<script type="application/json" id="exam-data">
+{
+  "id": "fa-test1-B",
+  "title": "Test 1 · Practice exam B",
+  "shortTitle": "FA Test 1 · B",
+  "course": "Financial Accounting I",
+  "courseClass": "fa",
+  "covers": "Chapter 1 + start of Chapter 2",
+  "duration": 60,
+  "hub": "../exams/index.html",
+  "description": "The Friday test in the case where the start of Chapter 2 is included: 10 multiple-choice questions on Chapter 1 and Chapter 2 basics, debit-or-credit rules, nine events to journalize for a new driving school in Monastir, then its trial balance, net income and total assets.",
+  "instructions": [
+    "Closed book: no notes, no lessons, no phone. A simple calculator is allowed.",
+    "Amounts are in Tunisian dinars (TND). Type numbers only (12500 or 12,500); use a minus sign only for a net loss.",
+    "Part III: choose the account titles from the drop-down list, put each amount in the Debit or the Credit column, and tick “No entry required” when an event needs no journal entry. Explanations are not required.",
+    "Journal marking: each correct line (right account, right side, right amount) earns its share of the points and a wrong line earns nothing. Writing more lines than the entry needs costs you: each line too many cancels one correct line, so do not list accounts “just in case”, and leave the lines you do not need completely empty (no account, no 0, no dash).",
+    "Part IV continues Part III (same school, same month): post your Part III entries plus the four extra transactions given. Part IV is marked against the correct entries, so an error in Part III carries into Part IV.",
+    "Suggested timing: Part I 12 min · Part II 5 min · Part III 20 min · Part IV 18 min · final check 5 min."
+  ],
+  "accounts": [
+    "Cash",
+    "Accounts Receivable",
+    "Supplies",
+    "Prepaid Insurance",
+    "Equipment",
+    "Notes Payable",
+    "Accounts Payable",
+    "Unearned Service Revenue",
+    "Salaries and Wages Payable",
+    "Share Capital—Ordinary",
+    "Retained Earnings",
+    "Dividends",
+    "Service Revenue",
+    "Supplies Expense",
+    "Insurance Expense",
+    "Salaries and Wages Expense",
+    "Rent Expense",
+    "Utilities Expense"
+  ],
+  "sections": [
+    {
+      "title": "Part I · Multiple choice",
+      "intro": "Choose the one best answer. 1 point each",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Accounting & its users",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#users",
+          "prompt": "<p>Several people read the financial statements of a hotel company in Tabarka. Which of them is an <b>internal</b> user?</p>",
+          "options": [
+            "A labor union representative who wants to know if the hotel can afford pay raises.",
+            "A tour operator who wants to know if the hotel will keep honoring its contracts and bookings.",
+            "The hotel’s marketing manager, who must decide the room price that maximizes profit.",
+            "An inspector of the tax administration who checks that the hotel complies with tax laws."
+          ],
+          "answer": 2,
+          "explain": "<b>(c)</b> Managers who plan, organize and run the business are <b>internal</b> users. “What price will maximize profit?” is a typical internal question, answered by managerial accounting. (a) labor unions, (b) customers and (d) taxing authorities are all <b>external</b> users, like investors and creditors: they are outside the management and use financial accounting reports. Trap (a): the company’s own human-resources manager asking “Can we afford pay raises?” would be internal, but here the person asking is a union representative."
+        },
+        {
+          "id": "q2",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Ethics, standards & principles",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#standards",
+          "prompt": "<p>Yosra is the accountant of a construction company in Gabès. The finance director asks her to record now a TND 60,000 sale that will only happen next year, so that this year’s profit looks better when the company asks its bank for a loan. Following the three steps for analyzing ethics cases, what should Yosra do <b>first</b>?</p>",
+          "options": [
+            "Choose the alternative that gives the company the best chance of getting the loan.",
+            "Recognize that this is an ethical situation and identify the ethical issue: the statements would mislead the bank.",
+            "List the possible alternatives, weigh their impact on each stakeholder, and select the most ethical one.",
+            "Record the sale, because the finance director is responsible for the financial statements."
+          ],
+          "answer": 1,
+          "explain": "<b>(b)</b> The three steps are: 1. <b>recognize</b> the ethical situation and the ethical issues involved; 2. identify and analyze the principal elements, especially the <b>stakeholders</b> (here the bank, the shareholders, the employees); 3. identify the <b>alternatives</b>, weigh their impact on each stakeholder, and select the most ethical one. (c) is step 3, not the first step. (a) and (d) are not an ethical analysis at all: recording a sale that has not happened is “cooking the books” and would mislead a creditor."
+        },
+        {
+          "id": "q3",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Assumptions & business forms",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#assumptions",
+          "prompt": "<p>Which statement about the economic entity assumption and the forms of business is <b>CORRECT</b>?</p>",
+          "options": [
+            "The economic entity assumption applies only to corporations, because only corporations are separate legal entities.",
+            "In a proprietorship, the owner’s personal expenses can be recorded in the business’s books, because the owner is personally liable for all the business’s debts.",
+            "Shareholders of a corporation are personally liable for its debts, but they cannot easily sell their shares.",
+            "In a proprietorship, the owner is personally liable for all the business’s debts, but the owner’s personal expenses must still be kept out of the business’s records."
+          ],
+          "answer": 3,
+          "explain": "<b>(d)</b> Two different ideas: <b>legal liability</b> (who must pay the debts) and the <b>economic entity assumption</b> (whose transactions go into the books). A proprietor is personally liable for all the debts of the business, yet the business’s records must still exclude the owner’s personal activities. (a) is wrong: the assumption applies to every economic entity: proprietorships, partnerships, corporations, even a municipality or a school. (b) mixes the two ideas: unlimited liability does not allow mixing personal and business transactions. (c) describes the opposite of a corporation: shareholders have limited liability and can sell their shares easily."
+        },
+        {
+          "id": "q4",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Accounting equation",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#equation",
+          "prompt": "<p>On 1 January, a date-packing company in Tozeur had total assets of TND 64,000 and total liabilities of TND 22,000. During the year it issued new shares for TND 8,000 cash, earned net income of TND 11,000 and paid dividends of TND 5,000. On 31 December its total liabilities were TND 25,000. What were its total assets on 31 December?</p>",
+          "options": [
+            "TND 81,000",
+            "TND 78,000",
+            "TND 91,000",
+            "TND 56,000"
+          ],
+          "answer": 0,
+          "explain": "Step 1: equity on 1 January = 64,000 − 22,000 = 42,000. Step 2: equity on 31 December = 42,000 + 8,000 (new shares) + 11,000 (net income) − 5,000 (dividends) = 56,000. Step 3: assets = liabilities + equity = 25,000 + 56,000 = <b>TND 81,000</b>. Traps: 91,000 adds the dividends (dividends <i>reduce</i> equity); 78,000 uses the old liabilities (22,000) instead of the 31 December figure; 56,000 is equity only."
+        },
+        {
+          "id": "q5",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Transaction analysis",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#softbyte",
+          "prompt": "<p>Which transaction leaves a company’s <b>total assets unchanged</b>?</p>",
+          "options": [
+            "Paying TND 800 to a supplier on account.",
+            "Collecting TND 1,200 from a customer who was billed last month.",
+            "Receiving TND 1,500 cash in advance from a customer for work to be done next month.",
+            "Paying a TND 500 cash dividend."
+          ],
+          "answer": 1,
+          "explain": "<b>(b)</b> Collection on account: Cash +1,200 and Accounts Receivable −1,200. One asset replaces another, so total assets do not change. (There is no revenue here: it was recorded last month, when the customer was billed.) (a) assets −800 and liabilities −800. (c) assets +1,500 and liabilities +1,500 (Unearned Service Revenue). (d) assets −500 and equity −500 (Dividends)."
+        },
+        {
+          "id": "q6",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Financial statements",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#statements",
+          "prompt": "<p>Which statement about the financial statements is <b>FALSE</b>?</p>",
+          "options": [
+            "The income statement reports revenues and expenses for a period of time; dividends do not appear on it.",
+            "The statement of financial position shows assets, liabilities and equity at a specific date.",
+            "Net income from the income statement is used to prepare the retained earnings statement.",
+            "In the statement of cash flows, cash received from issuing ordinary shares is an investing activity."
+          ],
+          "answer": 3,
+          "explain": "<b>(d) is false</b>: cash from issuing shares is a <b>financing</b> activity. Investing activities are investments made <i>by the company</i> (buying equipment, land…); money invested <i>by the owners</i> is financing. (a), (b) and (c) are true: dividends never appear on the income statement, the statement of financial position is a snapshot at one date, and net income goes into the retained earnings statement."
+        },
+        {
+          "id": "q7",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Ledger & posting",
+          "review": "../financial-accounting/ch2-recording-process.html#posting",
+          "prompt": "<p>Before posting, the Accounts Payable account of a hardware store in Bizerte had a normal balance of TND 6,400. The bookkeeper then posts two entries: a purchase of supplies on account of TND 1,250, and a payment of TND 3,000 to suppliers on account. What is the balance of Accounts Payable after posting?</p>",
+          "options": [
+            "TND 4,650 credit",
+            "TND 8,150 credit",
+            "TND 10,650 credit",
+            "TND 4,650 debit"
+          ],
+          "answer": 0,
+          "explain": "Accounts Payable is a liability: normal balance <b>credit</b>; a credit increases it and a debit decreases it. The purchase on account is posted as a <b>credit</b> (+1,250) and the payment as a <b>debit</b> (−3,000): 6,400 + 1,250 − 3,000 = <b>TND 4,650 credit</b>. Traps: 8,150 reverses the two signs (6,400 − 1,250 + 3,000); 10,650 adds everything; “4,650 debit” has the right amount on the wrong side (a liability normally has a credit balance)."
+        },
+        {
+          "id": "q8",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Journal entries",
+          "review": "../financial-accounting/ch2-recording-process.html#journal",
+          "prompt": "<p>Which statement about the journal is <b>FALSE</b>?</p>",
+          "options": [
+            "It is called the book of original entry.",
+            "It records transactions in chronological order.",
+            "Transactions are first recorded in the ledger and then copied into the journal.",
+            "It helps to prevent and locate errors, because the debit and credit amounts of each entry can be compared easily."
+          ],
+          "answer": 2,
+          "explain": "<b>(c) is false</b>: it is the other way round. Transactions are first entered in the <b>journal</b> (the book of original entry, in date order) and then <b>posted</b> to the ledger accounts. (a), (b) and (d) are true: they describe what the journal contributes."
+        },
+        {
+          "id": "q9",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Trial balance",
+          "review": "../financial-accounting/ch2-recording-process.html#trial-balance",
+          "prompt": "<p>At the end of the month, a company’s trial balance shows total debits = total credits = TND 74,300. What does this prove?</p>",
+          "options": [
+            "That every transaction of the month was journalized and posted.",
+            "That the total of the debit balances in the ledger equals the total of the credit balances.",
+            "That each transaction was recorded in the correct accounts.",
+            "That the financial statements prepared from it will be free of errors."
+          ],
+          "answer": 1,
+          "explain": "<b>(b)</b> A trial balance proves only the <b>mathematical equality</b> of debits and credits after posting. It does not prove (a): a transaction that was never journalized leaves both columns equal. It does not prove (c): a debit to the wrong account still balances. It does not prove (d): wrong accounts, offsetting errors or a missing transaction still give equal totals."
+        },
+        {
+          "id": "q10",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Trial balance",
+          "review": "../financial-accounting/ch2-recording-process.html#trial-balance",
+          "prompt": "<p>Which single error makes the total of the <b>debit</b> column of the trial balance <b>larger</b> than the total of the credit column?</p>",
+          "options": [
+            "A TND 300 credit to Cash was never posted.",
+            "A TND 300 debit to Supplies was posted as TND 30.",
+            "A TND 300 debit to Rent Expense was posted as a credit to Rent Expense.",
+            "A TND 300 credit to Service Revenue was posted twice."
+          ],
+          "answer": 0,
+          "explain": "Ask: which column gets too much or too little? <b>(a)</b> The 300 credit to Cash is missing, so the Cash debit balance is 300 too high: the debit column is 300 <b>larger</b> ✓. (b) Supplies is 270 too low: the debit column is smaller. (c) Rent Expense gets −300 instead of +300: a gap of 600, with the credit side bigger. (d) Service Revenue is 300 too high: the credit column is larger. All four errors unbalance the trial balance; only (a) makes the debit side bigger."
+        }
+      ]
+    },
+    {
+      "title": "Part II · Debit or credit?",
+      "intro": "Apply the debit and credit rules. 0.5 point per line",
+      "questions": [
+        {
+          "id": "q11",
+          "type": "match",
+          "pointsEach": 0.5,
+          "topic": "Debit & credit rules",
+          "review": "../financial-accounting/ch2-recording-process.html#debits-credits",
+          "prompt": "<p>For each item, choose the correct side: <b>Debit</b> or <b>Credit</b>.</p>",
+          "choices": [
+            "Debit",
+            "Credit"
+          ],
+          "items": [
+            {
+              "text": "Increase in Rent Expense",
+              "answer": 0
+            },
+            {
+              "text": "Decrease in Accounts Payable",
+              "answer": 0
+            },
+            {
+              "text": "Increase in Share Capital—Ordinary",
+              "answer": 1
+            },
+            {
+              "text": "Normal balance of Dividends",
+              "answer": 0
+            },
+            {
+              "text": "Decrease in Cash",
+              "answer": 1
+            },
+            {
+              "text": "Increase in Unearned Service Revenue",
+              "answer": 1
+            },
+            {
+              "text": "Increase in Prepaid Insurance",
+              "answer": 0
+            },
+            {
+              "text": "Decrease in Accounts Receivable",
+              "answer": 1
+            },
+            {
+              "text": "Normal balance of Service Revenue",
+              "answer": 1
+            },
+            {
+              "text": "Decrease in Retained Earnings",
+              "answer": 0
+            }
+          ],
+          "explain": "<b>DEALER</b>: <b>D</b>ividends, <b>E</b>xpenses and <b>A</b>ssets increase with a <b>debit</b> and have a normal debit balance. <b>L</b>iabilities, <b>E</b>quity (share capital, retained earnings) and <b>R</b>evenues increase with a <b>credit</b> and have a normal credit balance. A decrease is always on the opposite side.<br>1 Rent Expense ↑: <b>Debit</b> (expense). 2 Accounts Payable ↓: <b>Debit</b> (a debt is paid; a liability decreases on the left). 3 Share Capital—Ordinary ↑: <b>Credit</b>. 4 Dividends: normal <b>Debit</b> (they reduce equity, but they are not expenses). 5 Cash ↓: <b>Credit</b>. 6 Unearned Service Revenue ↑: <b>Credit</b> (it is a liability). 7 Prepaid Insurance ↑: <b>Debit</b> (it is an asset). 8 Accounts Receivable ↓: <b>Credit</b> (a customer paid). 9 Service Revenue: normal <b>Credit</b>. 10 Retained Earnings ↓: <b>Debit</b> (this is why expenses and dividends, which reduce retained earnings, are debits).<br>Trap: “debit” does not mean decrease or bad news. It only means the left side."
+        }
+      ]
+    },
+    {
+      "title": "Part III · Journal entries",
+      "intro": "Nine dated events of one new company. The points of each entry are shown next to it",
+      "questions": [
+        {
+          "id": "q12",
+          "type": "problem",
+          "topic": "Journal entries",
+          "review": "../financial-accounting/ch2-recording-process.html#journal",
+          "prompt": "<p><b>Ribat Driving School SA</b> is a new driving school in Monastir, founded by Hatem and Rim. It opened on 1 September 2026; driving lessons start in October. <b>Journalize</b> the nine September events below.</p>\n<p><b>Chart of accounts:</b> Cash · Accounts Receivable · Supplies · Prepaid Insurance · Equipment · Notes Payable · Accounts Payable · Unearned Service Revenue · Salaries and Wages Payable · Share Capital—Ordinary · Retained Earnings · Dividends · Service Revenue · Supplies Expense · Insurance Expense · Salaries and Wages Expense · Rent Expense · Utilities Expense.</p>\n<p>Choose the most specific account title from the drop-down list. Record each event as <b>one</b> journal entry and type each amount in the Debit or the Credit column (no explanations needed). If an event needs no journal entry, tick <b>No entry required</b> and leave the lines empty.</p>",
+          "parts": [
+            {
+              "type": "journal",
+              "points": 1,
+              "prompt": "<p><b>Sept 1</b> · Hatem and Rim invested TND 50,000 cash in the school in exchange for ordinary shares.</p>",
+              "answer": [
+                {
+                  "account": "Cash",
+                  "side": "Dr",
+                  "amount": 50000
+                },
+                {
+                  "account": "Share Capital—Ordinary",
+                  "side": "Cr",
+                  "amount": 50000
+                }
+              ],
+              "lines": 4,
+              "explain": "Cash (asset) increases → <b>debit Cash 50,000</b>. Share Capital—Ordinary (equity) increases → <b>credit Share Capital—Ordinary 50,000</b>. Trap: money invested by shareholders is <i>not</i> revenue (it is not earned by doing business), and it does not go to Retained Earnings."
+            },
+            {
+              "type": "journal",
+              "points": 3,
+              "prompt": "<p><b>Sept 2</b> · Bought a dual-control training car costing TND 42,000. The school paid TND 12,000 in cash and signed a 12-month note payable to the dealer for the rest.</p>",
+              "answer": [
+                {
+                  "account": "Equipment",
+                  "side": "Dr",
+                  "amount": 42000
+                },
+                {
+                  "account": "Cash",
+                  "side": "Cr",
+                  "amount": 12000
+                },
+                {
+                  "account": "Notes Payable",
+                  "side": "Cr",
+                  "amount": 30000
+                }
+              ],
+              "lines": 4,
+              "explain": "A compound entry (3 lines): <b>debit Equipment 42,000</b> (the full cost: historical cost principle), <b>credit Cash 12,000</b>, <b>credit Notes Payable 30,000</b> (42,000 − 12,000). Debits 42,000 = credits 12,000 + 30,000. The chart has no Vehicles account: like the delivery truck of Tsai Company in the textbook, the car goes to Equipment. Traps: “signed a note” means a written promise to pay → <b>Notes Payable</b>, not Accounts Payable; debiting Equipment for only 12,000 (the cost is 42,000 even if part is paid later); forgetting one of the two credits."
+            },
+            {
+              "type": "journal",
+              "points": 2,
+              "prompt": "<p><b>Sept 4</b> · 12 students each paid TND 650 cash in advance for a package of 20 driving lessons that starts on 1 October.</p>",
+              "answer": [
+                {
+                  "account": "Cash",
+                  "side": "Dr",
+                  "amount": 7800
+                },
+                {
+                  "account": "Unearned Service Revenue",
+                  "side": "Cr",
+                  "amount": 7800
+                }
+              ],
+              "lines": 4,
+              "explain": "12 × 650 = 7,800 cash comes in → <b>debit Cash 7,800</b>. The lessons start in October: the school has not given them yet, so it <b>owes</b> the service → liability, <b>credit Unearned Service Revenue 7,800</b>. Traps: crediting Service Revenue (revenue is recorded when the lessons are given, see Chapter 3, not when the cash arrives); recording only 650 (one student)."
+            },
+            {
+              "type": "journal",
+              "points": 2,
+              "prompt": "<p><b>Sept 5</b> · Paid TND 3,000 cash for a one-year insurance policy on the training car, covering 1 October 2026 to 30 September 2027.</p>",
+              "answer": [
+                {
+                  "account": "Prepaid Insurance",
+                  "side": "Dr",
+                  "amount": 3000
+                },
+                {
+                  "account": "Cash",
+                  "side": "Cr",
+                  "amount": 3000
+                }
+              ],
+              "lines": 4,
+              "explain": "The policy covers October 2026 to September 2027: a future benefit → asset, <b>debit Prepaid Insurance 3,000</b>, <b>credit Cash 3,000</b>. Trap: Insurance Expense. Nothing has been used up yet; the expense is recorded month by month later (adjusting entries, Chapter 3)."
+            },
+            {
+              "type": "journal",
+              "points": 2,
+              "prompt": "<p><b>Sept 8</b> · Bought training supplies (highway-code booklets, printed theory-test sheets and whiteboard markers) on account from a supplier in Sousse, TND 2,200, payable in 30 days.</p>",
+              "answer": [
+                {
+                  "account": "Supplies",
+                  "side": "Dr",
+                  "amount": 2200
+                },
+                {
+                  "account": "Accounts Payable",
+                  "side": "Cr",
+                  "amount": 2200
+                }
+              ],
+              "lines": 4,
+              "explain": "The supplies will be used in future classes → asset, <b>debit Supplies 2,200</b>. Not paid yet (“on account”) → the school owes the supplier: <b>credit Accounts Payable 2,200</b>. Traps: Supplies Expense (they are not used yet); Accounts Receivable (that is money customers owe <i>us</i>); Cash (nothing was paid)."
+            },
+            {
+              "type": "journal",
+              "points": 1,
+              "prompt": "<p><b>Sept 10</b> · Ordered a second training car from the dealer for TND 44,000. It will be delivered and paid for in November.</p>",
+              "answer": [],
+              "lines": 4,
+              "explain": "<b>No entry.</b> An order is only an agreement. On 10 September the second car has not been delivered, nothing has been paid and the school does not owe the dealer anything yet, so assets, liabilities and equity do not change. The car will be recorded in November, when it is delivered. Trap: debit Equipment / credit Notes Payable or Accounts Payable 44,000 now. Compare with Sept 2: that car was delivered, so it was a transaction. An order, like hiring an employee who has not started work, is not a transaction.",
+              "topic": "Transaction analysis",
+              "review": "../financial-accounting/ch1-accounting-in-action.html#softbyte"
+            },
+            {
+              "type": "journal",
+              "points": 2,
+              "prompt": "<p><b>Sept 18</b> · Completed a two-week highway-code and road-safety course for the drivers of a Monastir bus company and sent the company an invoice for TND 4,600, payable within 30 days.</p>",
+              "answer": [
+                {
+                  "account": "Accounts Receivable",
+                  "side": "Dr",
+                  "amount": 4600
+                },
+                {
+                  "account": "Service Revenue",
+                  "side": "Cr",
+                  "amount": 4600
+                }
+              ],
+              "lines": 4,
+              "explain": "The course is finished in September, so the revenue is earned now, even though the cash comes later: <b>debit Accounts Receivable 4,600</b>, <b>credit Service Revenue 4,600</b>. Traps: Unearned Service Revenue (only for cash received <i>before</i> the work); Cash (nothing received yet); waiting for the payment to record the revenue."
+            },
+            {
+              "type": "journal",
+              "points": 1,
+              "prompt": "<p><b>Sept 30</b> · Paid TND 2,700 cash for the September salaries of the school’s two employees (an instructor and a secretary).</p>",
+              "answer": [
+                {
+                  "account": "Salaries and Wages Expense",
+                  "side": "Dr",
+                  "amount": 2700
+                },
+                {
+                  "account": "Cash",
+                  "side": "Cr",
+                  "amount": 2700
+                }
+              ],
+              "lines": 4,
+              "explain": "<b>Debit Salaries and Wages Expense 2,700</b>, <b>credit Cash 2,700</b>. The employees worked in September and are paid now: an expense of September. Trap: Salaries and Wages Payable is used only when salaries are owed and not yet paid."
+            },
+            {
+              "type": "journal",
+              "points": 2,
+              "prompt": "<p><b>Sept 30</b> · Declared and paid a TND 1,200 cash dividend to the shareholders.</p>",
+              "answer": [
+                {
+                  "account": "Dividends",
+                  "side": "Dr",
+                  "amount": 1200
+                },
+                {
+                  "account": "Cash",
+                  "side": "Cr",
+                  "amount": 1200
+                }
+              ],
+              "lines": 4,
+              "explain": "<b>Debit Dividends 1,200</b>, <b>credit Cash 1,200</b>. Dividends have their own account, increased by a debit (DEALER). Traps: an expense account (a dividend is a distribution to the owners, not an expense, so it never reduces net income); debiting Retained Earnings directly (in this course the Dividends account is used during the period and is closed to Retained Earnings at the end of the year, Chapter 4); debiting Share Capital—Ordinary."
+            }
+          ],
+          "explain": "<b>The full journal of Ribat Driving School SA, September 2026</b><div class=\"table-wrap\"><table><thead><tr><th>Date</th><th>Account titles</th><th class=\"n\">Debit</th><th class=\"n\">Credit</th></tr></thead><tbody><tr><td>Sept 1</td><td>Cash</td><td class=\"n\">50,000</td><td class=\"n\"></td></tr><tr><td></td><td style=\"padding-left:2em\">Share Capital—Ordinary</td><td class=\"n\"></td><td class=\"n\">50,000</td></tr><tr><td>Sept 2</td><td>Equipment</td><td class=\"n\">42,000</td><td class=\"n\"></td></tr><tr><td></td><td style=\"padding-left:2em\">Cash</td><td class=\"n\"></td><td class=\"n\">12,000</td></tr><tr><td></td><td style=\"padding-left:2em\">Notes Payable</td><td class=\"n\"></td><td class=\"n\">30,000</td></tr><tr><td>Sept 4</td><td>Cash</td><td class=\"n\">7,800</td><td class=\"n\"></td></tr><tr><td></td><td style=\"padding-left:2em\">Unearned Service Revenue</td><td class=\"n\"></td><td class=\"n\">7,800</td></tr><tr><td>Sept 5</td><td>Prepaid Insurance</td><td class=\"n\">3,000</td><td class=\"n\"></td></tr><tr><td></td><td style=\"padding-left:2em\">Cash</td><td class=\"n\"></td><td class=\"n\">3,000</td></tr><tr><td>Sept 8</td><td>Supplies</td><td class=\"n\">2,200</td><td class=\"n\"></td></tr><tr><td></td><td style=\"padding-left:2em\">Accounts Payable</td><td class=\"n\"></td><td class=\"n\">2,200</td></tr><tr><td>Sept 10</td><td colspan=\"3\"><i>No entry: an order alone changes nothing.</i></td></tr><tr><td>Sept 18</td><td>Accounts Receivable</td><td class=\"n\">4,600</td><td class=\"n\"></td></tr><tr><td></td><td style=\"padding-left:2em\">Service Revenue</td><td class=\"n\"></td><td class=\"n\">4,600</td></tr><tr><td>Sept 30</td><td>Salaries and Wages Expense</td><td class=\"n\">2,700</td><td class=\"n\"></td></tr><tr><td></td><td style=\"padding-left:2em\">Cash</td><td class=\"n\"></td><td class=\"n\">2,700</td></tr><tr><td>Sept 30</td><td>Dividends</td><td class=\"n\">1,200</td><td class=\"n\"></td></tr><tr><td></td><td style=\"padding-left:2em\">Cash</td><td class=\"n\"></td><td class=\"n\">1,200</td></tr></tbody></table></div>Watch these: Sept 2 is a compound entry with Notes Payable (a note was signed). Sept 4 is a liability: 12 × 650, lessons not given yet. Sept 5 and Sept 8 are assets (Prepaid Insurance, Supplies). Sept 10 needs no entry (an order, not a purchase). Sept 18 is revenue now, even without cash. Sept 30: a dividend is not an expense."
+        }
+      ]
+    },
+    {
+      "title": "Part IV · Trial balance & statements",
+      "intro": "Same company, 30 September",
+      "questions": [
+        {
+          "id": "q13",
+          "type": "problem",
+          "topic": "Trial balance",
+          "review": "../financial-accounting/ch2-recording-process.html#trial-balance",
+          "prompt": "<p>Same school, same month. Besides the nine events of Part III, Ribat Driving School SA had only these four other transactions in September. They were journalized and posted correctly.</p>\n<div class=\"table-wrap\"><table><thead><tr><th>Date</th><th>Transaction</th></tr></thead><tbody><tr><td>Sept 1</td><td>Paid the September rent of the office and classroom, TND 1,300 cash.</td></tr><tr><td>Sept 22</td><td>Received TND 2,500 cash from private candidates for theory exam-preparation sessions held in September.</td></tr><tr><td>Sept 26</td><td>Paid TND 800 cash to the Sousse supplier, part of the amount owed for the Sept 8 purchase.</td></tr><tr><td>Sept 29</td><td>Received TND 2,000 cash from the bus company, part of the Sept 18 invoice.</td></tr></tbody></table></div>\n<p>All the September entries (Part III + these four) are posted to the ledger, and a trial balance is prepared on 30 September 2026. Ignore adjusting entries (supplies used, depreciation, interest: Chapter 3).</p>",
+          "parts": [
+            {
+              "type": "numeric",
+              "points": 2,
+              "topic": "Ledger & posting",
+              "review": "../financial-accounting/ch2-recording-process.html#posting",
+              "prompt": "<p>What is the balance of the <b>Cash</b> account on 30 September 2026?</p>",
+              "answer": 41300,
+              "unit": "TND",
+              "tol": 0.5,
+              "explain": "Post every cash movement to the Cash T-account.<br>Debits (cash in): 50,000 (shares, Sept 1) + 7,800 (lesson packages paid in advance, Sept 4) + 2,500 (exam-preparation sessions, Sept 22) + 2,000 (collection from the bus company, Sept 29) = 62,300.<br>Credits (cash out): 1,300 (rent, Sept 1) + 12,000 (car, cash part only, Sept 2) + 3,000 (insurance, Sept 5) + 800 (payment to the supplier, Sept 26) + 2,700 (salaries, Sept 30) + 1,200 (dividend, Sept 30) = 21,000.<br>Balance = 62,300 − 21,000 = <b>TND 41,300 (debit)</b>.<br>No cash moved on Sept 8 (on account), Sept 10 (order only) or Sept 18 (invoice). Traps: taking out the full 42,000 for the car (only 12,000 was paid; the 30,000 is a note) gives 11,300; forgetting the 7,800 paid in advance (the cash really came in, even though it is not revenue yet) gives 33,500."
+            },
+            {
+              "type": "numeric",
+              "points": 2,
+              "topic": "Trial balance",
+              "review": "../financial-accounting/ch2-recording-process.html#trial-balance",
+              "prompt": "<p>What is the total of the <b>debit column</b> of the trial balance on 30 September 2026?</p>",
+              "answer": 96300,
+              "unit": "TND",
+              "tol": 0.5,
+              "explain": "<div class=\"table-wrap\"><table><thead><tr><th>Ribat Driving School SA · Trial balance · 30 September 2026</th><th class=\"n\">Debit</th><th class=\"n\">Credit</th></tr></thead><tbody><tr><td>Cash</td><td class=\"n\">41,300</td><td class=\"n\"></td></tr><tr><td>Accounts Receivable</td><td class=\"n\">2,600</td><td class=\"n\"></td></tr><tr><td>Supplies</td><td class=\"n\">2,200</td><td class=\"n\"></td></tr><tr><td>Prepaid Insurance</td><td class=\"n\">3,000</td><td class=\"n\"></td></tr><tr><td>Equipment</td><td class=\"n\">42,000</td><td class=\"n\"></td></tr><tr><td>Notes Payable</td><td class=\"n\"></td><td class=\"n\">30,000</td></tr><tr><td>Accounts Payable</td><td class=\"n\"></td><td class=\"n\">1,400</td></tr><tr><td>Unearned Service Revenue</td><td class=\"n\"></td><td class=\"n\">7,800</td></tr><tr><td>Share Capital—Ordinary</td><td class=\"n\"></td><td class=\"n\">50,000</td></tr><tr><td>Dividends</td><td class=\"n\">1,200</td><td class=\"n\"></td></tr><tr><td>Service Revenue</td><td class=\"n\"></td><td class=\"n\">7,100</td></tr><tr><td>Salaries and Wages Expense</td><td class=\"n\">2,700</td><td class=\"n\"></td></tr><tr><td>Rent Expense</td><td class=\"n\">1,300</td><td class=\"n\"></td></tr><tr class=\"total\"><td>Totals</td><td class=\"n\">TND 96,300</td><td class=\"n\">TND 96,300</td></tr></tbody></table></div>The debit column holds the assets, Dividends and the expenses (D · E · A): 41,300 + 2,600 + 2,200 + 3,000 + 42,000 + 1,200 + 2,700 + 1,300 = <b>TND 96,300</b>, equal to the credits 30,000 + 1,400 + 7,800 + 50,000 + 7,100 = 96,300. Traps: putting Unearned Service Revenue (a liability) in the debit column; forgetting Dividends (gives 95,100). Retained Earnings does not appear: the company is new and nothing has been closed yet."
+            },
+            {
+              "type": "numeric",
+              "points": 2,
+              "topic": "Financial statements",
+              "review": "../financial-accounting/ch1-accounting-in-action.html#statements",
+              "prompt": "<p>What is the school’s <b>net income</b> for September 2026?</p>",
+              "answer": 3100,
+              "unit": "TND",
+              "tol": 0.5,
+              "hint": "Type a minus sign if it is a net loss.",
+              "explain": "Income statement for September: service revenue 4,600 (Sept 18, billed) + 2,500 (Sept 22, cash) = 7,100; expenses: salaries and wages 2,700 + rent 1,300 = 4,000. Net income = 7,100 − 4,000 = <b>TND 3,100</b>.<br>NOT on the income statement: the 7,800 paid in advance for October lessons (a liability until the lessons are given), the 3,000 insurance (an asset, prepaid), the 2,200 supplies (an asset), the 1,200 dividend (retained earnings statement, not an expense), the 2,000 collection and the 800 payment (they only settle a receivable and a payable), and the 44,000 car order (no entry). Trap: 1,900 is net income minus dividends, which is the ending retained earnings, not net income."
+            },
+            {
+              "type": "numeric",
+              "points": 2,
+              "topic": "Accounting equation",
+              "review": "../financial-accounting/ch1-accounting-in-action.html#equation",
+              "prompt": "<p>What are the school’s <b>total assets</b> on its statement of financial position at 30 September 2026?</p>",
+              "answer": 91100,
+              "unit": "TND",
+              "tol": 0.5,
+              "explain": "Assets: Cash 41,300 + Accounts Receivable 2,600 + Supplies 2,200 + Prepaid Insurance 3,000 + Equipment 42,000 = <b>TND 91,100</b>.<br>Check with the accounting equation: liabilities 39,200 (Notes Payable 30,000 + Accounts Payable 1,400 + Unearned Service Revenue 7,800) + equity 51,900 (Share Capital—Ordinary 50,000 + Retained Earnings 1,900, that is 3,100 − 1,200) = 91,100 ✓.<br>Traps: 96,300 is the total of <i>all</i> debit balances (Dividends and expenses have debit balances, but they are not assets); adding the ordered car gives 135,100, but it is not delivered yet."
+            },
+            {
+              "type": "mcq",
+              "points": 1,
+              "topic": "Trial balance",
+              "review": "../financial-accounting/ch2-recording-process.html#trial-balance",
+              "prompt": "<p>Which of these errors would <b>NOT</b> be detected by the trial balance (its two columns would still be equal)?</p>",
+              "options": [
+                "The Sept 30 salaries were posted as a debit to Salaries and Wages Expense of TND 2,700 and a credit to Cash of TND 270.",
+                "For the Sept 18 invoice, only the debit to Accounts Receivable (TND 4,600) was posted; the credit to Service Revenue was never posted.",
+                "The Sept 4 advance was journalized and posted as a debit to Cash of TND 780 and a credit to Unearned Service Revenue of TND 780.",
+                "The TND 1,200 dividend was posted as a debit to Dividends and a debit to Cash."
+              ],
+              "answer": 2,
+              "explain": "<b>(c)</b> The debit and the credit are <i>both</i> 780 instead of 7,800: the two errors are equal, so they offset each other. The trial balance still balances (89,280 = 89,280), but Cash and Unearned Service Revenue are both 7,020 too low. (a) debits exceed credits by 2,430. (b) only one side was posted: debits exceed credits by 4,600. (d) two debits and no credit: debits exceed credits by 2,400. Other errors a trial balance cannot detect: a transaction never journalized, a correct entry not posted or posted twice, a wrong account used."
+            }
+          ],
+          "explain": "The three statements in one line: income statement 7,100 − 4,000 = net income 3,100 → retained earnings statement 0 + 3,100 − 1,200 = 1,900 → statement of financial position: assets 91,100 = liabilities 39,200 + equity 51,900 (50,000 + 1,900)."
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../assets/exam.js"></script>
+</body>
+</html>

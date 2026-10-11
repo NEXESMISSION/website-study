@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Midterm mock A · Microeconomics</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/exam.css">
+</head>
+<body class="micro">
+<div id="exam"></div>
+<script type="application/json" id="exam-data">
+{
+  "id": "micro-midterm-A",
+  "title": "Midterm mock A",
+  "shortTitle": "Micro Midterm · A",
+  "course": "Microeconomics",
+  "courseClass": "micro",
+  "covers": "Chapters 1–3",
+  "duration": 90,
+  "description": "A full 90-minute mock of the Microeconomics midterm on Chapters 1–3 (McConnell 18e), in the teacher’s test-bank style: 16 multiple-choice questions, 4 true/false questions with justification, 3 problems and 1 written answer. The real midterm (week 8, 30% of the grade) also covers Ch 6 (elasticity); that part will be added when the Ch 6 lesson exists.",
+  "instructions": [
+    "Answer all four parts. A wrong answer costs nothing, so never leave a question blank.",
+    "Non-programmable calculator allowed. No notes, no lessons, no phone.",
+    "Part I: one correct answer per question. Part II: choose True or False, then justify in 2–3 sentences; the justification is marked separately.",
+    "Part III: do your working and your graphs on paper, then type only the numbers (no units). In Problem 1, quantities are in thousands of bottles.",
+    "Part IV: write full sentences in English and use the vocabulary of the course (demand vs quantity demanded, shortage, surplus, incentive…).",
+    "Suggested timing: Part I 20 min · Part II 15 min · Part III 35 min · Part IV 15 min · 5 min to check."
+  ],
+  "sections": [
+    {
+      "title": "Part I · Multiple choice (16 pts)",
+      "intro": "One correct answer per question · questions follow the chapters in order",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Opportunity cost",
+          "review": "../microeconomics/ch1-introduction.html#oppcost",
+          "prompt": "<p>The Tunisian government uses 300 million TND of resources to build a seawater desalination plant near Sfax. With exactly the same resources, it could have built either 4 regional hospitals or 15 secondary schools, and its next best choice would have been the 4 hospitals. The opportunity cost of the desalination plant is:</p>",
+          "options": [
+            "the 300 million TND paid to the construction firms, and nothing else",
+            "the 4 regional hospitals that will not be built",
+            "the 4 hospitals and the 15 schools that will not be built",
+            "zero, because the plant solves a real water problem"
+          ],
+          "answer": 1,
+          "explain": "Opportunity cost = the value of the <b>next best alternative</b> given up. The government’s next best use of these resources was the 4 hospitals, so the plant “costs” society those 4 hospitals: <b>(b)</b>. <b>(c)</b> is the classic trap: never add up all the alternatives, because the same resources could only have been used for ONE of them. <b>(a)</b> is only the money (accounting) cost; the economic cost is the real goods and services society gives up, as in the highway example of Chapter 1. <b>(d)</b> mixes up cost and benefit: a useful project still has an opportunity cost (“there is no such thing as a free lunch”)."
+        },
+        {
+          "id": "q2",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Marginal analysis (MB/MC)",
+          "review": "../microeconomics/ch1-introduction.html#marginal",
+          "prompt": "<p>A café in Sousse decides how many extra hours to stay open after 22:00. The table gives the marginal benefit (MB: extra revenue) and the marginal cost (MC: extra wages, electricity and supplies) of each extra hour, in TND.</p><div class='table-wrap'><table><thead><tr><th>Extra hour</th><th class='n'>1st</th><th class='n'>2nd</th><th class='n'>3rd</th><th class='n'>4th</th></tr></thead><tbody><tr><td>MB (TND)</td><td class='n'>90</td><td class='n'>70</td><td class='n'>55</td><td class='n'>30</td></tr><tr><td>MC (TND)</td><td class='n'>40</td><td class='n'>50</td><td class='n'>50</td><td class='n'>60</td></tr></tbody></table></div><p>To maximize its net benefit, the café should stay open:</p>",
+          "options": [
+            "1 extra hour, because the 1st hour has the highest marginal benefit",
+            "2 extra hours",
+            "3 extra hours",
+            "4 extra hours, because every extra hour still brings in revenue"
+          ],
+          "answer": 2,
+          "explain": "Rule: add an hour as long as <b>MB &gt; MC</b>, and stop before an hour where MC &gt; MB. MB − MC: 1st +50, 2nd +20, 3rd +5, 4th −30. Hours 1 to 3 each add net benefit (total 50 + 20 + 5 = 75 TND). The 4th hour costs 60 TND but brings in only 30 TND, so the total would fall to 45 TND: <b>(c) 3 hours</b>. <b>(a)</b> a high MB alone means nothing: you always compare MB with MC. <b>(d)</b> bringing in revenue is not enough; the extra revenue must cover the extra cost. <b>(b)</b> stops too early: the 3rd hour still adds 5 TND."
+        },
+        {
+          "id": "q3",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Positive vs normative",
+          "review": "../microeconomics/ch1-introduction.html#positive",
+          "prompt": "<p>Which of the following is a <b>positive</b> statement?</p>",
+          "options": [
+            "“Half of all Tunisian workers are employed in the phosphate industry.”",
+            "“Tunisia should invest more in desalination plants.”",
+            "“A budget deficit of 6% of GDP will harm the Tunisian economy.”",
+            "“Bread prices in Tunisia are unfairly low for bakers.”"
+          ],
+          "answer": 0,
+          "explain": "A <b>positive</b> statement says what <i>is</i>: it can be checked with data and shown to be true or false. <b>(a)</b> is false (in reality only a small share of Tunisian workers are in phosphates), but it is still positive, because data can test it and prove it wrong. That is the trap: <b>false does not mean normative</b>. <b>(b)</b> “should”, <b>(c)</b> “will harm” and <b>(d)</b> “unfairly” are value judgements, so these statements are normative. In (c) the 6% is a fact, but the word “harm” turns the whole statement into an opinion."
+        },
+        {
+          "id": "q4",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Factors of production",
+          "review": "../microeconomics/ch1-introduction.html#problem",
+          "prompt": "<p>Mourad uses his car as a taxi in Sousse. His neighbour owns exactly the same model and uses it only to drive her children to school. In economics, Mourad’s car is:</p>",
+          "options": [
+            "a consumer good, exactly like the neighbour’s car",
+            "entrepreneurship, because Mourad runs his own small business",
+            "financial capital, because Mourad bought it with a bank loan",
+            "capital, because it is a man-made good used to produce taxi rides"
+          ],
+          "answer": 3,
+          "explain": "The category depends on the <b>use</b>, not on the object. A man-made good used to produce other goods or services is <b>capital</b> (its payment is interest). Mourad’s car produces taxi rides, so it is capital: <b>(d)</b>. The neighbour’s identical car only satisfies her family’s wants directly, so it is a consumer good; that is why (a) is wrong for Mourad. <b>(b)</b> Mourad’s organizing and risk-taking is entrepreneurship, but the car itself is a capital good. <b>(c)</b> money borrowed from a bank is financial capital, not a factor of production: it is the car bought with that money that is capital."
+        },
+        {
+          "id": "q5",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Market system features",
+          "review": "../microeconomics/ch2-market-system.html#features-1",
+          "prompt": "<p>According to the textbook, what is the <b>basic regulatory force</b> of the market system, and what is its <b>coordinating mechanism</b>?</p>",
+          "options": [
+            "Regulatory force: markets and prices · coordinating mechanism: competition",
+            "Regulatory force: the government · coordinating mechanism: the central plan",
+            "Regulatory force: self-interest · coordinating mechanism: money",
+            "Regulatory force: competition · coordinating mechanism: markets and prices"
+          ],
+          "answer": 3,
+          "explain": "“<b>Competition</b> is the basic regulatory force in the market system”: with many independent buyers and sellers and free entry and exit, a seller who overcharges loses customers and an employer who underpays loses workers. <b>Markets and prices</b> are the coordinating mechanism: prices are signals in an “elaborate communication network” that coordinates millions of self-interested decisions. So <b>(d)</b>. <b>(a)</b> swaps the two: the most common mistake. <b>(b)</b> describes a command system. <b>(c)</b> self-interest is the <i>motivating</i> force, not the regulator, and money is a medium of exchange."
+        },
+        {
+          "id": "q6",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Specialization & money",
+          "review": "../microeconomics/ch2-market-system.html#features-2",
+          "prompt": "<p>Kairouan has surplus carpets and wants dates. Tozeur has surplus dates and wants olive oil. Sfax has surplus olive oil and wants carpets. What happens if the three regions try to trade by <b>barter</b>?</p>",
+          "options": [
+            "Barter works: Kairouan can swap its carpets directly for Tozeur’s dates, because both regions have a surplus.",
+            "Barter fails because no pair of regions has a coincidence of wants; money, used as a medium of exchange, solves the problem.",
+            "Barter fails because the three goods have different prices; the government must fix how many carpets a kilo of dates is worth.",
+            "Barter fails because the regions are too specialized; each region should become self-sufficient and produce all three goods."
+          ],
+          "answer": 1,
+          "explain": "Check each pair. Kairouan wants Tozeur’s dates, but Tozeur wants oil, not carpets. Tozeur wants Sfax’s oil, but Sfax wants carpets, not dates. Sfax wants Kairouan’s carpets, but Kairouan wants dates, not oil. No pair has a <b>coincidence of wants</b>, so barter stalls: <b>(b)</b>, and (a) is wrong. With dinars: (1) Kairouan sells carpets to Sfax for money; (2) Kairouan uses this money to buy dates from Tozeur; (3) Tozeur uses it to buy oil from Sfax. Money is first of all a <b>medium of exchange</b>. <b>(c)</b> different prices are not the problem, and no government is needed. <b>(d)</b> is the opposite of the textbook: “self-sufficiency breeds inefficiency”. Specialization raises output; money makes the exchange possible."
+        },
+        {
+          "id": "q7",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Five fundamental questions",
+          "review": "../microeconomics/ch2-market-system.html#what",
+          "prompt": "<p>A pottery workshop in Nabeul earns total revenue of 5,000 TND a month. It pays 4,200 TND a month in wages, rent and interest. Its owner could earn 800 TND a month managing another workshop: this is the normal payment needed to keep her in her own business. If this situation is typical of the industry:</p>",
+          "options": [
+            "the workshop makes an economic profit of 800 TND, so new workshops will enter and the industry will expand",
+            "the workshop makes an economic loss of 800 TND, so the industry will contract",
+            "economic profit is zero, so the owner should close her workshop",
+            "economic profit is zero, so the owner stays and the industry neither expands nor contracts"
+          ],
+          "answer": 3,
+          "explain": "Economists count ALL opportunity costs, including the normal payment to the entrepreneur. Total economic cost = 4,200 + 800 = 5,000 TND, so economic profit = TR − TC = 5,000 − 5,000 = <b>0</b>. Zero economic profit = <b>normal profit</b>: the owner earns exactly as much as in her best alternative, so she stays; but there is no economic profit to attract new firms, so the industry keeps its size: <b>(d)</b>. <b>(a)</b> forgets the owner’s 800 TND (800 TND is the accounting profit, not the economic profit). <b>(b)</b> counts the 800 TND twice. <b>(c)</b> is the classic mistake: zero economic profit does NOT mean “close”."
+        },
+        {
+          "id": "q8",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Circular flow",
+          "review": "../microeconomics/ch2-market-system.html#circular-flow",
+          "prompt": "<p>Leila works as an accountant for a bank in Tunis and earns 1,800 TND a month. She spends 600 TND of it at a supermarket. In the circular flow model:</p>",
+          "options": [
+            "her salary is set in the resource market (income for her household), and her 600 TND is a consumption expenditure in the product market",
+            "her salary is set in the product market (revenue for her household), and her 600 TND is a cost for the supermarket in the resource market",
+            "her salary and her spending both belong to the resource market, because money is a factor of production that households sell",
+            "her salary is set in the resource market (income for her household), and in the product market the 600 TND flows from the supermarket to her household"
+          ],
+          "answer": 0,
+          "explain": "Leila sells a resource, her <b>labor</b>, to a business: this happens in the <b>resource market</b>, where the same payment is a cost for the bank and wage income for her household. When she spends, she buys products: the 600 TND is a <b>consumption expenditure</b> in the <b>product market</b> and becomes revenue for the supermarket: <b>(a)</b>. <b>(b)</b> swaps the two markets. <b>(c)</b> money is not a factor of production; the resource she sells is her labor. <b>(d)</b> gets the direction wrong: in the product market, goods flow to households and money flows from households to businesses (money flows clockwise, real flows counterclockwise)."
+        },
+        {
+          "id": "q9",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Shift vs movement",
+          "review": "../microeconomics/ch3-demand-supply.html#demand-vs-qd",
+          "prompt": "<p>A very large catch arrives at the Sfax fish market. The price of sardines falls from 6 to 4 TND per kilo, and buyers buy more sardines. Nothing else changes. Which statement uses the correct economic vocabulary?</p>",
+          "options": [
+            "The demand for sardines increased, because buyers bought more sardines.",
+            "Supply increased (a shift to the right), and the quantity demanded increased.",
+            "Supply and demand both increased, because both the price and the quantity changed.",
+            "The quantity supplied increased along the supply curve, and the demand for sardines increased."
+          ],
+          "answer": 1,
+          "explain": "Step 1: what changed? The big catch changes what sellers can offer at every price, so <b>supply increases</b> (shift right). Step 2: buyers’ tastes, incomes, number, related prices and expectations did not change, so the demand curve does not move. Buyers only react to the lower price: a <b>movement down along the demand curve</b>, an increase in <b>quantity demanded</b>. So <b>(b)</b>. <b>(a)</b> is the classic error: buying more because the price fell is a change in quantity demanded, not in demand. <b>(c)</b> a change in the product’s own price never shifts its own curves. <b>(d)</b> mixes up both: the catch shifts the supply curve (it is not a movement along it), and demand did not change."
+        },
+        {
+          "id": "q10",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Demand & its determinants",
+          "review": "../microeconomics/ch3-demand-supply.html#demand-shifters",
+          "prompt": "<p>Second-hand clothes from the “fripe” are an <b>inferior good</b> for most Tunisian families. Which event would <b>increase the demand</b> for them?</p>",
+          "options": [
+            "A rise in families’ incomes",
+            "A fall in the price of second-hand clothes",
+            "A fall in families’ incomes",
+            "A fall in the price of new clothes"
+          ],
+          "answer": 2,
+          "explain": "For an <b>inferior good</b>, demand varies <b>inversely</b> with income: when incomes fall, families switch to cheaper options, so the demand for fripe clothes increases (shift right): <b>(c)</b>. <b>(a)</b> is the opposite: richer families buy new clothes instead, so demand decreases. <b>(b)</b> is the product’s own price: a movement along the demand curve (a larger quantity demanded), not an increase in demand. <b>(d)</b> new clothes are a substitute: when a substitute gets cheaper, the demand for fripe clothes decreases."
+        },
+        {
+          "id": "q11",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Demand & its determinants",
+          "review": "../microeconomics/ch3-demand-supply.html#demand-shifters",
+          "prompt": "<p>The price of PlayStation consoles falls sharply. Other things equal, what happens to the demand for <b>PlayStation games</b> and to the demand for <b>Xbox consoles</b>?</p>",
+          "options": [
+            "Demand for PlayStation games decreases; demand for Xbox consoles increases.",
+            "Demand for PlayStation games increases; demand for Xbox consoles decreases.",
+            "Demand for both increases, because playing video games becomes cheaper.",
+            "The quantity demanded of PlayStation games increases along their demand curve; the Xbox market does not change."
+          ],
+          "answer": 1,
+          "explain": "PlayStation consoles and PlayStation games are <b>complements</b> (used together): a cheaper console means more consoles sold, so more games are wanted at every price: the demand for games increases. PlayStation and Xbox consoles are <b>substitutes</b>: when the PlayStation gets cheaper, some buyers choose it instead of an Xbox, so the demand for Xbox decreases. So <b>(b)</b>. Memory trick: substitutes move in the Same direction (price of A ↓ → demand for B ↓); complements Cross (price of A ↓ → demand for B ↑). <b>(a)</b> reverses both. <b>(c)</b> forgets the substitute. <b>(d)</b> the price of the games did not change, so their demand curve shifts; it is not a movement along it."
+        },
+        {
+          "id": "q12",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Demand & its determinants",
+          "review": "../microeconomics/ch3-demand-supply.html#demand-shifters",
+          "prompt": "<p>In October, Tunisian car buyers learn that the government will remove the import tax on new cars next January, so new cars will become much cheaper. What happens to the demand for new cars <b>this October</b>?</p>",
+          "options": [
+            "It increases, because new cars will soon be much cheaper.",
+            "The quantity demanded increases along the demand curve.",
+            "It decreases, because many buyers wait until January.",
+            "It stays the same until the price actually falls in January."
+          ],
+          "answer": 2,
+          "explain": "Consumer <b>expectations</b> are a determinant of demand. When buyers expect <b>lower</b> future prices, they wait, so current demand <b>decreases</b> (shift left), like shoppers who wait for the winter sales: <b>(c)</b>. <b>(a)</b> has the right determinant but the wrong direction: current demand rises when people expect prices to RISE. <b>(b)</b> today’s price has not changed, so there is no movement along the curve. <b>(d)</b> expectations act immediately: demand today depends on what buyers expect about tomorrow."
+        },
+        {
+          "id": "q13",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Supply & its determinants",
+          "review": "../microeconomics/ch3-demand-supply.html#supply-shifters",
+          "prompt": "<p>Factories in Sfax can produce either plastic bottles or plastic chairs with the same machines and workers. Which event would <b>decrease the supply</b> of plastic bottles?</p>",
+          "options": [
+            "The price of plastic chairs rises.",
+            "The state gives producers a subsidy of 10 millimes per bottle.",
+            "The price of plastic bottles falls.",
+            "A new machine reduces the cost of making each bottle."
+          ],
+          "answer": 0,
+          "explain": "The <b>prices of other goods</b> a firm could produce are a determinant of supply. When chairs become more profitable, factories move machines and workers from bottles to chairs, so fewer bottles are offered at every price: the supply of bottles decreases (shift left): <b>(a)</b>. <b>(b)</b> a subsidy is a “tax in reverse”: it lowers costs and <i>increases</i> supply. <b>(c)</b> is the product’s own price: a movement down along the supply curve (a smaller quantity supplied), not a decrease in supply. <b>(d)</b> better technology lowers costs and increases supply."
+        },
+        {
+          "id": "q14",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Changes in equilibrium",
+          "review": "../microeconomics/ch3-demand-supply.html#changes",
+          "prompt": "<p>This September, the price of school bags in Tunis is 20% higher than last September, but <b>exactly the same number</b> of bags is sold. Which pair of changes could explain this?</p>",
+          "options": [
+            "More pupils start school, and a new low-cost factory opens.",
+            "Fewer pupils start school, and the government puts a new tax on imported bags.",
+            "More pupils start school, and the government puts a new tax on imported bags.",
+            "More pupils start school, and nothing changes on the supply side."
+          ],
+          "answer": 2,
+          "explain": "First find the shifts: more pupils = demand ↑; fewer pupils = demand ↓; a new factory = supply ↑; a tax on bags is a cost, so supply ↓. In (c), demand ↑ alone gives P ↑, Q ↑, and supply ↓ alone gives P ↑, Q ↓. Both push the price up, so the price surely rises; they push the quantity in opposite directions, so the quantity is <b>indeterminate</b>: if the two effects are equal, it stays exactly the same (Table 3.3, case 2). So <b>(c)</b>. <b>(a)</b> demand ↑ and supply ↑ make the quantity surely rise. <b>(b)</b> demand ↓ and supply ↓ could raise the price, but the quantity must fall. <b>(d)</b> demand ↑ alone raises the quantity."
+        },
+        {
+          "id": "q15",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Price ceilings & floors",
+          "review": "../microeconomics/ch3-demand-supply.html#gov-prices",
+          "prompt": "<p>Suppose the equilibrium price of a 1-litre bottle of milk is 1.400 TND. Which government decision would create a persistent <b>shortage</b>?</p>",
+          "options": [
+            "A maximum price (price ceiling) of 1.600 TND",
+            "A minimum price (price floor) of 1.600 TND",
+            "A minimum price (price floor) of 1.200 TND",
+            "A maximum price (price ceiling) of 1.200 TND"
+          ],
+          "answer": 3,
+          "explain": "A shortage (Qd &gt; Qs) appears only if the price is held <b>below</b> equilibrium, and only a ceiling can do that. A ceiling of 1.200 TND is binding: the price cannot rise to 1.400 TND to clear the market, so the shortage persists: <b>(d)</b>. <b>(a)</b> is the trap: a ceiling <i>above</i> equilibrium has no effect, because the market price (1.400 TND) is already below the legal maximum. <b>(b)</b> a floor above equilibrium is binding, but it creates a <i>surplus</i> (Qs &gt; Qd). <b>(c)</b> a floor below equilibrium has no effect."
+        },
+        {
+          "id": "q16",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Market equilibrium",
+          "review": "../microeconomics/ch3-demand-supply.html#equilibrium",
+          "prompt": "<p>(1) An olive mill in Sfax installs a new press that extracts the same quantity of oil from the same olives with 20% less energy. (2) The competitive market for olive oil produces the quantity at which marginal benefit equals marginal cost. These two situations illustrate:</p>",
+          "options": [
+            "(1) productive efficiency · (2) allocative efficiency",
+            "(1) allocative efficiency · (2) productive efficiency",
+            "(1) and (2) are both productive efficiency",
+            "(1) and (2) are both allocative efficiency"
+          ],
+          "answer": 0,
+          "explain": "<b>Productive efficiency</b> = producing a good in the least costly way: the mill now makes the same oil with fewer resources, which frees resources for other goods. <b>Allocative efficiency</b> = producing the mix of goods that society values most: at the competitive equilibrium, demand (marginal benefit) and supply (marginal cost) cross, so MB = MC and resources are neither over- nor under-allocated to olive oil. So <b>(a)</b>. <b>(b)</b> swaps the two definitions, the classic trap. Remember: productive = <i>how</i> cheaply a good is made; allocative = <i>which</i> goods are made, and how much of each."
+        }
+      ]
+    },
+    {
+      "title": "Part II · True or false with justification (8 pts)",
+      "intro": "True or False = 1 pt · justification in 2–3 sentences = 1 pt",
+      "questions": [
+        {
+          "id": "q17",
+          "type": "tf",
+          "points": 1,
+          "topic": "Opportunity cost",
+          "review": "../microeconomics/ch1-introduction.html#oppcost",
+          "prompt": "<p>Hiba can earn 45 TND babysitting or 30 TND giving a private lesson on Saturday. She decides to spend Saturday studying for her midterm. The opportunity cost of studying is 45 TND, even though studying costs her no money.</p>",
+          "answer": true,
+          "justify": {
+            "points": 1,
+            "model": "True. Opportunity cost is the value of the <b>next best alternative</b> given up. Hiba’s best alternative is babysitting, so studying costs her 45 TND. We do not add the 30 TND lesson (75 TND would be wrong), because she could only have done one of the two jobs. And the cost is not zero: income she gives up is a real cost, even if she pays nothing.",
+            "rubric": [
+              {
+                "text": "Uses the definition: opportunity cost = the value of the next best alternative given up (here babysitting, 45 TND)",
+                "points": 0.5
+              },
+              {
+                "text": "Explains why it is not 75 TND (only one alternative counts, she could do only one job) or why it is not 0 TND (income given up is a cost even when no money is paid)",
+                "points": 0.5
+              }
+            ]
+          },
+          "explain": "True. Only the <b>single best</b> alternative counts: babysitting (45 TND) is better than the lesson (30 TND). Two traps: adding the alternatives (45 + 30 = 75 TND, impossible because she could do only one of them) and thinking that a choice without a money payment costs nothing (0 TND). Opportunity cost is about what you give up, not about what you pay."
+        },
+        {
+          "id": "q18",
+          "type": "tf",
+          "points": 1,
+          "topic": "Economic systems",
+          "review": "../microeconomics/ch2-market-system.html#systems",
+          "prompt": "<p>Tunisia is a command economy, because the state owns big firms such as STEG (electricity) and SONEDE (water) and fixes the price of subsidized bread.</p>",
+          "answer": false,
+          "justify": {
+            "points": 1,
+            "model": "False. In a <b>command system</b>, the government owns most property resources and a central plan decides what, how and for whom. In Tunisia, most firms, farms, shops and cafés are private, and most prices are set by markets; the state owns some large firms and fixes a few prices. So Tunisia is a <b>mixed economy</b> in which the market remains the dominant force, like most market economies with an active but limited government.",
+            "rubric": [
+              {
+                "text": "Defines a command system: the government owns most resources AND a central plan makes the main economic decisions",
+                "points": 0.5
+              },
+              {
+                "text": "Says that most Tunisian resources are private and most prices are set by markets, so Tunisia is a mixed (market-dominated) economy: a few state firms and fixed prices are not enough to make it a command economy",
+                "points": 0.5
+              }
+            ]
+          },
+          "explain": "False. What defines an economic system is <b>who owns most of the resources</b> and <b>how most decisions are coordinated</b>. A few state-owned firms and some fixed prices exist in almost every market economy. The trap is to jump from “the state plays a role” to “command economy”: real economies are mixed, and in Tunisia markets and prices coordinate most economic activity."
+        },
+        {
+          "id": "q19",
+          "type": "tf",
+          "points": 1,
+          "topic": "Shift vs movement",
+          "review": "../microeconomics/ch3-demand-supply.html#demand-vs-qd",
+          "prompt": "<p>Suppose that over three years the price of a kilo of Deglet Nour dates rose from 8 to 10 to 12 TND, and the quantity sold rose every year. This proves that the law of demand does not apply to dates.</p>",
+          "answer": false,
+          "justify": {
+            "points": 1,
+            "model": "False. The law of demand describes a movement along <b>one</b> demand curve, <b>other things equal</b>. Over three years, other things changed (for example more tourists and exports, higher incomes, changing tastes), so the demand curve shifted to the right each year. The three price–quantity points lie on three different demand curves: price and quantity rose together because demand increased, exactly as the model predicts.",
+            "rubric": [
+              {
+                "text": "Says the law of demand holds other things equal, along a single demand curve (a movement along the curve)",
+                "points": 0.5
+              },
+              {
+                "text": "Explains that demand increased (the curve shifted right, e.g. tastes, incomes or number of buyers), which raises both P and Q without breaking the law of demand",
+                "points": 0.5
+              }
+            ]
+          },
+          "explain": "False. This is the textbook’s salsa example, with dates. When demand increases (shift right), the new equilibrium has a higher price AND a larger quantity (Figure 3.7a). The law of demand is not refuted, because “other things” did not stay equal. The trap: reading points from different years as if they were on the same demand curve."
+        },
+        {
+          "id": "q20",
+          "type": "tf",
+          "points": 1,
+          "topic": "Supply & its determinants",
+          "review": "../microeconomics/ch3-demand-supply.html#supply-shifters",
+          "prompt": "<p>A new tax of 0.500 TND per bottle, paid by olive-oil producers, <b>decreases</b> the supply of olive oil, even though it makes the market price of olive oil rise.</p>",
+          "answer": true,
+          "justify": {
+            "points": 1,
+            "model": "True. Producers treat a per-unit tax as a <b>cost of production</b>, so at every price they offer fewer bottles: the supply curve shifts to the <b>left</b> (a decrease in supply). The higher market price is the <b>result</b> of this shift (buyers move up along the demand curve to a new equilibrium with a higher price and a smaller quantity); it is not an increase in supply.",
+            "rubric": [
+              {
+                "text": "Says a per-unit tax is a cost for producers (taxes are a determinant of supply), so less is offered at every price: the supply curve shifts left",
+                "points": 0.5
+              },
+              {
+                "text": "Explains that the price rise is the consequence of the leftward shift (new equilibrium: higher P, lower Q), not an increase in supply",
+                "points": 0.5
+              }
+            ]
+          },
+          "explain": "True. Taxes are one of the six determinants of supply: a tax raises costs, so supply decreases. The new equilibrium has a higher price and a smaller quantity (Figure 3.7d). The trap is the reasoning “the price rises, so supply rises”: a change in the product’s own price only moves sellers along the supply curve; it never shifts the curve."
+        }
+      ]
+    },
+    {
+      "title": "Part III · Problems (16 pts)",
+      "intro": "Do your working on paper, then type only the numbers",
+      "questions": [
+        {
+          "id": "q21",
+          "type": "problem",
+          "topic": "Market equilibrium",
+          "review": "../microeconomics/ch3-demand-supply.html#equilibrium",
+          "prompt": "<p><b>Problem 1 · The olive-oil market in Sfax.</b> The table shows the weekly market for 1-litre bottles of olive oil in Sfax. Quantities are in <b>thousands of bottles per week</b>.</p><div class='table-wrap'><table><thead><tr><th class='n'>Price (TND per bottle)</th><th class='n'>Quantity demanded</th><th class='n'>Quantity supplied</th></tr></thead><tbody><tr><td class='n'>12</td><td class='n'>60</td><td class='n'>24</td></tr><tr><td class='n'>14</td><td class='n'>56</td><td class='n'>32</td></tr><tr><td class='n'>16</td><td class='n'>52</td><td class='n'>40</td></tr><tr><td class='n'>18</td><td class='n'>48</td><td class='n'>48</td></tr><tr><td class='n'>20</td><td class='n'>44</td><td class='n'>56</td></tr><tr><td class='n'>22</td><td class='n'>40</td><td class='n'>64</td></tr></tbody></table></div>",
+          "parts": [
+            {
+              "type": "grid",
+              "points": 2,
+              "prompt": "Complete the column: the surplus (+) or shortage (−) at each price, in thousands of bottles per week.",
+              "columns": [
+                "Surplus (+) or shortage (−)"
+              ],
+              "rows": [
+                {
+                  "label": "12 TND",
+                  "cells": [
+                    -36
+                  ]
+                },
+                {
+                  "label": "14 TND",
+                  "cells": [
+                    -24
+                  ]
+                },
+                {
+                  "label": "16 TND",
+                  "cells": [
+                    -12
+                  ]
+                },
+                {
+                  "label": "18 TND",
+                  "cells": [
+                    0
+                  ]
+                },
+                {
+                  "label": "20 TND",
+                  "cells": [
+                    12
+                  ]
+                },
+                {
+                  "label": "22 TND",
+                  "cells": [
+                    24
+                  ]
+                }
+              ],
+              "hint": "Type a surplus as a positive number and a shortage as a negative number (for example −5 for a shortage of 5 thousand bottles). Type 0 where there is neither.",
+              "explain": "Surplus or shortage = <b>Qs − Qd</b> at each price. 12 TND: 24 − 60 = −36 (shortage of 36 thousand bottles); 14 TND: 32 − 56 = −24; 16 TND: 40 − 52 = −12; 18 TND: 48 − 48 = 0 (equilibrium); 20 TND: 56 − 44 = +12 (surplus); 22 TND: 64 − 40 = +24. Trap: computing Qd − Qs reverses every sign. Notice the pattern: below the equilibrium price there is always a shortage, above it always a surplus, and the gap grows as the price moves away from equilibrium."
+            },
+            {
+              "type": "numeric",
+              "points": 0.5,
+              "prompt": "What is the equilibrium price?",
+              "answer": 18,
+              "unit": "TND",
+              "tol": 0.01,
+              "explain": "The equilibrium price is the price at which <b>Qd = Qs</b>: at 18 TND, 48 = 48. There is no surplus and no shortage, so there is no pressure on the price (it is the market-clearing price). At any other price, a surplus pushes the price down or a shortage pushes it up, back to 18 TND. Trap: a lower price is not “better” for the market: at 12, 14 or 16 TND buyers want more than sellers offer, so there is a shortage and the price is bid up."
+            },
+            {
+              "type": "numeric",
+              "points": 0.5,
+              "prompt": "What is the equilibrium quantity? (thousands of bottles per week)",
+              "answer": 48,
+              "unit": "thousand bottles",
+              "tol": 0.01,
+              "alsoAccept": [
+                48000
+              ],
+              "explain": "At 18 TND buyers want 48 and sellers offer 48: the equilibrium quantity is <b>48 thousand bottles per week</b> (48,000 bottles). Careful with units: the table is in thousands."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "topic": "Price ceilings & floors",
+              "review": "../microeconomics/ch3-demand-supply.html#gov-prices",
+              "prompt": "After complaints about expensive olive oil, the government sets a <b>maximum price of 14 TND</b> per bottle. How large is the resulting shortage? (thousands of bottles per week; give a positive number)",
+              "answer": 24,
+              "unit": "thousand bottles",
+              "tol": 0.01,
+              "alsoAccept": [
+                24000,
+                -24
+              ],
+              "explain": "A ceiling is binding only if it is <b>below</b> equilibrium: 14 &lt; 18 TND, so it binds. At 14 TND, Qd = 56 and Qs = 32, so the shortage = Qd − Qs = 56 − 32 = <b>24 thousand bottles a week</b>. Trap: the shortage is the GAP between the two quantities, not Qd (56) or Qs (32) alone. The price is not allowed to rise to 18 TND, so the shortage persists: expect queues, favoritism, maybe ration coupons, and a black market where bottles are sold above 14 TND."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "topic": "Price ceilings & floors",
+              "review": "../microeconomics/ch3-demand-supply.html#gov-prices",
+              "prompt": "Instead, to support olive farmers, the government sets a <b>minimum price of 20 TND</b> per bottle (and no maximum price). How large is the resulting surplus? (thousands of bottles per week)",
+              "answer": 12,
+              "unit": "thousand bottles",
+              "tol": 0.01,
+              "alsoAccept": [
+                12000
+              ],
+              "explain": "A floor is binding only if it is <b>above</b> equilibrium: 20 &gt; 18 TND, so it binds. At 20 TND, Qs = 56 and Qd = 44, so the surplus = Qs − Qd = 56 − 44 = <b>12 thousand bottles a week</b>. It cannot disappear by itself, because selling below 20 TND is now illegal. Traps: the surplus is the gap Qs − Qd, not Qs (56) alone; and a floor only matters ABOVE equilibrium (a minimum price of 16 TND would change nothing)."
+            },
+            {
+              "type": "mcq",
+              "points": 1,
+              "topic": "Price ceilings & floors",
+              "review": "../microeconomics/ch3-demand-supply.html#gov-prices",
+              "prompt": "With this minimum price of 20 TND, what must the government do to keep the price at 20 TND?",
+              "options": [
+                "Nothing: sellers will cut their prices until the surplus disappears at 18 TND.",
+                "Print ration coupons and give each family the same number of coupons.",
+                "Buy the unsold bottles at 20 TND, or limit production so the surplus shrinks.",
+                "Raise the minimum price to 22 TND, so that farmers can sell their extra bottles."
+              ],
+              "answer": 2,
+              "explain": "With a binding floor the surplus is <b>persistent</b>, so the government must deal with it: (1) buy the unsold bottles at 20 TND and store, export or destroy them (paid by taxpayers), and/or (2) make the surplus smaller by restricting supply (for example production quotas) or by increasing demand (new uses, new export markets): <b>(c)</b>. <b>(a)</b> is what a free market would do, but prices below 20 TND are now illegal. <b>(b)</b> ration coupons deal with a shortage under a price ceiling, not with a surplus. <b>(d)</b> a higher floor makes the surplus bigger: at 22 TND it would be 64 − 40 = 24 thousand bottles. Side effects to remember: consumers pay more, taxpayers pay for the purchases, and resources are misallocated (high-cost producers stay in the industry)."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "prompt": "Now go back to the free market (no maximum or minimum price). A severe drought hits the olive groves. Before the drought, the table followed exactly the equations <b>demand: P = 42 − 0.5Q</b> and <b>supply: P = 6 + 0.25Q</b> (P in TND, Q in thousands of bottles per week). After the drought, supply becomes <b>P = 12 + 0.25Q</b>, and demand does not change. Find the new equilibrium price.",
+              "answer": 22,
+              "unit": "TND",
+              "tol": 0.01,
+              "explain": "At equilibrium Qd = Qs = Q, so the two prices are equal: 42 − 0.5Q = 12 + 0.25Q → 42 − 12 = 0.25Q + 0.5Q → 30 = 0.75Q → Q = 40. Then P = 42 − 0.5 × 40 = 42 − 20 = <b>22 TND</b>. Check with supply: 12 + 0.25 × 40 = 12 + 10 = 22 ✓. The drought <b>decreased supply</b> (shift left), so the price rose from 18 to 22 TND. Trap: do not simply add the 6 TND shift to the old price (18 + 6 = 24 TND is wrong). At every quantity the drought raised the supply price by 6 TND (from 6 + 0.25Q to 12 + 0.25Q), but the market price rose by only 4 TND, because buyers reduce the quantity they demand as the price rises."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "prompt": "Find the new equilibrium quantity. (thousands of bottles per week)",
+              "answer": 40,
+              "unit": "thousand bottles",
+              "tol": 0.01,
+              "alsoAccept": [
+                40000
+              ],
+              "explain": "From the previous part: 30 = 0.75Q, so Q = 30 ÷ 0.75 = <b>40 thousand bottles a week</b>, down from 48. Supply ↓ → P ↑ and Q ↓, as in Figure 3.7(d). Check with the table: at 22 TND the quantity demanded is 40, so the new equilibrium lies on the unchanged demand curve. Common errors: forgetting to move 0.5Q to the other side (30 = 0.25Q gives Q = 120, impossible because buyers want only 40 at 22 TND), or typing the price instead of the quantity."
+            }
+          ],
+          "explain": "Method summary. Surplus (+) or shortage (−) = Qs − Qd. Equilibrium: the row where Qd = Qs. A ceiling matters only below equilibrium and creates a shortage (Qd − Qs); a floor matters only above equilibrium and creates a surplus (Qs − Qd) that the government must buy or reduce. With equations: set the two prices equal, solve for Q, then put Q back into one equation to find P, and check it with the other equation."
+        },
+        {
+          "id": "q22",
+          "type": "match",
+          "pointsEach": 0.5,
+          "topic": "Changes in equilibrium",
+          "review": "../microeconomics/ch3-demand-supply.html#changes",
+          "prompt": "<p><b>Problem 2 · Shifts and the new equilibrium.</b> For each event, find what happens to the <b>equilibrium price (P)</b> and the <b>equilibrium quantity (Q)</b> in the market named in bold. Other things are equal. Use the 4-step method: which curve? which direction? draw it, then compare the new equilibrium with the old one. A choice can be used once, more than once, or not at all.</p>",
+          "choices": [
+            "P ↑ and Q ↑",
+            "P ↓ and Q ↓",
+            "P ↓ and Q ↑",
+            "P ↑ and Q ↓",
+            "P ↑ and Q indeterminate",
+            "P ↓ and Q indeterminate",
+            "P indeterminate and Q ↑",
+            "P indeterminate and Q ↓"
+          ],
+          "items": [
+            {
+              "text": "<b>Bottled water in Hammamet</b>: in July, foreign tourists and Tunisians living abroad arrive for the summer.",
+              "answer": 0
+            },
+            {
+              "text": "<b>Olive oil</b>: a severe drought cuts the olive harvest in the Sahel.",
+              "answer": 3
+            },
+            {
+              "text": "<b>Soft drinks</b>: the government introduces a new tax of 0.150 TND on each can, paid by the producers.",
+              "answer": 3
+            },
+            {
+              "text": "<b>Tomatoes</b> (a normal good): fertiliser becomes cheaper AND consumers’ incomes rise.",
+              "answer": 6
+            },
+            {
+              "text": "<b>Phone cases</b>: the price of smartphones rises sharply.",
+              "answer": 1
+            },
+            {
+              "text": "<b>Dates</b>: a record harvest in Kebili AND, at the same time, Ramadan ends, so families want fewer dates at every price.",
+              "answer": 5
+            },
+            {
+              "text": "<b>Fish in Sfax</b>: the seasonal fishing ban starts, so fewer boats go out, AND summer visitors arrive.",
+              "answer": 4
+            },
+            {
+              "text": "<b>Baklawa in Sfax</b> (a normal good): a recession lowers incomes AND the prices of almonds and honey, the main ingredients of baklawa, rise.",
+              "answer": 7
+            }
+          ],
+          "explain": "<b>1.</b> More buyers → demand ↑ → P ↑, Q ↑. <b>2.</b> The drought cuts output → supply ↓ → P ↑, Q ↓. <b>3.</b> A per-unit tax is a cost → supply ↓ → P ↑, Q ↓ (it does not change demand). <b>4.</b> Cheaper fertiliser → supply ↑ (P ↓, Q ↑); higher incomes for a normal good → demand ↑ (P ↑, Q ↑). Both raise Q, but they push P in opposite directions → <b>P indeterminate, Q ↑</b>. <b>5.</b> Smartphones and phone cases are complements: dearer phones → fewer phones bought → demand for cases ↓ → P ↓, Q ↓. <b>6.</b> Supply ↑ (P ↓, Q ↑) and demand ↓ (P ↓, Q ↓): both lower P → <b>P ↓, Q indeterminate</b>. <b>7.</b> Fewer sellers → supply ↓ (P ↑, Q ↓) and more buyers → demand ↑ (P ↑, Q ↑): <b>P ↑, Q indeterminate</b>. <b>8.</b> Lower incomes for a normal good → demand ↓ (P ↓, Q ↓); dearer ingredients raise the pastry makers’ costs (resource prices) → supply ↓ (P ↑, Q ↓): <b>P indeterminate, Q ↓</b>. Rule for double shifts: write the effect of each shift alone; if the two arrows agree, the result is certain; if they disagree, it is indeterminate (it depends on which shift is larger). The choice “P ↓ and Q ↑” (a supply increase alone) was not needed."
+        },
+        {
+          "id": "q23",
+          "type": "problem",
+          "topic": "PPC & budget line",
+          "review": "../microeconomics/ch1-introduction.html#ppc",
+          "prompt": "<p><b>Problem 3 · Production possibilities.</b> An economy produces only two goods: <b>olive oil</b> (a consumer good, in thousand tonnes) and <b>tractors</b> (a capital good). It uses all its resources fully and efficiently, with its current technology. Its production possibilities are:</p><div class='table-wrap'><table><thead><tr><th>Alternative</th><th class='n'>A</th><th class='n'>B</th><th class='n'>C</th><th class='n'>D</th><th class='n'>E</th><th class='n'>F</th></tr></thead><tbody><tr><td>Tractors</td><td class='n'>0</td><td class='n'>100</td><td class='n'>200</td><td class='n'>300</td><td class='n'>400</td><td class='n'>500</td></tr><tr><td>Olive oil (thousand tonnes)</td><td class='n'>40</td><td class='n'>38</td><td class='n'>34</td><td class='n'>27</td><td class='n'>16</td><td class='n'>0</td></tr></tbody></table></div>",
+          "parts": [
+            {
+              "type": "numeric",
+              "points": 1,
+              "prompt": "The economy moves from D to E. What is the opportunity cost of these 100 extra tractors? (in thousand tonnes of olive oil)",
+              "answer": 11,
+              "unit": "thousand tonnes",
+              "tol": 0.01,
+              "alsoAccept": [
+                11000
+              ],
+              "explain": "Opportunity cost = what you give up. From D (300 tractors, 27) to E (400 tractors, 16), olive oil falls by 27 − 16 = <b>11 thousand tonnes</b>: that is the cost of the 100 extra tractors. Trap: answering 16 (the amount of oil left at E) instead of the amount given up. Notice the cost of each successive 100 tractors: 2, 4, 7, 11, 16 thousand tonnes: the law of increasing opportunity costs."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "prompt": "The economy moves from C to B (more olive oil, fewer tractors). What is the opportunity cost of <b>one</b> thousand tonnes of olive oil, measured in tractors?",
+              "answer": 25,
+              "unit": "tractors",
+              "tol": 0.01,
+              "explain": "From C (200 tractors, 34) to B (100 tractors, 38): the economy gains 38 − 34 = 4 thousand tonnes of oil and gives up 100 tractors. The cost of ONE thousand tonnes = 100 ÷ 4 = <b>25 tractors</b>. Traps: 100 (the cost of all 4 thousand tonnes), 4 (the gain, not the cost), or 4 ÷ 100 = 0.04 (that is the oil cost of one tractor: the inverse)."
+            },
+            {
+              "type": "match",
+              "pointsEach": 0.5,
+              "prompt": "Classify each combination.",
+              "choices": [
+                "On the curve: efficient",
+                "Inside the curve: inefficient (unemployed or wasted resources)",
+                "Outside the curve: unattainable with today’s resources and technology"
+              ],
+              "items": [
+                {
+                  "text": "200 tractors and 30 thousand tonnes of olive oil",
+                  "answer": 1
+                },
+                {
+                  "text": "300 tractors and 34 thousand tonnes of olive oil",
+                  "answer": 2
+                }
+              ],
+              "explain": "With 200 tractors the economy can make up to 34 thousand tonnes of oil (point C); making only 30 means it is <b>inside</b> the curve: some resources are unemployed or wasted. With 300 tractors the maximum is 27 thousand tonnes (point D), so 34 is <b>outside</b> the curve: impossible today. It needs economic growth (more resources or better technology), which shifts the curve outward. Trap: an inside point is NOT unattainable; it is possible but wasteful. Only points outside the curve are unattainable."
+            },
+            {
+              "type": "mcq",
+              "points": 1,
+              "prompt": "Which statement about this economy is correct?",
+              "options": [
+                "Moving from A to F is economic growth, because the economy produces more and more tractors as it moves along the curve.",
+                "Each extra 100 tractors costs more olive oil than the previous 100, because resources are not equally suited to producing both goods.",
+                "Choosing D rather than B today will slow down future growth, because at D the economy produces less olive oil for its people.",
+                "A drought that destroys many olive groves would shift the whole production possibilities curve outward."
+              ],
+              "answer": 1,
+              "explain": "<b>(b)</b> is the law of increasing opportunity costs, and the reason why the curve is bowed outward: the first resources moved into tractors are those best suited to making tractors; the last ones are olive specialists, so each extra 100 tractors costs more oil (2, 4, 7, 11, 16 thousand tonnes). <b>(a)</b> moving along the curve is a choice between goods, not growth; growth is an outward shift of the curve. <b>(c)</b> is backwards: D has more capital goods (300 tractors against 100), so it gives faster future growth, at the cost of less consumption today. <b>(d)</b> destroying resources shifts the curve inward, not outward."
+            }
+          ],
+          "explain": "Method summary. Opportunity cost on a PPC = what you give up ÷ what you gain, read as a CHANGE between two points, never as a level. On the curve = efficient; inside = unemployed or wasted resources; outside = unattainable without growth. The curve is bowed out because opportunity costs increase."
+        }
+      ]
+    },
+    {
+      "title": "Part IV · Written answer (4 pts)",
+      "intro": "Marked with a rubric of 4 ideas · write about 10–12 lines",
+      "questions": [
+        {
+          "id": "q24",
+          "type": "text",
+          "topic": "Invisible hand & command failure",
+          "review": "../microeconomics/ch2-market-system.html#command-demise",
+          "prompt": "<p>The Soviet Union, the countries of eastern Europe and China before its reforms all used central planning, and these command systems failed. <b>Explain the two problems</b> that command economies could not overcome, and <b>explain how a market system solves each of them</b>. Give at least one example.</p>",
+          "rubric": [
+            {
+              "text": "Coordination problem: planners must coordinate millions of interdependent decisions (one industry’s output is another industry’s input), so one missed target spreads as a chain reaction of bottlenecks (e.g. iron → steel → tractors); and/or there is no reliable success indicator (quantity targets instead of profit → poor quality and variety, e.g. the nails)",
+              "points": 1
+            },
+            {
+              "text": "Incentive problem: rewards came from meeting plan targets, not from prices and profits, so managers had no reason to fix shortages and surpluses or to satisfy consumers, and nobody was rewarded for innovating (getting ahead meant climbing the party hierarchy)",
+              "points": 1
+            },
+            {
+              "text": "Market solution to coordination: prices act as signals; a shortage raises the price, so producers supply more and buyers economize or switch, which coordinates millions of decisions without any planner (guiding function of prices)",
+              "points": 1
+            },
+            {
+              "text": "Market solution to incentives: profit and competition reward firms that give consumers what they want, with good quality and low cost, and that innovate, while the others make losses (self-interest guided by competition: the invisible hand)",
+              "points": 1
+            }
+          ],
+          "model": "<p><b>1. The coordination problem.</b> Central planners had to coordinate millions of decisions, and the output of one industry is the input of others. To make 1,000 tractors, a factory needs steel, tires, glass, electric power and transport. If the iron mines miss their target, the steel mills cannot supply the tractor factory, and the shortage spreads like a chain reaction (bottlenecks, production stoppages). Planners also had no reliable success indicator: firms were judged on quantity targets, not on profit, so quality and variety were sacrificed (a nail factory with a target in tons made only big, heavy nails).</p><p><b>2. The incentive problem.</b> Managers were rewarded for meeting the plan, not for pleasing consumers. When planners guessed wrong, shortages of some goods and surpluses of others lasted for years, because nobody gained anything by correcting them. With no profit motive, there was little innovation; people got ahead by climbing the Communist Party hierarchy.</p><p><b>How markets solve them.</b> Prices coordinate automatically: if steel becomes scarce, its price rises, so producers supply more and users economize or switch to other inputs; no planner is needed (the guiding function of prices). Profit and competition provide the incentives: firms that make what consumers want, with good quality and low cost, earn profits; firms that ignore consumers or new technology lose sales and leave the market. Self-interest, guided by competition, serves society: Adam Smith’s invisible hand.</p>",
+          "rows": 10
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../assets/exam.js"></script>
+</body>
+</html>

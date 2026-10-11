@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Quiz Chapter 2 · Practice A · Mathematics I</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/exam.css">
+</head>
+<body class="math">
+<div id="exam"></div>
+<script type="application/json" id="exam-data">
+{
+  "id": "math1-quiz2-A",
+  "title": "Quiz Chapter 2 · Practice A",
+  "shortTitle": "Math I Quiz Ch 2 · A",
+  "course": "Mathematics I",
+  "courseClass": "math",
+  "covers": "Chapter 2",
+  "duration": 30,
+  "hub": "../exams/index.html",
+  "description": "A 30-minute rehearsal of the Chapter 2 quiz “Rate of Change: The Derivative” (date not announced yet), in the format of Dr. Elaoud’s Moodle quizzes: true/false statements like her T/F sheet, multiple choice and short calculations. It uses the idea of the derivative only (no shortcut rules: they are Chapter 3), and every question hides one of the classic traps of the chapter.",
+  "instructions": [
+    "30 minutes, one attempt, no notes and no phone. A scientific calculator is allowed (you need the x<sup>y</sup> key). The real quiz is a Moodle quiz taken in class with a key, so do this first attempt in exam mode.",
+    "Part I: choose True or False. Questions 1 and 3 also ask for a justification in 1–2 sentences, which you mark yourself after you submit.",
+    "Part II: one correct answer per question. A wrong answer costs nothing, so answer every question.",
+    "Part III: work on paper, then type only the final number. Decimals with a point or a comma (0.25 or 0,25). Use a minus sign for a decrease. Round exactly as asked, and keep all the calculator digits until the last step.",
+    "Remember the units: the units of a derivative are “units of the output per unit of the input” (for example TND per kg).",
+    "Suggested timing: Part I 8 min · Part II 6 min · Part III 14 min · 2 min to check.",
+    "All figures in the questions are illustrative (invented for practice), not official statistics."
+  ],
+  "sections": [
+    {
+      "title": "Part I · True or false (6 pts)",
+      "intro": "Five statements, like your teacher’s T/F sheet · questions 1 and 3 also need a short justification",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "tf",
+          "points": 1,
+          "topic": "Derivative at a point",
+          "review": "../mathematics-1/ch2-derivative.html#instant",
+          "prompt": "<p>On a spring day in Tunis, the temperature was 18 °C at 8:00. It rose to its highest value of the day, 26 °C, at 14:00, and then it went down to 18 °C again at 20:00 (illustrative figures).</p><p>True or false: the average rate of change of the temperature between 8:00 and 20:00 is 0 °C per hour, so the instantaneous rate of change of the temperature was 0 °C per hour at every moment between 8:00 and 20:00.</p>",
+          "answer": false,
+          "justify": {
+            "points": 0.5,
+            "model": "False. The average rate of change is (18 − 18) ÷ 12 = 0 °C per hour, but this is only an average over 12 hours. The temperature went up in the morning (instantaneous rate positive, f′ > 0) and down in the afternoon (f′ < 0). The instantaneous rate is 0 only at the top, at 14:00.",
+            "rubric": [
+              {
+                "text": "Says that 0 °C per hour is only the AVERAGE over 8:00–20:00 (the rise and the fall cancel out), not the rate at each moment",
+                "points": 0.25
+              },
+              {
+                "text": "Says the temperature increased in the morning (rate > 0) and decreased in the afternoon (rate < 0), so the instantaneous rate is 0 only at the peak (14:00)",
+                "points": 0.25
+              }
+            ]
+          },
+          "explain": "Average rate of change from 8:00 to 20:00 = (18 − 18) ÷ (20 − 8) = 0 ÷ 12 = <b>0 °C per hour</b>. This part is right.<br>But the <b>instantaneous</b> rate of change is the rate at one moment (the slope of the graph at that point). From 8:00 to 14:00 the temperature goes up (on average (26 − 18) ÷ 6 ≈ 1.33 °C per hour), so the instantaneous rate is positive there. From 14:00 to 20:00 it goes down, so the instantaneous rate is negative. It is 0 only at the peak, at 14:00 (f′ = 0 at a peak).<br><b>Answer: False.</b><br>Trap: thinking that the average rate tells you the rate at every moment. A car that drives 100 km and comes back to its start has an average velocity of 0, but its speedometer was not at 0 during the trip."
+        },
+        {
+          "id": "q2",
+          "type": "tf",
+          "points": 1,
+          "topic": "Derivative interpretation & units",
+          "review": "../mathematics-1/ch2-derivative.html#interpret",
+          "prompt": "<p>A glass of mint tea is served in a café in Sidi Bou Said and starts to cool down. H = f(t) is the temperature of the tea, in °C, t minutes after it is served. You know that f(10) = 62 and f′(10) = −1.5 (illustrative figures).</p><p>True or false: about 12 minutes after it is served, the temperature of the tea is about 59 °C.</p>",
+          "answer": true,
+          "explain": "f(10) = 62: 10 minutes after it is served, the tea is at 62 °C.<br>f′(10) = −1.5: the units are °C per minute. At t = 10, the temperature is <b>falling</b> by about 1.5 °C <b>per minute</b>. (It does not mean that the tea is at −1.5 °C: a negative derivative means “decreasing”, not “negative value”.)<br>Local linear approximation with Δt = 12 − 10 = 2 minutes:<br>f(12) ≈ f(10) + f′(10) × 2 = 62 + (−1.5) × 2 = 62 − 3 = <b>59 °C</b>.<br><b>Answer: True.</b><br>Trap: 62 − 1.5 = 60.5 °C uses only 1 minute. The time step is 2 minutes, so the change is 2 × 1.5 = 3 °C."
+        },
+        {
+          "id": "q3",
+          "type": "tf",
+          "points": 1,
+          "topic": "Second derivative & concavity",
+          "review": "../mathematics-1/ch2-derivative.html#second",
+          "prompt": "<p>W = f(t) is the amount of water in the Sidi Salem dam, in million m³, t days after 1 July. During the whole month of July, the graph of f is concave up (illustrative).</p><p>True or false: this shows that the amount of water in the dam increased during July.</p>",
+          "answer": false,
+          "justify": {
+            "points": 0.5,
+            "model": "False. Concave up means f″ > 0, so the slope f′ is increasing. It does not say that f′ is positive. The water can be going down more and more slowly (f′ < 0 but getting closer to 0): the graph is then decreasing and concave up, like e<sup>−t</sup>.",
+            "rubric": [
+              {
+                "text": "Says concave up means f″ > 0, i.e. the rate of change f′ is increasing, which does not mean f′ > 0",
+                "points": 0.25
+              },
+              {
+                "text": "Gives a counter-example: the water decreases more and more slowly (f′ < 0 and f″ > 0), so the graph is decreasing and concave up",
+                "points": 0.25
+              }
+            ]
+          },
+          "explain": "Concave up (“smile” shape) means f″ > 0: the <b>slope f′ is increasing</b>. It tells you how the rate of change changes, not whether f goes up or down.<br>Example for a dry summer: the dam loses 3 million m³ per day at the start of July, then 2, then 1 million m³ per day (f′ = −3, −2, −1: negative but increasing). The water goes <b>down</b> all month, more and more slowly, and the graph is concave up (like e<sup>−t</sup>).<br>To know if the water increased, you need the sign of f′, not the sign of f″.<br><b>Answer: False.</b><br>Trap: “concave up = going up”. Concave up only means the graph bends upwards (the slope is increasing). A graph can be decreasing and concave up, or increasing and concave down."
+        },
+        {
+          "id": "q4",
+          "type": "tf",
+          "points": 1,
+          "topic": "Marginal cost & revenue",
+          "review": "../mathematics-1/ch2-derivative.html#marginal",
+          "prompt": "<p>A bakery in Sousse makes and sells baguettes. At its current production of 300 baguettes per day, its marginal cost is MC = 0.42 TND per baguette and its marginal revenue is MR = 0.35 TND per baguette (illustrative figures).</p><p>True or false: making and selling a 301st baguette would lower the bakery’s daily profit by about 0.07 TND.</p>",
+          "answer": true,
+          "explain": "MC = C′(300) ≈ C(301) − C(300): the 301st baguette adds about 0.42 TND to the total cost.<br>MR = R′(300) ≈ R(301) − R(300): the 301st baguette adds about 0.35 TND to the total revenue.<br>Change in profit ≈ MR − MC = 0.35 − 0.42 = <b>−0.07 TND</b>: the profit goes <b>down</b> by about 0.07 TND.<br>Decision rule: MR < MC, so producing one more baguette lowers the profit; the bakery should not increase production.<br><b>Answer: True.</b><br>Trap: “the revenue still increases (MR > 0), so making one more baguette is good”. What matters is the extra revenue <b>compared with</b> the extra cost. Another trap is to read 0.42 TND as the total cost of 300 baguettes: it is the cost of one <b>additional</b> baguette."
+        },
+        {
+          "id": "q5",
+          "type": "tf",
+          "points": 1,
+          "topic": "Derivative at a point",
+          "review": "../mathematics-1/ch2-derivative.html#instant",
+          "prompt": "<p>Let f(x) = x².</p><p>True or false: f′(−3) is positive.</p>",
+          "answer": false,
+          "explain": "f′(−3) is the <b>slope</b> of the graph at x = −3, not the value of f.<br>The graph of x² is a valley with its lowest point at x = 0. To the left of 0, the graph goes <b>down</b> as x increases, so the slope is negative there.<br>Check with a difference quotient (h = 0.01): (f(−2.99) − f(−3)) ÷ 0.01 = (8.9401 − 9) ÷ 0.01 = −5.99. So f′(−3) ≈ −6 &lt; 0. (Chapter 3 preview: f′(x) = 2x gives exactly −6.)<br><b>Answer: False.</b><br>Trap: f(−3) = 9 is positive, but a positive <b>value</b> does not mean a positive <b>slope</b>. The sign of f′ tells you if f is increasing (f′ > 0) or decreasing (f′ < 0)."
+        }
+      ]
+    },
+    {
+      "title": "Part II · Multiple choice (4 pts)",
+      "intro": "One correct answer per question",
+      "questions": [
+        {
+          "id": "q6",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Derivative interpretation & units",
+          "review": "../mathematics-1/ch2-derivative.html#interpret",
+          "prompt": "<p>A date exporter in Tozeur sells N = f(p) cartons of Deglet Nour dates per week when the price is p TND per carton. Its analyst finds that f′(25) = −40 (illustrative figures).</p><p>Which sentence correctly interprets f′(25) = −40?</p>",
+          "options": [
+            "At a price of 25 TND per carton, weekly sales fall by about 40 cartons every week.",
+            "When the price is 25 TND per carton, a 1 TND rise in the price lowers weekly sales by about 40 cartons.",
+            "If the price goes up by 25 TND per carton, weekly sales go down by about 40 cartons.",
+            "When the price is 25 TND per carton, a 1 TND rise in the price lowers weekly revenue by about 40 TND."
+          ],
+          "answer": 1,
+          "explain": "The units of f′(p) are units of N ÷ units of p = <b>cartons (per week) per TND</b>.<br>f′(25) = −40 means: at the price p = 25 TND, if the price goes up by 1 TND, the weekly sales N change by about −40 cartons (they go <b>down</b> by about 40 cartons). That is option (b).<br>(a) is wrong: the derivative is with respect to the <b>price</b>, not with respect to time; nothing says sales fall “every week”.<br>(c) is wrong: 25 is the point where we look (the value of p), not the size of the price change. The change is per 1 TND.<br>(d) is wrong: N counts cartons, not TND, so f′ is about sales (cartons), not revenue."
+        },
+        {
+          "id": "q7",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Derivative at a point",
+          "review": "../mathematics-1/ch2-derivative.html#instant",
+          "prompt": "<p>The graph of a smooth function f rises from the point (0, 2) up to its highest point (4, 9), and then falls to the point (7, 3). The only point where the graph has a horizontal tangent line is its highest point.</p><p>Which statement is correct?</p>",
+          "options": [
+            "f′(4) = 9, because the graph reaches its highest value there.",
+            "f′(6) > 0, because the value f(6) is positive.",
+            "f′(2) must be equal to 1.75, the average rate of change of f from x = 0 to x = 4.",
+            "f′(2) > 0, f′(4) = 0 and f′(6) < 0."
+          ],
+          "answer": 3,
+          "explain": "The sign of f′ follows the direction of the graph: rising → f′ > 0; peak (horizontal tangent) → f′ = 0; falling → f′ < 0.<br>x = 2 is on the rising part → f′(2) > 0. x = 4 is the peak → f′(4) = 0. x = 6 is on the falling part → f′(6) < 0. That is option (d).<br>(a) is wrong: 9 is the <b>value</b> f(4), the height of the peak. The slope there is 0.<br>(b) is wrong: f(6) is positive (between 3 and 9), but the graph is going down at x = 6, so the slope is negative. Positive value ≠ positive slope.<br>(c) is wrong: (9 − 2) ÷ (4 − 0) = 1.75 is the <b>average</b> rate of change on [0, 4]. The instantaneous rate at x = 2 can be different (the graph is not a straight line)."
+        },
+        {
+          "id": "q8",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Second derivative & concavity",
+          "review": "../mathematics-1/ch2-derivative.html#second",
+          "prompt": "<p>D = f(t) is the distance, in km, that a louage has travelled t hours after leaving Tunis for Gabès.</p><p>What are the units of f″(2), and what does f″(2) measure?</p>",
+          "options": [
+            "km per hour per hour; how fast the speed of the louage is changing at t = 2.",
+            "km per hour; the speed of the louage at t = 2.",
+            "hours per km; the time the louage needs for each km at t = 2.",
+            "km per hour per hour; the average speed of the louage during its first 2 hours."
+          ],
+          "answer": 0,
+          "explain": "f′(t) has units km ÷ hours = <b>km per hour</b>: it is the speed (velocity) of the louage.<br>f″(t) is the derivative of f′, so its units are (km per hour) ÷ hours = <b>km per hour per hour</b> (km/h²). It measures how fast the <b>speed</b> is changing (the acceleration). That is option (a).<br>(b) describes f′(2), not f″(2).<br>(c) inverts the units (input ÷ output); a derivative is always output units ÷ input units.<br>(d) has the right units but the wrong meaning: the average speed over the first 2 hours is f(2) ÷ 2, in km per hour."
+        },
+        {
+          "id": "q9",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Marginal cost & revenue",
+          "review": "../mathematics-1/ch2-derivative.html#marginal",
+          "prompt": "<p>C(q) is the total cost, in TND, of producing q jars of harissa in a workshop in Nabeul. You know that C(500) = 1,900 and C′(500) = 1.6 (illustrative figures).</p><p>Which statement is correct?</p>",
+          "options": [
+            "Producing 500 jars of harissa costs 1.6 TND in total.",
+            "The average cost of the first 500 jars is 1.6 TND per jar.",
+            "Producing the 501st jar adds about 1.6 TND to the total cost.",
+            "Each extra jar above 500 adds about 3.8 TND to the total cost (1,900 ÷ 500)."
+          ],
+          "answer": 2,
+          "explain": "C′(500) is the <b>marginal cost</b> at q = 500, in TND per jar: C′(500) ≈ C(501) − C(500). So the 501st jar adds about <b>1.6 TND</b> to the total cost. That is option (c).<br>(a) is wrong: the total cost of 500 jars is C(500) = 1,900 TND, not C′(500).<br>(b) is wrong: the average cost is C(500) ÷ 500 = 1,900 ÷ 500 = 3.8 TND per jar, which is a different number from the marginal cost.<br>(d) is wrong: 3.8 TND is the average cost of all 500 jars (it includes fixed costs). The extra cost of one more jar is the marginal cost, 1.6 TND.<br>Trap: mixing up total cost C(q), average cost C(q)/q and marginal cost C′(q)."
+        }
+      ]
+    },
+    {
+      "title": "Part III · Calculations (10 pts)",
+      "intro": "Type the final number only · round as asked",
+      "questions": [
+        {
+          "id": "q10",
+          "type": "numeric",
+          "points": 1,
+          "topic": "Derivative at a point",
+          "review": "../mathematics-1/ch2-derivative.html#instant",
+          "prompt": "<p>Let f(x) = 2<sup>x</sup>. Estimate f′(3) with the difference quotient (f(3 + h) − f(3)) ÷ h, using h = 0.001. Give your answer to 2 decimal places.</p>",
+          "answer": 5.55,
+          "tol": 0.005,
+          "explain": "f(3) = 2³ = 8.<br>f(3.001) = 2<sup>3.001</sup> ≈ 8.005547 (keep all the calculator digits).<br>Difference quotient = (8.005547 − 8) ÷ 0.001 = 0.005547 ÷ 0.001 ≈ 5.547 → <b>5.55</b>.<br>With smaller and smaller h the quotients get closer to the derivative: h = 0.1 gives 5.74, h = 0.01 gives 5.56, h = 0.001 gives 5.547. So f′(3) ≈ 5.55. (Chapter 3 preview: the exact value is 8 ln 2 ≈ 5.545.)<br>Traps: answering 8 (that is the value f(3), not the slope); using h = 0.1 (5.74, the interval is too big); rounding 2<sup>3.001</sup> to 8.01 before subtracting, which gives (8.01 − 8) ÷ 0.001 = 10, completely wrong."
+        },
+        {
+          "id": "q11",
+          "type": "problem",
+          "topic": "Derivative at a point",
+          "review": "../mathematics-1/ch2-derivative.html#instant",
+          "prompt": "<p>Tickets for the Carthage International Festival go on sale on day t = 0. N = f(t) is the total number of tickets sold, in thousands, t days after the sale opens (illustrative figures).</p><div class='table-wrap'><table><tbody><tr><td><strong>Day t</strong></td><td class='n'>0</td><td class='n'>2</td><td class='n'>4</td><td class='n'>6</td><td class='n'>8</td><td class='n'>10</td></tr><tr><td><strong>Tickets sold N (thousands)</strong></td><td class='n'>0</td><td class='n'>18</td><td class='n'>40</td><td class='n'>58</td><td class='n'>70</td><td class='n'>76</td></tr></tbody></table></div>",
+          "parts": [
+            {
+              "type": "numeric",
+              "points": 1,
+              "topic": "Rates of change",
+              "review": "../mathematics-1/ch1-functions-and-change.html#rates",
+              "prompt": "Find the average rate of change of N from t = 2 to t = 10, in thousand tickets per day. Give the exact value.",
+              "answer": 7.25,
+              "tol": 0.005,
+              "explain": "Average rate of change = (f(10) − f(2)) ÷ (10 − 2) = (76 − 18) ÷ 8 = 58 ÷ 8 = <b>7.25 thousand tickets per day</b> (7,250 tickets per day on average).<br>Traps: 58 (you forgot to divide by the 8 days); (76 − 0) ÷ 10 = 7.6 (wrong interval: the question starts at t = 2)."
+            },
+            {
+              "type": "numeric",
+              "points": 1.5,
+              "prompt": "Estimate f′(6) by taking the average of the rate of change on [4, 6] (left) and the rate of change on [6, 8] (right). Give your answer in thousand tickets per day.",
+              "answer": 7.5,
+              "tol": 0.005,
+              "explain": "Left: (f(6) − f(4)) ÷ (6 − 4) = (58 − 40) ÷ 2 = 18 ÷ 2 = 9.<br>Right: (f(8) − f(6)) ÷ (8 − 6) = (70 − 58) ÷ 2 = 12 ÷ 2 = 6.<br>Average: (9 + 6) ÷ 2 = <b>7.5 thousand tickets per day</b>. (Same result in one step: (f(8) − f(4)) ÷ 4 = (70 − 40) ÷ 4 = 7.5.)<br>Meaning: on day 6, tickets were selling at about 7,500 tickets per day.<br>Traps: giving only one side (9 or 6); forgetting to divide by the 2 days (18 or 12); answering f(6) = 58 (the total sold, not the rate)."
+            },
+            {
+              "type": "mcq",
+              "points": 1,
+              "topic": "Second derivative & concavity",
+              "review": "../mathematics-1/ch2-derivative.html#second",
+              "prompt": "What does the table suggest about the graph of N for 4 ≤ t ≤ 10?",
+              "options": [
+                "N is increasing and its graph is concave up.",
+                "N is increasing and its graph is concave down.",
+                "N is decreasing and its graph is concave down.",
+                "N is decreasing and its graph is concave up."
+              ],
+              "answer": 1,
+              "explain": "Rates of change (thousand tickets per day): [4, 6]: 18 ÷ 2 = 9; [6, 8]: 12 ÷ 2 = 6; [8, 10]: 6 ÷ 2 = 3.<br>All the rates are positive → N is <b>increasing</b> (f′ > 0).<br>The rates go down (9, 6, 3) → f′ is decreasing → f″ < 0 → the graph is <b>concave down</b>. That is option (b): sales continue, but more and more slowly.<br>Trap: “sales are slowing down, so N is decreasing” (options c, d). N is the <b>total</b> number sold: it still goes up; only the speed of the increase goes down."
+            }
+          ]
+        },
+        {
+          "id": "q12",
+          "type": "problem",
+          "topic": "Derivative interpretation & units",
+          "review": "../mathematics-1/ch2-derivative.html#interpret",
+          "prompt": "<p>T = f(n) is the time, in minutes, that the ISB print shop needs to print and bind n course booklets. The manager knows that f(40) = 95 and f′(40) = 2.2 (illustrative figures).</p>",
+          "parts": [
+            {
+              "type": "numeric",
+              "points": 1,
+              "prompt": "Use the local linear approximation at n = 40 to estimate the time needed for 43 booklets, in minutes. Give 1 decimal place.",
+              "answer": 101.6,
+              "tol": 0.05,
+              "explain": "f′(40) = 2.2 minutes per booklet: around 40 booklets, each extra booklet adds about 2.2 minutes.<br>Δn = 43 − 40 = 3.<br>f(43) ≈ f(40) + f′(40) × Δn = 95 + 2.2 × 3 = 95 + 6.6 = <b>101.6 minutes</b>.<br>Traps: 95 + 2.2 = 97.2 (only one extra booklet); 6.6 (only the change, not the new time); 95 × 43 ÷ 40 ≈ 102.1 (assumes the time is proportional to n: the derivative method uses f′, not a rule of three)."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "prompt": "Use the same approximation to estimate the time needed for 38 booklets, in minutes. Give 1 decimal place.",
+              "answer": 90.6,
+              "tol": 0.05,
+              "explain": "Δn = 38 − 40 = −2 (fewer booklets, so Δn is negative).<br>f(38) ≈ f(40) + f′(40) × Δn = 95 + 2.2 × (−2) = 95 − 4.4 = <b>90.6 minutes</b>.<br>Traps: 95 + 4.4 = 99.4 (you added although there are fewer booklets); 95 − 2.2 = 92.8 (only one booklet less)."
+            }
+          ]
+        },
+        {
+          "id": "q13",
+          "type": "problem",
+          "topic": "Marginal cost & revenue",
+          "review": "../mathematics-1/ch2-derivative.html#marginal",
+          "prompt": "<p>A workshop in the Souk Chaouachia in Tunis makes and sells chechias (traditional red caps). The table gives its total daily cost C(q) and its total daily revenue R(q), in TND, when it makes and sells q chechias (illustrative figures).</p><div class='table-wrap'><table><tbody><tr><td><strong>Chechias q</strong></td><td class='n'>100</td><td class='n'>110</td><td class='n'>120</td></tr><tr><td><strong>Total cost C(q) (TND)</strong></td><td class='n'>2,450</td><td class='n'>2,630</td><td class='n'>2,825</td></tr><tr><td><strong>Total revenue R(q) (TND)</strong></td><td class='n'>3,500</td><td class='n'>3,800</td><td class='n'>4,090</td></tr></tbody></table></div>",
+          "parts": [
+            {
+              "type": "numeric",
+              "points": 1.5,
+              "prompt": "Estimate the marginal cost at q = 110 by taking the average of the rate of change of C on [100, 110] (left) and on [110, 120] (right). Give your answer in TND per chechia, to 2 decimal places.",
+              "answer": 18.75,
+              "tol": 0.005,
+              "explain": "Marginal cost MC = C′(110) = the rate of change of the <b>total</b> cost.<br>Left: (C(110) − C(100)) ÷ 10 = (2,630 − 2,450) ÷ 10 = 180 ÷ 10 = 18 TND per chechia.<br>Right: (C(120) − C(110)) ÷ 10 = (2,825 − 2,630) ÷ 10 = 195 ÷ 10 = 19.5 TND per chechia.<br>Average: (18 + 19.5) ÷ 2 = <b>18.75 TND per chechia</b>: around q = 110, one more chechia costs about 18.75 TND to make.<br>Traps: 2,630 (that is the total cost C(110), not the marginal cost); 2,630 ÷ 110 ≈ 23.91 (that is the average cost per chechia); 180 or 195 (you forgot to divide by the 10 chechias)."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "prompt": "Estimate the marginal revenue at q = 110 in the same way. Give your answer in TND per chechia, to 2 decimal places.",
+              "answer": 29.5,
+              "tol": 0.005,
+              "explain": "Left: (R(110) − R(100)) ÷ 10 = (3,800 − 3,500) ÷ 10 = 300 ÷ 10 = 30 TND per chechia.<br>Right: (R(120) − R(110)) ÷ 10 = (4,090 − 3,800) ÷ 10 = 290 ÷ 10 = 29 TND per chechia.<br>Average: (30 + 29) ÷ 2 = <b>29.50 TND per chechia</b>: around q = 110, one more chechia sold brings about 29.50 TND of extra revenue.<br>Traps: 3,800 (total revenue R(110)); 3,800 ÷ 110 ≈ 34.55 (that is the price per chechia, the average revenue, not the marginal revenue); 300 or 290 (not divided by 10)."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "prompt": "Using your estimates from (a) and (b), by about how much does the daily profit change if the workshop makes and sells a 111th chechia? Give your answer in TND, to 2 decimal places, with a minus sign if the profit goes down.",
+              "answer": 10.75,
+              "tol": 0.005,
+              "explain": "Change in profit ≈ marginal profit = MR − MC = 29.50 − 18.75 = <b>+10.75 TND</b>.<br>MR > MC, so the 111th chechia <b>increases</b> the profit by about 10.75 TND: the workshop should produce more.<br>Traps: R(110) − C(110) = 3,800 − 2,630 = 1,170 TND is the total daily profit at q = 110, not the change from one more chechia; MC − MR = −10.75 has the wrong sign."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../assets/exam.js"></script>
+</body>
+</html>

@@ -1,0 +1,1514 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Ch I · Simple Interest · Financial Mathematics</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="finmath" data-lesson="finmath-ch1">
+
+<header class="topbar"><div class="topbar-in">
+  <nav class="crumbs"><a href="../index.html">Course Folder</a><span class="sep">/</span><a href="../index.html#finmath">Financial Mathematics</a><span class="sep">/</span><span class="here">Ch I · Simple Interest</span></nav>
+  <div class="score" id="score"></div>
+</div></header>
+
+<div class="page">
+  <aside class="toc" id="toc"></aside>
+  <main>
+
+    <header class="hero">
+      <span class="kicker"><span class="dot"></span>Financial Mathematics · Chapter I</span>
+      <h1>Simple Interest: the Foundations of the Time Value of Money</h1>
+      <p class="lede">Why 1,000 TND today is worth more than 1,000 TND next year, how banks calculate interest on short loans and deposits, and the seven formulas you will use in every exercise of this course. This page teaches the whole Moodle deck step by step, including the formulas and exercises from the 1 October session, so you can rebuild every slide solution on your own.</p>
+      <div class="meta">
+        <span class="chip hot">Class: Thu 8 Oct</span>
+        <span class="chip c">≈ 3 h 30 study time</span>
+        <span class="chip">From Moodle: 38 slides, 6 exercises</span>
+        <span class="chip">In-class MCQs = 20% of grade</span>
+      </div>
+      <div class="goals">
+        <h3>By the end you can</h3>
+        <ul>
+          <li>Explain the time value of money and the three reasons interest exists (risk, liquidity, inflation).</li>
+          <li>Tell simple interest from compound interest, with numbers.</li>
+          <li>Describe the four short-term instruments of the slides (short-term loans, Treasury bills, certificates of deposit, savings accounts) and their Tunisian versions.</li>
+          <li>Count the exact number of days between two dates, and find a date from a number of days.</li>
+          <li>Use the 360-day commercial year, and compare ordinary and exact interest.</li>
+          <li>Use formulas F1 to F6 to find the interest, the rate, the time, the acquired value or the present value.</li>
+          <li>Calculate an average rate (F7) to compare investment choices (Exercises 2 and 5).</li>
+          <li>Solve problems with two capitals and one equation (Exercises 3, 4 and 6).</li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ===================== 01 ===================== -->
+    <section class="lesson-section" id="tvm" data-title="Time value of money">
+      <div class="sec-num">01</div>
+      <h2>The time value of money</h2>
+      <p>Imagine your uncle says: "I will give you 1,000 TND. Do you want it <strong>today</strong>, or <strong>in one year</strong>?" Almost everyone answers "today". This is not because people are impatient. There are good, logical reasons, and the whole of financial mathematics is built on them.</p>
+      <ul>
+        <li>With 1,000 TND today, you can put it in a bank account. In one year you will have <strong>more</strong> than 1,000 TND.</li>
+        <li>Prices go up. In one year, 1,000 TND will buy <strong>less</strong> than today.</li>
+        <li>A promise is not cash. In one year, your uncle may forget, or may not have the money.</li>
+      </ul>
+
+      <div class="box def"><span class="label">Definition</span><span class="term">Time value of money, TVM (la valeur temps de l'argent)</span><p>A sum of money available <strong>today</strong> is worth <strong>more</strong> than the same sum received in the <strong>future</strong>, because money today can be invested and earn interest.</p></div>
+
+      <div class="big-idea">1 dinar today is worth more than 1 dinar tomorrow.</div>
+
+      <div class="box def"><span class="label">Definition</span><span class="term">Interest (l'intérêt)</span><p>The <strong>price paid for using someone else's money</strong> for a period of time. For the <strong>lender</strong> (le prêteur), interest is an income. For the <strong>borrower</strong> (l'emprunteur), it is a cost.</p></div>
+
+      <h3>Why does interest exist? The three reasons</h3>
+      <p>When you lend money, you accept three problems. Interest is the <strong>compensation</strong> (payment) the lender receives for them.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Reason</th><th>What the lender accepts</th><th>Everyday example</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1. Risk</strong> (le risque)</td><td>The borrower might <strong>not pay back</strong> (risk of default).</td><td>A bank asks a higher rate from a new small business than from the State, because the business is more likely to fail.</td></tr>
+          <tr><td><strong>2. Liquidity / opportunity cost</strong> (la liquidité, le coût d'opportunité)</td><td>The lender <strong>cannot use the money</strong> while it is lent, and gives up other opportunities.</td><td>Money locked in a 6-month deposit cannot pay for an urgent car repair or a good deal you see next week.</td></tr>
+          <tr><td><strong>3. Inflation</strong> (l'inflation)</td><td>Prices rise, so the money paid back <strong>buys less</strong> (loss of purchasing power, pouvoir d'achat).</td><td>If prices rise by 6% in a year, 1,000 TND next year buys only what about 943 TND buys today (1,000 / 1.06 = 943.40).</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="box warn"><span class="label">Common mistake</span><p>"Interest pays for the <strong>borrower's convenience</strong>." <strong>No.</strong> Interest compensates the <strong>lender</strong> for risk, lost liquidity and inflation. The borrower's convenience is not one of the three reasons. This exact trap is in the slide MCQ below.</p></div>
+
+      <div class="box tip"><span class="label">Warm-up from class · build your own persona</span>
+        <p>In class you created a "persona": a job, an annual salary, some goals (a car in 2 years, a house in 5 years, retirement at 65), your starting savings and an expected interest rate. Then you asked three TVM questions:</p>
+        <ul>
+          <li><strong>Car:</strong> if the car costs X in 2 years, how much must I put aside <em>today</em>? (present value, this chapter)</li>
+          <li><strong>Retirement:</strong> if I save X every year, how much will I have at 65? (annuities, later chapter)</li>
+          <li><strong>Mortgage (crédit immobilier):</strong> what is my monthly payment over 30 years? (later chapter)</li>
+        </ul>
+        <p><strong>Mini example.</strong> Yasmine, 26, is a junior accountant in Sfax. She wants a car that will cost <strong>23,200 TND in 2 years</strong>. Her bank pays <strong>8% simple interest</strong>. How much must she deposit today? Answer: 23,200 / (1 + 0.08 × 2) = 23,200 / 1.16 = <strong>20,000 TND</strong>. The 3,200 TND difference is the interest the bank will add. By the end of section 05 you will know exactly why this works.</p>
+      </div>
+
+      <div class="box example"><span class="label">Example · a TVM decision in a business</span>
+        <p>A supplier sends a bill of 20,000 TND. You can pay the <strong>full amount in 60 days</strong>, or pay <strong>today with a 2% discount</strong> (19,600 TND). This is a time value of money decision: you compare money at <strong>two different dates</strong>. To compare correctly, you must bring both amounts to the same date. You will solve this exact case in the practice test (Q52).</p>
+      </div>
+
+      <p>The slides also show the formula that links today's money and future money. You will study it in detail in section 05:</p>
+      <div class="formula">PV = FV / (1 + r × n)</div>
+      <p><strong>PV</strong> (present value, valeur actuelle) is the value <strong>today</strong> of a sum <strong>FV</strong> (future value, valeur future) that you will receive later. r is the annual rate, n the time in years.</p>
+
+      <div class="box exam"><span class="label">Exam alert · in-class MCQs</span><p>The four questions below are the MCQs from the slides. In-class MCQs and group activities count for <strong>20% of your grade</strong>, so learn the logic, not only the letter: <strong>today &gt; future</strong>; <strong>convenience is not a reason</strong>; <strong>pay now with a discount or later = TVM</strong>; <strong>PV = today's value of a future sum</strong>.</p></div>
+
+      <h3>Check yourself</h3>
+      <div class="exercises">
+        <div class="ex" id="q-tvm-1" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q1</span><span class="ex-type">Multiple choice · slide MCQ</span></div>
+          <p class="q">What does the Time Value of Money principle state?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>Future money is always worth more than present money.</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>Money only has value if invested in the stock market.</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>A sum of money is worth the same regardless of when it is received.</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>A sum of money available today is worth more than the same sum in the future.</span></button>
+          </div>
+          <div class="why" hidden>TVM says <strong>today &gt; future</strong>, because money today can be invested and earn interest. Option (a) is the exact opposite. Option (c) denies TVM completely. Option (b) is wrong: a simple bank deposit already earns interest, no stock market needed.</div>
+        </div>
+        <div class="ex" id="q-tvm-2" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q2</span><span class="ex-type">Multiple choice · slide MCQ</span></div>
+          <p class="q">Which of the following is NOT one of the three main reasons interest exists, according to the TVM principle?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>Compensation for the risk that the money isn't repaid</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>Compensation for the lender giving up liquidity</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>Compensation for the erosion of purchasing power (inflation)</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>Compensation for the borrower's convenience</span></button>
+          </div>
+          <div class="why" hidden>The three reasons are <strong>risk</strong>, <strong>liquidity (opportunity cost)</strong> and <strong>inflation</strong>. All three are problems for the <strong>lender</strong>. The borrower's convenience is not a reason; interest is paid <em>to</em> the lender, not <em>for</em> the borrower.</div>
+        </div>
+        <div class="ex" id="q-tvm-3" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q3</span><span class="ex-type">Multiple choice · slide MCQ</span></div>
+          <p class="q">Which of the following real-life decisions is a direct application of the TVM principle?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>Comparing two savings accounts with different minimum balance requirements</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>Deciding which of two job offers has a higher signing bonus</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>Choosing an insurance policy based on its monthly premium</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>Deciding whether to pay a supplier now for a discount or pay the full amount in 60 days</span></button>
+          </div>
+          <div class="why" hidden>Only (d) compares <strong>money at two different dates</strong> (today vs 60 days later). That is exactly what TVM is about. The other options compare amounts at the same moment, with no time dimension.</div>
+        </div>
+        <div class="ex" id="q-tvm-4" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q4</span><span class="ex-type">Multiple choice · slide MCQ</span></div>
+          <p class="q">In the formula PV = FV / (1 + r × n), what does PV represent?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>The value of a future sum expressed in today's terms</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>The annual inflation rate</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>The face value printed on the instrument</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>The amount of interest earned</span></button>
+          </div>
+          <div class="why" hidden>PV = <strong>present value</strong> (valeur actuelle): what a future amount is worth <strong>today</strong>. We divide FV by (1 + r × n) to "remove" the interest. The face value (c) is the amount written on the instrument, which is usually the FV. Interest (d) is FV − PV.</div>
+        </div>
+        <div class="ex" id="q-tvm-5" data-answer="T">
+          <div class="ex-head"><span class="ex-n">Q5</span><span class="ex-type">True or false</span></div>
+          <p class="q">Even if there were no risk and no inflation, a lender would still ask for some interest.</p>
+          <div class="opts tf"><button class="opt" data-k="T"><span>True</span></button><button class="opt" data-k="F"><span>False</span></button></div>
+          <div class="why" hidden>True. The <strong>liquidity / opportunity cost</strong> reason remains: while the money is lent, the lender cannot use it for anything else. That sacrifice must be paid.</div>
+        </div>
+        <div class="ex" id="q-tvm-6" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q6</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">STB lends to the Tunisian State at 7%, but asks 11% from a start-up created last month. Which reason for interest explains most of the difference?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>Inflation</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>Risk</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>Liquidity</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>The borrower's convenience</span></button>
+          </div>
+          <div class="why" hidden>Inflation and liquidity are the same for both loans (same bank, same dinar). The difference is the <strong>risk</strong>: a new start-up is much more likely not to repay than the State. More risk = higher rate.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 02 ===================== -->
+    <section class="lesson-section" id="simple" data-title="Simple vs compound">
+      <div class="sec-num">02</div>
+      <h2>What is simple interest?</h2>
+      <p>There are two ways to calculate interest. In this chapter we use the simplest one. With <strong>simple interest</strong>, the interest is always calculated on the <strong>original amount</strong>. The interest earned is <strong>not</strong> added to the capital to earn more interest. So each year (or each month) brings exactly the same interest. The slides say it in one line: "just principal × rate × time".</p>
+
+      <div class="box def"><span class="label">Definition</span><span class="term">Simple interest (l'intérêt simple)</span><p>Interest calculated <strong>only on the original principal</strong> (le capital), for the whole period, without compounding. There is no reinvestment of interest, so there is no "interest on interest".</p></div>
+
+      <div class="formula">I = P × r × n</div>
+      <p>Here are the words you will meet in every exercise:</p>
+      <ul>
+        <li><strong>P = principal</strong> (le capital, capital initial): the amount invested or borrowed at the start. It is also called the <strong>present value</strong>.</li>
+        <li><strong>r = annual interest rate</strong> (le taux d'intérêt annuel), written as a decimal: 7% = 0.07.</li>
+        <li><strong>n = time</strong> (la durée), always in <strong>years</strong>.</li>
+        <li><strong>I = interest</strong> (l'intérêt), in TND.</li>
+        <li><strong>A = acquired value</strong> (la valeur acquise): P + I, what you have at the end.</li>
+      </ul>
+
+      <h3>When is simple interest used?</h3>
+      <p>Mostly for <strong>short-term</strong> operations (less than one year): short loans, Treasury bills, short deposits. It is easy to calculate, and it is preferred when the agreement is <strong>short, small or straightforward</strong>.</p>
+
+      <h3>Simple vs compound interest</h3>
+      <div class="box def"><span class="label">Definition · preview of a later chapter</span><span class="term">Compound interest (l'intérêt composé)</span><p>At the end of each period, the interest is <strong>added to the capital</strong>, and the next interest is calculated on this bigger amount. You earn <strong>interest on interest</strong>.</p></div>
+
+      <div class="box example"><span class="label">Worked example from the slides · 1,000 TND at 10% for 3 years</span>
+        <p><strong>Simple:</strong> each year brings 1,000 × 0.10 = 100 TND. After 3 years: I = 1,000 × 0.10 × 3 = 300 TND, so A = 1,000 + 300 = <strong>1,300 TND</strong>.</p>
+        <p><strong>Compound:</strong> year 1: 1,000 × 1.10 = 1,100. Year 2: 1,100 × 1.10 = 1,210. Year 3: 1,210 × 1.10 = <strong>1,331 TND</strong>. In one line: 1,000 × 1.1³ = 1,331.</p>
+        <p>The 31 TND difference is the "interest on interest".</p>
+      </div>
+
+      <p>The table continues the same example year by year. Look at the "interest that year" columns: simple stays at 100, compound grows.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Year</th><th class="n">Simple: value</th><th class="n">Simple: interest that year</th><th class="n">Compound: value</th><th class="n">Compound: interest that year</th><th class="n">Gap</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td class="n">1,000.00</td><td class="n">–</td><td class="n">1,000.00</td><td class="n">–</td><td class="n">0.00</td></tr>
+          <tr><td>1</td><td class="n">1,100.00</td><td class="n">100.00</td><td class="n">1,100.00</td><td class="n">100.00</td><td class="n">0.00</td></tr>
+          <tr><td>2</td><td class="n">1,200.00</td><td class="n">100.00</td><td class="n">1,210.00</td><td class="n">110.00</td><td class="n">10.00</td></tr>
+          <tr><td>3</td><td class="n">1,300.00</td><td class="n">100.00</td><td class="n">1,331.00</td><td class="n">121.00</td><td class="n">31.00</td></tr>
+          <tr><td>4</td><td class="n">1,400.00</td><td class="n">100.00</td><td class="n">1,464.10</td><td class="n">133.10</td><td class="n">64.10</td></tr>
+          <tr><td>5</td><td class="n">1,500.00</td><td class="n">100.00</td><td class="n">1,610.51</td><td class="n">146.41</td><td class="n">110.51</td></tr>
+          <tr class="total"><td>Total interest, 5 years</td><td class="n"></td><td class="n">500.00</td><td class="n"></td><td class="n">610.51</td><td class="n">110.51</td></tr>
+        </tbody>
+      </table></div>
+
+      <figure>
+        <svg viewBox="0 0 600 380" role="img" aria-label="Line chart: 1,000 TND at 10 percent. Simple interest is a straight line reaching 2,000 TND after 10 years; compound interest is a curve reaching 2,593.74 TND.">
+          <rect x="0" y="0" width="600" height="380" fill="#FFFFFF"/>
+          <g stroke="#E7E9EE" stroke-width="1">
+            <line x1="80" y1="40" x2="550" y2="40"/><line x1="80" y1="75" x2="550" y2="75"/><line x1="80" y1="110" x2="550" y2="110"/><line x1="80" y1="145" x2="550" y2="145"/><line x1="80" y1="180" x2="550" y2="180"/><line x1="80" y1="215" x2="550" y2="215"/><line x1="80" y1="250" x2="550" y2="250"/><line x1="80" y1="285" x2="550" y2="285"/>
+          </g>
+          <line x1="80" y1="320" x2="550" y2="320" stroke="#0F1726" stroke-width="1.5"/>
+          <line x1="80" y1="30" x2="80" y2="320" stroke="#0F1726" stroke-width="1.5"/>
+          <g stroke="#0F1726" stroke-width="1.5">
+            <line x1="80" y1="320" x2="80" y2="326"/><line x1="127" y1="320" x2="127" y2="326"/><line x1="174" y1="320" x2="174" y2="326"/><line x1="221" y1="320" x2="221" y2="326"/><line x1="268" y1="320" x2="268" y2="326"/><line x1="315" y1="320" x2="315" y2="326"/><line x1="362" y1="320" x2="362" y2="326"/><line x1="409" y1="320" x2="409" y2="326"/><line x1="456" y1="320" x2="456" y2="326"/><line x1="503" y1="320" x2="503" y2="326"/><line x1="550" y1="320" x2="550" y2="326"/>
+          </g>
+          <g font-size="13" fill="#667085" font-family="inherit" text-anchor="end">
+            <text x="72" y="324">1,000</text><text x="72" y="289">1,200</text><text x="72" y="254">1,400</text><text x="72" y="219">1,600</text><text x="72" y="184">1,800</text><text x="72" y="149">2,000</text><text x="72" y="114">2,200</text><text x="72" y="79">2,400</text><text x="72" y="44">2,600</text>
+          </g>
+          <g font-size="13" fill="#667085" font-family="inherit" text-anchor="middle">
+            <text x="80" y="342">0</text><text x="127" y="342">1</text><text x="174" y="342">2</text><text x="221" y="342">3</text><text x="268" y="342">4</text><text x="315" y="342">5</text><text x="362" y="342">6</text><text x="409" y="342">7</text><text x="456" y="342">8</text><text x="503" y="342">9</text><text x="550" y="342">10</text>
+            <text x="315" y="368">Years</text>
+          </g>
+          <text x="16" y="180" font-size="13" fill="#667085" font-family="inherit" transform="rotate(-90 16 180)" text-anchor="middle">Value (TND)</text>
+          <polyline points="80.0,320.0 103.5,311.5 127.0,302.5 150.5,293.1 174.0,283.2 197.5,272.9 221.0,262.1 244.5,250.7 268.0,238.8 291.5,226.3 315.0,213.2 338.5,199.4 362.0,185.0 385.5,169.8 409.0,154.0 432.5,137.3 456.0,119.9 479.5,101.6 503.0,82.4 526.5,62.2 550.0,41.1" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linejoin="round"/>
+          <line x1="80" y1="320" x2="550" y2="145" stroke="#0F1726" stroke-width="3" stroke-dasharray="8 5"/>
+          <g fill="#7C3AED"><circle cx="127" cy="302.5" r="3.5"/><circle cx="174" cy="283.2" r="3.5"/><circle cx="221" cy="262.1" r="3.5"/><circle cx="268" cy="238.8" r="3.5"/><circle cx="315" cy="213.2" r="3.5"/><circle cx="362" cy="185" r="3.5"/><circle cx="409" cy="154" r="3.5"/><circle cx="456" cy="119.9" r="3.5"/><circle cx="503" cy="82.4" r="3.5"/><circle cx="550" cy="41.1" r="4.5"/></g>
+          <g fill="#0F1726"><circle cx="80" cy="320" r="4.5"/><circle cx="550" cy="145" r="4.5"/></g>
+          <line x1="550" y1="141" x2="550" y2="46" stroke="#C4372D" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <g font-size="13" font-family="inherit" font-weight="700">
+            <text x="558" y="45" fill="#7C3AED">2,594</text>
+            <text x="558" y="149" fill="#0F1726">2,000</text>
+            <text x="558" y="97" fill="#C4372D">+594</text>
+          </g>
+          <rect x="96" y="52" width="264" height="58" rx="8" fill="#F4EEFF"/>
+          <line x1="108" y1="72" x2="136" y2="72" stroke="#7C3AED" stroke-width="3"/>
+          <text x="144" y="76" font-size="13" fill="#0F1726" font-family="inherit">Compound: a curve (grows faster)</text>
+          <line x1="108" y1="96" x2="136" y2="96" stroke="#0F1726" stroke-width="3" stroke-dasharray="8 5"/>
+          <text x="144" y="100" font-size="13" fill="#0F1726" font-family="inherit">Simple: a straight line (+100/year)</text>
+        </svg>
+        <figcaption>1,000 TND at 10% per year, years 0 to 10, drawn to scale. Simple interest (dashed straight line) adds the same 100 TND every year and reaches 2,000 TND. Compound interest (purple curve) adds interest on interest and reaches 2,593.74 TND. The vertical axis starts at 1,000 TND, the principal, so everything above the bottom line is interest.</figcaption>
+      </figure>
+
+      <div class="box tip"><span class="label">How to recognise them in a graph</span><p><strong>Simple = straight line</strong> (the same step every year). <strong>Compound = curve</strong> that bends upward (the steps get bigger). For short periods (less than one year) the two are very close, which is why banks use simple interest for short-term operations.</p></div>
+
+      <div class="box warn"><span class="label">Common mistake</span><p>Calculating year 2 interest on 1,100 TND. With <strong>simple</strong> interest, the base is <strong>always the original P</strong> (1,000 TND), every year. If you use the new total, you are doing compound interest.</p></div>
+
+      <h3>Check yourself</h3>
+      <div class="exercises">
+        <div class="ex" id="q-si-1" data-answer="F">
+          <div class="ex-head"><span class="ex-n">Q7</span><span class="ex-type">True or false</span></div>
+          <p class="q">With simple interest, the interest earned in year 3 is bigger than the interest earned in year 1.</p>
+          <div class="opts tf"><button class="opt" data-k="T"><span>True</span></button><button class="opt" data-k="F"><span>False</span></button></div>
+          <div class="why" hidden>False. With simple interest, every year gives the same interest, P × r. Only compound interest gives a bigger amount each year.</div>
+        </div>
+        <div class="ex" id="q-si-2" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q8</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">2,000 TND is invested at 5% simple interest for 4 years. What is the acquired value?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>2,400 TND</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>2,431.01 TND</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>2,100 TND</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>400 TND</span></button>
+          </div>
+          <div class="why" hidden>I = 2,000 × 0.05 × 4 = 400 TND, so A = 2,000 + 400 = <strong>2,400 TND</strong>. (b) is the compound result (2,000 × 1.05⁴). (c) is only one year. (d) is the interest, not the acquired value.</div>
+        </div>
+        <div class="ex" id="q-si-3" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q9</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Which statement about simple interest is correct?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>Interest is added to the capital at the end of each period.</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>It is mainly used for long-term loans like 25-year mortgages.</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>Interest is always calculated on the original principal.</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>Its graph over time is a curve that bends upward.</span></button>
+          </div>
+          <div class="why" hidden>Simple interest = always on the <strong>original principal</strong>. (a) and (d) describe compound interest. (b) is wrong: simple interest is mainly for <strong>short-term</strong> operations.</div>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P1</span><span class="ex-type">Problem · try it first</span></div>
+          <p class="q">Your uncle lends 2,500 TND to a friend at 8% simple interest for 3 years. (a) How much interest is paid each year? (b) What is the total interest and the amount repaid? (c) How much would the friend repay with compound interest (1.08³ = 1.259712)?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <p><strong>(a)</strong> Each year: 2,500 × 0.08 = <strong>200 TND</strong>, always the same.</p>
+            <p><strong>(b)</strong> I = 2,500 × 0.08 × 3 = <strong>600 TND</strong>. A = 2,500 + 600 = <strong>3,100 TND</strong>.</p>
+            <p><strong>(c)</strong> Compound: 2,500 × 1.259712 = <strong>3,149.28 TND</strong>. That is 49.28 TND more, the interest on interest.</p>
+          </div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 03 ===================== -->
+    <section class="lesson-section" id="instruments" data-title="Four instruments">
+      <div class="sec-num">03</div>
+      <h2>Four short-term instruments that use simple interest</h2>
+      <p>A <strong>financial instrument</strong> (instrument financier) is a contract that involves money: a loan, a deposit, a bond. The slides present four short-term instruments. In all of them, the money is lent or invested for a short time, usually <strong>one year or less</strong>, so simple interest is used.</p>
+
+      <div class="box def"><span class="label">Definition 1</span><span class="term">Short-term loan (le prêt à court terme)</span><p>A loan repaid <strong>within one year</strong>, used to meet an immediate need. It is often <strong>unsecured</strong> (sans garantie): no collateral, no house or car given as a guarantee. Types: personal loans, payday loans, business loans. Uses: urgent expenses (medical bills, car repairs) or buying stock (inventory) for a business.</p></div>
+      <div class="box def"><span class="label">Definition 2</span><span class="term">Treasury bill, T-bill (le bon du Trésor à court terme)</span><p>A short-term security issued by the <strong>State</strong> (the Treasury) to finance government spending. Its <strong>maturity</strong> (l'échéance: the date when the money is paid back) is from a few days to one year. It is sold <strong>below its face value</strong> (valeur nominale); at maturity you receive the face value. The <strong>difference is your interest</strong>.</p></div>
+      <div class="box def"><span class="label">Definition 3</span><span class="term">Certificate of deposit, CD (le compte à terme, le bon de caisse)</span><p>A <strong>time deposit</strong> at a bank: you leave your money for a fixed term (months to years) at a <strong>fixed rate</strong>, usually simple interest. The rate depends on the term and the amount. If you withdraw early, you may pay a <strong>penalty</strong>.</p></div>
+      <div class="box def"><span class="label">Definition 4</span><span class="term">Bank savings account (le compte d'épargne)</span><p>A deposit account that pays interest on the balance. It is for <strong>saving</strong>, not for daily payments. It is <strong>liquid</strong>: you can withdraw or transfer easily. Good for short-term goals and an emergency fund.</p></div>
+
+      <h3>Comparison table</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Instrument</th><th>Who gives / issues it</th><th>Term</th><th>In Tunisia</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Short-term loan</strong></td><td>Banks, credit companies</td><td>Less than 1 year</td><td><em>Crédit de trésorerie</em> (cash-flow loan), <em>facilité de caisse</em> (overdraft), from banks such as BIAT, Attijari Bank, STB</td></tr>
+          <tr><td><strong>T-bill</strong></td><td>The State (Treasury)</td><td>A few days to 1 year</td><td><em>Bons du Trésor à court terme</em> (BTCT)</td></tr>
+          <tr><td><strong>CD</strong></td><td>Banks</td><td>Fixed: months to years</td><td><em>Compte à terme</em>, <em>bon de caisse</em></td></tr>
+          <tr><td><strong>Savings account</strong></td><td>Banks, the post office</td><td>No fixed term</td><td><em>Compte d'épargne</em>, <em>livret d'épargne</em></td></tr>
+        </tbody>
+      </table></div>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Instrument</th><th>Pros (avantages)</th><th>Cons (inconvénients)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Short-term loan</strong></td><td>Quick access to money; flexible</td><td><strong>Higher interest rates</strong> than long-term loans</td></tr>
+          <tr><td><strong>T-bill</strong></td><td>One of the <strong>safest</strong> investments (backed by the government); preserves capital</td><td><strong>Lower returns</strong> than riskier investments</td></tr>
+          <tr><td><strong>CD</strong></td><td><strong>Higher rates</strong> than a savings account</td><td>Money locked until maturity; penalty if you withdraw early (less liquid)</td></tr>
+          <tr><td><strong>Savings account</strong></td><td>Easy access, low risk, deposits protected up to a limit</td><td>Lower returns than stocks or bonds; may not keep pace with inflation</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="box tip"><span class="label">Memory trick · the liquidity–return trade-off</span><p>The <strong>easier</strong> it is to get your money back, the <strong>lower</strong> the rate. Savings account (very liquid, low rate) → CD (locked, higher rate). This is reason 2 of section 01 in action: the bank pays you more when you give up more liquidity.</p></div>
+
+      <div class="box example"><span class="label">Worked example 1 · a crédit de trésorerie</span>
+        <p>A café in Sousse borrows <strong>15,000 TND</strong> from its bank for <strong>4 months</strong> at <strong>11%</strong> to buy stock before the summer season.</p>
+        <p>n = 4/12 year. I = 15,000 × 0.11 × 4/12 = <strong>550 TND</strong>. At the end of the 4 months, the café repays 15,000 + 550 = <strong>15,550 TND</strong>.</p>
+      </div>
+      <div class="box example"><span class="label">Worked example 2 · a T-bill bought below face value</span>
+        <p>An investor buys a T-bill with a face value of <strong>20,000 TND</strong>, maturing in <strong>90 days</strong>, for <strong>19,700 TND</strong>.</p>
+        <p><strong>Interest</strong> = what you receive − what you paid = 20,000 − 19,700 = <strong>300 TND</strong>.</p>
+        <p><strong>Rate earned</strong>: the money really invested is P = 19,700 TND, for n = 90/360. So r = I / (P × n) = 300 / (19,700 × 90/360) = 300 / 4,925 = 0.06091, about <strong>6.09%</strong> per year.</p>
+      </div>
+
+      <div class="box warn"><span class="label">Common mistake · T-bills</span><p>A T-bill does not "pay" interest as a separate amount. You buy it <strong>cheaper</strong> than its face value and receive the face value at maturity: the gap <strong>is</strong> the interest. In this chapter, compute the rate on the <strong>price you paid</strong> (the money actually invested), not on the face value. (In the bank discount chapter you will see a different rate based on the face value.)</p></div>
+
+      <h3>Check yourself</h3>
+      <div class="exercises">
+        <div class="ex" id="q-ins-1" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q10</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Which instrument is sold below its face value, with the difference being the interest?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>A savings account</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>A Treasury bill</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>A certificate of deposit</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>A payday loan</span></button>
+          </div>
+          <div class="why" hidden>T-bills are bought <strong>below face value</strong>; at maturity the State pays the face value. The difference is the interest earned.</div>
+        </div>
+        <div class="ex" id="q-ins-2" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q11</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">A textile company in Monastir must pay salaries now, but its big client will only pay in 2 months. What does it need?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>A short-term loan (crédit de trésorerie)</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>A Treasury bill</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>A certificate of deposit</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>A 20-year mortgage</span></button>
+          </div>
+          <div class="why" hidden>This is exactly the slide's Tunisian example: a <strong>cash-flow loan</strong> (crédit de trésorerie) bridges a short gap before a client pays. T-bills and CDs are for people who <em>have</em> money to invest, not for people who need it.</div>
+        </div>
+        <div class="ex" id="q-ins-3" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q12</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Salma has 8,000 TND she is sure she will not need for 12 months. She wants a better rate than a savings account, at low risk. The best choice is:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>A short-term loan</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>Keeping it in her current account</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>A certificate of deposit (compte à terme)</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>A savings account</span></button>
+          </div>
+          <div class="why" hidden>A CD pays a <strong>higher rate than a savings account</strong> in exchange for locking the money for a fixed term. Since Salma won't need the money, the lack of liquidity is not a problem for her.</div>
+        </div>
+        <div class="ex" id="q-ins-4" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q13</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Which instrument is best for an emergency fund (money you may need any day)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>A 1-year certificate of deposit</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>A 52-week Treasury bill</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>A short-term loan</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>A bank savings account</span></button>
+          </div>
+          <div class="why" hidden>An emergency fund must be <strong>liquid</strong>: available immediately. The savings account allows easy withdrawals. A CD has penalties for early withdrawal, and a T-bill pays its face value only at maturity (to get cash earlier you must sell it to someone else at the market price, which is slower and can mean a loss). A loan is borrowed money, not savings.</div>
+        </div>
+        <div class="ex" id="q-ins-5" data-answer="F">
+          <div class="ex-head"><span class="ex-n">Q14</span><span class="ex-type">True or false</span></div>
+          <p class="q">Short-term loans usually have lower interest rates than long-term loans.</p>
+          <div class="opts tf"><button class="opt" data-k="T"><span>True</span></button><button class="opt" data-k="F"><span>False</span></button></div>
+          <div class="why" hidden>False. According to the slides, the main disadvantage of short-term loans is their <strong>higher</strong> interest rates. You pay for the speed and for the lack of collateral.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 04 ===================== -->
+    <section class="lesson-section" id="time" data-title="Measuring time & counting days">
+      <div class="sec-num">04</div>
+      <h2>Measuring time: the 360-day year and counting days</h2>
+      <p>In I = P × r × n, the rate r is an <strong>annual</strong> rate (per year). So n must also be in <strong>years</strong>. But short operations are given in <strong>months</strong> or <strong>days</strong>. You must convert:</p>
+      <div class="formula">n = months / 12 &nbsp;&nbsp;·&nbsp;&nbsp; n = days / 360</div>
+      <p>So when the time is in days, the interest formula becomes:</p>
+      <div class="formula">I = P × r × d / 360</div>
+
+      <div class="box def"><span class="label">Definition</span><span class="term">Commercial year (l'année commerciale)</span><p>A conventional year of <strong>360 days</strong> (12 months × 30 days), used by banks for short-term interest. <strong>All the slide solutions use it.</strong> Use 360 in every exercise unless the question says otherwise.</p></div>
+
+      <h3>Ordinary interest vs exact interest</h3>
+      <p>The course syllabus names two ways to turn days into years:</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Method</th><th>Year used</th><th>Formula</th><th>Used by</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Ordinary interest</strong> (intérêt commercial, ordinaire), also called banker's interest</td><td>360 days</td><td>I = P × r × d / 360</td><td>Banks, and <strong>this course</strong></td></tr>
+          <tr><td><strong>Exact interest</strong> (intérêt exact, civil)</td><td>365 days (366 in a leap year)</td><td>I = P × r × d / 365</td><td>Some governments and contracts</td></tr>
+        </tbody>
+      </table></div>
+      <p>In both methods, d is the <strong>exact</strong> number of days on the calendar. Counting the real days and dividing by 360 is called the <strong>banker's rule</strong>. It is what your slides do.</p>
+
+      <div class="box example"><span class="label">Worked example · 10,000 TND at 7% for 108 days</span>
+        <p><strong>Ordinary:</strong> I = 10,000 × 0.07 × 108/360 = 10,000 × 0.07 × 0.3 = <strong>210 TND</strong>.</p>
+        <p><strong>Exact:</strong> I = 10,000 × 0.07 × 108/365 = 75,600 / 365 = <strong>207.123 TND</strong>.</p>
+        <p>Ordinary interest gives the lender <strong>2.877 TND more</strong>. Why? Dividing by a smaller number (360) gives a bigger fraction of a year, so more interest. That is why banks like the 360-day year when they lend.</p>
+      </div>
+
+      <div class="box warn"><span class="label">Careful · another method in some books</span><p>Some textbooks also count every month as 30 days ("approximate time"). Your slides <strong>do not</strong> do this. They count the <strong>real</strong> days of each month (31 for May, 30 for June, 28 for February...) and divide by 360.</p></div>
+
+      <h3>How to count days, step by step</h3>
+      <div class="big-idea">Do not count the start day. Count the end day.</div>
+      <p>Think of a hotel: you arrive on 10 March and leave on 13 March. You pay for <strong>3 nights</strong> (10→11, 11→12, 12→13), not 4. Money works the same way: the day you deposit does not earn interest, the day you withdraw does.</p>
+      <ol>
+        <li><strong>First month:</strong> days left = (number of days in that month) − (start date).</li>
+        <li><strong>Months in between:</strong> add the full length of each month.</li>
+        <li><strong>Last month:</strong> add the end date (its day number).</li>
+        <li><strong>Same month?</strong> Just do end date − start date.</li>
+      </ol>
+
+      <div class="table-wrap"><table>
+        <thead><tr><th>Month</th><th class="n">Days</th><th>Month</th><th class="n">Days</th></tr></thead>
+        <tbody>
+          <tr><td>January</td><td class="n">31</td><td>July</td><td class="n">31</td></tr>
+          <tr><td>February</td><td class="n">28 (29 in a leap year)</td><td>August</td><td class="n">31</td></tr>
+          <tr><td>March</td><td class="n">31</td><td>September</td><td class="n">30</td></tr>
+          <tr><td>April</td><td class="n">30</td><td>October</td><td class="n">31</td></tr>
+          <tr><td>May</td><td class="n">31</td><td>November</td><td class="n">30</td></tr>
+          <tr><td>June</td><td class="n">30</td><td>December</td><td class="n">31</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="box tip"><span class="label">Memory trick · the knuckles</span><p>Make a fist and look at your knuckles. Say the months: a <strong>knuckle = 31 days</strong>, a <strong>valley between knuckles = 30 days</strong> (or February). January (knuckle), February (valley), March (knuckle), April (valley), May (knuckle), June (valley), July (last knuckle). Then go back to the first knuckle: August (knuckle), September (valley), October (knuckle), November (valley), December (knuckle). <strong>July and August are both 31.</strong></p><p><strong>Leap year</strong> (année bissextile): a year divisible by 4, like 2024 or 2028, has 29 days in February.</p></div>
+
+      <div class="box example"><span class="label">Worked example · from 15 March to 10 June</span>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Month</th><th class="n">Days counted</th><th>Why</th></tr></thead>
+          <tbody>
+            <tr><td>March</td><td class="n">16</td><td>31 − 15 = 16 (15 March itself is not counted)</td></tr>
+            <tr><td>April</td><td class="n">30</td><td>full month</td></tr>
+            <tr><td>May</td><td class="n">31</td><td>full month</td></tr>
+            <tr><td>June</td><td class="n">10</td><td>the end date, 10 June, is counted</td></tr>
+            <tr class="total"><td>Total</td><td class="n">87</td><td>16 + 30 + 31 + 10</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <h3>The reverse: finding a date from a number of days</h3>
+      <p>Sometimes you know the number of days (for example from n = I / (P × r)) and you must find the <strong>date</strong>. Go forward month by month, subtracting:</p>
+      <ol>
+        <li>Subtract the days left in the start month.</li>
+        <li>Subtract full months while the remainder is bigger than the next month.</li>
+        <li>The remainder is the <strong>day number</strong> in the final month.</li>
+      </ol>
+      <div class="box example"><span class="label">Worked example · 60 days after 15 March</span>
+        <p>Days left in March: 31 − 15 = 16 → 60 − 16 = 44 still to go.</p>
+        <p>April has 30 days: 44 − 30 = 14 still to go. May has 31, more than 14, so we stop in May.</p>
+        <p>Answer: <strong>14 May</strong>. Check: 16 + 30 + 14 = 60 ✓.</p>
+      </div>
+
+      <div class="box warn"><span class="label">Common mistakes with time</span>
+        <ul>
+          <li>Counting the start day (you get 1 day too many).</li>
+          <li>Giving every month 30 days, or forgetting that February has 28 days.</li>
+          <li>Dividing days by <strong>365</strong> when the course uses <strong>360</strong>.</li>
+          <li>Dividing months by 360, or days by 12. Months → ÷ 12. Days → ÷ 360.</li>
+        </ul>
+      </div>
+      <div class="box exam"><span class="label">Exam alert</span><p>Always <strong>write the day count in full</strong>, like the teacher does: "7 + 31 + 30 + 31 + 9 = 108 days". If the total is wrong by one day, you still get the method marks, and the teacher can see where the slip is.</p></div>
+
+      <h3>Check yourself · day-count drills</h3>
+      <div class="exercises">
+        <div class="ex" id="q-day-1" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q15</span><span class="ex-type">Day count</span></div>
+          <p class="q">How many days from 10 March to 25 March?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>15</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>16</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>14</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>25</span></button>
+          </div>
+          <div class="why" hidden>Same month: end − start = 25 − 10 = <strong>15</strong>. Answer 16 counts the start day too.</div>
+        </div>
+        <div class="ex" id="q-day-2" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q16</span><span class="ex-type">Day count</span></div>
+          <p class="q">How many days from 5 April to 5 May?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>30</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>31</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>29</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>25</span></button>
+          </div>
+          <div class="why" hidden>April: 30 − 5 = 25. May: 5. Total 25 + 5 = <strong>30</strong>. From a date in one month to the same date the next month = the length of the first month (April = 30).</div>
+        </div>
+        <div class="ex" id="q-day-3" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q17</span><span class="ex-type">Day count</span></div>
+          <p class="q">How many days from 20 January to 1 March (not a leap year)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>40</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>41</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>39</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>42</span></button>
+          </div>
+          <div class="why" hidden>January: 31 − 20 = 11. February: 28. March: 1. Total 11 + 28 + 1 = <strong>40</strong>.</div>
+        </div>
+        <div class="ex" id="q-day-4" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q18</span><span class="ex-type">Day count</span></div>
+          <p class="q">Same dates, 20 January to 1 March, but in 2028 (a leap year). How many days?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>40</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>41</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>39</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>42</span></button>
+          </div>
+          <div class="why" hidden>2028 is divisible by 4, so February has 29 days: 11 + 29 + 1 = <strong>41</strong>. Leap years matter whenever <strong>29 February is one of the counted days</strong>, that is, when the period starts before 29 February and ends on 29 February or later. This is true even if only part of February is inside the period. Example: 2 February → 18 March is 27 + 18 = 45 days in a leap year, but 26 + 18 = 44 in a normal year. Leap years do not matter if the period ends on or before 28 February (like Exercise 1 part 1) or starts in March or later.</div>
+        </div>
+        <div class="ex" id="q-day-5" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q19</span><span class="ex-type">Day count</span></div>
+          <p class="q">How many days from 31 May to 31 August?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>90</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>91</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>92</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>93</span></button>
+          </div>
+          <div class="why" hidden>May: 31 − 31 = 0. June 30 + July 31 + August 31 = <strong>92</strong>. Don't assume "3 months = 90 days": July and August are both 31.</div>
+        </div>
+        <div class="ex" id="q-day-6" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q20</span><span class="ex-type">Day count</span></div>
+          <p class="q">How many days from 1 October to 31 December?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>90</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>91</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>92</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>89</span></button>
+          </div>
+          <div class="why" hidden>October: 31 − 1 = 30. November: 30. December: 31. Total 30 + 30 + 31 = <strong>91</strong>. (92 is what you get if you wrongly count 1 October.)</div>
+        </div>
+        <div class="ex" id="q-day-7" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q21</span><span class="ex-type">Day count</span></div>
+          <p class="q">How many days from 25 June to 15 September?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>80</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>81</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>82</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>83</span></button>
+          </div>
+          <div class="why" hidden>June: 30 − 25 = 5. July 31, August 31. September 15. Total 5 + 31 + 31 + 15 = <strong>82</strong>.</div>
+        </div>
+        <div class="ex" id="q-day-8" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q22</span><span class="ex-type">Day count</span></div>
+          <p class="q">How many days from 12 November to 20 January of the next year?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>68</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>69</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>70</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>71</span></button>
+          </div>
+          <div class="why" hidden>November: 30 − 12 = 18. December: 31. January: 20. Total 18 + 31 + 20 = <strong>69</strong>. Crossing into a new year changes nothing in the method.</div>
+        </div>
+        <div class="ex" id="q-day-9" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q23</span><span class="ex-type">Day count</span></div>
+          <p class="q">You deposit money on Thursday 8 October (your next class) and withdraw it on 31 December. How many days earn interest?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>83</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>85</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>82</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>84</span></button>
+          </div>
+          <div class="why" hidden>October: 31 − 8 = 23. November: 30. December: 31. Total 23 + 30 + 31 = <strong>84</strong>.</div>
+        </div>
+        <div class="ex" id="q-day-10" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q24</span><span class="ex-type">Find the date</span></div>
+          <p class="q">A loan starts on 1 February (not a leap year) and lasts 90 days. On which date does it end?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>1 May</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>2 May</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>30 April</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>3 May</span></button>
+          </div>
+          <div class="why" hidden>February: 28 − 1 = 27 → 90 − 27 = 63. March 31 → 63 − 31 = 32. April 30 → 32 − 30 = 2. So the end date is <strong>2 May</strong>. Check: 27 + 31 + 30 + 2 = 90 ✓.</div>
+        </div>
+        <div class="ex" id="q-day-11" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q25</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Same capital, same rate, same 75 days. Which gives MORE interest?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>Ordinary interest (360-day year)</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>Exact interest (365-day year)</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>They always give the same result</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>It depends on the rate</span></button>
+          </div>
+          <div class="why" hidden>75/360 is bigger than 75/365, because you divide by a smaller number. So <strong>ordinary interest is always a little bigger</strong>, whatever the capital or the rate.</div>
+        </div>
+        <div class="ex" id="q-day-12" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q26</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">A deposit lasts 9 months. What value of n do you put in the formula?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>9</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>9/360 = 0.025</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>9/12 = 0.75</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>270</span></button>
+          </div>
+          <div class="why" hidden>Months are divided by <strong>12</strong>: n = 9/12 = 0.75 year. (d) 270 is the number of days (9 × 30), which you would then divide by 360 to get the same 0.75.</div>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P2</span><span class="ex-type">Problem · try it first</span></div>
+          <p class="q">A student deposits her summer job savings on 20 September for 100 days. On which date can she withdraw them?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <p>September: 30 − 20 = 10 days → 100 − 10 = 90 still to go.</p>
+            <p>October: 31 → 90 − 31 = 59. November: 30 → 59 − 30 = 29. December has 31 days, more than 29, so we stop in December.</p>
+            <p>Answer: <strong>29 December</strong>. Check: 10 + 31 + 30 + 29 = 100 ✓.</p>
+          </div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 05 ===================== -->
+    <section class="lesson-section" id="formulas" data-title="Formulas F1 to F6">
+      <div class="sec-num">05</div>
+      <h2>The formulas F1 to F6</h2>
+      <p>The slides give seven formulas. Good news: <strong>they all come from one</strong>, I = P × r × n. Each formula just isolates a different letter. If you understand F1, you can rebuild the others in an exam even if you forget them. F7 (the average rate) has its own section later.</p>
+
+      <div class="box def"><span class="label">Definition · the notation</span><span class="term">The letters you will use</span>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Symbol</th><th>Meaning</th><th>French</th><th>Unit</th></tr></thead>
+          <tbody>
+            <tr><td><strong>P</strong> (or PV)</td><td>Principal = initial capital = present value</td><td>capital, valeur actuelle</td><td>TND</td></tr>
+            <tr><td><strong>r</strong></td><td>Annual interest rate</td><td>taux d'intérêt annuel</td><td>decimal: 7% = 0.07</td></tr>
+            <tr><td><strong>n</strong></td><td>Time</td><td>durée</td><td>years: d/360 or m/12</td></tr>
+            <tr><td><strong>d</strong></td><td>Number of days</td><td>nombre de jours</td><td>days</td></tr>
+            <tr><td><strong>I</strong></td><td>Interest</td><td>intérêt</td><td>TND</td></tr>
+            <tr><td><strong>A</strong> (or FV)</td><td>Acquired value = future value = P + I</td><td>valeur acquise, valeur future</td><td>TND</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <h3>F1 · Total interest</h3>
+      <div class="formula">I = P × r × n</div>
+      <p>Use it when you know the capital, the rate and the time, and you want the <strong>interest</strong>.</p>
+      <div class="box example"><span class="label">Example F1</span><p>Mehdi lends 6,000 TND to his cousin's shop at 8% for 9 months. I = 6,000 × 0.08 × 9/12 = 6,000 × 0.08 × 0.75 = <strong>360 TND</strong>.</p></div>
+
+      <h3>F2 · Interest rate</h3>
+      <div class="formula">r = I / (P × n)</div>
+      <p>Use it when you know the interest, the capital and the time, and you want the <strong>rate</strong>. With days: r = I × 360 / (P × d).</p>
+      <div class="box example"><span class="label">Example F2</span><p>A deposit of 5,000 TND earned 175 TND in 6 months. r = 175 / (5,000 × 6/12) = 175 / 2,500 = 0.07 = <strong>7%</strong>.</p></div>
+
+      <h3>F3 · Term to maturity (time)</h3>
+      <div class="formula">n = I / (P × r)</div>
+      <p>Use it when you want the <strong>time</strong>. The answer is in <strong>years</strong>. Multiply by 12 to get months, by 360 to get days. With days directly: d = I × 360 / (P × r).</p>
+      <div class="box example"><span class="label">Example F3</span><p>12,000 TND at 6% earned 240 TND. n = 240 / (12,000 × 0.06) = 240 / 720 = 0.3333 year. In months: 0.3333 × 12 = <strong>4 months</strong>. In days: 240 × 360 / 720 = <strong>120 days</strong>.</p></div>
+
+      <h3>F4 · Future value (acquired value)</h3>
+      <div class="formula">A = P × (1 + r × n) = P + I</div>
+      <p>The <strong>acquired value</strong> (valeur acquise) is what you have at the end: capital plus interest. Where does the formula come from? A = P + I = P + P × r × n = P × (1 + r × n). We just factor out P.</p>
+      <div class="box example"><span class="label">Example F4</span><p>Ines deposits 4,000 TND at 7.5% for 144 days. A = 4,000 × (1 + 0.075 × 144/360) = 4,000 × (1 + 0.03) = 4,000 × 1.03 = <strong>4,120 TND</strong>. (So I = 120 TND.)</p></div>
+
+      <h3>F5 · Present value</h3>
+      <div class="formula">P = A / (1 + r × n)</div>
+      <div class="box def"><span class="label">Definition</span><span class="term">Present value (la valeur actuelle)</span><p>The value <strong>today</strong> of a sum to be received or paid in the future. It is the amount you must invest today, at rate r, to have A at the end. To find it, we divide A by (1 + r × n): we "remove" the future interest.</p></div>
+      <div class="box example"><span class="label">Example F5</span><p>A company must pay its supplier 2,575 TND in 6 months. Money earns 6%. How much must it place today to have exactly 2,575 TND then? P = 2,575 / (1 + 0.06 × 6/12) = 2,575 / 1.03 = <strong>2,500 TND</strong>. Check: 2,500 × 1.03 = 2,575 ✓.</p></div>
+
+      <h3>F6 · Rate or time from present and future values</h3>
+      <div class="formula">r = [(FV / PV) − 1] / n &nbsp;&nbsp;·&nbsp;&nbsp; n = [(FV / PV) − 1] / r</div>
+      <p>Where does it come from? FV = PV × (1 + r × n). Divide both sides by PV: FV / PV = 1 + r × n. Subtract 1: r × n = (FV / PV) − 1. Then divide by n (to get r) or by r (to get n).</p>
+      <div class="box example"><span class="label">Example F6</span>
+        <p><strong>Rate:</strong> 3,200 TND became 3,320 TND after 5 months. FV / PV = 3,320 / 3,200 = 1.0375. r = 0.0375 / (5/12) = 0.0375 × 12/5 = 0.09 = <strong>9%</strong>.</p>
+        <p><strong>Time:</strong> 3,200 TND at 6% became 3,280 TND. FV / PV = 1.025. n = 0.025 / 0.06 = 0.41667 year = 0.41667 × 12 = <strong>5 months</strong> (= 150 days).</p>
+        <p>Tip: you can also do it in two steps: I = FV − PV, then F2 or F3. Same answer.</p>
+      </div>
+
+      <h3>Which formula do I use?</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>You know…</th><th>You want…</th><th>Use</th></tr></thead>
+        <tbody>
+          <tr><td>P, r, n</td><td>the interest I</td><td><strong>F1</strong>: I = P × r × n</td></tr>
+          <tr><td>I, P, n</td><td>the rate r</td><td><strong>F2</strong>: r = I / (P × n)</td></tr>
+          <tr><td>I, P, r</td><td>the time n (then a date)</td><td><strong>F3</strong>: n = I / (P × r)</td></tr>
+          <tr><td>P, r, n</td><td>the final amount A</td><td><strong>F4</strong>: A = P(1 + r × n)</td></tr>
+          <tr><td>A, r, n</td><td>today's value P</td><td><strong>F5</strong>: P = A / (1 + r × n)</td></tr>
+          <tr><td>PV, FV, n</td><td>the rate r</td><td><strong>F6</strong>: r = (FV/PV − 1) / n</td></tr>
+          <tr><td>PV, FV, r</td><td>the time n</td><td><strong>F6</strong>: n = (FV/PV − 1) / r</td></tr>
+          <tr><td>I, r, n</td><td>the capital P</td><td>F1 turned around: P = I / (r × n)</td></tr>
+          <tr><td>several placements</td><td>one equivalent rate</td><td><strong>F7</strong> (section 08)</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="box warn"><span class="label">Common mistakes with the formulas</span>
+        <ul>
+          <li><strong>Rate as a percentage:</strong> writing 7 instead of 0.07. 10,000 × 7 × 0.3 = 21,000 TND of interest is obviously absurd.</li>
+          <li><strong>Time not in years:</strong> putting 108 (days) or 9 (months) directly as n. Always ÷ 360 or ÷ 12.</li>
+          <li><strong>P vs A:</strong> in F5, divide by (1 + r × n). Do <em>not</em> subtract A × r × n from A: that is a different method (bank discount, a later chapter) and gives a different number.</li>
+          <li><strong>Rounding too early:</strong> keep fractions like 4/12 or 62/360 exact until the last step (see the slide error in Exercise 3).</li>
+        </ul>
+      </div>
+      <div class="box exam"><span class="label">Exam alert · sanity checks</span><p>After every answer, ask: does it make sense? Interest on a few months should be a <strong>small part</strong> of the capital (a few %). A present value must be <strong>smaller</strong> than the future value. A rate is usually between 1% and 20%. If not, look for a ÷ 360 or a % you forgot.</p></div>
+
+      <h3>Check yourself</h3>
+      <div class="exercises">
+        <div class="ex" id="q-f-1" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q27</span><span class="ex-type">Calculation</span></div>
+          <p class="q">9,000 TND at 6% for 4 months. What is the interest?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>180 TND</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>2,160 TND</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>540 TND</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>6 TND</span></button>
+          </div>
+          <div class="why" hidden>I = 9,000 × 0.06 × 4/12 = 540 / 3 = <strong>180 TND</strong>. (b) uses n = 4 years. (c) is one full year (forgot the 4/12). (d) uses 4/360, as if 4 were days.</div>
+        </div>
+        <div class="ex" id="q-f-2" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q28</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">You know the capital P, the interest I and the number of days d. Which formula gives the annual rate?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>r = I × P × d / 360</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>r = I / (P × d)</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>r = I × 360 / (P × d)</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>r = P × d / (I × 360)</span></button>
+          </div>
+          <div class="why" hidden>F2 with n = d/360: r = I / (P × d/360) = <strong>I × 360 / (P × d)</strong>. Option (b) forgets the 360, so it gives a daily rate, not an annual one.</div>
+        </div>
+        <div class="ex" id="q-f-3" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q29</span><span class="ex-type">Calculation</span></div>
+          <p class="q">You will receive 5,150 TND in 6 months. The rate is 6%. What is the present value?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>4,995.50 TND</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>5,000 TND</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>4,841 TND</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>5,304.50 TND</span></button>
+          </div>
+          <div class="why" hidden>P = 5,150 / (1 + 0.06 × 0.5) = 5,150 / 1.03 = <strong>5,000 TND</strong>. (a) subtracts 5,150 × 0.03 from 5,150: wrong method. (c) subtracts 6% of a full year. (d) is a future value, bigger than 5,150: impossible for a present value.</div>
+        </div>
+        <div class="ex" id="q-f-4" data-answer="T">
+          <div class="ex-head"><span class="ex-n">Q30</span><span class="ex-type">True or false</span></div>
+          <p class="q">With the same capital and the same rate, if the interest is twice as big, the time was twice as long.</p>
+          <div class="opts tf"><button class="opt" data-k="T"><span>True</span></button><button class="opt" data-k="F"><span>False</span></button></div>
+          <div class="why" hidden>True. I = P × r × n: with P and r fixed, I is <strong>proportional</strong> to n. Double the time, double the interest. This is a key property of simple interest (it is not true for compound interest).</div>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P3</span><span class="ex-type">Problem · try it first</span></div>
+          <p class="q">Your cousin deposits 7,500 TND in a compte à terme at 6.5% for 200 days. (a) Find the interest. (b) Find the acquired value. (c) What rate would give 300 TND of interest over the same 200 days?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <p><strong>(a) F1:</strong> I = 7,500 × 0.065 × 200/360 = 97,500 / 360 = <strong>270.833 TND</strong>.</p>
+            <p><strong>(b) F4:</strong> A = 7,500 + 270.833 = <strong>7,770.833 TND</strong>. (Or 7,500 × (1 + 0.065 × 200/360), same result.)</p>
+            <p><strong>(c) F2:</strong> r = 300 × 360 / (7,500 × 200) = 108,000 / 1,500,000 = 0.072 = <strong>7.2%</strong>.</p>
+          </div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 06 ===================== -->
+    <section class="lesson-section" id="reference" data-title="Worked problem: 23 Apr → 9 Aug">
+      <div class="sec-num">06</div>
+      <h2>Full worked problem: from 23 April to 9 August</h2>
+      <p>This is the reference problem that the slides solve step by step. It uses F1, F4 and F3, and day counting in <strong>both directions</strong> (dates → days, then days → date). If you can solve it alone, you can solve most of the chapter. Try it on paper first.</p>
+
+      <div class="exercises">
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P4</span><span class="ex-type">Slide problem · try it first</span></div>
+          <p class="q">A capital of 10,000 TND is placed from 23 April to 9 August 2010 at a simple rate of 7%. (1) Calculate the interest. (2) Calculate the acquired value. (3) The investor wants to earn 315 TND of interest. On what date must the money be repaid?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <p><strong>Data:</strong> P = 10,000 TND; r = 7% = 0.07; from 23 April to 9 August 2010 (2010 is not a leap year, but February is not in the period anyway).</p>
+            <p><strong>Step 0 · Count the days.</strong></p>
+            <div class="table-wrap"><table>
+              <thead><tr><th>Month</th><th class="n">Days</th><th>How</th></tr></thead>
+              <tbody>
+                <tr><td>April</td><td class="n">7</td><td>30 − 23 (23 April not counted)</td></tr>
+                <tr><td>May</td><td class="n">31</td><td>full month</td></tr>
+                <tr><td>June</td><td class="n">30</td><td>full month</td></tr>
+                <tr><td>July</td><td class="n">31</td><td>full month</td></tr>
+                <tr><td>August</td><td class="n">9</td><td>end date counted</td></tr>
+                <tr class="total"><td>Total</td><td class="n">108</td><td>n = 108/360 = 0.3 year</td></tr>
+              </tbody>
+            </table></div>
+            <p><strong>(1) Interest, F1:</strong> I = 10,000 × 0.07 × 108/360 = 700 × 0.3 = <strong>210 TND</strong>.</p>
+            <p><strong>(2) Acquired value, F4:</strong> A = 10,000 × (1 + 0.07 × 108/360) = 10,000 × (1 + 0.021) = 10,000 × 1.021 = <strong>10,210 TND</strong>. Check: P + I = 10,000 + 210 = 10,210 ✓.</p>
+            <p><strong>(3) Repayment date, F3 in days:</strong> d = I × 360 / (P × r) = 315 × 360 / (10,000 × 0.07) = 113,400 / 700 = <strong>162 days</strong>.</p>
+            <p>Now go forward from 23 April, like the slides: 7 (April) + 31 (May) + 30 (June) + 31 (July) + 31 (August) = 130 days, which takes us to 31 August. Still to go: 162 − 130 = 32. September has 30 days: 32 − 30 = 2 still to go. So we are in October, day 2.</p>
+            <p>Answer: the money must be repaid on <strong>2 October 2010</strong>.</p>
+            <p><strong>Quick check by proportion:</strong> 315 is 1.5 times 210, so the time must be 1.5 times 108 = 162 days ✓.</p>
+          </div></details>
+        </div>
+      </div>
+
+      <p>Once you have tried, look at part (1) as a picture. Each block is one month; its number is how many days of that month earn interest.</p>
+      <figure>
+        <svg viewBox="0 0 600 220" role="img" aria-label="Timeline from 23 April to 9 August: 7 days in April, 31 in May, 30 in June, 31 in July, 9 in August, total 108 days.">
+          <rect x="0" y="0" width="600" height="220" fill="#FFFFFF"/>
+          <text x="40" y="30" font-size="13" fill="#667085" font-family="inherit">April: 30 − 23 = 7</text>
+          <text x="560" y="30" font-size="13" fill="#667085" font-family="inherit" text-anchor="end">August: up to the 9th</text>
+          <g font-size="13" fill="#667085" font-family="inherit" text-anchor="middle" font-weight="700">
+            <text x="56.9" y="62">Apr</text><text x="148.3" y="62">May</text><text x="295.2" y="62">Jun</text><text x="442" y="62">Jul</text><text x="538.3" y="62">Aug</text>
+          </g>
+          <g stroke="#7C3AED" stroke-width="1.5">
+            <rect x="40" y="72" width="33.7" height="36" fill="#F4EEFF"/>
+            <rect x="73.7" y="72" width="149.3" height="36" fill="#FFFFFF"/>
+            <rect x="223" y="72" width="144.4" height="36" fill="#F4EEFF"/>
+            <rect x="367.4" y="72" width="149.3" height="36" fill="#FFFFFF"/>
+            <rect x="516.7" y="72" width="43.3" height="36" fill="#F4EEFF"/>
+          </g>
+          <g font-size="15" fill="#0F1726" font-family="inherit" text-anchor="middle" font-weight="700">
+            <text x="56.9" y="95">7</text><text x="148.3" y="95">31</text><text x="295.2" y="95">30</text><text x="442" y="95">31</text><text x="538.3" y="95">9</text>
+          </g>
+          <line x1="40" y1="66" x2="40" y2="124" stroke="#0F1726" stroke-width="2.5"/>
+          <line x1="560" y1="66" x2="560" y2="124" stroke="#0F1726" stroke-width="2.5"/>
+          <text x="40" y="142" font-size="13" fill="#0F1726" font-family="inherit" font-weight="700">23 Apr: start day</text>
+          <text x="40" y="158" font-size="13" fill="#C4372D" font-family="inherit">not counted</text>
+          <text x="560" y="142" font-size="13" fill="#0F1726" font-family="inherit" font-weight="700" text-anchor="end">9 Aug: end day</text>
+          <text x="560" y="158" font-size="13" fill="#12805C" font-family="inherit" text-anchor="end">counted</text>
+          <g stroke="#7C3AED" stroke-width="1.5"><line x1="40" y1="178" x2="560" y2="178"/><line x1="40" y1="172" x2="40" y2="184"/><line x1="560" y1="172" x2="560" y2="184"/></g>
+          <text x="300" y="206" font-size="14" fill="#7C3AED" font-family="inherit" font-weight="700" text-anchor="middle">7 + 31 + 30 + 31 + 9 = 108 days → n = 108/360 = 0.3 year</text>
+        </svg>
+        <figcaption>The reference problem on a calendar line (to scale: one block width per day). The start day (23 April) does not earn interest; the end day (9 August) does. 108 days ÷ 360 = 0.3 year.</figcaption>
+      </figure>
+
+      <div class="box exam"><span class="label">Exam alert · part (3) is the trap</span><p>When the question asks "on what date", your final answer must be a <strong>date</strong> (2 October), not "162 days". Many students stop at the number of days and lose the marks.</p></div>
+      <div class="box warn"><span class="label">Common mistake</span><p>Counting forward and including 23 April as day 1. Then you finish on 1 October, one day too early. The start day never counts, in either direction.</p></div>
+
+      <h3>Check yourself</h3>
+      <div class="exercises">
+        <div class="ex" id="q-ref-1" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q31</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">For the same problem (10,000 TND, 7%, 108 days), what would the interest be with exact interest (365-day year)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>210.000 TND</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>212.917 TND</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>207.123 TND</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>700.000 TND</span></button>
+          </div>
+          <div class="why" hidden>I = 10,000 × 0.07 × 108/365 = 75,600 / 365 = <strong>207.123 TND</strong>. It is a bit less than the ordinary 210 TND because we divide by the bigger 365. (d) is one full year of interest.</div>
+        </div>
+        <div class="ex" id="q-ref-2" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q32</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Same capital and same dates (108 days), but the rate is 8%. What is the interest (ordinary)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>210 TND</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>240 TND</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>236.712 TND</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>800 TND</span></button>
+          </div>
+          <div class="why" hidden>I = 10,000 × 0.08 × 0.3 = <strong>240 TND</strong>. (c) uses 365 days. (d) is a full year. (a) is the old 7% answer.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 07 ===================== -->
+    <section class="lesson-section" id="ex1" data-title="Exercise 1 (four parts)">
+      <div class="sec-num">07</div>
+      <h2>Exercise 1: four short problems</h2>
+      <p>Exercise 1 of the slides has four independent parts. Each one asks for a <strong>different unknown</strong>: the interest, a date, a rate, a capital. Before you calculate, always ask: "What do I know? What do I want?" Then pick the formula from the table in section 05.</p>
+
+      <div class="box def"><span class="label">Definition · the 4-step method for every problem</span><span class="term">Data → time → formula → check</span>
+        <ol>
+          <li><strong>Data:</strong> write P, r (as a decimal), and what is unknown.</li>
+          <li><strong>Time:</strong> count the days (or months) and write n as a fraction: d/360 or m/12.</li>
+          <li><strong>Formula:</strong> choose F1 to F6 and calculate. Keep fractions exact until the end.</li>
+          <li><strong>Check:</strong> put your answer back in I = P × r × n. Does it work? Is it reasonable?</li>
+        </ol>
+      </div>
+
+      <div class="box tip"><span class="label">Reading the slides · French number format</span><p>The slides write amounts the French way: <strong>16 738,700 TND</strong>. In French, the <strong>comma is the decimal mark</strong> and a space separates thousands. On this page we write the same number as <strong>16,738.700 TND</strong>. The 3 decimals are millimes (1 TND = 1,000 millimes).</p></div>
+
+      <div class="exercises">
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P5</span><span class="ex-type">Exercise 1 · part 1 · find I</span></div>
+          <p class="q">A capital of 28,000 TND is invested at 9% from 13/09/N to 27/02/N+1. Calculate the interest.</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <p><strong>Data:</strong> P = 28,000; r = 0.09; I = ?</p>
+            <div class="table-wrap"><table>
+              <thead><tr><th>Month</th><th class="n">Days</th></tr></thead>
+              <tbody>
+                <tr><td>September (30 − 13)</td><td class="n">17</td></tr>
+                <tr><td>October</td><td class="n">31</td></tr>
+                <tr><td>November</td><td class="n">30</td></tr>
+                <tr><td>December</td><td class="n">31</td></tr>
+                <tr><td>January</td><td class="n">31</td></tr>
+                <tr><td>February (end date)</td><td class="n">27</td></tr>
+                <tr class="total"><td>Total</td><td class="n">167</td></tr>
+              </tbody>
+            </table></div>
+            <p>Note: we count only 27 days of February, so it does not matter whether N+1 is a leap year.</p>
+            <p><strong>F1:</strong> I = 28,000 × 0.09 × 167/360 = 2,520 × 167 / 360 = 420,840 / 360 = <strong>1,169 TND</strong>.</p>
+            <p><strong>Check:</strong> one year of interest is 28,000 × 0.09 = 2,520 TND, so half a year (180 days) would be 1,260 TND. 167 days is a little less than 180, so the answer must be a little less than 1,260: 1,169 ✓. Exactly: 9% × 167/360 = 4.175% of the capital, and 4.175% of 28,000 = 1,169.</p>
+          </div></details>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P6</span><span class="ex-type">Exercise 1 · part 2 · find the date</span></div>
+          <p class="q">A capital of 7,200 TND was lent at 8% on June 8. Its acquired value is 7,288 TND. On what date was it repaid?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <p><strong>Data:</strong> P = 7,200; r = 0.08; A = 7,288. So I = A − P = 7,288 − 7,200 = <strong>88 TND</strong>.</p>
+            <p><strong>F3 in days:</strong> d = I × 360 / (P × r) = 88 × 360 / (7,200 × 0.08) = 31,680 / 576 = <strong>55 days</strong>.</p>
+            <p><strong>Count forward from June 8:</strong> June: 30 − 8 = 22 → 55 − 22 = 33 still to go. July: 31 → 33 − 31 = 2 still to go. So we are in August, day 2.</p>
+            <p>Answer: repaid on <strong>2 August</strong>. Check: 22 + 31 + 2 = 55 ✓, and 7,200 × 0.08 × 55/360 = 88 ✓.</p>
+          </div></details>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P7</span><span class="ex-type">Exercise 1 · part 3 · find r</span></div>
+          <p class="q">A capital of 8,400 TND placed from 16/05 to 25/09 produced 231 TND of interest. At what rate was it placed?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <p><strong>Days:</strong> May: 31 − 16 = 15; June 30; July 31; August 31; September 25. Total: 15 + 30 + 31 + 31 + 25 = <strong>132 days</strong>.</p>
+            <p><strong>F2 in days:</strong> r = I × 360 / (P × d) = 231 × 360 / (8,400 × 132) = 83,160 / 1,108,800 = 0.075 = <strong>7.5%</strong>.</p>
+            <p><strong>Check:</strong> 8,400 × 0.075 × 132/360 = 630 × 0.36667 = 231 ✓.</p>
+          </div></details>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P8</span><span class="ex-type">Exercise 1 · part 4 · find P</span></div>
+          <p class="q">A capital placed at 8.4% for 62 days has an acquired value of 16,738.700 TND. Find the capital.</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <p><strong>Data:</strong> A = 16,738.700; r = 0.084; n = 62/360; P = ?</p>
+            <p><strong>F5:</strong> P = A / (1 + r × n) = 16,738.7 / (1 + 0.084 × 62/360).</p>
+            <p>0.084 × 62 = 5.208, and 5.208 / 360 = 0.0144667. So 1 + 0.0144667 = 1.0144667.</p>
+            <p>P = 16,738.7 / 1.0144667 = <strong>16,500 TND</strong>.</p>
+            <p><strong>Check:</strong> I = 16,500 × 0.084 × 62/360 = 238.700, and 16,500 + 238.700 = 16,738.700 ✓.</p>
+            <p><strong>Careful:</strong> if you round 1.0144667 to 1.014, you get 16,507.594 TND, which is wrong by 7.6 TND. Keep at least 6 decimals, or use the calculator memory.</p>
+          </div></details>
+        </div>
+      </div>
+
+      <div class="box warn"><span class="label">Common mistake · part 2</span><p>Using the acquired value 7,288 as I. The interest is the <strong>difference</strong> A − P = 88 TND. Always ask: "Is this number the interest, or capital + interest?"</p></div>
+      <div class="box exam"><span class="label">Exam alert</span><p>These four parts are the four classic question types: <strong>find I</strong>, <strong>find a date</strong>, <strong>find r</strong>, <strong>find P</strong>. Expect at least one of them in every quiz.</p></div>
+
+      <h3>Check yourself</h3>
+      <div class="exercises">
+        <div class="ex" id="q-e1-1" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q33</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">A student solves part 1 (28,000 TND at 9% from 13/09 to 27/02) and gets 1,176 TND. What mistake did she make?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>She used 365 days instead of 360.</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>She used 9 instead of 0.09.</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>She counted 168 days: she included the start day.</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>She made no mistake.</span></button>
+          </div>
+          <div class="why" hidden>28,000 × 0.09 × 168/360 = 2,520 × 168 / 360 = <strong>1,176</strong>. So she used 168 days, one too many: she counted 13 September. With 365 she would get a <em>smaller</em> number (1,152.986), and with 9 instead of 0.09 a huge one.</div>
+        </div>
+        <div class="ex" id="q-e1-2" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q34</span><span class="ex-type">Calculation</span></div>
+          <p class="q">In part 3, 8,400 TND produced 231 TND in 132 days. Same capital, same rate: how much interest in 66 days?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>115.50 TND</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>231 TND</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>462 TND</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>57.75 TND</span></button>
+          </div>
+          <div class="why" hidden>Simple interest is proportional to time: 66 is half of 132, so the interest is half of 231 = <strong>115.50 TND</strong>. Check: 8,400 × 0.075 × 66/360 = 115.50 ✓.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 08 ===================== -->
+    <section class="lesson-section" id="average" data-title="Average rate F7 (Ex 2 & 5)">
+      <div class="sec-num">08</div>
+      <h2>The average rate of several investments (F7)</h2>
+      <p>Sometimes money is split into several placements, each with its own capital, rate and duration. Is the whole package better than one simple placement at, say, 4%? To compare, we replace all the different rates by <strong>one single rate</strong>: the average rate.</p>
+
+      <div class="box def"><span class="label">Definition</span><span class="term">Average rate (le taux moyen de placement)</span><p>The single rate that, applied to <strong>all</strong> the placements over <strong>their own durations</strong>, gives the <strong>same total interest</strong> as the real, different rates. It is used to compare alternatives.</p></div>
+
+      <div class="formula">r<sub>A</sub> = Σ(P<sub>i</sub> × r<sub>i</sub> × n<sub>i</sub>) / Σ(P<sub>i</sub> × n<sub>i</sub>)</div>
+      <p>Σ (the Greek letter sigma) means "the sum of". So: add up all the P × r × n on top, add up all the P × n on the bottom, and divide.</p>
+
+      <h3>Where does it come from?</h3>
+      <p>We want a rate r<sub>A</sub> such that the total interest stays the same: Σ(P<sub>i</sub> × r<sub>A</sub> × n<sub>i</sub>) = Σ(P<sub>i</sub> × r<sub>i</sub> × n<sub>i</sub>). Since r<sub>A</sub> is the same for every placement, we can take it out: r<sub>A</sub> × Σ(P<sub>i</sub> × n<sub>i</sub>) = Σ(P<sub>i</sub> × r<sub>i</sub> × n<sub>i</sub>). Divide, and you get F7.</p>
+      <p>This means r<sub>A</sub> is a <strong>weighted average</strong>: each rate counts in proportion to its "capital × time" (P<sub>i</sub> × n<sub>i</sub>). A big placement for a long time counts a lot; a small, short one counts little.</p>
+
+      <div class="box tip"><span class="label">Shortcut · the 360 disappears</span><p>If every n<sub>i</sub> = d<sub>i</sub>/360, the 360 appears on top and on the bottom, so it <strong>cancels</strong>. You can put the <strong>number of days</strong> directly in the table. (Same with months: the 12 cancels.) Just use the <strong>same unit</strong> for all the placements.</p></div>
+
+      <div class="box example"><span class="label">Worked example · why we can't just average the rates</span>
+        <p>1,000 TND at 5% for 30 days, and 9,000 TND at 8% for 90 days.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Placement</th><th class="n">P<sub>i</sub></th><th class="n">r<sub>i</sub></th><th class="n">d<sub>i</sub></th><th class="n">P<sub>i</sub> × r<sub>i</sub> × d<sub>i</sub></th><th class="n">P<sub>i</sub> × d<sub>i</sub></th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td class="n">1,000</td><td class="n">0.05</td><td class="n">30</td><td class="n">1,500</td><td class="n">30,000</td></tr>
+            <tr><td>2</td><td class="n">9,000</td><td class="n">0.08</td><td class="n">90</td><td class="n">64,800</td><td class="n">810,000</td></tr>
+            <tr class="total"><td>Σ</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">66,300</td><td class="n">840,000</td></tr>
+          </tbody>
+        </table></div>
+        <p>r<sub>A</sub> = 66,300 / 840,000 = 0.07893 ≈ <strong>7.89%</strong>.</p>
+        <p>The simple average of the rates, (5% + 8%) / 2 = 6.5%, is <strong>wrong</strong>: it ignores that most of the money (9,000 TND) is at 8%, and for longer.</p>
+      </div>
+
+      <div class="box warn"><span class="label">Common mistakes with F7</span>
+        <ul>
+          <li>Averaging the rates directly: (r<sub>1</sub> + r<sub>2</sub> + r<sub>3</sub>) / 3.</li>
+          <li>Weighting only by the capitals and forgetting the durations.</li>
+          <li>Mixing units: some n<sub>i</sub> in days and others in months.</li>
+        </ul>
+        <p><strong>Sanity check:</strong> the average rate is always <strong>between</strong> the smallest and the largest rate.</p>
+      </div>
+
+      <div class="exercises">
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P9</span><span class="ex-type">Exercise 2 · try it first</span></div>
+          <p class="q">A client has 9,000 TND. Her savings account pays 4%. The bank proposes instead: 2,000 TND at 3% for 30 days, 3,000 TND at 4% for 40 days, and 4,000 TND at 5% for 50 days. Calculate the average rate of this alternative. Should she accept it?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <p>We use days directly (the 360 cancels).</p>
+            <div class="table-wrap"><table>
+              <thead><tr><th>Placement</th><th class="n">P<sub>i</sub></th><th class="n">r<sub>i</sub></th><th class="n">d<sub>i</sub></th><th class="n">P<sub>i</sub> × r<sub>i</sub> × d<sub>i</sub></th><th class="n">P<sub>i</sub> × d<sub>i</sub></th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td class="n">2,000</td><td class="n">0.03</td><td class="n">30</td><td class="n">1,800</td><td class="n">60,000</td></tr>
+                <tr><td>2</td><td class="n">3,000</td><td class="n">0.04</td><td class="n">40</td><td class="n">4,800</td><td class="n">120,000</td></tr>
+                <tr><td>3</td><td class="n">4,000</td><td class="n">0.05</td><td class="n">50</td><td class="n">10,000</td><td class="n">200,000</td></tr>
+                <tr class="total"><td>Σ</td><td class="n">9,000</td><td class="n"></td><td class="n"></td><td class="n">16,600</td><td class="n">380,000</td></tr>
+              </tbody>
+            </table></div>
+            <p>r<sub>A</sub> = 16,600 / 380,000 = 0.04368 ≈ <strong>4.37%</strong>.</p>
+            <p><strong>Decision:</strong> 4.37% &gt; 4%, so the bank's alternative is <strong>better</strong>: it gives more interest.</p>
+            <p><strong>In dinars:</strong> the alternative gives 16,600 / 360 = 46.111 TND of interest. The same capitals for the same durations at 4% would give 0.04 × 380,000 / 360 = 42.222 TND. Gain: 3.889 TND.</p>
+          </div></details>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P10</span><span class="ex-type">Exercise 5 · Mr. Sam's decision · try it first</span></div>
+          <p class="q">Mr. Sam has $51,000 to lend (the slide uses dollars). He lends $12,000 from 13/01/N to 24/02/N at 6%; $18,000 from 02/02/N to 18/03/N at 7%; and the remainder from 15/02/N to 28/03/N at 5.5%. N is not a leap year. Find the average rate. Would it be wise to lend all the money at a flat 5.5% instead?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <p><strong>Remainder:</strong> 51,000 − 12,000 − 18,000 = <strong>$21,000</strong>.</p>
+            <p><strong>Days</strong> (February has 28 days):</p>
+            <ul>
+              <li>13/01 → 24/02: January 31 − 13 = 18, February 24 → <strong>42 days</strong>.</li>
+              <li>02/02 → 18/03: February 28 − 2 = 26, March 18 → <strong>44 days</strong>.</li>
+              <li>15/02 → 28/03: February 28 − 15 = 13, March 28 → <strong>41 days</strong>.</li>
+            </ul>
+            <div class="table-wrap"><table>
+              <thead><tr><th>Loan</th><th class="n">P<sub>i</sub> ($)</th><th class="n">r<sub>i</sub></th><th class="n">d<sub>i</sub></th><th class="n">P<sub>i</sub> × r<sub>i</sub> × d<sub>i</sub></th><th class="n">P<sub>i</sub> × d<sub>i</sub></th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td class="n">12,000</td><td class="n">0.06</td><td class="n">42</td><td class="n">30,240</td><td class="n">504,000</td></tr>
+                <tr><td>2</td><td class="n">18,000</td><td class="n">0.07</td><td class="n">44</td><td class="n">55,440</td><td class="n">792,000</td></tr>
+                <tr><td>3</td><td class="n">21,000</td><td class="n">0.055</td><td class="n">41</td><td class="n">47,355</td><td class="n">861,000</td></tr>
+                <tr class="total"><td>Σ</td><td class="n">51,000</td><td class="n"></td><td class="n"></td><td class="n">133,035</td><td class="n">2,157,000</td></tr>
+              </tbody>
+            </table></div>
+            <p>r<sub>A</sub> = 133,035 / 2,157,000 = 0.06168 ≈ <strong>6.17%</strong>.</p>
+            <p><strong>Decision:</strong> 6.17% &gt; 5.5%. Lending everything at a flat 5.5% would earn <strong>less</strong>, so it is <strong>not wise</strong>.</p>
+            <p><strong>In dollars:</strong> separate loans: 133,035 / 360 = $369.54. Flat 5.5%: 0.055 × 2,157,000 / 360 = $329.54. Mr. Sam would lose <strong>$40</strong>.</p>
+          </div></details>
+        </div>
+      </div>
+
+      <div class="box exam"><span class="label">Exam alert</span><p>Average-rate questions always end with a <strong>decision</strong> ("is it better?", "is it wise?"). Compare r<sub>A</sub> with the other rate and write a full sentence: "4.37% &gt; 4%, so the alternative gives more interest: accept it."</p></div>
+
+      <h3>Check yourself</h3>
+      <div class="exercises">
+        <div class="ex" id="q-avg-1" data-answer="T">
+          <div class="ex-head"><span class="ex-n">Q35</span><span class="ex-type">True or false</span></div>
+          <p class="q">The average rate of several placements is always between the smallest and the largest of their rates.</p>
+          <div class="opts tf"><button class="opt" data-k="T"><span>True</span></button><button class="opt" data-k="F"><span>False</span></button></div>
+          <div class="why" hidden>True. It is a weighted average, and any average lies between the minimum and the maximum. If your r<sub>A</sub> is outside this range, you made a calculation error.</div>
+        </div>
+        <div class="ex" id="q-avg-2" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q36</span><span class="ex-type">Calculation</span></div>
+          <p class="q">3,000 TND at 4% for 120 days and 6,000 TND at 7% for 30 days. What is the average rate?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>5%</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>5.5%</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>6%</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>11%</span></button>
+          </div>
+          <div class="why" hidden>Top: 3,000 × 0.04 × 120 + 6,000 × 0.07 × 30 = 14,400 + 12,600 = 27,000. Bottom: 3,000 × 120 + 6,000 × 30 = 360,000 + 180,000 = 540,000. r<sub>A</sub> = 27,000 / 540,000 = <strong>5%</strong>. (b) is the simple average of the rates; (c) weights only by capital and forgets the durations.</div>
+        </div>
+        <div class="ex" id="q-avg-3" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q37</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Why can you put the number of days directly into F7, without dividing each one by 360?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>Because the average rate is a daily rate.</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>Because the teacher allows approximations.</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>Because 360 appears on top and on the bottom, so it cancels.</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>You can't: you must always divide by 360 first.</span></button>
+          </div>
+          <div class="why" hidden>Every term on top and every term on the bottom contains "/360". Dividing a fraction's top and bottom by the same number does not change it. So the result is the same annual rate.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 09 ===================== -->
+    <section class="lesson-section" id="equations" data-title="Two capitals (Ex 3, 4, 6)">
+      <div class="sec-num">09</div>
+      <h2>Equations with two capitals (Exercises 3, 4 and 6)</h2>
+      <p>In these problems, some numbers are missing. Instead, the text gives a <strong>relationship</strong>: "the two capitals produce the same interest", "their sum is 7,000 TND", "the second started 6 months later". You turn each sentence into an equation, then solve it.</p>
+
+      <div class="box def"><span class="label">Definition</span><span class="term">Setting up the equation (la mise en équation)</span><p>Translating the words of a problem into algebra. The most common sentence is "the interests are equal": <strong>I<sub>1</sub> = I<sub>2</sub></strong>, so <strong>P<sub>1</sub> × r<sub>1</sub> × n<sub>1</sub> = P<sub>2</sub> × r<sub>2</sub> × n<sub>2</sub></strong>.</p></div>
+
+      <ol>
+        <li><strong>Name the unknowns</strong> (P<sub>1</sub>, P<sub>2</sub>, r, or n).</li>
+        <li><strong>Write each interest</strong> with I = P × r × n, keeping fractions like 3/12 exact.</li>
+        <li><strong>Translate each sentence</strong> into an equation.</li>
+        <li><strong>Solve</strong> (substitute one equation into the other).</li>
+        <li><strong>Check</strong> by recalculating both interests.</li>
+      </ol>
+
+      <div class="box example"><span class="label">Worked example · a quick one</span>
+        <p>Nour places 5,000 TND at 6% for 6 months. Her brother places 4,000 TND for the same 6 months and earns the same interest. What is his rate?</p>
+        <p>I<sub>1</sub> = I<sub>2</sub> → 5,000 × 0.06 × 6/12 = 4,000 × r × 6/12. The 6/12 is on both sides, so it cancels: 300 = 4,000 r → r = 0.075 = <strong>7.5%</strong>.</p>
+        <p>Check: 5,000 × 0.06 × 0.5 = 150; 4,000 × 0.075 × 0.5 = 150 ✓. Smaller capital → it needs a higher rate to earn the same interest.</p>
+      </div>
+
+      <div class="exercises">
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P11</span><span class="ex-type">Exercise 3 · try it first</span></div>
+          <p class="q">Two capitals together total 7,000 TND. They are placed at the same simple rate: the first for 3 months, the second for 4 months. They produce the same interest. (1) Find each capital. (2) At what rate would each capital produce 60 TND of interest?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <p><strong>(1)</strong> Same interest: P<sub>1</sub> × r × 3/12 = P<sub>2</sub> × r × 4/12.</p>
+            <p>r is the same on both sides, and so is the "/12": they cancel. We get <strong>3 P<sub>1</sub> = 4 P<sub>2</sub></strong>, so P<sub>2</sub> = 3/4 P<sub>1</sub> = 0.75 P<sub>1</sub>.</p>
+            <p>Sum: P<sub>1</sub> + P<sub>2</sub> = 7,000 → P<sub>1</sub> + 0.75 P<sub>1</sub> = 7,000 → 1.75 P<sub>1</sub> = 7,000 → <strong>P<sub>1</sub> = 4,000 TND</strong>.</p>
+            <p>P<sub>2</sub> = 7,000 − 4,000 = <strong>3,000 TND</strong>.</p>
+            <p><strong>Check:</strong> 3 × 4,000 = 12,000 and 4 × 3,000 = 12,000 ✓. The capital placed for longer (P<sub>2</sub>) is smaller. That makes sense.</p>
+            <p><strong>(2)</strong> 60 = 4,000 × r × 3/12 = 1,000 r → <strong>r = 0.06 = 6%</strong>.</p>
+            <p><strong>Check with P<sub>2</sub>:</strong> 3,000 × 0.06 × 4/12 = 60 ✓. The same rate works for both, as expected.</p>
+          </div></details>
+        </div>
+      </div>
+
+      <div class="box warn"><span class="label">A note about the slide · Exercise 3</span>
+        <p>On the slide, the solution writes 0.25 P<sub>1</sub> = 0.33 P<sub>2</sub>, then P<sub>2</sub> = 0.76 P<sub>1</sub>, and finds <strong>P<sub>1</sub> = 3,977 TND and P<sub>2</sub> = 3,023 TND</strong>. <strong>Two roundings</strong> cause this. First, 4/12 is written as 0.33 (the true value is 0.3333...). Then 0.25 / 0.33 = 0.7576 is rounded to 0.76, so 1.76 P<sub>1</sub> = 7,000 gives P<sub>1</sub> = 3,977. (With the first rounding alone you would get a third answer, P<sub>1</sub> = 3,982.76.) The exact ratio is 3/12 ÷ 4/12 = <strong>3/4 = 0.75</strong>, and the slide's capitals come out about 23 TND wrong.</p>
+        <p>With the exact fractions, 3/12 and 4/12, you get exactly <strong>4,000 TND and 3,000 TND</strong>, and the check 3 × 4,000 = 4 × 3,000 works perfectly. The rate in part (2), <strong>6%</strong>, is correct either way. If you see 3,977 / 3,023 in your notes, now you know where it comes from. In your own work, keep fractions exact and don't round in the middle of a calculation.</p>
+      </div>
+
+      <div class="exercises">
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P12</span><span class="ex-type">Exercise 4 · try it first</span></div>
+          <p class="q">A capital P placed at 5% for a time n has an acquired value of 1,025 TND. If the same capital were invested at 4% for 2 years, it would earn 80 TND of interest. Find P and n.</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <p><strong>Start with the sentence that has only one unknown.</strong> The second sentence gives: P × 0.04 × 2 = 80 → 0.08 P = 80 → <strong>P = 1,000 TND</strong>.</p>
+            <p><strong>Then use the first sentence (F4):</strong> 1,025 = 1,000 × (1 + 0.05 n) → 1 + 0.05 n = 1.025 → 0.05 n = 0.025 → <strong>n = 0.5 year = 6 months</strong> (= 180 days).</p>
+            <p><strong>Check:</strong> 1,000 × 0.05 × 0.5 = 25, and 1,000 + 25 = 1,025 ✓.</p>
+          </div></details>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P13</span><span class="ex-type">Exercise 6 · try it first</span></div>
+          <p class="q">On 01/01/N, a first investment of 12,800 TND is made at 9%. A second investment of 12,000 TND at 12% starts six months later. Let n be the duration (in months) of the first investment. When will the two investments have produced the same interest?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <p><strong>Durations:</strong> the first runs n months; the second started 6 months later, so it runs (n − 6) months.</p>
+            <p><strong>Interests:</strong> I<sub>1</sub> = 12,800 × 0.09 × n/12 = <strong>96 n</strong>. I<sub>2</sub> = 12,000 × 0.12 × (n − 6)/12 = <strong>120 (n − 6)</strong>.</p>
+            <p><strong>Equation:</strong> 96 n = 120 (n − 6) → 96 n = 120 n − 720 → 720 = 24 n → <strong>n = 30 months</strong>.</p>
+            <p><strong>Date:</strong> count 30 months from 01/01/N: +12 months → 01/01/N+1; +24 months → 01/01/N+2; +30 months → <strong>01/07/N+2</strong>. In words: on <strong>1 July N+2</strong>, which is the same moment as the <strong>end of 30 June N+2</strong>.</p>
+            <p><strong>Check:</strong> I<sub>1</sub> = 96 × 30 = <strong>2,880 TND</strong>. The second ran 30 − 6 = 24 months: I<sub>2</sub> = 120 × 24 = <strong>2,880 TND</strong> ✓.</p>
+          </div></details>
+        </div>
+      </div>
+
+      <figure>
+        <svg viewBox="0 0 600 220" role="img" aria-label="Exercise 6 timeline: investment 1 runs 30 months from 01/01/N; investment 2 starts 6 months later and runs 24 months; both end on 01/07/N+2 with 2,880 TND interest each.">
+          <rect x="0" y="0" width="600" height="220" fill="#FFFFFF"/>
+          <text x="560" y="24" font-size="13" fill="#12805C" font-family="inherit" font-weight="700" text-anchor="end">Equal interest here: 2,880 TND each</text>
+          <line x1="560" y1="32" x2="560" y2="166" stroke="#12805C" stroke-width="2" stroke-dasharray="5 4"/>
+          <text x="128" y="64" font-size="13" fill="#0F1726" font-family="inherit" font-weight="700" text-anchor="end">Investment 1</text>
+          <rect x="140" y="44" width="420" height="30" rx="6" fill="#7C3AED"/>
+          <text x="350" y="64" font-size="13" fill="#FFFFFF" font-family="inherit" text-anchor="middle">12,800 TND at 9% · 30 months · I = 2,880</text>
+          <text x="128" y="114" font-size="13" fill="#0F1726" font-family="inherit" font-weight="700" text-anchor="end">Investment 2</text>
+          <rect x="224" y="94" width="336" height="30" rx="6" fill="#F4EEFF" stroke="#7C3AED" stroke-width="1.5"/>
+          <text x="392" y="114" font-size="13" fill="#0F1726" font-family="inherit" text-anchor="middle">12,000 TND at 12% · 24 months · I = 2,880</text>
+          <g stroke="#667085" stroke-width="1.5"><line x1="142" y1="116" x2="220" y2="116" stroke-dasharray="4 3"/><line x1="142" y1="110" x2="142" y2="122"/><line x1="220" y1="110" x2="220" y2="122"/></g>
+          <text x="181" y="106" font-size="13" fill="#667085" font-family="inherit" text-anchor="middle">6 months</text>
+          <line x1="140" y1="160" x2="560" y2="160" stroke="#0F1726" stroke-width="1.5"/>
+          <g stroke="#0F1726" stroke-width="1.5">
+            <line x1="140" y1="155" x2="140" y2="165"/><line x1="224" y1="155" x2="224" y2="165"/><line x1="308" y1="155" x2="308" y2="165"/><line x1="392" y1="155" x2="392" y2="165"/><line x1="476" y1="155" x2="476" y2="165"/><line x1="560" y1="155" x2="560" y2="165"/>
+          </g>
+          <g font-size="13" fill="#667085" font-family="inherit" text-anchor="middle">
+            <text x="140" y="182">0</text><text x="224" y="182">6</text><text x="308" y="182">12</text><text x="392" y="182">18</text><text x="476" y="182">24</text><text x="560" y="182">30</text>
+            <text x="140" y="204">01/01/N</text><text x="224" y="204">01/07/N</text><text x="308" y="204">01/01/N+1</text><text x="392" y="204">01/07/N+1</text><text x="476" y="204">01/01/N+2</text>
+          </g>
+          <text x="560" y="204" font-size="13" fill="#12805C" font-family="inherit" font-weight="700" text-anchor="middle">01/07/N+2</text>
+          <g font-size="13" fill="#667085" font-family="inherit" text-anchor="end"><text x="100" y="182">months</text><text x="100" y="204">date</text></g>
+        </svg>
+        <figcaption>Exercise 6 on a time line (to scale, months 0 to 30). Investment 2 starts 6 months after investment 1, but its higher rate lets it catch up: after 30 months for the first (24 for the second), both have produced 2,880 TND. That moment is 1 July N+2.</figcaption>
+      </figure>
+
+      <div class="box warn"><span class="label">A note about the slide · Exercise 6</span><p>The slide's final answer says "June 30th, <strong>N+3</strong>". The method and n = 30 months are correct, but the year is a small slip. 30 months is 2 years and 6 months, so from 01/01/N we reach 01/07/<strong>N+2</strong> (end of June N+2). "N+3" would be 42 months. The check I<sub>1</sub> = I<sub>2</sub> = 2,880 TND confirms 30 months.</p></div>
+
+      <div class="box exam"><span class="label">Exam alert · keep fractions exact</span><p>In equation problems, the same fraction often appears on both sides (like /12, or 6/12) and <strong>cancels</strong>. Cancel it first: the numbers become simpler and you avoid rounding errors like the one in Exercise 3.</p></div>
+
+      <h3>Check yourself</h3>
+      <div class="exercises">
+        <div class="ex" id="q-eq-1" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q38</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">In Exercise 3 we found 3 P<sub>1</sub> = 4 P<sub>2</sub>. What does this tell you?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>P<sub>1</sub> (placed for 3 months) is bigger than P<sub>2</sub> (placed for 4 months).</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>P<sub>2</sub> is bigger than P<sub>1</sub>.</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>The two capitals are equal.</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>The rate is 3/4.</span></button>
+          </div>
+          <div class="why" hidden>To produce the same interest in <strong>less time</strong>, a capital must be <strong>bigger</strong>. P<sub>1</sub> = 4,000 and P<sub>2</sub> = 3,000 confirm it.</div>
+        </div>
+        <div class="ex" id="q-eq-2" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q39</span><span class="ex-type">Find the date</span></div>
+          <p class="q">What date is 30 months after 01/01/N?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>30/06/N+3</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>01/07/N+2</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>01/07/N+3</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>01/01/N+3</span></button>
+          </div>
+          <div class="why" hidden>30 months = 2 years + 6 months. 01/01/N + 2 years = 01/01/N+2, + 6 months = <strong>01/07/N+2</strong>. Option (a) is the slip on the slide.</div>
+        </div>
+        <div class="ex" id="q-eq-3" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q40</span><span class="ex-type">Calculation</span></div>
+          <p class="q">In Exercise 4, n = 0.5 year. How many days is that in the commercial year?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>182.5 days</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>6 days</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>50 days</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>180 days</span></button>
+          </div>
+          <div class="why" hidden>Commercial year = 360 days, so 0.5 × 360 = <strong>180 days</strong> (and 0.5 × 12 = 6 months). 182.5 uses 365 days.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 10 ===================== -->
+    <section class="lesson-section" id="practice" data-title="Practice test">
+      <div class="sec-num">10</div>
+      <h2>Practice test</h2>
+      <p>New questions, in the style of the in-class MCQs and the exam. Use paper and a calculator. Use the 360-day year unless the question says otherwise. Aim for at least 15 out of 20 before Thursday.</p>
+      <div class="box tip"><span class="label">How to use this test</span><p>Do the 15 MCQs first, without looking back at the lesson. Then do the 5 problems on paper, writing every step (data, days, formula, check) as in an exam. Only then open the solutions.</p></div>
+
+      <div class="exercises">
+        <div class="ex" id="q-pt-1" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q41</span><span class="ex-type">Day count</span></div>
+          <p class="q">Amine deposits money on 5 December and withdraws it on 20 March of the next year (not a leap year). How many days?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>104</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>105</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>106</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>108</span></button>
+          </div>
+          <div class="why" hidden>December: 31 − 5 = 26. January 31, February 28, March 20. Total 26 + 31 + 28 + 20 = <strong>105</strong>.</div>
+        </div>
+        <div class="ex" id="q-pt-2" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q42</span><span class="ex-type">Find I</span></div>
+          <p class="q">Amira puts 4,500 TND in a compte à terme at 6% for 8 months. How much interest does she earn?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>180 TND</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>270 TND</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>2,160 TND</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>6 TND</span></button>
+          </div>
+          <div class="why" hidden>I = 4,500 × 0.06 × 8/12 = 270 × 2/3 = <strong>180 TND</strong>. (b) is a full year; (c) uses 8 years; (d) uses 8/360.</div>
+        </div>
+        <div class="ex" id="q-pt-3" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q43</span><span class="ex-type">Find A</span></div>
+          <p class="q">2,400 TND is placed at 7.5% for 120 days. What is the acquired value (360-day year)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>2,460.000 TND</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>2,459.178 TND</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>2,580.000 TND</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>60.000 TND</span></button>
+          </div>
+          <div class="why" hidden>I = 2,400 × 0.075 × 120/360 = 180 / 3 = 60, so A = 2,400 + 60 = <strong>2,460 TND</strong>. (b) uses 365 days. (c) is a full year. (d) is only the interest.</div>
+        </div>
+        <div class="ex" id="q-pt-4" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q44</span><span class="ex-type">Find P</span></div>
+          <p class="q">A deposit at 6% earned 135 TND of interest in 90 days. What was the capital?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>2,250 TND</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>8,100 TND</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>9,000 TND</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>900 TND</span></button>
+          </div>
+          <div class="why" hidden>P = I / (r × n) = 135 / (0.06 × 90/360) = 135 / 0.015 = <strong>9,000 TND</strong>. Check: 9,000 × 0.06 × 0.25 = 135 ✓. (a) forgets the time (135 / 0.06).</div>
+        </div>
+        <div class="ex" id="q-pt-5" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q45</span><span class="ex-type">Find r</span></div>
+          <p class="q">Karima's 6,000 TND savings earned 210 TND in 7 months. What is the annual rate?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>6%</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>3.5%</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>0.5%</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>7%</span></button>
+          </div>
+          <div class="why" hidden>r = 210 / (6,000 × 7/12) = 210 / 3,500 = 0.06 = <strong>6%</strong>. (b) is 210 / 6,000, the rate for 7 months, not per year. (c) is a monthly rate.</div>
+        </div>
+        <div class="ex" id="q-pt-6" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q46</span><span class="ex-type">Find n</span></div>
+          <p class="q">5,000 TND at 8% produced 150 TND of interest. For how many days was it placed?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>135 days</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>120 days</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>150 days</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>0.375 days</span></button>
+          </div>
+          <div class="why" hidden>n = 150 / (5,000 × 0.08) = 150 / 400 = 0.375 year. In days: 0.375 × 360 = <strong>135 days</strong> (= 4.5 months). (d) forgets that the formula gives years, not days.</div>
+        </div>
+        <div class="ex" id="q-pt-7" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q47</span><span class="ex-type">Find the date</span></div>
+          <p class="q">On 10 March, Walid invests 4,000 TND at 9%. On which date will the interest reach 75 TND?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>23 May</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>24 May</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>25 May</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>10 June</span></button>
+          </div>
+          <div class="why" hidden>d = 75 × 360 / (4,000 × 0.09) = 27,000 / 360 = 75 days. March: 31 − 10 = 21 → 54 to go. April: 30 → 24 to go. So <strong>24 May</strong>. Check: 21 + 30 + 24 = 75 ✓.</div>
+        </div>
+        <div class="ex" id="q-pt-8" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q48</span><span class="ex-type">Present value</span></div>
+          <p class="q">You need 5,000 TND in 9 months to pay your Master's registration. Your bank pays 6%. How much must you deposit today?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>4,784.689 TND</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>4,775.000 TND</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>4,700.000 TND</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>5,225.000 TND</span></button>
+          </div>
+          <div class="why" hidden>P = 5,000 / (1 + 0.06 × 9/12) = 5,000 / 1.045 = <strong>4,784.689 TND</strong>. (b) subtracts 4.5% of 5,000: that is not a present value. (c) subtracts a full year. (d) is a future value.</div>
+        </div>
+        <div class="ex" id="q-pt-9" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q49</span><span class="ex-type">T-bill</span></div>
+          <p class="q">An insurance company buys a Tunisian T-bill (BTCT) with a face value of 10,000 TND, maturing in 180 days, for 9,850 TND. What annual rate does it earn on the money invested?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>3.05%</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>3.00%</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>1.52%</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>1.50%</span></button>
+          </div>
+          <div class="why" hidden>Interest = 10,000 − 9,850 = 150 TND. r = 150 × 360 / (9,850 × 180) = 54,000 / 1,773,000 = 0.03046 ≈ <strong>3.05%</strong>. (b) divides by the face value instead of the price paid. (c) is the gain for 180 days, not per year.</div>
+        </div>
+        <div class="ex" id="q-pt-10" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q50</span><span class="ex-type">Ordinary vs exact</span></div>
+          <p class="q">7,300 TND at 5% for 73 days. Which pair is correct?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>Ordinary: 74.014 TND · Exact: 73.000 TND</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>Ordinary: 73.000 TND · Exact: 74.014 TND</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>Ordinary: 73.000 TND · Exact: 73.000 TND</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>Ordinary: 365.000 TND · Exact: 360.000 TND</span></button>
+          </div>
+          <div class="why" hidden>7,300 × 0.05 × 73 = 26,645. Ordinary: 26,645 / 360 = <strong>74.014</strong>. Exact: 26,645 / 365 = <strong>73.000</strong>. Ordinary is always the bigger one.</div>
+        </div>
+        <div class="ex" id="q-pt-11" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q51</span><span class="ex-type">Average rate</span></div>
+          <p class="q">4,000 TND at 6% for 90 days and 6,000 TND at 9% for 120 days. What is the average rate?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>8%</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>7.5%</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>7.8%</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>15%</span></button>
+          </div>
+          <div class="why" hidden>Top: 4,000 × 0.06 × 90 + 6,000 × 0.09 × 120 = 21,600 + 64,800 = 86,400. Bottom: 4,000 × 90 + 6,000 × 120 = 360,000 + 720,000 = 1,080,000. r<sub>A</sub> = <strong>8%</strong>. (b) averages the rates; (c) weights only by capital.</div>
+        </div>
+        <div class="ex" id="q-pt-12" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q52</span><span class="ex-type">TVM decision</span></div>
+          <p class="q">A supplier's bill is 20,000 TND, due in 60 days. If you pay today, you get a 2% discount (you pay 19,600 TND). Your money earns 6% in the bank. What should you do?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>Pay today: it costs less in today's money.</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>Pay in 60 days: keeping the money in the bank is better.</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>Both options cost exactly the same.</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>You cannot compare amounts at different dates.</span></button>
+          </div>
+          <div class="why" hidden>Bring the 20,000 TND back to today: PV = 20,000 / (1 + 0.06 × 60/360) = 20,000 / 1.01 = 19,801.98 TND. Paying today costs only 19,600 TND, which is <strong>less</strong>. Other way to see it: 19,600 kept in the bank for 60 days becomes 19,600 × 1.01 = 19,796 TND, not enough to pay 20,000. So pay today. (d) is wrong: comparing different dates is exactly what TVM does.</div>
+        </div>
+        <div class="ex" id="q-pt-13" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q53</span><span class="ex-type">F6</span></div>
+          <p class="q">Sami invested 8,000 TND and received 8,360 TND after 9 months. What was the annual rate?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>6%</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>4.5%</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>3.375%</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>0.5%</span></button>
+          </div>
+          <div class="why" hidden>FV / PV = 8,360 / 8,000 = 1.045. r = (1.045 − 1) / (9/12) = 0.045 / 0.75 = <strong>6%</strong>. (b) forgets to divide by n. (c) multiplies by n instead of dividing.</div>
+        </div>
+        <div class="ex" id="q-pt-14" data-answer="T">
+          <div class="ex-head"><span class="ex-n">Q54</span><span class="ex-type">True or false</span></div>
+          <p class="q">When the interest rate is positive, the present value of a future sum is always smaller than that sum.</p>
+          <div class="opts tf"><button class="opt" data-k="T"><span>True</span></button><button class="opt" data-k="F"><span>False</span></button></div>
+          <div class="why" hidden>True. P = A / (1 + r × n), and (1 + r × n) is bigger than 1, so P is smaller than A. This is the time value of money in one line: money in the future is worth less today.</div>
+        </div>
+        <div class="ex" id="q-pt-15" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q55</span><span class="ex-type">Short-term loan</span></div>
+          <p class="q">Youssef borrows 3,000 TND to buy a laptop for his studies, at 12% simple interest for 10 months. How much does he repay in total?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>3,300 TND</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>3,360 TND</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>3,010 TND</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>6,600 TND</span></button>
+          </div>
+          <div class="why" hidden>I = 3,000 × 0.12 × 10/12 = 300 TND, so he repays 3,000 + 300 = <strong>3,300 TND</strong>. (b) is 12 months. (c) divides 10 months by 360. (d) uses 10 years.</div>
+        </div>
+
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P14</span><span class="ex-type">Problem · find n from PV and FV</span></div>
+          <p class="q">Rania invests 12,000 TND at 5% simple interest and receives 12,450 TND at the end. How long was the investment, in months and in days?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <p><strong>F6:</strong> FV / PV = 12,450 / 12,000 = 1.0375. n = (1.0375 − 1) / 0.05 = 0.0375 / 0.05 = <strong>0.75 year</strong>.</p>
+            <p>In months: 0.75 × 12 = <strong>9 months</strong>. In days: 0.75 × 360 = <strong>270 days</strong>.</p>
+            <p><strong>Check:</strong> 12,000 × 0.05 × 0.75 = 450, and 12,000 + 450 = 12,450 ✓.</p>
+          </div></details>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P15</span><span class="ex-type">Problem · equal interest</span></div>
+          <p class="q">Leila places 4,000 TND at 6% for 10 months. Her brother places 6,000 TND at 5%. For how many months must he place it to earn the same interest as Leila?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <p>Leila: I = 4,000 × 0.06 × 10/12 = <strong>200 TND</strong>.</p>
+            <p>Brother: 6,000 × 0.05 × m/12 = 25 m (m in months).</p>
+            <p>Equal interest: 25 m = 200 → <strong>m = 8 months</strong>.</p>
+            <p><strong>Check:</strong> 6,000 × 0.05 × 8/12 = 200 ✓. He has more capital, so he needs less time.</p>
+          </div></details>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P16</span><span class="ex-type">Problem · present value</span></div>
+          <p class="q">Yassine wants 1,800 TND on 1 July for a summer trip to Tabarka. On 1 January he can put money in a savings account at 4%. How much must he deposit? (Take 6 months.)</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <p><strong>F5:</strong> P = 1,800 / (1 + 0.04 × 6/12) = 1,800 / 1.02 = <strong>1,764.706 TND</strong>.</p>
+            <p><strong>Check:</strong> 1,764.706 × 0.04 × 0.5 = 35.294, and 1,764.706 + 35.294 = 1,800 ✓.</p>
+            <p>Note: the interest (35.294 TND) is small. Savings accounts are liquid and safe, but their rate is low.</p>
+          </div></details>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P17</span><span class="ex-type">Problem · full exam-style question</span></div>
+          <p class="q">Hela places 15,000 TND at 8% from 17 February to 5 July (not a leap year). (a) Count the days. (b) Find the interest. (c) Find the acquired value. (d) Find the exact interest (365 days) and the difference with (b).</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <p><strong>(a)</strong> February: 28 − 17 = 11; March 31; April 30; May 31; June 30; July 5. Total: 11 + 31 + 30 + 31 + 30 + 5 = <strong>138 days</strong>.</p>
+            <p><strong>(b)</strong> I = 15,000 × 0.08 × 138/360 = 1,200 × 138 / 360 = 165,600 / 360 = <strong>460 TND</strong>.</p>
+            <p><strong>(c)</strong> A = 15,000 + 460 = <strong>15,460 TND</strong>.</p>
+            <p><strong>(d)</strong> Exact: 165,600 / 365 = <strong>453.699 TND</strong>. Difference: 460 − 453.699 = <strong>6.301 TND</strong> more with ordinary interest.</p>
+          </div></details>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">P18</span><span class="ex-type">Problem · average rate decision</span></div>
+          <p class="q">Karim has 20,000 TND. Option A: a compte à terme at 7%. Option B: 8,000 TND at 6% for 90 days and 12,000 TND at 8% for 180 days. Calculate the average rate of option B and say which option has the better rate.</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a">
+            <div class="table-wrap"><table>
+              <thead><tr><th>Placement</th><th class="n">P<sub>i</sub></th><th class="n">r<sub>i</sub></th><th class="n">d<sub>i</sub></th><th class="n">P<sub>i</sub> × r<sub>i</sub> × d<sub>i</sub></th><th class="n">P<sub>i</sub> × d<sub>i</sub></th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td class="n">8,000</td><td class="n">0.06</td><td class="n">90</td><td class="n">43,200</td><td class="n">720,000</td></tr>
+                <tr><td>2</td><td class="n">12,000</td><td class="n">0.08</td><td class="n">180</td><td class="n">172,800</td><td class="n">2,160,000</td></tr>
+                <tr class="total"><td>Σ</td><td class="n">20,000</td><td class="n"></td><td class="n"></td><td class="n">216,000</td><td class="n">2,880,000</td></tr>
+              </tbody>
+            </table></div>
+            <p>r<sub>A</sub> = 216,000 / 2,880,000 = 0.075 = <strong>7.5%</strong>.</p>
+            <p><strong>Decision:</strong> 7.5% &gt; 7%, so option B has the <strong>better rate</strong>. The big placement (12,000 TND) is at 8% for the longest time, so it pulls the average up.</p>
+          </div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 11 ===================== -->
+    <section class="lesson-section" id="recap" data-title="Recap & formula sheet">
+      <div class="sec-num">11</div>
+      <h2>Recap and formula sheet</h2>
+      <div class="recap">
+        <h3>What to remember for Thursday</h3>
+        <ul>
+          <li><strong>TVM:</strong> 1 dinar today is worth more than 1 dinar in the future. Interest exists because of <strong>risk</strong>, <strong>liquidity (opportunity cost)</strong> and <strong>inflation</strong>, not the borrower's convenience.</li>
+          <li><strong>Simple interest</strong> is always calculated on the original principal: a straight line. <strong>Compound</strong> = interest on interest: a curve.</li>
+          <li><strong>Four instruments:</strong> short-term loans (crédit de trésorerie), T-bills (bought below face value), CDs (compte à terme), savings accounts (liquid, low rate).</li>
+          <li><strong>Time in years:</strong> days ÷ <strong>360</strong>, months ÷ <strong>12</strong>. Ordinary interest (360) &gt; exact interest (365).</li>
+          <li><strong>Counting days:</strong> don't count the start day, count the end day. Days left in the first month + full months + end date.</li>
+          <li><strong>Rate as a decimal:</strong> 7% = 0.07. <strong>Don't round</strong> in the middle of a calculation.</li>
+          <li><strong>Average rate:</strong> weighted by P × n, never the simple average of rates. Always end with a decision.</li>
+          <li><strong>Equations:</strong> I<sub>1</sub> = I<sub>2</sub>, cancel what appears on both sides, solve, check.</li>
+        </ul>
+      </div>
+
+      <div class="box tip"><span class="label">Course roadmap (syllabus)</span><p>Simple Interest (this chapter: ordinary and exact interest) → Promissory Notes → Compound Interest, Future Value and Present Value → Bank Discount → Annuities and Sinking Funds → Financial Markets: stocks, bonds, mutual funds.</p></div>
+
+      <h3>Formula sheet</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>#</th><th>Formula</th><th>Finds</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td><strong>F1</strong></td><td>I = P × r × n</td><td>Interest</td><td>10,000 × 0.07 × 108/360 = 210 TND</td></tr>
+          <tr><td><strong>F2</strong></td><td>r = I / (P × n)</td><td>Rate</td><td>231 × 360 / (8,400 × 132) = 7.5%</td></tr>
+          <tr><td><strong>F3</strong></td><td>n = I / (P × r)</td><td>Time (years; × 360 for days)</td><td>315 × 360 / (10,000 × 0.07) = 162 days</td></tr>
+          <tr><td><strong>F4</strong></td><td>A = P × (1 + r × n) = P + I</td><td>Acquired (future) value</td><td>10,000 × 1.021 = 10,210 TND</td></tr>
+          <tr><td><strong>F5</strong></td><td>P = A / (1 + r × n)</td><td>Present value</td><td>16,738.7 / 1.0144667 = 16,500 TND</td></tr>
+          <tr><td><strong>F6</strong></td><td>r = (FV/PV − 1) / n<br>n = (FV/PV − 1) / r</td><td>Rate or time from PV and FV</td><td>(1,025/1,000 − 1) / 0.05 = 0.5 year</td></tr>
+          <tr><td><strong>F7</strong></td><td>r<sub>A</sub> = Σ(P<sub>i</sub> r<sub>i</sub> n<sub>i</sub>) / Σ(P<sub>i</sub> n<sub>i</sub>)</td><td>Average rate</td><td>16,600 / 380,000 = 4.37%</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>Glossary (English → French)</h3>
+      <dl class="glossary">
+        <dt>Time value of money</dt><dd>La valeur temps de l'argent. Money today is worth more than the same sum in the future.</dd>
+        <dt>Interest</dt><dd>L'intérêt. The price paid for using someone else's money for a period of time.</dd>
+        <dt>Lender / borrower</dt><dd>Le prêteur / l'emprunteur. The one who gives the money / the one who receives it and pays interest.</dd>
+        <dt>Simple interest</dt><dd>L'intérêt simple. Interest calculated only on the original principal: I = P × r × n.</dd>
+        <dt>Compound interest</dt><dd>L'intérêt composé. Interest added to the capital each period, so it earns interest too.</dd>
+        <dt>Principal (P)</dt><dd>Le capital. The amount invested or borrowed at the start.</dd>
+        <dt>Interest rate (r)</dt><dd>Le taux d'intérêt. The annual percentage, used as a decimal (7% = 0.07).</dd>
+        <dt>Time, term (n)</dt><dd>La durée. The length of the operation, in years (d/360 or m/12).</dd>
+        <dt>Acquired value (A, FV)</dt><dd>La valeur acquise (valeur future). Capital + interest at the end: P(1 + r × n).</dd>
+        <dt>Present value (P, PV)</dt><dd>La valeur actuelle. Today's value of a future sum: A / (1 + r × n).</dd>
+        <dt>Commercial year</dt><dd>L'année commerciale. A year of 360 days, used by banks and in this course.</dd>
+        <dt>Ordinary interest</dt><dd>L'intérêt commercial (ordinaire). Interest using a 360-day year.</dd>
+        <dt>Exact interest</dt><dd>L'intérêt exact (civil). Interest using a 365-day year (366 in a leap year).</dd>
+        <dt>Banker's rule</dt><dd>La règle du banquier. Exact number of calendar days divided by 360.</dd>
+        <dt>Leap year</dt><dd>L'année bissextile. A year with 29 days in February (2024, 2028...).</dd>
+        <dt>Average rate</dt><dd>Le taux moyen de placement. The single rate giving the same total interest as several placements: F7.</dd>
+        <dt>Short-term loan, cash-flow loan</dt><dd>Le prêt à court terme, le crédit de trésorerie. A loan repaid within one year.</dd>
+        <dt>Collateral</dt><dd>La garantie. An asset given as security for a loan. Unsecured loans have none.</dd>
+        <dt>Treasury bill (T-bill)</dt><dd>Le bon du Trésor (à court terme, BTCT). A short-term State security sold below face value.</dd>
+        <dt>Face value</dt><dd>La valeur nominale. The amount written on a security, paid at maturity.</dd>
+        <dt>Maturity</dt><dd>L'échéance. The date when the money is paid back.</dd>
+        <dt>Certificate of deposit (CD)</dt><dd>Le compte à terme, le bon de caisse. A bank deposit for a fixed term at a fixed rate.</dd>
+        <dt>Savings account</dt><dd>Le compte d'épargne. A liquid deposit account that pays a low interest rate.</dd>
+        <dt>Liquidity</dt><dd>La liquidité. How quickly and easily money can be used or withdrawn.</dd>
+        <dt>Inflation, purchasing power</dt><dd>L'inflation, le pouvoir d'achat. Rising prices reduce what a sum of money can buy.</dd>
+        <dt>Risk of default</dt><dd>Le risque de défaut. The risk that the borrower does not repay.</dd>
+      </dl>
+    </section>
+
+
+    <nav class="lesson-nav">
+      <a href="../index.html"><span>Back</span><b>Course Folder</b></a>
+      <a href="../index.html"><span>Next</span><b>Ch II · Promissory Notes (coming soon)</b></a>
+    </nav>
+  </main>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

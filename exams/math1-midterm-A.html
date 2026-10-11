@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Midterm mock A · Mathematics I</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/exam.css">
+</head>
+<body class="math">
+<div id="exam"></div>
+<script type="application/json" id="exam-data">
+{
+  "id": "math1-midterm-A",
+  "title": "Midterm mock A",
+  "shortTitle": "Math I Midterm · A",
+  "course": "Mathematics I",
+  "courseClass": "math",
+  "covers": "Chapters 1–2",
+  "duration": 90,
+  "hub": "../exams/index.html",
+  "description": "A full 90-minute simulation of the Mathematics I midterm (20% of your grade) on Chapters 1–2: functions, linear and exponential models, logs and interest, new functions from old, and the derivative. The real midterm comes after Chapter 3 (shortcuts to differentiation); questions on Chapter 3 will be added when that lesson exists.",
+  "instructions": [
+    "Scientific calculator allowed (non-programmable). No notes, no lessons, no phone.",
+    "Part I: one correct answer per question. Part II: work on paper first, then type your final answers. The computer checks the numbers; you mark the written answers yourself with the official rubric.",
+    "Type numbers only, without units. Decimals: use a point or a comma (3.47 or 3,47) and round exactly as asked. Thousands: 12500 or 12,500.",
+    "Percentages: type the number of percent (type 12.5 for 12.5%). Use a minus sign for a decrease or a loss (for example −250).",
+    "Keep full calculator precision in intermediate steps: do not round growth factors such as 1.03<sup>8</sup>, and keep at least 4 decimals for ln values. Round only the final answer, exactly as each question asks.",
+    "Rule of Four: every interpretation is a full sentence with units. No units, no marks."
+  ],
+  "sections": [
+    {
+      "title": "Part I · Multiple choice & true/false",
+      "intro": "One correct answer per question · 1 point each",
+      "questions": [
+        {
+          "id": "q1", "type": "mcq", "points": 1, "topic": "Functions & graphs",
+          "review": "../mathematics-1/ch1-functions-and-change.html#functions",
+          "prompt": "<p>C = f(n) is the total cost, in TND, of printing n copies of the ISB student magazine. What does the statement f(500) = 1,250 mean?</p>",
+          "options": [
+            "Printing 500 copies costs 1,250 TND in total.",
+            "Printing 1,250 copies costs 500 TND in total.",
+            "When 500 copies are printed, each copy costs 1,250 TND.",
+            "After 500 copies, each additional copy costs about 1,250 TND."
+          ],
+          "answer": 0,
+          "explain": "In f(500) = 1,250, the number inside the brackets is the input n (copies) and the result is the output C (total cost in TND).<br>Input 500 copies → output 1,250 TND.<br><b>Answer (a): printing 500 copies costs 1,250 TND in total.</b><br>(b) swaps the input and the output.<br>(c) confuses the total cost with the cost per copy: the average cost would be 1,250 ÷ 500 = 2.50 TND per copy.<br>(d) describes a rate of change (the marginal cost f′(500)), not the value f(500)."
+        },
+        {
+          "id": "q2", "type": "mcq", "points": 1, "topic": "Linear functions",
+          "review": "../mathematics-1/ch1-functions-and-change.html#linear",
+          "prompt": "<p>The value of a photocopier bought by ISB is V(t) = 9,600 − 1,200t TND, t years after it was bought. Which statement is correct?</p>",
+          "options": [
+            "It loses 1,200 TND of value per year, and it is worth 0 TND after 0.125 years.",
+            "It loses 1,200 TND of value per year, and it is worth 0 TND after 8 years.",
+            "It was bought for 1,200 TND, and it loses 9,600 TND of value per year.",
+            "It was bought for 9,600 TND, and every year it loses 12.5% of its current value."
+          ],
+          "answer": 1,
+          "explain": "Slope = −1,200: the value goes down by 1,200 TND per year.<br>Vertical intercept V(0) = 9,600: the photocopier cost 9,600 TND.<br>Horizontal intercept: 9,600 − 1,200t = 0 → t = 9,600 ÷ 1,200 = 8 years.<br><b>Answer (b).</b><br>(a) divides the wrong way: 1,200 ÷ 9,600 = 0.125.<br>(c) swaps the slope and the intercept.<br>(d) is the linear-versus-exponential trap: a linear model loses the same <i>amount</i> every year, not the same <i>percentage</i> of its current value. 1,200 TND is 12.5% of the value in year 1, but 1,200 ÷ 8,400 ≈ 14.3% of the value in year 2. (Losing 12.5% of the <i>purchase price</i> every year, as in straight-line depreciation, is the same as losing 1,200 TND per year: that is linear.)"
+        },
+        {
+          "id": "q3", "type": "mcq", "points": 1, "topic": "Exponential functions",
+          "review": "../mathematics-1/ch1-functions-and-change.html#exponential",
+          "prompt": "<p>Three functions are given by this table.</p><div class='table-wrap'><table><tbody><tr><td><strong>x</strong></td><td class='n'><strong>0</strong></td><td class='n'><strong>1</strong></td><td class='n'><strong>2</strong></td><td class='n'><strong>3</strong></td></tr><tr><td>f(x)</td><td class='n'>50</td><td class='n'>60</td><td class='n'>72</td><td class='n'>86.4</td></tr><tr><td>g(x)</td><td class='n'>50</td><td class='n'>60</td><td class='n'>70</td><td class='n'>80</td></tr><tr><td>h(x)</td><td class='n'>50</td><td class='n'>60</td><td class='n'>72</td><td class='n'>90</td></tr></tbody></table></div><p>Which statement is correct?</p>",
+          "options": [
+            "f is exponential, g is linear and h is exponential.",
+            "f is linear, g is exponential and h is neither.",
+            "f is exponential with a growth rate of 1.2% per step, g is linear and h is neither.",
+            "f is exponential with a growth rate of 20% per step, g is linear and h is neither."
+          ],
+          "answer": 3,
+          "explain": "Linear = constant differences. Exponential = constant ratios. Check <b>every</b> step.<br>f: 60 ÷ 50 = 1.2, 72 ÷ 60 = 1.2, 86.4 ÷ 72 = 1.2 → exponential with factor a = 1.2, so the growth rate is r = a − 1 = 0.2 = 20% per step.<br>g: differences +10, +10, +10 → linear (slope 10).<br>h: ratios 1.2, 1.2, then 90 ÷ 72 = 1.25 (differences 10, 12, 18) → neither.<br><b>Answer (d).</b><br>(a) stops checking after two ratios: h fails at the last step.<br>(b) swaps the two definitions.<br>(c) confuses the factor 1.2 with the rate: a factor of 1.2 means +20%, not +1.2%."
+        },
+        {
+          "id": "q4", "type": "mcq", "points": 1, "topic": "Logs & compound interest",
+          "review": "../mathematics-1/ch1-functions-and-change.html#ln",
+          "prompt": "<p>Which equality is true for <b>all</b> x > 0 and y > 0?</p>",
+          "options": [
+            "ln(x<sup>3</sup>) = 3 ln x",
+            "ln(x + y) = ln x + ln y",
+            "ln(x/y) = ln x ÷ ln y",
+            "ln(3x) = 3 ln x"
+          ],
+          "answer": 0,
+          "explain": "Power rule: ln(x<sup>p</sup>) = p ln x, so ln(x<sup>3</sup>) = 3 ln x. <b>Answer (a).</b><br>(b) The sum rule is for a <i>product</i>: ln(xy) = ln x + ln y. There is no rule for ln(x + y). Check with x = y = 1: ln 2 ≈ 0.693, but ln 1 + ln 1 = 0.<br>(c) ln(x/y) = ln x <i>minus</i> ln y, not a division.<br>(d) ln(3x) = ln 3 + ln x. Check with x = 1: ln 3 ≈ 1.099, but 3 ln 1 = 0."
+        },
+        {
+          "id": "q5", "type": "tf", "points": 1, "topic": "Doubling time & half-life",
+          "review": "../mathematics-1/ch1-functions-and-change.html#base-e",
+          "prompt": "<p>A deposit of 5,000 TND takes longer to double than a deposit of 1,000 TND, when both earn interest at a continuous rate of 4% per year.</p>",
+          "answer": false,
+          "explain": "False.<br>Doubling: P<sub>0</sub>e<sup>0.04t</sup> = 2P<sub>0</sub><br>Divide by P<sub>0</sub>: e<sup>0.04t</sup> = 2 (the starting amount cancels)<br>0.04t = ln 2 → t = ln 2 ÷ 0.04 ≈ 17.33 years, for <b>both</b> deposits.<br>The doubling time depends only on the growth rate, never on the starting amount."
+        },
+        {
+          "id": "q6", "type": "mcq", "points": 1, "topic": "New functions from old",
+          "review": "../mathematics-1/ch1-functions-and-change.html#transform",
+          "prompt": "<p>The graph of y = f(x) is a hill: it rises to a single highest point (a peak) at (3, 5), then falls. Which statement is correct?</p>",
+          "options": [
+            "y = f(x − 2) has its peak at (1, 5).",
+            "y = f(x) + 2 has its peak at (5, 5).",
+            "y = f(x − 2) has its peak at (5, 5).",
+            "y = −f(x) has its peak at (3, −5)."
+          ],
+          "answer": 2,
+          "explain": "f(x − 2): the change is inside the brackets → horizontal shift with the opposite sign → 2 units to the RIGHT. The peak moves from (3, 5) to (5, 5). <b>Answer (c).</b><br>(a) moves the graph left: that is f(x + 2).<br>(b) f(x) + 2 is outside the brackets → 2 units UP: its peak is at (3, 7), not (5, 5).<br>(d) −f(x) reflects the graph about the x-axis: the hill becomes a valley, so (3, −5) is the <i>lowest</i> point of −f, not a peak."
+        },
+        {
+          "id": "q7", "type": "mcq", "points": 1, "topic": "Power functions",
+          "review": "../mathematics-1/ch1-functions-and-change.html#power",
+          "prompt": "<p>Which of these functions is <b>NOT</b> a power function?</p>",
+          "options": [
+            "f(x) = 7/x<sup>2</sup>",
+            "g(x) = 4√x",
+            "h(x) = (2x)<sup>3</sup>",
+            "k(x) = 2 · 3<sup>x</sup>"
+          ],
+          "answer": 3,
+          "explain": "A power function has the form kx<sup>p</sup>: the variable is in the <b>base</b>.<br>(a) 7/x<sup>2</sup> = 7x<sup>−2</sup> (k = 7, p = −2): power function.<br>(b) 4√x = 4x<sup>1/2</sup> (k = 4, p = 1/2): power function.<br>(c) (2x)<sup>3</sup> = 8x<sup>3</sup> (k = 8, p = 3): power function.<br>(d) 2 · 3<sup>x</sup> has the variable in the <b>exponent</b>: it is an exponential function (P<sub>0</sub> = 2, a = 3). <b>Answer (d).</b>"
+        },
+        {
+          "id": "q8", "type": "mcq", "points": 1, "topic": "Derivative interpretation & units",
+          "review": "../mathematics-1/ch2-derivative.html#interpret",
+          "prompt": "<p>L = f(x) is the number of litres of olive oil that a mill in Sfax produces from x tonnes of olives. What are the units of f′(x)?</p>",
+          "options": [
+            "Tonnes of olives per litre of oil",
+            "Litres of oil per tonne of olives",
+            "Litres of oil",
+            "Percent per tonne of olives"
+          ],
+          "answer": 1,
+          "explain": "Units of f′ = (units of the output) ÷ (units of the input) = litres ÷ tonnes = <b>litres of oil per tonne of olives</b>: roughly the extra oil from one more tonne. <b>Answer (b).</b><br>(a) is upside down.<br>(c) is the unit of f(x) itself, not of its rate of change.<br>(d) is the unit of a relative rate f′/f."
+        },
+        {
+          "id": "q9", "type": "mcq", "points": 1, "topic": "Second derivative & concavity",
+          "review": "../mathematics-1/ch2-derivative.html#second",
+          "prompt": "<p>N = f(t) is the number of fixed-line telephone subscriptions in Tunisia in year t. N is still decreasing, but each year it falls by less than the year before. Which is correct?</p>",
+          "options": [
+            "f′ &lt; 0 and f″ &lt; 0",
+            "f′ > 0 and f″ &lt; 0",
+            "f′ > 0 and f″ > 0",
+            "f′ &lt; 0 and f″ > 0"
+          ],
+          "answer": 3,
+          "explain": "N is decreasing → f′ &lt; 0.<br>The yearly falls get smaller, for example −50, then −40, then −30 thousand per year: these rates are negative but <i>increasing</i> (closer and closer to 0) → f′ is increasing → f″ > 0 (concave up: the curve is levelling off).<br><b>Answer (d).</b><br>(a) would mean that N falls faster and faster.<br>(b) and (c) say that N is increasing, which is false."
+        },
+        {
+          "id": "q10", "type": "tf", "points": 1, "topic": "Second derivative & concavity",
+          "review": "../mathematics-1/ch2-derivative.html#second",
+          "prompt": "<p>A function f is given by this table.</p><div class='table-wrap'><table><tbody><tr><td><strong>x</strong></td><td class='n'><strong>0</strong></td><td class='n'><strong>1</strong></td><td class='n'><strong>2</strong></td><td class='n'><strong>3</strong></td><td class='n'><strong>4</strong></td></tr><tr><td>f(x)</td><td class='n'>20</td><td class='n'>17</td><td class='n'>15</td><td class='n'>14</td><td class='n'>13.5</td></tr></tbody></table></div><p>True or false: the table suggests that f is decreasing and concave down.</p>",
+          "answer": false,
+          "explain": "False.<br>Differences: 17 − 20 = −3, then 15 − 17 = −2, 14 − 15 = −1, 13.5 − 14 = −0.5.<br>All negative → f is decreasing (f′ &lt; 0).<br>But the differences increase (−3 → −2 → −1 → −0.5, closer and closer to 0) → f′ is increasing → f″ > 0 → <b>concave up</b>.<br>f is decreasing more and more slowly (levelling off). Trap: “going down” does not mean “concave down”."
+        }
+      ]
+    },
+    {
+      "title": "Part II · Problems",
+      "intro": "Six problems · show your work on paper, then type each final answer as asked",
+      "questions": [
+        {
+          "id": "p1", "type": "problem", "topic": "Linear functions",
+          "review": "../mathematics-1/ch1-functions-and-change.html#linear",
+          "prompt": "<p><b>FibreNet</b>, a Tunisian fibre-internet provider, had <b>148 thousand</b> subscribers on 1 January 2022 and <b>211 thousand</b> subscribers on 1 January 2025. Assume that the number of subscribers N (in thousands) is a <b>linear</b> function of t, the number of years after <b>1 January 2020</b>.</p>",
+          "parts": [
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Find the slope of N(t).</p>",
+              "answer": 21, "unit": "thousand subscribers per year", "tol": 0.01,
+              "explain": "t is counted from 1 January 2020:<br>1 January 2022 → t = 2, N = 148.<br>1 January 2025 → t = 5, N = 211.<br>Slope m = (211 − 148) ÷ (5 − 2) = 63 ÷ 3 = <b>21 thousand subscribers per year</b>."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Find the vertical intercept of N(t), that is, the value of N when t = 0.</p>",
+              "answer": 106, "unit": "thousand subscribers", "tol": 0.05,
+              "explain": "N = b + 21t. Use the point (2, 148):<br>148 = b + 21 × 2 = b + 42<br>b = 148 − 42 = <b>106 thousand subscribers</b> (the number on 1 January 2020).<br>So N(t) = 106 + 21t. Check with (5, 211): 106 + 21 × 5 = 106 + 105 = 211 ✓.<br>Trap: b = 148 is wrong, because t = 0 is 1 January 2020, not 2022."
+            },
+            {
+              "type": "text",
+              "prompt": "<p>Interpret the slope in the context of the problem, in one sentence with units.</p>",
+              "rubric": [
+                { "text": "Says that the number of subscribers increases by 21 thousand (21,000 subscribers)", "points": 0.5 },
+                { "text": "Says that this increase happens per year / each year", "points": 0.5 }
+              ],
+              "model": "The number of FibreNet subscribers increases by 21 thousand (21,000) subscribers per year.",
+              "rows": 3,
+              "explain": "Sentence frame for a slope: “[output] changes by [m units] for each additional [1 unit of input]”. A number without its units (“the slope is 21”) gets no marks."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Use your model to predict the number of subscribers on 1 January 2028.</p>",
+              "answer": 274, "unit": "thousand subscribers", "tol": 0.05,
+              "explain": "1 January 2028 → t = 2028 − 2020 = 8.<br>N(8) = 106 + 21 × 8 = 106 + 168 = <b>274 thousand subscribers</b>.<br>Trap: t = 2028 − 2022 = 6 in N = 106 + 21t gives 232, which is wrong: t is counted from 2020."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>During which year will FibreNet reach 300 thousand subscribers?</p>",
+              "answer": 2029, "tol": 0.3, "hint": "Type a year, for example 2035.",
+              "explain": "Solve N(t) = 300:<br>106 + 21t = 300<br>21t = 194<br>t = 194 ÷ 21 ≈ 9.24 years after 1 January 2020<br>2020 + 9.24 = 2029.24, about a quarter of the way into 2029.<br>➜ FibreNet reaches 300 thousand subscribers <b>during 2029</b>.<br>Check: N(9) = 295 on 1 January 2029 and N(10) = 316 on 1 January 2030.<br>Traps: 2030 comes from rounding t up to 10; 2027 comes from using b = 148 (t = 152 ÷ 21 ≈ 7.24)."
+            }
+          ]
+        },
+        {
+          "id": "p2", "type": "problem", "topic": "Cost, revenue, profit",
+          "review": "../mathematics-1/ch1-functions-and-change.html#economics",
+          "prompt": "<p>A ceramics workshop in Nabeul makes hand-painted plates. Its fixed costs (rent, kiln, salaries) are <b>4,860 TND per month</b>, the variable cost is <b>7.40 TND per plate</b>, and each plate is sold for <b>16.40 TND</b>. Let q be the number of plates made and sold in one month.</p>",
+          "parts": [
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Find the total monthly cost of making 600 plates.</p>",
+              "answer": 9300, "unit": "TND", "tol": 0.5,
+              "explain": "C(q) = fixed cost + variable cost × q = 4,860 + 7.40q<br>C(600) = 4,860 + 7.40 × 600 = 4,860 + 4,440 = <b>9,300 TND</b>.<br>Trap: 4,440 TND is only the variable cost; a cost function starts at the fixed cost, not at 0."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Find the break-even quantity.</p>",
+              "answer": 540, "unit": "plates", "tol": 0.5,
+              "explain": "R(q) = 16.40q<br>Break-even: R(q) = C(q)<br>16.40q = 4,860 + 7.40q<br>16.40q − 7.40q = 4,860 → 9q = 4,860<br>q = 4,860 ÷ 9 = <b>540 plates</b> (then R = C = 8,856 TND).<br>Traps: 4,860 ÷ 16.40 ≈ 296 forgets the variable cost; 4,860 ÷ 7.40 ≈ 657 divides by the variable cost instead of the margin 16.40 − 7.40 = 9 TND."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Find the monthly profit if the workshop makes and sells 450 plates. (Use a minus sign for a loss.)</p>",
+              "answer": -810, "unit": "TND", "tol": 0.5,
+              "explain": "π(q) = R(q) − C(q) = 16.40q − (4,860 + 7.40q) = 9q − 4,860<br>π(450) = 9 × 450 − 4,860 = 4,050 − 4,860 = <b>−810 TND</b>: a loss of 810 TND, as expected below the break-even quantity (450 &lt; 540).<br>Traps: 4,050 forgets the fixed cost; 2,520 (= 16.40 × 450 − 4,860) forgets the variable cost."
+            },
+            {
+              "type": "numeric", "points": 0.5,
+              "prompt": "<p>By how much does the monthly profit change for each additional plate made and sold (the marginal profit)?</p>",
+              "answer": 9, "unit": "TND per plate", "tol": 0.01,
+              "explain": "Marginal profit = slope of π(q) = 9q − 4,860<br>= MR − MC = 16.40 − 7.40 = <b>9 TND per plate</b>."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>The landlord raises the rent by 630 TND per month; nothing else changes. Find the new break-even quantity.</p>",
+              "answer": 610, "unit": "plates", "tol": 0.5,
+              "explain": "Rent is a fixed cost: the new cost function is C(q) + 630 (the cost graph shifts UP by 630 TND).<br>New fixed cost = 4,860 + 630 = 5,490 TND<br>16.40q = 5,490 + 7.40q → 9q = 5,490<br>q = 5,490 ÷ 9 = <b>610 plates</b>.<br>Shortcut: the margin is still 9 TND per plate, so the workshop needs 630 ÷ 9 = 70 more plates than before (540 + 70 = 610)."
+            }
+          ]
+        },
+        {
+          "id": "p3", "type": "problem", "topic": "Rates of change",
+          "review": "../mathematics-1/ch1-functions-and-change.html#rates",
+          "prompt": "<p>The table gives the annual sales S of an olive-oil exporter in Sfax, in thousands of litres.</p><div class='table-wrap'><table><tbody><tr><td><strong>Year</strong></td><td class='n'><strong>2019</strong></td><td class='n'><strong>2020</strong></td><td class='n'><strong>2021</strong></td><td class='n'><strong>2022</strong></td><td class='n'><strong>2023</strong></td><td class='n'><strong>2024</strong></td><td class='n'><strong>2025</strong></td></tr><tr><td>S (thousand litres)</td><td class='n'>820</td><td class='n'>760</td><td class='n'>905</td><td class='n'>1,040</td><td class='n'>980</td><td class='n'>890</td><td class='n'>1,150</td></tr></tbody></table></div>",
+          "parts": [
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Find the average rate of change of S from 2019 to 2025.</p>",
+              "answer": 55, "unit": "thousand litres per year", "tol": 0.01,
+              "explain": "Average rate = (S(2025) − S(2019)) ÷ (2025 − 2019)<br>= (1,150 − 820) ÷ 6<br>= 330 ÷ 6 = <b>55 thousand litres per year</b>.<br>➜ On average, sales grew by 55,000 litres per year between 2019 and 2025.<br>Trap: 330 is the total change; a rate must be divided by the 6 years."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Find the average rate of change of S from 2022 to 2024. (Use a minus sign for a decrease.)</p>",
+              "answer": -75, "unit": "thousand litres per year", "tol": 0.01,
+              "explain": "Average rate = (S(2024) − S(2022)) ÷ (2024 − 2022)<br>= (890 − 1,040) ÷ 2<br>= −150 ÷ 2 = <b>−75 thousand litres per year</b>.<br>Keep the same order on top and at the bottom (later minus earlier). Reversing only the top gives +75, the wrong sign."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Find the relative change in S from 2022 to 2024, as a percentage to 1 decimal place. (Use a minus sign for a decrease.)</p>",
+              "answer": -14.4, "unit": "%", "tol": 0.05,
+              "explain": "Relative change = (new − old) ÷ old<br>= (890 − 1,040) ÷ 1,040<br>= −150 ÷ 1,040 ≈ −0.1442<br>= <b>−14.4%</b>: sales fell by about 14.4% between 2022 and 2024.<br>Traps: dividing by the new value (−150 ÷ 890 ≈ −16.9%); dividing by the 2 years (a relative change is not a rate); forgetting the minus sign."
+            },
+            {
+              "type": "mcq", "points": 0.5,
+              "prompt": "<p>Which sentence correctly interprets your answer to (b)?</p>",
+              "options": [
+                "Between 2022 and 2024, sales fell by 75 thousand litres in total.",
+                "Between 2022 and 2024, sales fell on average by 75 thousand litres per year.",
+                "Between 2022 and 2024, sales fell by 75% per year.",
+                "In 2024, the exporter sold 75 thousand litres."
+              ],
+              "answer": 1,
+              "explain": "An average rate of change is measured in “output units per unit of input” (here thousand litres <b>per year</b>), and its sign gives the direction (negative = decrease). <b>Answer (b).</b><br>(a) is the total change: sales fell by 150 thousand litres in total over the 2 years.<br>(c) confuses a rate in thousand litres per year with a percentage.<br>(d) confuses the rate with a value of S (S(2024) = 890)."
+            }
+          ]
+        },
+        {
+          "id": "p4", "type": "problem", "topic": "Exponential functions",
+          "review": "../mathematics-1/ch1-functions-and-change.html#exponential",
+          "prompt": "<p>An olive farm near Sfax buys a new tractor for <b>95,000 TND</b>. Its value decreases by <b>11% per year</b>. Let V(t) be its value, in TND, t years after the purchase.</p>",
+          "parts": [
+            {
+              "type": "mcq", "points": 0.5,
+              "prompt": "<p>Which formula gives V(t)?</p>",
+              "options": [
+                "V(t) = 95,000(0.11)<sup>t</sup>",
+                "V(t) = 95,000 − 10,450t",
+                "V(t) = 95,000(0.89)<sup>t</sup>",
+                "V(t) = 95,000e<sup>−0.11t</sup>"
+              ],
+              "answer": 2,
+              "explain": "A constant <b>percentage</b> decrease → exponential: V = P<sub>0</sub>a<sup>t</sup> with a = 1 − r = 1 − 0.11 = 0.89 (the tractor keeps 89% of its value each year). So V(t) = 95,000(0.89)<sup>t</sup>. <b>Answer (c).</b><br>(a) uses the rate instead of the factor: the tractor would keep only 11% of its value each year.<br>(b) is linear: it loses the same amount every year (11% of 95,000 = 10,450 TND).<br>(d) treats 11% as a <i>continuous</i> rate: e<sup>−0.11</sup> ≈ 0.8958, a loss of about 10.4% per year, not 11%."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Find the value of the tractor 6 years after the purchase, to 2 decimal places.</p>",
+              "answer": 47213.22, "unit": "TND", "tol": 0.05,
+              "explain": "V(6) = 95,000 × 0.89<sup>6</sup><br>0.89<sup>6</sup> ≈ 0.496981291<br>V(6) ≈ 95,000 × 0.496981291 ≈ <b>47,213.22 TND</b>.<br>➜ After 6 years the tractor is worth about half of its price.<br>Precision: keeping 6 decimals (0.496981) gives 47,213.20, which is accepted, but rounding 0.89<sup>6</sup> to 0.4970 gives 47,215.00, which is not accurate to 2 decimals. Best: type 95000 × 0.89^6 in one go on your calculator."
+            },
+            {
+              "type": "numeric", "points": 1.5, "topic": "Logs & compound interest",
+              "review": "../mathematics-1/ch1-functions-and-change.html#ln",
+              "prompt": "<p>After how many years will the tractor be worth 38,000 TND? Use logarithms and give t to 2 decimal places.</p>",
+              "answer": 7.86, "unit": "years", "tol": 0.01,
+              "explain": "95,000(0.89)<sup>t</sup> = 38,000<br>Isolate the power: (0.89)<sup>t</sup> = 38,000 ÷ 95,000 = 0.4<br>Take ln of both sides: ln(0.89<sup>t</sup>) = ln 0.4<br>Bring the exponent down: t × ln 0.89 = ln 0.4<br>t = ln 0.4 ÷ ln 0.89 = (−0.916291) ÷ (−0.116534) ≈ <b>7.86 years</b>.<br>Both logs are negative, so t is positive.<br>Traps: ln 0.4 ÷ (−0.11) ≈ 8.33 treats 11% as a continuous rate; taking ln before isolating (for example ln 38,000 ÷ ln 95,000) gives nonsense."
+            },
+            {
+              "type": "numeric", "points": 1, "topic": "Doubling time & half-life",
+              "review": "../mathematics-1/ch1-functions-and-change.html#base-e",
+              "prompt": "<p>How long does it take for the tractor to lose half of its value? Give t to 2 decimal places.</p>",
+              "answer": 5.95, "unit": "years", "tol": 0.01,
+              "explain": "Half of its value: 95,000(0.89)<sup>t</sup> = 47,500 → (0.89)<sup>t</sup> = 0.5 (the price cancels: a half-life does not depend on the starting value).<br>t = ln 0.5 ÷ ln 0.89 = (−0.693147) ÷ (−0.116534) ≈ <b>5.95 years</b>.<br>Trap: ln 2 ÷ 0.11 ≈ 6.30 uses the shortcut for P<sub>0</sub>e<sup>kt</sup> with k = −0.11. Here the yearly factor is 0.89, so the continuous rate is k = ln 0.89 ≈ −0.1165, and ln 2 ÷ 0.1165 ≈ 5.95 again."
+            },
+            {
+              "type": "numeric", "points": 1, "topic": "Logs & compound interest",
+              "review": "../mathematics-1/ch1-functions-and-change.html#ln",
+              "prompt": "<p>The farm also deposits 40,000 TND in a bank account at 6.5% per year, compounded <b>annually</b>. Find the balance after 5 years, to 2 decimal places.</p>",
+              "answer": 54803.47, "unit": "TND", "tol": 0.01,
+              "explain": "Annual compounding: P = P<sub>0</sub>(1 + r)<sup>t</sup><br>P = 40,000 × 1.065<sup>5</sup><br>1.065<sup>5</sup> ≈ 1.370086663<br>P ≈ <b>54,803.47 TND</b>.<br>Trap: simple interest 40,000 × (1 + 0.065 × 5) = 53,000 TND forgets that interest also earns interest."
+            },
+            {
+              "type": "numeric", "points": 1, "topic": "Logs & compound interest",
+              "review": "../mathematics-1/ch1-functions-and-change.html#base-e",
+              "prompt": "<p>Same deposit, same rate, same 5 years, but compounded <b>continuously</b>. Find the balance, to 2 decimal places.</p>",
+              "answer": 55361.23, "unit": "TND", "tol": 0.01,
+              "explain": "Continuous compounding: P = P<sub>0</sub>e<sup>rt</sup><br>P = 40,000 × e<sup>0.065 × 5</sup> = 40,000 × e<sup>0.325</sup><br>e<sup>0.325</sup> ≈ 1.384030646<br>P ≈ <b>55,361.23 TND</b>.<br>➜ Continuous compounding gives 55,361.23 − 54,803.47 = 557.76 TND more than annual compounding, because interest is added at every instant. (Continuous compounding is taught in section 8, “Base e”.)"
+            }
+          ]
+        },
+        {
+          "id": "p5", "type": "problem", "topic": "New functions from old",
+          "review": "../mathematics-1/ch1-functions-and-change.html#transform",
+          "prompt": "<p>The functions f and g are given by this table.</p><div class='table-wrap'><table><tbody><tr><td><strong>x</strong></td><td class='n'><strong>0</strong></td><td class='n'><strong>1</strong></td><td class='n'><strong>2</strong></td><td class='n'><strong>3</strong></td><td class='n'><strong>4</strong></td><td class='n'><strong>5</strong></td></tr><tr><td>f(x)</td><td class='n'>4</td><td class='n'>2</td><td class='n'>5</td><td class='n'>1</td><td class='n'>0</td><td class='n'>3</td></tr><tr><td>g(x)</td><td class='n'>3</td><td class='n'>5</td><td class='n'>4</td><td class='n'>1</td><td class='n'>2</td><td class='n'>0</td></tr></tbody></table></div>",
+          "parts": [
+            {
+              "type": "numeric", "points": 0.5,
+              "prompt": "<p>Find f(g(1)).</p>",
+              "answer": 3, "tol": 0,
+              "explain": "Inside first: g(1) = 5.<br>Then f(5) = 3.<br>So f(g(1)) = <b>3</b>.<br>Trap: the wrong order g(f(1)) = g(2) = 4."
+            },
+            {
+              "type": "numeric", "points": 0.5,
+              "prompt": "<p>Find g(f(4)).</p>",
+              "answer": 3, "tol": 0,
+              "explain": "Inside first: f(4) = 0.<br>Then g(0) = 3.<br>So g(f(4)) = <b>3</b>.<br>Trap: the wrong order f(g(4)) = f(2) = 5."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Find the value of x such that f(g(x)) = 4.</p>",
+              "answer": 5, "tol": 0,
+              "explain": "Work from the outside in.<br>Step 1: f(something) = 4. In the f row, the only 4 is at x = 0, so g(x) must be 0.<br>Step 2: g(x) = 0. In the g row, the only 0 is at x = 5.<br>So x = <b>5</b>. Check: g(5) = 0, then f(0) = 4 ✓.<br>Traps: answering 0 (that is the value of g(x), not x); solving g(f(x)) = 4 instead, which gives x = 1."
+            },
+            {
+              "type": "mcq", "points": 1,
+              "prompt": "<p>Now let f(x) = 3x<sup>2</sup> and g(x) = 2/x, for x ≠ 0. Which expression is equal to f(g(x))?</p>",
+              "options": [
+                "6x",
+                "6x<sup>−2</sup>",
+                "12x<sup>−2</sup>",
+                "(2/3)x<sup>−2</sup>"
+              ],
+              "answer": 2,
+              "explain": "Replace x by g(x) = 2/x inside f:<br>f(g(x)) = f(2/x) = 3 × (2/x)<sup>2</sup> = 3 × 4/x<sup>2</sup> = 12/x<sup>2</sup> = <b>12x<sup>−2</sup></b>, a power function with k = 12 and p = −2. <b>Answer (c).</b><br>(a) is the product f(x) × g(x) = 3x<sup>2</sup> × 2/x = 6x, not a composition.<br>(b) squares only the x, not the whole 2/x: (2/x)<sup>2</sup> = 4/x<sup>2</sup>.<br>(d) is the other order: g(f(x)) = 2/(3x<sup>2</sup>)."
+            }
+          ]
+        },
+        {
+          "id": "p6", "type": "problem", "topic": "Derivative interpretation & units",
+          "review": "../mathematics-1/ch2-derivative.html#interpret",
+          "prompt": "<p><b>Bac+</b> is a Tunisian online revision platform for baccalaureate students. U = f(t) is the number of registered students, in thousands, t months after its launch.</p><div class='table-wrap'><table><tbody><tr><td><strong>t (months)</strong></td><td class='n'><strong>0</strong></td><td class='n'><strong>3</strong></td><td class='n'><strong>6</strong></td><td class='n'><strong>9</strong></td><td class='n'><strong>12</strong></td><td class='n'><strong>15</strong></td></tr><tr><td>U (thousand students)</td><td class='n'>10.0</td><td class='n'>13.6</td><td class='n'>18.1</td><td class='n'>23.5</td><td class='n'>29.8</td><td class='n'>37.0</td></tr></tbody></table></div>",
+          "parts": [
+            {
+              "type": "numeric", "points": 1.5, "topic": "Derivative at a point",
+              "review": "../mathematics-1/ch2-derivative.html#instant",
+              "prompt": "<p>Estimate f′(9) by taking the average of the rate of change on [6, 9] (left) and the rate of change on [9, 12] (right). Give 2 decimal places.</p>",
+              "answer": 1.95, "unit": "thousand students per month", "tol": 0.01,
+              "explain": "Left rate on [6, 9]: (23.5 − 18.1) ÷ (9 − 6) = 5.4 ÷ 3 = 1.8<br>Right rate on [9, 12]: (29.8 − 23.5) ÷ (12 − 9) = 6.3 ÷ 3 = 2.1<br>Average: (1.8 + 2.1) ÷ 2 = <b>1.95 thousand students per month</b> (the same as the centred rate (29.8 − 18.1) ÷ (12 − 6) = 11.7 ÷ 6 = 1.95).<br>➜ Nine months after the launch, Bac+ was gaining about 1,950 students per month.<br>Traps: 1.8 or 2.1 alone are one-sided estimates; 23.5 is f(9), the value, not the rate."
+            },
+            {
+              "type": "text",
+              "prompt": "<p>The platform's analyst reports that f(12) = 29.8 and f′(12) = 2.25. Interpret each of these two statements in a full sentence with units.</p>",
+              "rubric": [
+                { "text": "f(12) = 29.8: says that 12 months after the launch, the platform has 29.8 thousand (29,800) registered students", "points": 1 },
+                { "text": "f′(12) = 2.25: says that at that moment (t = 12 months) the number of registered students is increasing", "points": 0.5 },
+                { "text": "f′(12): gives the rate with its units, about 2.25 thousand (2,250) students per month", "points": 0.5 }
+              ],
+              "model": "f(12) = 29.8: twelve months after its launch, Bac+ has 29.8 thousand (29,800) registered students.<br>f′(12) = 2.25: at that time, the number of registered students is increasing by about 2.25 thousand (2,250) students per month.",
+              "rows": 4,
+              "explain": "f(a) is an amount (thousand students); f′(a) is a speed of change (thousand students per month). Write both with the input (month 12), the number and the units."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Use the local linear approximation at t = 12, with the analyst's values from (b), to estimate the number of registered students at t = 14.</p>",
+              "answer": 34.3, "unit": "thousand students", "tol": 0.05,
+              "explain": "f(a + Δt) ≈ f(a) + f′(a) × Δt, with a = 12 and Δt = 14 − 12 = 2<br>f(14) ≈ 29.8 + 2.25 × 2 = 29.8 + 4.5 = <b>34.3 thousand students</b>.<br>Trap: adding 2.25 only once (32.05) forgets that t moves by 2 months."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Using the analyst's values from (b), find the relative rate of change of U at t = 12, as a percentage per month, to 2 decimal places.</p>",
+              "answer": 7.55, "unit": "% per month", "tol": 0.01,
+              "explain": "Relative rate = f′(12) ÷ f(12) = 2.25 ÷ 29.8 ≈ 0.07550 = <b>7.55% per month</b>.<br>➜ At t = 12 the number of students grows by about 7.55% of its current size each month.<br>Traps: 29.8 ÷ 2.25 ≈ 13.24 is upside down; 2.25 alone is the ordinary rate (thousand students per month), not a percentage."
+            },
+            {
+              "type": "mcq", "points": 1, "topic": "Second derivative & concavity",
+              "review": "../mathematics-1/ch2-derivative.html#second",
+              "prompt": "<p>What does the table suggest about the graph of U, and about your estimate in (c)?</p>",
+              "options": [
+                "U is increasing and concave up, so the estimate in (c) is probably a little too low.",
+                "U is increasing and concave up, so the estimate in (c) is probably a little too high.",
+                "U is increasing and concave down, so the estimate in (c) is probably a little too high.",
+                "U increases at a constant rate, so the estimate in (c) is exact."
+              ],
+              "answer": 0,
+              "explain": "Rates on the 3-month intervals: 3.6 ÷ 3 = 1.2, then 4.5 ÷ 3 = 1.5, then 1.8, 2.1 and 2.4 thousand students per month.<br>All positive → U is increasing (f′ > 0).<br>They keep growing → f′ is increasing → f″ > 0 → <b>concave up</b>.<br>On a concave-up graph the tangent line lies <b>below</b> the curve, so the local linear approximation underestimates: the true value at t = 14 is probably a little more than 34.3 thousand. <b>Answer (a).</b><br>(b) has the right shape but the wrong conclusion. (c) and (d) misread the rates: they are neither shrinking nor constant."
+            },
+            {
+              "type": "numeric", "points": 1, "topic": "Marginal cost & revenue",
+              "review": "../mathematics-1/ch2-derivative.html#marginal",
+              "prompt": "<p>Bac+ also prints revision booklets. At its current output of 1,500 booklets per month: C(1500) = 9,750 TND, R(1500) = 12,000 TND, C′(1500) = 8.60 TND per booklet and R′(1500) = 8.00 TND per booklet. Estimate the monthly profit if Bac+ makes and sells 1,501 booklets, to 2 decimal places.</p>",
+              "answer": 2249.4, "unit": "TND", "tol": 0.01,
+              "explain": "Profit now: π(1500) = R(1500) − C(1500) = 12,000 − 9,750 = 2,250 TND<br>Marginal profit: MR − MC = 8.00 − 8.60 = −0.60 TND per booklet<br>π(1501) ≈ 2,250 + (−0.60) = <b>2,249.40 TND</b><br>(Same result with C(1501) ≈ 9,750 + 8.60 = 9,758.60 and R(1501) ≈ 12,000 + 8.00 = 12,008.00.)<br>Traps: 2,258 adds the extra revenue but forgets the extra cost; 2,241.40 subtracts the extra cost but forgets the extra revenue."
+            },
+            {
+              "type": "mcq", "points": 0.5, "topic": "Marginal cost & revenue",
+              "review": "../mathematics-1/ch2-derivative.html#marginal",
+              "prompt": "<p>Based on these marginal values, what should Bac+ do?</p>",
+              "options": [
+                "Print more booklets: revenue (12,000 TND) is larger than cost (9,750 TND).",
+                "Print fewer booklets: one more booklet would reduce profit by about 0.60 TND.",
+                "Print more booklets: each extra booklet adds about 0.60 TND of profit.",
+                "Keep exactly 1,500 booklets: the profit is positive, so it is already the maximum."
+              ],
+              "answer": 1,
+              "explain": "Decision rule: compare MR and MC, not the totals.<br>MR = 8.00 &lt; MC = 8.60 → the 1,501st booklet brings in about 8.00 TND but costs about 8.60 TND, so profit falls by about 0.60 TND.<br>Bac+ should <b>reduce</b> its output, towards the level where MR = MC. <b>Answer (b).</b><br>(a) compares totals: that only shows that the profit is positive.<br>(c) gets the sign of MR − MC wrong.<br>(d) a positive profit is not necessarily the maximum profit."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../assets/exam.js"></script>
+</body>
+</html>

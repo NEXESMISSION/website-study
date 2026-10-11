@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Test 1 · Practice exam A · Financial Accounting I</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/exam.css">
+</head>
+<body class="fa">
+<div id="exam"></div>
+<script type="application/json" id="exam-data">
+{
+  "id": "fa-test1-A",
+  "title": "Test 1 · Practice exam A",
+  "shortTitle": "FA Test 1 · A",
+  "course": "Financial Accounting I",
+  "courseClass": "fa",
+  "covers": "Chapter 1 · Accounting in Action",
+  "duration": 60,
+  "hub": "../exams/index.html",
+  "description": "A 60-minute simulation of Test 1 on Chapter 1, built like the real paper: 12 concept questions, a full tabular transaction analysis of a new company, its financial statements, and a classification exercise. Every classic trap of the chapter is inside.",
+  "instructions": [
+    "Duration: 60 minutes. In exam mode the paper is submitted automatically at 0:00.",
+    "Calculator allowed. No notes, no lesson, no phone. Keep scrap paper for Parts II and III.",
+    "All amounts are in Tunisian dinars (TND). Type numbers like 12500 or 12,500 (never 12.500, which means 12 dinars 500 millimes).",
+    "Part II: type decreases with a minus sign; expenses and dividends are negative numbers; leave a cell empty when the item does not change. A number in a cell that should be empty costs you one cell.",
+    "Parts II and III use the same company. Check that every row of your table balances before you build the statements.",
+    "Suggested timing: Part I 15 min · Part II 20 min · Part III 15 min · Part IV 5 min · 5 min to check."
+  ],
+  "sections": [
+    {
+      "title": "Part I · Multiple choice",
+      "intro": "One correct answer per question, 1 pt each, no negative marking",
+      "questions": [
+        {
+          "id": "q1", "type": "mcq", "points": 1, "topic": "Accounting & its users",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#users",
+          "prompt": "<p>Dar Zitouna SA exports olive oil from Sfax. Its accountant does the four tasks below. Which task belongs to the <b>recording</b> activity of accounting?</p>",
+          "options": [
+            "She decides that the purchase of 20 tonnes of olives from a farmer is an economic event of the company.",
+            "She groups all the sales invoices of March together and computes the total sales of the month.",
+            "She prepares the annual financial statements for the shareholders and the bank.",
+            "She explains to the board of directors why profit fell by 20% this year."
+          ],
+          "answer": 1,
+          "explain": "<p><b>Answer (b).</b> Accounting has three activities: <b>identify → record → communicate</b>. Recording means writing the events in a chronological diary, in money, and also <b>classifying and summarizing</b> them. Grouping March's invoices and computing the month's total is classifying + summarizing, so it is recording.</p><p>(a) is <b>identification</b>: selecting the economic events that matter to the business. (c) is <b>communication</b>: preparing reports for users. (d) is also communication: analysing and interpreting the reports. <b>Trap:</b> thinking that computing a total is communication. Communication starts when reports are prepared for users.</p>"
+        },
+        {
+          "id": "q2", "type": "mcq", "points": 1, "topic": "Accounting & its users",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#users",
+          "prompt": "<p>Which statement about the users of accounting information is <b>CORRECT</b>?</p>",
+          "options": [
+            "The tax administration is an internal user, because it can demand to see the company's records.",
+            "The company's chief financial officer (CFO) is an external user, because she reports to the shareholders.",
+            "A bank deciding whether to lend money to the company is an external user (a creditor).",
+            "Managerial accounting mainly produces reports for investors and creditors."
+          ],
+          "answer": 2,
+          "explain": "<p><b>Answer (c).</b> External users are outside the company. The two most common are <b>investors</b> and <b>creditors</b> (suppliers and banks). A bank asks: “Will the company be able to pay its debts as they come due?”</p><p>(a) The tax administration is powerful, but it is outside the company: <b>external</b>. (b) Company officers (CEO, CFO) run the company: <b>internal</b>, even if they report to the shareholders. (d) Managerial accounting produces internal reports for managers; reports for investors and creditors are <b>financial accounting</b>.</p>"
+        },
+        {
+          "id": "q3", "type": "mcq", "points": 1, "topic": "Ethics, standards & principles",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#standards",
+          "prompt": "<p>On 31 December 2026, Sahel Logistics SA (Sousse) owns:</p><ul><li>a warehouse bought in 2021 for 600,000 TND, which an expert now values at 750,000 TND;</li><li>shares of a company listed on the Bourse de Tunis, bought for 40,000 TND, with a market value of 36,000 TND on 31 December.</li></ul><p>Applying the historical cost and fair value principles as presented in Chapter 1, what total amount does the company report for these two assets?</p>",
+          "options": ["636,000 TND", "640,000 TND", "786,000 TND", "790,000 TND"],
+          "answer": 0,
+          "explain": "<p><b>Answer (a).</b> Warehouse → <b>historical cost principle</b>: an asset stays at its cost for as long as the company holds it, so 600,000 TND (the 150,000 increase in value is not recorded). Listed shares → <b>fair value principle</b>: investment securities with a readily available market price are reported at fair value, so 36,000 TND, even though this is below their cost.</p><p>Total = 600,000 + 36,000 = <b>636,000 TND</b>.</p><p><b>Traps:</b> 640,000 keeps both at cost; 786,000 puts both at fair value (the warehouse is not revalued); 790,000 mixes them the wrong way round (warehouse at fair value, shares at cost).</p>"
+        },
+        {
+          "id": "q4", "type": "mcq", "points": 1, "topic": "Ethics, standards & principles",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#standards",
+          "prompt": "<p>Which statement is <b>TRUE</b>?</p>",
+          "options": [
+            "The IASB, based in London, issues U.S. GAAP.",
+            "Convergence means the efforts to reduce the differences between IFRS and U.S. GAAP.",
+            "The first step in analysing an ethics case is to select the most ethical alternative.",
+            "Relevance means that the information is factual and shows what really happened."
+          ],
+          "answer": 1,
+          "explain": "<p><b>Answer (b)</b>: this is the definition of convergence.</p><p>(a) The IASB (London) issues <b>IFRS</b>, used in more than 115 countries; U.S. GAAP is issued by the <b>FASB</b>. (c) The three steps are: 1. recognize the ethical situation and the ethical issues; 2. identify and analyse the principal elements (who are the stakeholders?); 3. identify the alternatives, weigh their impact on the stakeholders, and only then select the most ethical one. Selecting is the end, not the start. (d) “Factual, shows what really happened” describes <b>faithful representation</b>. Relevance means the information would make a difference in a decision.</p>"
+        },
+        {
+          "id": "q5", "type": "mcq", "points": 1, "topic": "Assumptions & business forms",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#assumptions",
+          "prompt": "<p>Leila owns all the shares of Fleurs du Cap SA, a flower shop in Nabeul. Which item is kept out of the company's records because of the <b>monetary unit assumption</b> (and not because of the economic entity assumption)?</p>",
+          "options": [
+            "Leila's family holiday in Djerba, paid from her personal bank account",
+            "A car loan that Leila took personally from her bank",
+            "A delivery van bought by a separate company owned by Leila's husband",
+            "The shop's excellent reputation among wedding planners"
+          ],
+          "answer": 3,
+          "explain": "<p><b>Answer (d).</b> The <b>monetary unit assumption</b>: only data that can be expressed in money is recorded. A reputation (like customer satisfaction or employee morale) has no money amount, so it is not recorded.</p><p>(a), (b) and (c) all have a money amount, so the monetary unit assumption does not exclude them. They are excluded because they belong to <b>another entity</b> (Leila as a person, or her husband's company): that is the <b>economic entity assumption</b>. <b>Trap:</b> picking a personal item. It is not recorded, but because of the other assumption.</p>"
+        },
+        {
+          "id": "q6", "type": "mcq", "points": 1, "topic": "Assumptions & business forms",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#assumptions",
+          "prompt": "<p>Which characteristic applies to a <b>corporation</b> but <b>NOT</b> to a proprietorship?</p>",
+          "options": [
+            "Its accounting records are kept separate from the personal records of its owners.",
+            "Its profits belong to its owners.",
+            "Its owners are not personally liable for the debts of the business.",
+            "It records only transactions that can be expressed in money."
+          ],
+          "answer": 2,
+          "explain": "<p><b>Answer (c).</b> Shareholders of a corporation have <b>limited liability</b>: they can lose what they invested, but creditors cannot take their personal assets. A proprietor is <b>personally liable for all the debts</b> of the business (unlimited liability).</p><p>(a) is true for every form: even a proprietorship is a separate economic entity in the accounting records (economic entity assumption). (b) is true for both: the profits belong to the proprietor or to the shareholders. (d) is the monetary unit assumption, which applies to all businesses.</p>"
+        },
+        {
+          "id": "q7", "type": "mcq", "points": 1, "topic": "Accounting equation",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#equation",
+          "prompt": "<p>On 1 January 2026, Carthage Tiles SA had total assets of 250,000 TND and total liabilities of 90,000 TND. During 2026, its total assets <b>decreased</b> by 30,000 TND and its total liabilities <b>decreased</b> by 48,000 TND. What is its equity on 31 December 2026?</p>",
+          "options": ["178,000 TND", "142,000 TND", "160,000 TND", "82,000 TND"],
+          "answer": 0,
+          "explain": "<p><b>Answer (a).</b> Step 1: opening equity = 250,000 − 90,000 = 160,000 TND.</p><p>Step 2: the change. ΔAssets = ΔLiabilities + ΔEquity → −30,000 = −48,000 + ΔEquity → ΔEquity = <b>+18,000</b>. Equity <b>increased</b>, because liabilities fell more than assets.</p><p>Step 3: closing equity = 160,000 + 18,000 = <b>178,000 TND</b>. Check: closing assets 220,000 − closing liabilities 42,000 = 178,000.</p><p><b>Traps:</b> 142,000 treats the 18,000 as a decrease (sign error); 160,000 forgets the changes; 82,000 adds the decrease to the liabilities (220,000 − 138,000).</p>"
+        },
+        {
+          "id": "q8", "type": "mcq", "points": 1, "topic": "Accounting equation",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#equation",
+          "prompt": "<p>In October 2026, Café Bab Bhar SA (Tunis) earned revenues of 18,400 TND and had expenses of 11,900 TND. During the month, the shareholders invested another 10,000 TND in exchange for ordinary shares, and the company paid dividends of 2,500 TND. Net income for October is:</p>",
+          "options": ["6,500 TND", "4,000 TND", "16,500 TND", "14,000 TND"],
+          "answer": 0,
+          "explain": "<p><b>Answer (a).</b> Net income = Revenues − Expenses = 18,400 − 11,900 = <b>6,500 TND</b>. Nothing else enters net income.</p><p>The shareholders' 10,000 increases <b>share capital</b>; it is not revenue. The 2,500 of dividends reduces retained earnings, but dividends are <b>not expenses</b>.</p><p><b>Traps:</b> 4,000 subtracts the dividends; 16,500 adds the investment; 14,000 does both (6,500 + 10,000 − 2,500 is the total increase in equity, not net income).</p>"
+        },
+        {
+          "id": "q9", "type": "mcq", "points": 1, "topic": "Transaction analysis",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#softbyte",
+          "prompt": "<p>Which event is <b>NOT</b> recorded in the accounting records of Ennasr Fitness SA, a gym in Tunis?</p>",
+          "options": [
+            "The gym receives its STEG electricity bill for October, which it will pay in November.",
+            "The gym pays a cash dividend to its shareholders.",
+            "The gym buys three treadmills on credit.",
+            "The gym hires a new coach who will start next month at 1,300 TND per month."
+          ],
+          "answer": 3,
+          "explain": "<p><b>Answer (d).</b> The test: did the event change the company's assets, liabilities or equity? Hiring changes nothing today: the coach has not worked yet, nothing is paid and nothing is owed. It is not a transaction.</p><p>(a) <b>Is</b> recorded, even though it is unpaid: the electricity was used in October, so Utilities Expense increases (equity down) and Accounts Payable increases. (b) Cash down, Dividends up (retained earnings down). (c) Equipment up, Accounts Payable up. <b>Trap:</b> (a), thinking that a bill is recorded only when it is paid.</p>"
+        },
+        {
+          "id": "q10", "type": "mcq", "points": 1, "topic": "Transaction analysis",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#softbyte",
+          "prompt": "<p>Which transaction <b>increases total assets</b> but does <b>NOT change equity</b>?</p>",
+          "options": [
+            "Performing services for a customer on account",
+            "Buying supplies on credit",
+            "Collecting cash from a customer for a service performed last month",
+            "Issuing ordinary shares to shareholders for cash"
+          ],
+          "answer": 1,
+          "explain": "<p><b>Answer (b).</b> Supplies (asset) + and Accounts Payable (liability) + by the same amount: total assets go up, equity does not move.</p><p>(a) Accounts Receivable + and Revenues + → equity increases. (c) Cash + and Accounts Receivable − → total assets do <b>not</b> change, and there is no revenue (it was recorded last month, when the service was performed). (d) Cash + and Share Capital—Ordinary + → equity increases.</p>"
+        },
+        {
+          "id": "q11", "type": "mcq", "points": 1, "topic": "Financial statements",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#statements",
+          "prompt": "<p>Which financial statement is matched with its correct content <b>and</b> its correct date?</p>",
+          "options": [
+            "Income statement: assets, liabilities and equity, at a specific date",
+            "Retained earnings statement: revenues and expenses, at a specific date",
+            "Statement of financial position: assets, liabilities and equity, at a specific date",
+            "Statement of cash flows: cash receipts and cash payments, at a specific date"
+          ],
+          "answer": 2,
+          "explain": "<p><b>Answer (c).</b> The statement of financial position is a snapshot, dated for example “30 September 2026”, showing assets, liabilities and equity.</p><p>The three other statements cover a <b>period</b> (“For the Month Ended 30 September 2026”): the income statement shows revenues, expenses and net income; the retained earnings statement shows opening retained earnings + net income − dividends; the statement of cash flows shows cash receipts and payments (operating, investing, financing). (a) gives the content of the statement of financial position; (b) gives the content of the income statement and the wrong date; (d) has the right content but the wrong date.</p>"
+        },
+        {
+          "id": "q12", "type": "mcq", "points": 1, "topic": "Financial statements",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#statements",
+          "prompt": "<p>On 31 December 2026, the last day of its financial year, Atlas Events SA receives a 900 TND bill for advertising that ran in December. It will pay the bill in January 2027. Which of its 2026 statements are affected?</p>",
+          "options": [
+            "The statement of financial position only (Accounts Payable increases)",
+            "The income statement only (Advertising Expense increases)",
+            "The income statement and the retained earnings statement only",
+            "The income statement, the retained earnings statement and the statement of financial position"
+          ],
+          "answer": 3,
+          "explain": "<p><b>Answer (d).</b> The advertising was used in December, so it is a 2026 <b>expense</b> even though it is not paid: Advertising Expense +900 → net income −900 (income statement) → ending retained earnings −900 (retained earnings statement) → on the statement of financial position, Accounts Payable +900 and Retained Earnings −900. The statement of cash flows does not change (no cash yet).</p><p><b>Trap:</b> answer (a) is correct for buying an <b>asset</b> (a machine, a van) on credit on the last day, because there is no expense. Here there is an expense, so all three statements change.</p>"
+        }
+      ]
+    },
+    {
+      "title": "Part II · Transaction analysis",
+      "intro": "Tabular analysis on the expanded accounting equation",
+      "questions": [
+        {
+          "id": "q13", "type": "grid", "points": 14, "topic": "Transaction analysis",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#softbyte",
+          "prompt": "<p><b>Studio Kantaoui SA</b> is a new photography and video company in Sousse. It started business on 1 September 2026. Its events in September are listed below (amounts in TND).</p><ol><li><b>1 Sep</b> · Shareholders invested 30,000 in cash in exchange for ordinary shares.</li><li><b>3 Sep</b> · Bought cameras, lenses and lighting equipment for 14,000: paid 5,000 in cash and owes the balance to the supplier, Photo Pro SARL.</li><li><b>5 Sep</b> · Bought supplies (memory cards, photo paper, backdrops) for 1,800 on account.</li><li><b>8 Sep</b> · Signed a contract with a hotel in Port El Kantaoui to film a promotional video in November for 6,000. The hotel will pay when the video is delivered.</li><li><b>12 Sep</b> · Photographed three weddings and received 4,700 in cash.</li><li><b>15 Sep</b> · Filmed a corporate video for a textile company in Ksar Hellal and sent it an invoice for 3,600, payable within 30 days.</li><li><b>18 Sep</b> · Received a 450 bill from a digital-marketing agency for social-media advertising that ran in September. It will be paid in October.</li><li><b>22 Sep</b> · Paid Photo Pro SARL 6,000 of the amount owed for the equipment bought on 3 September.</li><li><b>25 Sep</b> · Received 2,000 from the textile company billed on 15 September.</li><li><b>30 Sep</b> · Paid the September expenses in cash: studio rent 1,100, the assistant's salary 2,400, STEG electricity and internet 300.</li><li><b>30 Sep</b> · Paid a cash dividend of 1,200 to the shareholders.</li></ol><p><b>Required:</b> show the effect of each event on the expanded accounting equation:<br>Cash + Accounts Receivable + Supplies + Equipment = Accounts Payable + Share Capital—Ordinary + Revenues − Expenses − Dividends</p><ul><li>Type increases as positive numbers and decreases with a minus sign (e.g. -5000).</li><li><b>Expenses and dividends are entered as NEGATIVE numbers</b> in their columns, because they reduce equity. If one event has several expenses, enter their total.</li><li>Every row must balance: the total of the four asset cells = the total of the five other cells (expenses and dividends counted as negative).</li><li>If an event does not change the financial position, leave its whole row empty. A number in a cell that should be empty costs you one cell.</li></ul>",
+          "columns": ["Cash", "Accounts <br>Receivable", "Supplies", "Equipment", "Accounts <br>Payable", "Share Capital— <br>Ordinary", "Revenues", "Expenses", "Dividends"],
+          "check": "equation", "assetColumns": 4,
+          "hint": "Type 14000 or 14,000 (not 14.000). Decreases with a minus sign (e.g. -5000); expenses and dividends are negative. Leave a cell empty when the item does not change.",
+          "rows": [
+            { "label": "1 · Shares issued, 30,000 cash", "cells": [30000, null, null, null, null, 30000, null, null, null] },
+            { "label": "2 · Equipment 14,000 (5,000 cash)", "cells": [-5000, null, null, 14000, 9000, null, null, null, null] },
+            { "label": "3 · Supplies 1,800 on account", "cells": [null, null, 1800, null, 1800, null, null, null, null] },
+            { "label": "4 · Contract with the hotel, 6,000", "cells": [null, null, null, null, null, null, null, null, null] },
+            { "label": "5 · Weddings, 4,700 cash", "cells": [4700, null, null, null, null, null, 4700, null, null] },
+            { "label": "6 · Video invoiced, 3,600", "cells": [null, 3600, null, null, null, null, 3600, null, null] },
+            { "label": "7 · Advertising bill, 450", "cells": [null, null, null, null, 450, null, null, -450, null] },
+            { "label": "8 · Paid Photo Pro, 6,000", "cells": [-6000, null, null, null, -6000, null, null, null, null] },
+            { "label": "9 · Received 2,000 from the client", "cells": [2000, -2000, null, null, null, null, null, null, null] },
+            { "label": "10 · Rent 1,100 + salary 2,400 + STEG 300", "cells": [-3800, null, null, null, null, null, null, -3800, null] },
+            { "label": "11 · Dividend paid, 1,200", "cells": [-1200, null, null, null, null, null, null, null, -1200] }
+          ],
+          "explain": "<p><b>Row by row</b> (Assets = Liabilities + Equity must hold on every row):</p><ol><li>Cash +30,000; Share Capital—Ordinary +30,000. Money invested by the owners is <b>not revenue</b>.</li><li>Equipment +14,000 (its full cost); Cash −5,000; Accounts Payable +9,000. Left: +14,000 − 5,000 = +9,000 = right: +9,000. Three items change.</li><li>Supplies +1,800; Accounts Payable +1,800. Supplies bought for future use are an <b>asset</b>, not an expense.</li><li><b>Not a transaction: the row stays empty.</b> Signing a contract changes nothing today: no work done, no cash received, the hotel owes nothing yet. The 6,000 of revenue will be recorded in November, when the video is filmed.</li><li>Cash +4,700; Revenues +4,700 (Service Revenue).</li><li>Accounts Receivable +3,600; Revenues +3,600. Revenue is recorded when the service is <b>performed</b>, not when the cash arrives.</li><li>Accounts Payable +450; Expenses −450 (Advertising Expense). The advertising was used in September, so it is an expense now, even though nothing is paid.</li><li>Cash −6,000; Accounts Payable −6,000. <b>Trap: no expense</b>, and no extra equipment. The equipment was recorded on 3 September; this payment only reduces the debt.</li><li>Cash +2,000; Accounts Receivable −2,000. <b>Trap: no revenue</b>; it was recorded in event 6. One asset replaces another, so total assets do not change.</li><li>Cash −3,800 (1,100 + 2,400 + 300); Expenses −3,800 (Rent 1,100, Salaries and Wages 2,400, Utilities 300).</li><li>Cash −1,200; Dividends −1,200. <b>Trap: dividends are not an expense</b>; they go in the Dividends column.</li></ol><p><b>Ending balances:</b> Cash 30,000 − 5,000 + 4,700 − 6,000 + 2,000 − 3,800 − 1,200 = 20,700; Accounts Receivable 3,600 − 2,000 = 1,600; Supplies 1,800; Equipment 14,000 → total assets <b>38,100</b>. Accounts Payable 9,000 + 1,800 + 450 − 6,000 = 5,250; Share Capital 30,000; Revenues 8,300; Expenses −4,250; Dividends −1,200 → 5,250 + 30,000 + 8,300 − 4,250 − 1,200 = <b>38,100</b>. Balanced.</p>"
+        }
+      ]
+    },
+    {
+      "title": "Part III · Financial statements",
+      "intro": "Same company as Part II",
+      "questions": [
+        {
+          "id": "q14", "type": "problem", "topic": "Financial statements",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#statements",
+          "prompt": "<p>Use your tabular analysis of <b>Studio Kantaoui SA</b> (Part II, Question 13) to prepare its income statement and retained earnings statement for the month ended 30 September 2026, and its statement of financial position at 30 September 2026. Retained earnings on 1 September were 0, because the company started that day.</p><p>Enter each amount in TND as a <b>positive</b> number.</p>",
+          "parts": [
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "Total revenues for September.",
+              "answer": 8300, "unit": "TND", "tol": 0.5,
+              "hint": "e.g. 12500 or 12,500",
+              "explain": "Service revenue = 4,700 (event 5, cash) + 3,600 (event 6, on account) = <b>8,300 TND</b>. Not revenue: the 30,000 from the shareholders (share capital); the 2,000 collected on 25 September (that revenue was already recorded in event 6, so 10,300 is wrong); the 6,000 hotel contract (no service performed yet, so 14,300 is wrong)."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "Total expenses for September.",
+              "answer": 4250, "alsoAccept": [-4250], "unit": "TND", "tol": 0.5,
+              "hint": "e.g. 12500 or 12,500",
+              "explain": "Advertising 450 (event 7) + rent 1,100 + salaries and wages 2,400 + utilities 300 (event 10) = <b>4,250 TND</b>. Not expenses: the 6,000 paid to Photo Pro (payment of a liability, so 10,250 is wrong); the 1,800 of supplies and the 14,000 of equipment (assets); the 1,200 dividend (so 5,450 is wrong)."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "Net income for September.",
+              "answer": 4050, "unit": "TND", "tol": 0.5,
+              "hint": "e.g. 12500 or 12,500",
+              "explain": "Net income = Revenues − Expenses = 8,300 − 4,250 = <b>4,050 TND</b>. The dividend is <b>not</b> subtracted here: 2,850 is the trap answer."
+            },
+            {
+              "type": "numeric", "points": 1.5,
+              "prompt": "Retained earnings at 30 September 2026.",
+              "answer": 2850, "unit": "TND", "tol": 0.5,
+              "hint": "e.g. 12500 or 12,500",
+              "explain": "Retained earnings statement: retained earnings 1 September 0 + net income 4,050 − dividends 1,200 = <b>2,850 TND</b>. Traps: 4,050 forgets the dividend; 1,650 subtracts the dividend twice (once as an expense and once as a dividend)."
+            },
+            {
+              "type": "numeric", "points": 1.5,
+              "prompt": "Cash at 30 September 2026.",
+              "answer": 20700, "unit": "TND", "tol": 0.5,
+              "hint": "e.g. 12500 or 12,500",
+              "explain": "30,000 − 5,000 + 4,700 − 6,000 + 2,000 − 3,800 − 1,200 = <b>20,700 TND</b>. The contract (event 4), the supplies and the advertising bill (both unpaid) and the invoice of event 6 do not touch cash."
+            },
+            {
+              "type": "numeric", "points": 1.5,
+              "prompt": "Total assets at 30 September 2026.",
+              "answer": 38100, "unit": "TND", "tol": 0.5,
+              "hint": "e.g. 12500 or 12,500",
+              "explain": "Cash 20,700 + Accounts receivable 1,600 (3,600 − 2,000) + Supplies 1,800 + Equipment 14,000 = <b>38,100 TND</b>. The equipment is reported at its full cost, 14,000 (historical cost principle), even though part of it is not paid yet: the amount still owed is a liability, not a reduction of the asset."
+            },
+            {
+              "type": "numeric", "points": 1.5,
+              "prompt": "Total liabilities and equity at 30 September 2026.",
+              "answer": 38100, "unit": "TND", "tol": 0.5,
+              "hint": "e.g. 12500 or 12,500",
+              "explain": "Liabilities: Accounts payable 9,000 + 1,800 + 450 − 6,000 = 5,250. Equity: Share capital—ordinary 30,000 + Retained earnings 2,850 (from (d)) = 32,850. Total = 5,250 + 32,850 = <b>38,100 TND</b>, equal to total assets. Revenues, expenses and dividends do not appear separately on the statement of financial position: they are already inside retained earnings. (Subtracting the dividend twice, once as an expense and once as a dividend, gives retained earnings of 1,650 and a total of 36,900, which does not balance with the assets.)"
+            },
+            {
+              "type": "mcq", "points": 1,
+              "prompt": "Which statement about the links between Studio Kantaoui's financial statements is <b>CORRECT</b>?",
+              "options": [
+                "The net income of 4,050 TND is reported in the equity section of the statement of financial position.",
+                "The retained earnings of 2,850 TND come from the retained earnings statement and are reported in the statement of financial position.",
+                "The cash at the end of the statement of cash flows may differ from the 20,700 TND of cash on the statement of financial position.",
+                "The income statement is prepared after the statement of financial position, because it needs total assets."
+              ],
+              "answer": 1,
+              "explain": "Order of preparation: income statement → retained earnings statement → statement of financial position → statement of cash flows. Net income (4,050) goes into the retained earnings statement; its ending balance (2,850) goes into the equity section of the statement of financial position. (a) The statement of financial position shows retained earnings (2,850), not net income: the dividend must be deducted first. (c) The ending cash of the statement of cash flows must <b>equal</b> the cash on the statement of financial position (20,700). (d) The income statement is prepared first, and it does not use total assets."
+            }
+          ],
+          "explain": "<p><b>The three statements of Studio Kantaoui SA</b> (TND):</p><div class=\"table-wrap\"><table><thead><tr><th colspan=\"3\">Income Statement · For the Month Ended 30 September 2026</th></tr></thead><tbody><tr><td>Service revenue</td><td class=\"n\"></td><td class=\"n\">8,300</td></tr><tr><td>Salaries and wages expense</td><td class=\"n\">2,400</td><td class=\"n\"></td></tr><tr><td>Rent expense</td><td class=\"n\">1,100</td><td class=\"n\"></td></tr><tr><td>Advertising expense</td><td class=\"n\">450</td><td class=\"n\"></td></tr><tr><td>Utilities expense</td><td class=\"n\">300</td><td class=\"n\"></td></tr><tr><td>Total expenses</td><td class=\"n\"></td><td class=\"n\">4,250</td></tr><tr><td><b>Net income</b></td><td class=\"n\"></td><td class=\"n\"><b>4,050</b></td></tr></tbody></table></div><div class=\"table-wrap\"><table><thead><tr><th colspan=\"2\">Retained Earnings Statement · For the Month Ended 30 September 2026</th></tr></thead><tbody><tr><td>Retained earnings, 1 September</td><td class=\"n\">0</td></tr><tr><td>Add: Net income</td><td class=\"n\">4,050</td></tr><tr><td>Less: Dividends</td><td class=\"n\">(1,200)</td></tr><tr><td><b>Retained earnings, 30 September</b></td><td class=\"n\"><b>2,850</b></td></tr></tbody></table></div><div class=\"table-wrap\"><table><thead><tr><th colspan=\"3\">Statement of Financial Position · 30 September 2026</th></tr></thead><tbody><tr><td><b>Assets</b></td><td class=\"n\"></td><td class=\"n\"></td></tr><tr><td>Equipment</td><td class=\"n\"></td><td class=\"n\">14,000</td></tr><tr><td>Supplies</td><td class=\"n\"></td><td class=\"n\">1,800</td></tr><tr><td>Accounts receivable</td><td class=\"n\"></td><td class=\"n\">1,600</td></tr><tr><td>Cash</td><td class=\"n\"></td><td class=\"n\">20,700</td></tr><tr><td><b>Total assets</b></td><td class=\"n\"></td><td class=\"n\"><b>38,100</b></td></tr><tr><td><b>Equity and liabilities</b></td><td class=\"n\"></td><td class=\"n\"></td></tr><tr><td>Share capital—ordinary</td><td class=\"n\">30,000</td><td class=\"n\"></td></tr><tr><td>Retained earnings</td><td class=\"n\">2,850</td><td class=\"n\"></td></tr><tr><td>Total equity</td><td class=\"n\"></td><td class=\"n\">32,850</td></tr><tr><td>Accounts payable (liability)</td><td class=\"n\"></td><td class=\"n\">5,250</td></tr><tr><td><b>Total equity and liabilities</b></td><td class=\"n\"></td><td class=\"n\"><b>38,100</b></td></tr></tbody></table></div><p>Links: net income 4,050 → retained earnings statement; ending retained earnings 2,850 → statement of financial position. The investment (30,000) and the dividend (1,200) never appear on the income statement.</p>"
+        }
+      ]
+    },
+    {
+      "title": "Part IV · Classification",
+      "intro": "0.5 pt per item",
+      "questions": [
+        {
+          "id": "q15", "type": "match", "pointsEach": 0.5, "topic": "Accounting equation",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#equation",
+          "prompt": "<p>Douceurs de Kairouan SA is a pastry company in Kairouan. For each item, choose how it is classified in the company's accounting records. Choose “Not recorded” if the item does not go into the company's records at all.</p>",
+          "choices": ["Asset", "Liability", "Share capital (equity)", "Revenue", "Expense", "Dividends", "Not recorded"],
+          "items": [
+            { "text": "Packaging boxes bought in October, to be used over the next three months", "answer": 0 },
+            { "text": "The amount a hotel in Sousse owes the company for pastries delivered on credit", "answer": 0 },
+            { "text": "The amount the company owes to its flour and semolina supplier", "answer": 1 },
+            { "text": "The shareholders' ownership claim from the ordinary shares they bought", "answer": 2 },
+            { "text": "Fees earned for catering a wedding", "answer": 3 },
+            { "text": "Wages paid to the bakers for their work in October", "answer": 4 },
+            { "text": "Profits distributed to the shareholders in cash", "answer": 5 },
+            { "text": "A car bought by the main shareholder with her personal savings, for her family", "answer": 6 }
+          ],
+          "explain": "<p><b>Assets</b> are resources the company controls that bring future benefits: supplies not yet used (packaging boxes, Supplies) and amounts customers owe (Accounts Receivable). <b>Liability</b>: the amount owed to the supplier (Accounts Payable). The shareholders' claim from their investment is <b>Share Capital—Ordinary</b> (equity), never revenue. <b>Revenue</b>: services performed to earn income (catering fees). <b>Expense</b>: the cost of services used to earn revenue (bakers' wages). Profit paid to the shareholders = <b>Dividends</b>: it reduces retained earnings but is NOT an expense. The shareholder's personal car is <b>not recorded</b> (economic entity assumption).</p><p><b>Traps:</b> supplies bought for later use are an asset, not an expense; dividends are not an expense; money invested by shareholders is not revenue.</p>"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../assets/exam.js"></script>
+</body>
+</html>

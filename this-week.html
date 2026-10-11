@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="assets/course-folder.ico">
+<title>This Week · LBA 1</title>
+<style>
+:root{
+  --bg:#FFFFFF; --ink:#0F1726; --muted:#667085; --line:#E7E9EE; --tint:#F7F8FA;
+  --accent:#2A4BD7; --accent-soft:#EEF2FF; --ok:#12805C; --ok-soft:#EAF7F1;
+  --fa:#0E7C66; --math:#7A3FD1; --micro:#C2410C;
+  --f:"Figtree","Segoe UI",system-ui,-apple-system,sans-serif;
+  --mono:"Cascadia Mono",Consolas,ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);font-size:16px;line-height:1.5}
+.wrap{max-width:860px;margin:0 auto;padding-inline:20px;padding-block:28px 64px;display:flex;flex-direction:column;gap:28px}
+a{color:var(--accent)}
+.back{font-size:14px;text-decoration:none}
+h1{margin:0;font-size:2.4rem;letter-spacing:-.02em}
+.sub{margin:0;color:var(--muted);font-size:15px}
+.progress{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)}
+.meter{flex:1;max-width:320px;height:10px;border-radius:999px;background:var(--line);overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:var(--ok);transition:width .3s}
+.how{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--tint);font-size:15px}
+.how ol{margin:6px 0 0;padding-left:20px}
+.day{display:flex;flex-direction:column;gap:10px}
+.day-h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.day-h h2{margin:0;font-size:1.35rem}
+.tag{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 9px;border-radius:999px;color:#fff}
+.tag.fa{background:var(--fa)} .tag.math{background:var(--math)} .tag.micro{background:var(--micro)}
+.day-h .time{color:var(--muted);font-size:14px}
+.steps{border:1px solid var(--line);border-radius:12px;display:flex;flex-direction:column}
+.step{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:start;padding:12px 16px;border-top:1px solid var(--line)}
+.step:first-child{border-top:0}
+.step input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--ok);cursor:pointer}
+.step .t{display:flex;flex-direction:column;gap:2px;min-width:0}
+.step .t a{font-weight:600;text-decoration:none}
+.step .t a:hover{text-decoration:underline}
+.step .t span{font-size:14px;color:var(--muted)}
+.step .min{font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap;padding-top:2px}
+.step.done .t a{text-decoration:line-through;color:var(--muted)}
+.step.exam{background:var(--accent-soft)}
+.step.exam .t a::before{content:"EXAM · ";font-size:12px;letter-spacing:.05em}
+.step.deep{opacity:.75}
+.step.deep .t a::before{content:"OPTIONAL · ";font-size:12px;letter-spacing:.05em;color:var(--muted)}
+footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+@media (max-width:480px){.wrap{padding-inline:16px} h1{font-size:1.9rem} .step{grid-template-columns:auto minmax(0,1fr)} .step .min{grid-column:2}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header style="display:flex;flex-direction:column;gap:10px">
+    <a class="back" href="index.html">← Course Folder</a>
+    <h1>This week, from zero</h1>
+    <p class="sub">Sun 11 – Sat 17 October · about 3 hours a day · <b>Accounting test: Friday 16 Oct, 09:00</b> · then Math Quiz Ch 2 and the Micro midterm</p>
+    <div class="progress"><span id="count">0 / 0</span><div class="meter"><i id="bar"></i></div></div>
+  </header>
+
+  <div class="how"><b>How to use it</b>
+    <ol>
+      <li>Do the steps in order. Click the title to open the lesson at the right place.</li>
+      <li>Answer every question inside that part before moving on.</li>
+      <li>Tick the box when you're done. After each exam, paste your result to Claude.</li>
+    </ol>
+  </div>
+
+  <main id="days"></main>
+
+  <footer>Stuck on something? Copy the part you don't understand and send it to Claude.</footer>
+</div>
+
+<script>
+const FA2 = 'financial-accounting/ch2-recording-process.html', FAE = 'financial-accounting/ch2-easy.html';
+const M2 = 'mathematics-1/ch2-derivative.html', ME = 'mathematics-1/ch2-easy.html';
+const MI3 = 'microeconomics/ch3-demand-supply.html', MIE = 'microeconomics/ch3-easy.html';
+const DAYS = [
+  { name: 'Sunday 11 · Accounting from zero', cls: 'fa', label: 'Accounting', steps: [
+    ['e-s1', FAE + '#start', 'Accounting in 2 minutes', 'What accounting is, in plain words.', 10],
+    ['e-s2', FAE + '#equation', 'Assets = Liabilities + Equity', 'The base of everything. Do every question.', 30],
+    ['e-s3', FAE + '#accounts', 'What an account is', 'The T-account: left = debit, right = credit.', 20],
+    ['e-s4', FAE + '#debit-credit', 'Debit and credit rules', 'Learn the memory trick. This is half of Q2.', 45],
+    ['e-s5', FAE + '#expanded', 'Revenue, expenses, dividends', '', 30]]},
+  { name: 'Monday 12 · Journal entries', cls: 'fa', label: 'Accounting', steps: [
+    ['e-m1', FAE + '#journal', 'Writing journal entries', 'Step by step: which accounts, up or down, debit or credit.', 50],
+    ['e-m2', FAE + '#posting', 'Posting to the ledger', '', 30],
+    ['e-m3', FAE + '#full-example', 'A full month, step by step', 'Do it with a pen before opening the answers.', 50],
+    ['e-m4', FA2 + '#illustrated', 'Go deeper: the Yazici example', 'Optional, if you still have energy.', 40, 'deep']]},
+  { name: 'Tuesday 13 · Trial balance + test', cls: 'fa', label: 'Accounting', steps: [
+    ['e-t1', FAE + '#trial-balance', 'The trial balance', '', 30],
+    ['e-t2', FAE + '#errors', "Errors the trial balance can't catch", '', 25],
+    ['e-t3', FAE + '#final-test', 'Final test (20 questions)', 'Aim for 16/20 before the exam below.', 30],
+    ['e-t4', 'exams/fa-quiz2-A.html', 'Accounting Q2 · Practice A (Ch 2)', '45 min, exam mode. Paste your result to Claude.', 45, 'exam'],
+    ['e-t5', FA2 + '#sheet', "Go deeper: your teacher's exercise sheet", 'Optional.', 45, 'deep']]},
+  { name: 'Wednesday 14 · What a derivative is', cls: 'math', label: 'Math', steps: [
+    ['e-w1', ME + '#start', 'What we are learning', '', 10],
+    ['e-w2', ME + '#slope', 'Slope of a line, again', '', 20],
+    ['e-w3', ME + '#average-rate', 'Average rate of change', '', 30],
+    ['e-w4', ME + '#instant', 'From average to instantaneous', 'The idea of the derivative.', 35],
+    ['e-w5', ME + '#estimate', 'Estimating f′(a) from a table', 'The most common quiz question.', 40]]},
+  { name: 'Thursday 15 · Derivatives in practice', cls: 'math', label: 'Math', steps: [
+    ['e-h1', ME + '#derivative-fn', 'The derivative function: up or down?', '', 30],
+    ['e-h2', ME + '#units', 'What f′ means, with units', '', 30],
+    ['e-h3', ME + '#second', 'Second derivative and concavity', '', 30],
+    ['e-h4', ME + '#marginal', 'Marginal cost and revenue', '', 25],
+    ['e-h5', ME + '#final-test', 'Final test (20 questions)', '', 30],
+    ['e-h6', 'exams/math1-quiz2-A.html', 'Math Quiz Ch 2 · Practice A', '30 min, exam mode. Paste your result to Claude.', 30, 'exam'],
+    ['e-h7', M2 + '#problems', "Go deeper: the teacher's 14 problems", 'Optional.', 60, 'deep'],
+    ['e-h8', FAE + '#final-test', 'Accounting review for tomorrow: redo the final test', 'Aim for 18/20. Reread the parts you miss.', 30],
+    ['e-h9', 'exams/fa-test1-B.html', 'Accounting Test 1 · Practice B (journal entries)', '60 min. A second rehearsal before Friday.', 60, 'exam']]},
+  { name: 'Friday 16 · Accounting test 09:00, then demand and supply', cls: 'micro', label: 'Micro', steps: [
+    ['e-f1', MIE + '#start', 'What a market is', '', 10],
+    ['e-f2', MIE + '#demand', 'Demand and the law of demand', '', 25],
+    ['e-f3', MIE + '#demand-shifters', 'What shifts demand', 'Memory trick: TRIBE.', 35],
+    ['e-f4', MIE + '#shift-vs-move', 'Shift of the curve vs move along it', 'The #1 trap in Micro exams.', 30],
+    ['e-f5', MIE + '#supply', 'Supply and the law of supply', '', 20],
+    ['e-f6', MIE + '#supply-shifters', 'What shifts supply', 'Memory trick: ROTTEN.', 30]]},
+  { name: 'Saturday 17 · Equilibrium + test', cls: 'micro', label: 'Micro', steps: [
+    ['e-a1', MIE + '#equilibrium', 'Equilibrium: where they meet', '', 30],
+    ['e-a2', MIE + '#shortage-surplus', 'Shortage and surplus', '', 25],
+    ['e-a3', MIE + '#changes', 'When curves shift: new price and quantity', '', 40],
+    ['e-a4', MIE + '#ceilings-floors', 'Price ceilings and floors', '', 25],
+    ['e-a5', MIE + '#final-test', 'Final test (20 questions)', '', 30],
+    ['e-a6', 'exams/micro-midterm-A.html', 'Micro Midterm mock A (Ch 1–3)', '90 min, exam mode. Paste your result to Claude.', 90, 'exam'],
+    ['e-a7', MI3 + '#key-questions', 'Go deeper: the textbook key questions', 'Optional.', 45, 'deep']]}
+];const KEY = 'course-folder:this-week:2026-10-11';
+let done = {};
+try { done = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { done = {}; }
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+document.getElementById('days').innerHTML = DAYS.map(d => {
+  const mins = d.steps.filter(s => s[5] !== 'deep').reduce((x, s) => x + s[4], 0);
+  return `<section class="day"><div class="day-h"><span class="tag ${d.cls}">${d.label}</span><h2>${esc(d.name)}</h2><span class="time">≈ ${Math.floor(mins / 60)} h ${mins % 60 ? (mins % 60) + ' min' : ''}</span></div>
+  <div class="steps">${d.steps.map(([id, href, title, note, min, kind]) => `<label class="step${kind ? ' ' + kind : ''}" data-id="${id}">
+    <input type="checkbox" id="cb-${id}" ${done[id] ? 'checked' : ''}>
+    <span class="t"><a href="${href}">${esc(title)}</a>${note ? `<span>${esc(note)}</span>` : ''}</span>
+    <span class="min">${min} min</span></label>`).join('')}</div></section>`;
+}).join('');
+function paint() {
+  const all = DAYS.flatMap(d => d.steps.map(s => s[0]));
+  const n = all.filter(id => done[id]).length;
+  document.getElementById('count').textContent = `${n} / ${all.length} steps done`;
+  document.getElementById('bar').style.width = (n / all.length * 100) + '%';
+  document.querySelectorAll('.step').forEach(el => el.classList.toggle('done', !!done[el.dataset.id]));
+}
+document.addEventListener('change', e => {
+  const el = e.target.closest('.step'); if (!el) return;
+  done[el.dataset.id] = e.target.checked;
+  try { localStorage.setItem(KEY, JSON.stringify(done)); } catch (err) {}
+  paint();
+});
+document.querySelectorAll('.step a').forEach(a => a.addEventListener('click', e => e.stopPropagation()));
+paint();
+</script>
+</body>
+</html>

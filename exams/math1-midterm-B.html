@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Midterm mock B · Mathematics I</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/exam.css">
+</head>
+<body class="math">
+<div id="exam"></div>
+<script type="application/json" id="exam-data">
+{
+  "id": "math1-midterm-B",
+  "title": "Midterm mock B",
+  "shortTitle": "Math I Midterm · B",
+  "course": "Mathematics I",
+  "courseClass": "math",
+  "covers": "Chapters 1–3",
+  "duration": 90,
+  "hub": "../exams/index.html",
+  "description": "A full 90-minute simulation of the Mathematics I midterm (20% of your grade) on Chapters 1–3, like the real one. Half of the marks are on Chapter 3: the derivative rules (powers, eˣ, aˣ, ln x, chain, product and quotient rules), tangent lines, marginal and average cost, growth models and differentials. The other half revisits Chapters 1–2 with new questions, new numbers and different traps from mock A.",
+  "instructions": [
+    "Scientific calculator allowed (non-programmable). No notes, no lessons, no phone.",
+    "Part I: one correct answer per question; the two true/false questions also need a short written justification. Parts II and III: work on paper first, then type your final answers. The computer checks the numbers; you mark the written answers yourself with the official rubric.",
+    "Type numbers only, without units. Decimals: use a point or a comma (3.47 or 3,47) and round exactly as asked. Thousands: 12500 or 12,500. Use a minus sign for a negative answer (for example −250).",
+    "Derivatives: on your paper, rewrite roots and fractions as powers first and name the rule you use (power, chain, product, quotient). Differentiate first, then substitute the number.",
+    "Keep full calculator precision in intermediate steps, and keep at least 5 decimals for ln values (for example ln 1.07 ≈ 0.06766). Round only the final answer, exactly as each question asks.",
+    "Rule of Four: every interpretation is a full sentence with units. No units, no marks."
+  ],
+  "sections": [
+    {
+      "title": "Part I · Multiple choice & true/false",
+      "intro": "One correct answer per question · 1 point each, and 2 points for each true/false question (1 for the answer, 1 for the justification)",
+      "questions": [
+        {
+          "id": "q1", "type": "mcq", "points": 1, "topic": "Linear functions",
+          "review": "../mathematics-1/ch1-functions-and-change.html#linear",
+          "prompt": "<p>A car-rental agency in Monastir charges a price that is a <b>linear</b> function of the distance driven. A rental with 100 km costs 95 TND, and a rental with 250 km costs 125 TND. According to this model, how much does a rental with 400 km cost?</p>",
+          "options": [
+            "380 TND",
+            "205 TND",
+            "155 TND",
+            "175 TND"
+          ],
+          "answer": 2,
+          "explain": "Two points on the line: (100, 95) and (250, 125).<br>Slope m = (125 − 95) ÷ (250 − 100) = 30 ÷ 150 = 0.2 TND per km.<br>Vertical intercept: 95 = b + 0.2 × 100, so b = 95 − 20 = 75 TND (the fixed charge, paid even for 0 km).<br>So C(d) = 75 + 0.2d, and C(400) = 75 + 0.2 × 400 = 75 + 80 = <b>155 TND</b>. <b>Answer (c).</b><br>Check with the second point: 75 + 0.2 × 250 = 125 ✓.<br>(a) 380 = 95 × 4 assumes that the price is proportional to the distance (a line through the origin): it forgets the fixed charge of 75 TND.<br>(b) 205 = 125 + 0.2 × 400 adds the cost of 400 <i>extra</i> km to the price of a 250-km rental.<br>(d) 175 = 95 + 0.2 × 400 takes 95 TND as the fixed charge, but 95 TND is the price for 100 km, not for 0 km."
+        },
+        {
+          "id": "q2", "type": "mcq", "points": 1, "topic": "Exponential functions",
+          "review": "../mathematics-1/ch1-functions-and-change.html#exponential",
+          "prompt": "<p>A laptop bought by an ISB student loses <b>15% of its current value every year</b>. Three years after the purchase, its value is closest to what percentage of the purchase price?</p>",
+          "options": [
+            "61.4%",
+            "55.0%",
+            "65.8%",
+            "38.6%"
+          ],
+          "answer": 0,
+          "explain": "Losing 15% each year means keeping 85% each year: exponential decay with factor a = 1 − 0.15 = 0.85, so V(t) = V<sub>0</sub>(0.85)<sup>t</sup>.<br>After 3 years: V(3) = V<sub>0</sub> × 0.85<sup>3</sup> = V<sub>0</sub> × 0.614125 ≈ <b>61.4% of the price</b>. <b>Answer (a).</b><br>(b) 55.0% = 100% − 3 × 15% is a <i>linear</i> model: it subtracts 15% of the purchase price every year. But the laptop loses 15% of its <i>current</i> value, which gets smaller every year (in year 2 it loses 15% of 85%, only 12.75% of the price).<br>(c) 65.8% = 1 ÷ 1.15<sup>3</sup> divides by 1.15 each year; dividing by 1.15 is a loss of about 13% per year, not 15%.<br>(d) 38.6% is the part of the value that was <i>lost</i> (100% − 61.4%), not the part that is left."
+        },
+        {
+          "id": "q3", "type": "mcq", "points": 1, "topic": "New functions from old",
+          "review": "../mathematics-1/ch1-functions-and-change.html#transform",
+          "prompt": "<p>The graph of y = f(x) has a single lowest point (a valley) at (−1, 4). Where is the lowest point of the graph of y = 2f(x + 3) − 5?</p>",
+          "options": [
+            "(2, 3)",
+            "(−4, −2)",
+            "(−4, −1)",
+            "(−4, 3)"
+          ],
+          "answer": 3,
+          "explain": "Inside the brackets, x + 3: horizontal shift of 3 units to the <b>left</b> (opposite sign). The valley moves from x = −1 to x = −1 − 3 = −4.<br>Outside the brackets, in this order: multiply by 2 (vertical stretch: the height 4 becomes 8), then subtract 5 (down 5): 8 − 5 = 3.<br>A stretch by a positive number keeps a valley a valley, so the lowest point is <b>(−4, 3)</b>. <b>Answer (d).</b><br>Check: at x = −4, y = 2f(−4 + 3) − 5 = 2f(−1) − 5 = 2 × 4 − 5 = 3 ✓.<br>(a) moves the graph to the right: that would be f(x − 3).<br>(b) subtracts 5 before multiplying: 2(4 − 5) = −2. The order is: multiply first, then add or subtract.<br>(c) forgets the vertical stretch: 4 − 5 = −1."
+        },
+        {
+          "id": "q4", "type": "mcq", "points": 1, "topic": "Doubling time & half-life",
+          "review": "../mathematics-1/ch1-functions-and-change.html#base-e",
+          "prompt": "<p>After a double espresso in a café in Tunis, the amount of caffeine in Sami's body is Q = 160e<sup>−0.14t</sup> mg, t hours later (illustrative model). Which statement is correct?</p>",
+          "options": [
+            "After each hour, the amount is 14% lower than one hour earlier, and the half-life is about 3.57 hours.",
+            "After each hour, the amount is about 13.1% lower than one hour earlier, and the half-life is about 4.95 hours.",
+            "After each hour, the amount is 14% lower than one hour earlier, and the half-life is about 4.95 hours.",
+            "After each hour, the amount is about 13.1% lower than one hour earlier, and the half-life is about 7.14 hours."
+          ],
+          "answer": 1,
+          "explain": "In Q = 160e<sup>−0.14t</sup>, −0.14 is the <b>continuous</b> decay rate k, not the hourly percentage.<br>Hourly factor: e<sup>−0.14</sup> ≈ 0.8694, so after each hour 86.94% of the caffeine is left: the amount is 1 − 0.8694 ≈ 0.1306 ≈ <b>13.1% lower</b>.<br>Half-life: 160e<sup>−0.14t</sup> = 80 → e<sup>−0.14t</sup> = 0.5 → −0.14t = ln 0.5 → t = ln 2 ÷ 0.14 = 0.693147 ÷ 0.14 ≈ <b>4.95 hours</b>. <b>Answer (b).</b><br>(a) and (c) read the continuous rate as an hourly percentage: Q = 160(0.86)<sup>t</sup> would lose 14% per hour, but 160e<sup>−0.14t</sup> loses about 13.1% per hour.<br>(a) also computes 0.5 ÷ 0.14 ≈ 3.57: the half-life uses ln 2 ≈ 0.6931, not 0.5.<br>(d) computes 1 ÷ 0.14 ≈ 7.14 instead of ln 2 ÷ 0.14."
+        },
+        {
+          "id": "q5", "type": "mcq", "points": 1, "topic": "Derivative interpretation & units",
+          "review": "../mathematics-1/ch2-derivative.html#interpret",
+          "prompt": "<p>P = f(t) is the population of Tunisia, in millions of people, t years after 2000 (illustrative figures). Which sentence correctly interprets f′(24) = 0.09?</p>",
+          "options": [
+            "In 2024, the population of Tunisia was 0.09 million people.",
+            "In 2024, the population of Tunisia was growing by about 9% per year.",
+            "In 2024, the population of Tunisia was growing by about 90,000 people per year.",
+            "From 2000 to 2024, the population of Tunisia grew by 0.09 million people in total."
+          ],
+          "answer": 2,
+          "explain": "Units of f′ = units of P ÷ units of t = millions of people per year.<br>f′(24) = 0.09: in 2024 (t = 24) the population was increasing at a rate of about 0.09 million = 0.09 × 1,000,000 = <b>90,000 people per year</b>. <b>Answer (c).</b><br>(a) confuses the rate f′(24) with the value f(24), the population itself (about 12 million).<br>(b) confuses the rate with a <i>relative</i> rate: 9% per year would mean f′/f = 0.09, but here f′/f ≈ 0.09 ÷ 12 ≈ 0.75% per year.<br>(d) describes a total change over 24 years; f′(24) is an instantaneous rate at one moment, measured per year."
+        },
+        {
+          "id": "q6", "type": "mcq", "points": 1, "topic": "Power & sum rules",
+          "review": "../mathematics-1/ch3-shortcuts.html#powers",
+          "prompt": "<p>Let f(x) = 3/x<sup>4</sup> + 8√x, for x > 0. Which expression is f′(x)?</p>",
+          "options": [
+            "−12/x<sup>3</sup> + 4/√x",
+            "3/(4x<sup>3</sup>) + 4/√x",
+            "−12/x<sup>5</sup> + 4√x",
+            "−12/x<sup>5</sup> + 4/√x"
+          ],
+          "answer": 3,
+          "explain": "Rewrite first as powers of x: f(x) = 3x<sup>−4</sup> + 8x<sup>1/2</sup>.<br>Power rule, term by term: 3 × (−4)x<sup>−4 − 1</sup> = −12x<sup>−5</sup>, and 8 × (1/2)x<sup>1/2 − 1</sup> = 4x<sup>−1/2</sup>.<br>Back to fractions: f′(x) = <b>−12/x<sup>5</sup> + 4/√x</b>. <b>Answer (d).</b><br>(a) uses −4 − 1 = −3: going down from −4 gives −5.<br>(b) “differentiates the bottom” (3 ÷ 4x<sup>3</sup>), which is never allowed: rewrite 3/x<sup>4</sup> as 3x<sup>−4</sup> first.<br>(c) keeps the power 1/2 instead of subtracting 1: the derivative of 8x<sup>1/2</sup> is 4x<sup>−1/2</sup> = 4/√x, not 4√x."
+        },
+        {
+          "id": "q7", "type": "mcq", "points": 1, "topic": "Exponential & log derivatives",
+          "review": "../mathematics-1/ch3-shortcuts.html#explog",
+          "prompt": "<p>Which expression is the derivative of y = 5 · 2<sup>x</sup> − 3 ln x + e<sup>2</sup>, for x > 0?</p>",
+          "options": [
+            "5x · 2<sup>x − 1</sup> − 3/x",
+            "5(ln 2) · 2<sup>x</sup> − 3/x",
+            "5 · 2<sup>x</sup> − 3/x",
+            "5(ln 2) · 2<sup>x</sup> − 3/x + 2e"
+          ],
+          "answer": 1,
+          "explain": "Term by term.<br>5 · 2<sup>x</sup>: the variable is in the exponent, so use (a<sup>x</sup>)′ = (ln a) a<sup>x</sup>: 5(ln 2) · 2<sup>x</sup> ≈ 3.4657 · 2<sup>x</sup>.<br>−3 ln x: (ln x)′ = 1/x, so −3/x.<br>e<sup>2</sup> ≈ 7.389 is a constant (there is no x in it): its derivative is 0.<br>y′ = <b>5(ln 2) · 2<sup>x</sup> − 3/x</b>. <b>Answer (b).</b><br>(a) uses the power rule on 2<sup>x</sup>; the power rule is only for x<sup>n</sup> (x in the base, a number in the exponent).<br>(c) treats 2<sup>x</sup> like e<sup>x</sup>: only base e is its own derivative.<br>(d) differentiates the number e<sup>2</sup> as if it were x<sup>2</sup>; the derivative of a constant is 0."
+        },
+        {
+          "id": "q8", "type": "mcq", "points": 1, "topic": "Chain rule",
+          "review": "../mathematics-1/ch3-shortcuts.html#chain",
+          "prompt": "<p>Which expression is the derivative of h(x) = e<sup>x<sup>3</sup> − 2x</sup> (the whole x<sup>3</sup> − 2x is the exponent)?</p>",
+          "options": [
+            "(3x<sup>2</sup> − 2)e<sup>x<sup>3</sup> − 2x</sup>",
+            "e<sup>x<sup>3</sup> − 2x</sup>",
+            "(x<sup>3</sup> − 2x)e<sup>x<sup>3</sup> − 2x − 1</sup>",
+            "e<sup>3x<sup>2</sup> − 2</sup>"
+          ],
+          "answer": 0,
+          "explain": "Chain rule with an exponential outside: (e<sup>g(x)</sup>)′ = e<sup>g(x)</sup> · g′(x). Copy the exponential, then multiply by the derivative of the exponent.<br>Inside: g(x) = x<sup>3</sup> − 2x, so g′(x) = 3x<sup>2</sup> − 2.<br>h′(x) = <b>(3x<sup>2</sup> − 2)e<sup>x<sup>3</sup> − 2x</sup></b>. <b>Answer (a).</b><br>(b) forgets the derivative of the inside: (e<sup>x</sup>)′ = e<sup>x</sup> works only when the exponent is plain x.<br>(c) uses the power rule on an exponential (bring the exponent down, subtract 1): wrong, because the variable is in the exponent.<br>(d) differentiates only the exponent and leaves it in the exponent."
+        },
+        {
+          "id": "q9", "type": "mcq", "points": 1, "topic": "Product & quotient rules",
+          "review": "../mathematics-1/ch3-shortcuts.html#product",
+          "prompt": "<p>Which expression is the derivative of k(x) = x<sup>3</sup>e<sup>−2x</sup>?</p>",
+          "options": [
+            "−6x<sup>2</sup>e<sup>−2x</sup>",
+            "x<sup>2</sup>e<sup>−2x</sup>(3 + x)",
+            "x<sup>2</sup>e<sup>−2x</sup>(3 − 2x)",
+            "x<sup>2</sup>e<sup>−2x</sup>(3 + 2x)"
+          ],
+          "answer": 2,
+          "explain": "Product rule: (uv)′ = u′v + uv′.<br>u = x<sup>3</sup> → u′ = 3x<sup>2</sup>. v = e<sup>−2x</sup> → v′ = −2e<sup>−2x</sup> (rule e<sup>kx</sup> → ke<sup>kx</sup>, with k = −2).<br>k′(x) = 3x<sup>2</sup>e<sup>−2x</sup> + x<sup>3</sup>(−2e<sup>−2x</sup>) = 3x<sup>2</sup>e<sup>−2x</sup> − 2x<sup>3</sup>e<sup>−2x</sup> = <b>x<sup>2</sup>e<sup>−2x</sup>(3 − 2x)</b> (we factored out x<sup>2</sup>e<sup>−2x</sup>). <b>Answer (c).</b><br>(a) multiplies the two derivatives: 3x<sup>2</sup> × (−2e<sup>−2x</sup>). The “rule” (uv)′ = u′v′ does not exist.<br>(b) takes v′ = e<sup>−2x</sup>: it forgets the factor k = −2 that comes from the inside −2x.<br>(d) loses the minus sign of k = −2."
+        },
+        {
+          "id": "q10", "type": "tf", "points": 1, "topic": "Second derivative & concavity",
+          "review": "../mathematics-1/ch2-derivative.html#second",
+          "prompt": "<p>An olive-oil mill in Mahdia keeps a running total of the oil it has pressed since the start of the harvest: O = f(t) tonnes after t days. During the last week of the harvest, f′(t) > 0 and f″(t) &lt; 0.</p><p><b>True or false:</b> during that week, the amount of oil that the mill presses <i>each day</i> (in tonnes per day) is increasing.</p>",
+          "answer": false,
+          "justify": {
+            "points": 1,
+            "model": "False. The quantity pressed per day is the rate of change f′(t), in tonnes per day. f′ > 0, so the total O is still increasing. But f″ &lt; 0 means that f′ is decreasing: each day the mill presses less oil than the day before, so O increases more and more slowly (concave down).",
+            "rubric": [
+              { "text": "Identifies the oil pressed per day as the rate f′(t) (tonnes per day), which is positive, so the total O still increases", "points": 0.5 },
+              { "text": "Says that f″ &lt; 0 means f′ is decreasing: the mill presses less oil each day (O grows more and more slowly, concave down)", "points": 0.5 }
+            ]
+          },
+          "explain": "False.<br>O is a running total (tonnes). Its rate of change f′(t) is the oil pressed per day (tonnes per day).<br>f′ > 0: oil is still added every day, so the total O keeps increasing.<br>f″ &lt; 0: the rate f′ is <b>decreasing</b>, so the mill presses less oil each day than the day before (the harvest is ending).<br>The graph of O is increasing and concave down: it climbs more and more slowly.<br>Trap: “f′ > 0” describes the total O, not the daily quantity. Whether the daily quantity f′ goes up or down is given by the sign of f″."
+        },
+        {
+          "id": "q11", "type": "tf", "points": 1, "topic": "Tangent lines",
+          "review": "../mathematics-1/ch3-shortcuts.html#powers",
+          "prompt": "<p><b>True or false:</b> the tangent line to the graph of y = e<sup>x</sup> at x = 1 passes through the origin (0, 0).</p>",
+          "answer": true,
+          "justify": {
+            "points": 1,
+            "model": "True. f(1) = e and f′(x) = e<sup>x</sup>, so f′(1) = e. Tangent line: y = f(1) + f′(1)(x − 1) = e + e(x − 1) = ex. At x = 0 it gives y = 0, so it passes through (0, 0).",
+            "rubric": [
+              { "text": "Finds the point (1, e) and the slope f′(1) = e, because (e<sup>x</sup>)′ = e<sup>x</sup>", "points": 0.5 },
+              { "text": "Writes the tangent line y = e + e(x − 1) = ex and checks that x = 0 gives y = 0", "points": 0.5 }
+            ]
+          },
+          "explain": "True.<br>Point: f(1) = e<sup>1</sup> = e ≈ 2.718.<br>Slope: (e<sup>x</sup>)′ = e<sup>x</sup>, so f′(1) = e ≈ 2.718.<br>Tangent line: y = f(1) + f′(1)(x − 1) = e + e(x − 1) = e + ex − e = <b>ex</b>.<br>At x = 0: y = e × 0 = 0, so the line passes through the origin ✓.<br>Traps: using the slope 1 (the slope of e<sup>x</sup> at x = 0, not at x = 1) gives y = x + e − 1, which misses the origin; forgetting the (x − 1) and writing y = e + ex gives the intercept e instead of 0."
+        }
+      ]
+    },
+    {
+      "title": "Part II · Derivatives",
+      "intro": "Two problems · name the rule you use on your paper, then type each final answer as asked",
+      "questions": [
+        {
+          "id": "p1", "type": "problem", "topic": "Chain rule",
+          "review": "../mathematics-1/ch3-shortcuts.html#chain",
+          "prompt": "<p>Find each derivative value. Give 3 decimal places when the answer is not a whole number.</p>",
+          "parts": [
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>f(x) = √(3x<sup>2</sup> + 4). Find f′(2).</p>",
+              "answer": 1.5, "tol": 0.001,
+              "explain": "Extended power rule (chain rule): f(x) = (3x<sup>2</sup> + 4)<sup>1/2</sup>. Inside u = 3x<sup>2</sup> + 4, with u′ = 6x; outside u<sup>1/2</sup>.<br>f′(x) = (1/2)(3x<sup>2</sup> + 4)<sup>−1/2</sup> · 6x = 3x / √(3x<sup>2</sup> + 4).<br>At x = 2: 3x<sup>2</sup> + 4 = 12 + 4 = 16 and √16 = 4, so f′(2) = (3 × 2) ÷ 4 = 6 ÷ 4 = <b>1.5</b>.<br>Traps: 0.125 = 1/(2 × 4) forgets the inside derivative 6x; 3 = 12 ÷ 4 forgets the 1/2 that comes down from the power; 4 is f(2), the height, not the slope."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>g(x) = ln(x<sup>2</sup> + 5x). Find g′(1).</p>",
+              "answer": 1.166667, "tol": 0.0005,
+              "explain": "Chain rule with ln outside: (ln g)′ = g′/g, the derivative of the inside over the inside.<br>Inside: x<sup>2</sup> + 5x, with derivative 2x + 5.<br>g′(x) = (2x + 5)/(x<sup>2</sup> + 5x).<br>g′(1) = (2 + 5)/(1 + 5) = 7/6 ≈ <b>1.167</b>.<br>Traps: 0.167 = 1/6 is the classic error (ln g)′ = 1/g (the 2x + 5 on top is missing); 0.143 = 1/7 puts the derivative of the inside at the bottom; 1.792 = ln 6 is g(1), not g′(1)."
+            },
+            {
+              "type": "numeric", "points": 1, "topic": "Product & quotient rules",
+              "review": "../mathematics-1/ch3-shortcuts.html#product",
+              "prompt": "<p>k(x) = (2x + 1)/(x<sup>2</sup> + 3). Find k′(1).</p>",
+              "answer": 0.125, "tol": 0.0005,
+              "explain": "Quotient rule: (u/v)′ = (u′v − uv′)/v<sup>2</sup>, starting with the derivative of the top.<br>u = 2x + 1 → u′ = 2. v = x<sup>2</sup> + 3 → v′ = 2x.<br>At x = 1: u = 3, u′ = 2, v = 4, v′ = 2.<br>k′(1) = (2 × 4 − 3 × 2)/4<sup>2</sup> = (8 − 6)/16 = 2/16 = <b>0.125</b>.<br>Traps: −0.125 reverses the order (uv′ − u′v); 0.5 = 2/4 forgets to square the bottom; 1 = 2/2 is u′/v′, a rule that does not exist; 0.875 = 14/16 adds the two terms instead of subtracting them."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>The table gives values of two functions f and g and of their derivatives.</p><div class='table-wrap'><table><tbody><tr><td><strong>x</strong></td><td class='n'><strong>1</strong></td><td class='n'><strong>2</strong></td><td class='n'><strong>3</strong></td><td class='n'><strong>4</strong></td></tr><tr><td>f(x)</td><td class='n'>3</td><td class='n'>1</td><td class='n'>2</td><td class='n'>7</td></tr><tr><td>f′(x)</td><td class='n'>−1</td><td class='n'>5</td><td class='n'>0.5</td><td class='n'>−2</td></tr><tr><td>g(x)</td><td class='n'>2</td><td class='n'>4</td><td class='n'>1</td><td class='n'>3</td></tr><tr><td>g′(x)</td><td class='n'>4</td><td class='n'>3</td><td class='n'>−1</td><td class='n'>2</td></tr></tbody></table></div><p>Let h(x) = f(g(x)). Find h′(2).</p>",
+              "answer": -6, "tol": 0.01,
+              "explain": "Chain rule: h′(x) = f′(g(x)) · g′(x), the derivative of the outside evaluated at the inside, times the derivative of the inside.<br>Inside first: g(2) = 4.<br>Derivative of the outside at the inside: f′(g(2)) = f′(4) = −2.<br>Derivative of the inside: g′(2) = 3.<br>h′(2) = (−2) × 3 = <b>−6</b>.<br>Traps: 15 = f′(2) × g′(2) evaluates f′ at 2 instead of at g(2) = 4; −2 = f′(4) forgets to multiply by g′(2); −4 = f′(4) × g′(4) evaluates g′ at the wrong point; 7 = f(4) = h(2) is the value of h, not its derivative."
+            }
+          ]
+        },
+        {
+          "id": "p2", "type": "problem", "topic": "Tangent lines",
+          "review": "../mathematics-1/ch3-shortcuts.html#powers",
+          "prompt": "<p>Let f(x) = 2x<sup>3</sup> − 9x<sup>2</sup> + 12x − 4.</p>",
+          "parts": [
+            {
+              "type": "numeric", "points": 1, "topic": "Power & sum rules",
+              "review": "../mathematics-1/ch3-shortcuts.html#powers",
+              "prompt": "<p>Find the slope of the tangent line to the graph of f at x = −1.</p>",
+              "answer": 36, "tol": 0.01,
+              "explain": "Sum and power rules: f′(x) = 6x<sup>2</sup> − 18x + 12.<br>Slope at x = −1: f′(−1) = 6(−1)<sup>2</sup> − 18(−1) + 12 = 6 + 18 + 12 = <b>36</b>.<br>Careful with the signs: (−1)<sup>2</sup> = +1 and −18 × (−1) = +18.<br>Traps: 24 comes from (−1)<sup>2</sup> = −1 (−6 + 18 + 12); 0 comes from −18 × (−1) = −18 (6 − 18 + 12); −27 is f(−1), the height, not the slope."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>The tangent line at x = −1 has the equation y = mx + b. Find b.</p>",
+              "answer": 9, "tol": 0.01,
+              "explain": "Point: f(−1) = 2(−1)<sup>3</sup> − 9(−1)<sup>2</sup> + 12(−1) − 4 = −2 − 9 − 12 − 4 = −27, so the tangent touches the graph at (−1, −27).<br>Tangent line: y = f(a) + f′(a)(x − a) = −27 + 36(x − (−1)) = −27 + 36(x + 1) = −27 + 36x + 36 = 36x + 9.<br>So m = 36 and <b>b = 9</b>. Check: at x = −1, y = −36 + 9 = −27 ✓.<br>Traps: −27 uses the height f(−1) as the intercept (it forgets the (x − a) part); −63 comes from writing (x − 1) instead of (x + 1)."
+            },
+            {
+              "type": "mcq", "points": 1,
+              "prompt": "<p>At which points does the graph of f have a horizontal tangent line?</p>",
+              "options": [
+                "(0.5, 0) and (2, 0)",
+                "(1, 1) and (2, 0)",
+                "(1, 0) and (2, 0)",
+                "(−1, −27) and (−2, −80)"
+              ],
+              "answer": 1,
+              "explain": "Horizontal tangent ⇔ slope 0 ⇔ f′(x) = 0.<br>6x<sup>2</sup> − 18x + 12 = 0 → divide by 6: x<sup>2</sup> − 3x + 2 = 0 → (x − 1)(x − 2) = 0 → x = 1 or x = 2.<br>Heights from f (not from f′): f(1) = 2 − 9 + 12 − 4 = 1 and f(2) = 16 − 36 + 24 − 4 = 0.<br>Points: <b>(1, 1) and (2, 0)</b>. <b>Answer (b).</b><br>(a) solves f(x) = 0 (where the graph crosses the x-axis) instead of f′(x) = 0.<br>(c) has the right x-values but takes the heights from f′ (which is 0 there) instead of from f.<br>(d) factors x<sup>2</sup> − 3x + 2 as (x + 1)(x + 2): the signs are wrong."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Find the point with x > 0 at which the tangent line is parallel to the line y = 12x − 7. Give its y-coordinate.</p>",
+              "answer": 5, "tol": 0.01,
+              "explain": "Parallel lines have the same slope, so solve f′(x) = 12.<br>6x<sup>2</sup> − 18x + 12 = 12 → 6x<sup>2</sup> − 18x = 0 → 6x(x − 3) = 0 → x = 0 or x = 3.<br>The point with x > 0 is at x = 3: f(3) = 54 − 81 + 36 − 4 = 5. The point is (3, 5), so its y-coordinate is <b>5</b>.<br>(The other point, x = 0, is (0, −4); the tangent there is y = 12x − 4.)<br>Traps: 3 is the x-coordinate; 12 is the slope; −7 is the intercept of the given line, which is not the tangent line."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Part III · Problems",
+      "intro": "Four problems · show your work on paper, then type each final answer as asked",
+      "questions": [
+        {
+          "id": "p3", "type": "problem", "topic": "Logs & compound interest",
+          "review": "../mathematics-1/ch1-functions-and-change.html#ln",
+          "prompt": "<p>Rania, an ISB student, has <b>6,000 TND</b>. She needs <b>9,000 TND</b> to pay for a master's degree abroad, and she wants to invest her money until it reaches that amount.</p>",
+          "parts": [
+            {
+              "type": "numeric", "points": 1.5,
+              "prompt": "<p>Bank A pays 4.5% per year, compounded <b>annually</b>. Using logarithms and the formula for annual compounding, find the time t at which the formula gives a balance of 9,000 TND. Give t to 2 decimal places.</p>",
+              "answer": 9.211581, "unit": "years", "tol": 0.015,
+              "explain": "Annual compounding: P = P<sub>0</sub>(1 + r)<sup>t</sup>, so 6,000(1.045)<sup>t</sup> = 9,000.<br>Isolate the power: (1.045)<sup>t</sup> = 9,000 ÷ 6,000 = 1.5.<br>Take ln of both sides and bring the exponent down: t × ln 1.045 = ln 1.5.<br>t = ln 1.5 ÷ ln 1.045 = 0.405465 ÷ 0.044017 ≈ <b>9.21 years</b>.<br>(With ln values rounded to 4 decimals, 0.4055 ÷ 0.0440 ≈ 9.22, and with 3 decimals 0.405 ÷ 0.044 ≈ 9.20: both accepted, but keep 5 decimals to be safe.)<br>Good to know: in a real account the interest is added once a year, so the balance (8,916.57 TND after 9 years) first passes 9,000 TND when the 10th year's interest is added. The exam convention, as in the notes, is to give the solution of the equation, t ≈ 9.21 years.<br>Traps: 9.01 = ln 1.5 ÷ 0.045 uses the continuous formula; 11.11 = 3,000 ÷ (6,000 × 0.045) is simple interest (it forgets the interest earned on the interest)."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Bank B pays 4.5% per year, compounded <b>continuously</b>. How long does it take for her balance to reach 9,000 TND? Give t to 2 decimal places.</p>",
+              "answer": 9.010336, "unit": "years", "tol": 0.015,
+              "explain": "Continuous compounding: P = P<sub>0</sub>e<sup>rt</sup>, so 6,000e<sup>0.045t</sup> = 9,000.<br>e<sup>0.045t</sup> = 1.5 → 0.045t = ln 1.5 → t = 0.405465 ÷ 0.045 ≈ <b>9.01 years</b>. (With ln 1.5 rounded to 0.405 you get 9.00: also accepted.)<br>➜ Continuous compounding reaches the target about 0.2 years (about 2.4 months) sooner than annual compounding, because the interest is added at every instant.<br>Trap: 9.21 uses the annual-compounding formula (1.045)<sup>t</sup>."
+            }
+          ]
+        },
+        {
+          "id": "p4", "type": "problem", "topic": "Derivative interpretation & units",
+          "review": "../mathematics-1/ch2-derivative.html#interpret",
+          "prompt": "<p>A hotel in Djerba records its total daily operating cost C(n), in TND, when n rooms are occupied (illustrative figures).</p><div class='table-wrap'><table><tbody><tr><td><strong>n (rooms occupied)</strong></td><td class='n'><strong>40</strong></td><td class='n'><strong>60</strong></td><td class='n'><strong>80</strong></td><td class='n'><strong>100</strong></td><td class='n'><strong>120</strong></td><td class='n'><strong>140</strong></td></tr><tr><td>C(n) (TND)</td><td class='n'>8,400</td><td class='n'>9,900</td><td class='n'>11,200</td><td class='n'>12,400</td><td class='n'>13,900</td><td class='n'>15,800</td></tr></tbody></table></div>",
+          "parts": [
+            {
+              "type": "numeric", "points": 1, "topic": "Rates of change",
+              "review": "../mathematics-1/ch1-functions-and-change.html#rates",
+              "prompt": "<p>Find the average rate of change of C between n = 40 and n = 140.</p>",
+              "answer": 74, "unit": "TND per room", "tol": 0.01,
+              "explain": "Average rate of change = (C(140) − C(40)) ÷ (140 − 40) = (15,800 − 8,400) ÷ 100 = 7,400 ÷ 100 = <b>74 TND per room</b>.<br>➜ Between 40 and 140 occupied rooms, each extra occupied room added on average 74 TND to the daily cost.<br>Trap: 7,400 is the total change; a rate must be divided by the change in n (100 rooms)."
+            },
+            {
+              "type": "numeric", "points": 1, "topic": "Derivative at a point",
+              "review": "../mathematics-1/ch2-derivative.html#instant",
+              "prompt": "<p>Estimate C′(120) using the values on both sides of n = 120: take the average of the rate of change on [100, 120] and the rate of change on [120, 140].</p>",
+              "answer": 85, "unit": "TND per room", "tol": 0.01,
+              "explain": "Left rate on [100, 120]: (13,900 − 12,400) ÷ 20 = 1,500 ÷ 20 = 75.<br>Right rate on [120, 140]: (15,800 − 13,900) ÷ 20 = 1,900 ÷ 20 = 95.<br>Average: (75 + 95) ÷ 2 = <b>85 TND per room</b> (the same as the centred rate (15,800 − 12,400) ÷ 40 = 3,400 ÷ 40 = 85).<br>This is the marginal cost at n = 120.<br>Traps: 75 or 95 alone are one-sided estimates; 13,900 is C(120), the cost itself, not its rate of change."
+            },
+            {
+              "type": "text",
+              "prompt": "<p>Interpret your estimate of C′(120) in one sentence with units.</p>",
+              "rubric": [
+                { "text": "Says that when 120 rooms are occupied, filling one more room (the 121st) increases the daily cost by about C′(120)", "points": 0.5 },
+                { "text": "Gives the amount with the right units: about 85 TND per room (or your own estimate from (b), in TND per room)", "points": 0.5 }
+              ],
+              "model": "When 120 rooms are occupied, filling one more room (the 121st) adds about 85 TND to the hotel's daily operating cost: the marginal cost is about 85 TND per room.",
+              "rows": 3,
+              "explain": "C′(120) is a marginal cost: “at n = 120, one more room costs about C′(120) TND”. Write the input (120 rooms), the number (85) and the units (TND per room). A number without units (“C′(120) = 85”) gets no marks."
+            },
+            {
+              "type": "mcq", "points": 1, "topic": "Second derivative & concavity",
+              "review": "../mathematics-1/ch2-derivative.html#second",
+              "prompt": "<p>What does the table suggest about the graph of C for 100 ≤ n ≤ 140?</p>",
+              "options": [
+                "C is concave down there: each extra room costs less than the one before (the marginal cost is falling).",
+                "C is concave up there: each extra room costs less than the one before (the marginal cost is falling).",
+                "C is concave up there: each extra room costs more than the one before (the marginal cost is rising).",
+                "C is linear there: every extra room costs the same amount (the marginal cost is constant)."
+              ],
+              "answer": 2,
+              "explain": "Rates of change on the 20-room intervals: 40–60: 1,500 ÷ 20 = 75; 60–80: 1,300 ÷ 20 = 65; 80–100: 1,200 ÷ 20 = 60; 100–120: 1,500 ÷ 20 = 75; 120–140: 1,900 ÷ 20 = 95 TND per room.<br>Around n = 100 and n = 120 the rates go 60 → 75 → 95: they increase, so C′ is increasing, C″ > 0 and C is <b>concave up</b>. Each extra room costs more than the one before (a crowded hotel, overtime for the staff): the marginal cost is rising. <b>Answer (c).</b><br>(a) describes the start of the table (40 ≤ n ≤ 100), where the rates fall (75 → 65 → 60).<br>(b) mixes the two cases: concave up means that the slope, here the marginal cost, is <i>rising</i>.<br>(d) would need equal differences; from n = 80 on they are 1,200, 1,500 and 1,900."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>The manager estimates that C′(140) = 105 TND per room. Use the local linear approximation at n = 140 to estimate the daily cost when 144 rooms are occupied.</p>",
+              "answer": 16220, "unit": "TND", "tol": 0.5,
+              "explain": "Local linear approximation: C(a + Δn) ≈ C(a) + C′(a) × Δn, with a = 140 and Δn = 144 − 140 = 4.<br>C(144) ≈ 15,800 + 105 × 4 = 15,800 + 420 = <b>16,220 TND</b>.<br>Traps: 15,905 adds the marginal cost only once (Δn is 4 rooms, not 1); 420 is only the estimated change, not the new cost."
+            }
+          ]
+        },
+        {
+          "id": "p5", "type": "problem", "topic": "Marginal cost & revenue",
+          "review": "../mathematics-1/ch2-derivative.html#marginal",
+          "prompt": "<p>A pastry workshop in Sfax makes and sells q boxes of makroudh per day. Its daily cost is <b>C(q) = 0.02q<sup>2</sup> + 6q + 450</b> TND. To sell q boxes per day, it sets the price at <b>p = 30 − 0.04q</b> TND per box. (Illustrative figures.)</p>",
+          "parts": [
+            {
+              "type": "numeric", "points": 1, "topic": "Cost, revenue, profit",
+              "review": "../mathematics-1/ch1-functions-and-change.html#economics",
+              "prompt": "<p>Find the daily profit when the workshop makes and sells 100 boxes.</p>",
+              "answer": 1350, "unit": "TND", "tol": 0.5,
+              "explain": "Price at q = 100: p = 30 − 0.04 × 100 = 26 TND per box.<br>Revenue = price × quantity: R(100) = 26 × 100 = 2,600 TND. (In general R(q) = pq = 30q − 0.04q<sup>2</sup>.)<br>Cost: C(100) = 0.02 × 10,000 + 6 × 100 + 450 = 200 + 600 + 450 = 1,250 TND.<br>Profit: π(100) = R(100) − C(100) = 2,600 − 1,250 = <b>1,350 TND</b>.<br>Traps: 1,750 uses the price 30 TND for every box (it forgets that the price falls when q grows); 1,800 forgets the fixed cost of 450 TND; 2,600 is the revenue, not the profit."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Find the marginal cost MC = C′(q) at q = 100.</p>",
+              "answer": 10, "unit": "TND per box", "tol": 0.05,
+              "explain": "Marginal cost = C′(q). Power and sum rules: C′(q) = 0.02 × 2q + 6 + 0 = 0.04q + 6.<br>MC(100) = 0.04 × 100 + 6 = 4 + 6 = <b>10 TND per box</b>: after 100 boxes, one more box costs about 10 TND. (The Chapter 2 estimate C(101) − C(100) = 10.02 TND is also accepted.)<br>Traps: 12.50 is the average cost C(100)/100, not the marginal cost; 8 = 0.02 × 100 + 6 forgets to bring the power 2 down; 4 forgets the + 6."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Find the marginal revenue MR = R′(q) at q = 100.</p>",
+              "answer": 22, "unit": "TND per box", "tol": 0.05,
+              "explain": "First the revenue function: R(q) = pq = (30 − 0.04q)q = 30q − 0.04q<sup>2</sup>.<br>Marginal revenue = R′(q) = 30 − 0.08q.<br>MR(100) = 30 − 0.08 × 100 = 30 − 8 = <b>22 TND per box</b>: the 101st box brings in about 22 TND of extra revenue. (The Chapter 2 estimate R(101) − R(100) = 21.96 TND is also accepted.)<br>Trap: 26 TND is the price p(100). The marginal revenue is lower than the price, because to sell one more box the workshop must lower the price of <i>all</i> its boxes a little. (You also get 26 if you forget to bring the power 2 down: 30 − 0.04 × 100.)"
+            },
+            {
+              "type": "text",
+              "prompt": "<p>Find the marginal profit at q = 100. Explain what it means in one sentence with units, and say whether the workshop should increase or decrease production.</p>",
+              "rubric": [
+                { "text": "Finds the marginal profit MR − MC = 22 − 10 = 12 TND per box (π′(100) = 12; about 11.94 if you used the Chapter 2 estimates 21.96 and 10.02)", "points": 0.5 },
+                { "text": "Says that making and selling the 101st box adds about 12 TND to the daily profit, so the workshop should increase production (MR > MC)", "points": 0.5 }
+              ],
+              "model": "Marginal profit: π′(100) = MR − MC = 22 − 10 = 12 TND per box. When the workshop makes 100 boxes a day, making and selling one more box increases the daily profit by about 12 TND. Since MR > MC, it should increase production.",
+              "rows": 3,
+              "explain": "Marginal profit = MR − MC, or π′(q) with π(q) = R(q) − C(q) = −0.06q<sup>2</sup> + 24q − 450, so π′(100) = −12 + 24 = 12. A positive marginal profit means that one more box raises the profit: produce more. Comparing totals (revenue 2,600 > cost 1,250) only shows that the profit is positive; it does not tell you whether to make one more box."
+            },
+            {
+              "type": "numeric", "points": 1, "topic": "Average cost & differentials",
+              "review": "../mathematics-1/ch3-shortcuts.html#average",
+              "prompt": "<p>The average cost is a(q) = C(q)/q. Use the quotient rule to find a′(q), then give a′(100) to 3 decimal places.</p>",
+              "answer": -0.025, "tol": 0.0005,
+              "explain": "Quotient rule with top C(q) and bottom q: a′(q) = [C′(q) · q − C(q) · 1]/q<sup>2</sup>.<br>= [q(0.04q + 6) − (0.02q<sup>2</sup> + 6q + 450)]/q<sup>2</sup> = [0.04q<sup>2</sup> + 6q − 0.02q<sup>2</sup> − 6q − 450]/q<sup>2</sup> = (0.02q<sup>2</sup> − 450)/q<sup>2</sup>.<br>a′(100) = (0.02 × 10,000 − 450)/10,000 = (200 − 450)/10,000 = −250/10,000 = <b>−0.025</b> (TND per box, for each extra box).<br>Check with a′(q) = (MC − AC)/q: AC(100) = 1,250/100 = 12.50 TND per box and MC(100) = 10, so a′(100) = (10 − 12.50)/100 = −0.025 ✓.<br>➜ At 100 boxes, one more box lowers the average cost by about 0.025 TND (25 millimes) per box.<br>Traps: +0.025 reverses the order in the quotient rule; −2.5 = MC − AC forgets to divide by q; 12.5 is a(100), not a′(100)."
+            },
+            {
+              "type": "mcq", "points": 0.5, "topic": "Average cost & differentials",
+              "review": "../mathematics-1/ch3-shortcuts.html#average",
+              "prompt": "<p>Which statement about the average cost at q = 100 is correct?</p>",
+              "options": [
+                "The average cost is rising, because the marginal cost is lower than the average cost.",
+                "The average cost is falling, because the marginal cost is falling.",
+                "The average cost is at its lowest point, because the marginal profit is positive.",
+                "The average cost is falling, because the marginal cost is lower than the average cost."
+              ],
+              "answer": 3,
+              "explain": "a′(q) = (MC − AC)/q. At q = 100, MC = 10 is lower than AC = 12.50, so a′(100) &lt; 0: the average cost is <b>falling</b>. A cheap next box pulls the average down, like a grade below your average. <b>Answer (d).</b><br>(a) gets the rule backwards: MC below AC makes AC fall, not rise.<br>(b) MC = 0.04q + 6 is <i>rising</i>, not falling. What matters is whether MC is below or above AC.<br>(c) The lowest average cost is where MC = AC (next question); the marginal profit has nothing to do with it."
+            },
+            {
+              "type": "numeric", "points": 1, "topic": "Average cost & differentials",
+              "review": "../mathematics-1/ch3-shortcuts.html#average",
+              "prompt": "<p>Find the quantity q at which the average cost is lowest.</p>",
+              "answer": 150, "unit": "boxes", "tol": 0.5,
+              "explain": "The average cost is lowest where a′(q) = 0, that is where MC = AC.<br>(0.02q<sup>2</sup> − 450)/q<sup>2</sup> = 0 → 0.02q<sup>2</sup> = 450 → q<sup>2</sup> = 22,500 → q = <b>150 boxes</b> (q > 0).<br>Check: AC(150) = 0.02 × 150 + 6 + 450/150 = 3 + 6 + 3 = 12 TND and MC(150) = 0.04 × 150 + 6 = 12 TND: MC = AC ✓.<br>Traps: 200 is where MR = MC (30 − 0.08q = 0.04q + 6), the quantity with the highest profit, not the one with the lowest average cost; 21.2 = √450 forgets the 0.02."
+            },
+            {
+              "type": "numeric", "points": 1, "topic": "Average cost & differentials",
+              "review": "../mathematics-1/ch3-shortcuts.html#average",
+              "prompt": "<p>Use a differential (dC = C′(100) · dq) to estimate the extra daily cost of going from 100 to 104 boxes. Give 2 decimal places.</p>",
+              "answer": 40, "unit": "TND", "tol": 0.05,
+              "explain": "dq = 104 − 100 = 4 and C′(100) = 10 TND per box.<br>dC = C′(100) × dq = 10 × 4 = <b>40.00 TND</b>.<br>➜ Making 4 more boxes a day costs about 40 TND more.<br>The exact change is C(104) − C(100) = 1,290.32 − 1,250 = 40.32 TND: close to 40, but it is not the differential that the question asks for.<br>Traps: 10 is the extra cost of one box only; 50 = 12.50 × 4 uses the average cost instead of the marginal cost."
+            }
+          ]
+        },
+        {
+          "id": "p6", "type": "problem", "topic": "Exponential & log derivatives",
+          "review": "../mathematics-1/ch3-shortcuts.html#explog",
+          "prompt": "<p>A Tunisian mobile-payment app had 0.8 million users at the start of 2022. Its number of users is modelled by <b>U(t) = 0.8(1.35)<sup>t</sup></b> million, t years after the start of 2022. (Illustrative figures.)</p>",
+          "parts": [
+            {
+              "type": "numeric", "points": 1, "topic": "Doubling time & half-life",
+              "review": "../mathematics-1/ch1-functions-and-change.html#base-e",
+              "prompt": "<p>According to the model, how long does it take for the number of users to double? Give t to 2 decimal places.</p>",
+              "answer": 2.309685, "unit": "years", "tol": 0.005,
+              "explain": "Doubling: 0.8(1.35)<sup>t</sup> = 1.6 → (1.35)<sup>t</sup> = 2. The 0.8 cancels: a doubling time never depends on the starting value.<br>Take ln: t × ln 1.35 = ln 2 → t = ln 2 ÷ ln 1.35 = 0.693147 ÷ 0.300105 ≈ <b>2.31 years</b>.<br>➜ The number of users doubles about every 2.31 years (2 years and almost 4 months).<br>Traps: 1.98 = ln 2 ÷ 0.35 treats 35% as a continuous rate (that shortcut is for P<sub>0</sub>e<sup>kt</sup>); 2 = 70 ÷ 35 is the Rule of 70, a rough check that is not accurate for a rate as large as 35%."
+            },
+            {
+              "type": "numeric", "points": 1,
+              "prompt": "<p>Find U′(2), in million users per year, to 3 decimal places.</p>",
+              "answer": 0.437552, "unit": "million users per year", "tol": 0.001,
+              "explain": "Rule (a<sup>t</sup>)′ = (ln a) a<sup>t</sup>, with a = 1.35; the 0.8 waits outside:<br>U′(t) = 0.8 · (ln 1.35) · (1.35)<sup>t</sup>, with ln 1.35 ≈ 0.300105.<br>U′(2) = 0.8 × 0.300105 × 1.35<sup>2</sup> = 0.8 × 0.300105 × 1.8225 ≈ <b>0.438 million users per year</b>.<br>(The exact value 0.43755… is very close to the rounding limit: with ln 1.35 rounded to 0.300 you get 0.437, which is also accepted.)<br>Traps: 2.16 = 2 × 0.8 × 1.35 uses the power rule (t · a<sup>t − 1</sup>) on an exponential; 0.510 = 0.35 × U(2) uses 35% as the rate (the right factor is ln 1.35 ≈ 0.300, not 0.35); 1.458 is U(2), the number of users, not its rate of change."
+            },
+            {
+              "type": "text",
+              "prompt": "<p>Interpret U′(2) in one sentence with units.</p>",
+              "rubric": [
+                { "text": "Says that at the start of 2024 (t = 2) the number of users is increasing", "points": 0.5 },
+                { "text": "Gives the rate with the right units: about 0.438 million (about 438,000) users per year (or your own value from (b), in users per year)", "points": 0.5 }
+              ],
+              "model": "At the start of 2024, the number of users of the app is increasing at a rate of about 0.438 million (about 438,000) users per year.",
+              "rows": 3,
+              "explain": "A derivative is a speed of change: say when (t = 2 is the start of 2024), what changes (the number of users), how much and per what (0.438 million users per year). U′(2) is not the number of users added during 2024: during the year the rate keeps increasing, and in fact U(3) − U(2) ≈ 0.51 million."
+            },
+            {
+              "type": "mcq", "points": 1,
+              "prompt": "<p>Which statement about the relative rate of change U′(t)/U(t) is correct?</p>",
+              "options": [
+                "It is about 30.0% per year at every time t, because U′(t)/U(t) = ln 1.35.",
+                "It is 35% per year at every time t, because the growth factor is 1.35.",
+                "It increases over time, because U′(t) increases over time.",
+                "It is about 135% per year at every time t, because U′(t)/U(t) = 1.35."
+              ],
+              "answer": 0,
+              "explain": "U′(t)/U(t) = [0.8 (ln 1.35)(1.35)<sup>t</sup>] ÷ [0.8 (1.35)<sup>t</sup>] = ln 1.35 ≈ 0.300 = <b>30.0% per year</b>, the same at every t. <b>Answer (a).</b><br>Why not 35%? Over a whole year the number of users is multiplied by 1.35 (+35% per year). But f′/f is an <i>instantaneous</i> rate: it is the continuous growth rate k = ln a of Chapter 1 (U = 0.8e<sup>0.300t</sup>). Growing continuously at 30.0% per year gives +35% over one year, because the growth compounds.<br>(b) confuses the yearly growth rate (35%) with the instantaneous relative rate.<br>(c) U′(t) does increase, but U(t) increases in the same proportion, so the ratio stays constant.<br>(d) confuses the growth factor 1.35 with a rate."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../assets/exam.js"></script>
+</body>
+</html>

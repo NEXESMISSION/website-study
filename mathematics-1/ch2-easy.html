@@ -1,0 +1,1698 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Ch 2 · The Derivative (Easy Mode) · Mathematics I</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="math" data-lesson="math-ch2-easy">
+
+<header class="topbar"><div class="topbar-in">
+  <nav class="crumbs"><a href="../index.html">Course Folder</a><span class="sep">/</span><a href="../index.html#math">Mathematics I</a><span class="sep">/</span><span class="here">Ch 2 · Easy mode</span></nav>
+  <div class="score" id="score"></div>
+</div></header>
+
+<div class="page">
+  <aside class="toc" id="toc"></aside>
+  <main>
+
+    <header class="hero">
+      <span class="kicker"><span class="dot"></span>Mathematics I · Chapter 2 · Easy mode</span>
+      <h1>The Derivative, Step by Step</h1>
+      <p class="lede">You can start from zero. We go in tiny steps: read a little, then answer a quick question. The page tells you at once if you are right, and why. When this feels easy, move on to the <a href="ch2-derivative.html">full Chapter 2 lesson</a>.</p>
+      <div class="meta">
+        <span class="chip hot">Chapter 2 quiz soon · 30 min on Moodle</span>
+        <span class="chip c">≈ 2 h · 10 short steps</span>
+        <span class="chip">90 quick questions + 20-question final test</span>
+        <span class="chip">Textbook: Hughes-Hallett, Applied Calculus, Ch 2</span>
+      </div>
+      <div class="goals">
+        <h3>By the end you can</h3>
+        <ul>
+          <li>Find a slope and an average rate of change.</li>
+          <li>Explain "on average" versus "right now" (instantaneous).</li>
+          <li>Estimate f′(a) from a table of numbers.</li>
+          <li>Say if f goes up or down from the sign of f′.</li>
+          <li>Give the units of f′ and explain f′(a) in one sentence.</li>
+          <li>Read concave up or concave down from a table or a graph.</li>
+          <li>Use marginal cost and marginal revenue to decide: make one more, or not?</li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ===================== 01 ===================== -->
+    <section class="lesson-section" id="start" data-title="What we are learning">
+      <div class="sec-num">01</div>
+      <h2>What we are learning (2 minutes)</h2>
+
+      <p>This chapter asks one simple question: <strong>how fast is something changing?</strong></p>
+      <p>Example. You drive from Tunis to Sousse on the highway. The trip is 140 km. It takes 2 hours.</p>
+      <p>Your <strong>average speed</strong> is 140 ÷ 2 = <strong>70 km/h</strong>.</p>
+      <p>But at 10:30 you look at the speedometer. It says <strong>110 km/h</strong>. That is your speed <em>right now</em>.</p>
+      <div class="big-idea">The speed "right now" has a special name in maths: the <strong>derivative</strong>.</div>
+      <p>Speed is how fast distance changes. The same idea works for everything: dinars per day, people per year, °C per hour.</p>
+      <p><strong>In French:</strong> dérivée = derivative · vitesse moyenne = average speed · vitesse instantanée = speed right now.</p>
+
+      <h3>The plan: 10 small steps</h3>
+      <ol>
+        <li>What we are learning (you are here).</li>
+        <li>Slope of a line (from Chapter 1).</li>
+        <li>Average rate of change (between two points).</li>
+        <li>Instantaneous rate of change = the derivative f′(a).</li>
+        <li>Estimate f′(a) from a table of numbers.</li>
+        <li>The sign of f′: is f going up or down?</li>
+        <li>What f′ means in words, with units.</li>
+        <li>The second derivative: is the curve bending up or down?</li>
+        <li>Marginal cost and marginal revenue (business).</li>
+        <li>Final test: 20 questions.</li>
+      </ol>
+      <p>No formulas like "the derivative of x² is 2x" here. Those shortcuts are Chapter 3. Here we <strong>estimate</strong> and <strong>explain</strong>.</p>
+
+      <h3>First skill: how to read f(x)</h3>
+      <p>We write <strong>f(x)</strong>. Read it "f of x".</p>
+      <p>x is the <strong>input</strong> (what you put in). f(x) is the <strong>output</strong> (what you get out).</p>
+      <div class="box example"><span class="label">Worked example · temperature in Tozeur</span>
+        <p>T = f(h) is the temperature (°C) in Tozeur, h hours after midnight.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>h (hour)</th><th class="n">6</th><th class="n">9</th><th class="n">12</th><th class="n">15</th><th class="n">18</th></tr></thead>
+          <tbody><tr><td>T (°C)</td><td class="n">22</td><td class="n">30</td><td class="n">38</td><td class="n">41</td><td class="n">35</td></tr></tbody>
+        </table></div>
+        <p><strong>Step 1.</strong> To find f(12), look for 12 in the top row.</p>
+        <p><strong>Step 2.</strong> Read the number under it: 38.</p>
+        <p><strong>Step 3.</strong> So f(12) = 38. In words: at 12:00 (noon) it is 38 °C.</p>
+      </div>
+      <div class="box tip"><span class="label">Memory trick</span><p>f(input) = output. The number <strong>inside the brackets</strong> is always the input.</p></div>
+      <p><strong>In French:</strong> fonction = function · variable = input · image f(x) = output.</p>
+
+      <h3>Quick check</h3>
+      <div class="exercises">
+        <div class="ex" id="q1" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q1</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Use the Tozeur table. What is f(9)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>38</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>9</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>30</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>22</span></button>
+          </div>
+          <div class="why" hidden>Find 9 in the top row (h). The number under it is 30. So f(9) = 30 °C.</div>
+        </div>
+        <div class="ex" id="q2" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q2</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">In the Tozeur table, when is the temperature 41 °C?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>At h = 15 (3 pm)</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>At h = 41</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>At h = 12 (noon)</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>At h = 18 (6 pm)</span></button>
+          </div>
+          <div class="why" hidden>41 is an <strong>output</strong>, so look for it in the T row. It is under h = 15, so at 3 pm.</div>
+        </div>
+        <div class="ex" id="q3" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q3</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">What does f(18) = 35 mean?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>At 35:00 it is 18 °C</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>It gets 35 °C hotter</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>It is 18 °C at 6 pm</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>At 18:00 it is 35 °C</span></button>
+          </div>
+          <div class="why" hidden>Inside the brackets is the input (the hour): 18. The result is the output (the temperature): 35 °C.</div>
+        </div>
+        <div class="ex" id="q4" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q4</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">A car drives 300 km in 3 hours. What is its average speed?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>900 km/h</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>100 km/h</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>300 km/h</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>33 km/h</span></button>
+          </div>
+          <div class="why" hidden>Average speed = distance ÷ time = 300 ÷ 3 = 100 km/h.</div>
+        </div>
+        <div class="ex" id="q5" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q5</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Which one tells you how fast the car goes <em>right now</em>?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>Total distance ÷ total time</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>The road sign to Sousse</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>The speedometer</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>The clock in the car</span></button>
+          </div>
+          <div class="why" hidden>Total distance ÷ total time is the <em>average</em> for the whole trip. The speedometer shows the speed at this moment: the instantaneous speed.</div>
+        </div>
+        <div class="ex" id="q6" data-answer="T">
+          <div class="ex-head"><span class="ex-n">Q6</span><span class="ex-type">True or false</span></div>
+          <p class="q">The derivative tells you how fast something is changing at one moment.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>Yes. This is the main idea of the chapter: derivative = rate of change "right now".</div>
+        </div>
+        <div class="ex" id="q7" data-answer="F">
+          <div class="ex-head"><span class="ex-n">Q7</span><span class="ex-type">True or false</span></div>
+          <p class="q">Your average speed for the trip was 70 km/h. So the speedometer showed 70 km/h the whole time.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>An average hides the details. You stopped at the toll (0 km/h) and sometimes drove at 110 km/h. On average it was 70.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 02 ===================== -->
+    <section class="lesson-section" id="slope" data-title="Slope of a line">
+      <div class="sec-num">02</div>
+      <h2>Slope of a line, again</h2>
+
+      <p>A straight line can go up, go down, or stay flat.</p>
+      <p>The <strong>slope</strong> is one number. It tells you how steep the line is.</p>
+      <div class="formula">slope m = (y₂ − y₁) / (x₂ − x₁) = Δy / Δx = rise / run</div>
+      <p>Δ is the Greek letter "delta". It just means <strong>"change in"</strong>. Δy = change in y. Δx = change in x.</p>
+      <p><strong>In French:</strong> slope = <em>la pente</em> (coefficient directeur) · Δ = « variation de ».</p>
+      <figure>
+        <svg viewBox="0 0 420 320" role="img" aria-label="A line through (1, 3) and (4, 9). The run is 3 and the rise is 6, so the slope is 2."><defs><marker id="ea1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0F1726"/></marker></defs><rect x="0" y="0" width="420" height="320" fill="#FFFFFF"/><line x1="103" y1="270" x2="103" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="162" y1="270" x2="162" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="221" y1="270" x2="221" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="280" y1="270" x2="280" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="339" y1="270" x2="339" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="398" y1="270" x2="398" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="44" y1="221.2" x2="398" y2="221.2" stroke="#E7E9EE" stroke-width="1"/><line x1="44" y1="172.4" x2="398" y2="172.4" stroke="#E7E9EE" stroke-width="1"/><line x1="44" y1="123.6" x2="398" y2="123.6" stroke="#E7E9EE" stroke-width="1"/><line x1="44" y1="74.8" x2="398" y2="74.8" stroke="#E7E9EE" stroke-width="1"/><line x1="44" y1="26" x2="398" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="44" y1="270" x2="412" y2="270" stroke="#0F1726" stroke-width="1.5" marker-end="url(#ea1)"/><line x1="44" y1="270" x2="44" y2="14" stroke="#0F1726" stroke-width="1.5" marker-end="url(#ea1)"/><text x="44" y="290" font-size="14" fill="#667085" text-anchor="middle">0</text><text x="103" y="290" font-size="14" fill="#667085" text-anchor="middle">1</text><text x="162" y="290" font-size="14" fill="#667085" text-anchor="middle">2</text><text x="221" y="290" font-size="14" fill="#667085" text-anchor="middle">3</text><text x="280" y="290" font-size="14" fill="#667085" text-anchor="middle">4</text><text x="339" y="290" font-size="14" fill="#667085" text-anchor="middle">5</text><text x="398" y="290" font-size="14" fill="#667085" text-anchor="middle">6</text><text x="37" y="275" font-size="14" fill="#667085" text-anchor="end">0</text><text x="37" y="226.2" font-size="14" fill="#667085" text-anchor="end">2</text><text x="37" y="177.4" font-size="14" fill="#667085" text-anchor="end">4</text><text x="37" y="128.6" font-size="14" fill="#667085" text-anchor="end">6</text><text x="37" y="79.8" font-size="14" fill="#667085" text-anchor="end">8</text><text x="37" y="31" font-size="14" fill="#667085" text-anchor="end">10</text><text x="400" y="308" font-size="15" font-weight="700" fill="#0F1726" text-anchor="end">x</text><text x="54" y="24" font-size="15" font-weight="700" fill="#0F1726">y</text><line x1="44" y1="245.6" x2="309.5" y2="26" stroke="#C2410C" stroke-width="3"/><line x1="103" y1="196.8" x2="280" y2="196.8" stroke="#12805C" stroke-width="2.5" stroke-dasharray="6 4"/><line x1="280" y1="196.8" x2="280" y2="50.4" stroke="#12805C" stroke-width="2.5" stroke-dasharray="6 4"/><text x="191.5" y="218.8" font-size="15" fill="#12805C" font-weight="700" text-anchor="middle">run = 4 − 1 = 3</text><text x="288" y="123.6" font-size="15" fill="#12805C" font-weight="700">rise =</text><text x="288" y="141.6" font-size="15" fill="#12805C" font-weight="700">9 − 3 = 6</text><circle cx="103" cy="196.8" r="5" fill="#C2410C" stroke="#FFFFFF" stroke-width="2"/><circle cx="280" cy="50.4" r="5" fill="#C2410C" stroke="#FFFFFF" stroke-width="2"/><text x="95" y="186.8" font-size="15" fill="#0F1726" font-weight="700" text-anchor="end">(1, 3)</text><text x="270" y="46.4" font-size="15" fill="#0F1726" font-weight="700" text-anchor="end">(4, 9)</text></svg>
+        <figcaption>Figure 1 · From (1, 3) to (4, 9): you go 3 to the right (run) and 6 up (rise). Slope = 6 ÷ 3 = 2.</figcaption>
+      </figure>
+      <div class="box example"><span class="label">Worked example 1 · points (1, 3) and (4, 9)</span>
+        <p><strong>Step 1.</strong> Rise: Δy = 9 − 3 = 6.</p>
+        <p><strong>Step 2.</strong> Run: Δx = 4 − 1 = 3.</p>
+        <p><strong>Step 3.</strong> Slope = 6 ÷ 3 = <strong>2</strong>.</p>
+        <p>Meaning: each time x goes 1 step to the right, y goes 2 up.</p>
+      </div>
+      <div class="box example"><span class="label">Worked example 2 · points (0, 10) and (5, 0)</span>
+        <p><strong>Step 1.</strong> Rise: Δy = 0 − 10 = −10.</p>
+        <p><strong>Step 2.</strong> Run: Δx = 5 − 0 = 5.</p>
+        <p><strong>Step 3.</strong> Slope = −10 ÷ 5 = <strong>−2</strong>. Negative, so the line goes down.</p>
+      </div>
+      <figure>
+        <svg viewBox="0 0 420 190" role="img" aria-label="Three lines: one going up has a positive slope, a flat one has slope zero, one going down has a negative slope."><rect x="0" y="0" width="420" height="190" fill="#FFFFFF"/><line x1="14" y1="124" x2="130" y2="124" stroke="#0F1726" stroke-width="1.5"/><line x1="14" y1="14" x2="14" y2="124" stroke="#0F1726" stroke-width="1.5"/><line x1="24" y1="112" x2="122" y2="28" stroke="#12805C" stroke-width="3.5"/><text x="72" y="150" font-size="16" fill="#12805C" font-weight="700" text-anchor="middle">slope > 0</text><text x="72" y="170" font-size="15" fill="#667085" text-anchor="middle">goes up</text><line x1="154" y1="124" x2="270" y2="124" stroke="#0F1726" stroke-width="1.5"/><line x1="154" y1="14" x2="154" y2="124" stroke="#0F1726" stroke-width="1.5"/><line x1="164" y1="69" x2="262" y2="69" stroke="#7A8396" stroke-width="3.5"/><text x="212" y="150" font-size="16" fill="#7A8396" font-weight="700" text-anchor="middle">slope = 0</text><text x="212" y="170" font-size="15" fill="#667085" text-anchor="middle">flat</text><line x1="294" y1="124" x2="410" y2="124" stroke="#0F1726" stroke-width="1.5"/><line x1="294" y1="14" x2="294" y2="124" stroke="#0F1726" stroke-width="1.5"/><line x1="304" y1="28" x2="402" y2="112" stroke="#C4372D" stroke-width="3.5"/><text x="352" y="150" font-size="16" fill="#C4372D" font-weight="700" text-anchor="middle">slope < 0</text><text x="352" y="170" font-size="15" fill="#667085" text-anchor="middle">goes down</text></svg>
+        <figcaption>Figure 2 · Read every graph from left to right, like a road.</figcaption>
+      </figure>
+      <div class="box tip"><span class="label">Memory trick</span><p>"Rise over run." Walk from left to right: going up → slope +. Going down → slope −. Flat → slope 0.</p></div>
+      <div class="box example"><span class="label">Worked example 3 · a taxi in Tunis (slope with units)</span>
+        <p>C(x) = price in dinars for a trip of x km. C(2) = 2 DT and C(6) = 4 DT.</p>
+        <p><strong>Step 1.</strong> Rise: 4 − 2 = 2 dinars.</p>
+        <p><strong>Step 2.</strong> Run: 6 − 2 = 4 km.</p>
+        <p><strong>Step 3.</strong> Slope = 2 ÷ 4 = <strong>0.5 dinar per km</strong>. Each extra km costs 0.5 DT.</p>
+        <p>Units of a slope: output units ÷ input units → "dinars <strong>per</strong> km".</p>
+      </div>
+      <p>In Chapter 1 you wrote a line as y = b + mx. The number m (with the x) is the slope.</p>
+      <div class="box warn"><span class="label">Common mistake</span><p>Keep the same order. If you do y₂ − y₁ on top, do x₂ − x₁ at the bottom. Never mix them.</p></div>
+
+      <h3>Quick check</h3>
+      <div class="exercises">
+        <div class="ex" id="q8" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q8</span><span class="ex-type">Calculation</span></div>
+          <p class="q">What is the slope of the line through (2, 5) and (4, 11)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>6</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>3</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>2</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>1/3</span></button>
+          </div>
+          <div class="why" hidden>Rise = 11 − 5 = 6. Run = 4 − 2 = 2. Slope = 6 ÷ 2 = 3. (6 is only the rise. 1/3 is run ÷ rise: upside down.)</div>
+        </div>
+        <div class="ex" id="q9" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q9</span><span class="ex-type">Calculation</span></div>
+          <p class="q">What is the slope of the line through (0, 8) and (4, 0)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>2</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>−0.5</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>8</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>−2</span></button>
+          </div>
+          <div class="why" hidden>Rise = 0 − 8 = −8. Run = 4 − 0 = 4. Slope = −8 ÷ 4 = −2. The line goes down, so the slope is negative.</div>
+        </div>
+        <div class="ex" id="q10" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q10</span><span class="ex-type">Calculation</span></div>
+          <p class="q">What is the slope of the line through (1, 7) and (5, 7)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>0</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>7</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>1</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>4</span></button>
+          </div>
+          <div class="why" hidden>Rise = 7 − 7 = 0. Run = 4. Slope = 0 ÷ 4 = 0. The line is flat (horizontal).</div>
+        </div>
+        <div class="ex" id="q11" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q11</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">A line goes down from left to right. Its slope is:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>negative</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>positive</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>zero</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>always −1</span></button>
+          </div>
+          <div class="why" hidden>Going down means y gets smaller when x gets bigger. So the rise is negative and the slope is negative (not always −1: it can be −0.5, −3…).</div>
+        </div>
+        <div class="ex" id="q12" data-answer="F">
+          <div class="ex-head"><span class="ex-n">Q12</span><span class="ex-type">True or false</span></div>
+          <p class="q">A line that goes down from left to right has a positive slope.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>Going down = negative slope. Going up = positive slope.</div>
+        </div>
+        <div class="ex" id="q13" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q13</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">What does Δx mean?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>Δ multiplied by x</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>the biggest value of x</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>the derivative of x</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>the change in x</span></button>
+          </div>
+          <div class="why" hidden>Δ means "change in". Δx = x₂ − x₁.</div>
+        </div>
+        <div class="ex" id="q14" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q14</span><span class="ex-type">Calculation</span></div>
+          <p class="q">A phone plan: C(x) = cost in dinars for x GB. C(1) = 5 and C(3) = 9. What is the slope?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>4 dinars per GB</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>2 dinars per GB</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>0.5 GB per dinar</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>9 dinars</span></button>
+          </div>
+          <div class="why" hidden>Rise = 9 − 5 = 4 dinars. Run = 3 − 1 = 2 GB. Slope = 4 ÷ 2 = 2 dinars per GB.</div>
+        </div>
+        <div class="ex" id="q15" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q15</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">For the taxi, C is in dinars and x is in km. The slope is measured in:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>km per dinar</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>dinars</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>dinars per km</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>km</span></button>
+          </div>
+          <div class="why" hidden>Slope = output ÷ input = dinars ÷ km = dinars per km.</div>
+        </div>
+        <div class="ex" id="q16" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q16</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">What is the slope of y = 4 + 3x?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>4</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>7</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>1</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>3</span></button>
+          </div>
+          <div class="why" hidden>In y = b + mx, the slope is m, the number in front of x. Here m = 3. (4 is where the line cuts the y-axis.)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 03 ===================== -->
+    <section class="lesson-section" id="average-rate" data-title="Average rate of change">
+      <div class="sec-num">03</div>
+      <h2>Average rate of change</h2>
+
+      <p>Real life is rarely a straight line. A car speeds up and slows down. So its graph is a <strong>curve</strong>.</p>
+      <p>On a curve, take two points. Compute the slope between them. This is the <strong>average rate of change</strong>.</p>
+      <div class="formula">Average rate of change of f from a to b = (f(b) − f(a)) / (b − a)</div>
+      <p>It is the slope of the straight line that joins the two points. This line is called a <strong>secant line</strong>.</p>
+      <p><strong>In French:</strong> taux de variation moyen = average rate of change · sécante = secant line.</p>
+      <div class="box example"><span class="label">Worked example 1 · Tunis → Sousse</span>
+        <p>d(t) = distance from Tunis (km) after t hours.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>t (hours)</th><th class="n">0</th><th class="n">0.5</th><th class="n">1</th><th class="n">1.5</th><th class="n">2</th></tr></thead>
+          <tbody><tr><td>d (km)</td><td class="n">0</td><td class="n">40</td><td class="n">85</td><td class="n">120</td><td class="n">140</td></tr></tbody>
+        </table></div>
+        <p>Average rate from t = 0 to t = 2:</p>
+        <p><strong>Step 1.</strong> Change in distance: 140 − 0 = 140 km.</p>
+        <p><strong>Step 2.</strong> Change in time: 2 − 0 = 2 hours.</p>
+        <p><strong>Step 3.</strong> 140 ÷ 2 = <strong>70 km/h</strong>.</p>
+      </div>
+      <div class="box example"><span class="label">Worked example 2 · a shorter interval</span>
+        <p>Average rate from t = 0.5 to t = 1:</p>
+        <p>(85 − 40) / (1 − 0.5) = 45 / 0.5 = <strong>90 km/h</strong>.</p>
+        <p>Dividing by 0.5 is the same as multiplying by 2. In that half hour, the car was faster than its trip average.</p>
+      </div>
+      <figure>
+        <svg viewBox="0 0 420 320" role="img" aria-label="Graph of the car's distance d against time t from 0 to 2 hours. A grey secant from t = 0 to t = 2 has slope 70; an orange secant from t = 0.5 to t = 1 has slope 90."><defs><marker id="ea2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0F1726"/></marker></defs><rect x="0" y="0" width="420" height="320" fill="#FFFFFF"/><line x1="137" y1="270" x2="137" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="224" y1="270" x2="224" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="311" y1="270" x2="311" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="398" y1="270" x2="398" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="50" y1="221.2" x2="398" y2="221.2" stroke="#E7E9EE" stroke-width="1"/><line x1="50" y1="172.4" x2="398" y2="172.4" stroke="#E7E9EE" stroke-width="1"/><line x1="50" y1="123.6" x2="398" y2="123.6" stroke="#E7E9EE" stroke-width="1"/><line x1="50" y1="74.8" x2="398" y2="74.8" stroke="#E7E9EE" stroke-width="1"/><line x1="50" y1="26" x2="398" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="50" y1="270" x2="412" y2="270" stroke="#0F1726" stroke-width="1.5" marker-end="url(#ea2)"/><line x1="50" y1="270" x2="50" y2="14" stroke="#0F1726" stroke-width="1.5" marker-end="url(#ea2)"/><text x="50" y="290" font-size="14" fill="#667085" text-anchor="middle">0</text><text x="137" y="290" font-size="14" fill="#667085" text-anchor="middle">0.5</text><text x="224" y="290" font-size="14" fill="#667085" text-anchor="middle">1</text><text x="311" y="290" font-size="14" fill="#667085" text-anchor="middle">1.5</text><text x="398" y="290" font-size="14" fill="#667085" text-anchor="middle">2</text><text x="43" y="275" font-size="14" fill="#667085" text-anchor="end">0</text><text x="43" y="226.2" font-size="14" fill="#667085" text-anchor="end">30</text><text x="43" y="177.4" font-size="14" fill="#667085" text-anchor="end">60</text><text x="43" y="128.6" font-size="14" fill="#667085" text-anchor="end">90</text><text x="43" y="79.8" font-size="14" fill="#667085" text-anchor="end">120</text><text x="43" y="31" font-size="14" fill="#667085" text-anchor="end">150</text><text x="400" y="308" font-size="15" font-weight="700" fill="#0F1726" text-anchor="end">t (hours)</text><text x="60" y="24" font-size="15" font-weight="700" fill="#0F1726">d (km)</text><path d="M50,270 C64.5,259.2 108,228 137,204.9 C166,181.9 195,153.4 224,131.7 C253,110 282,89.7 311,74.8 C340,59.9 383.5,47.7 398,42.3" fill="none" stroke="#0F1726" stroke-width="2.5"/><line x1="50" y1="270" x2="398" y2="42.3" stroke="#7A8396" stroke-width="2.5" stroke-dasharray="7 5"/><line x1="137" y1="204.9" x2="224" y2="131.7" stroke="#C2410C" stroke-width="3.5"/><circle cx="50" cy="270" r="4.5" fill="#0F1726" stroke="#FFFFFF" stroke-width="2"/><circle cx="137" cy="204.9" r="4.5" fill="#0F1726" stroke="#FFFFFF" stroke-width="2"/><circle cx="224" cy="131.7" r="4.5" fill="#0F1726" stroke="#FFFFFF" stroke-width="2"/><circle cx="311" cy="74.8" r="4.5" fill="#0F1726" stroke="#FFFFFF" stroke-width="2"/><circle cx="398" cy="42.3" r="4.5" fill="#0F1726" stroke="#FFFFFF" stroke-width="2"/><circle cx="137" cy="204.9" r="5" fill="#C2410C" stroke="#FFFFFF" stroke-width="2"/><circle cx="224" cy="131.7" r="5" fill="#C2410C" stroke="#FFFFFF" stroke-width="2"/><text x="267.5" y="162.6" font-size="14" fill="#7A8396" font-weight="700">secant 0 → 2:</text><text x="267.5" y="179.6" font-size="14" fill="#7A8396" font-weight="700">slope 70 km/h</text><text x="58.7" y="107.3" font-size="14" fill="#C2410C" font-weight="700">secant 0.5 → 1:</text><text x="58.7" y="124.3" font-size="14" fill="#C2410C" font-weight="700">slope 90 km/h</text></svg>
+        <figcaption>Figure 3 · The car's graph is a curve. Each secant line joins two points. Its slope is the average speed between them.</figcaption>
+      </figure>
+      <div class="box tip"><span class="label">Memory trick</span><p>Average rate = (new − old) ÷ (time between). It is just "rise over run" between two points of the curve.</p></div>
+      <div class="box example"><span class="label">Worked example 3 · Tozeur in the evening (a negative rate)</span>
+        <p>f(15) = 41 °C and f(18) = 35 °C.</p>
+        <p>(35 − 41) / (18 − 15) = −6 / 3 = <strong>−2 °C per hour</strong>.</p>
+        <p>Negative: the temperature is going down, by 2 °C per hour on average.</p>
+      </div>
+      <div class="box warn"><span class="label">Common mistake</span><p>Forgetting the units. They are always "output units <strong>per</strong> input unit": km per hour, °C per hour, people per year.</p></div>
+
+      <h3>Quick check</h3>
+      <p>Use the Tunis → Sousse table for Q17 to Q20.</p>
+      <div class="exercises">
+        <div class="ex" id="q17" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q17</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Average speed from t = 1 to t = 2?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>55 km/h</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>140 km/h</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>85 km/h</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>70 km/h</span></button>
+          </div>
+          <div class="why" hidden>(140 − 85) / (2 − 1) = 55 / 1 = 55 km/h.</div>
+        </div>
+        <div class="ex" id="q18" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q18</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Average speed from t = 1.5 to t = 2?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>20 km/h</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>40 km/h</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>10 km/h</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>140 km/h</span></button>
+          </div>
+          <div class="why" hidden>(140 − 120) / (2 − 1.5) = 20 / 0.5 = 40 km/h. Careful: divide by 0.5 (the time between), not by 2.</div>
+        </div>
+        <div class="ex" id="q19" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q19</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Average speed from t = 0 to t = 1?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>42.5 km/h</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>170 km/h</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>85 km/h</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>45 km/h</span></button>
+          </div>
+          <div class="why" hidden>(85 − 0) / (1 − 0) = 85 km/h.</div>
+        </div>
+        <div class="ex" id="q20" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q20</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">The average rate of change of the car's distance is measured in:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>km per hour</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>hours per km</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>km</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>hours</span></button>
+          </div>
+          <div class="why" hidden>Output (km) per input (hour): km per hour.</div>
+        </div>
+        <p>A town's population P (thousands): 2010: 200 · 2014: 212 · 2018: 228 · 2022: 248. Use it for Q21 to Q23.</p>
+        <div class="ex" id="q21" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q21</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Average rate of change of P from 2010 to 2022?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>48 thousand people per year</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>12 thousand people per year</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>20.7 thousand people per year</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>4 thousand people per year</span></button>
+          </div>
+          <div class="why" hidden>(248 − 200) / (2022 − 2010) = 48 / 12 = 4 thousand people per year. 48 is the total change, not the rate.</div>
+        </div>
+        <div class="ex" id="q22" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q22</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Average rate of change of P from 2018 to 2022?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>20 thousand per year</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>4 thousand per year</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>5 thousand per year</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>57 thousand per year</span></button>
+          </div>
+          <div class="why" hidden>(248 − 228) / 4 = 20 / 4 = 5 thousand people per year.</div>
+        </div>
+        <div class="ex" id="q23" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q23</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Average rate of change of P from 2010 to 2014?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>12 thousand per year</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>3 thousand per year</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>4 thousand per year</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>53 thousand per year</span></button>
+          </div>
+          <div class="why" hidden>(212 − 200) / 4 = 12 / 4 = 3 thousand people per year.</div>
+        </div>
+        <div class="ex" id="q24" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q24</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Tozeur: f(12) = 38 °C and f(18) = 35 °C. Average rate of change from 12 to 18?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>0.5 °C per hour</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>−3 °C per hour</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>−0.5 °C per hour</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>−2 °C per hour</span></button>
+          </div>
+          <div class="why" hidden>(35 − 38) / (18 − 12) = −3 / 6 = −0.5 °C per hour. Negative because it got cooler. (−3 is the total change.)</div>
+        </div>
+        <div class="ex" id="q25" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q25</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">The average rate of change from a to b is the slope of:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>the line through (a, f(a)) and (b, f(b))</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>the x-axis between a and b</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>the horizontal line y = f(a)</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>the line through (0, 0) and (a, b)</span></button>
+          </div>
+          <div class="why" hidden>It is the secant line: the straight line that joins the two points of the graph at a and at b.</div>
+        </div>
+        <div class="ex" id="q26" data-answer="T">
+          <div class="ex-head"><span class="ex-n">Q26</span><span class="ex-type">True or false</span></div>
+          <p class="q">A negative average rate of change means the quantity went down.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>Negative means f(b) is smaller than f(a): the quantity decreased between a and b.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 04 ===================== -->
+    <section class="lesson-section" id="instant" data-title="Average → instantaneous">
+      <div class="sec-num">04</div>
+      <h2>From average to instantaneous</h2>
+
+      <p>The average rate uses <strong>two</strong> points. But we want the rate at <strong>one</strong> point (one moment).</p>
+      <p>Trick: move the second point closer and closer. The average rate gets closer and closer to one number.</p>
+      <p>That number is the <strong>instantaneous rate of change</strong>. We call it the <strong>derivative</strong>.</p>
+      <div class="box def"><span class="label">Definition</span><span class="term">The derivative at a point, f′(a)</span>
+        <p>f′(a) (read "f prime of a") is the instantaneous rate of change of f at x = a.</p>
+        <p>On the graph, f′(a) is the slope of the <strong>tangent line</strong> at a: the line that just touches the curve at that point.</p>
+      </div>
+      <div class="formula">f′(a) ≈ (f(a + h) − f(a)) / h &nbsp; when h is very small</div>
+      <p>h is a small step. The exact f′(a) is the <strong>limit</strong> of this when h goes to 0.</p>
+      <p><strong>In French:</strong> dérivée / nombre dérivé f′(a) · tangente = tangent line · taux de variation instantané = instantaneous rate of change.</p>
+      <div class="box example"><span class="label">Worked example 1 · f(x) = x² at a = 3</span>
+        <p>f(3) = 3² = 9. Take a second point at 3 + h, then smaller and smaller h.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th class="n">h</th><th>Second point</th><th>Average rate</th></tr></thead>
+          <tbody>
+            <tr><td class="n">1</td><td>(4, 16)</td><td>(16 − 9) / 1 = 7</td></tr>
+            <tr><td class="n">0.5</td><td>(3.5, 12.25)</td><td>(12.25 − 9) / 0.5 = 6.5</td></tr>
+            <tr><td class="n">0.1</td><td>(3.1, 9.61)</td><td>(9.61 − 9) / 0.1 = 6.1</td></tr>
+            <tr><td class="n">0.01</td><td>(3.01, 9.0601)</td><td>(9.0601 − 9) / 0.01 = 6.01</td></tr>
+          </tbody>
+        </table></div>
+        <p>The numbers go 7 → 6.5 → 6.1 → 6.01. They get closer and closer to <strong>6</strong>.</p>
+        <p>So <strong>f′(3) = 6</strong>. At x = 3, the graph climbs 6 units up for 1 unit right.</p>
+      </div>
+      <figure>
+        <svg viewBox="0 0 420 400" role="img" aria-label="Graph of y = x squared. Two secant segments from P(3, 9) with slopes 7 and 6.5 get close to the tangent line at P, which has slope 6."><defs><marker id="ea3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0F1726"/></marker></defs><rect x="0" y="0" width="420" height="400" fill="#FFFFFF"/><line x1="117.8" y1="350" x2="117.8" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="191.5" y1="350" x2="191.5" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="265.3" y1="350" x2="265.3" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="339" y1="350" x2="339" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="44" y1="269" x2="398" y2="269" stroke="#E7E9EE" stroke-width="1"/><line x1="44" y1="188" x2="398" y2="188" stroke="#E7E9EE" stroke-width="1"/><line x1="44" y1="107" x2="398" y2="107" stroke="#E7E9EE" stroke-width="1"/><line x1="44" y1="26" x2="398" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="44" y1="350" x2="412" y2="350" stroke="#0F1726" stroke-width="1.5" marker-end="url(#ea3)"/><line x1="44" y1="350" x2="44" y2="14" stroke="#0F1726" stroke-width="1.5" marker-end="url(#ea3)"/><text x="44" y="370" font-size="14" fill="#667085" text-anchor="middle">2</text><text x="117.8" y="370" font-size="14" fill="#667085" text-anchor="middle">2.5</text><text x="191.5" y="370" font-size="14" fill="#667085" text-anchor="middle">3</text><text x="265.3" y="370" font-size="14" fill="#667085" text-anchor="middle">3.5</text><text x="339" y="370" font-size="14" fill="#667085" text-anchor="middle">4</text><text x="37" y="355" font-size="14" fill="#667085" text-anchor="end">0</text><text x="37" y="274" font-size="14" fill="#667085" text-anchor="end">5</text><text x="37" y="193" font-size="14" fill="#667085" text-anchor="end">10</text><text x="37" y="112" font-size="14" fill="#667085" text-anchor="end">15</text><text x="37" y="31" font-size="14" fill="#667085" text-anchor="end">20</text><text x="400" y="388" font-size="15" font-weight="700" fill="#0F1726" text-anchor="end">x</text><text x="54" y="24" font-size="15" font-weight="700" fill="#0F1726">y</text><path d="M44,285.2 L48.4,283.2 L52.9,281.2 L57.3,279.2 L61.7,277.2 L66.2,275.1 L70.6,273 L75,270.8 L79.5,268.7 L83.9,266.5 L88.3,264.3 L92.8,262 L97.2,259.7 L101.6,257.4 L106.1,255.1 L110.5,252.7 L114.9,250.3 L119.4,247.9 L123.8,245.4 L128.2,242.9 L132.7,240.4 L137.1,237.8 L141.5,235.3 L146,232.7 L150.4,230 L154.8,227.4 L159.3,224.7 L163.7,221.9 L168.1,219.2 L172.6,216.4 L177,213.6 L181.4,210.8 L185.9,207.9 L190.3,205 L194.7,202.1 L199.2,199.1 L203.6,196.1 L208,193.1 L212.5,190.1 L216.9,187 L221.3,183.9 L225.8,180.7 L230.2,177.6 L234.6,174.4 L239.1,171.2 L243.5,167.9 L247.9,164.6 L252.4,161.3 L256.8,158 L261.2,154.6 L265.7,151.2 L270.1,147.8 L274.5,144.3 L279,140.9 L283.4,137.3 L287.8,133.8 L292.3,130.2 L296.7,126.6 L301.1,123 L305.6,119.3 L310,115.7 L314.4,111.9 L318.9,108.2 L323.3,104.4 L327.7,100.6 L332.2,96.8 L336.6,92.9 L341,89 L345.5,85.1 L349.9,81.1 L354.3,77.1 L358.8,73.1 L363.2,69.1 L367.6,65 L372.1,60.9 L376.5,56.8 L380.9,52.6 L385.4,48.5 L389.8,44.2 L394.2,40 L398.7,35.7" fill="none" stroke="#0F1726" stroke-width="2.5"/><line x1="73.5" y1="282" x2="398" y2="68.1" stroke="#C2410C" stroke-width="3.5"/><line x1="191.5" y1="204.2" x2="339" y2="90.8" stroke="#7A8396" stroke-width="3" stroke-dasharray="7 5"/><line x1="191.5" y1="204.2" x2="265.3" y2="151.5" stroke="#12805C" stroke-width="3" stroke-dasharray="3 4"/><circle cx="339" cy="90.8" r="4.5" fill="#7A8396" stroke="#FFFFFF" stroke-width="2"/><circle cx="265.3" cy="151.5" r="4.5" fill="#12805C" stroke="#FFFFFF" stroke-width="2"/><circle cx="191.5" cy="204.2" r="5" fill="#C2410C" stroke="#FFFFFF" stroke-width="2"/><text x="179.5" y="198.2" font-size="15" fill="#0F1726" font-weight="700" text-anchor="end">P (3, 9)</text><text x="329" y="88.8" font-size="14" fill="#667085" text-anchor="end">(4, 16)</text><line x1="55.8" y1="42.2" x2="89.8" y2="42.2" stroke="#7A8396" stroke-width="3" stroke-dasharray="7 5"/><text x="97.8" y="47.2" font-size="14" fill="#0F1726">secant, h = 1: slope 7</text><line x1="55.8" y1="64.2" x2="89.8" y2="64.2" stroke="#12805C" stroke-width="3" stroke-dasharray="3 4"/><text x="97.8" y="69.2" font-size="14" fill="#0F1726">secant, h = 0.5: slope 6.5</text><line x1="55.8" y1="86.2" x2="89.8" y2="86.2" stroke="#C2410C" stroke-width="3.5"/><text x="97.8" y="91.2" font-size="14" fill="#C2410C" font-weight="700">tangent at P: slope 6</text></svg>
+        <figcaption>Figure 4 · y = x² (zoom on x from 2 to 4.4). When h gets smaller, the secant lines turn and come close to the tangent line at P. Its slope, 6, is f′(3).</figcaption>
+      </figure>
+      <div class="box example"><span class="label">Worked example 2 · world population (from the class notes)</span>
+        <p>World population (billions): 2005: 6.55 · 2009: 6.89 · 2010: 6.98.</p>
+        <p>2005 → 2010: (6.98 − 6.55) / 5 = 0.086 billion per year.</p>
+        <p>2009 → 2010: (6.98 − 6.89) / 1 = 0.09 billion per year.</p>
+        <p>The shorter interval gives the better estimate. In 2010, the world grew by about 0.09 billion = <strong>90 million people per year</strong>.</p>
+      </div>
+      <div class="box tip"><span class="label">Memory trick</span><p>Two points → <strong>average</strong> (secant line). One point → <strong>instantaneous</strong> (tangent line) = f′(a). Smaller h → better estimate.</p></div>
+      <div class="box warn"><span class="label">Common mistake</span><p>f′(a) is <strong>not</strong> f(a). f(3) = 9 is the <em>height</em> of the graph. f′(3) = 6 is the <em>slope</em> (steepness) there.</p></div>
+
+      <h3>Quick check</h3>
+      <div class="exercises">
+        <div class="ex" id="q27" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q27</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">How do you read f′(5)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>"f times 5"</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>"f minus 5"</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>"f to the power 5"</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>"f prime of 5"</span></button>
+          </div>
+          <div class="why" hidden>The little mark ′ is called "prime". f′(5) is the derivative of f at 5.</div>
+        </div>
+        <div class="ex" id="q28" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q28</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Which one is an <strong>instantaneous</strong> rate of change?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>The average speed from Tunis to Sousse</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>The car's speed at exactly 10:30</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>Population growth per year, 2010–2020</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>The temperature change from 12:00 to 18:00</span></button>
+          </div>
+          <div class="why" hidden>Instantaneous = at one moment. The other three are averages over an interval (two moments).</div>
+        </div>
+        <div class="ex" id="q29" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q29</span><span class="ex-type">Calculation</span></div>
+          <p class="q">f(x) = x². Estimate f′(3) with h = 0.2.</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>6.2</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>1.24</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>10.24</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>6.02</span></button>
+          </div>
+          <div class="why" hidden>f(3.2) = 10.24. (10.24 − 9) / 0.2 = 1.24 / 0.2 = 6.2. (1.24 is the rise only; you must divide by h.)</div>
+        </div>
+        <div class="ex" id="q30" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q30</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Secant slopes for smaller and smaller h are 7, 6.5, 6.1, 6.01. Best value for f′(3)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>7</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>9</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>0</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>6</span></button>
+          </div>
+          <div class="why" hidden>The numbers get closer and closer to 6. That limit is f′(3) = 6. (9 is f(3), the height, not the slope.)</div>
+        </div>
+        <div class="ex" id="q31" data-answer="F">
+          <div class="ex-head"><span class="ex-n">Q31</span><span class="ex-type">True or false</span></div>
+          <p class="q">To estimate f′(a), a <em>bigger</em> h usually gives a better estimate.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>The opposite: a <em>smaller</em> h puts the second point closer to a, so the average rate is closer to the instantaneous rate.</div>
+        </div>
+        <div class="ex" id="q32" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q32</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">The tangent line at a point P of a curve:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>cuts the curve at two points far apart</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>touches the curve at P, with the same steepness</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>is always horizontal</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>always goes through (0, 0)</span></button>
+          </div>
+          <div class="why" hidden>The tangent line just touches the curve at P and has the same slope as the curve there. Its slope is f′(a).</div>
+        </div>
+        <div class="ex" id="q33" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q33</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">For f(x) = x², f(3) = 9 and f′(3) = 6. What is the 9?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>the slope of the graph at x = 3</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>the average rate from 0 to 3</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>the height of the graph at x = 3</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>the step h</span></button>
+          </div>
+          <div class="why" hidden>f(3) = 9 is the output: the height of the point. The slope there is f′(3) = 6.</div>
+        </div>
+        <div class="ex" id="q34" data-answer="F">
+          <div class="ex-head"><span class="ex-n">Q34</span><span class="ex-type">True or false</span></div>
+          <p class="q">f′(a) is the slope of the secant line from 0 to a.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>f′(a) is the slope of the <strong>tangent</strong> line at the single point a. A secant from 0 to a gives an average rate.</div>
+        </div>
+        <div class="ex" id="q35" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q35</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">World population: from 2009 to 2010 the rate was 0.09 billion per year. That is about:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>90 million people per year</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>9 million people per year</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>0.09 people per year</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>900 million people per year</span></button>
+          </div>
+          <div class="why" hidden>1 billion = 1000 million. 0.09 × 1000 = 90 million people per year.</div>
+        </div>
+        <div class="ex" id="q36" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q36</span><span class="ex-type">Calculation</span></div>
+          <p class="q">g(t) = t². Estimate g′(1) with h = 0.1.</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>0.21</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>2.1</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>1.21</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>21</span></button>
+          </div>
+          <div class="why" hidden>g(1.1) = 1.21 and g(1) = 1. (1.21 − 1) / 0.1 = 0.21 / 0.1 = 2.1. (The true value is 2.)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 05 ===================== -->
+    <section class="lesson-section" id="estimate" data-title="Estimating f′(a) from a table">
+      <div class="sec-num">05</div>
+      <h2>Estimating f′(a) from a table</h2>
+
+      <p>On the quiz you often get a <strong>table</strong>, not a formula.</p>
+      <p>You cannot make h tiny. So you use the nearest values in the table.</p>
+      <p>There are 3 ways. Here they are, with h = the step of the table.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Name</th><th>Formula</th><th>In words</th></tr></thead>
+        <tbody>
+          <tr><td>Right estimate</td><td>(f(a + h) − f(a)) / h</td><td>next value − this value</td></tr>
+          <tr><td>Left estimate</td><td>(f(a) − f(a − h)) / h</td><td>this value − previous value</td></tr>
+          <tr><td>Centered estimate</td><td>(f(a + h) − f(a − h)) / (2h)</td><td>next − previous, over 2 steps</td></tr>
+        </tbody>
+      </table></div>
+      <div class="box example"><span class="label">Worked example 1 · Tozeur in the morning</span>
+        <p>This is another, cooler day (not the day of the table in step 01).</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>h (hour)</th><th class="n">8</th><th class="n">9</th><th class="n">10</th><th class="n">11</th><th class="n">12</th></tr></thead>
+          <tbody><tr><td>T (°C)</td><td class="n">24</td><td class="n">27</td><td class="n">31</td><td class="n">34</td><td class="n">36</td></tr></tbody>
+        </table></div>
+        <p>Estimate f′(10). The step is 1 hour.</p>
+        <p><strong>Right:</strong> (34 − 31) / 1 = 3 °C per hour.</p>
+        <p><strong>Left:</strong> (31 − 27) / 1 = 4 °C per hour.</p>
+        <p><strong>Centered:</strong> (34 − 27) / 2 = <strong>3.5 °C per hour</strong>.</p>
+        <p>The centered value is the average of left and right: (3 + 4) / 2 = 3.5. At 10:00 the temperature is rising by about 3.5 °C per hour.</p>
+      </div>
+      <div class="box tip"><span class="label">Memory trick</span><p>Right = next − this. Left = this − previous. Centered = next − previous, divided by 2 steps. Centered is usually the best.</p></div>
+      <div class="box warn"><span class="label">Common mistake</span><p>Divide by the <strong>real step</strong>. If the table jumps 2 years each time, h = 2, and for centered you divide by 2h = 4.</p></div>
+      <div class="box example"><span class="label">Worked example 2 · a car (class problem P1)</span>
+        <p>t (seconds): 0 · 0.2 · 0.4 &nbsp;→&nbsp; s (feet): 0 · 0.5 · 1.8. Estimate the speed at t = 0.2 (step 0.2).</p>
+        <p><strong>Left:</strong> (0.5 − 0) / 0.2 = 2.5 ft/s.</p>
+        <p><strong>Right:</strong> (1.8 − 0.5) / 0.2 = 6.5 ft/s.</p>
+        <p><strong>Centered:</strong> (1.8 − 0) / 0.4 = <strong>4.5 ft/s</strong>. (Same as (2.5 + 6.5) / 2.)</p>
+      </div>
+      <p><strong>In French:</strong> estimer = to estimate · à droite / à gauche = right / left · pas = step h.</p>
+
+      <h3>Quick check</h3>
+      <p>A town's population P (thousands): 2016: 50 · 2018: 54 · 2020: 59 · 2022: 63. The step is 2 years. Use it for Q37 to Q41.</p>
+      <div class="exercises">
+        <div class="ex" id="q37" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q37</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Right estimate of P′(2018)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>5</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>2</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>4</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>2.5</span></button>
+          </div>
+          <div class="why" hidden>Right: (P(2020) − P(2018)) / 2 = (59 − 54) / 2 = 5 / 2 = 2.5 thousand people per year.</div>
+        </div>
+        <div class="ex" id="q38" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q38</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Left estimate of P′(2018)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>4</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>2.5</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>2</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>54</span></button>
+          </div>
+          <div class="why" hidden>Left: (P(2018) − P(2016)) / 2 = (54 − 50) / 2 = 4 / 2 = 2 thousand people per year.</div>
+        </div>
+        <div class="ex" id="q39" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q39</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Centered estimate of P′(2018)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>9</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>4.5</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>2</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>2.25</span></button>
+          </div>
+          <div class="why" hidden>Centered: (P(2020) − P(2016)) / 4 = (59 − 50) / 4 = 9 / 4 = 2.25. Check: (2.5 + 2) / 2 = 2.25.</div>
+        </div>
+        <div class="ex" id="q40" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q40</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">The units of P′(2018) are:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>years per thousand people</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>thousand people</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>thousand people per year</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>years</span></button>
+          </div>
+          <div class="why" hidden>Output units (thousand people) per input unit (year).</div>
+        </div>
+        <div class="ex" id="q41" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q41</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">A student writes: P′(2018) ≈ 59 − 54 = 5. What is wrong?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>He should add 59 + 54</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>He forgot to divide by the step, 2</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>Nothing, 5 is correct</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>He should divide by 2018</span></button>
+          </div>
+          <div class="why" hidden>The step between 2018 and 2020 is 2 years. The rate is 5 ÷ 2 = 2.5 thousand per year, not 5.</div>
+        </div>
+        <p>Use the Tozeur morning table (worked example 1) for Q42 and Q43.</p>
+        <div class="ex" id="q42" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q42</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Right estimate of f′(11)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>2</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>2.5</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>3</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>34</span></button>
+          </div>
+          <div class="why" hidden>Right: f(12) − f(11) = 36 − 34 = 2, divided by the step 1 → 2 °C per hour.</div>
+        </div>
+        <div class="ex" id="q43" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q43</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Centered estimate of f′(9)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>3.5</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>7</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>3</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>4</span></button>
+          </div>
+          <div class="why" hidden>Centered: (f(10) − f(8)) / 2 = (31 − 24) / 2 = 7 / 2 = 3.5 °C per hour.</div>
+        </div>
+        <div class="ex" id="q44" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q44</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Customers in a café: 14:00 → 60 · 15:00 → 52 · 16:00 → 40. Centered estimate of the rate at 15:00?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>10 customers per hour</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>−20 customers per hour</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>−10 customers per hour</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>−8 customers per hour</span></button>
+          </div>
+          <div class="why" hidden>(40 − 60) / 2 = −20 / 2 = −10 customers per hour. Negative: customers are leaving.</div>
+        </div>
+        <div class="ex" id="q45" data-answer="T">
+          <div class="ex-head"><span class="ex-n">Q45</span><span class="ex-type">True or false</span></div>
+          <p class="q">The centered estimate uses values on both sides of a.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>Yes: it uses the value before a and the value after a. That is why it is usually the best.</div>
+        </div>
+        <div class="ex" id="q46" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q46</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Class problem P3 (cable TV, millions of homes): f(8) = 65.141 and f(12) = 60.958, step 2 years. Centered estimate of f′(10)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>−4.18 million per year</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>−1.05 million per year</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>1.05 million per year</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>−2.09 million per year</span></button>
+          </div>
+          <div class="why" hidden>(60.958 − 65.141) / (12 − 8) = −4.183 / 4 ≈ −1.05 million homes per year. Divide by 4 (two steps of 2 years), not by 2.</div>
+        </div>
+        <div class="ex" id="q47" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q47</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">The left estimate of f′(a) is 4 and the right estimate is 6. The centered estimate is:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>10</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>2</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>24</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>5</span></button>
+          </div>
+          <div class="why" hidden>With equal steps, centered = average of left and right = (4 + 6) / 2 = 5.</div>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">Try 1</span><span class="ex-type">Problem · try on paper first</span></div>
+          <p class="q">Class problem P1. A car's position: t (s): 0 · 0.2 · 0.4 · 0.6 · 0.8 · 1.0 and s (ft): 0 · 0.5 · 1.8 · 3.8 · 6.5 · 9.6. Estimate the speed at t = 0.6 in three ways (left, right, centered).</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a"><p>The step is h = 0.2 s.</p><p><strong>Left:</strong> (3.8 − 1.8) / 0.2 = 2 / 0.2 = 10 ft/s.</p><p><strong>Right:</strong> (6.5 − 3.8) / 0.2 = 2.7 / 0.2 = 13.5 ft/s.</p><p><strong>Centered:</strong> (6.5 − 1.8) / 0.4 = 4.7 / 0.4 = <strong>11.75 ft/s</strong> (the average of 10 and 13.5).</p><p>At t = 0.6 s the car moves at about 11.75 feet per second.</p></div></details>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">Try 2</span><span class="ex-type">Problem · try on paper first</span></div>
+          <p class="q">Class problem P3. Homes with cable TV (millions), t years since 1998: t = 0: 64.65 · 2: 66.25 · 4: 66.732 · 6: 66.77. Estimate f′(2) and f′(4) with the centered estimate, and say what each means.</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a"><p>The step is 2 years, so divide by 4.</p><p><strong>f′(2)</strong> ≈ (66.732 − 64.65) / 4 = 2.082 / 4 ≈ <strong>0.52 million homes per year</strong>. In 2000, cable homes were growing by about 520,000 per year.</p><p><strong>f′(4)</strong> ≈ (66.77 − 66.25) / 4 = 0.52 / 4 = <strong>0.13 million homes per year</strong>. In 2002 the number was still rising, but slowly (about 130,000 per year).</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 06 ===================== -->
+    <section class="lesson-section" id="derivative-fn" data-title="The derivative function">
+      <div class="sec-num">06</div>
+      <h2>The derivative function: up or down?</h2>
+
+      <p>f′(a) is the slope at one point. Find the slope at <strong>every</strong> point, and you get a new function: <strong>f′(x)</strong>, the derivative function.</p>
+      <p>The most useful thing about f′ is its <strong>sign</strong>: +, − or 0.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>If…</th><th>then f is…</th></tr></thead>
+        <tbody>
+          <tr><td>f′(x) &gt; 0</td><td>increasing (going up)</td></tr>
+          <tr><td>f′(x) &lt; 0</td><td>decreasing (going down)</td></tr>
+          <tr><td>f′(x) = 0</td><td>flat: top of a hill, bottom of a valley, or a flat line</td></tr>
+        </tbody>
+      </table></div>
+      <figure>
+        <svg viewBox="0 0 420 300" role="img" aria-label="A hill-shaped graph. On the left it goes uphill, so f prime is positive. At the top f prime is zero. On the right it goes downhill, so f prime is negative."><defs><marker id="ea4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0F1726"/></marker></defs><rect x="0" y="0" width="420" height="300" fill="#FFFFFF"/><line x1="129.5" y1="254" x2="129.5" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="219" y1="254" x2="219" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="308.5" y1="254" x2="308.5" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="398" y1="254" x2="398" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="40" y1="208.4" x2="398" y2="208.4" stroke="#E7E9EE" stroke-width="1"/><line x1="40" y1="162.8" x2="398" y2="162.8" stroke="#E7E9EE" stroke-width="1"/><line x1="40" y1="117.2" x2="398" y2="117.2" stroke="#E7E9EE" stroke-width="1"/><line x1="40" y1="71.6" x2="398" y2="71.6" stroke="#E7E9EE" stroke-width="1"/><line x1="40" y1="26" x2="398" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="40" y1="254" x2="412" y2="254" stroke="#0F1726" stroke-width="1.5" marker-end="url(#ea4)"/><line x1="40" y1="254" x2="40" y2="14" stroke="#0F1726" stroke-width="1.5" marker-end="url(#ea4)"/><text x="40" y="274" font-size="14" fill="#667085" text-anchor="middle">0</text><text x="129.5" y="274" font-size="14" fill="#667085" text-anchor="middle">1</text><text x="219" y="274" font-size="14" fill="#667085" text-anchor="middle">2</text><text x="308.5" y="274" font-size="14" fill="#667085" text-anchor="middle">3</text><text x="398" y="274" font-size="14" fill="#667085" text-anchor="middle">4</text><text x="33" y="259" font-size="14" fill="#667085" text-anchor="end">0</text><text x="33" y="213.4" font-size="14" fill="#667085" text-anchor="end">1</text><text x="33" y="167.8" font-size="14" fill="#667085" text-anchor="end">2</text><text x="33" y="122.2" font-size="14" fill="#667085" text-anchor="end">3</text><text x="33" y="76.6" font-size="14" fill="#667085" text-anchor="end">4</text><text x="33" y="31" font-size="14" fill="#667085" text-anchor="end">5</text><text x="400" y="292" font-size="15" font-weight="700" fill="#0F1726" text-anchor="end">x</text><text x="50" y="24" font-size="15" font-weight="700" fill="#0F1726">y</text><path d="M40,254 L44.5,245 L49,236.2 L53.4,227.7 L57.9,219.3 L62.4,211.3 L66.9,203.4 L71.3,195.7 L75.8,188.3 L80.3,181.2 L84.8,174.2 L89.2,167.5 L93.7,161 L98.2,154.7 L102.7,148.7 L107.1,142.9 L111.6,137.3 L116.1,131.9 L120.6,126.8 L125,121.9 L129.5,117.2 L134,112.8 L138.5,108.5 L142.9,104.5 L147.4,100.8 L151.9,97.3 L156.4,93.9 L160.8,90.9 L165.3,88 L169.8,85.4 L174.3,83 L178.7,80.8 L183.2,78.9 L187.7,77.2 L192.2,75.7 L196.6,74.5 L201.1,73.4 L205.6,72.6 L210.1,72.1 L214.5,71.7 L219,71.6 L223.5,71.7 L228,72.1 L232.4,72.6 L236.9,73.4 L241.4,74.5 L245.9,75.7 L250.3,77.2 L254.8,78.9 L259.3,80.8 L263.8,83 L268.2,85.4 L272.7,88 L277.2,90.9 L281.7,93.9 L286.1,97.3 L290.6,100.8 L295.1,104.5 L299.6,108.5 L304,112.8 L308.5,117.2 L313,121.9 L317.5,126.8 L321.9,131.9 L326.4,137.3 L330.9,142.9 L335.3,148.7 L339.8,154.7 L344.3,161 L348.8,167.5 L353.3,174.2 L357.7,181.2 L362.2,188.3 L366.7,195.7 L371.2,203.4 L375.6,211.3 L380.1,219.3 L384.6,227.7 L389.1,236.2 L393.5,245 L398,254" fill="none" stroke="#0F1726" stroke-width="2.5"/><line x1="89.2" y1="158.2" x2="169.8" y2="76.2" stroke="#12805C" stroke-width="4"/><circle cx="129.5" cy="117.2" r="4.5" fill="#12805C" stroke="#FFFFFF" stroke-width="2"/><line x1="178.7" y1="71.6" x2="259.3" y2="71.6" stroke="#7A8396" stroke-width="4"/><circle cx="219" cy="71.6" r="4.5" fill="#7A8396" stroke="#FFFFFF" stroke-width="2"/><line x1="268.2" y1="76.2" x2="348.8" y2="158.2" stroke="#C4372D" stroke-width="4"/><circle cx="308.5" cy="117.2" r="4.5" fill="#C4372D" stroke="#FFFFFF" stroke-width="2"/><text x="117.5" y="87.2" font-size="15" fill="#12805C" font-weight="700" text-anchor="end">uphill</text><text x="117.5" y="105.2" font-size="15" fill="#12805C" font-weight="700" text-anchor="end">f′ &gt; 0</text><text x="219" y="57.599999999999994" font-size="15" fill="#0F1726" font-weight="700" text-anchor="middle">top: f′ = 0</text><text x="320.5" y="87.2" font-size="15" fill="#C4372D" font-weight="700">downhill</text><text x="320.5" y="105.2" font-size="15" fill="#C4372D" font-weight="700">f′ &lt; 0</text></svg>
+        <figcaption>Figure 5 · The small coloured lines are tangent lines. Uphill they slope up (f′ &gt; 0). At the top the tangent is flat (f′ = 0). Downhill they slope down (f′ &lt; 0).</figcaption>
+      </figure>
+      <div class="box tip"><span class="label">Memory trick</span><p>Walk on the graph from left to right, like on a road. Uphill → f′ &gt; 0. Downhill → f′ &lt; 0. Flat top or bottom → f′ = 0. A steeper road → a bigger number (in size).</p></div>
+      <p><strong>In French:</strong> croissante = increasing · décroissante = decreasing · signe de la dérivée = sign of the derivative · maximum / minimum = peak / valley.</p>
+      <div class="box example"><span class="label">Worked example 1 · gold production (class problem P7)</span>
+        <p>World gold production (tons): 2005: 2470 · 2006: 2370 · 2007: 2360 · 2008: 2290 · 2009: 2450.</p>
+        <p><strong>Step 1.</strong> From 2005 to 2008 the numbers go down. So f′ is <strong>negative</strong> there: production is decreasing.</p>
+        <p><strong>Step 2.</strong> From 2008 to 2009 the number goes up by 2450 − 2290 = 160. So f′ is <strong>positive</strong> there.</p>
+        <p><strong>Step 3.</strong> The biggest rate of change in the table is +160 tons per year (2008 → 2009).</p>
+      </div>
+      <div class="box warn"><span class="label">Big trap · f′ negative ≠ f negative</span>
+        <p>The <strong>sign of f</strong> says if the value is above or below zero. The <strong>sign of f′</strong> says if it goes up or down.</p>
+        <p>Tozeur at 18:00: 35 °C (f &gt; 0, it is hot) but the temperature is falling (f′ &lt; 0).</p>
+        <p>Bank account: −200 DT (f &lt; 0) but you add 50 DT every day (f′ &gt; 0).</p>
+      </div>
+      <div class="box example"><span class="label">Worked example 2 · reading Figure 6</span>
+        <p>Figure 6 below has 5 points. For each point, ask: "Am I going uphill, downhill, or am I on a flat top or bottom?"</p>
+        <p>Do it yourself in Q48 to Q51.</p>
+      </div>
+      <figure>
+        <svg viewBox="0 0 420 300" role="img" aria-label="A curve that goes down to a valley at B (x = 1), up through C to a peak at D (x = 3), then down steeply through E. Point A is on the first downhill part."><defs><marker id="ea5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0F1726"/></marker></defs><rect x="0" y="0" width="420" height="300" fill="#FFFFFF"/><line x1="125.2" y1="254" x2="125.2" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="210.5" y1="254" x2="210.5" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="295.7" y1="254" x2="295.7" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="381" y1="254" x2="381" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="40" y1="216" x2="398" y2="216" stroke="#E7E9EE" stroke-width="1"/><line x1="40" y1="178" x2="398" y2="178" stroke="#E7E9EE" stroke-width="1"/><line x1="40" y1="140" x2="398" y2="140" stroke="#E7E9EE" stroke-width="1"/><line x1="40" y1="102" x2="398" y2="102" stroke="#E7E9EE" stroke-width="1"/><line x1="40" y1="64" x2="398" y2="64" stroke="#E7E9EE" stroke-width="1"/><line x1="40" y1="26" x2="398" y2="26" stroke="#E7E9EE" stroke-width="1"/><line x1="40" y1="254" x2="412" y2="254" stroke="#0F1726" stroke-width="1.5" marker-end="url(#ea5)"/><line x1="40" y1="254" x2="40" y2="14" stroke="#0F1726" stroke-width="1.5" marker-end="url(#ea5)"/><text x="40" y="274" font-size="14" fill="#667085" text-anchor="middle">0</text><text x="125.2" y="274" font-size="14" fill="#667085" text-anchor="middle">1</text><text x="210.5" y="274" font-size="14" fill="#667085" text-anchor="middle">2</text><text x="295.7" y="274" font-size="14" fill="#667085" text-anchor="middle">3</text><text x="381" y="274" font-size="14" fill="#667085" text-anchor="middle">4</text><text x="33" y="259" font-size="14" fill="#667085" text-anchor="end">0</text><text x="33" y="221" font-size="14" fill="#667085" text-anchor="end">1</text><text x="33" y="183" font-size="14" fill="#667085" text-anchor="end">2</text><text x="33" y="145" font-size="14" fill="#667085" text-anchor="end">3</text><text x="33" y="107" font-size="14" fill="#667085" text-anchor="end">4</text><text x="33" y="69" font-size="14" fill="#667085" text-anchor="end">5</text><text x="33" y="31" font-size="14" fill="#667085" text-anchor="end">6</text><text x="400" y="292" font-size="15" font-weight="700" fill="#0F1726" text-anchor="end">x</text><text x="50" y="24" font-size="15" font-weight="700" fill="#0F1726">y</text><path d="M40,64 L44.4,80.9 L48.7,96.7 L53.1,111.3 L57.5,124.9 L61.8,137.3 L66.2,148.7 L70.6,159.1 L74.9,168.5 L79.3,177 L83.7,184.5 L88.1,191.1 L92.4,196.9 L96.8,201.9 L101.2,206 L105.5,209.4 L109.9,212.1 L114.3,214 L118.6,215.3 L123,215.9 L127.4,215.9 L131.7,215.4 L136.1,214.2 L140.5,212.6 L144.8,210.4 L149.2,207.8 L153.6,204.8 L157.9,201.4 L162.3,197.6 L166.7,193.4 L171.1,189 L175.4,184.2 L179.8,179.3 L184.2,174.1 L188.5,168.7 L192.9,163.2 L197.3,157.5 L201.6,151.8 L206,146 L210.4,140.1 L214.7,134.3 L219.1,128.5 L223.5,122.7 L227.8,117.1 L232.2,111.6 L236.6,106.2 L240.9,101 L245.3,96 L249.7,91.3 L254.1,86.8 L258.4,82.6 L262.8,78.8 L267.2,75.4 L271.5,72.3 L275.9,69.7 L280.3,67.5 L284.6,65.8 L289,64.7 L293.4,64.1 L297.7,64.1 L302.1,64.7 L306.5,65.9 L310.8,67.8 L315.2,70.4 L319.6,73.8 L323.9,77.9 L328.3,82.8 L332.7,88.5 L337.1,95.2 L341.4,102.6 L345.8,111.1 L350.2,120.4 L354.5,130.8 L358.9,142.1 L363.3,154.5 L367.6,168 L372,182.6 L376.4,198.3 L380.7,215.1 L385.1,233.2 L389.5,252.5" fill="none" stroke="#0F1726" stroke-width="2.5"/><circle cx="82.6" cy="182.8" r="5" fill="#C2410C" stroke="#FFFFFF" stroke-width="2"/><text x="68.6" y="176.8" font-size="17" fill="#C2410C" font-weight="700" text-anchor="end">A</text><circle cx="125.2" cy="216" r="5" fill="#C2410C" stroke="#FFFFFF" stroke-width="2"/><text x="125.2" y="240" font-size="17" fill="#C2410C" font-weight="700" text-anchor="middle">B</text><circle cx="210.5" cy="140" r="5" fill="#C2410C" stroke="#FFFFFF" stroke-width="2"/><text x="196.5" y="134" font-size="17" fill="#C2410C" font-weight="700" text-anchor="end">C</text><circle cx="295.7" cy="64" r="5" fill="#C2410C" stroke="#FFFFFF" stroke-width="2"/><text x="295.7" y="52" font-size="17" fill="#C2410C" font-weight="700" text-anchor="middle">D</text><circle cx="355.4" cy="132.9" r="5" fill="#C2410C" stroke="#FFFFFF" stroke-width="2"/><text x="369.4" y="128.9" font-size="17" fill="#C2410C" font-weight="700" text-anchor="start">E</text></svg>
+        <figcaption>Figure 6 · Use this graph for Q48 to Q51. Walk from left to right.</figcaption>
+      </figure>
+
+      <h3>Quick check</h3>
+      <div class="exercises">
+        <div class="ex" id="q48" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q48</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Figure 6. What is the sign of f′ at point C?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>negative</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>positive</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>zero</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>we cannot know</span></button>
+          </div>
+          <div class="why" hidden>At C the graph goes uphill (from the valley B up to the peak D). Uphill → f′ &gt; 0.</div>
+        </div>
+        <div class="ex" id="q49" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q49</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Figure 6. At which point is the graph at the top of a hill?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>D</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>B</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>A</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>E</span></button>
+          </div>
+          <div class="why" hidden>D is a peak: the graph goes up before D and down after D. There f′ = 0. (B is the bottom of a valley: f′ = 0 too.)</div>
+        </div>
+        <div class="ex" id="q50" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q50</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Figure 6. What is the sign of f′ at point A?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>positive</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>zero</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>negative</span></button>
+          </div>
+          <div class="why" hidden>At A the graph goes down towards the valley B. Downhill → f′ &lt; 0. (The graph is above the x-axis, but that is f, not f′.)</div>
+        </div>
+        <div class="ex" id="q51" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q51</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Figure 6. Where does the graph go down most steeply?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>A</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>C</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>E</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>B</span></button>
+          </div>
+          <div class="why" hidden>E is on a very steep downhill part. A goes down too, but more gently. Steeper → f′ is bigger in size (more negative).</div>
+        </div>
+        <div class="ex" id="q52" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q52</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">f′(x) &lt; 0 for every x between 2 and 5. On that interval f is:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>increasing</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>negative</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>equal to zero</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>decreasing</span></button>
+          </div>
+          <div class="why" hidden>f′ &lt; 0 means the graph goes down. It says nothing about f being negative.</div>
+        </div>
+        <div class="ex" id="q53" data-answer="F">
+          <div class="ex-head"><span class="ex-n">Q53</span><span class="ex-type">True or false</span></div>
+          <p class="q">If f(x) is negative, then f′(x) must be negative.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>No. A bank account at −200 DT (f &lt; 0) can be going up (f′ &gt; 0) if you add money every day.</div>
+        </div>
+        <div class="ex" id="q54" data-answer="T">
+          <div class="ex-head"><span class="ex-n">Q54</span><span class="ex-type">True or false</span></div>
+          <p class="q">At the top of a smooth hill, f′ = 0.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>At the top the tangent line is flat (horizontal), so its slope is 0.</div>
+        </div>
+        <div class="ex" id="q55" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q55</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">A table: x = 1, 2, 3, 4 and f(x) = 10, 8, 5, 1. On this interval f′ is:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>positive</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>zero</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>negative</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>the same as f</span></button>
+          </div>
+          <div class="why" hidden>The values go down (10 → 8 → 5 → 1), so f is decreasing and f′ &lt; 0, even though f is positive.</div>
+        </div>
+        <div class="ex" id="q56" data-answer="T">
+          <div class="ex-head"><span class="ex-n">Q56</span><span class="ex-type">True or false</span></div>
+          <p class="q">A function can have more than one point where f′ = 0.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>Yes. Figure 6 has two: the valley B and the peak D.</div>
+        </div>
+        <div class="ex" id="q57" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q57</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">It is 12 °C now, and the temperature is falling. Which is true?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>f &gt; 0 and f′ &lt; 0</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>f &lt; 0 and f′ &lt; 0</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>f &gt; 0 and f′ &gt; 0</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>f &lt; 0 and f′ &gt; 0</span></button>
+          </div>
+          <div class="why" hidden>12 °C is above zero → f &gt; 0. Falling → f′ &lt; 0.</div>
+        </div>
+        <div class="ex" id="q58" data-answer="T">
+          <div class="ex-head"><span class="ex-n">Q58</span><span class="ex-type">True or false</span></div>
+          <p class="q">If f(x) = 5 for every x (a flat line), then f′(x) = 0.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>A flat line has slope 0 everywhere. A constant never changes, so its rate of change is 0.</div>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">Try 3</span><span class="ex-type">Problem · try on paper first</span></div>
+          <p class="q">Class problem P4. Describe (or sketch) a graph with: f′ &lt; 0 for x &lt; 1, f′ = 0 at x = 1, f′ &gt; 0 for 1 &lt; x &lt; 3, f′ = 0 at x = 3, f′ &lt; 0 for x &gt; 3.</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a"><p>Read it from left to right:</p><ul><li>x &lt; 1: f′ &lt; 0 → the graph goes <strong>down</strong>.</li><li>x = 1: f′ = 0 → a <strong>valley</strong> (bottom).</li><li>1 &lt; x &lt; 3: f′ &gt; 0 → the graph goes <strong>up</strong>.</li><li>x = 3: f′ = 0 → a <strong>peak</strong> (top).</li><li>x &gt; 3: f′ &lt; 0 → the graph goes <strong>down</strong> again.</li></ul><p>Figure 6 is exactly such a graph: valley at B (x = 1), peak at D (x = 3).</p></div></details>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">Try 4</span><span class="ex-type">Problem · try on paper first</span></div>
+          <p class="q">Water in a dam (million m³): Jan 50 · Feb 58 · Mar 63 · Apr 64 · May 60 · Jun 52. (a) When is f′ positive? Negative? (b) About when is f′ = 0? (c) Is f ever negative?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a"><p><strong>(a)</strong> From January to April the water goes up → f′ &gt; 0. From April to June it goes down → f′ &lt; 0.</p><p><strong>(b)</strong> Around April, at the top (the peak), f′ ≈ 0. The increase is very small there (63 → 64).</p><p><strong>(c)</strong> No. The values are always positive (between 50 and 64). f′ is negative in May–June, but f stays positive. This is the trap: f′ &lt; 0 does not mean f &lt; 0.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 07 ===================== -->
+    <section class="lesson-section" id="units" data-title="What f′ means (units)">
+      <div class="sec-num">07</div>
+      <h2>What f′ means, with units</h2>
+
+      <p>On the quiz you must <strong>explain</strong> f′ in words. It is easy with one sentence pattern.</p>
+      <div class="formula">Units of f′ = (units of the output) per (one unit of the input)</div>
+      <p>Another way to write f′(x) is <strong>dy/dx</strong> (Leibniz notation). Units of dy/dx = units of y ÷ units of x.</p>
+      <div class="box tip"><span class="label">Memory trick · the sentence pattern</span>
+        <p>"f′(a) = b" means: <strong>when [input] = a, [output] is increasing by about b [output units] per one more [input unit].</strong></p>
+        <p>If b is negative, say "decreasing by about …".</p>
+      </div>
+      <p>So f′ tells you about how much f changes when the input goes up by 1:</p>
+      <div class="formula">f(a + 1) ≈ f(a) + f′(a) &nbsp;·&nbsp; f(a + Δx) ≈ f(a) + f′(a) · Δx</div>
+      <div class="box example"><span class="label">Worked example 1 · Tozeur at 3 pm</span>
+        <p>T = f(h): temperature in °C, h hours after midnight. f(15) = 41 and f′(15) = −2.</p>
+        <p><strong>Units of f′:</strong> °C per hour.</p>
+        <p><strong>Sentence:</strong> at 3 pm it is 41 °C, and the temperature is falling by about 2 °C per hour.</p>
+        <p><strong>Estimate:</strong> f(16) ≈ 41 + (−2) = 39 °C. And f(17) ≈ 41 + 2 × (−2) = 37 °C.</p>
+      </div>
+      <div class="box example"><span class="label">Worked example 2 · a medicine (class notes)</span>
+        <p>L = f(q): hours the medicine stays in the body, for a dose of q mg. f(10) = 6 and f′(10) = 0.5.</p>
+        <p><strong>f(10) = 6:</strong> a 10 mg dose stays 6 hours in the body.</p>
+        <p><strong>Units of f′:</strong> hours per mg.</p>
+        <p><strong>f′(10) = 0.5:</strong> near a 10 mg dose, each extra mg makes it stay about half an hour longer.</p>
+        <p><strong>Estimates:</strong> f(11) ≈ 6 + 0.5 = 6.5 hours. f(20) ≈ 6 + 0.5 × 10 = 11 hours (less reliable: 20 is far from 10).</p>
+      </div>
+      <div class="box example"><span class="label">Worked example 3 · relative rate (short)</span>
+        <p>Relative rate of change = f′(a) / f(a). It gives a <strong>percent</strong> per unit of input.</p>
+        <p>Soybeans (class notes): f(8) = 253 million tons and f′(8) = 17 million tons per year. Relative rate = 17 / 253 ≈ 0.067 = <strong>6.7% per year</strong>.</p>
+      </div>
+      <div class="box warn"><span class="label">Common mistakes</span>
+        <p>1. f′(a) is a <strong>rate</strong>, not an amount. Say "+17 million tons <strong>per year</strong>", not "17 million tons".</p>
+        <p>2. The units of f′ always contain the word <strong>"per"</strong>.</p>
+        <p>3. f′(a) is not f(a). The 6 hours (f) and the 0.5 hours per mg (f′) are different things.</p>
+      </div>
+      <p><strong>In French:</strong> unité = unit · « par » = per · taux de variation relatif = relative rate of change · approximation affine = linear approximation.</p>
+
+      <h3>Quick check</h3>
+      <div class="exercises">
+        <div class="ex" id="q59" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q59</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">C = f(q) is the cost in dinars of q kg of olives. The units of f′(q) are:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>kg per dinar</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>dinars per kg</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>dinars</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>kg</span></button>
+          </div>
+          <div class="why" hidden>Output (dinars) per input (kg).</div>
+        </div>
+        <div class="ex" id="q60" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q60</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">P = f(t) is the population of Sfax (people), t in years. The units of f′(t) are:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>years per person</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>people</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>years</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>people per year</span></button>
+          </div>
+          <div class="why" hidden>Output (people) per input (year).</div>
+        </div>
+        <div class="ex" id="q61" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q61</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Tozeur: f(15) = 41 °C and f′(15) = −2 °C per hour. Estimate f(16).</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>43 °C</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>39 °C</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>41 °C</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>−2 °C</span></button>
+          </div>
+          <div class="why" hidden>One hour later: f(16) ≈ f(15) + f′(15) = 41 + (−2) = 39 °C.</div>
+        </div>
+        <div class="ex" id="q62" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q62</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">C = f(q) dinars for q kg of olives. f′(20) = 6. This means:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>After 20 kg, one more kg costs about 6 DT</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>20 kg of olives cost 6 DT in total</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>6 kg of olives cost 20 DT in total</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>The price goes down by 6 DT per kg</span></button>
+          </div>
+          <div class="why" hidden>f′(20) = 6 dinars per kg: when you already buy 20 kg, the next kg adds about 6 DT. It is not the total cost (that is f(20)).</div>
+        </div>
+        <div class="ex" id="q63" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q63</span><span class="ex-type">Calculation</span></div>
+          <p class="q">A café's total revenue R = f(t) dinars, t days after opening. f(30) = 900 and f′(30) = 12. Estimate f(31).</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>12 DT</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>930 DT</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>10,800 DT</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>912 DT</span></button>
+          </div>
+          <div class="why" hidden>f(31) ≈ f(30) + f′(30) = 900 + 12 = 912 DT.</div>
+        </div>
+        <div class="ex" id="q64" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q64</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Same café: f(30) = 900 and f′(30) = 12. Estimate f(35).</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>912 DT</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>1,080 DT</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>960 DT</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>917 DT</span></button>
+          </div>
+          <div class="why" hidden>Δt = 35 − 30 = 5 days. f(35) ≈ 900 + 12 × 5 = 900 + 60 = 960 DT.</div>
+        </div>
+        <div class="ex" id="q65" data-answer="F">
+          <div class="ex-head"><span class="ex-n">Q65</span><span class="ex-type">True or false</span></div>
+          <p class="q">For the medicine, f′(10) = 0.5 means a 10 mg dose stays 0.5 hours in the body.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>That is the job of f(10) = 6 hours. f′(10) = 0.5 is the <em>change</em>: about 0.5 hours more for each extra mg.</div>
+        </div>
+        <div class="ex" id="q66" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q66</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">y is in metres and x is in seconds. The units of dy/dx are:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>seconds per metre</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>metres per second</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>metres</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>metres × seconds</span></button>
+          </div>
+          <div class="why" hidden>dy/dx has units of y ÷ units of x = metres per second (a speed).</div>
+        </div>
+        <div class="ex" id="q67" data-answer="T">
+          <div class="ex-head"><span class="ex-n">Q67</span><span class="ex-type">True or false</span></div>
+          <p class="q">f(10) = 20 and f′(10) = 3. So 23 is a reasonable estimate of f(11).</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>f(11) ≈ f(10) + f′(10) = 20 + 3 = 23. (Class true/false statement 9.)</div>
+        </div>
+        <div class="ex" id="q68" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q68</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Users of an app: f(4) = 200 million and f′(4) = 10 million per month. The relative rate of change is:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>10% per month</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>20% per month</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>2% per month</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>5% per month</span></button>
+          </div>
+          <div class="why" hidden>Relative rate = f′(4) / f(4) = 10 / 200 = 0.05 = 5% per month.</div>
+        </div>
+        <div class="ex" id="q69" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q69</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">W = f(t) litres of water in a tank, t in minutes. f′(5) = −3. This means:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>At minute 5, the tank holds −3 litres</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>The tank is empty after 3 minutes</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>At minute 5, the water goes down by about 3 litres per minute</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>At minute 5, the tank holds 3 litres</span></button>
+          </div>
+          <div class="why" hidden>f′ is a rate: −3 litres per minute. Negative → the water is going down. It does not tell you how much water is in the tank.</div>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">Try 5</span><span class="ex-type">Problem · try on paper first</span></div>
+          <p class="q">Class problem P5. C = f(w) is the cost in dollars of w pounds of a chemical. (a) What does f(12) = 5 mean? (b) Is f′ positive or negative? Why? (c) f′(12) = 0.4. Give the units and the meaning.</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a"><p><strong>(a)</strong> 12 is in pounds, 5 is in dollars: <strong>12 pounds of the chemical cost $5</strong>.</p><p><strong>(b)</strong> Positive: buying more chemical costs more money, so the cost goes up when w goes up.</p><p><strong>(c)</strong> Units: dollars per pound. Meaning: when you already buy 12 pounds, <strong>each additional pound costs about $0.40</strong>.</p></div></details>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">Try 6</span><span class="ex-type">Problem · try on paper first</span></div>
+          <p class="q">Class problem P7 (gold). Production was 2290 tons in 2008 and 2450 tons in 2009. (a) Estimate f′(2009). (b) Estimate production in 2010 and in 2015. Which estimate is less reliable?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a"><p><strong>(a)</strong> f′(2009) ≈ (2450 − 2290) / 1 = <strong>160 tons per year</strong>. In 2009 production was rising by about 160 tons per year.</p><p><strong>(b)</strong> 2010: f(2010) ≈ 2450 + 160 = <strong>2610 tons</strong>.</p><p>2015 is 6 years after 2009: f(2015) ≈ 2450 + 6 × 160 = 2450 + 960 = <strong>3410 tons</strong>.</p><p>The 2015 estimate is much less reliable: it is far from 2009, and the rate can change a lot in 6 years.</p></div></details>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">Try 7</span><span class="ex-type">Problem · try on paper first</span></div>
+          <p class="q">Class problem P10. D = g(t) billion apps downloaded in total, t months since June 2008. g(36) = 15 and g′(36) = 0.93. (a) Explain both numbers. (b) Find the relative rate of change.</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a"><p><strong>(a)</strong> g(36) = 15: by June 2011 (36 months later), <strong>15 billion apps</strong> had been downloaded in total.</p><p>g′(36) = 0.93: at that time, downloads were increasing by about <strong>0.93 billion (930 million) per month</strong>.</p><p><strong>(b)</strong> Relative rate = g′(36) / g(36) = 0.93 / 15 = 0.062 = <strong>6.2% per month</strong>.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 08 ===================== -->
+    <section class="lesson-section" id="second" data-title="Second derivative">
+      <div class="sec-num">08</div>
+      <h2>Second derivative and concavity</h2>
+
+      <p>f′ tells you if f goes up or down. Now a new question: is the growth <strong>speeding up</strong> or <strong>slowing down</strong>?</p>
+      <p>To know, look at how f′ itself changes. The derivative of f′ is the <strong>second derivative</strong>: <strong>f″</strong> (read "f double prime"). Leibniz: d²y/dx².</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>If…</th><th>the slopes…</th><th>the graph is…</th></tr></thead>
+        <tbody>
+          <tr><td>f″ &gt; 0</td><td>get bigger</td><td><strong>concave up</strong> ∪ (a cup, a smile)</td></tr>
+          <tr><td>f″ &lt; 0</td><td>get smaller</td><td><strong>concave down</strong> ∩ (a frown)</td></tr>
+        </tbody>
+      </table></div>
+      <figure>
+        <svg viewBox="0 0 420 380" role="img" aria-label="Four shapes: increasing and concave up; increasing and concave down; decreasing and concave up; decreasing and concave down."><rect x="0" y="0" width="420" height="380" fill="#FFFFFF"/><line x1="22" y1="124" x2="192" y2="124" stroke="#0F1726" stroke-width="1.5"/><line x1="22" y1="12" x2="22" y2="124" stroke="#0F1726" stroke-width="1.5"/><path d="M34,114 L37.7,113.9 L41.3,113.8 L45,113.5 L48.6,113.1 L52.3,112.6 L55.9,112 L59.6,111.3 L63.2,110.5 L66.9,109.5 L70.5,108.5 L74.2,107.3 L77.8,106.1 L81.5,104.7 L85.1,103.2 L88.8,101.6 L92.4,99.9 L96.1,98.1 L99.7,96.2 L103.4,94.1 L107,92 L110.7,89.7 L114.3,87.4 L118,84.9 L121.6,82.3 L125.3,79.6 L128.9,76.8 L132.6,73.9 L136.2,70.9 L139.9,67.7 L143.5,64.5 L147.2,61.1 L150.8,57.7 L154.5,54.1 L158.1,50.4 L161.8,46.6 L165.4,42.7 L169.1,38.7 L172.7,34.6 L176.4,30.3 L180,26" fill="none" stroke="#12805C" stroke-width="3.5"/><text x="107" y="148" font-size="15" fill="#0F1726" font-weight="700" text-anchor="middle">Increasing, concave up</text><text x="107" y="168" font-size="15" fill="#667085" text-anchor="middle">f′ &gt; 0, f″ &gt; 0</text><line x1="227" y1="124" x2="397" y2="124" stroke="#0F1726" stroke-width="1.5"/><line x1="227" y1="12" x2="227" y2="124" stroke="#0F1726" stroke-width="1.5"/><path d="M239,114 L242.7,109.7 L246.3,105.4 L250,101.3 L253.6,97.3 L257.3,93.4 L260.9,89.6 L264.6,85.9 L268.2,82.3 L271.9,78.9 L275.5,75.5 L279.2,72.3 L282.8,69.1 L286.5,66.1 L290.1,63.2 L293.8,60.4 L297.4,57.7 L301.1,55.1 L304.7,52.6 L308.4,50.3 L312,48 L315.7,45.9 L319.3,43.8 L323,41.9 L326.6,40.1 L330.3,38.4 L333.9,36.8 L337.6,35.3 L341.2,33.9 L344.9,32.7 L348.5,31.5 L352.2,30.5 L355.8,29.5 L359.5,28.7 L363.1,28 L366.8,27.4 L370.4,26.9 L374.1,26.5 L377.7,26.2 L381.4,26.1 L385,26" fill="none" stroke="#12805C" stroke-width="3.5"/><text x="312" y="148" font-size="15" fill="#0F1726" font-weight="700" text-anchor="middle">Increasing, concave down</text><text x="312" y="168" font-size="15" fill="#667085" text-anchor="middle">f′ &gt; 0, f″ &lt; 0</text><line x1="22" y1="310" x2="192" y2="310" stroke="#0F1726" stroke-width="1.5"/><line x1="22" y1="198" x2="22" y2="310" stroke="#0F1726" stroke-width="1.5"/><path d="M34,212 L37.7,216.3 L41.3,220.6 L45,224.7 L48.6,228.7 L52.3,232.6 L55.9,236.4 L59.6,240.1 L63.2,243.7 L66.9,247.1 L70.5,250.5 L74.2,253.7 L77.8,256.9 L81.5,259.9 L85.1,262.8 L88.8,265.6 L92.4,268.3 L96.1,270.9 L99.7,273.4 L103.4,275.7 L107,278 L110.7,280.1 L114.3,282.2 L118,284.1 L121.6,285.9 L125.3,287.6 L128.9,289.2 L132.6,290.7 L136.2,292.1 L139.9,293.3 L143.5,294.5 L147.2,295.5 L150.8,296.5 L154.5,297.3 L158.1,298 L161.8,298.6 L165.4,299.1 L169.1,299.5 L172.7,299.8 L176.4,299.9 L180,300" fill="none" stroke="#C4372D" stroke-width="3.5"/><text x="107" y="334" font-size="15" fill="#0F1726" font-weight="700" text-anchor="middle">Decreasing, concave up</text><text x="107" y="354" font-size="15" fill="#667085" text-anchor="middle">f′ &lt; 0, f″ &gt; 0</text><line x1="227" y1="310" x2="397" y2="310" stroke="#0F1726" stroke-width="1.5"/><line x1="227" y1="198" x2="227" y2="310" stroke="#0F1726" stroke-width="1.5"/><path d="M239,212 L242.7,212.1 L246.3,212.2 L250,212.5 L253.6,212.9 L257.3,213.4 L260.9,214 L264.6,214.7 L268.2,215.5 L271.9,216.5 L275.5,217.5 L279.2,218.7 L282.8,219.9 L286.5,221.3 L290.1,222.8 L293.8,224.4 L297.4,226.1 L301.1,227.9 L304.7,229.8 L308.4,231.9 L312,234 L315.7,236.3 L319.3,238.6 L323,241.1 L326.6,243.7 L330.3,246.4 L333.9,249.2 L337.6,252.1 L341.2,255.1 L344.9,258.3 L348.5,261.5 L352.2,264.9 L355.8,268.3 L359.5,271.9 L363.1,275.6 L366.8,279.4 L370.4,283.3 L374.1,287.3 L377.7,291.4 L381.4,295.7 L385,300" fill="none" stroke="#C4372D" stroke-width="3.5"/><text x="312" y="334" font-size="15" fill="#0F1726" font-weight="700" text-anchor="middle">Decreasing, concave down</text><text x="312" y="354" font-size="15" fill="#667085" text-anchor="middle">f′ &lt; 0, f″ &lt; 0</text></svg>
+        <figcaption>Figure 7 · The four possible shapes. f′ says up or down. f″ says how the graph bends.</figcaption>
+      </figure>
+      <div class="box tip"><span class="label">Memory trick</span><p>Concave <strong>up</strong> = holds water like a c<strong>up</strong> ∪ (smile). Concave <strong>down</strong> = water falls off ∩ (frown). f″ talks about the <strong>bend</strong>, not about going up or down.</p></div>
+      <div class="box warn"><span class="label">In French · careful!</span><p>In French, concave up is called <strong><em>convexe</em></strong>, and concave down is called <strong><em>concave</em></strong>. So the French word "concave" alone means ∩! On the English quiz, always say "concave up" or "concave down".</p></div>
+      <h3>How to find concavity from a table</h3>
+      <p><strong>Step 1.</strong> Compute the differences between next values (the rates).</p>
+      <p><strong>Step 2.</strong> Look at the differences. Getting bigger → concave up. Getting smaller → concave down.</p>
+      <div class="box example"><span class="label">Worked example 1 · a café's daily revenue (DT)</span>
+        <p>Week 1 to 5: 100 · 110 · 125 · 145 · 170.</p>
+        <p><strong>Step 1.</strong> Differences: 10 · 15 · 20 · 25.</p>
+        <p><strong>Step 2.</strong> They get bigger → f′ increasing → f″ &gt; 0 → <strong>concave up</strong>. The growth is speeding up.</p>
+      </div>
+      <div class="box example"><span class="label">Worked example 2 · a town's population (thousands)</span>
+        <p>Years 0 to 4: 200 · 230 · 250 · 260 · 265.</p>
+        <p><strong>Step 1.</strong> Differences: 30 · 20 · 10 · 5.</p>
+        <p><strong>Step 2.</strong> Still positive (the town grows, f′ &gt; 0), but smaller and smaller → f″ &lt; 0 → <strong>concave down</strong>. The growth is slowing down.</p>
+      </div>
+      <div class="box warn"><span class="label">Big trap · concave up ≠ increasing</span>
+        <p>Tozeur in the evening: 18:00 → 35 · 19:00 → 30 · 20:00 → 26 · 21:00 → 23 °C.</p>
+        <p>Differences: −5 · −4 · −3. The temperature goes <strong>down</strong> (f′ &lt; 0), but it falls more and more slowly: −5 → −4 → −3 is getting bigger. So f″ &gt; 0: <strong>concave up</strong> while decreasing.</p>
+      </div>
+      <p><strong>In French:</strong> dérivée seconde = second derivative · convexe = concave up · concave = concave down · point d'inflexion = inflection point.</p>
+
+      <h3>Quick check</h3>
+      <div class="exercises">
+        <div class="ex" id="q70" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q70</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Values of f: 2, 5, 10, 17. The graph is:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>concave up</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>concave down</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>a straight line (no bend)</span></button>
+          </div>
+          <div class="why" hidden>Differences: 3, 5, 7. They get bigger → f″ &gt; 0 → concave up.</div>
+        </div>
+        <div class="ex" id="q71" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q71</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Values of f: 50, 70, 85, 95. The graph is:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>concave up</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>concave down</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>a straight line (no bend)</span></button>
+          </div>
+          <div class="why" hidden>Differences: 20, 15, 10. Still increasing, but the differences get smaller → f″ &lt; 0 → concave down.</div>
+        </div>
+        <div class="ex" id="q72" data-answer="F">
+          <div class="ex-head"><span class="ex-n">Q72</span><span class="ex-type">True or false</span></div>
+          <p class="q">If f″ &gt; 0, then f is increasing.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>No. f″ &gt; 0 means concave up. A graph can be concave up and going down: the Tozeur evening temperatures (35, 30, 26, 23).</div>
+        </div>
+        <div class="ex" id="q73" data-answer="T">
+          <div class="ex-head"><span class="ex-n">Q73</span><span class="ex-type">True or false</span></div>
+          <p class="q">If f′ is decreasing, then f is concave down.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>f′ decreasing means f″ &lt; 0, and f″ &lt; 0 means concave down.</div>
+        </div>
+        <div class="ex" id="q74" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q74</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">The shape ∪ (a smile) means:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>f″ &gt; 0</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>f″ &lt; 0</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>f′ = 0 everywhere</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>f &lt; 0</span></button>
+          </div>
+          <div class="why" hidden>∪ is concave up: the slopes get bigger from left to right, so f″ &gt; 0.</div>
+        </div>
+        <div class="ex" id="q75" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q75</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">"Sales are increasing, but more and more slowly." Which signs?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>f′ &gt; 0 and f″ &lt; 0</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>f′ &gt; 0 and f″ &gt; 0</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>f′ &lt; 0 and f″ &lt; 0</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>f′ &lt; 0 and f″ &gt; 0</span></button>
+          </div>
+          <div class="why" hidden>Increasing → f′ &gt; 0. More slowly → the rate gets smaller → f″ &lt; 0.</div>
+        </div>
+        <div class="ex" id="q76" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q76</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Values of f: 20, 14, 10, 8. Which signs?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>f′ &lt; 0 and f″ &lt; 0</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>f′ &gt; 0 and f″ &gt; 0</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>f′ &lt; 0 and f″ &gt; 0</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>f′ &gt; 0 and f″ &lt; 0</span></button>
+          </div>
+          <div class="why" hidden>Differences: −6, −4, −2. Going down → f′ &lt; 0. The differences get bigger (−6 → −2) → f″ &gt; 0 (concave up).</div>
+        </div>
+        <div class="ex" id="q77" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q77</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">f(x) = 3 + 2x (a straight line). What is f″?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>2</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>3</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>always positive</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>0</span></button>
+          </div>
+          <div class="why" hidden>The slope is always 2. It never changes, so the rate of change of the slope is 0: f″ = 0.</div>
+        </div>
+        <div class="ex" id="q78" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q78</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">In a French book you read "f est convexe". In English this means:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>f is concave down</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>f is concave up</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>f is increasing</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>f is decreasing</span></button>
+          </div>
+          <div class="why" hidden>French "convexe" = English "concave up" (∪, f″ &gt; 0). French "concave" = English "concave down".</div>
+        </div>
+        <div class="ex" id="q79" data-answer="F">
+          <div class="ex-head"><span class="ex-n">Q79</span><span class="ex-type">True or false</span></div>
+          <p class="q">f″ tells you whether f is going up or going down.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>That is the job of f′. f″ tells you how the graph <em>bends</em> (concave up or down): whether f′ is growing or shrinking.</div>
+        </div>
+        <div class="ex" id="q80" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q80</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">f″(5) is negative. At x = 5 the graph is:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>concave up (∪)</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>concave down (∩)</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>surely decreasing</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>at the bottom of a valley</span></button>
+          </div>
+          <div class="why" hidden>f″ &lt; 0 means concave down. It does not tell you if f goes up or down. (A valley bottom is concave up.)</div>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">Try 8</span><span class="ex-type">Problem · try on paper first</span></div>
+          <p class="q">Class notes Example 3. Number of vegetarians V on a campus: 1989: 3 · 1991: 5 · 1993: 9 · 1995: 10 · 1997: 23 · 1999: 33 · 2001: 37. (a) Find the rate of change (per year) on each 2-year interval. (b) Is V increasing? Is the graph concave up or concave down?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a"><p><strong>(a)</strong> Divide each difference by 2 years:</p><ul><li>1989–91: (5 − 3) / 2 = 1</li><li>1991–93: (9 − 5) / 2 = 2</li><li>1993–95: (10 − 9) / 2 = 0.5</li><li>1995–97: (23 − 10) / 2 = 6.5</li><li>1997–99: (33 − 23) / 2 = 5</li><li>1999–2001: (37 − 33) / 2 = 2</li></ul><p><strong>(b)</strong> All rates are positive → V is always <strong>increasing</strong> (f′ &gt; 0).</p><p>The rates go up, down, up, then down: 1 → 2 (up), 2 → 0.5 (down), 0.5 → 6.5 (up), then 6.5 → 5 → 2 (down). So there is no single answer for the whole period. Where the rates increase, the graph is concave up; where they decrease, it is concave down. From 1997 to 2001 the rates fall steadily → <strong>concave down</strong> (f″ &lt; 0): growth is slowing down.</p></div></details>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">Try 9</span><span class="ex-type">Problem · try on paper first</span></div>
+          <p class="q">For each case, describe the shape (use Figure 7) and give a real-life example: (a) f′ &gt; 0, f″ &gt; 0 · (b) f′ &gt; 0, f″ &lt; 0 · (c) f′ &lt; 0, f″ &gt; 0 · (d) f′ &lt; 0, f″ &lt; 0.</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a"><p><strong>(a)</strong> Increasing and concave up: rising faster and faster. Example: views of a video that goes viral. (Like eˣ.)</p><p><strong>(b)</strong> Increasing and concave down: rising more and more slowly. Example: a town's population that grows but slows down. (Like √x or ln x.)</p><p><strong>(c)</strong> Decreasing and concave up: falling more and more slowly. Example: Tozeur's temperature in the evening. (Like e^(−x).)</p><p><strong>(d)</strong> Decreasing and concave down: falling faster and faster. Example: water leaving a tank through a hole that gets bigger. (Like −eˣ.)</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 09 ===================== -->
+    <section class="lesson-section" id="marginal" data-title="Marginal cost & revenue">
+      <div class="sec-num">09</div>
+      <h2>Marginal cost and revenue</h2>
+
+      <p>Now the business part. A company makes q units (q = quantity).</p>
+      <p><strong>C(q)</strong> = total cost of making q units. <strong>R(q)</strong> = total revenue (money in) from selling q units.</p>
+      <p>Profit: <strong>π(q) = R(q) − C(q)</strong>.</p>
+      <p>The word <strong>marginal</strong> means "for <strong>one more</strong> unit".</p>
+      <div class="formula">MC = C′(q) ≈ C(q + 1) − C(q)</div>
+      <div class="formula">MR = R′(q) ≈ R(q + 1) − R(q)</div>
+      <div class="formula">Marginal profit = MR − MC</div>
+      <p>Units: money per unit (dinars per coffee, dollars per item…).</p>
+      <div class="box tip"><span class="label">Memory trick</span><p>Marginal = the <strong>next one</strong>. MC = the cost of the next unit. MR = the money from the next unit. If <strong>MR &gt; MC</strong> → make it (profit goes up). If <strong>MR &lt; MC</strong> → don't (profit goes down).</p></div>
+      <p><strong>In French:</strong> coût marginal = marginal cost · recette marginale = marginal revenue · coût total = total cost · bénéfice / profit = profit.</p>
+      <div class="box example"><span class="label">Worked example 1 · coffees in a café</span>
+        <p>C(100) = 150 DT. MC = C′(100) = 0.8 DT per coffee.</p>
+        <p><strong>Step 1.</strong> 150 DT is the <strong>total</strong> cost of 100 coffees.</p>
+        <p><strong>Step 2.</strong> The 101st coffee costs about 0.80 DT. So C(101) ≈ 150 + 0.8 = <strong>150.80 DT</strong>.</p>
+        <p><strong>Step 3.</strong> 10 more coffees: C(110) ≈ 150 + 10 × 0.8 = <strong>158 DT</strong>.</p>
+      </div>
+      <div class="box example"><span class="label">Worked example 2 · class notes Example 2</span>
+        <p>C(500) = $7,200, R(500) = $9,400, C′(500) = 15, R′(500) = 20.</p>
+        <p><strong>(a) Profit:</strong> 9,400 − 7,200 = <strong>$2,200</strong>.</p>
+        <p><strong>(b)</strong> C(501) ≈ 7,200 + 15 = $7,215 and R(501) ≈ 9,400 + 20 = $9,420.</p>
+        <p><strong>(c)</strong> Marginal profit = 20 − 15 = <strong>+$5</strong>. MR &gt; MC → make the 501st item. Profit becomes about $2,205.</p>
+      </div>
+      <div class="box warn"><span class="label">Big trap · marginal cost is the cost of ONE MORE unit</span>
+        <p>MC is <strong>not</strong> the total cost C(q). And it is <strong>not</strong> the average cost C(q) ÷ q.</p>
+        <p>Café: C(100) = 150 DT, so the average is 150 ÷ 100 = 1.50 DT per coffee. But the 101st coffee costs only about 0.80 DT (the MC).</p>
+      </div>
+      <div class="box exam"><span class="label">Exam alert</span><p>Typical quiz question: "MC = 38 and MR = 35 at q = 100. Should the firm make the 101st item?" Answer: no. Marginal profit = 35 − 38 = −3, so profit would fall by about 3.</p></div>
+
+      <h3>Quick check</h3>
+      <div class="exercises">
+        <div class="ex" id="q81" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q81</span><span class="ex-type">Calculation</span></div>
+          <p class="q">C(1000) = $5,000 and MC = $25 per item. Estimate C(1001).</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>$25</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>$5,000</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>$5,025</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>$25,000</span></button>
+          </div>
+          <div class="why" hidden>One more item adds about the MC: 5,000 + 25 = $5,025.</div>
+        </div>
+        <div class="ex" id="q82" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q82</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Same firm: C(1000) = $5,000, MC = $25. Estimate C(999).</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>$4,975</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>$5,025</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>$4,999</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>$25</span></button>
+          </div>
+          <div class="why" hidden>One item fewer saves about the MC: 5,000 − 25 = $4,975.</div>
+        </div>
+        <div class="ex" id="q83" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q83</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Same firm: estimate C(1100).</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>$5,100</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>$5,025</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>$27,500</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>$7,500</span></button>
+          </div>
+          <div class="why" hidden>100 more items: 5,000 + 100 × 25 = 5,000 + 2,500 = $7,500.</div>
+        </div>
+        <div class="ex" id="q84" data-answer="F">
+          <div class="ex-head"><span class="ex-n">Q84</span><span class="ex-type">True or false</span></div>
+          <p class="q">The units of marginal cost are quantity per dollar.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>Upside down. MC = cost ÷ quantity, so the units are dollars (or dinars) <strong>per unit</strong>. (Class true/false statement 24.)</div>
+        </div>
+        <div class="ex" id="q85" data-answer="a">
+          <div class="ex-head"><span class="ex-n">Q85</span><span class="ex-type">Calculation</span></div>
+          <p class="q">At q = 50: MR = 35 and MC = 24. The 51st item adds about how much profit?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>$11</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>$59</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>−$11</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>$35</span></button>
+          </div>
+          <div class="why" hidden>Marginal profit = MR − MC = 35 − 24 = $11.</div>
+        </div>
+        <div class="ex" id="q86" data-answer="b">
+          <div class="ex-head"><span class="ex-n">Q86</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">At q = 100: MC = 38 and MR = 35. What should the firm do?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>Make item 101: profit rises by about 3</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>Not make item 101: profit falls by about 3</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>Make item 101: profit rises by about 73</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>We cannot decide without the total cost</span></button>
+          </div>
+          <div class="why" hidden>MR &lt; MC: the next item brings 35 but costs 38. Marginal profit = 35 − 38 = −3. Do not make it.</div>
+        </div>
+        <div class="ex" id="q87" data-answer="d">
+          <div class="ex-head"><span class="ex-n">Q87</span><span class="ex-type">Calculation</span></div>
+          <p class="q">C(200) = 900 DT and C(201) = 903 DT. The marginal cost at q = 200 is about:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>900 DT</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>4.50 DT per unit</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>903 DT</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>3 DT per unit</span></button>
+          </div>
+          <div class="why" hidden>MC ≈ C(201) − C(200) = 903 − 900 = 3 DT. (4.50 = 900 ÷ 200 is the <em>average</em> cost, a trap.)</div>
+        </div>
+        <div class="ex" id="q88" data-answer="T">
+          <div class="ex-head"><span class="ex-n">Q88</span><span class="ex-type">True or false</span></div>
+          <p class="q">If revenue is R(q) = 5q (each item sells for 5), then MR = 5.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>R is a straight line with slope 5. Each extra item brings 5 more, so MR = R′(q) = 5. (Class true/false statement 23.)</div>
+        </div>
+        <div class="ex" id="q89" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q89</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">At q = 1000, MR &gt; MC. Then making item 1001:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>decreases profit</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>does not change profit</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>increases profit</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>means the firm loses money</span></button>
+          </div>
+          <div class="why" hidden>The next item brings in more (MR) than it costs (MC), so profit goes up. (Class true/false statement 22.)</div>
+        </div>
+        <div class="ex" id="q90" data-answer="c">
+          <div class="ex-head"><span class="ex-n">Q90</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">C(q) = total cost in DT of q pastries. C′(40) = 1.2 means:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>40 pastries cost 1.20 DT in total</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>each pastry sells for 1.20 DT</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>the 41st pastry costs about 1.20 DT</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>the café makes 1.20 DT profit per pastry</span></button>
+          </div>
+          <div class="why" hidden>C′(40) is the marginal cost at 40: the extra cost of one more pastry (the 41st).</div>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">Try 10</span><span class="ex-type">Problem · try on paper first</span></div>
+          <p class="q">Class problem P14. C(2000) = $5,930 and R(2000) = $7,780. (a) Find the profit. (b) MC = 2.1 and MR = 2.5: should production go up or down? (c) What if MC = 4.77 and MR = 4.32?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a"><p><strong>(a)</strong> Profit = 7,780 − 5,930 = <strong>$1,850</strong>.</p><p><strong>(b)</strong> MR − MC = 2.5 − 2.1 = +0.40. One more unit adds about $0.40 to profit → <strong>increase</strong> production.</p><p><strong>(c)</strong> MR − MC = 4.32 − 4.77 = −0.45. One more unit loses about $0.45 → <strong>decrease</strong> production.</p></div></details>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">Try 11</span><span class="ex-type">Problem · try on paper first</span></div>
+          <p class="q">Class notes Example 3. (a) C(50) = $4,300 and C′(50) = 24. Estimate C(52). (b) R′(50) = 35. What is the profit from the 51st item? (c) At q = 100, C′(100) = 38 and R′(100) = 35. Should the firm make the 101st item?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a"><p><strong>(a)</strong> 2 more items: C(52) ≈ 4,300 + 2 × 24 = <strong>$4,348</strong>.</p><p><strong>(b)</strong> 35 − 24 = <strong>$11</strong> of extra profit.</p><p><strong>(c)</strong> 35 − 38 = −3: the 101st item would <strong>reduce</strong> profit by about $3. Do not make it.</p></div></details>
+        </div>
+        <div class="ex">
+          <div class="ex-head"><span class="ex-n">Try 12</span><span class="ex-type">Problem · try on paper first</span></div>
+          <p class="q">Class problem P13. C(q) is the cost in dollars of producing q barrels of olive oil. (a) What are the units of marginal cost? (b) MC = 3 at q = 100. What does it mean?</p>
+          <details class="answer"><summary>Show the full solution</summary><div class="a"><p><strong>(a)</strong> Dollars per barrel.</p><p><strong>(b)</strong> When the firm already produces 100 barrels, producing the 101st barrel costs about <strong>$3 more</strong>.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 10 ===================== -->
+    <section class="lesson-section" id="final-test" data-title="Final test (20 questions)">
+      <div class="sec-num">10</div>
+      <h2>Final test (20 questions)</h2>
+
+      <div class="recap"><h3>Read this first: the whole chapter in 8 lines</h3><ul>
+        <li><strong>Slope</strong> = rise ÷ run = Δy / Δx. Up → +, down → −, flat → 0.</li>
+        <li><strong>Average rate of change</strong> = (f(b) − f(a)) / (b − a) = slope of the secant line.</li>
+        <li><strong>f′(a)</strong> = instantaneous rate of change = slope of the tangent line at a. Smaller h → better estimate.</li>
+        <li><strong>From a table:</strong> right = (next − this)/h, left = (this − previous)/h, centered = (next − previous)/(2h).</li>
+        <li><strong>Sign:</strong> f′ &gt; 0 → f increasing; f′ &lt; 0 → decreasing; f′ = 0 → peak, valley or flat. f′ &lt; 0 does not mean f &lt; 0.</li>
+        <li><strong>Units of f′</strong> = output units <strong>per</strong> input unit. f(a + 1) ≈ f(a) + f′(a).</li>
+        <li><strong>f″ &gt; 0</strong> → concave up ∪; <strong>f″ &lt; 0</strong> → concave down ∩. Concave up ≠ increasing.</li>
+        <li><strong>MC</strong> = C′(q) ≈ cost of ONE MORE unit; <strong>MR</strong> = R′(q). MR &gt; MC → make it; MR &lt; MC → don't.</li>
+      </ul></div>
+      <p>20 questions, like the Moodle quiz. Try to finish in <strong>15 minutes</strong> without scrolling up. Paper and a calculator are allowed.</p>
+      <p>Score 16/20 or more? You are ready for the <a href="ch2-derivative.html">full Chapter 2 lesson</a> and its practice test.</p>
+      <div class="exercises">
+        <div class="ex" id="t1" data-answer="d">
+          <div class="ex-head"><span class="ex-n">T1</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Slope of the line through (2, 1) and (6, 9)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>8</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>4</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>0.5</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>2</span></button>
+          </div>
+          <div class="why" hidden>Rise = 9 − 1 = 8. Run = 6 − 2 = 4. Slope = 8 ÷ 4 = 2.</div>
+        </div>
+        <div class="ex" id="t2" data-answer="a">
+          <div class="ex-head"><span class="ex-n">T2</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Distance d (km) after t hours: t = 0, 1, 2, 3 → d = 0, 60, 150, 210. Average speed from t = 1 to t = 3?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>75 km/h</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>150 km/h</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>70 km/h</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>105 km/h</span></button>
+          </div>
+          <div class="why" hidden>(210 − 60) / (3 − 1) = 150 / 2 = 75 km/h.</div>
+        </div>
+        <div class="ex" id="t3" data-answer="b">
+          <div class="ex-head"><span class="ex-n">T3</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Cost C in dinars, quantity q in kg. The average rate of change of C is measured in:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>kg per dinar</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>dinars per kg</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>dinars</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>kg</span></button>
+          </div>
+          <div class="why" hidden>Output units per input unit: dinars per kg.</div>
+        </div>
+        <div class="ex" id="t4" data-answer="F">
+          <div class="ex-head"><span class="ex-n">T4</span><span class="ex-type">True or false</span></div>
+          <p class="q">The average rate of change from a to b is the slope of the tangent line at a.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>It is the slope of the <strong>secant</strong> line through the two points. The tangent slope is f′(a), an instantaneous rate.</div>
+        </div>
+        <div class="ex" id="t5" data-answer="b">
+          <div class="ex-head"><span class="ex-n">T5</span><span class="ex-type">Calculation</span></div>
+          <p class="q">f(x) = x². Estimate f′(2) with h = 0.1.</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>0.41</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>4.1</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>4.41</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>41</span></button>
+          </div>
+          <div class="why" hidden>f(2.1) = 4.41. (4.41 − 4) / 0.1 = 0.41 / 0.1 = 4.1.</div>
+        </div>
+        <div class="ex" id="t6" data-answer="c">
+          <div class="ex-head"><span class="ex-n">T6</span><span class="ex-type">Calculation</span></div>
+          <p class="q">x: 4, 6, 8 and f(x): 20, 26, 30. Centered estimate of f′(6)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>10</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>3</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>2.5</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>2</span></button>
+          </div>
+          <div class="why" hidden>(30 − 20) / (8 − 4) = 10 / 4 = 2.5. (3 is the left estimate, 2 is the right estimate.)</div>
+        </div>
+        <div class="ex" id="t7" data-answer="d">
+          <div class="ex-head"><span class="ex-n">T7</span><span class="ex-type">Calculation</span></div>
+          <p class="q">Same table (x: 4, 6, 8 and f: 20, 26, 30). Left estimate of f′(6)?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>6</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>2</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>2.5</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>3</span></button>
+          </div>
+          <div class="why" hidden>Left: (26 − 20) / (6 − 4) = 6 / 2 = 3.</div>
+        </div>
+        <div class="ex" id="t8" data-answer="T">
+          <div class="ex-head"><span class="ex-n">T8</span><span class="ex-type">True or false</span></div>
+          <p class="q">If f′(x) &gt; 0 on an interval, then f is increasing there.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>Positive slope everywhere on the interval → the graph goes up.</div>
+        </div>
+        <div class="ex" id="t9" data-answer="a">
+          <div class="ex-head"><span class="ex-n">T9</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">It is −3 °C and the temperature is rising. Which is true?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>f &lt; 0 and f′ &gt; 0</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>f &lt; 0 and f′ &lt; 0</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>f &gt; 0 and f′ &gt; 0</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>f &gt; 0 and f′ &lt; 0</span></button>
+          </div>
+          <div class="why" hidden>−3 °C is below zero → f &lt; 0. Rising → f′ &gt; 0. The signs of f and f′ are independent.</div>
+        </div>
+        <div class="ex" id="t10" data-answer="a">
+          <div class="ex-head"><span class="ex-n">T10</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">At the bottom of a smooth valley:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>f′ = 0</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>f′ &gt; 0</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>f′ &lt; 0</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>f = 0</span></button>
+          </div>
+          <div class="why" hidden>At the bottom the tangent is flat, so f′ = 0. (f itself can be any number.)</div>
+        </div>
+        <div class="ex" id="t11" data-answer="c">
+          <div class="ex-head"><span class="ex-n">T11</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">P = f(t) people in a town, t years since 2020. f′(3) = 1,200 means:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>In 2023 the town has 1,200 people</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>In 2021 the town grows by 3 people per year</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>In 2023 the town grows by about 1,200 people per year</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>The town grows by 1,200 people in 3 years</span></button>
+          </div>
+          <div class="why" hidden>t = 3 is 2023. f′(3) is a rate: 1,200 people per year at that time.</div>
+        </div>
+        <div class="ex" id="t12" data-answer="b">
+          <div class="ex-head"><span class="ex-n">T12</span><span class="ex-type">Calculation</span></div>
+          <p class="q">f(6) = 40 and f′(6) = −5. Estimate f(8).</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>35</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>30</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>45</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>50</span></button>
+          </div>
+          <div class="why" hidden>Δx = 2. f(8) ≈ 40 + (−5) × 2 = 40 − 10 = 30.</div>
+        </div>
+        <div class="ex" id="t13" data-answer="d">
+          <div class="ex-head"><span class="ex-n">T13</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">V = f(t) litres, t in minutes. The units of f′(t) are:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>minutes per litre</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>litres</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>minutes</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>litres per minute</span></button>
+          </div>
+          <div class="why" hidden>Units of the output per unit of the input: litres per minute.</div>
+        </div>
+        <div class="ex" id="t14" data-answer="c">
+          <div class="ex-head"><span class="ex-n">T14</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">Values of f: 10, 13, 18, 25. The graph is:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>concave down</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>a straight line (no bend)</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>concave up</span></button>
+          </div>
+          <div class="why" hidden>Differences: 3, 5, 7 → getting bigger → f″ &gt; 0 → concave up.</div>
+        </div>
+        <div class="ex" id="t15" data-answer="F">
+          <div class="ex-head"><span class="ex-n">T15</span><span class="ex-type">True or false</span></div>
+          <p class="q">If f is concave up, then f must be increasing.</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>Concave up is about the bend. A falling graph can be concave up (falling more and more slowly).</div>
+        </div>
+        <div class="ex" id="t16" data-answer="d">
+          <div class="ex-head"><span class="ex-n">T16</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">"Profit is falling, and falling faster and faster." Which signs?</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>f′ &lt; 0 and f″ &gt; 0</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>f′ &gt; 0 and f″ &lt; 0</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>f′ &gt; 0 and f″ &gt; 0</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>f′ &lt; 0 and f″ &lt; 0</span></button>
+          </div>
+          <div class="why" hidden>Falling → f′ &lt; 0. Faster and faster → the slope gets more negative (smaller) → f″ &lt; 0.</div>
+        </div>
+        <div class="ex" id="t17" data-answer="b">
+          <div class="ex-head"><span class="ex-n">T17</span><span class="ex-type">Calculation</span></div>
+          <p class="q">C(300) = 4,500 DT and C′(300) = 12 DT per unit. Estimate C(301).</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>12 DT</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>4,512 DT</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>4,500 DT</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>15 DT</span></button>
+          </div>
+          <div class="why" hidden>C(301) ≈ C(300) + C′(300) = 4,500 + 12 = 4,512 DT.</div>
+        </div>
+        <div class="ex" id="t18" data-answer="a">
+          <div class="ex-head"><span class="ex-n">T18</span><span class="ex-type">Multiple choice</span></div>
+          <p class="q">MC = 4.77 and MR = 4.32. The firm should:</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>produce less: each extra unit loses about 0.45</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>produce more: each extra unit earns about 0.45</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>produce more: each extra unit earns about 9.09</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>keep the same production</span></button>
+          </div>
+          <div class="why" hidden>MR − MC = 4.32 − 4.77 = −0.45 &lt; 0. One more unit reduces profit, so produce less. (Class problem P14c.)</div>
+        </div>
+        <div class="ex" id="t19" data-answer="c">
+          <div class="ex-head"><span class="ex-n">T19</span><span class="ex-type">Calculation</span></div>
+          <p class="q">C(50) = 4,300 and C′(50) = 24. Estimate C(52).</p>
+          <div class="opts">
+            <button class="opt" data-k="a"><span class="k">a</span><span>4,324</span></button>
+            <button class="opt" data-k="b"><span class="k">b</span><span>4,396</span></button>
+            <button class="opt" data-k="c"><span class="k">c</span><span>4,348</span></button>
+            <button class="opt" data-k="d"><span class="k">d</span><span>4,300</span></button>
+          </div>
+          <div class="why" hidden>Two more units: 4,300 + 2 × 24 = 4,348.</div>
+        </div>
+        <div class="ex" id="t20" data-answer="T">
+          <div class="ex-head"><span class="ex-n">T20</span><span class="ex-type">True or false</span></div>
+          <p class="q">Marginal cost is measured in money per unit (for example, dinars per item).</p>
+          <div class="opts tf">
+            <button class="opt" data-k="T"><span>True</span></button>
+            <button class="opt" data-k="F"><span>False</span></button>
+          </div>
+          <div class="why" hidden>MC = change in cost ÷ change in quantity, so its units are money per unit.</div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="lesson-nav">
+      <a href="ch2-derivative.html"><span>Full lesson</span><b>Ch 2 · Rate of Change: The Derivative</b></a>
+      <a href="ch3-shortcuts.html"><span>Next</span><b>Ch 3 · Shortcuts to Differentiation</b></a>
+    </nav>
+  </main>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

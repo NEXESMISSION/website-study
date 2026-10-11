@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Quiz 1 · Practice exam A · Microeconomics</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/exam.css">
+</head>
+<body class="micro">
+<div id="exam"></div>
+<script type="application/json" id="exam-data">
+{
+  "id": "micro-quiz1-A",
+  "title": "Quiz 1 · Practice exam A",
+  "shortTitle": "Micro Quiz 1 · A",
+  "course": "Microeconomics",
+  "courseClass": "micro",
+  "covers": "Chapters 1–2",
+  "duration": 45,
+  "description": "A full simulation of Quiz 1 (Tuesday 6 October, 10% of the grade) in the style of your teacher’s McConnell test-bank quizzes: 16 multiple-choice questions, 6 true/false statements to justify, and two problems on marginal analysis and the production possibilities curve. It covers every topic of Chapters 1 and 2, with the classic traps.",
+  "instructions": [
+    "45 minutes. No notes, no phone, no lessons. A simple calculator is allowed.",
+    "Part I: one correct answer per question. A wrong answer costs nothing, so answer every question.",
+    "Part II: choose True or False, <b>then justify in 1–3 sentences</b>. The justification is worth half the points: an answer with no reason, or with the wrong reason, loses that half.",
+    "Part III: work on paper, then type only the final number in each box (no words). Written parts are marked with a rubric after you submit.",
+    "Amounts are in Tunisian dinars (TND). Suggested timing: Part I 15 min · Part II 12 min · Part III 15 min · 3 min to check."
+  ],
+  "sections": [
+    {
+      "title": "Part I · Multiple choice (16 pts)",
+      "intro": "One correct answer per question, 1 pt each",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Scarcity & the economic problem",
+          "review": "../microeconomics/ch1-introduction.html#scarcity",
+          "prompt": "<p>In summer, several Tunisian regions have night-time water cuts, while farms, hotels and households all want more water. Which statement about <b>scarcity</b> is correct?</p>",
+          "options": [
+            "Water scarcity would disappear if the income of every Tunisian household doubled.",
+            "Cheap goods such as subsidized bread are not scarce, because their price is low.",
+            "Scarcity means wants are greater than the available resources, so rich countries face it too.",
+            "Air and sunlight are scarce goods, because people and farms need them to survive."
+          ],
+          "answer": 2,
+          "explain": "<b>(c)</b> is the definition: scarcity = wants greater than the available resources. It is a comparison, not a question of money, so every country faces it, rich or poor (Switzerland also has limited land, water and time). <b>(a)</b> is the classic “scarcity = poverty” trap: richer households would want even more water (gardens, pools), and the water itself would still be limited. <b>(b)</b> confuses scarcity with a high price: subsidized bread is cheap but still scarce, because it uses limited flour, ovens and workers. <b>(d)</b> confuses <i>needed</i> with <i>scarce</i>: air and sunlight are free goods, available in unlimited quantities without effort."
+        },
+        {
+          "id": "q2",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Opportunity cost",
+          "review": "../microeconomics/ch1-introduction.html#oppcost",
+          "prompt": "<p>On Saturday afternoon, Ines stays at home to revise for her micro quiz. Her other possibilities were: working 6 hours in her uncle’s shop in the medina at 5 TND per hour, <b>or</b> giving a private French lesson that pays a fixed 25 TND for the afternoon. She could have done only one of these. In money terms, what is the <b>opportunity cost</b> of her revision afternoon?</p>",
+          "options": [
+            "25 TND",
+            "30 TND",
+            "55 TND",
+            "0 TND, because revising does not cost any money"
+          ],
+          "answer": 1,
+          "explain": "Opportunity cost = the value of the <b>next best alternative</b> you give up. The shop pays 6 × 5 = 30 TND and the lesson 25 TND, so the next best alternative is the shop: <b>30 TND</b>. <b>55 TND</b> is the classic trap of adding all the alternatives: she could only have done one of them, so only the best one counts. <b>25 TND</b> is the less valuable alternative. <b>0 TND</b> is wrong: a choice has an opportunity cost even when no money is spent; here she gives up 30 TND of earnings."
+        },
+        {
+          "id": "q3",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Micro vs macro",
+          "review": "../microeconomics/ch1-introduction.html#micromacro",
+          "prompt": "<p>Which of the following is a <b>microeconomic</b> topic?</p>",
+          "options": [
+            "Tunisia’s inflation rate rose to 7% this year.",
+            "Total employment in the Tunisian economy fell in the first quarter.",
+            "The Central Bank of Tunisia raises its key interest rate to slow down inflation in the whole economy.",
+            "A bank in Sousse cuts the interest rate on its car loans to win customers from other banks."
+          ],
+          "answer": 3,
+          "explain": "<b>(d)</b> is about <b>one firm</b> (one bank) setting the price of one of its products (its car loans): microeconomics. The words “interest rate” sound macro, but here it is one bank’s price, exactly like a bakery setting the price of its bread. <b>(a)</b> the national inflation rate (the general price level), <b>(b)</b> total employment and <b>(c)</b> the Central Bank’s policy for the whole economy are all aggregates of the national economy: macroeconomics."
+        },
+        {
+          "id": "q4",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Factors of production",
+          "review": "../microeconomics/ch1-introduction.html#problem",
+          "prompt": "<p>Karim opens a bakery in Sousse. Which of the following is <b>NOT</b> “capital” as a factor of production?</p>",
+          "options": [
+            "Karim’s 30,000 TND bank loan",
+            "The oven in which the bread is baked",
+            "The building where the bakery operates",
+            "The scooter used to deliver bread to cafés"
+          ],
+          "answer": 0,
+          "explain": "In economics, <b>capital</b> means man-made goods used to produce other goods: <b>(b)</b> the oven, <b>(d)</b> the delivery scooter, and also <b>(c)</b> the building (it is man-made, like a factory or a warehouse; only the natural site under it is land). <b>(a)</b> The loan is money, that is <i>financial</i> capital: money by itself produces nothing. It only becomes capital (a factor of production) when Karim spends it on an oven or a scooter. Trap: many students choose (c) the building, because we pay “rent” for it and rent is the payment for land."
+        },
+        {
+          "id": "q5",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Goods & services",
+          "review": "../microeconomics/ch1-introduction.html#goods",
+          "prompt": "<p>The street lighting on Avenue Habib Bourguiba is classified as a <b>public good</b> mainly because:</p>",
+          "options": [
+            "it is non-rival and non-excludable",
+            "it is paid for by the municipality of Tunis",
+            "nobody pays to use it, so it is a free good",
+            "it lasts a long time, so it is a durable good"
+          ],
+          "answer": 0,
+          "explain": "A public good is defined by two properties: <b>non-rival</b> (my use of the light does not reduce yours) and <b>non-excludable</b> (nobody can be stopped from walking under it, even without paying). <b>(b)</b> is a trap: who pays does not define a public good; a state firm can sell private goods too (STEG’s electricity is rival and excludable). <b>(c)</b> is wrong: street lighting is not a free good, because it uses scarce resources (electricity, poles, workers) paid for with taxes. <b>(d)</b> “durable” is a different classification and says nothing about rivalry or exclusion."
+        },
+        {
+          "id": "q6",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Marginal analysis (MB/MC)",
+          "review": "../microeconomics/ch1-introduction.html#marginal",
+          "prompt": "<p>A café in Sfax normally closes at 22:00. Staying open one more hour would bring 45 TND of extra sales and 60 TND of extra costs (wages and electricity). Over the whole day, the café’s total sales are 900 TND and its total costs 600 TND. Using <b>marginal analysis</b>, the owner should:</p>",
+          "options": [
+            "stay open the extra hour, because total sales (900 TND) are greater than total costs (600 TND)",
+            "stay open the extra hour, because it still brings 45 TND of extra sales to the café",
+            "not stay open the extra hour, because its extra cost (60 TND) is greater than its extra benefit (45 TND)",
+            "close the café completely, because staying open the extra hour would lose money"
+          ],
+          "answer": 2,
+          "explain": "Marginal analysis compares the <b>extra</b> benefit and the <b>extra</b> cost of <b>one more</b> unit, here one more hour: MB = 45 TND is less than MC = 60 TND, so the extra hour would reduce the net benefit by 15 TND. Don’t do it: <b>(c)</b>. <b>(a)</b> is the totals trap: the whole day is profitable, but the decision is only about the <i>extra</i> hour. <b>(b)</b> looks only at the benefit: extra sales are not enough, they must be greater than the extra cost. <b>(d)</b> overreacts: the normal hours bring a net benefit of 900 − 600 = 300 TND, so the café keeps its normal hours."
+        },
+        {
+          "id": "q7",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Positive vs normative",
+          "review": "../microeconomics/ch1-introduction.html#positive",
+          "prompt": "<p>Which of the following is a <b>positive</b> economic statement?</p>",
+          "options": [
+            "“Graduate unemployment in Tunisia reached 23% last year, which shows that the state should hire more graduates.”",
+            "“Fuel subsidies are a waste of public money.”",
+            "“Food prices in Tunisian supermarkets are too high for ordinary families.”",
+            "“Students bought 30% fewer cappuccinos after campus cafés raised the price from 2 TND to 3 TND.”"
+          ],
+          "answer": 3,
+          "explain": "A positive statement says <b>what is</b> and can be checked with data. <b>(d)</b> is a testable cause-and-effect claim: the cafés’ sales records can confirm it or prove it wrong, so it is positive. <b>(a)</b> is the trap: it starts with a fact (23%), but the word <b>“should”</b> adds a value judgement, so the whole statement is normative. <b>(b)</b> “a waste” and <b>(c)</b> “too high” are opinions that reasonable people can disagree about: normative."
+        },
+        {
+          "id": "q8",
+          "type": "mcq",
+          "points": 1,
+          "topic": "PPC & budget line",
+          "review": "../microeconomics/ch1-introduction.html#ppc",
+          "prompt": "<p>Salma has a weekly budget of 60 TND for louage trips and coffees. A louage trip costs 6 TND and a coffee costs 2 TND. Which statement is <b>correct</b>?</p>",
+          "options": [
+            "The opportunity cost of one louage trip is 1/3 of a coffee.",
+            "Buying 8 trips and 8 coffees is unattainable with her budget.",
+            "If her budget rises to 90 TND, the opportunity cost of one louage trip rises to 4.5 coffees.",
+            "Buying 5 trips and 15 coffees is a point inside her budget line."
+          ],
+          "answer": 1,
+          "explain": "Check each statement. <b>(b)</b>: 8 × 6 + 8 × 2 = 48 + 16 = <b>64 TND</b>, more than her 60 TND, so this combination is outside the budget line: unattainable. Correct. <b>(a)</b>: one trip costs 6 ÷ 2 = <b>3 coffees</b>; 1/3 is the cost of one coffee in trips (the inverse trap). <b>(c)</b>: the opportunity cost depends only on the <b>price ratio</b> (6 ÷ 2 = 3); a higher income shifts the line outward but does not change its slope. <b>(d)</b>: 5 × 6 + 15 × 2 = 30 + 30 = 60 TND, exactly her budget, so the point is <b>on</b> the line, not inside it."
+        },
+        {
+          "id": "q9",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Economic systems",
+          "review": "../microeconomics/ch2-market-system.html#systems",
+          "prompt": "<p>Under <b>laissez-faire</b> (pure) capitalism, the role of the government is limited to:</p>",
+          "options": [
+            "protecting private property and providing a legal framework for markets to work",
+            "owning key firms such as the national electricity and water companies",
+            "fixing the prices of basic goods such as bread and semolina",
+            "deciding how output is divided between consumer goods and capital goods"
+          ],
+          "answer": 0,
+          "explain": "Laissez-faire (“let it be”) is <b>pure capitalism</b>: the government only protects private property and sets up the legal environment for markets; any other action is thought to disturb the efficiency of the market. <b>(b)</b> and <b>(c)</b> describe what the Tunisian state does in a <b>mixed economy</b> (STEG, SONEDE, subsidized bread and semolina), not pure capitalism. <b>(d)</b> is a decision of the central planning board in a <b>command system</b>."
+        },
+        {
+          "id": "q10",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Market system features",
+          "review": "../microeconomics/ch2-market-system.html#features-1",
+          "prompt": "<p>In Sousse, fifteen driving schools charge about 25 TND per lesson. One school raises its price to 40 TND while the others stay at 25 TND; within a month it has lost most of its students. Which characteristic of the market system does this <b>best</b> illustrate?</p>",
+          "options": [
+            "Private property",
+            "Self-interest",
+            "The use of money as a medium of exchange",
+            "Competition"
+          ],
+          "answer": 3,
+          "explain": "<b>(d) Competition</b> means many independent buyers and sellers, free to enter or leave the market. It limits the abuse of power: a seller who charges more than the competitive price loses sales to the other sellers. That is exactly what happens here, which is why the textbook calls competition the <b>basic regulatory force</b> of the market system. <b>(b) Self-interest</b> explains why the owner tried a higher price (he wants more profit), but not why he lost his students. <b>(a)</b> private property and <b>(c)</b> money are not what this story shows."
+        },
+        {
+          "id": "q11",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Market system features",
+          "review": "../microeconomics/ch2-market-system.html#features-1",
+          "prompt": "<p>In the market system, <b>self-interest</b> means that:</p>",
+          "options": [
+            "people are selfish and ignore the needs of others",
+            "firms try to sell the largest possible quantity of goods, whatever happens to their profit",
+            "each economic unit pursues its own goal, such as profit for a firm",
+            "the government directs firms to act in the interest of the whole nation"
+          ],
+          "answer": 2,
+          "explain": "Self-interest is the <b>motivating force</b> of the market system: each unit tries to reach its own goal. Entrepreneurs maximize profit, property owners seek the highest price for their resources (like the highest rent for land), workers seek the best mix of wages, hours, benefits and working conditions, and consumers seek the most satisfaction at the lowest price. <b>(a)</b> is the classic trap: self-interest is <b>not selfishness</b>, and in a market you usually reach your goal by serving others (a café earns profit only if it serves good coffee). <b>(b)</b> is wrong because firms maximize <b>profit</b>, not sales. <b>(d)</b> is about the government, not self-interest."
+        },
+        {
+          "id": "q12",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Specialization & money",
+          "review": "../microeconomics/ch2-market-system.html#features-2",
+          "prompt": "<p>Two twin sisters with <b>exactly the same</b> natural talents run a tailoring workshop in Ksar Hellal. Before, each of them made complete dresses. Now one only cuts the fabric and the other only sews, and their total output rises. What can explain this rise?</p>",
+          "options": [
+            "The differences in their natural abilities",
+            "Learning by doing, and saving the time lost when switching between tasks",
+            "The use of money and the coincidence of wants",
+            "Nothing: division of labor raises output only when workers have different abilities"
+          ],
+          "answer": 1,
+          "explain": "Division of labor raises output for three reasons: it uses <b>differences in ability</b>, it fosters <b>learning by doing</b>, and it <b>saves time</b>. The twins have identical talents, so the first reason does not apply here (<b>(a)</b> is wrong), but the other two still work: by cutting all day, one sister becomes faster and more skilled at cutting, and neither of them loses time changing tasks and tools. So <b>(d)</b> is the trap: different abilities are only one of the three reasons. <b>(c)</b> is about exchange between producers, not about why specialization raises output inside the workshop."
+        },
+        {
+          "id": "q13",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Five fundamental questions",
+          "review": "../microeconomics/ch2-market-system.html#what",
+          "prompt": "<p>A Tunisian company enjoys full freedom of enterprise and launches a new prickly-pear (hindi) energy drink. After six months very few people buy it, and the company loses money every month. In a market system, what is the most likely outcome?</p>",
+          "options": [
+            "The company keeps making the drink, because freedom of enterprise lets it produce what it wants.",
+            "The government orders shops to sell the drink so that the company survives.",
+            "The company raises the price of the drink to cover its losses, and the industry expands.",
+            "The company stops producing the drink, because consumers’ dinar votes decide what is profitable."
+          ],
+          "answer": 3,
+          "explain": "<b>(d)</b> This is <b>consumer sovereignty</b>: consumers register their wants with their spending (“dollar votes”, here dinar votes). A product that does not get enough votes brings continuing losses, so it stops being produced, like McDonald’s “McMisses”. <b>(a)</b> is the trap: freedom of enterprise lets a firm <i>choose</i> what to make, but it cannot force anyone to buy; continuing losses push it to stop or go bankrupt. Entrepreneurs are at the helm, but consumers give the orders. <b>(b)</b> is not how a market system works. <b>(c)</b> is wrong: a higher price for a drink few people want reduces sales even more, and an industry with continuing losses contracts, it does not expand."
+        },
+        {
+          "id": "q14",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Least-cost production",
+          "review": "../microeconomics/ch2-market-system.html#how",
+          "prompt": "<p>A pottery workshop in Nabeul can produce the same daily output with three techniques:</p><div class=\"table-wrap\"><table><thead><tr><th>Technique</th><th class=\"n\">Workers (labor)</th><th class=\"n\">Machines (capital)</th></tr></thead><tbody><tr><td>Technique 1</td><td class=\"n\">6</td><td class=\"n\">2</td></tr><tr><td>Technique 2</td><td class=\"n\">4</td><td class=\"n\">3</td></tr><tr><td>Technique 3</td><td class=\"n\">1</td><td class=\"n\">5</td></tr></tbody></table></div><p>A worker costs 30 TND per day and renting a machine costs 50 TND per day, so the workshop uses technique 2. Then the daily wage <b>rises to 40 TND</b> (machine rental unchanged). Which technique will competition push the workshop to use now?</p>",
+          "options": [
+            "Technique 1",
+            "Technique 2, because the technology has not changed",
+            "Technique 3",
+            "Any of the three, because they all produce the same output"
+          ],
+          "answer": 2,
+          "explain": "Recompute the cost of each technique at the new prices (units × price, then add): T1 = 6 × 40 + 2 × 50 = 240 + 100 = <b>340 TND</b>; T2 = 4 × 40 + 3 × 50 = 160 + 150 = <b>310 TND</b>; T3 = 1 × 40 + 5 × 50 = 40 + 250 = <b>290 TND</b>. Technique 3 is now the least-cost technique, and competition forces firms to produce at the lowest cost per unit. (Check of the start: at 30 TND, T1 = 280, T2 = 270, T3 = 280 TND, so T2 was the best.) <b>(b)</b> is the trap: the best technique depends on the technology <b>and</b> on resource prices. When labor becomes more expensive, firms switch to the technique that uses the least labor. <b>(d)</b> is wrong: same output, but not the same cost, and economic efficiency is measured in money cost."
+        },
+        {
+          "id": "q15",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Invisible hand & command failure",
+          "review": "../microeconomics/ch2-market-system.html#command-demise",
+          "prompt": "<p>The owner of a small grocery shop (hanout) in Ariana opens at 6 a.m. and sells fresh bread and milk at low prices, only because this brings him more customers and more profit. As a result, the neighbourhood is well served. According to Adam Smith, this good result happens:</p>",
+          "options": [
+            "automatically and unintentionally, because competition guides his self-interest",
+            "deliberately, because the owner’s real goal is to help the families of his neighbourhood",
+            "because a government planning board tells each shop when to open and what to charge",
+            "because the owner does not care about making a profit"
+          ],
+          "answer": 0,
+          "explain": "<b>(a)</b> This is Adam Smith’s <b>invisible hand</b> (1776): in a competitive market, people who pursue their own self-interest are led, <b>without intending it</b>, to promote the interest of society. The grocer wants profit; because nearby shops compete for the same customers, his best way to get it is to open early and sell good products at low prices. <b>(b)</b> is the trap: the result is unintentional, not charity. <b>(c)</b> describes a command system. <b>(d)</b> is the opposite: it is precisely his search for profit, controlled by competition, that serves the neighbourhood."
+        },
+        {
+          "id": "q16",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Circular flow",
+          "review": "../microeconomics/ch2-market-system.html#circular-flow",
+          "prompt": "<p>Which of the following transactions takes place in the <b>resource market</b> of the circular flow model?</p>",
+          "options": [
+            "A family in Sousse buys a new fridge that it will use for many years.",
+            "An olive-oil company pays wages to its olive pickers.",
+            "A student pays 3 TND for a cappuccino in a café near ISB.",
+            "A tourist pays for a night in a hotel in Djerba."
+          ],
+          "answer": 1,
+          "explain": "In the <b>resource market</b>, households <b>sell</b> resources (land, labor, capital, entrepreneurial ability) and businesses <b>buy</b> them. In <b>(b)</b> the olive pickers sell their <b>labor</b>; their wages are a cost for the company and income for their households. <b>(a)</b>, <b>(c)</b> and <b>(d)</b> are households <b>buying</b> goods and services from businesses: that is the <b>product market</b>. Trap: a fridge is a durable good, but the family buys it to consume it, so it is still a product, not a resource."
+        }
+      ]
+    },
+    {
+      "title": "Part II · True or false: justify (12 pts)",
+      "intro": "Choose True or False, then justify in 1–3 sentences: 1 pt for the answer + 1 pt for the justification",
+      "questions": [
+        {
+          "id": "q17",
+          "type": "tf",
+          "points": 1,
+          "topic": "Opportunity cost",
+          "review": "../microeconomics/ch1-introduction.html#oppcost",
+          "prompt": "<p>“Public universities in Tunisia charge students only a small registration fee, so a university education has almost no opportunity cost for Tunisian society.”</p>",
+          "answer": false,
+          "explain": "False. The small fee is the <b>money price</b> paid by the student, not the opportunity cost. Teachers, buildings, electricity and the part of the state budget used by universities are scarce resources that could have produced other goods and services: “there is no such thing as a free lunch”. The students also give up the income they could have earned by working. Trap: thinking that something cheap or “free” has no opportunity cost.",
+          "justify": {
+            "points": 1,
+            "model": "False: the fee is not the opportunity cost. Universities use scarce resources (teachers, buildings, electricity, part of the state budget) that could have produced other things, such as hospitals or roads, and students give up the income they could earn by working. Something is always sacrificed: there is no free lunch.",
+            "rubric": [
+              {
+                "text": "Says the fee (money price) is not the opportunity cost: universities use scarce resources (teachers, buildings, budget) that have other uses",
+                "points": 0.5
+              },
+              {
+                "text": "Names what is given up: other goods and services those resources could produce (e.g. hospitals, roads) and/or the students’ lost earnings (“no free lunch”)",
+                "points": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "q18",
+          "type": "tf",
+          "points": 1,
+          "topic": "Micro vs macro",
+          "review": "../microeconomics/ch1-introduction.html#micromacro",
+          "prompt": "<p>“Poulina Group Holding is one of Tunisia’s largest companies, so a study of how it sets the prices of its products belongs to macroeconomics.”</p>",
+          "answer": false,
+          "explain": "False. Microeconomics studies <b>individual units</b>: households, firms and markets, <b>whatever their size</b>. How one firm sets its prices is micro, even for a giant group (like Intel or Tunisie Télécom in the lesson). Macroeconomics studies the economy as a whole: GDP, the general price level (inflation), total employment, growth. Trap: confusing “big” with “macro”.",
+          "justify": {
+            "points": 1,
+            "model": "False: it is microeconomics. Micro studies individual decision units (one household, one firm, one market) whatever their size, and PGH’s pricing is the decision of one firm. Macro studies aggregates of the whole economy, such as GDP, inflation or the national unemployment rate.",
+            "rubric": [
+              {
+                "text": "Says micro studies individual units (one firm, household or market) whatever their size, so PGH’s pricing is micro",
+                "points": 0.5
+              },
+              {
+                "text": "Defines macro correctly: the study of the whole economy (aggregates such as GDP, inflation, national unemployment)",
+                "points": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "q19",
+          "type": "tf",
+          "points": 1,
+          "topic": "Positive vs normative",
+          "review": "../microeconomics/ch1-introduction.html#positive",
+          "prompt": "<p>The statement “Tunisia’s unemployment rate is 50%” is a <b>positive</b> statement.</p>",
+          "answer": true,
+          "explain": "True. A positive statement is about <b>what is</b> and can be <b>tested with data</b>. This one is false (the real rate is far lower), but you can check it and prove it wrong, so it is still positive. True or false does not matter; what matters is whether facts can settle it. A normative statement contains a value judgement (should, ought to, too high, fair) and cannot be tested. Trap: answering False because the number is wrong.",
+          "justify": {
+            "points": 1,
+            "model": "True: a positive statement describes what is and can be checked with data. This one is false (Tunisia’s real unemployment rate is far lower), but data can prove it wrong, so it is a false positive statement. It contains no value judgement such as “should” or “too high”, so it is not normative.",
+            "rubric": [
+              {
+                "text": "Says a positive statement is about what is and can be tested/checked with data",
+                "points": 0.5
+              },
+              {
+                "text": "Says this statement is false but still positive, because data can prove it wrong (it has no value judgement, unlike a normative one)",
+                "points": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "q20",
+          "type": "tf",
+          "points": 1,
+          "topic": "Specialization & money",
+          "review": "../microeconomics/ch2-market-system.html#features-2",
+          "prompt": "<p>“In an economy where every family produces everything it consumes, there would be little need for money.”</p>",
+          "answer": true,
+          "explain": "True. Money is first of all a <b>medium of exchange</b>. Self-sufficient families produce everything they consume, so they hardly exchange and need no medium of exchange. It is <b>specialization</b> that creates the need to exchange: if you produce only olive oil, you must trade for bread, clothes and transport. Without money that trade would be barter, which needs a <b>coincidence of wants</b>; money removes this problem. So the more specialization, the more useful money becomes.",
+          "justify": {
+            "points": 1,
+            "model": "True: money is a medium of exchange, and self-sufficient families do not need to exchange. Specialization is what makes exchange necessary (you produce one good and trade for the rest), and money makes that exchange easy by avoiding barter’s need for a coincidence of wants.",
+            "rubric": [
+              {
+                "text": "Says self-sufficient families do not exchange, while specialization makes exchange necessary",
+                "points": 0.5
+              },
+              {
+                "text": "Says money is a medium of exchange that avoids barter’s need for a coincidence of wants",
+                "points": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "q21",
+          "type": "tf",
+          "points": 1,
+          "topic": "Five fundamental questions",
+          "review": "../microeconomics/ch2-market-system.html#what",
+          "prompt": "<p>“A firm whose total revenue exactly equals its total cost (where total cost includes a normal payment to the owner) will normally stay in its industry.”</p>",
+          "answer": true,
+          "explain": "True. In economics, total cost is the total <b>opportunity cost</b> of all resources: wages, rent, interest <b>and</b> the normal payment needed to keep the entrepreneur in the business. If TR = TC, economic profit is zero, but the owner already receives this normal profit: every resource earns as much as in its best other use. The firm stays; the industry simply attracts no new firms (it neither expands nor contracts). Trap: “zero profit means the firm should close”. Only continuing <b>losses</b> (TR &lt; TC) make firms leave.",
+          "justify": {
+            "points": 1,
+            "model": "True: total cost includes the opportunity cost of all resources, including a normal payment (normal profit) to the entrepreneur. So TR = TC means zero economic profit, which is a normal profit: the owner earns as much as elsewhere, so the firm stays. Only continuing losses (TR &lt; TC) push firms out.",
+            "rubric": [
+              {
+                "text": "Says total cost includes the normal payment to the entrepreneur (the opportunity cost of all resources)",
+                "points": 0.5
+              },
+              {
+                "text": "Concludes that TR = TC is a normal profit (zero economic profit), so the firm stays; only continuing losses make firms leave",
+                "points": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "q22",
+          "type": "tf",
+          "points": 1,
+          "topic": "Invisible hand & command failure",
+          "review": "../microeconomics/ch2-market-system.html#command-demise",
+          "prompt": "<p>“In command economies, judging a factory by a quantity target (for example, the number of pairs of shoes produced) instead of by profit pushed managers to improve the quality and variety of their products.”</p>",
+          "answer": false,
+          "explain": "False. A quantity target rewards only the number (or the weight) produced, so managers reached it in the easiest way and sacrificed <b>quality and variety</b>. In the textbook’s nail story, a target in tons produced only big, heavy nails, and a target in numbers produced only tiny nails. In a market, success is measured by <b>profit</b>, which depends on demand, efficiency and quality. This lack of a reliable success indicator was part of the coordination problem that led to the collapse of command systems.",
+          "justify": {
+            "points": 1,
+            "model": "False: a quantity target rewards only the number produced, so managers met it in the easiest way and sacrificed quality and variety (for example cheap, identical shoes, or only big nails when the target was in tons). Profit, the success indicator of market economies, depends on demand, efficiency and quality. This poor success indicator is one reason command systems failed.",
+            "rubric": [
+              {
+                "text": "Says a quantity target rewards only the number/weight produced, so quality and variety were sacrificed (an example such as the nails)",
+                "points": 0.5
+              },
+              {
+                "text": "Contrasts with profit, which depends on demand, efficiency and quality, and/or names this as a reason command systems failed",
+                "points": 0.5
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Part III · Problems (12 pts)",
+      "intro": "Work on paper, then type only the final numbers; written parts are self-marked with a rubric",
+      "questions": [
+        {
+          "id": "q23",
+          "type": "problem",
+          "topic": "Marginal analysis (MB/MC)",
+          "review": "../microeconomics/ch1-introduction.html#marginal",
+          "prompt": "<p><b>Problem 1 · Boulangerie Ennour, Sfax.</b> The bakery bakes its usual bread every morning. In the afternoon, the owner, Mr Hamdi, can bake extra batches of baguettes for evening customers. He estimates the marginal benefit (extra revenue) and the marginal cost (extra flour, electricity and overtime) of each batch, in TND:</p><div class=\"table-wrap\"><table><thead><tr><th>Batch</th><th class=\"n\">1st</th><th class=\"n\">2nd</th><th class=\"n\">3rd</th><th class=\"n\">4th</th><th class=\"n\">5th</th><th class=\"n\">6th</th></tr></thead><tbody><tr><td>Marginal benefit (MB)</td><td class=\"n\">30</td><td class=\"n\">26</td><td class=\"n\">22</td><td class=\"n\">18</td><td class=\"n\">14</td><td class=\"n\">10</td></tr><tr><td>Marginal cost (MC)</td><td class=\"n\">7</td><td class=\"n\">10</td><td class=\"n\">13</td><td class=\"n\">17</td><td class=\"n\">22</td><td class=\"n\">28</td></tr></tbody></table></div>",
+          "parts": [
+            {
+              "type": "numeric",
+              "points": 1,
+              "answer": 4,
+              "unit": "batches",
+              "tol": 0,
+              "hint": "Type a number only.",
+              "prompt": "<p>How many batches should Mr Hamdi bake to maximize his total net benefit?</p>",
+              "explain": "Compute MB − MC for each batch: 1st 30 − 7 = +23; 2nd 26 − 10 = +16; 3rd 22 − 13 = +9; 4th 18 − 17 = +1; 5th 14 − 22 = −8; 6th 10 − 28 = −18. Bake every batch whose MB is at least its MC: batches 1 to 4 add net benefit, the 5th would lose 8 TND. Best quantity: <b>4 batches</b> (the closest he can get to MB = MC). Traps: 1 batch (it has the largest MB − MC, but the 2nd, 3rd and 4th still add net benefit) and 6 batches (every batch has a positive MB, but MB must be compared with MC)."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "answer": 49,
+              "alsoAccept": [49000],
+              "unit": "TND",
+              "tol": 0.5,
+              "hint": "Whole dinars, number only (no millimes): e.g. 7, not 7,000.",
+              "prompt": "<p>What is his total net benefit at that number of batches?</p>",
+              "explain": "Add the net benefits of the batches he bakes: 23 + 16 + 9 + 1 = <b>49 TND</b>. Check with totals: total benefit = 30 + 26 + 22 + 18 = 96 TND, total cost = 7 + 10 + 13 + 17 = 47 TND, net benefit = 96 − 47 = 49 TND. Traps: 1 TND is only the net benefit of the <i>last</i> batch, not the total; 96 TND is the total benefit and 47 TND the total cost, not the net benefit."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "answer": 3,
+              "unit": "batches",
+              "tol": 0,
+              "hint": "Type a number only.",
+              "prompt": "<p>The price of flour rises, so the marginal cost of <b>every</b> batch increases by 5 TND (the marginal benefits do not change). What is the new optimal number of batches?</p>",
+              "explain": "New MC: 12, 15, 18, 22, 27, 33. New MB − MC: +18, +11, +4, −4, −13, −23. Now the 4th batch costs more than it brings (MC = 22 TND, more than MB = 18 TND), so the optimum falls to <b>3 batches</b>. Rule: when MC rises and MB stays the same, the best quantity falls."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "answer": 44,
+              "alsoAccept": [44000],
+              "unit": "TND",
+              "tol": 0.5,
+              "hint": "Whole dinars, number only (no millimes): e.g. 7, not 7,000.",
+              "topic": "Opportunity cost",
+              "review": "../microeconomics/ch1-introduction.html#oppcost",
+              "prompt": "<p>Back to the original data. Instead of baking baguettes in the afternoon, Mr Hamdi could use his oven in two other ways: (i) rent it to the pastry shop next door for 4 hours at 11 TND per hour (the pastry shop pays for its own ingredients and electricity), or (ii) bake a wedding-cake order that would give him a net benefit of 38 TND. He can choose only <b>one</b> use for his oven. If he bakes the optimal number of baguette batches, what is the <b>opportunity cost</b> of this choice?</p>",
+              "explain": "Opportunity cost = the value of the <b>next best</b> alternative. Renting: 4 × 11 = 44 TND; cake: 38 TND. The best alternative is renting, so the opportunity cost is <b>44 TND</b>. Not 82 TND (44 + 38): he could do only one of them. Not 49 TND: that is the net benefit of the baguettes themselves, the choice he makes, not what he gives up. Since 49 TND is more than 44 TND, baking the baguettes is the right decision."
+            },
+            {
+              "type": "text",
+              "points": 2,
+              "rows": 5,
+              "prompt": "<p>Mr Hamdi’s son says: “The 5th batch still brings 14 TND of extra revenue, so baking it will increase our net benefit.” Is he right? Explain with marginal analysis and the numbers in the table.</p>",
+              "rubric": [
+                {
+                  "text": "Compares MB and MC of the 5th batch: MB = 14 TND is smaller than MC = 22 TND, so the son is wrong (a positive extra revenue is not enough)",
+                  "points": 1
+                },
+                {
+                  "text": "Says the 5th batch would reduce total net benefit by 8 TND (from 49 to 41 TND)",
+                  "points": 0.5
+                },
+                {
+                  "text": "States the rule: produce a unit only if its MB is at least its MC, so stop at the 4th batch (the closest point to MB = MC)",
+                  "points": 0.5
+                }
+              ],
+              "model": "He is wrong. Marginal analysis compares the extra benefit with the extra cost of the <b>same</b> batch. The 5th batch brings MB = 14 TND but costs MC = 22 TND, so MC is greater than MB: baking it would <b>lower</b> total net benefit by 22 − 14 = 8 TND, from 49 TND to 41 TND. A rational baker produces a unit only while its MB is at least its MC, so Mr Hamdi should stop at the 4th batch, the closest he can get to MB = MC.",
+              "explain": "Common mistake: looking only at the benefit (or at total revenue). A unit is worth producing only if its extra benefit covers its extra cost."
+            }
+          ],
+          "explain": "Method for every MB/MC table: (1) add a column MB − MC; (2) produce every unit whose MB − MC is zero or positive, and stop before the first negative one; (3) total net benefit = the sum of MB − MC for the units produced; (4) if MB or MC changes, redo the column."
+        },
+        {
+          "id": "q24",
+          "type": "problem",
+          "topic": "PPC & budget line",
+          "review": "../microeconomics/ch1-introduction.html#ppc",
+          "prompt": "<p><b>Problem 2 · Production possibilities.</b> In a simple model, the Tunisian economy produces only two goods: <b>tractors</b> (capital goods) and <b>olive oil</b> (consumer goods). The table shows its production possibilities (in units), assuming that all its resources are fully employed and that its resources and technology are fixed:</p><div class=\"table-wrap\"><table><thead><tr><th>Alternative</th><th class=\"n\">A</th><th class=\"n\">B</th><th class=\"n\">C</th><th class=\"n\">D</th><th class=\"n\">E</th><th class=\"n\">F</th></tr></thead><tbody><tr><td>Tractors (capital goods)</td><td class=\"n\">0</td><td class=\"n\">1</td><td class=\"n\">2</td><td class=\"n\">3</td><td class=\"n\">4</td><td class=\"n\">5</td></tr><tr><td>Olive oil (consumer goods)</td><td class=\"n\">25</td><td class=\"n\">24</td><td class=\"n\">21</td><td class=\"n\">16</td><td class=\"n\">9</td><td class=\"n\">0</td></tr></tbody></table></div>",
+          "parts": [
+            {
+              "type": "numeric",
+              "points": 1,
+              "answer": 15,
+              "unit": "units of olive oil",
+              "tol": 0,
+              "hint": "Type a number only.",
+              "prompt": "<p>What is the total opportunity cost of moving from B to E?</p>",
+              "explain": "B = (1 tractor, 24 olive oil) and E = (4, 9). The economy gains 3 tractors, and olive oil falls from 24 to 9: it gives up 24 − 9 = <b>15 units of olive oil</b>. Step by step: B→C 3, C→D 5, D→E 7, and 3 + 5 + 7 = 15. Traps: 9 is the olive oil <i>left</i> at E, not what is given up; 3 is what is <i>gained</i> (tractors); 7 is only the last step."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "answer": 0.25,
+              "unit": "tractors",
+              "tol": 0.005,
+              "hint": "Give a decimal number (for example 0.5), not a fraction.",
+              "prompt": "<p>Now the economy moves from D to B. On average over this move, what is the opportunity cost of <b>one unit of olive oil</b>, measured in tractors?</p>",
+              "explain": "D = (3, 16) and B = (1, 24). The economy gains 24 − 16 = 8 units of olive oil and gives up 3 − 1 = 2 tractors. Cost of one unit of olive oil = what is given up ÷ what is gained = 2 ÷ 8 = <b>0.25 tractor</b>. Trap: 8 ÷ 2 = 4 is the opposite, the cost of one tractor in olive oil. Always divide what you give up by what you gain."
+            },
+            {
+              "type": "mcq",
+              "points": 1,
+              "prompt": "<p>The economy is actually producing at point U = (2 tractors, 16 units of olive oil). Then unemployed workers find jobs, and the economy moves from U to C. Which statement is correct?</p>",
+              "options": [
+                "U is outside the curve, so reaching C required economic growth.",
+                "Moving from U to C is economic growth: the whole PPC shifts outward.",
+                "U is on the curve, so moving to C means giving up some tractors.",
+                "U is inside the curve, and moving to C does not shift the PPC."
+              ],
+              "answer": 3,
+              "explain": "<b>(d)</b> With 2 tractors, the maximum olive oil is 21 (point C). U gives only 16, so U is <b>inside</b> the curve: resources are unemployed or wasted. When the unemployed find jobs, the economy gets 21 − 16 = 5 more units of olive oil without losing any tractor, and it moves <b>onto</b> the curve. The curve itself does not move, because the economy’s resources and technology have not changed. <b>(b)</b> is the trap: only more resources or better technology shift the PPC outward. <b>(a)</b> confuses inside with outside: outside means more than the maximum. <b>(c)</b>: U is not on the curve, and the economy keeps its 2 tractors."
+            },
+            {
+              "type": "mcq",
+              "points": 1,
+              "prompt": "<p>The government must choose between B and D for this year. Compared with B, choosing D:</p>",
+              "options": [
+                "costs 8 units of olive oil today but tends to give faster growth in the future",
+                "gives 8 more units of olive oil today and also tends to give faster growth in the future",
+                "gives the same future growth, because B and D are both on the curve",
+                "is inefficient, because D produces less olive oil than B"
+              ],
+              "answer": 0,
+              "explain": "<b>(a)</b> B = (1, 24) and D = (3, 16). D gives 2 more tractors and costs 24 − 16 = <b>8 units of olive oil today</b>. Tractors are capital goods: they increase the economy’s future production capacity, so the PPC tends to shift outward faster. Society sacrifices consumption today for growth tomorrow. <b>(b)</b>: D gives 8 units <i>less</i> olive oil, not 8 more. <b>(c)</b>: both points are efficient today, but future growth depends on how many capital goods are produced. <b>(d)</b>: D is on the curve, so it is efficient; it has less olive oil but more tractors."
+            },
+            {
+              "type": "text",
+              "points": 2,
+              "rows": 6,
+              "prompt": "<p>Using the table, show that this economy obeys the <b>law of increasing opportunity costs</b>. Explain why this law exists and what it means for the shape of the PPC.</p>",
+              "rubric": [
+                {
+                  "text": "Computes the cost of each extra tractor from A to F: 1, 3, 5, 7, 9 units of olive oil",
+                  "points": 0.5
+                },
+                {
+                  "text": "States the law: the more tractors are produced, the more olive oil must be given up for each extra tractor",
+                  "points": 0.5
+                },
+                {
+                  "text": "Explains why: resources are not perfectly adaptable to both uses (the first resources moved are good at making tractors; the last ones, such as olive farmers and olive groves, are much better at olive oil)",
+                  "points": 0.5
+                },
+                {
+                  "text": "Says the PPC is therefore bowed outward (concave to the origin), not a straight line",
+                  "points": 0.5
+                }
+              ],
+              "model": "Moving from A to F, each extra tractor costs more olive oil: A→B 1, B→C 3, C→D 5, D→E 7, E→F 9 units of olive oil. This is the <b>law of increasing opportunity costs</b>: the more tractors the economy produces, the more olive oil it must give up for each additional tractor. It exists because resources are <b>not perfectly adaptable</b>: the first resources moved to tractor production are the ones best suited to it, but the last ones (experienced olive farmers, olive groves) are very good at producing olive oil and bad at producing tractors, so a lot of oil is lost for each extra tractor. As a result, the PPC is <b>bowed outward</b> (concave to the origin), not a straight line.",
+              "explain": "Common mistake: saying the cost rises because “the economy runs out of resources”. The quantity of resources is the same all along the curve; the cost rises because those resources are not equally good at producing both goods."
+            }
+          ],
+          "explain": "Reading a PPC table: the opportunity cost of a move = what you give up (the fall in the other good); per unit = given up ÷ gained. Inside the curve = unemployment or waste; on the curve = efficient; outside = unattainable without growth. More capital goods today = faster growth tomorrow."
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../assets/exam.js"></script>
+</body>
+</html>

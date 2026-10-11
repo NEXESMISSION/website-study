@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Quiz 1 · Practice exam B · Microeconomics</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/exam.css">
+</head>
+<body class="micro">
+<div id="exam"></div>
+<script type="application/json" id="exam-data">
+{
+  "id": "micro-quiz1-B",
+  "title": "Quiz 1 · Practice exam B",
+  "shortTitle": "Micro Quiz 1 · B",
+  "course": "Microeconomics",
+  "courseClass": "micro",
+  "covers": "Chapters 1–2",
+  "duration": 45,
+  "hub": "index.html",
+  "description": "A full simulation of Quiz 1 (Tuesday 6 October, 10% of your grade) on Chapters 1–2: 16 multiple-choice questions in the textbook test-bank style, 6 true-or-false statements to justify, and two problems — least-cost production in a Sfax olive-oil mill, and the circular flow with a household budget line. It tests different angles from exam A, and the classic traps are hidden on purpose.",
+  "instructions": [
+    "45 minutes, 40 points, marked out of 20. No notes, no lessons, no phone.",
+    "Part I: one correct answer per question. Read every option, and watch for the words <b>NOT</b>, <b>best</b> and <b>most likely</b>.",
+    "Part II: tick True or False (1 pt), then justify in 2–3 sentences using the precise textbook idea (1 pt).",
+    "Part III: calculators allowed. Amounts are in Tunisian dinars (TND). Work on scrap paper and type only the final number; type a loss with a minus sign.",
+    "A blank scores 0 and a wrong answer costs nothing, so answer everything."
+  ],
+  "sections": [
+    {
+      "title": "Part I · Multiple choice",
+      "intro": "One correct answer per question, 1 point each",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Positive vs normative",
+          "review": "../microeconomics/ch1-introduction.html#positive",
+          "prompt": "<p>Which of the following is a <b>normative</b> economic statement?</p>",
+          "options": [
+            "If the minimum wage is raised by 10%, fewer young Tunisians will find jobs.",
+            "The poorest 10% of Tunisian households spend about 40% of their income on food.",
+            "The new stadium cost 300 million dinars, money that would have been better spent on hospitals.",
+            "Tunisia exported more olive oil in the 2024–25 season than in the season before."
+          ],
+          "answer": 2,
+          "explain": "<b>(c)</b>. It starts with a checkable fact (300 million dinars), but “would have been better spent” is a value judgement, and one judgement is enough to make the whole statement normative (the test bank’s classic: “a trade deficit of 20 billion dollars will <i>harm</i> the economy”). <b>(a)</b> is the trap: it is about a controversial policy, but it is a cause-and-effect prediction that data can test, so it is <b>positive</b>. It would become normative only as “the minimum wage <i>should not</i> be raised”. <b>(b)</b> is about poor families but only reports a measurable fact. <b>(d)</b> can be checked in export statistics. Quick test: could data prove it right or wrong? Yes → positive."
+        },
+        {
+          "id": "q2",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Opportunity cost",
+          "review": "../microeconomics/ch1-introduction.html#oppcost",
+          "prompt": "<p>Amine is offered two summer internships: a paid one in a call centre (900 TND for the summer) and an unpaid one in a bank, which he believes will help his career more. He chooses the bank. Which statement is correct?</p>",
+          "options": [
+            "His choice is irrational: a rational person always picks the option that pays more money, here 900 TND.",
+            "Its opportunity cost is 900 TND, and he expects the bank internship’s benefits to be worth more.",
+            "Its opportunity cost is zero, because the bank pays him nothing and he spends no money to work there.",
+            "Its opportunity cost is 900 TND plus the value of the career benefits that the bank internship brings."
+          ],
+          "answer": 1,
+          "explain": "Opportunity cost = the value of the next best alternative given up: the call-centre internship, worth <b>900 TND</b>. Choosing the bank is rational if Amine values its benefits (experience, contacts, a better career) at more than 900 TND: rational people count <b>all</b> benefits, not only money (like Sami in the lesson, who tutored for 40 TND instead of working a 60-TND shift). (a) Rational does not mean “always take the most money”. (c) Trap: a zero wage is not a zero cost; he gives up 900 TND. (d) The career benefits belong to the option he <b>chose</b>: they are benefits, not part of its cost."
+        },
+        {
+          "id": "q3",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Micro vs macro",
+          "review": "../microeconomics/ch1-introduction.html#micromacro",
+          "prompt": "<p>Which of the following is a <b>macroeconomic</b> question?</p>",
+          "options": [
+            "Why did the total output of Tunisia’s olive-oil industry reach a record this season?",
+            "How many workers will Tunisia’s textile factories hire if textile wages rise?",
+            "How does the price of fuel affect the number of taxis working in Tunis?",
+            "Why did the general level of prices in Tunisia rise by 6% this year?"
+          ],
+          "answer": 3,
+          "explain": "<b>(d)</b>: the general level of prices (inflation) concerns the economy as a whole → macro. The traps: (a) says “total output” and “Tunisia’s”, but it is the output of <b>one industry</b> (one market) → micro; only the total output of the whole economy (GDP) is macro. (b) is one labor market (textile workers), even if it covers the whole country → micro. (c) is one market (taxis) → micro. Ask: one household, firm, market or industry → micro; the whole economy’s output, employment or price level → macro."
+        },
+        {
+          "id": "q4",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Factors of production",
+          "review": "../microeconomics/ch1-introduction.html#problem",
+          "prompt": "<p>A private firm runs a marble quarry near Thala. Which resource is correctly classified, with its correct payment?</p>",
+          "options": [
+            "The marble deposits in the hillside: land, whose payment is rent",
+            "The cutting machines and trucks: land, whose payment is rent",
+            "The geologists and engineers hired to plan the quarry: entrepreneurship, whose payment is profit",
+            "The owner’s decision to risk his savings on opening the quarry: labor, whose payment is wages"
+          ],
+          "answer": 0,
+          "explain": "<b>(a)</b>: in economics, <b>land</b> means all natural resources, the “gifts of nature”: farmland, but also water, forests, oil and mineral deposits such as marble or phosphate. Its payment is rent (R-W-I-P: land → rent, labor → wages, capital → interest, entrepreneurship → profit). (b) Machines and trucks are man-made goods used to produce: capital, paid interest. (c) Trap: highly skilled work is still <b>labor</b>, paid wages; entrepreneurship means organising the business and bearing the risk. (d) describes exactly that risk-taking: entrepreneurship, rewarded by profit, not labor."
+        },
+        {
+          "id": "q5",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Goods & services",
+          "review": "../microeconomics/ch1-introduction.html#goods",
+          "prompt": "<p>Which of the following statements is correct?</p>",
+          "options": [
+            "A pizza becomes a public good when a group of friends shares it, because none of them is excluded.",
+            "Sunlight is an economic good, because farmers need it to grow olives and it has great value to the economy.",
+            "A laptop is a consumer good for a student watching films, but a capital good for a designer selling logos.",
+            "A haircut is a durable good, because its effect lasts for several weeks, like a fridge or a car."
+          ],
+          "answer": 2,
+          "explain": "<b>(c)</b>: the class of a good depends on its <b>use</b>. The same laptop is a consumer good for a student’s films and a capital good when it is used to produce something sold to clients. (a) Trap: sharing does not change the pizza. It is still <b>rival</b> (a slice I eat, you cannot eat), and choosing not to exclude your friends does not make it non-excludable: the pizzeria still refuses anyone who does not pay. So it is a private good; public goods, like streetlights, are non-rival and non-excludable. (b) Being useful or valuable does not make a good scarce: sunlight is unlimited and needs no effort to obtain, so it is a free good. (d) A haircut is a <b>service</b>: intangible, produced and consumed at the same moment, impossible to store."
+        },
+        {
+          "id": "q6",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Marginal analysis (MB/MC)",
+          "review": "../microeconomics/ch1-introduction.html#marginal",
+          "prompt": "<p>A student café decides how many crêpes to make each evening. It stops exactly at the quantity where the marginal benefit of the last crêpe equals its marginal cost (MB = MC). At that quantity:</p>",
+          "options": [
+            "its total net benefit is zero, because the total benefit of its crêpes equals their total cost",
+            "its total net benefit is as large as possible: every earlier crêpe added more benefit than cost",
+            "it should make one more crêpe, because the last one added no net benefit and the next one will add some",
+            "it is producing the largest number of crêpes that it could sell at any price"
+          ],
+          "answer": 1,
+          "explain": "MB = MC is a rule about the <b>last</b> unit, not about totals. Every earlier crêpe had MB &gt; MC and added net benefit; the last one adds nothing more; any further crêpe would have MC &gt; MB and reduce the total. So total net benefit is at its <b>maximum</b> (like the lesson’s food truck: +5, +2, 0, then −3). (a) is the trap: it confuses marginal with total. Only the last unit adds zero net benefit, not the whole evening. (c) Beyond MB = MC, one more crêpe has MC &gt; MB. (d) The rule maximizes net benefit, not the quantity sold."
+        },
+        {
+          "id": "q7",
+          "type": "mcq",
+          "points": 1,
+          "topic": "PPC & budget line",
+          "review": "../microeconomics/ch1-introduction.html#ppc",
+          "prompt": "<p>Without any change in its resources or its technology, how can Tunisia <b>consume</b> a combination of olive oil and wheat that lies <b>outside</b> its production possibilities curve?</p>",
+          "options": [
+            "By putting its unemployed workers back to work, so that it produces more of both goods",
+            "By specializing in olive oil and trading part of it for wheat with other countries",
+            "By moving along its curve toward more olive oil and less wheat, which raises its total output",
+            "It cannot: a combination outside the curve can never be produced or consumed without growth"
+          ],
+          "answer": 1,
+          "explain": "A country cannot <b>produce</b> outside its PPC, but through specialization and international trade it can <b>consume</b> outside it: Tunisia produces a lot of olive oil, exports part of it and imports wheat, so it obtains more of the goods it wants for a smaller sacrifice of other goods. Trade does not shift the PPC: what Tunisia can produce stays the same. (a) Putting idle workers back to work moves the economy from inside the curve <b>to</b> the curve, not beyond it. (c) A movement along the curve stays on the curve: it swaps some wheat for more olive oil, it cannot take output beyond the curve. (d) is true for production only; it forgets that trade lets a country consume beyond its PPC."
+        },
+        {
+          "id": "q8",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Economic systems",
+          "review": "../microeconomics/ch2-market-system.html#systems",
+          "prompt": "<p>Which statement about economic systems is correct?</p>",
+          "options": [
+            "In a pure command system, prices set in competitive markets decide which goods are produced and how.",
+            "Before its collapse in the early 1990s, the Soviet Union allowed no private ownership and no markets of any kind.",
+            "In a market system, economic decision making is concentrated in a few government offices, as in a plan.",
+            "In a command system, a central planning board decides the split of output between capital and consumer goods."
+          ],
+          "answer": 3,
+          "explain": "In a command system (socialism, communism) the government owns most property resources and a <b>central planning board</b> makes nearly all major decisions, including how output is split between capital goods and consumer goods: (d). (b) is the trap: pure systems hardly exist, and even the Soviet Union tolerated some private ownership and some markets. (a) describes the market system’s coordinating mechanism (markets and prices), not a command system. (c) is the reverse: in a market system decision making is <b>widely dispersed</b> among millions of buyers and sellers."
+        },
+        {
+          "id": "q9",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Market system features",
+          "review": "../microeconomics/ch2-market-system.html#features-1",
+          "prompt": "<p>Which of the following is <b>NOT</b> a characteristic of the market system described in the textbook?</p>",
+          "options": [
+            "Private property, including intellectual property such as patents and copyrights",
+            "An active but limited government",
+            "Specialization, and the use of money as a medium of exchange",
+            "Sellers agreeing together on the price they will all charge"
+          ],
+          "answer": 3,
+          "explain": "<b>(d)</b> is the opposite of a market characteristic. Competition requires buyers and sellers who act <b>independently</b>; sellers who agree on a common price (collusion) remove competition, the basic regulatory force of the market. (b) is the trap: “active but limited government” <b>is</b> on the textbook’s list (feature 9). The market system has shortcomings (market failures) that government helps correct; only pure laissez-faire limits government to protecting property. (a) Private property, including intellectual property, and (c) specialization and money are both on the list."
+        },
+        {
+          "id": "q10",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Specialization & money",
+          "review": "../microeconomics/ch2-market-system.html#features-2",
+          "prompt": "<p>Kairouan has surplus carpets and wants fish. Mahdia has surplus fish and wants dates. Tozeur has surplus dates and wants carpets. Which statement is correct?</p>",
+          "options": [
+            "Kairouan and Mahdia can barter directly: Kairouan wants fish, and Mahdia has a surplus of fish to sell.",
+            "Barter fails because carpets, fish and dates have different values, so no fair exchange rate can be found.",
+            "Barter fails: no pair has a coincidence of wants. With dinars, Kairouan sells carpets to Tozeur, then buys Mahdia’s fish.",
+            "Money cannot solve the problem: each region still produces only one good, so at least one region always ends up without the good it wants."
+          ],
+          "answer": 2,
+          "explain": "Check each pair. Kairouan wants Mahdia’s fish, but Mahdia wants dates, not carpets. Mahdia wants Tozeur’s dates, but Tozeur wants carpets, not fish. Tozeur wants Kairouan’s carpets, but Kairouan wants fish, not dates. No pair has a <b>coincidence of wants</b>, so barter stalls. Money, a medium of exchange, solves it: (1) Kairouan sells carpets to Tozeur for dinars; (2) Kairouan buys fish from Mahdia; (3) Mahdia buys dates from Tozeur, and the dinars are back in Tozeur. (a) is the trap: a one-sided want is not enough, Mahdia would also have to want carpets. (b) Different values are handled by changing the quantities; they are not the problem. (d) is the reverse of the truth: specialization is exactly why we need money."
+        },
+        {
+          "id": "q11",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Specialization & money",
+          "review": "../microeconomics/ch2-market-system.html#features-2",
+          "prompt": "<p>An economist says: “We want money only to part with it.” This means that money is first and foremost:</p>",
+          "options": [
+            "a medium of exchange: we value it only because we can trade it for the goods we really want",
+            "a capital good, because businesses use money to buy machines and so to produce other goods",
+            "valuable in itself, like gold, so people try to keep as much of it as possible for its own sake",
+            "a way to avoid specialization, because with money every family can make everything it needs"
+          ],
+          "answer": 0,
+          "explain": "Money is first and foremost a <b>medium of exchange</b>: you cannot eat a 20-dinar note; you want it because sellers accept it in exchange for what you really want. (b) Money is not capital: it produces nothing by itself (the oven it buys is capital). (c) A note has no value in itself: its only test is that sellers <b>generally accept</b> it, and people part with it to buy things. (d) It is the reverse: money makes specialization easier, because specialists can sell their output to anyone and buy from anyone."
+        },
+        {
+          "id": "q12",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Five fundamental questions",
+          "review": "../microeconomics/ch2-market-system.html#what",
+          "prompt": "<p>In Sfax, a specialist doctor earns 90 TND per hour and works 30 hours a week. A café waiter earns 6 TND per hour and works 45 hours a week. In a market system, how many times as much of society’s output can the doctor obtain each week?</p>",
+          "options": [
+            "10 times as much",
+            "15 times as much",
+            "22.5 times as much",
+            "The same amount, because output is shared equally among workers"
+          ],
+          "answer": 0,
+          "explain": "In a market system output goes to those <b>able and willing to pay</b>, and ability to pay depends on income = <b>quantity</b> of resources supplied × their <b>price</b>. Doctor: 30 × 90 = 2,700 TND; waiter: 45 × 6 = 270 TND; 2,700 ÷ 270 = <b>10 times</b>. (b) 15 is the trap: 90 ÷ 6 compares only the wages and forgets that the waiter works more hours (the textbook’s lawyer earns 20 times as much as the recreation worker only because both work the same hours). (c) 22.5 = 15 × 1.5 applies the hours the wrong way round. (d) The market does not share output equally. See the lesson: <a href=\"../microeconomics/ch2-market-system.html#who-change-progress\">Ch 2 · who gets the output</a>."
+        },
+        {
+          "id": "q13",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Five fundamental questions",
+          "review": "../microeconomics/ch2-market-system.html#what",
+          "prompt": "<p>Which of the following is the best example of <b>creative destruction</b>?</p>",
+          "options": [
+            "A flood destroys several old olive mills near Sfax, and modern mills are built to replace them.",
+            "A planning board orders old textile factories to be demolished and replaced by new ones.",
+            "Ride-hailing apps take most customers from traditional taxi companies, and many of those companies close.",
+            "A bakery’s profit falls because the price of flour rises, and it closes after six months of losses."
+          ],
+          "answer": 2,
+          "explain": "Creative destruction: the creation of <b>new products or production methods</b> destroys the market positions of firms tied to the <b>old</b> ones, through competition (CDs vs vinyl records, streaming vs CDs, smartphones vs publinets). Ride-hailing apps vs traditional taxis fits exactly. (a) and (b) are word traps: something old is “destroyed” and something new is built, but by a natural disaster or a planner’s order, not by innovators winning customers. (d) is a simple rise in costs, with no new product or method. See the lesson: <a href=\"../microeconomics/ch2-market-system.html#who-change-progress\">Ch 2 · progress and creative destruction</a>."
+        },
+        {
+          "id": "q14",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Invisible hand & command failure",
+          "review": "../microeconomics/ch2-market-system.html#command-demise",
+          "prompt": "<p>To raise their own profits, the olive-oil mills of Sfax switch to the least-costly combination of resources. The land, labor and capital they save become available to produce other goods that society wants. In the textbook, this is an example of:</p>",
+          "options": [
+            "creative destruction",
+            "the invisible hand",
+            "the incentive problem",
+            "consumer sovereignty"
+          ],
+          "answer": 1,
+          "explain": "This is one of the textbook’s own examples of Adam Smith’s <b>invisible hand</b>: firms use the least-costly combination of resources to raise <b>their</b> profit, and as a result resources are freed for other things society wants. Self-interest, guided by competition, promotes the interest of society without anyone intending it. (a) Creative destruction needs new products or methods that destroy the market positions of firms tied to old ones; nothing is destroyed here. (c) The incentive problem belongs to command economies (no reward for responding to prices). (d) Consumer sovereignty is about consumers deciding <b>what</b> is produced through dollar votes; this example is about <b>how</b> to produce. See the lesson: <a href=\"../microeconomics/ch2-market-system.html#invisible-hand\">Ch 2 · the invisible hand</a>."
+        },
+        {
+          "id": "q15",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Invisible hand & command failure",
+          "review": "../microeconomics/ch2-market-system.html#command-demise",
+          "prompt": "<p>A planning board judges a state glass factory only by the <b>total weight</b> (tons) of glass it produces each month. Following the logic of the textbook’s nails story, the factory will most likely:</p>",
+          "options": [
+            "produce mostly thick, heavy glass, because that is the fastest way to reach the weight target",
+            "produce mostly thin window glass, the kind consumers need most",
+            "produce exactly the mix of products consumers want, because its target is clear",
+            "produce many small, light items, because the number of pieces is what counts"
+          ],
+          "answer": 0,
+          "explain": "The nails story: when the target was in <b>weight</b> (tons), factories made only big, heavy nails; when it was in <b>number</b>, only tiny nails. Managers reach a quantity target the easiest way, whatever consumers need. A weight target therefore rewards thick, heavy glass: (a). (d) is the logic of a <b>number</b> target, not a weight target. (b) and (c) assume that the factory serves consumers, but a quantity target is a poor <b>success indicator</b>: unlike profit, it ignores demand, quality and variety."
+        },
+        {
+          "id": "q16",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Circular flow",
+          "review": "../microeconomics/ch2-market-system.html#circular-flow",
+          "prompt": "<p>In the textbook’s circular flow diagram (businesses on the left, households on the right, resource market at the top, product market at the bottom), which statement is correct?</p>",
+          "options": [
+            "Real flows and money flows both run counterclockwise, side by side.",
+            "Goods and services run clockwise, from businesses to households through the product market.",
+            "Money runs counterclockwise, from households to businesses through the resource market.",
+            "Real flows run counterclockwise and money flows run clockwise, always in opposite directions."
+          ],
+          "answer": 3,
+          "explain": "Real flows run <b>counterclockwise</b>: resources go from households to businesses through the resource market, and goods and services go from businesses to households through the product market. Money flows run <b>clockwise</b>: wages, rent, interest and profits go to households, and consumption spending goes to businesses. Every real flow is matched by a payment going the opposite way. (b) Goods and services do go to households, but counterclockwise. (c) is wrong twice: households’ money reaches businesses through the <b>product</b> market (consumption expenditures = business revenue), and it runs clockwise. (a) The two flows can never run the same way: you pay in the direction opposite to what you receive."
+        }
+      ]
+    },
+    {
+      "title": "Part II · True or false, justified",
+      "intro": "True or false (1 pt), then justify your choice in 2–3 sentences (1 pt)",
+      "questions": [
+        {
+          "id": "q17",
+          "type": "tf",
+          "points": 1,
+          "topic": "Positive vs normative",
+          "review": "../microeconomics/ch1-introduction.html#positive",
+          "prompt": "<p>“Unemployment fell three months after the new minister took office, so her policy must have caused the fall.” This reasoning is an example of the <i>post hoc, ergo propter hoc</i> fallacy.</p>",
+          "answer": true,
+          "explain": "True. <i>Post hoc, ergo propter hoc</i> (“after this, therefore because of this”) means assuming that because event A came before event B, A caused B. The fall in unemployment may have other causes.",
+          "justify": {
+            "points": 1,
+            "model": "True. The reasoning assumes that because the policy came <b>before</b> the fall in unemployment, it <b>caused</b> it: that is <i>post hoc, ergo propter hoc</i>. Timing alone proves nothing: unemployment may have fallen because of a good tourist season, stronger demand for Tunisian exports or a seasonal pattern, and only testing with data can show the policy’s real effect. It is not the fallacy of composition, which assumes that what is true for one part is true for the whole.",
+            "rubric": [
+              {
+                "text": "Defines post hoc: assuming that because A happened before B, A caused B",
+                "points": 0.5
+              },
+              {
+                "text": "Says timing alone is not proof: the fall may have another cause (e.g. tourism, exports, a seasonal pattern)",
+                "points": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "q18",
+          "type": "tf",
+          "points": 1,
+          "topic": "Factors of production",
+          "review": "../microeconomics/ch1-introduction.html#problem",
+          "prompt": "<p>Buying shares of a company on the Tunis Stock Exchange is <b>investment</b> in the economic sense.</p>",
+          "answer": false,
+          "explain": "False. In economics, investment means spending on new <b>capital goods</b> (machines, tools, buildings). Buying shares is only a financial investment: ownership changes hands, but no new capital good is produced.",
+          "justify": {
+            "points": 1,
+            "model": "False. Investment in economics is spending on the production and accumulation of <b>capital goods</b> (machines, tools, factories, delivery vans) that increase the capacity to produce. Buying shares only transfers ownership of part of an existing company from one person to another: it is a <b>financial</b> investment, and no new capital good is created. Shares, like money, are not capital as a factor of production.",
+            "rubric": [
+              {
+                "text": "Defines investment in economics as spending on capital goods (machines, tools, buildings) that add to the capacity to produce",
+                "points": 0.5
+              },
+              {
+                "text": "Says buying shares is only a financial investment / a transfer of ownership: no new capital good is produced",
+                "points": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "q19",
+          "type": "tf",
+          "points": 1,
+          "topic": "Market system features",
+          "review": "../microeconomics/ch2-market-system.html#features-1",
+          "prompt": "<p>In the market system, competition is the coordinating mechanism, while markets and prices are the basic regulatory force.</p>",
+          "answer": false,
+          "explain": "False: the two roles are swapped. Competition is the <b>regulator</b>; markets and prices are the <b>coordinator</b>.",
+          "justify": {
+            "points": 1,
+            "model": "False: the roles are reversed. <b>Competition</b> is the basic regulatory force: with many independent buyers and sellers and freedom to enter and leave, nobody can dictate prices and abuse is punished (a seller who charges more than his rivals loses customers; an employer who pays less loses workers). <b>Markets and prices</b> are the coordinating mechanism: prices are signals in an “elaborate communication network” that coordinates millions of self-interested decisions and rewards those who respond to them.",
+            "rubric": [
+              {
+                "text": "Competition = the basic regulatory force: it spreads economic power and limits its abuse (e.g. an overpriced seller loses sales)",
+                "points": 0.5
+              },
+              {
+                "text": "Markets and prices = the coordinating mechanism: price signals, a communication network coordinating millions of decisions",
+                "points": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "q20",
+          "type": "tf",
+          "points": 1,
+          "topic": "Specialization & money",
+          "review": "../microeconomics/ch2-market-system.html#features-2",
+          "prompt": "<p>Anything that sellers generally accept in exchange for goods and services can serve as money, even cigarettes.</p>",
+          "answer": true,
+          "explain": "True. To serve as money an item must pass only one test: it must be <b>generally acceptable</b> to sellers in exchange for goods and services. Money is socially defined.",
+          "justify": {
+            "points": 1,
+            "model": "True. To serve as money an item has to pass only one test: sellers must <b>generally accept</b> it in exchange for goods and services. In history, cattle, cigarettes, shells, stones and pieces of metal have all been used as money. Money is <b>socially defined</b>: a dinar note has no use in itself; it is money because everybody accepts it.",
+            "rubric": [
+              {
+                "text": "States the single test: general acceptability to sellers in exchange for goods and services",
+                "points": 0.5
+              },
+              {
+                "text": "Shows that money is socially defined: cattle, cigarettes, shells… have served as money, or a dinar note has no value in itself",
+                "points": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "q21",
+          "type": "tf",
+          "points": 1,
+          "topic": "Five fundamental questions",
+          "review": "../microeconomics/ch2-market-system.html#what",
+          "prompt": "<p>If Tunisian consumers start buying more electric scooters and fewer petrol motorbikes, a government plan is needed to move workers and machines from motorbike production to scooter production.</p>",
+          "answer": false,
+          "explain": "False. In a market system the <b>guiding function of prices</b> does it: price and profit changes signal the change in demand and pull resources toward the expanding industry, with no planner. See the lesson: <a href=\"../microeconomics/ch2-market-system.html#who-change-progress\">Ch 2 · how the market accommodates change</a>.",
+          "justify": {
+            "points": 1,
+            "model": "False. Spending shifts toward scooters, so scooter prices and profits rise, while motorbike sellers face falling prices and losses. Self-interest does the rest: scooter firms expand and new ones enter, motorbike firms shrink or leave. To expand, scooter firms offer good wages and prices to attract workers, machines and materials away from motorbikes. This is the <b>guiding (directing) function of prices</b>: the market accommodates change automatically, like the textbook’s shift from milk to fruit juice.",
+            "rubric": [
+              {
+                "text": "Prices and profits rise for scooters and fall for motorbikes: they signal the change in what consumers want",
+                "points": 0.5
+              },
+              {
+                "text": "Scooter firms expand or enter and attract resources, while motorbike firms contract or leave: the guiding function of prices, no planner needed",
+                "points": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "q22",
+          "type": "tf",
+          "points": 1,
+          "topic": "Invisible hand & command failure",
+          "review": "../microeconomics/ch2-market-system.html#command-demise",
+          "prompt": "<p>In the command economies, the bottlenecks that spread from one industry to the next when a target was missed were a symptom of the <b>coordination</b> problem, not of the incentive problem.</p>",
+          "answer": true,
+          "explain": "True. Chain reactions and bottlenecks come from the coordination problem: one industry’s output is another industry’s input. The incentive problem is about the absence of price and profit signals and rewards.",
+          "justify": {
+            "points": 1,
+            "model": "True. In a plan, the outputs of one industry are the inputs of others: if the iron mines miss their target, the steel mills lack ore, and then the tractor, car and transport industries lack steel. These chain reactions, bottlenecks and stoppages are the <b>coordination problem</b>, which grew worse as the economies became larger and more complex. The <b>incentive problem</b> is different: with no price and profit signals, managers were rewarded only for meeting quantity targets, so they had no reason to fix shortages and surpluses, improve quality or innovate.",
+            "rubric": [
+              {
+                "text": "Explains the coordination problem: one industry’s output is another’s input, so one missed target causes a chain reaction (e.g. iron → steel → tractors)",
+                "points": 0.5
+              },
+              {
+                "text": "Defines the incentive problem as something different: no price/profit signals or rewards, managers only meet targets → no reason to fix shortages and surpluses or to innovate",
+                "points": 0.5
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Part III · Problems",
+      "intro": "Work on scrap paper and type final answers only",
+      "questions": [
+        {
+          "id": "q23",
+          "type": "problem",
+          "topic": "Least-cost production",
+          "review": "../microeconomics/ch2-market-system.html#how",
+          "prompt": "<p><b>Problem 1 · Least-cost production in Sfax.</b> An olive-oil mill near Sfax presses the same quantity of olives every day. After a record harvest olive-oil prices are low, so the oil it produces each day is worth only <b>800 TND</b>. The mill can choose among three techniques: Technique 1 (<b>T1</b>), a traditional press; Technique 2 (<b>T2</b>), a semi-modern line; Technique 3 (<b>T3</b>), a modern continuous mill. The table gives the price of one unit of each resource per day, and the units of each resource that each technique needs per day.</p><div class=\"table-wrap\"><table style=\"font-size:14.5px\"><thead><tr><th style=\"padding:8px 10px\">Resource</th><th class=\"n\" style=\"padding:8px 10px\">Price<br>(TND)</th><th class=\"n\" style=\"padding:8px 10px\">T1</th><th class=\"n\" style=\"padding:8px 10px\">T2</th><th class=\"n\" style=\"padding:8px 10px\">T3</th></tr></thead><tbody><tr><td style=\"padding:8px 10px\">Labor</td><td class=\"n\" style=\"padding:8px 10px\">30</td><td class=\"n\" style=\"padding:8px 10px\">9</td><td class=\"n\" style=\"padding:8px 10px\">7</td><td class=\"n\" style=\"padding:8px 10px\">3</td></tr><tr><td style=\"padding:8px 10px\">Land</td><td class=\"n\" style=\"padding:8px 10px\">50</td><td class=\"n\" style=\"padding:8px 10px\">3</td><td class=\"n\" style=\"padding:8px 10px\">1</td><td class=\"n\" style=\"padding:8px 10px\">1</td></tr><tr><td style=\"padding:8px 10px\">Capital</td><td class=\"n\" style=\"padding:8px 10px\">100</td><td class=\"n\" style=\"padding:8px 10px\">3</td><td class=\"n\" style=\"padding:8px 10px\">5</td><td class=\"n\" style=\"padding:8px 10px\">7</td></tr><tr><td style=\"padding:8px 10px\">Entrepreneurial ability</td><td class=\"n\" style=\"padding:8px 10px\">60</td><td class=\"n\" style=\"padding:8px 10px\">2</td><td class=\"n\" style=\"padding:8px 10px\">2</td><td class=\"n\" style=\"padding:8px 10px\">1</td></tr></tbody></table></div>",
+          "parts": [
+            {
+              "type": "grid",
+              "points": 1.5,
+              "prompt": "<p>Complete the table: the total cost per day of each technique.</p>",
+              "columns": [
+                "Total cost (TND)"
+              ],
+              "rows": [
+                {
+                  "label": "Technique 1 (traditional)",
+                  "cells": [
+                    840
+                  ]
+                },
+                {
+                  "label": "Technique 2 (semi-modern)",
+                  "cells": [
+                    880
+                  ]
+                },
+                {
+                  "label": "Technique 3 (modern)",
+                  "cells": [
+                    900
+                  ]
+                }
+              ],
+              "hint": "Units × price for each resource, then add the four amounts. Whole dinars.",
+              "explain": "T1 = 9 × 30 + 3 × 50 + 3 × 100 + 2 × 60 = 270 + 150 + 300 + 120 = <b>840</b> TND.<br>T2 = 7 × 30 + 1 × 50 + 5 × 100 + 2 × 60 = 210 + 50 + 500 + 120 = <b>880</b> TND.<br>T3 = 3 × 30 + 1 × 50 + 7 × 100 + 1 × 60 = 90 + 50 + 700 + 60 = <b>900</b> TND.<br>Trap: Technique 3 uses the <b>fewest units</b> (12, against 15 for T2 and 17 for T1) but it is the <b>most expensive</b>. You cannot add a unit of capital (100 TND) to a unit of labor (30 TND) as if they were the same thing: efficiency is measured in money cost."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "prompt": "<p>The mill uses its least-cost technique. What is its economic profit or loss per day? <i>Type a loss as a negative number (e.g. −25).</i></p>",
+              "answer": -40,
+              "unit": "TND",
+              "tol": 0.5,
+              "explain": "Least-cost technique = <b>Technique 1</b> (840 TND). Economic profit = value of output − total cost = 800 − 840 = <b>-40 TND</b>: an economic <b>loss</b> of 40 TND a day. Even with the cheapest technique, the oil is worth less than the resources it uses (total cost already includes a normal payment to the entrepreneur). Traps: +40 (a loss must carry a minus sign); -100 (choosing Technique 3 because it uses the fewest units)."
+            },
+            {
+              "type": "mcq",
+              "points": 1,
+              "topic": "Five fundamental questions",
+              "review": "../microeconomics/ch2-market-system.html#what",
+              "prompt": "<p>If this mill is typical of the olive-oil mills of the region and the loss continues, what will happen to the industry?</p>",
+              "options": [
+                "It expands: new mills copy the least-cost technique and enter the industry.",
+                "It contracts: some mills shrink or leave, and their resources move to industries where they earn more.",
+                "It stays the same size: a mill that uses its least-cost technique always earns at least a normal profit.",
+                "It expands: each mill produces more oil to make up for its daily loss."
+              ],
+              "answer": 1,
+              "explain": "Continuing economic losses (TR &lt; TC) are the market’s signal that society values these resources more elsewhere: mills shrink or leave, and land, labor and capital move to other industries, so the industry <b>contracts</b> (the market’s answer to “What will be produced?”: only goods produced at a continuing profit survive). (c) is the key trap: least-cost production makes the loss as small as possible, but it does not guarantee a profit; that depends on the value consumers put on the output. (a) Firms enter only when there is an economic profit. (d) Producing more of a loss-making product makes things worse: losses push resources <b>out</b> of an industry."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "prompt": "<p>A leasing company cuts the rental price of olive-processing machines: capital now costs <b>70 TND</b> per unit per day. All other prices, and the value of output (800 TND), do not change. What is the mill’s new <b>minimum</b> cost per day?</p>",
+              "answer": 690,
+              "unit": "TND",
+              "tol": 0.5,
+              "explain": "Recompute <b>all three</b> techniques with capital at 70 TND:<br>T1 = 9 × 30 + 3 × 50 + 3 × 70 + 2 × 60 = 270 + 150 + 210 + 120 = <b>750</b>.<br>T2 = 7 × 30 + 1 × 50 + 5 × 70 + 2 × 60 = 210 + 50 + 350 + 120 = <b>730</b>.<br>T3 = 3 × 30 + 1 × 50 + 7 × 70 + 1 × 60 = 90 + 50 + 490 + 60 = <b>690</b>.<br>Minimum = <b>690 TND</b> (Technique 3). Shortcut: each technique saves 30 TND per unit of capital it uses (T1 −90, T2 −150, T3 −210). Trap: recomputing only the old best technique (750 TND)."
+            },
+            {
+              "type": "mcq",
+              "points": 1,
+              "prompt": "<p>Which technique does the mill now use, and why?</p>",
+              "options": [
+                "Technique 1: the technology has not changed, so the least-cost technique cannot change",
+                "Technique 2: it now costs less than Technique 1",
+                "Technique 3: it uses the most capital, the resource whose price fell",
+                "Technique 3: it uses the fewest units of resources in total"
+              ],
+              "answer": 2,
+              "explain": "New ranking: T3 (690) &lt; T2 (730) &lt; T1 (750), the exact reverse of the original ranking. When a resource becomes cheaper, firms switch toward the technique that uses <b>more</b> of it: T3 uses 7 units of capital, so it saves the most. (a) The least-cost technique depends on technology <b>and</b> on resource prices: here only a price changed, and the choice still changed. (b) T2 is now cheaper than T1, but T3 is cheaper still. (d) Right technique, wrong reason: T3 already used the fewest units (12) when it was the most expensive technique (900 TND). Note: with T3 the mill now earns 800 − 690 = +110 TND a day, so if it is typical the industry would now attract resources and expand."
+            },
+            {
+              "type": "text",
+              "points": 1.5,
+              "rows": 5,
+              "prompt": "<p>In 3–4 sentences, explain how competition forces olive-oil mills to use the least-cost technique.</p>",
+              "rubric": [
+                {
+                  "text": "Self-interest: with the same value of output, a cheaper technique means a bigger profit (or a smaller loss)",
+                  "points": 0.5
+                },
+                {
+                  "text": "Rival mills using the least-cost technique can sell their oil at a lower price and still cover their costs, so they undersell a high-cost mill and win its customers",
+                  "points": 0.5
+                },
+                {
+                  "text": "A mill that keeps a costlier technique loses sales and makes losses: it must switch to the least-cost technique or leave the market (competition eliminates high-cost producers)",
+                  "points": 0.5
+                }
+              ],
+              "model": "Each mill wants the highest possible profit: with the same 800 TND of oil, every dinar saved on resources is a dinar of extra profit (or of smaller loss). Mills that adopt the least-cost technique can cut the price of their oil and still cover their costs, so they undersell any mill that uses a costlier technique and take its customers. The high-cost mill loses sales and suffers losses: it must copy the least-cost technique or leave the industry. So competition eliminates high-cost producers, and when a resource price changes (cheaper machines), the surviving mills quickly switch to the new least-cost technique (here Technique 3)."
+            }
+          ]
+        },
+        {
+          "id": "q24",
+          "type": "problem",
+          "topic": "Circular flow",
+          "review": "../microeconomics/ch2-market-system.html#circular-flow",
+          "prompt": "<p><b>Problem 2 · The circular flow and a household budget.</b> The Jlassi family lives in Sousse. Mrs Jlassi is a nurse in a private clinic. Mr Jlassi leases his farmland to an olive-oil company. Grandma Jlassi owns shares in a dairy company. Their son Youssef, an ISB student, works in a café at weekends.</p>",
+          "parts": [
+            {
+              "type": "match",
+              "pointsEach": 0.5,
+              "prompt": "<p>For each item, choose the market of the circular flow model in which it takes place, and whether it is a real flow or a money flow.</p>",
+              "choices": [
+                "Resource market · real flow",
+                "Resource market · money flow",
+                "Product market · real flow",
+                "Product market · money flow"
+              ],
+              "items": [
+                {
+                  "text": "The nursing work Mrs Jlassi does at the clinic",
+                  "answer": 0
+                },
+                {
+                  "text": "The rent the olive-oil company pays Mr Jlassi for using his farmland",
+                  "answer": 1
+                },
+                {
+                  "text": "The share of the dairy company’s profits paid to Grandma Jlassi",
+                  "answer": 1
+                },
+                {
+                  "text": "The taxi ride that takes Youssef to ISB",
+                  "answer": 2
+                },
+                {
+                  "text": "The bread the family takes home from the bakery every morning",
+                  "answer": 2
+                },
+                {
+                  "text": "The sales revenue Youssef’s café earns from the coffees it sells to students",
+                  "answer": 3
+                }
+              ],
+              "explain": "Resource market: households <b>sell</b> resources (real flow: labor, land, capital and entrepreneurial ability go to businesses) and receive <b>income</b> (money flow: wages, rent, interest and profits go to households). Product market: businesses <b>sell</b> goods and services (real flow to households) and receive households’ <b>consumption spending</b>, which is their sales revenue (money flow to businesses).<br>1 = labor supplied: resource market, real flow.<br>2 = rent, the payment for land: resource market, money flow.<br>3 = profit income from owning shares (households own businesses indirectly): resource market, money flow. Trap: profits are not product-market spending.<br>4 = a service is a product, bought in the product market: product market, real flow.<br>5 = goods going to a household: product market, real flow.<br>6 = trap: the café’s revenue is the <b>same money</b> as the students’ consumption spending, seen from the business side: product market, money flow."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "topic": "PPC & budget line",
+              "review": "../microeconomics/ch1-introduction.html#ppc",
+              "prompt": "<p>Youssef works 9 hours every weekend at 5 TND per hour, and he spends all this income on two goods: football match tickets at 7.5 TND each and sandwiches at 3 TND each. What is the maximum number of match tickets he can buy each weekend?</p>",
+              "answer": 6,
+              "unit": "tickets",
+              "tol": 0.01,
+              "explain": "Income first: 9 × 5 = <b>45 TND</b> (earned in the resource market, spent in the product market). Maximum tickets = income ÷ price of a ticket = 45 ÷ 7.5 = <b>6 tickets</b>, buying no sandwiches: the end of his budget line on the ticket axis. (The other end: 45 ÷ 3 = 15 sandwiches.)"
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "topic": "PPC & budget line",
+              "review": "../microeconomics/ch1-introduction.html#ppc",
+              "prompt": "<p>Along Youssef’s budget line, what is the opportunity cost of <b>one sandwich</b>, measured in match tickets? <i>Give a decimal.</i></p>",
+              "answer": 0.4,
+              "unit": "ticket",
+              "tol": 0.005,
+              "explain": "Opportunity cost of one sandwich = price of a sandwich ÷ price of a ticket = 3 ÷ 7.5 = <b>0.4 ticket</b>. Check: giving up one ticket frees 7.5 TND, enough for 2.5 sandwiches, so one sandwich costs 1 ÷ 2.5 = 0.4 ticket. Trap: 2.5 is the opportunity cost of one <b>ticket</b> in sandwiches (the ratio upside down). Answering 3 TND gives the money price, not the cost in tickets. Only relative prices matter: if his income changed, this cost would stay 0.4 ticket."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../assets/exam.js"></script>
+</body>
+</html>

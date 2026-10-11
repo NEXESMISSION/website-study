@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Quiz 2 · Practice A · Financial Accounting I</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/exam.css">
+</head>
+<body class="fa">
+<div id="exam"></div>
+<script type="application/json" id="exam-data">
+{
+  "id": "fa-quiz2-A",
+  "title": "Quiz 2 · Practice A",
+  "shortTitle": "FA Quiz 2 · A",
+  "course": "Financial Accounting I",
+  "courseClass": "fa",
+  "covers": "Chapter 2 · The Recording Process",
+  "duration": 45,
+  "hub": "index.html",
+  "description": "A 45-minute rehearsal of Quiz 2 on Chapter 2: debit and credit rules, a debit-or-credit exercise, journal entries for a new cleaning company in Sfax, then posting, its trial balance and one error hunt. The chapter’s classic traps are inside on purpose, so your weak spots show up now and not on the real quiz.",
+  "instructions": [
+    "45 minutes. Calculator allowed (non-programmable). No notes, no textbook, no phone.",
+    "All amounts are in Tunisian dinars (TND). Type numbers without currency signs; thousands separators are optional.",
+    "Journal entries: choose each account from the list (it contains accounts you will not need), put each amount in the Debit or Credit column, list debits first, and use one line per account. Tick “No entry required” when an event does not change the financial position. Marking: each correct line (right account, right side, right amount) earns its share of the points and a wrong line earns nothing; each line more than the entry needs cancels one correct line, so do not list accounts “just in case”.",
+    "Parts III and IV use the same company: keep your T-accounts on scrap paper while you journalize.",
+    "Ignore adjusting entries (Chapter 3) and taxes.",
+    "Suggested timing: Part I 8 min · Part II 5 min · Part III 14 min · Part IV 13 min · 5 min to check."
+  ],
+  "accounts": [
+    "Cash",
+    "Accounts Receivable",
+    "Supplies",
+    "Prepaid Insurance",
+    "Equipment",
+    "Notes Payable",
+    "Accounts Payable",
+    "Unearned Service Revenue",
+    "Salaries and Wages Payable",
+    "Share Capital—Ordinary",
+    "Retained Earnings",
+    "Dividends",
+    "Service Revenue",
+    "Supplies Expense",
+    "Insurance Expense",
+    "Salaries and Wages Expense",
+    "Rent Expense"
+  ],
+  "sections": [
+    {
+      "title": "Part I · Multiple choice (6 pts)",
+      "intro": "Choose the one best answer. 1 point each",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Debit & credit rules",
+          "review": "../financial-accounting/ch2-recording-process.html#debits-credits",
+          "prompt": "<p>Which of the following is recorded with a <b>credit</b>?</p>",
+          "options": [
+            "An increase in Prepaid Insurance",
+            "A decrease in Supplies",
+            "An increase in Dividends",
+            "A decrease in Unearned Service Revenue"
+          ],
+          "answer": 1,
+          "explain": "<p><b>b.</b> Supplies is an <b>asset</b>: assets increase with a debit and <b>decrease with a credit</b> (for example, Cr Supplies when supplies are used or returned).</p><p>a: Prepaid Insurance is an asset too, so an increase is a <b>debit</b> (paying a policy in advance: Dr Prepaid Insurance / Cr Cash). c: Dividends increase with a <b>debit</b> (DEALER: Dividends, Expenses, Assets are debit-normal) because they reduce equity. d: Unearned Service Revenue is a <b>liability</b>; a liability decreases with a <b>debit</b> (when the service is finally performed).</p>"
+        },
+        {
+          "id": "q2",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Debit & credit rules",
+          "review": "../financial-accounting/ch2-recording-process.html#debits-credits",
+          "prompt": "<p>Which group contains <b>only</b> accounts with a normal <b>credit</b> balance?</p>",
+          "options": [
+            "Accounts Payable, Service Revenue, Dividends",
+            "Unearned Service Revenue, Prepaid Insurance, Share Capital—Ordinary",
+            "Accounts Receivable, Notes Payable, Retained Earnings",
+            "Notes Payable, Unearned Service Revenue, Service Revenue"
+          ],
+          "answer": 3,
+          "explain": "<p><b>d.</b> Notes Payable and Unearned Service Revenue are liabilities, Service Revenue is a revenue: all three are on the credit side of DEALER (Liabilities, Equity, Revenues → credit-normal).</p><p>Each wrong group hides one debit-normal account: a: <b>Dividends</b> (debit-normal: they reduce equity, they are not equity increases). b: <b>Prepaid Insurance</b> is an asset (the trap is the word “Prepaid”: it is insurance paid in advance, a future benefit, so an asset). c: <b>Accounts Receivable</b> is an asset (money customers owe us), not a liability like Accounts Payable.</p>"
+        },
+        {
+          "id": "q3",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Trial balance",
+          "review": "../financial-accounting/ch2-recording-process.html#trial-balance",
+          "prompt": "<p>A company’s trial balance has equal debit and credit totals. This proves that:</p>",
+          "options": [
+            "total debit balances equal total credit balances",
+            "every transaction of the month was journalized",
+            "each entry was posted to the right accounts",
+            "the financial statements will contain no errors"
+          ],
+          "answer": 0,
+          "explain": "<p><b>a.</b> A trial balance only proves the <b>mathematical equality</b> of debits and credits after posting.</p><p>It does NOT prove the other three: a transaction that was never journalized (b) leaves both columns equally short; an amount posted to the wrong account (c), e.g. Supplies Expense instead of Supplies, keeps both sides equal; so the statements built from it can still be wrong (d). The textbook lists five errors a balanced trial balance can hide: entry not journalized, entry not posted, entry posted twice, wrong accounts used, offsetting errors.</p>"
+        },
+        {
+          "id": "q4",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Trial balance",
+          "review": "../financial-accounting/ch2-recording-process.html#trial-balance",
+          "prompt": "<p>Which of these errors <b>will</b> make the trial balance fail to balance?</p>",
+          "options": [
+            "A 650 TND rent payment was journalized and posted twice.",
+            "A 900 TND purchase of supplies on account was debited to Supplies Expense instead of Supplies.",
+            "A 480 TND salary payment was posted as a debit to Salaries and Wages Expense and a debit to Cash.",
+            "A 300 TND electricity bill paid in cash was never journalized."
+          ],
+          "answer": 2,
+          "explain": "<p><b>c.</b> The correct entry is Dr Salaries and Wages Expense 480 / Cr Cash 480. Posting the Cash part as a <b>debit</b> means the entry has two debits and no credit: Cash ends 960 too high, and the debit column exceeds the credit column by <b>960</b> (2 × 480). A difference that is twice an amount is the classic sign of “a debit posted as a credit” (or the reverse).</p><p>a: posted twice → both columns go up by 650, still equal. b: wrong account, but still one debit and one credit of 900 → still equal (the error is real, the trial balance just cannot see it). d: not journalized at all → both columns are 300 too low, still equal.</p>"
+        },
+        {
+          "id": "q5",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Ledger & posting",
+          "review": "../financial-accounting/ch2-recording-process.html#posting",
+          "prompt": "<p>Which statement about the journal and the ledger is correct?</p>",
+          "options": [
+            "The ledger is the book of original entry; the journal groups all the accounts.",
+            "Posting copies amounts from the ledger accounts into the journal.",
+            "The journal shows the up-to-date balance of each account after every entry.",
+            "Each transaction is first recorded in the journal and then posted to the ledger."
+          ],
+          "answer": 3,
+          "explain": "<p><b>d.</b> The recording process is: analyze → <b>journalize</b> (journal = book of original entry, chronological order, the complete effect of one transaction in one place) → <b>post</b> (transfer each debit and credit to the ledger accounts).</p><p>a swaps the two books: the <b>journal</b> is the book of original entry; the <b>ledger</b> is the entire group of accounts. b reverses the direction of posting (journal → ledger, never ledger → journal). c describes the <b>ledger</b> (three-column form with a running Balance column); the journal has no balance column.</p>"
+        },
+        {
+          "id": "q6",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Ledger & posting",
+          "review": "../financial-accounting/ch2-recording-process.html#ledger",
+          "prompt": "<p>A company numbers its chart of accounts like the textbook: 100s = assets, 200s = liabilities, 300s = equity (Share Capital, Retained Earnings, Dividends), 400s = revenues, 600s–900s = expenses. Which number should it give to <b>Unearned Service Revenue</b>?</p>",
+          "options": [
+            "112",
+            "209",
+            "332",
+            "405"
+          ],
+          "answer": 1,
+          "explain": "<p><b>b. 209.</b> The chart of accounts lists every account with its number, in the order assets, liabilities, equity, revenues, expenses. Unearned Service Revenue is cash received <b>before</b> the service is performed: the company owes the work, so it is a <b>liability</b> → a 200s number (the textbook uses exactly 209).</p><p>d (405) is the trap: despite the word “Revenue” in its name, it is not a revenue yet. a (112) is an asset number (the textbook’s Accounts Receivable). c (332) is the textbook’s Dividends.</p>"
+        }
+      ]
+    },
+    {
+      "title": "Part II · Debit or credit? (4 pts)",
+      "intro": "0.5 point per line",
+      "questions": [
+        {
+          "id": "q7",
+          "type": "match",
+          "pointsEach": 0.5,
+          "topic": "Debit & credit rules",
+          "review": "../financial-accounting/ch2-recording-process.html#debits-credits",
+          "prompt": "<p>For each event, is the account named in <b>bold</b> debited or credited in the journal entry?</p>",
+          "choices": ["Debit", "Credit"],
+          "items": [
+            { "text": "<b>Supplies</b>: cleaning products are bought on account", "answer": 0 },
+            { "text": "<b>Notes Payable</b>: the company borrows from a bank and signs a note", "answer": 1 },
+            { "text": "<b>Equipment</b>: an unused machine is sold for cash at its cost", "answer": 1 },
+            { "text": "<b>Utilities Expense</b>: the STEG electricity bill is paid in cash", "answer": 0 },
+            { "text": "<b>Salaries and Wages Payable</b>: salaries owed from last month are paid", "answer": 0 },
+            { "text": "<b>Rent Revenue</b>: the company rents out an empty office and receives this month’s rent", "answer": 1 },
+            { "text": "<b>Share Capital—Ordinary</b>: new shares are issued to an investor for cash", "answer": 1 },
+            { "text": "<b>Notes Payable</b>: the company repays part of the bank loan", "answer": 0 }
+          ],
+          "explain": "<p>Ask two questions each time: <b>what type</b> of account is it (asset, liability, equity, dividend, revenue, expense)? Does it <b>increase or decrease</b>? Then apply DEALER: Dividends, Expenses, Assets increase with a <b>debit</b>; Liabilities, Equity, Revenues increase with a <b>credit</b>; a decrease is always the opposite side.</p><ol><li>Supplies: asset ↑ → <b>Debit</b> (Dr Supplies / Cr Accounts Payable). Not an expense: the products will be used over the coming months.</li><li>Notes Payable: liability ↑ → <b>Credit</b> (Dr Cash / Cr Notes Payable).</li><li>Equipment: asset ↓ → <b>Credit</b> (Dr Cash / Cr Equipment).</li><li>Utilities Expense: expense ↑ → <b>Debit</b> (Dr Utilities Expense / Cr Cash).</li><li>Salaries and Wages Payable: liability ↓ → <b>Debit</b> (Dr Salaries and Wages Payable / Cr Cash). Not an expense this month: the expense was recorded last month, when the work was done.</li><li>Rent Revenue: revenue ↑ → <b>Credit</b> (Dr Cash / Cr Rent Revenue).</li><li>Share Capital—Ordinary: equity ↑ → <b>Credit</b> (Dr Cash / Cr Share Capital—Ordinary).</li><li>Notes Payable: liability ↓ → <b>Debit</b> (Dr Notes Payable / Cr Cash). The same account as line 2, on the other side, because this time it decreases.</li></ol>"
+        }
+      ]
+    },
+    {
+      "title": "Part III · Journal entries (7.5 pts)",
+      "intro": "Nadhif Cleaning SA, a new office and home cleaning company in Sfax, started business in November 2026. Journalize each event. 1 point per entry; 0.5 point for the event that may need no entry",
+      "questions": [
+        {
+          "id": "q8",
+          "type": "journal",
+          "points": 1,
+          "topic": "Journal entries",
+          "review": "../financial-accounting/ch2-recording-process.html#journal",
+          "prompt": "<p><b>Nov 2.</b> Nadhif buys cleaning products and supplies for 2,350 TND from Chimie Sud SARL, payable in 30 days. They will be used over the next months.</p>",
+          "answer": [
+            { "account": "Supplies", "side": "Dr", "amount": 2350 },
+            { "account": "Accounts Payable", "side": "Cr", "amount": 2350 }
+          ],
+          "lines": 3,
+          "explain": "<p><b>Dr Supplies 2,350 / Cr Accounts Payable 2,350.</b> Analysis: an asset (Supplies) increases → debit; a liability (Accounts Payable: Nadhif owes Chimie Sud) increases → credit.</p><p>Traps: <b>Supplies Expense</b> is wrong because the products are not used yet; they are a future benefit, an asset (they become an expense in Chapter 3, when they are used). <b>Cash</b> is wrong: nothing is paid today, “payable in 30 days” = on account. <b>Accounts Receivable</b> is wrong: that is money customers owe Nadhif; here Nadhif is the one who owes.</p>"
+        },
+        {
+          "id": "q9",
+          "type": "journal",
+          "points": 1,
+          "topic": "Journal entries",
+          "review": "../financial-accounting/ch2-recording-process.html#journal",
+          "prompt": "<p><b>Nov 3.</b> Nadhif pays 1,440 TND in cash for a 12-month liability insurance policy covering 1 November 2026 to 31 October 2027.</p>",
+          "answer": [
+            { "account": "Prepaid Insurance", "side": "Dr", "amount": 1440 },
+            { "account": "Cash", "side": "Cr", "amount": 1440 }
+          ],
+          "lines": 3,
+          "explain": "<p><b>Dr Prepaid Insurance 1,440 / Cr Cash 1,440.</b> The policy protects Nadhif for 12 months, most of them in the future, so the payment buys an <b>asset</b> (Prepaid Insurance) → debit; Cash decreases → credit.</p><p>Trap: <b>Insurance Expense 1,440</b> is wrong. Only one month (1,440 ÷ 12 = 120) will be used up by 30 November, and that small part is moved to Insurance Expense by an <b>adjusting entry</b> in Chapter 3, not now. The textbook (Yazici, 4 October) records a one-year policy exactly like this: Dr Prepaid Insurance / Cr Cash.</p>"
+        },
+        {
+          "id": "q10",
+          "type": "journal",
+          "points": 1,
+          "topic": "Journal entries",
+          "review": "../financial-accounting/ch2-recording-process.html#journal",
+          "prompt": "<p><b>Nov 5.</b> Hôtel Les Oliviers (Sfax) pays Nadhif 3,600 TND in cash for cleaning its rooms in December, January and February.</p>",
+          "answer": [
+            { "account": "Cash", "side": "Dr", "amount": 3600 },
+            { "account": "Unearned Service Revenue", "side": "Cr", "amount": 3600 }
+          ],
+          "lines": 3,
+          "explain": "<p><b>Dr Cash 3,600 / Cr Unearned Service Revenue 3,600.</b> Cash (asset) increases → debit. The cleaning has <b>not been done yet</b>: Nadhif now owes three months of work (or the money back), so it has a <b>liability</b> → credit Unearned Service Revenue.</p><p>Trap: <b>Service Revenue</b> is wrong. Revenue is recorded when the service is <b>performed</b>, not when the cash arrives; the hotel’s rooms are cleaned from December. In Chapter 3, each month’s work moves 1,200 from Unearned Service Revenue to Service Revenue. (And Accounts Receivable is wrong too: the hotel owes nothing, it has already paid.)</p>"
+        },
+        {
+          "id": "q11",
+          "type": "journal",
+          "points": 0.5,
+          "topic": "Journal entries",
+          "review": "../financial-accounting/ch2-recording-process.html#journal",
+          "prompt": "<p><b>Nov 8.</b> Nadhif hires two cleaners who will start work on 1 December, each at a salary of 850 TND per month.</p>",
+          "answer": [],
+          "lines": 3,
+          "explain": "<p><b>No entry required.</b> Hiring is only an agreement: on 8 November no work has been done and nothing has been paid, so no asset, liability or equity changes. The salary expense will be recorded when the cleaners work and are paid (from December).</p><p>Trap: Dr Salaries and Wages Expense 1,700 / Cr Cash (or Cr Salaries and Wages Payable) is wrong: there is no expense before the work is done. Same rule as the textbook’s Yazici (hires four employees on 9 October → no entry) and Hair It Is (interviews applicants → no entry).</p>"
+        },
+        {
+          "id": "q12",
+          "type": "journal",
+          "points": 1,
+          "topic": "Journal entries",
+          "review": "../financial-accounting/ch2-recording-process.html#journal",
+          "prompt": "<p><b>Nov 12.</b> Nadhif finishes a deep-cleaning job at Sfax Medical Centre and sends an invoice of 4,200 TND, payable in 30 days.</p>",
+          "answer": [
+            { "account": "Accounts Receivable", "side": "Dr", "amount": 4200 },
+            { "account": "Service Revenue", "side": "Cr", "amount": 4200 }
+          ],
+          "lines": 3,
+          "explain": "<p><b>Dr Accounts Receivable 4,200 / Cr Service Revenue 4,200.</b> The work is <b>done</b>, so the revenue is earned now (revenue increases equity → credit), even though no cash is received yet. The clinic owes Nadhif: an asset (Accounts Receivable) increases → debit.</p><p>Traps: <b>Cash</b> is wrong (the invoice is payable in 30 days). <b>Unearned Service Revenue</b> is wrong: “unearned” is for cash received <b>before</b> the work; here the work comes first and the cash later, the opposite situation.</p>"
+        },
+        {
+          "id": "q13",
+          "type": "journal",
+          "points": 1,
+          "topic": "Journal entries",
+          "review": "../financial-accounting/ch2-recording-process.html#journal",
+          "prompt": "<p><b>Nov 20.</b> Nadhif pays Chimie Sud SARL 1,500 TND in cash, part of the amount owed for the 2 November purchase.</p>",
+          "answer": [
+            { "account": "Accounts Payable", "side": "Dr", "amount": 1500 },
+            { "account": "Cash", "side": "Cr", "amount": 1500 }
+          ],
+          "lines": 3,
+          "explain": "<p><b>Dr Accounts Payable 1,500 / Cr Cash 1,500.</b> The debt to Chimie Sud (a liability) decreases → debit; Cash (asset) decreases → credit. Accounts Payable now has a credit balance of 2,350 − 1,500 = 850.</p><p>Trap: <b>Supplies Expense</b> (or Supplies) 1,500 is wrong. The supplies were already recorded on 2 November; recording them again would count the same purchase twice. A payment <b>on account</b> only settles a debt: it is never an expense.</p>"
+        },
+        {
+          "id": "q14",
+          "type": "journal",
+          "points": 1,
+          "topic": "Journal entries",
+          "review": "../financial-accounting/ch2-recording-process.html#journal",
+          "prompt": "<p><b>Nov 24.</b> Sfax Medical Centre pays Nadhif 2,800 TND in cash, part of the 12 November invoice.</p>",
+          "answer": [
+            { "account": "Cash", "side": "Dr", "amount": 2800 },
+            { "account": "Accounts Receivable", "side": "Cr", "amount": 2800 }
+          ],
+          "lines": 3,
+          "explain": "<p><b>Dr Cash 2,800 / Cr Accounts Receivable 2,800.</b> Cash (asset) increases → debit; the amount the clinic owes (Accounts Receivable, asset) decreases → credit. One asset is exchanged for another; equity does not change. Accounts Receivable now has a debit balance of 4,200 − 2,800 = 1,400.</p><p>Trap: <b>Service Revenue</b> 2,800 is wrong. The revenue was already recorded on 12 November, when the work was done; crediting revenue again would count the same job twice. Collecting cash from a customer is <b>not</b> revenue.</p>"
+        },
+        {
+          "id": "q15",
+          "type": "journal",
+          "points": 1,
+          "topic": "Journal entries",
+          "review": "../financial-accounting/ch2-recording-process.html#journal",
+          "prompt": "<p><b>Nov 30.</b> The board declares and pays a cash dividend of 400 TND to the shareholders.</p>",
+          "answer": [
+            { "account": "Dividends", "side": "Dr", "amount": 400 },
+            { "account": "Cash", "side": "Cr", "amount": 400 }
+          ],
+          "lines": 3,
+          "explain": "<p><b>Dr Dividends 400 / Cr Cash 400.</b> Dividends reduce equity, so they increase with a <b>debit</b> (DEALER); Cash decreases → credit.</p><p>Traps: a dividend is <b>not an expense</b> (no Salaries, Rent… expense account): it is a distribution of profit to the owners, it never appears on the income statement; it reduces Retained Earnings through the retained earnings statement. <b>Retained Earnings</b> debited directly is also wrong here: during the period, dividends are recorded in their own Dividends account (as in the textbook, Yazici 20 October), and only closed to Retained Earnings at year end.</p>"
+        }
+      ]
+    },
+    {
+      "title": "Part IV · Posting and trial balance (2.5 pts)",
+      "intro": "Post, find the balances, total the trial balance, then find one error",
+      "questions": [
+        {
+          "id": "q16",
+          "type": "problem",
+          "topic": "Trial balance",
+          "review": "../financial-accounting/ch2-recording-process.html#trial-balance",
+          "prompt": "<p>All of Nadhif Cleaning SA’s November events are below: the eight from Part III plus three that the accountant has already journalized correctly (marked ✓). Post every entry to T-accounts, then answer.</p><table><thead><tr><th>Date</th><th>Event</th></tr></thead><tbody><tr><td>Nov 1 ✓</td><td>Shareholders invest 24,000 TND in cash in exchange for ordinary shares.</td></tr><tr><td>Nov 2</td><td>Buys supplies for 2,350 TND on account (Chimie Sud SARL).</td></tr><tr><td>Nov 3</td><td>Pays 1,440 TND for a 12-month insurance policy.</td></tr><tr><td>Nov 5</td><td>Receives 3,600 TND in cash from Hôtel Les Oliviers for cleaning in December–February.</td></tr><tr><td>Nov 8</td><td>Hires two cleaners starting 1 December.</td></tr><tr><td>Nov 12</td><td>Invoices Sfax Medical Centre 4,200 TND for a job completed today.</td></tr><tr><td>Nov 16 ✓</td><td>Receives 1,350 TND in cash from households for cleaning done today.</td></tr><tr><td>Nov 20</td><td>Pays Chimie Sud SARL 1,500 TND on account.</td></tr><tr><td>Nov 24</td><td>Receives 2,800 TND from Sfax Medical Centre on its invoice.</td></tr><tr><td>Nov 27 ✓</td><td>Pays the November office rent, 700 TND in cash.</td></tr><tr><td>Nov 30</td><td>Declares and pays a 400 TND cash dividend.</td></tr></tbody></table>",
+          "parts": [
+            {
+              "type": "numeric",
+              "points": 1,
+              "topic": "Ledger & posting",
+              "review": "../financial-accounting/ch2-recording-process.html#posting",
+              "prompt": "What is the balance of the <b>Cash</b> account on 30 November?",
+              "answer": 27710,
+              "unit": "TND",
+              "tol": 0.5,
+              "hint": "Answer in TND",
+              "explain": "<p>Cash T-account. Debits (cash in): 24,000 (Nov 1) + 3,600 (Nov 5) + 1,350 (Nov 16) + 2,800 (Nov 24) = 31,750. Credits (cash out): 1,440 (Nov 3) + 1,500 (Nov 20) + 700 (Nov 27) + 400 (Nov 30) = 4,040. Balance = 31,750 − 4,040 = <b>27,710 TND</b> (debit).</p><p>Events with no cash: Nov 2 and Nov 12 (on account) and Nov 8 (no entry). Traps: 24,110 means the 3,600 hotel advance was left out of Cash; it IS cash received, only the credit side is a liability instead of revenue. 26,010 means the hiring was recorded as a 1,700 payment, but nothing is paid on 8 November.</p>"
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "prompt": "Prepare the trial balance at 30 November. What is the <b>total of the debit column</b>?",
+              "answer": 34000,
+              "unit": "TND",
+              "tol": 0.5,
+              "hint": "Answer in TND",
+              "explain": "<p><b>Nadhif Cleaning SA · Trial balance · 30 November 2026</b></p><table><thead><tr><th>Account</th><th>Debit</th><th>Credit</th></tr></thead><tbody><tr><td>Cash</td><td>27,710</td><td></td></tr><tr><td>Accounts Receivable (4,200 − 2,800)</td><td>1,400</td><td></td></tr><tr><td>Supplies</td><td>2,350</td><td></td></tr><tr><td>Prepaid Insurance</td><td>1,440</td><td></td></tr><tr><td>Accounts Payable (2,350 − 1,500)</td><td></td><td>850</td></tr><tr><td>Unearned Service Revenue</td><td></td><td>3,600</td></tr><tr><td>Share Capital—Ordinary</td><td></td><td>24,000</td></tr><tr><td>Dividends</td><td>400</td><td></td></tr><tr><td>Service Revenue (4,200 + 1,350)</td><td></td><td>5,550</td></tr><tr><td>Rent Expense</td><td>700</td><td></td></tr><tr><td><b>Totals</b></td><td><b>34,000</b></td><td><b>34,000</b></td></tr></tbody></table><p>Debits: 27,710 + 1,400 + 2,350 + 1,440 + 400 + 700 = <b>34,000 TND</b>; credits: 850 + 3,600 + 24,000 + 5,550 = 34,000 ✓.</p><p>Traps that change the total: 35,500 = the Nov 20 payment recorded as an expense (Accounts Payable stays 2,350 and an extra 1,500 expense appears); 36,800 = the Nov 24 collection recorded as revenue (Accounts Receivable stays 4,200 and revenue becomes 8,350); 68,000 = both columns added together (the total is the total of ONE column). Note: recording the hotel advance as revenue or the dividend as an expense still gives 34,000: the trial balance balances, but the accounts are wrong, which is exactly why a balanced trial balance does not prove the books are correct.</p>"
+            }
+          ]
+        },
+        {
+          "id": "q17",
+          "type": "mcq",
+          "points": 0.5,
+          "topic": "Trial balance",
+          "review": "../financial-accounting/ch2-recording-process.html#trial-balance",
+          "prompt": "<p>Another company, Kélibia Dive Centre SA, prepares its trial balance: total debits <b>48,370 TND</b>, total credits <b>49,000 TND</b>. Exactly one error was made. Which one explains this trial balance?</p>",
+          "options": [
+            "The debit of a 700 TND utility bill was posted to Utilities Expense as 70 TND.",
+            "A 315 TND cash dividend was debited to Salaries and Wages Expense instead of Dividends.",
+            "A 630 TND purchase of supplies on account was never journalized.",
+            "A 315 TND collection from a customer was posted as a debit to Accounts Receivable instead of a credit."
+          ],
+          "answer": 0,
+          "explain": "<p><b>a.</b> The debit column is <b>630 too low</b> (49,000 − 48,370) and the credit column is not affected. Posting 70 instead of 700 to Utilities Expense makes that debit balance 630 too low, nothing else changes → debits 630 below credits ✓. 630 is divisible by 9, the typical sign of a slide (700 → 70) or a transposition.</p><p>b: wrong account (expense instead of dividends), but still one debit and one credit of 315 → the trial balance balances; the trap is “630 ÷ 2 = 315”. c: an entry never journalized leaves both columns equal; the same number 630 is only a trap. d: the 315 credit to Accounts Receivable became a debit, so Accounts Receivable is 2 × 315 = 630 too <b>high</b> → the <b>debit</b> column would be larger than the credit column, the opposite of what we see.</p>"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../assets/exam.js"></script>
+</body>
+</html>

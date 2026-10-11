@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Midterm mock B · Microeconomics</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/exam.css">
+</head>
+<body class="micro">
+<div id="exam"></div>
+<script type="application/json" id="exam-data">
+{
+  "id": "micro-midterm-B",
+  "title": "Midterm mock B",
+  "shortTitle": "Micro Midterm · B",
+  "course": "Microeconomics",
+  "courseClass": "micro",
+  "covers": "Chapters 1, 2, 3 and 6",
+  "duration": 90,
+  "description": "A second full mock of the Microeconomics midterm (week 8, 30% of the grade) on Chapters 1, 2, 3 and 6 (McConnell 18e), in the teacher’s test-bank style: 14 multiple-choice questions, 4 true/false questions with justification, 2 multi-part problems and 1 written answer. All questions are new (none from version A), and Chapter 6 (elasticity, consumer and producer surplus, efficiency) gets its full weight.",
+  "instructions": [
+    "Answer all four parts. A wrong answer costs nothing, so never leave a question blank.",
+    "Non-programmable calculator allowed. No notes, no lessons, no phone.",
+    "Part I: one correct answer per question. Part II: choose True or False, then justify in 2–3 sentences; the justification is marked separately.",
+    "Part III: do your working and your graphs on paper, then type only the numbers (no units). Quantities are in thousands, as each problem states.",
+    "Elasticities: use the midpoint formula unless the question gives the percentage changes directly. Give the price elasticity of demand as a positive number (absolute value); keep the sign (+ or −) of cross and income elasticities, because the sign is the answer.",
+    "Rounding: work with unrounded values and round only your final answer, as each question asks.",
+    "Part IV: write full sentences in English and use the vocabulary of the course (supply vs quantity supplied, elastic, inelastic, total revenue…).",
+    "Suggested timing: Part I 20 min · Part II 15 min · Part III 35 min · Part IV 12 min · 8 min to check."
+  ],
+  "sections": [
+    {
+      "title": "Part I · Multiple choice (14 pts)",
+      "intro": "One correct answer per question · questions follow the chapters in order",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Opportunity cost",
+          "review": "../microeconomics/ch1-introduction.html#oppcost",
+          "prompt": "<p>Rami decides to buy a 30 TND ticket and go to a concert at the Carthage International Festival on Saturday evening. That evening he could instead have worked a shift in a restaurant for 50 TND, or helped in his cousin’s shop for 35 TND. He could not do both jobs, because they are at the same time. What is the opportunity cost of his decision?</p>",
+          "options": [
+            "30 TND, the price of the ticket",
+            "50 TND, the restaurant wage",
+            "80 TND, the ticket plus the restaurant wage",
+            "115 TND, the ticket plus both possible jobs"
+          ],
+          "answer": 2,
+          "explain": "Opportunity cost = the value of what you give up. The concert uses two scarce things: Rami’s <b>money</b> and his <b>evening</b>. If he decided not to go, he would not buy the ticket, and his best evening would be: keep the 30 TND (to spend on something else) <b>and</b> earn 50 TND at the restaurant, his best job. So the concert costs him 30 + 50 = <b>80 TND</b>: <b>(c)</b>. <b>(a)</b> counts only the money he pays and forgets the income he gives up. <b>(b)</b> forgets that the 30 TND could have bought something else. <b>(d)</b> is the classic trap: the restaurant (50 TND) and the shop (35 TND) are alternatives that exclude each other (he could do only one), so only the better one counts. The rule “never add the alternatives” is about options you could not have had together; the ticket money and the lost wage are both given up by the same choice."
+        },
+        {
+          "id": "q2",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Marginal analysis (MB/MC)",
+          "review": "../microeconomics/ch1-introduction.html#marginal",
+          "prompt": "<p>A stand in Sidi Bou Saïd sells bambalouni (Tunisian doughnuts). Each afternoon the owner decides how many trays to fry. The table gives his <b>total</b> revenue and his <b>total</b> cost, in TND, for each number of trays.</p><div class='table-wrap'><table><thead><tr><th>Trays fried</th><th class='n'>1</th><th class='n'>2</th><th class='n'>3</th><th class='n'>4</th><th class='n'>5</th><th class='n'>6</th></tr></thead><tbody><tr><td>Total revenue (TND)</td><td class='n'>80</td><td class='n'>150</td><td class='n'>210</td><td class='n'>260</td><td class='n'>290</td><td class='n'>300</td></tr><tr><td>Total cost (TND)</td><td class='n'>20</td><td class='n'>50</td><td class='n'>90</td><td class='n'>135</td><td class='n'>200</td><td class='n'>280</td></tr></tbody></table></div><p>To maximize his net benefit, how many trays should he fry?</p>",
+          "options": [
+            "3 trays",
+            "4 trays",
+            "5 trays, because the 5th tray still brings in 30 TND of extra revenue",
+            "6 trays, because total revenue (300 TND) is still above total cost (280 TND)"
+          ],
+          "answer": 1,
+          "explain": "First turn the totals into <b>marginal</b> values: MB = the change in total revenue, MC = the change in total cost. MB: 80, 70, 60, 50, 30, 10. MC: 20, 30, 40, 45, 65, 80. MB − MC: +60, +40, +20, +5, −35, −70. Fry every tray whose MB is greater than its MC: trays 1 to 4. The 5th tray costs 65 TND but brings in only 30 TND, so stop at <b>4 trays</b>: <b>(b)</b>. Check with the totals: net benefit = 60, 100, 120, <b>125</b>, 90, 20 TND, the highest at 4 trays. <b>(a)</b> stops one tray too early: the 4th tray adds only a little, but it still adds something (MB 50 TND > MC 45 TND, so +5 TND), and the rule is to continue as long as MB > MC. <b>(c)</b> a positive MB is not enough; the 5th tray’s MB (30 TND) is below its MC (65 TND). <b>(d)</b> compares totals instead of marginal values: the stand still earns more than it spends at 6 trays, but the 5th and 6th trays each lose money, so the net benefit falls from 125 to 20 TND."
+        },
+        {
+          "id": "q3",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Micro vs macro",
+          "review": "../microeconomics/ch1-introduction.html#micromacro",
+          "prompt": "<p>Which of the following questions belongs to <b>macro</b>economics?</p>",
+          "options": [
+            "How will a new tax on cigarettes change the number of packs sold in Tunisia?",
+            "How does Tunisair decide the price of its Tunis–Paris tickets?",
+            "Why are software developers in Tunis paid more than café waiters?",
+            "Why does Tunisia’s general price level rise faster in some years than in others?"
+          ],
+          "answer": 3,
+          "explain": "Macroeconomics studies the economy <b>as a whole</b>: total output (GDP), the general price level (inflation), total employment, growth. The general price level of the whole country is a macro variable, so <b>(d)</b>. <b>(a)</b> is the trap: it concerns the whole country, but only <b>one market</b> (cigarettes), so it is micro, like the textbook’s question on how the price of wine affects the quantity of wine bought. <b>(b)</b> is one firm’s pricing decision: micro, even for a big company. <b>(c)</b> compares wages in two labor markets: micro."
+        },
+        {
+          "id": "q4",
+          "type": "mcq",
+          "points": 1,
+          "topic": "PPC & budget line",
+          "review": "../microeconomics/ch1-introduction.html#ppc",
+          "prompt": "<p>Ines has a monthly budget of 96 TND for gym sessions and paperback novels. A gym session costs 12 TND and a novel costs 8 TND. Then the gym raises its price to 16 TND per session; her budget and the price of novels do not change. Which statement is correct?</p>",
+          "options": [
+            "A session now costs 2 novels instead of 1.5, and the most novels she can buy is still 12",
+            "A session now costs 2 novels instead of 1.5, and her budget line shifts inward, parallel to the old one",
+            "A session still costs 1.5 novels, because her income of 96 TND has not changed",
+            "A session now costs 0.5 novel instead of 0.67, so sessions have become relatively cheaper"
+          ],
+          "answer": 0,
+          "explain": "On a budget line, the opportunity cost of one good = its price ÷ the price of the other good. Before: 12 ÷ 8 = 1.5 novels per session. After: 16 ÷ 8 = <b>2 novels</b>. End points: novels only = 96 ÷ 8 = 12, before and after (unchanged); sessions only = 96 ÷ 12 = 8 before and 96 ÷ 16 = 6 after. So the line <b>pivots</b> inward on the sessions axis and keeps the same point on the novels axis: <b>(a)</b>. <b>(b)</b> a parallel inward shift happens when income falls (or when both prices rise in the same proportion); here only one price changed, so the slope changes. <b>(c)</b> the opportunity cost depends on relative prices, not on income. <b>(d)</b> inverts the ratio: 8 ÷ 16 = 0.5 is the cost of one novel in sessions; sessions became relatively more expensive, not cheaper."
+        },
+        {
+          "id": "q5",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Market system features",
+          "review": "../microeconomics/ch2-market-system.html#features-1",
+          "prompt": "<p>In an oasis near Kebili, Salah rents a plot of land each year, and the landowner can take it back at any time without paying him anything. A young date palm gives its first good harvest only after about five years. Salah never plants new palms. Which feature of the market system best explains his decision?</p>",
+          "options": [
+            "Competition: there are so many date farmers that the price of dates is too low to make planting worthwhile",
+            "Secure property rights: he may not keep the future harvest, so he has no reason to invest",
+            "Self-interest: in a market system every producer thinks only about this year’s sales",
+            "Money: dates are often bartered in the oases, so he could not sell the future harvest for dinars"
+          ],
+          "answer": 1,
+          "explain": "Property rights encourage investment: the textbook says nobody would “clear land for farming” if someone else could take the property. Salah would pay the cost of planting today, but the landowner could take back the plot (and the palms) before the first harvest, so the reward is not secure: <b>(b)</b>. With a long contract or his own land title, planting would pay. <b>(a)</b> competition affects the price of dates, but the problem in the story is who keeps the harvest. <b>(c)</b> self-interest is exactly what would make him plant if he were sure to keep the dates; it does not mean thinking only about this year. <b>(d)</b> nothing in the story says money is missing: Tunisian dates are sold for dinars and exported."
+        },
+        {
+          "id": "q6",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Least-cost production",
+          "review": "../microeconomics/ch2-market-system.html#how",
+          "prompt": "<p>A workshop in Sfax makes olive-wood kitchen utensils worth <b>300 TND per day</b>. It can use three techniques, which all produce exactly the same daily output. Resource prices are in TND per unit per day.</p><div class='table-wrap'><table><thead><tr><th>Resource</th><th class='n'>Price</th><th class='n'>Technique 1 (units)</th><th class='n'>Technique 2 (units)</th><th class='n'>Technique 3 (units)</th></tr></thead><tbody><tr><td>Labor</td><td class='n'>20</td><td class='n'>8</td><td class='n'>4</td><td class='n'>2</td></tr><tr><td>Land</td><td class='n'>30</td><td class='n'>2</td><td class='n'>2</td><td class='n'>3</td></tr><tr><td>Capital</td><td class='n'>50</td><td class='n'>1</td><td class='n'>3</td><td class='n'>4</td></tr><tr><td>Entrepreneurial ability</td><td class='n'>40</td><td class='n'>1</td><td class='n'>1</td><td class='n'>1</td></tr></tbody></table></div><p>The rental price of capital falls from 50 to 30 TND per unit; the other prices do not change. Which technique will the workshop now use, and what is its daily economic profit?</p>",
+          "options": [
+            "Technique 1, which was already the least-cost technique: a loss of 10 TND",
+            "Technique 3, which uses the most capital: an economic profit of 10 TND",
+            "Technique 2: an economic profit of 30 TND",
+            "Technique 2: an economic profit of 70 TND"
+          ],
+          "answer": 2,
+          "explain": "Recompute every technique at the NEW prices (units × price, then add). T1 = 8 × 20 + 2 × 30 + 1 × 30 + 1 × 40 = 160 + 60 + 30 + 40 = 290 TND. T2 = 4 × 20 + 2 × 30 + 3 × 30 + 1 × 40 = 80 + 60 + 90 + 40 = 270 TND. T3 = 2 × 20 + 3 × 30 + 4 × 30 + 1 × 40 = 40 + 90 + 120 + 40 = 290 TND. Competition forces the least-cost technique, T2, and economic profit = 300 − 270 = <b>30 TND</b>: <b>(c)</b>. <b>(a)</b> T1 was the cheapest at the old prices (310 TND, a loss of 10 TND), but when a resource price changes you must recompute every technique; at the new prices T1 costs 290 TND. <b>(b)</b> using the most capital is not the goal: T3 still costs 290 TND, so its profit is only 10 TND. <b>(d)</b> forgets the 40 TND for entrepreneurial ability: economic cost includes the normal payment to the entrepreneur. Lesson: when capital becomes cheaper, firms move toward techniques that use more of it (T1 → T2), and an activity that was making a loss now makes an economic profit, so the industry will expand."
+        },
+        {
+          "id": "q7",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Invisible hand & command failure",
+          "review": "../microeconomics/ch2-market-system.html#command-demise",
+          "prompt": "<p>Three situations in a command economy:</p><p><b>X.</b> A tractor factory stops for three weeks: the steel mill could not deliver, because the iron mine that supplies it missed its own target.<br><b>Y.</b> The engineers of a state radio factory have no reason to design a better radio: promotions depend on climbing the Party hierarchy, not on profit.<br><b>Z.</b> Planners measure the success of a state bicycle factory only by the <i>number</i> of bicycles it makes, so it makes only small children’s bicycles.</p><p>According to the textbook, which problem of central planning does each situation illustrate?</p>",
+          "options": [
+            "X: coordination · Y: incentive · Z: coordination",
+            "X: coordination · Y: incentive · Z: incentive",
+            "X: incentive · Y: coordination · Z: coordination",
+            "X: incentive · Y: incentive · Z: coordination"
+          ],
+          "answer": 0,
+          "explain": "<b>X</b> is the chain reaction of the <b>coordination problem</b>: the output of one industry is the input of another, so one missed target (iron) spreads to steel and then to tractors. <b>Y</b> is the <b>incentive problem</b>: with no profit motive and no reward for innovation, people got ahead by climbing the Communist Party hierarchy, not by making better products. <b>Z</b> is the nails story: the textbook presents the lack of a reliable <b>success indicator</b> (quantity targets instead of profit) as the second <b>coordination</b> difficulty. A target in number of bicycles is reached most easily with small children’s bicycles, so quality and variety are sacrificed. So <b>(a)</b>. <b>(b)</b> is the most common confusion: the target story looks like a story about incentives, but the textbook classifies it under coordination (planners had no good way to measure success). In a market, profit is the success indicator, and it depends on demand, efficiency and quality."
+        },
+        {
+          "id": "q8",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Circular flow",
+          "review": "../microeconomics/ch2-market-system.html#circular-flow",
+          "prompt": "<p>Sami, an ISB graduate, works for an audit firm in Tunis. (1) The firm pays him 1,400 TND a month. (2) Sami pays 60 TND a month to an internet provider. (3) Sami gives the firm 160 hours of work a month. (4) The provider gives Sami a month of internet service. In the textbook’s circular flow model, which statement is correct?</p>",
+          "options": [
+            "(1) and (2) both take place in the product market, because both are payments of money",
+            "(3) and (4) are money flows, and they go clockwise in the diagram",
+            "(2) is a cost for the internet provider, and (1) is revenue for the audit firm",
+            "(1) and (3) take place in the resource market: (1) is a money flow and (3) a real flow"
+          ],
+          "answer": 3,
+          "explain": "Sami sells a resource, his <b>labor</b> (flow 3), to a business in the <b>resource market</b>, and the business pays for it (flow 1): a real flow and the money flow that pays for it, in opposite directions: <b>(d)</b>. In the product market, Sami receives a service (flow 4, real) and pays for it (flow 2, money: a consumption expenditure). <b>(a)</b> money is paid in both markets; a wage is the price of a resource, so it belongs to the resource market. <b>(b)</b> (3) and (4) are real flows (labor and a service), and real flows go counterclockwise; money flows go clockwise. <b>(c)</b> reverses the names: Sami’s 60 TND is <b>revenue</b> for the provider, and his 1,400 TND salary is a <b>cost</b> for the audit firm (and income for his household)."
+        },
+        {
+          "id": "q9",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Shift vs movement",
+          "review": "../microeconomics/ch3-demand-supply.html#demand-vs-qd",
+          "prompt": "<p>A cold wave destroys part of the tomato crop in Cap Bon. The price of fresh tomatoes jumps from 1.500 to 3.000 TND per kg, and families buy fewer fresh tomatoes. They also buy more canned tomato paste, whose price does not change. Which description uses the correct vocabulary?</p>",
+          "options": [
+            "Supply of tomatoes ↓ · demand for tomatoes ↓ · quantity of tomato paste demanded ↑",
+            "Supply of tomatoes ↓ · quantity of tomatoes demanded ↓ · demand for tomato paste ↑",
+            "Quantity of tomatoes supplied ↓ · demand for tomatoes ↓ · demand for tomato paste ↑",
+            "Supply of tomatoes ↓ · quantity of tomatoes demanded ↓ · quantity of tomato paste demanded ↑"
+          ],
+          "answer": 1,
+          "explain": "Take the three changes one by one. (1) <b>Tomatoes, sellers’ side</b>: the cold wave changes what farmers can offer at every price, so <b>supply decreases</b> (shift left); it is not a movement along the supply curve. (2) <b>Tomatoes, buyers’ side</b>: tastes, incomes and the other determinants did not change; buyers only react to the higher price, so the <b>quantity demanded decreases</b> (a movement up along the same demand curve). (3) <b>Tomato paste</b>: its own price did not change; a <b>substitute</b> (fresh tomatoes) became more expensive, so families want more paste at every price: the <b>demand for paste increases</b> (shift right). So <b>(b)</b>. <b>(a)</b> and <b>(c)</b> say “the demand for tomatoes decreased”: the classic error, because the price of tomatoes cannot shift the demand for tomatoes. <b>(c)</b> also treats the cold wave as a movement along the supply curve. <b>(d)</b> treats the paste as a movement, but a movement needs a change in the paste’s OWN price."
+        },
+        {
+          "id": "q10",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Demand & its determinants",
+          "review": "../microeconomics/ch3-demand-supply.html#demand-shifters",
+          "prompt": "<p>Which event would shift the <b>demand</b> curve for Délice yogurt to the <b>left</b>?</p>",
+          "options": [
+            "The price of Délice yogurt rises by 100 millimes",
+            "Shoppers expect Délice to raise its prices next month",
+            "The price of Vitalait yogurt, a close substitute, falls",
+            "Household incomes rise, and yogurt is a normal good"
+          ],
+          "answer": 2,
+          "explain": "A shift to the left (a decrease in demand) needs a change in a <b>determinant</b> that makes buyers want less at every price. Vitalait and Délice are substitutes: when Vitalait becomes cheaper, some shoppers switch to it, so the demand for Délice decreases: <b>(c)</b> (substitutes: price of one ↓ → demand for the other ↓, the arrows go the same way). <b>(a)</b> is Délice’s own price: a movement up along its demand curve (the quantity demanded falls), not a shift. <b>(b)</b> expected higher prices make shoppers buy now, so current demand <b>increases</b> (shift right). <b>(d)</b> for a normal good, higher incomes <b>increase</b> demand."
+        },
+        {
+          "id": "q11",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Changes in equilibrium",
+          "review": "../microeconomics/ch3-demand-supply.html#changes",
+          "prompt": "<p>An animal disease kills a large part of Tunisia’s sheep. For most families, chicken is a substitute for lamb. Other things equal, what happens in the markets for lamb and for chicken?</p>",
+          "options": [
+            "Lamb: price ↑, quantity ↓ · Chicken: supply ↑, so its price falls and its quantity rises",
+            "Lamb: demand ↓, so price and quantity fall · Chicken: demand ↑, so price and quantity rise",
+            "Lamb: price ↑, quantity ↓ · Chicken: quantity demanded rises along its curve, price unchanged",
+            "Lamb: price ↑, quantity ↓ · Chicken: demand ↑, so its price and its quantity rise"
+          ],
+          "answer": 3,
+          "explain": "Step 1, lamb: the disease reduces what sellers can offer at every price, so the <b>supply of lamb decreases</b> (shift left); along the unchanged demand curve, the price rises and the quantity falls. Step 2, chicken: lamb is now more expensive and chicken is a substitute, so families want more chicken at every price: the <b>demand for chicken increases</b> (shift right), so its price and its quantity both rise (Figure 3.7a). So <b>(d)</b>. <b>(a)</b> nothing changed for chicken producers: the change is on the buyers’ side. <b>(b)</b> the disease hits sellers, not buyers; it is a decrease in supply, not in demand. <b>(c)</b> the price of chicken did not change first, so this is not a movement along the curve: the demand curve shifts, and the new equilibrium has a higher price. One shock that spreads to a second market is the logic of the textbook’s foot-and-mouth disease question (hides → leather goods)."
+        },
+        {
+          "id": "q12",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Total-revenue test",
+          "review": "../microeconomics/ch6-elasticity.html#tr-test",
+          "prompt": "<p><b>Case 1.</b> One of twelve cafés on the same street in Sousse raises the price of its espresso from 2.000 to 2.500 TND; its daily sales fall from 240 to 180 cups.<br><b>Case 2.</b> The price of household electricity rises by 10%, and the total amount households spend on electricity rises by almost 8%.</p><p>Using the total-revenue test, demand in each case is:</p>",
+          "options": [
+            "Case 1: elastic · Case 2: inelastic",
+            "Case 1: elastic · Case 2: elastic",
+            "Case 1: inelastic · Case 2: inelastic",
+            "Case 1: inelastic · Case 2: elastic"
+          ],
+          "answer": 0,
+          "explain": "Total-revenue test: price and TR move in <b>opposite</b> directions → elastic; in the <b>same</b> direction → inelastic. Case 1: TR before = 2.000 × 240 = 480 TND; TR after = 2.500 × 180 = 450 TND. The price rose and TR fell: <b>elastic</b> (midpoint check: (60 ÷ 210) ÷ (0.5 ÷ 2.25) = 28.6% ÷ 22.2% ≈ 1.29 > 1). Customers can walk to one of the eleven other cafés: many close substitutes. Case 2: the price rose and spending (= TR) rose too: <b>inelastic</b>. Electricity is a necessity with no easy substitute (Table 6.3: about 0.13). So <b>(a)</b>. <b>(c)</b> and <b>(d)</b> get case 1 wrong: a price rise followed by a fall in revenue is the sign of elastic demand. <b>(b)</b> and <b>(d)</b> get case 2 wrong: when spending rises with the price, buyers have cut their purchases only a little, which is inelastic demand."
+        },
+        {
+          "id": "q13",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Price elasticity of supply",
+          "review": "../microeconomics/ch6-elasticity.html#supply",
+          "prompt": "<p>New direct flights from Europe cause a large and lasting increase in the demand for hotel rooms in Djerba. Compare the rise in the price of a room in three periods: <b>the next week</b> (no extra room can be offered), <b>one year later</b> (hotels reopen closed wings and hire more staff) and <b>ten years later</b> (new hotels have been built). Which statement is correct?</p>",
+          "options": [
+            "Supply is perfectly elastic the next week, so prices do not move at first; they rise most after ten years",
+            "The price rises by the same amount in the three periods, because the demand increase is the same",
+            "The price rises most the next week (vertical supply) and least after ten years (most elastic supply)",
+            "The price rises most after ten years, because hotel owners have had more time to raise their room prices"
+          ],
+          "answer": 2,
+          "explain": "The main determinant of the price elasticity of supply is <b>time</b>. Next week = the <b>market period</b>: the number of rooms is fixed, supply is perfectly inelastic (vertical), so the whole demand increase shows up as a higher price. One year later = the <b>short run</b>: existing hotels use their capacity more intensively, so some extra rooms are offered and the price rises less. Ten years later = the <b>long run</b>: new hotels have entered, supply is the most elastic, so the price rises least and the number of rooms rises most. Pm > Ps > Pl: <b>(c)</b> (Figure 6.4). <b>(a)</b> swaps the extremes: a fixed quantity means a vertical (perfectly inelastic) supply curve, not a horizontal one. <b>(b)</b> the same demand increase has different effects because the elasticity of supply differs between the periods. <b>(d)</b> with more time, sellers offer more rooms, and this extra supply limits the price rise."
+        },
+        {
+          "id": "q14",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Cross & income elasticity",
+          "review": "../microeconomics/ch6-elasticity.html#cross-income",
+          "prompt": "<p>(1) The price of a 1.5-litre bottle of Safia water rises by 10%, and the quantity of Sabrine water demanded rises by 5%.<br>(2) Average incomes in a town rise by 8%, and purchases of second-hand smartphones fall by 6%.</p><p>Which line gives the correct coefficients and their meaning?</p>",
+          "options": [
+            "Cross elasticity −0.5: complements · Income elasticity +0.75: normal good",
+            "Cross elasticity +0.5: substitutes · Income elasticity −0.75: inferior good",
+            "Cross elasticity +2.0: substitutes · Income elasticity −1.33: inferior good",
+            "Cross elasticity +0.5: complements · Income elasticity −0.75: normal good"
+          ],
+          "answer": 1,
+          "explain": "Cross elasticity = % change in the quantity of X ÷ % change in the price of Y = (+5%) ÷ (+10%) = <b>+0.5</b>. Positive → <b>substitutes</b> (some buyers switch from Safia to Sabrine). Income elasticity = % change in quantity ÷ % change in income = (−6%) ÷ (+8%) = <b>−0.75</b>. Negative → <b>inferior good</b> (with more income, people buy new phones instead). So <b>(b)</b>. For these two elasticities the <b>sign is the answer</b>: never drop it as you do for the price elasticity of demand. <b>(a)</b> reverses both signs. <b>(c)</b> divides the wrong way round (10 ÷ 5 and 8 ÷ −6): the change in quantity always goes on top. <b>(d)</b> has the right numbers but the wrong meanings: + means substitutes, − means an inferior good."
+        }
+      ]
+    },
+    {
+      "title": "Part II · True or false with justification (8 pts)",
+      "intro": "True or False = 1 pt · justification in 2–3 sentences = 1 pt",
+      "questions": [
+        {
+          "id": "q15",
+          "type": "tf",
+          "points": 1,
+          "topic": "Positive vs normative",
+          "review": "../microeconomics/ch1-introduction.html#positive",
+          "prompt": "<p>The statement “Removing the subsidy on bread would reduce bread waste in Tunisia” is a <b>positive</b> statement, even though the bread subsidy is a controversial political question.</p>",
+          "answer": true,
+          "justify": {
+            "points": 1,
+            "model": "True. A <b>positive</b> statement says what is, or what would happen, and can be tested with evidence; a <b>normative</b> statement contains a value judgement (should, ought to, fair, good, bad…). This sentence predicts a measurable effect (the quantity of bread wasted would fall) and contains no value word, so it is <b>positive</b>, even if the topic is controversial, and even if the prediction turned out to be wrong. “The bread subsidy should be removed” would be normative.",
+            "rubric": [
+              {
+                "text": "Defines the two kinds: positive = about what is or would be, testable with data; normative = a value judgement (should, fair, too…)",
+                "points": 0.5
+              },
+              {
+                "text": "Applies it: the sentence predicts a measurable effect and has no value word, so it is positive; being controversial (or possibly false) does not make a statement normative",
+                "points": 0.5
+              }
+            ]
+          },
+          "explain": "True. Ask: “Could data check it?” Data on bread waste before and after a change in the subsidy could test this prediction, so it is <b>positive</b>. The trap is to answer False because the policy is controversial: a statement does not become normative because people disagree about the policy or because the topic is political. Look for value judgements (should, ought to, fair, too high, harm). Remember the Chapter 1 rule: even a false statement can be positive."
+        },
+        {
+          "id": "q16",
+          "type": "tf",
+          "points": 1,
+          "topic": "Five fundamental questions",
+          "review": "../microeconomics/ch2-market-system.html#what",
+          "prompt": "<p>In a market system, it is the entrepreneurs who decide which goods are produced, because they own the firms and choose what to make; consumers can only choose among the products that firms decide to offer.</p>",
+          "answer": false,
+          "justify": {
+            "points": 1,
+            "model": "False. Entrepreneurs make the decisions (they are “at the helm”), but <b>consumers are sovereign</b>: through their dollar (dinar) votes they decide which products are profitable. A good is produced only if it can be produced at a <b>continuing profit</b>; a product that consumers do not buy brings losses, so the firm drops it or leaves the industry (McDonald’s “McMisses”, such as the Arch Deluxe). So consumers, not owners, finally decide what is produced.",
+            "rubric": [
+              {
+                "text": "Consumer sovereignty: consumers decide what is produced through their spending (dollar or dinar votes)",
+                "points": 0.5
+              },
+              {
+                "text": "Profit test: only goods that earn a continuing profit are produced; products that consumers do not buy bring losses and are dropped (e.g. a McMiss), so entrepreneurs must follow consumers",
+                "points": 0.5
+              }
+            ]
+          },
+          "explain": "False. The market answers “What will be produced?” with the <b>profit test</b>, and profits depend on consumers’ spending: this is <b>consumer sovereignty</b>. Entrepreneurs steer the firm, but a firm that ignores consumers’ dinar votes makes losses and finally disappears. The trap is to confuse who <i>makes</i> the decisions (entrepreneurs) with who <i>commands</i> them (consumers)."
+        },
+        {
+          "id": "q17",
+          "type": "tf",
+          "points": 1,
+          "topic": "Supply & its determinants",
+          "review": "../microeconomics/ch3-demand-supply.html#supply-shifters",
+          "prompt": "<p>The date harvest is already in the stores of the exporters of Tozeur, and they can keep their dates in cold storage and sell them later. This month, (1) the price of the boxes and the transport they use to pack and ship dates falls, and (2) they expect the price of dates to be much higher next month. Event (1) increases <b>today’s</b> supply of dates, but event (2) decreases it.</p>",
+          "answer": true,
+          "justify": {
+            "points": 1,
+            "model": "True. (1) Cheaper boxes and transport are lower <b>resource prices</b>: each kilo costs less to supply, so supply <b>increases</b> (shift right). (2) <b>Producer expectations</b>: exporters who can store their dates and expect a higher price next month keep part of them in cold storage to sell later, so today’s supply <b>decreases</b> (shift left). The two events push today’s supply in opposite directions; the net effect on today’s supply depends on which effect is stronger.",
+            "rubric": [
+              {
+                "text": "(1) Cheaper boxes and transport = lower resource prices → lower costs → supply increases (shift right)",
+                "points": 0.5
+              },
+              {
+                "text": "(2) Expected higher future price → sellers who can store hold back dates to sell them later → today’s supply decreases (shift left)",
+                "points": 0.5
+              }
+            ]
+          },
+          "explain": "True. Six determinants shift supply; here two of them work against each other. Lower resource prices increase supply. An expected price rise, for a good that can be stored, makes sellers hold back today (the textbook’s wheat and logs examples, or olive oil kept in tanks), so today’s supply decreases. The trap is the reasoning “a higher price is good news for sellers, so they sell more now” (answering False): the higher price is expected <i>next month</i>, so they sell more next month and less today. (A factory that can add a shift may produce more at once, but here the harvest is already picked: the only choice is to sell now or later.)"
+        },
+        {
+          "id": "q18",
+          "type": "tf",
+          "points": 1,
+          "topic": "Price elasticity of demand",
+          "review": "../microeconomics/ch6-elasticity.html#ped",
+          "prompt": "<p>The weekly demand for entry tickets to a water park in Hammamet is a straight line: 2,000 tickets at 70 TND, 3,000 at 60 TND, 6,000 at 30 TND and 7,000 at 20 TND. The owner notes that cutting the price from 70 to 60 TND raised his total revenue. He concludes: “The slope is the same all along a straight line, so demand is also elastic between 30 and 20 TND; cutting the price from 30 to 20 TND would also raise my total revenue.”</p><p>The owner’s conclusion is correct.</p>",
+          "answer": false,
+          "justify": {
+            "points": 1,
+            "model": "False. Slope is not elasticity: elasticity uses <b>percentage</b> changes, and along a straight line the same changes (10 TND, 1,000 tickets) are different percentages at different points. Demand is elastic at high prices and inelastic at low prices. TR at 30 TND = 30 × 6,000 = 180,000 TND and at 20 TND = 20 × 7,000 = 140,000 TND: this price cut would <b>lower</b> TR (midpoint Ed = (1,000 ÷ 6,500) ÷ (10 ÷ 25) ≈ 0.38 < 1, inelastic), whereas between 70 and 60 TND Ed ≈ 2.6 (elastic: TR rose from 140,000 to 180,000 TND).",
+            "rubric": [
+              {
+                "text": "Slope ≠ elasticity: along a straight-line demand curve the same absolute changes are different % changes, so demand is elastic at high prices and inelastic at low prices",
+                "points": 0.5
+              },
+              {
+                "text": "Applies it: between 30 and 20 TND, TR falls from 180,000 to 140,000 TND (or Ed ≈ 0.38 < 1), so demand is inelastic there and the price cut lowers TR",
+                "points": 0.5
+              }
+            ]
+          },
+          "explain": "False. This is the textbook’s movie-ticket lesson (Table 6.1): one straight line, many elasticities. High-price end (70 → 60 TND): %ΔQ = 1,000 ÷ 2,500 = 40%, %ΔP = 10 ÷ 65 = 15.4%, Ed ≈ 2.6: elastic, and the price cut raised TR (140,000 → 180,000 TND). Low-price end (30 → 20 TND): %ΔQ = 1,000 ÷ 6,500 = 15.4%, %ΔP = 10 ÷ 25 = 40%, Ed ≈ 0.38: inelastic, so the price cut lowers TR (180,000 → 140,000 TND). TR is highest in the middle of the line, where Ed = 1. The trap is “constant slope = constant elasticity” (or “steep = inelastic”)."
+        }
+      ]
+    },
+    {
+      "title": "Part III · Problems (15 pts)",
+      "intro": "Do your working on paper, then type only the numbers",
+      "questions": [
+        {
+          "id": "q19",
+          "type": "problem",
+          "topic": "Market equilibrium",
+          "review": "../microeconomics/ch3-demand-supply.html#equilibrium",
+          "prompt": "<p><b>Problem 1 · The potato market in Greater Tunis.</b> The monthly market for potatoes follows these equations (P in TND per kg, Q in <b>thousands of tonnes per month</b>; the figures are illustrative):</p><p style='text-align:center'><b>Demand: Qd = 100 − 20P</b> &nbsp;&nbsp;·&nbsp;&nbsp; <b>Supply: Qs = 30P − 20</b></p>",
+          "parts": [
+            {
+              "type": "grid",
+              "points": 1.5,
+              "prompt": "Complete the table for the two prices: quantity demanded, quantity supplied, and the surplus (+) or shortage (−), all in thousands of tonnes per month.",
+              "columns": [
+                "Quantity demanded",
+                "Quantity supplied",
+                "Surplus (+) or shortage (−)"
+              ],
+              "rows": [
+                {
+                  "label": "1.600 TND per kg",
+                  "cells": [
+                    68,
+                    28,
+                    -40
+                  ]
+                },
+                {
+                  "label": "3.200 TND per kg",
+                  "cells": [
+                    36,
+                    76,
+                    40
+                  ]
+                }
+              ],
+              "hint": "Type a shortage as a negative number and a surplus as a positive number (for example −5 for a shortage of 5 thousand tonnes).",
+              "explain": "Put each price into both equations. At 1.600 TND: Qd = 100 − 20 × 1.6 = 100 − 32 = 68; Qs = 30 × 1.6 − 20 = 48 − 20 = 28; Qs − Qd = 28 − 68 = −40, a <b>shortage</b> of 40 thousand tonnes. At 3.200 TND: Qd = 100 − 64 = 36; Qs = 96 − 20 = 76; Qs − Qd = 76 − 36 = +40, a <b>surplus</b> of 40 thousand tonnes. Below the equilibrium price there is a shortage and above it a surplus. Trap: computing Qd − Qs reverses both signs."
+            },
+            {
+              "type": "numeric",
+              "points": 0.5,
+              "prompt": "Find the equilibrium price (TND per kg).",
+              "answer": 2.4,
+              "unit": "TND",
+              "tol": 0.005,
+              "explain": "At equilibrium Qd = Qs: 100 − 20P = 30P − 20 → 100 + 20 = 30P + 20P → 120 = 50P → P = <b>2.4 TND per kg</b> (2.400 TND). Check: Qd = 100 − 48 = 52 and Qs = 72 − 20 = 52 ✓. Common error: moving −20 without changing its sign (100 − 20 = 50P) gives P = 1.6, a price at which part (a) shows a shortage."
+            },
+            {
+              "type": "numeric",
+              "points": 0.5,
+              "prompt": "Find the equilibrium quantity (thousands of tonnes per month).",
+              "answer": 52,
+              "unit": "thousand tonnes",
+              "tol": 0.05,
+              "alsoAccept": [
+                52000
+              ],
+              "explain": "Put P = 2.4 into either equation: Qd = 100 − 20 × 2.4 = 52 and Qs = 30 × 2.4 − 20 = 52: <b>52 thousand tonnes per month</b>. Always check with the second equation."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "topic": "Price ceilings & floors",
+              "review": "../microeconomics/ch3-demand-supply.html#gov-prices",
+              "prompt": "The Ministry of Commerce sets a <b>maximum price of 2.000 TND per kg</b>. How large is the resulting shortage? (thousands of tonnes per month; give a positive number)",
+              "answer": 20,
+              "unit": "thousand tonnes",
+              "tol": 0.05,
+              "alsoAccept": [
+                20000,
+                -20
+              ],
+              "explain": "A ceiling matters only below the equilibrium price: 2.0 < 2.4, so it is binding. At 2.0 TND: Qd = 100 − 40 = 60 and Qs = 60 − 20 = 40, so the shortage = Qd − Qs = 60 − 40 = <b>20 thousand tonnes per month</b>. Traps: 60 or 40 alone (the shortage is the gap between the two quantities), and the idea that a lower legal price helps every buyer: only 40 thousand tonnes are offered, so some buyers get nothing."
+            },
+            {
+              "type": "mcq",
+              "points": 1,
+              "topic": "Price ceilings & floors",
+              "review": "../microeconomics/ch3-demand-supply.html#gov-prices",
+              "prompt": "What does the textbook predict at this maximum price?",
+              "options": [
+                "Buyers bid the price up to 2.400 TND, and the shortage disappears within a few weeks",
+                "The government must buy the unsold potatoes at 2.000 TND and store them",
+                "Nothing happens, because a maximum price matters only when it is above the equilibrium price",
+                "The shortage persists, with queues, favoritism and a black market above the legal price"
+              ],
+              "answer": 3,
+              "explain": "With a binding ceiling, the price is not allowed to rise to 2.400 TND, so the shortage is <b>persistent</b>. The price no longer rations the potatoes, so something else does: first-come-first-served queues, favoritism by sellers, perhaps ration coupons; and some buyers pay more than 2 TND illegally (a black market): <b>(d)</b>. <b>(a)</b> is what a free market would do, but prices above 2 TND are now illegal. <b>(b)</b> describes a price <i>floor</i>, which creates a surplus. <b>(c)</b> reverses the rule: a ceiling matters only when it is set <b>below</b> the equilibrium price (a ceiling of 2.600 TND, for example, would change nothing)."
+            },
+            {
+              "type": "mcq",
+              "points": 1,
+              "topic": "Changes in equilibrium",
+              "review": "../microeconomics/ch3-demand-supply.html#changes",
+              "prompt": "Back to the free market (no maximum price). Ramadan begins, so families want <b>10 thousand tonnes more</b> at every price, and a record harvest arrives, so farmers offer <b>20 thousand tonnes more</b> at every price. <b>Before computing anything</b>, which result can you predict for sure?",
+              "options": [
+                "The quantity rises for sure; the price could rise, fall or stay the same",
+                "The price and the quantity both rise for sure, because demand increased",
+                "The price falls for sure; the quantity could rise, fall or stay the same",
+                "The price rises for sure; the quantity could rise, fall or stay the same"
+              ],
+              "answer": 0,
+              "explain": "Write the effect of each shift alone. Demand ↑: P ↑ and Q ↑. Supply ↑: P ↓ and Q ↑. Both shifts push the quantity up, so the <b>quantity surely rises</b>; they push the price in opposite directions, so the price is <b>indeterminate</b> (Table 3.3, case 3): <b>(a)</b>. <b>(b)</b> looks at demand only. <b>(c)</b> looks at supply only (and misses that the quantity is certain here). <b>(d)</b> is case 2 (demand ↑ with supply ↓). Only the sizes of the shifts can tell which way the price moves: see the next part."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "topic": "Changes in equilibrium",
+              "review": "../microeconomics/ch3-demand-supply.html#changes",
+              "prompt": "Write the two new equations (each curve shifts by the amount given, at every price), then find the new equilibrium price (TND per kg).",
+              "answer": 2.2,
+              "unit": "TND",
+              "tol": 0.005,
+              "explain": "New demand: Qd = 100 − 20P + 10 = <b>110 − 20P</b>. New supply: Qs = 30P − 20 + 20 = <b>30P</b>. Equilibrium: 110 − 20P = 30P → 110 = 50P → P = <b>2.2 TND per kg</b>. The price <b>falls</b> (from 2.4) even though demand rose, because the supply increase (+20) is bigger than the demand increase (+10). Traps: shifting only demand gives 110 − 20P = 30P − 20 → P = 2.6; shifting only supply gives 100 − 20P = 30P → P = 2.0; and “2.4, unchanged” wrongly assumes the two shifts cancel out."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "topic": "Changes in equilibrium",
+              "review": "../microeconomics/ch3-demand-supply.html#changes",
+              "prompt": "Find the new equilibrium quantity (thousands of tonnes per month).",
+              "answer": 66,
+              "unit": "thousand tonnes",
+              "tol": 0.05,
+              "alsoAccept": [
+                66000
+              ],
+              "explain": "Q = 30 × 2.2 = 66 (check: 110 − 20 × 2.2 = 110 − 44 = 66 ✓): <b>66 thousand tonnes per month</b>, up from 52, as predicted in part (f). Traps: 58 (demand shift only), 60 (supply shift only), and 82 = 52 + 10 + 20: adding both shifts to the old quantity ignores that the price changes, so buyers and sellers also move along the new curves."
+            }
+          ],
+          "explain": "Method summary. To find quantities, put the price into each equation; surplus (+) or shortage (−) = Qs − Qd. Equilibrium: set Qd = Qs, solve for P, then put P back into BOTH equations. A ceiling matters only below the equilibrium price and creates a persistent shortage (Qd − Qs) rationed by queues, favoritism or coupons, with black markets. A double shift: one result is certain and the other indeterminate; to know the indeterminate one, add each shift to its equation (a shift of +10 “at every price” adds 10 to the Q-equation) and solve again."
+        },
+        {
+          "id": "q20",
+          "type": "problem",
+          "topic": "Consumer & producer surplus",
+          "review": "../microeconomics/ch6-elasticity.html#surplus",
+          "prompt": "<p><b>Problem 2 · Pomegranates from Testour.</b> The weekly market for pomegranates in the Testour region follows exactly the equations <b>Qd = 64 − 4P</b> and <b>Qs = 6P − 6</b> (P in TND per kg, Q in <b>thousands of kg per week</b>; illustrative figures). Both curves are straight lines. Some points:</p><div class='table-wrap'><table><thead><tr><th class='n'>Price (TND per kg)</th><th class='n'>Quantity demanded</th><th class='n'>Quantity supplied</th></tr></thead><tbody><tr><td class='n'>1</td><td class='n'>60</td><td class='n'>0</td></tr><tr><td class='n'>4</td><td class='n'>48</td><td class='n'>18</td></tr><tr><td class='n'>7</td><td class='n'>36</td><td class='n'>36</td></tr><tr><td class='n'>10</td><td class='n'>24</td><td class='n'>54</td></tr><tr><td class='n'>13</td><td class='n'>12</td><td class='n'>72</td></tr><tr><td class='n'>16</td><td class='n'>0</td><td class='n'>90</td></tr></tbody></table></div><p>Type numbers only. Elasticities: give the absolute value, rounded to 2 decimals.</p>",
+          "parts": [
+            {
+              "type": "numeric",
+              "points": 0.5,
+              "topic": "Market equilibrium",
+              "review": "../microeconomics/ch3-demand-supply.html#equilibrium",
+              "prompt": "What is the equilibrium quantity? (thousands of kg per week)",
+              "answer": 36,
+              "unit": "thousand kg",
+              "tol": 0.05,
+              "alsoAccept": [
+                36000
+              ],
+              "explain": "At 7 TND, Qd = Qs = 36 (check: 64 − 4 × 7 = 36 and 6 × 7 − 6 = 36): the market clears at <b>7 TND per kg and 36 thousand kg per week</b>. At every other price in the table there is a shortage (below 7 TND) or a surplus (above 7 TND)."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "topic": "Price elasticity of demand",
+              "review": "../microeconomics/ch6-elasticity.html#ped",
+              "prompt": "To “help farmers”, the regional authority limits sales to <b>24 thousand kg per week</b> (a quota). Buyers then pay the price at which they want exactly 24 thousand kg: <b>10 TND</b>. Using the midpoint formula, compute the price elasticity of demand between 7 TND and 10 TND (absolute value, 2 decimals).",
+              "answer": 1.1333,
+              "tol": 0.012,
+              "explain": "Midpoint formula. %ΔQ = (36 − 24) ÷ ((36 + 24) ÷ 2) = 12 ÷ 30 = 40%. %ΔP = (10 − 7) ÷ ((7 + 10) ÷ 2) = 3 ÷ 8.5 = 35.3%. Ed = 40 ÷ 35.3 = <b>1.13</b> > 1: demand is <b>elastic</b> between 7 and 10 TND (1.14 is also accepted if you rounded the price change to 35%). Traps: the starting-value method gives 0.78 for the price rise (12 ÷ 36 and 3 ÷ 7) and 1.67 for a price fall (12 ÷ 24 and 3 ÷ 10), two different answers that do not even agree on the type of demand; 0.88 is the ratio upside down (always put the quantity change on top); 4 is the slope (12 thousand kg per 3 TND), not an elasticity."
+            },
+            {
+              "type": "mcq",
+              "points": 1,
+              "topic": "Total-revenue test",
+              "review": "../microeconomics/ch6-elasticity.html#tr-test",
+              "prompt": "How does the quota change farmers’ total revenue (= buyers’ total spending), and what does the total-revenue test say?",
+              "options": [
+                "TR rises from 252 to 360 thousand TND, so the quota helps farmers",
+                "TR rises from 252 to 540 thousand TND, because the price rises to 10 TND",
+                "TR falls from 252 to 240 thousand TND, as expected with elastic demand",
+                "TR falls from 252 to 240 thousand TND, as expected with inelastic demand"
+              ],
+              "answer": 2,
+              "explain": "TR before = 7 × 36 = 252 thousand TND per week; with the quota, TR = 10 × 24 = 240 thousand TND. The price rose and TR fell: opposite directions → <b>elastic</b> demand, which agrees with Ed = 1.13 > 1: <b>(c)</b>. <b>(d)</b> reverses the test: with inelastic demand, a price rise would RAISE TR. <b>(a)</b> multiplies the new price by the old quantity (10 × 36), but only 24 thousand kg are sold. <b>(b)</b> uses the quantity farmers would like to supply at 10 TND (54), but the quota allows only 24. So in this price range the quota lowers farmers’ revenue: cutting output raises revenue only when demand is inelastic."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "prompt": "Back to the free market. Compute the <b>consumer surplus</b> at the equilibrium (thousands of TND per week).",
+              "answer": 162,
+              "unit": "thousand TND",
+              "tol": 0.5,
+              "alsoAccept": [
+                162000
+              ],
+              "explain": "Consumer surplus = the triangle below the demand curve and above the price, out to the quantity bought. Height = the highest price on the demand line (16 TND, where Qd = 0) − the market price (7 TND) = 9 TND; base = 36 thousand kg. CS = ½ × 36 × 9 = <b>162 thousand TND per week</b>. Traps: 324 forgets the ½ (a rectangle instead of a triangle); 108 uses 13 TND, the last row with buyers, instead of 16 TND, where the demand line reaches zero."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "prompt": "Compute the <b>producer surplus</b> at the equilibrium (thousands of TND per week).",
+              "answer": 108,
+              "unit": "thousand TND",
+              "tol": 0.5,
+              "alsoAccept": [
+                108000
+              ],
+              "explain": "Producer surplus = the triangle above the supply curve and below the price. Height = 7 − 1 = 6 TND (the supply line starts at 1 TND, where Qs = 0); base = 36. PS = ½ × 36 × 6 = <b>108 thousand TND per week</b>. Traps: 216 forgets the ½; 126 measures the height from 0 instead of from 1 TND; 54 starts the triangle at 4 TND, the first row with sellers."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "prompt": "At the Testour pomegranate festival, five visitors each want one kilo, and they would pay at most 12, 10, 9, 7 and 5 TND for it. The price is 7 TND per kg. What is the total consumer surplus of these five visitors (TND)?",
+              "answer": 10,
+              "unit": "TND",
+              "tol": 0.05,
+              "explain": "Only visitors whose maximum price is at least 7 TND buy: those with 12, 10, 9 and 7 TND. CS = (12 − 7) + (10 − 7) + (9 − 7) + (7 − 7) = 5 + 3 + 2 + 0 = <b>10 TND</b>. The 5-TND visitor does not buy, so he adds <b>nothing</b> (not −2 TND): the trap answer 8 counts him with a negative surplus. 43 adds the maximum prices instead of the surpluses. The 7-TND visitor buys with zero surplus, like Betty in Table 6.5."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "topic": "Efficiency & deadweight loss",
+              "review": "../microeconomics/ch6-elasticity.html#efficiency",
+              "prompt": "Go back to the quota of 24 thousand kg per week. Compute the <b>deadweight loss</b> it creates (thousands of TND per week).",
+              "answer": 30,
+              "unit": "thousand TND",
+              "tol": 0.5,
+              "alsoAccept": [
+                30000
+              ],
+              "explain": "At Q = 24, the demand curve shows that buyers value the last kilo at 10 TND (marginal benefit), and the supply curve shows that sellers would accept 5 TND (marginal cost): 24 = 6P − 6 → P = 5. Every kilo between 24 and 36 thousand is worth more to a buyer than it costs to produce, but it is not produced. Deadweight loss = the triangle between the two curves from 24 to 36: ½ × (36 − 24) × (10 − 5) = ½ × 12 × 5 = <b>30 thousand TND per week</b>. Total surplus falls from 162 + 108 = 270 to 240 thousand TND, and nobody receives the lost 30. Traps: 60 forgets the ½; 18 (½ × 12 × 3, from 10 − 7) and 12 (½ × 12 × 2, from 7 − 5) use only part of the triangle’s height, which is the whole gap between demand and supply at Q = 24."
+            },
+            {
+              "type": "mcq",
+              "points": 1,
+              "topic": "Efficiency & deadweight loss",
+              "review": "../microeconomics/ch6-elasticity.html#efficiency",
+              "prompt": "Suppose instead that a subsidy leads farmers to produce and sell <b>42 thousand kg per week</b>. At that quantity, the supply curve shows a marginal cost of 8 TND and the demand curve a marginal benefit of 5.5 TND. Which statement is correct?",
+              "options": [
+                "Total surplus rises, because 6 thousand more kilos are sold each week and buyers pay a lower price",
+                "Total surplus falls: the kilos beyond 36 thousand cost more to produce than they are worth to buyers",
+                "Total surplus does not change, because what farmers lose, consumers gain: it is only a transfer",
+                "There is no deadweight loss, because a loss appears only when a market produces too little"
+              ],
+              "answer": 1,
+              "explain": "Beyond the equilibrium quantity (36), the supply curve (MC) lies above the demand curve (MB): at 42 thousand kg the last kilo costs 8 TND to produce but is worth only 5.5 TND to its buyer. Each of these extra kilos destroys value, so total surplus falls: a deadweight loss (the triangle bfg of Figure 6.8), here ½ × 6 × (8 − 5.5) = 7.5 thousand TND per week: <b>(b)</b>. <b>(a)</b> “more is always better” is the trap: buyers do get more, but the resources used cost more than the kilos are worth. <b>(c)</b> a deadweight loss is not a transfer: nobody receives it. <b>(d)</b> as the textbook says, “there can be too much as well as too little of a good thing”: both underproduction and overproduction create deadweight losses."
+            }
+          ],
+          "explain": "Method summary. Equilibrium: the row where Qd = Qs. Elasticity: always the midpoint formula (change ÷ average), quantity on top, absolute value. Total-revenue test: price and TR in opposite directions → elastic; same direction → inelastic; it tells you the type of demand, and the midpoint formula gives the number. Surpluses on straight lines are triangles: ½ × base (the quantity traded) × height (the gap between the price and the point where the curve meets the price axis). With individual buyers, add the surpluses of those who buy only. Deadweight loss: the triangle between demand (MB) and supply (MC) between the quantity produced and the equilibrium quantity, for too little or too much output."
+        }
+      ]
+    },
+    {
+      "title": "Part IV · Written answer (3 pts)",
+      "intro": "Marked with a rubric of 4 ideas · write about 10–12 lines",
+      "questions": [
+        {
+          "id": "q21",
+          "type": "text",
+          "topic": "Determinants & applications of elasticity",
+          "review": "../microeconomics/ch6-elasticity.html#determinants",
+          "prompt": "<p>Suppose that after a record olive harvest, Tunisian producers sold about 30% more olive oil than the year before, but the price of olive oil fell by about half, and many olive farmers said that their income had fallen (illustrative figures). Using supply and demand and the price elasticity of demand, <b>explain</b>:</p><p>(1) why the price fell; (2) why the farmers’ total revenue fell although they sold more oil; (3) which determinants make the demand for olive oil inelastic; (4) what olive farmers could do <b>as a group</b> to raise their revenue, and why one farmer alone has no reason to do it.</p>",
+          "rubric": [
+            {
+              "text": "(1) The record harvest increased supply (shift right); along the unchanged demand curve the price falls and the quantity demanded rises (a movement along the demand curve, not an increase in demand)",
+              "points": 0.75
+            },
+            {
+              "text": "(2) Demand is inelastic (Ed < 1): the quantity rose by a smaller percentage than the price fell, so by the total-revenue test price and TR move in the same direction and TR falls (e.g. 0.5 × 1.3 = 0.65 of the old revenue, about −35%)",
+              "points": 0.75
+            },
+            {
+              "text": "(3) Names and applies at least one determinant that makes demand inelastic: olive oil is a necessity or a habit in Tunisian cooking, it has few close substitutes for its main uses, and buyers need time to change their habits (short run)",
+              "points": 0.75
+            },
+            {
+              "text": "(4) As a group, farmers could cut the quantity sold (store part of the oil, sell less, export quotas…): with inelastic demand a smaller quantity at a much higher price brings more revenue; one farmer alone cannot change the market price, so he prefers to sell all he can (a cooperative or a state programme is needed)",
+              "points": 0.75
+            }
+          ],
+          "model": "<p><b>(1) Why the price fell.</b> The record harvest is an increase in <b>supply</b>: the supply curve shifts to the right. Demand did not change, so at the old price there is a surplus; sellers cut their prices, and buyers move down along the same demand curve: the price falls and the quantity demanded rises (an increase in quantity demanded, not in demand).</p><p><b>(2) Why revenue fell.</b> The demand for olive oil is <b>inelastic</b>: the quantity sold rose by only about 30% while the price fell by about half (with the midpoint formula, Ed ≈ 26% ÷ 67% ≈ 0.39 < 1). By the total-revenue test, with inelastic demand price and total revenue move in the <b>same direction</b>: the price fell, so TR fell. With the illustrative figures, TR = 0.5 × 1.3 = 0.65 of last year’s revenue, about 35% less, even though farmers sold more oil.</p><p><b>(3) Why demand is inelastic.</b> For Tunisian families olive oil is a <b>necessity</b> and a strong habit in daily cooking, so they do not double their consumption when it becomes cheaper; it has <b>few close substitutes</b> for its main uses (salads, traditional dishes); and in the <b>short run</b> buyers change their habits only slowly. This is the textbook’s “large crop yields” case: the demand for farm products is highly inelastic (about 0.20–0.25).</p><p><b>(4) What farmers could do.</b> As a group, farmers could <b>restrict the quantity</b> put on the market (store part of the oil, sell less, agree on export quotas). With inelastic demand, a smaller quantity sold at a much higher price brings more total revenue. But one farmer alone is too small to change the price: if he sells less, the price does not move and he just loses sales, so each farmer prefers to sell all he can. That is why such plans need a cooperative or a government programme (what is true for one farmer is not true for all of them: the fallacy of composition of Chapter 1).</p>",
+          "rows": 10
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../assets/exam.js"></script>
+</body>
+</html>

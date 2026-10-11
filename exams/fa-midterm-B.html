@@ -1,0 +1,1214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Midterm mock B · Financial Accounting I</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/exam.css">
+</head>
+<body class="fa">
+<div id="exam"></div>
+<script type="application/json" id="exam-data">
+{
+  "id": "fa-midterm-B",
+  "title": "Midterm mock B",
+  "shortTitle": "FA Midterm · B",
+  "course": "Financial Accounting I",
+  "courseClass": "fa",
+  "covers": "Chapters 1–3",
+  "duration": 90,
+  "hub": "index.html",
+  "description": "Simulates the Financial Accounting I midterm (week 8, 30% of your grade) on Chapters 1–3, with most of the weight on Chapter 3: concept questions, journal entries, a full year-end problem for one Tunisian company (adjusting entries, adjusted trial balance, financial statements), then a multi-step income statement and a classified statement of financial position for a second company.",
+  "instructions": [
+    "90 minutes. Calculator allowed (non-programmable). No notes, no textbook, no phone.",
+    "All amounts are in Tunisian dinars (TND). Type numbers without currency signs; thousands separators are optional.",
+    "Journal entries: choose each account from the list (it contains accounts you will not need), put each amount in the Debit or Credit column, list the debits first and use one line per account. Tick “No entry required” when no entry is needed. Marking: each correct line (right account, right side, right amount) earns its share of the points and a wrong line earns nothing; each line more than the entry needs cancels one correct line, so do not list accounts “just in case”.",
+    "Parts III and IV use the same company, Cap Bon Irrigation SA. Part IV is marked against the correct adjusting entries, so an error in Part III carries into Part IV.",
+    "Tables: enter balances as positive numbers in the Debit or Credit column and leave a cell empty when the balance is zero. Ignore income taxes, except in Part V.",
+    "Suggested timing: Part I 15 min · Part II 6 min · Part III 22 min · Part IV 25 min · Part V 14 min · 8 min to check."
+  ],
+  "accounts": [
+    "Cash",
+    "Accounts Receivable",
+    "Interest Receivable",
+    "Supplies",
+    "Prepaid Insurance",
+    "Prepaid Rent",
+    "Equipment",
+    "Accumulated Depreciation—Equipment",
+    "Notes Payable",
+    "Accounts Payable",
+    "Unearned Service Revenue",
+    "Salaries and Wages Payable",
+    "Interest Payable",
+    "Share Capital—Ordinary",
+    "Retained Earnings",
+    "Dividends",
+    "Service Revenue",
+    "Interest Revenue",
+    "Advertising Expense",
+    "Supplies Expense",
+    "Depreciation Expense",
+    "Insurance Expense",
+    "Salaries and Wages Expense",
+    "Rent Expense",
+    "Utilities Expense",
+    "Interest Expense"
+  ],
+  "sections": [
+    {
+      "title": "Part I · Multiple choice",
+      "intro": "One correct answer per question · Chapters 1, 2 and 3",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Ethics, standards & principles",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#standards",
+          "prompt": "<p>The finance manager of a bus company in Kasserine is choosing between two ways of reporting the company’s buses in its statement of financial position.</p><p><b>Method 1:</b> their cost, as shown on the purchase invoices, less accumulated depreciation.<br><b>Method 2:</b> a dealer’s estimate of the price for which the buses could be sold today.</p><p>According to IFRS as presented in this course, which statement is correct?</p>",
+          "options": [
+            "Method 1 applies the historical cost principle; its main strength is faithful representation, as the amounts can be verified.",
+            "Method 2 applies the historical cost principle; its main strength is relevance, since the amounts are up to date.",
+            "Method 1 applies the fair value principle; its main strength is relevance, since the amounts can be verified.",
+            "Method 2 applies the fair value principle, which IFRS requires for buses and all other vehicles because it is the most relevant."
+          ],
+          "answer": 0,
+          "explain": "<b>(a)</b>. Method 1 is the <b>historical cost principle</b>: assets such as buses are recorded at their cost and kept at cost while the company holds them (Chapter 3 adds that the cost is then reduced by accumulated depreciation, which gives the book value). Its main strength is <b>faithful representation</b>: the amount is factual and anyone can check it on the invoice. Method 2 is the <b>fair value principle</b> (the price that would be received to sell the asset). Its strength is <b>relevance</b>, because it is current, but a dealer’s estimate is uncertain. Under IFRS, fair value is used mainly for certain investment securities whose market price is readily available; buses, like most assets, are reported at cost. Trap (d): IFRS does not require fair value for vehicles. Traps (b) and (c) swap the principles: cost goes with faithful representation, fair value with relevance."
+        },
+        {
+          "id": "q2",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Assumptions & business forms",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#assumptions",
+          "prompt": "<p>Lina and Omar, two lawyers in Sfax, open a law office together. They agree orally to share the profits 60/40. They do not create a company and they issue no shares. Which statement is correct?</p>",
+          "options": [
+            "This is not a partnership, because a partnership agreement must be written and signed.",
+            "Each of them is generally personally liable for all the debts of the law office.",
+            "Their personal expenses can be recorded in the office’s books, because they are liable for its debts.",
+            "Either partner can transfer a share of the office to an outsider without the other partner’s agreement."
+          ],
+          "answer": 1,
+          "explain": "<b>(b)</b>. Two or more owners who run a business together under an agreement form a <b>partnership</b>, and the agreement can be written <b>or oral</b>, so (a) is false. Partners generally have <b>unlimited personal liability</b>: if the office cannot pay its debts, its creditors can claim the partners’ personal assets. Trap (c): liability does not cancel the <b>economic entity assumption</b>. The office keeps its records separate from Lina’s and Omar’s personal spending, and this is true for every form of business. Trap (d) describes a corporation, whose ownership is divided into transferable shares. In a partnership, a change of owner needs the partners’ agreement."
+        },
+        {
+          "id": "q3",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Accounting equation",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#equation",
+          "prompt": "<p>On 1 January 2026, a pottery workshop in Guellala (Djerba) had total assets of 192,000 TND and total liabilities of 77,000 TND. On 31 December 2026, its total assets were 238,500 TND and its total liabilities 96,000 TND. During 2026, the shareholders invested 16,000 TND in exchange for new ordinary shares, and the net income was 33,000 TND. How much did the workshop pay in dividends in 2026?</p>",
+          "options": [
+            "2,500 TND",
+            "5,500 TND",
+            "10,500 TND",
+            "21,500 TND"
+          ],
+          "answer": 3,
+          "explain": "<b>(d) 21,500 TND</b>. Step 1, equity = assets − liabilities: on 1 January 192,000 − 77,000 = 115,000; on 31 December 238,500 − 96,000 = 142,500. Step 2, equity changes through new shares, net income and dividends: 115,000 + 16,000 + 33,000 − dividends = 142,500, so dividends = 164,000 − 142,500 = <b>21,500</b>. Traps: 5,500 forgets the 16,000 of new shares (33,000 − 27,500); 2,500 uses the increase in assets (46,500) instead of the increase in equity (27,500); 10,500 gets the signs of net income and of the increase in equity wrong (27,500 + 16,000 − 33,000)."
+        },
+        {
+          "id": "q4",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Transaction analysis",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#softbyte",
+          "prompt": "<p>Which transaction decreases total assets AND total equity?</p>",
+          "options": [
+            "Paying a 1,500 TND cash dividend to the shareholders",
+            "Paying 1,200 TND to a supplier for supplies bought on account last month",
+            "Receiving a 900 TND bill for advertising that ran this month, to be paid next month",
+            "Buying a 2,000 TND printer and paying for it in cash"
+          ],
+          "answer": 0,
+          "explain": "<b>(a)</b>. A cash dividend: Cash −1,500 (assets go down) and Dividends +1,500, which reduces retained earnings (equity goes down). Dividends reduce equity, but they are <b>not expenses</b>. (b): paying a supplier on account decreases an asset (Cash) and a liability (Accounts Payable); equity does not change, because the supplies were recorded when they were bought. (c): the advertising bill increases a liability (Accounts Payable) and decreases equity (Advertising Expense); assets do not change until the bill is paid. (d): one asset (Equipment) replaces another (Cash), so total assets do not change."
+        },
+        {
+          "id": "q5",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Financial statements",
+          "review": "../financial-accounting/ch1-accounting-in-action.html#statements",
+          "prompt": "<p>In 2026, a removals company in Ben Arous borrowed 35,000 TND from a bank, bought a truck for 65,000 TND in cash and paid 6,800 TND of dividends to its shareholders. How are these three cash flows classified in its statement of cash flows?</p>",
+          "options": [
+            "Loan: investing · truck: investing · dividends: financing",
+            "Loan: financing · truck: investing · dividends: financing",
+            "Loan: financing · truck: operating · dividends: not reported, because dividends appear only in the retained earnings statement",
+            "Loan: financing · truck: investing · dividends: operating"
+          ],
+          "answer": 1,
+          "explain": "<b>(b)</b>. <b>Financing activities</b> are the cash flows with the owners and the lenders: loans received or repaid, shares issued, dividends paid. <b>Investing activities</b> are investments made by the company in long-term assets such as trucks, equipment or land. <b>Operating activities</b> are the day-to-day receipts and payments (customers, salaries, rent…). Trap (a): a loan is not an investment made by the company; it is a way for the company to finance itself. Trap (c): a truck is a long-term asset (investing), and dividends paid in cash are a financing outflow: they also appear in the retained earnings statement, but the cash really leaves the company. Trap (d): in this course (Chapter 1), dividends paid are a financing outflow, a payment to the owners, not an operating payment; and they are never expenses."
+        },
+        {
+          "id": "q6",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Ledger & posting",
+          "review": "../financial-accounting/ch2-recording-process.html#posting",
+          "prompt": "<p>On 1 May, the Supplies account of a dental clinic in Ariana had a debit balance of 1,240 TND. During May, the clinic bought supplies on account for 1,580 TND, paid its supplier 1,000 TND for supplies bought in April, and bought supplies for cash for 350 TND. After these entries are posted, and before any adjusting entry, what is the balance of the Supplies account?</p>",
+          "options": [
+            "1,930 TND debit",
+            "2,170 TND debit",
+            "2,820 TND debit",
+            "3,170 TND debit"
+          ],
+          "answer": 3,
+          "explain": "<b>(d) 3,170 TND debit</b>. Supplies is an asset: every purchase of supplies is debited to it, whether it is paid in cash or bought on account. 1,240 + 1,580 + 350 = <b>3,170</b> (debit). The 1,000 paid to the supplier is <b>Dr Accounts Payable · Cr Cash</b>: it settles a debt and is never posted to Supplies (those supplies were already recorded in April). Traps: 2,170 subtracts that payment from Supplies; 2,820 forgets the cash purchase; 1,930 forgets the opening balance."
+        },
+        {
+          "id": "q7",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Trial balance",
+          "review": "../financial-accounting/ch2-recording-process.html#trial-balance",
+          "prompt": "<p>The trial balance of a garage in Kairouan shows total debits of 86,170 TND and total credits of 85,440 TND. Which single error could explain this?</p>",
+          "options": [
+            "A 365 TND payment to a supplier on account was posted as a debit to Accounts Payable and a debit to Cash.",
+            "The 365 TND balance of Utilities Expense was listed in the credit column of the trial balance.",
+            "A 730 TND payment of salaries was never journalized.",
+            "A 730 TND collection from a customer on account was posted as a debit to Cash and a credit to Service Revenue."
+          ],
+          "answer": 0,
+          "explain": "<b>(a)</b>. The difference is 86,170 − 85,440 = 730, and the <b>debit</b> column is the higher one. In (a), two debits were posted and no credit: Cash received a debit of 365 instead of a credit of 365, so the Cash balance, and the debit column, are 2 × 365 = 730 too high. (This is the “divisible by 2” clue: half of the difference, 365, is the amount posted on the wrong side.) Trap (b) also creates a gap of 730, but in the other direction: a debit balance listed in the credit column makes the debits 365 too low and the credits 365 too high, so the credit column is the higher one. (c) and (d) do not unbalance the trial balance: a transaction that is never journalized changes neither column, and in (d) the debit equals the credit (only the account credited is wrong: Service Revenue instead of Accounts Receivable)."
+        },
+        {
+          "id": "q8",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Accrual basis & recognition",
+          "review": "../financial-accounting/ch3-adjusting-accounts.html#accrual",
+          "prompt": "<p>In December 2026, a guesthouse in Aïn Draham:</p><ul><li>paid 4,500 TND on 1 December for the rent of December, January and February (debited to Prepaid Rent);</li><li>paid the November electricity bill, 1,150 TND;</li><li>owed its staff 6,300 TND of wages for December: 5,100 TND was paid in December and 1,200 TND will be paid on 4 January 2027;</li><li>used supplies that cost 900 TND (bought and paid for in October).</li></ul><p>Under accrual-basis accounting, what are the guesthouse’s total expenses for December?</p>",
+          "options": [
+            "7,500 TND",
+            "8,700 TND",
+            "9,850 TND",
+            "10,750 TND"
+          ],
+          "answer": 1,
+          "explain": "<b>(b) 8,700 TND</b>. Accrual basis: each expense is recorded in the period in which it is incurred, whatever the date of payment (expense recognition principle). December rent = 4,500 ÷ 3 = 1,500; the other 3,000 is still Prepaid Rent, an asset. December wages = the full 6,300: 1,200 is unpaid, but the staff worked in December (an accrued expense). Supplies used in December = 900, even though they were paid in October. The November electricity bill (1,150) is an expense of November. Total = 1,500 + 6,300 + 900 = <b>8,700</b>. Traps: 10,750 is the cash basis (4,500 + 1,150 + 5,100), which IFRS does not allow; 9,850 adds November’s electricity; 7,500 counts only the wages paid."
+        },
+        {
+          "id": "q9",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Unearned revenues",
+          "review": "../financial-accounting/ch3-adjusting-accounts.html#unearned",
+          "prompt": "<p>On 1 October 2026, a swimming club in Mahdia received 11,400 TND for 12-month memberships that started that day. Its bookkeeper credited the whole amount to <b>Service Revenue</b>. No other entry has been made for these memberships. Which adjusting entry is needed on 31 December 2026, the end of the club’s year?</p>",
+          "options": [
+            "Dr Unearned Service Revenue 2,850 · Cr Service Revenue 2,850",
+            "Dr Service Revenue 2,850 · Cr Unearned Service Revenue 2,850",
+            "Dr Service Revenue 8,550 · Cr Unearned Service Revenue 8,550",
+            "Dr Unearned Service Revenue 8,550 · Cr Service Revenue 8,550"
+          ],
+          "answer": 2,
+          "explain": "<b>(c)</b>. This is the <b>alternative treatment</b> of Appendix 3A: the advance was first credited to a revenue account, so at year-end the adjusting entry moves the part that is still <b>unearned</b> to the liability. Per month: 11,400 ÷ 12 = 950. October to December (3 months) are earned: 2,850. The 9 months still owed (January to September 2027) = 9 × 950 = 8,550. After the entry, Service Revenue = 11,400 − 8,550 = 2,850 and Unearned Service Revenue = 8,550: exactly the balances the standard method gives. Trap (a) is the standard method, used when the advance was first credited to Unearned Service Revenue; here it would leave revenue at 14,250. Trap (b) moves the earned part instead of the unearned part. Rule: always look at the first entry. Revenue first → move what is unearned."
+        },
+        {
+          "id": "q10",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Accrued revenues",
+          "review": "../financial-accounting/ch3-adjusting-accounts.html#accrued-rev",
+          "prompt": "<p>On 1 November 2026, a wholesaler in Zaghouan lent 15,600 TND to one of its customers in exchange for a 6-month, 10% note receivable. The principal and all the interest will be received on 30 April 2027, when the wholesaler will collect 16,380 TND. The wholesaler’s year ends on 31 December. How much interest revenue does it report for 2026 and for 2027?</p>",
+          "options": [
+            "2026: 0 TND · 2027: 780 TND",
+            "2026: 780 TND · 2027: 0 TND",
+            "2026: 260 TND · 2027: 780 TND",
+            "2026: 260 TND · 2027: 520 TND"
+          ],
+          "answer": 3,
+          "explain": "<b>(d)</b>. Interest is earned with the passage of time, so it is recognized in the periods in which it is earned, not when the cash arrives. Interest = face value × annual rate × time. November and December 2026: 15,600 × 10% × 2/12 = <b>260</b>, recorded on 31 December as an <b>accrued revenue</b> (Dr Interest Receivable 260 · Cr Interest Revenue 260). January to April 2027: 15,600 × 10% × 4/12 = <b>520</b>. On 30 April 2027: Dr Cash 16,380 · Cr Notes Receivable 15,600 · Cr Interest Receivable 260 · Cr Interest Revenue 520. Traps: (a) is the cash basis; (c) counts the 2026 interest twice (once accrued, again when it is collected); (b) puts all six months in the year the note was signed."
+        }
+      ]
+    },
+    {
+      "title": "Part II · Journal entries",
+      "intro": "Kerkennah Cold Store SA, October 2026 · Chapter 2",
+      "questions": [
+        {
+          "id": "p2",
+          "type": "problem",
+          "topic": "Journal entries",
+          "review": "../financial-accounting/ch2-recording-process.html#journal",
+          "prompt": "<p><b>Kerkennah Cold Store SA</b>, in Sfax, rents cold rooms to fish wholesalers and delivers fresh fish to restaurants. Journalize its four October 2026 transactions (a) to (d). Choose each account from the list (it also contains accounts you do not need), put each amount in the Debit or Credit column, list the debits first, and use one line per account. No explanations are needed.</p>",
+          "parts": [
+            {
+              "type": "journal",
+              "points": 1.5,
+              "topic": "Journal entries",
+              "review": "../financial-accounting/ch2-recording-process.html#journal",
+              "prompt": "<p><b>5 October.</b> Received 6,450 TND in cash: 4,500 TND from a restaurant for fish deliveries made and billed in September, and 1,950 TND from a fish wholesaler as an advance for renting a cold room in November and December.</p>",
+              "answer": [
+                {
+                  "account": "Cash",
+                  "side": "Dr",
+                  "amount": 6450
+                },
+                {
+                  "account": "Accounts Receivable",
+                  "side": "Cr",
+                  "amount": 4500
+                },
+                {
+                  "account": "Unearned Service Revenue",
+                  "side": "Cr",
+                  "amount": 1950
+                }
+              ],
+              "lines": 4,
+              "explain": "<b>Compound entry: one debit, two credits.</b> Cash increases by the total: debit Cash 6,450. The 4,500 settles a receivable: the delivery revenue was recorded in September, when the restaurant was billed (Dr Accounts Receivable, Cr Service Revenue), so today Accounts Receivable decreases: credit Accounts Receivable 4,500. The 1,950 pays for a service that Kerkennah has not performed yet: it owes two months of cold-room rental, so the advance is a <b>liability</b>: credit Unearned Service Revenue 1,950. Check: 4,500 + 1,950 = 6,450. Traps: crediting Service Revenue for the 4,500 (that revenue would be counted twice, in September and again in October) or for the 1,950 (it is earned only in November and December)."
+            },
+            {
+              "type": "journal",
+              "points": 1,
+              "topic": "Journal entries",
+              "review": "../financial-accounting/ch2-recording-process.html#journal",
+              "prompt": "<p><b>9 October.</b> Borrowed 17,500 TND from its bank and signed a 6-month, 9% note payable. The principal and all the interest are due on 9 April 2027.</p>",
+              "answer": [
+                {
+                  "account": "Cash",
+                  "side": "Dr",
+                  "amount": 17500
+                },
+                {
+                  "account": "Notes Payable",
+                  "side": "Cr",
+                  "amount": 17500
+                }
+              ],
+              "lines": 4,
+              "explain": "Cash comes in and the company now owes the bank: debit Cash 17,500, credit Notes Payable 17,500. No interest is recorded today: on 9 October no time has passed, so no interest is owed yet. Interest builds up month by month and is recorded later with adjusting entries (Dr Interest Expense, Cr Interest Payable). Trap: adding Interest Expense and Interest Payable lines now; the entry does not need them, and each extra line cancels a correct one."
+            },
+            {
+              "type": "journal",
+              "points": 1,
+              "topic": "Journal entries",
+              "review": "../financial-accounting/ch2-recording-process.html#journal",
+              "prompt": "<p><b>30 October.</b> Paid 3,900 TND in cash for the rent of a second warehouse for November, December and January.</p>",
+              "answer": [
+                {
+                  "account": "Prepaid Rent",
+                  "side": "Dr",
+                  "amount": 3900
+                },
+                {
+                  "account": "Cash",
+                  "side": "Cr",
+                  "amount": 3900
+                }
+              ],
+              "lines": 4,
+              "explain": "On 30 October none of the three months has started: the payment buys a future benefit, so it is an <b>asset</b>. Debit Prepaid Rent 3,900, credit Cash 3,900. At the end of each month, an adjusting entry will move 1,300 from Prepaid Rent to Rent Expense. Trap: debiting Rent Expense; the warehouse will be used in November, December and January, not in October."
+            },
+            {
+              "type": "journal",
+              "points": 1,
+              "topic": "Journal entries",
+              "review": "../financial-accounting/ch2-recording-process.html#journal",
+              "prompt": "<p><b>31 October.</b> Received the October electricity bill from STEG, 1,640 TND, to be paid by 15 November.</p>",
+              "answer": [
+                {
+                  "account": "Utilities Expense",
+                  "side": "Dr",
+                  "amount": 1640
+                },
+                {
+                  "account": "Accounts Payable",
+                  "side": "Cr",
+                  "amount": 1640
+                }
+              ],
+              "lines": 4,
+              "explain": "The electricity was used in October, so it is an October expense even though it will be paid in November: debit Utilities Expense 1,640. The company now owes STEG: credit Accounts Payable 1,640. Traps: crediting Cash (nothing is paid yet); “no entry until it is paid” (the financial position has changed: a debt now exists and equity is lower); debiting a prepaid account (the electricity is already used)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Part III · Adjusting entries",
+      "intro": "Types of adjustments, then Cap Bon Irrigation SA’s year-end adjusting entries",
+      "questions": [
+        {
+          "id": "q12",
+          "type": "match",
+          "pointsEach": 0.5,
+          "topic": "Types of adjustments",
+          "review": "../financial-accounting/ch3-adjusting-accounts.html#types",
+          "prompt": "<p>Each business below closes its year on <b>31 December 2026</b>. For each situation, choose the type of adjusting entry the business must make on that date. A type may be used once, more than once, or not at all.</p>",
+          "choices": [
+            "Prepaid expense",
+            "Unearned revenue",
+            "Accrued revenue",
+            "Accrued expense"
+          ],
+          "items": [
+            {
+              "text": "A car-rental agency at Enfidha airport rented a minibus to a tour operator from 27 December 2026 to 5 January 2027. The tour operator will pay the whole rent when it returns the minibus.",
+              "answer": 2
+            },
+            {
+              "text": "A taxi company in Sousse bought three new cars on 1 July 2026. It will use them for five years.",
+              "answer": 0
+            },
+            {
+              "text": "The employees of a call centre in Sfax worked overtime during the last week of December 2026. The overtime will be paid with the January 2027 salaries.",
+              "answer": 3
+            },
+            {
+              "text": "A football club in Gabès sold season tickets in August 2026 for its home matches from September 2026 to May 2027.",
+              "answer": 1
+            },
+            {
+              "text": "A bank in Tunis lent 55,000 TND to a client on 1 October 2026. All the interest will be collected when the loan is repaid in March 2027 (the bank’s point of view).",
+              "answer": 2
+            }
+          ],
+          "explain": "1 · <b>Accrued revenue</b>: the minibus has earned rent for 27–31 December, but no cash has been received and nothing is recorded (Dr Accounts Receivable · Cr Rent Revenue). 2 · <b>Prepaid expense</b>: the cars were paid for before they are used; depreciation allocates their cost to the years of use (Dr Depreciation Expense · Cr Accumulated Depreciation). 3 · <b>Accrued expense</b>: the overtime was worked in December, so it is a December expense, but it is not yet paid or recorded (Dr Salaries and Wages Expense · Cr Salaries and Wages Payable). 4 · <b>Unearned revenue</b>: the club received the cash before playing the matches; on 31 December the share of the matches already played (September to December) moves from Unearned Revenue to revenue. 5 · <b>Accrued revenue</b>: for a bank, interest is revenue; three months of interest are earned and not yet received (Dr Interest Receivable · Cr Interest Revenue). For the client who borrowed, the same interest is an accrued expense. Trap: depreciation is not an accrued expense; the cash was paid at the start, so it is a deferral (a prepaid expense)."
+        },
+        {
+          "id": "p3",
+          "type": "problem",
+          "topic": "Prepaid expenses & depreciation",
+          "review": "../financial-accounting/ch3-adjusting-accounts.html#prepaid",
+          "prompt": "<p><b>Cap Bon Irrigation SA</b>, in Nabeul, designs, installs and maintains drip-irrigation systems for the citrus orchards and greenhouses of Cap Bon. Its financial year is the calendar year, and it adjusts its accounts <b>once a year, on 31 December</b>. Here is its trial balance before adjustments. Parts III and IV both use this company.</p><div class=\"table-wrap\"><table><thead><tr><th colspan=\"4\">Cap Bon Irrigation SA · Trial balance (before adjustments) · 31 December 2026 · TND</th></tr><tr><th>No.</th><th>Account</th><th class=\"n\">Debit</th><th class=\"n\">Credit</th></tr></thead><tbody><tr><td>101</td><td>Cash</td><td class=\"n\">38,240</td><td class=\"n\"></td></tr><tr><td>112</td><td>Accounts Receivable</td><td class=\"n\">6,300</td><td class=\"n\"></td></tr><tr><td>126</td><td>Supplies</td><td class=\"n\">3,480</td><td class=\"n\"></td></tr><tr><td>130</td><td>Prepaid Insurance</td><td class=\"n\">5,040</td><td class=\"n\"></td></tr><tr><td>157</td><td>Equipment</td><td class=\"n\">86,400</td><td class=\"n\"></td></tr><tr><td>158</td><td>Accumulated Depreciation—Equipment</td><td class=\"n\"></td><td class=\"n\">14,400</td></tr><tr><td>200</td><td>Notes Payable</td><td class=\"n\"></td><td class=\"n\">27,000</td></tr><tr><td>201</td><td>Accounts Payable</td><td class=\"n\"></td><td class=\"n\">2,150</td></tr><tr><td>209</td><td>Unearned Service Revenue</td><td class=\"n\"></td><td class=\"n\">8,700</td></tr><tr><td>311</td><td>Share Capital—Ordinary</td><td class=\"n\"></td><td class=\"n\">45,000</td></tr><tr><td>320</td><td>Retained Earnings</td><td class=\"n\"></td><td class=\"n\">11,640</td></tr><tr><td>332</td><td>Dividends</td><td class=\"n\">7,500</td><td class=\"n\"></td></tr><tr><td>400</td><td>Service Revenue</td><td class=\"n\"></td><td class=\"n\">148,600</td></tr><tr><td>610</td><td>Advertising Expense</td><td class=\"n\">2,260</td><td class=\"n\"></td></tr><tr><td>726</td><td>Salaries and Wages Expense</td><td class=\"n\">96,880</td><td class=\"n\"></td></tr><tr><td>729</td><td>Rent Expense</td><td class=\"n\">6,480</td><td class=\"n\"></td></tr><tr><td>732</td><td>Utilities Expense</td><td class=\"n\">4,910</td><td class=\"n\"></td></tr><tr><td></td><td><b>Totals</b></td><td class=\"n\"><b>257,490</b></td><td class=\"n\"><b>257,490</b></td></tr></tbody></table></div><p>Retained Earnings shows its balance on 1 January 2026.</p><p>For each item (a) to (h), journalize the adjusting entry needed on 31 December 2026 (one line per account, no explanations), or tick <b>No entry required</b> if the item needs no adjusting entry.</p>",
+          "parts": [
+            {
+              "type": "journal",
+              "points": 1,
+              "topic": "Prepaid expenses & depreciation",
+              "review": "../financial-accounting/ch3-adjusting-accounts.html#prepaid",
+              "prompt": "<p><b>Supplies.</b> A count on 31 December 2026 shows supplies on hand of 820 TND.</p>",
+              "answer": [
+                {
+                  "account": "Supplies Expense",
+                  "side": "Dr",
+                  "amount": 2660
+                },
+                {
+                  "account": "Supplies",
+                  "side": "Cr",
+                  "amount": 2660
+                }
+              ],
+              "lines": 4,
+              "explain": "<b>Prepaid expense (supplies).</b> Supplies used = supplies in the account − supplies on hand = 3,480 − 820 = <b>2,660</b>. Debit Supplies Expense 2,660 (the expense increases) and credit Supplies 2,660 (the asset decreases). After the entry, Supplies shows 820, exactly what is on the shelves. Trap: using 820, the amount on hand; 820 is what is left (the asset), not what was used. Never credit Cash: the supplies were paid for, or owed, when they were bought."
+            },
+            {
+              "type": "journal",
+              "points": 1.5,
+              "topic": "Prepaid expenses & depreciation",
+              "review": "../financial-accounting/ch3-adjusting-accounts.html#prepaid",
+              "prompt": "<p><b>Insurance.</b> The balance of Prepaid Insurance is the premium of a one-year policy bought and paid on 1 August 2026. The policy covers 1 August 2026 to 31 July 2027.</p>",
+              "answer": [
+                {
+                  "account": "Insurance Expense",
+                  "side": "Dr",
+                  "amount": 2100
+                },
+                {
+                  "account": "Prepaid Insurance",
+                  "side": "Cr",
+                  "amount": 2100
+                }
+              ],
+              "lines": 4,
+              "explain": "<b>Prepaid expense (insurance).</b> Cost per month = 5,040 ÷ 12 = 420. In 2026, five months have expired: August, September, October, November and December. Expense = 5 × 420 = <b>2,100</b>: debit Insurance Expense, credit Prepaid Insurance. Prepaid Insurance keeps 5,040 − 2,100 = 2,940, which is the 7 months of 2027 (January to July) × 420. Traps: 420 (one month only: Cap Bon adjusts once a year, so all five months are adjusted now); 2,940 (the unexpired part, which stays an asset); 1,680 (four months, forgetting August)."
+            },
+            {
+              "type": "journal",
+              "points": 1,
+              "topic": "Prepaid expenses & depreciation",
+              "review": "../financial-accounting/ch3-adjusting-accounts.html#prepaid",
+              "prompt": "<p><b>Equipment.</b> All the equipment was bought on 2 January 2024 for 86,400 TND. It is depreciated over 12 years, with no residual value. The depreciation for 2024 and 2025 has already been recorded.</p>",
+              "answer": [
+                {
+                  "account": "Depreciation Expense",
+                  "side": "Dr",
+                  "amount": 7200
+                },
+                {
+                  "account": "Accumulated Depreciation—Equipment",
+                  "side": "Cr",
+                  "amount": 7200
+                }
+              ],
+              "lines": 4,
+              "explain": "<b>Prepaid expense (depreciation).</b> Depreciation for one year = 86,400 ÷ 12 years = <b>7,200</b>. Debit Depreciation Expense 7,200 and credit the <b>contra asset</b> Accumulated Depreciation—Equipment 7,200. Its balance rises from 14,400 to 21,600, so the book value of the equipment becomes 86,400 − 21,600 = 64,800. Trap: “Dr Depreciation Expense · Cr Equipment” balances (debits = credits) but uses the wrong account: the cost must stay visible at 86,400 in Equipment. Other traps: 21,600 (the total depreciation since 2024: only the 2026 part is an expense of 2026); 600 (one month only)."
+            },
+            {
+              "type": "journal",
+              "points": 1,
+              "topic": "Unearned revenues",
+              "review": "../financial-accounting/ch3-adjusting-accounts.html#unearned",
+              "prompt": "<p><b>Maintenance contract.</b> On 1 November 2026, the Béni Khalled citrus cooperative paid 8,700 TND in advance for a 6-month maintenance contract (November 2026 to April 2027), and Cap Bon credited Unearned Service Revenue. The work is spread evenly over the six months, and the work for November and December was done as planned.</p>",
+              "answer": [
+                {
+                  "account": "Unearned Service Revenue",
+                  "side": "Dr",
+                  "amount": 2900
+                },
+                {
+                  "account": "Service Revenue",
+                  "side": "Cr",
+                  "amount": 2900
+                }
+              ],
+              "lines": 4,
+              "explain": "<b>Unearned revenue.</b> 8,700 ÷ 6 months = 1,450 per month. November and December were performed: <b>2,900</b> is earned in 2026. Debit Unearned Service Revenue 2,900 (the liability falls to 5,800, the four months still owed) and credit Service Revenue 2,900. Traps: 5,800 (that is the part not yet earned, which stays a liability); reversing the two sides; using Cash (the cash was received on 1 November)."
+            },
+            {
+              "type": "journal",
+              "points": 1,
+              "topic": "Accrued revenues",
+              "review": "../financial-accounting/ch3-adjusting-accounts.html#accrued-rev",
+              "prompt": "<p><b>Greenhouse in Korba.</b> On 31 December 2026, Cap Bon finished installing a drip system in a greenhouse in Korba and sent the invoice, 3,650 TND, the same day. The invoice has not been recorded.</p>",
+              "answer": [
+                {
+                  "account": "Accounts Receivable",
+                  "side": "Dr",
+                  "amount": 3650
+                },
+                {
+                  "account": "Service Revenue",
+                  "side": "Cr",
+                  "amount": 3650
+                }
+              ],
+              "lines": 4,
+              "explain": "<b>Accrued revenue.</b> The work was done in 2026, so the 3,650 is revenue of 2026 even though no cash has been received. The invoice was sent but not recorded, so the receivable is missing from the accounts too. Debit Accounts Receivable 3,650, credit Service Revenue 3,650. Trap: “Dr Accounts Receivable · Cr Unearned Service Revenue” balances but uses the wrong account: nobody paid in advance, so there is no liability. Other traps: debiting Cash (nothing has been received); “no entry, because an invoice was sent” (an invoice that is not recorded is not in the accounts)."
+            },
+            {
+              "type": "journal",
+              "points": 1.5,
+              "topic": "Accrued expenses",
+              "review": "../financial-accounting/ch3-adjusting-accounts.html#accrued-exp",
+              "prompt": "<p><b>Bank loan.</b> On 1 September 2026, Cap Bon borrowed 27,000 TND from its bank on a 9-month, 8% note payable. The principal and all the interest are due on 31 May 2027. No interest has been paid or recorded.</p>",
+              "answer": [
+                {
+                  "account": "Interest Expense",
+                  "side": "Dr",
+                  "amount": 720
+                },
+                {
+                  "account": "Interest Payable",
+                  "side": "Cr",
+                  "amount": 720
+                }
+              ],
+              "lines": 4,
+              "explain": "<b>Accrued expense (interest).</b> Interest = face value × annual rate × time = 27,000 × 8% × 4/12 = <b>720</b> for September, October, November and December. Debit Interest Expense 720, credit Interest Payable 720, a separate liability (Notes Payable keeps showing the face value, 27,000). Traps: 2,160 (a full year); 1,620 (the interest of the whole 9-month note, most of which belongs to 2027); 540 (three months: September counts, because the note was signed on 1 September); crediting Notes Payable or Cash."
+            },
+            {
+              "type": "journal",
+              "points": 1,
+              "topic": "Accrued expenses",
+              "review": "../financial-accounting/ch3-adjusting-accounts.html#accrued-exp",
+              "prompt": "<p><b>Technicians’ wages.</b> The four technicians earn 330 TND per working day in total, and they work Monday to Friday. They are paid every Friday for the week then ending; the last payday of 2026 was Friday 25 December. 31 December 2026 is a Thursday. Nothing has been recorded for their work after 25 December.</p>",
+              "answer": [
+                {
+                  "account": "Salaries and Wages Expense",
+                  "side": "Dr",
+                  "amount": 1320
+                },
+                {
+                  "account": "Salaries and Wages Payable",
+                  "side": "Cr",
+                  "amount": 1320
+                }
+              ],
+              "lines": 4,
+              "explain": "<b>Accrued expense (wages).</b> After the last payday (Friday 25 December), the technicians worked Monday 28, Tuesday 29, Wednesday 30 and Thursday 31 December: 4 days × 330 = <b>1,320</b>, earned in 2026 but not yet paid. Debit Salaries and Wages Expense 1,320, credit Salaries and Wages Payable 1,320. When they are paid in January, the payment will debit Salaries and Wages Payable for this 1,320. Traps: 1,650 (a full 5-day week: Friday 1 January belongs to 2027); 990 (3 days, forgetting 31 December); crediting Cash (nothing has been paid yet)."
+            },
+            {
+              "type": "journal",
+              "points": 1,
+              "topic": "Types of adjustments",
+              "review": "../financial-accounting/ch3-adjusting-accounts.html#types",
+              "prompt": "<p><b>Electricity.</b> The December electricity bill, 410 TND, arrived on 28 December 2026 and was paid the same day. The bookkeeper debited Utilities Expense and credited Cash.</p>",
+              "answer": [],
+              "lines": 4,
+              "explain": "<b>No adjusting entry.</b> An accrued expense is an expense incurred but <b>not yet paid or recorded</b>. The December electricity was used, billed, paid and recorded in December: Utilities Expense already includes it, and nothing is owed. The accounts are complete. Trap: Dr Utilities Expense 410 · Cr Accounts Payable 410 would count December’s electricity twice and create a debt that does not exist."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Part IV · Adjusted trial balance and financial statements",
+      "intro": "Same company, 31 December 2026",
+      "questions": [
+        {
+          "id": "p4",
+          "type": "problem",
+          "topic": "Adjusted trial balance & statements",
+          "review": "../financial-accounting/ch3-adjusting-accounts.html#adjusted-tb",
+          "prompt": "<p>Same company: use Cap Bon’s trial balance (Question 13) and the eight adjustment items (a) to (h). This part is marked against the correct adjusting entries.</p>",
+          "parts": [
+            {
+              "type": "grid",
+              "points": 3.5,
+              "topic": "Adjusted trial balance & statements",
+              "review": "../financial-accounting/ch3-adjusting-accounts.html#adjusted-tb",
+              "prompt": "<p>Complete Cap Bon’s <b>adjusted trial balance</b> at 31 December 2026. The unadjusted balances are given. Enter each adjusted balance as a positive number in its Debit or Credit column, leave both cells empty when the adjusted balance is zero, and complete the totals row.</p>",
+              "columns": [
+                "Unadjusted<br>Debit",
+                "Unadjusted<br>Credit",
+                "Adjusted<br>Debit",
+                "Adjusted<br>Credit"
+              ],
+              "rows": [
+                {
+                  "label": "101 Cash",
+                  "cells": [
+                    38240,
+                    null,
+                    38240,
+                    null
+                  ]
+                },
+                {
+                  "label": "112 Accounts Receivable",
+                  "cells": [
+                    6300,
+                    null,
+                    9950,
+                    null
+                  ]
+                },
+                {
+                  "label": "116 Interest Receivable",
+                  "cells": [
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
+                },
+                {
+                  "label": "126 Supplies",
+                  "cells": [
+                    3480,
+                    null,
+                    820,
+                    null
+                  ]
+                },
+                {
+                  "label": "130 Prepaid Insurance",
+                  "cells": [
+                    5040,
+                    null,
+                    2940,
+                    null
+                  ]
+                },
+                {
+                  "label": "131 Prepaid Rent",
+                  "cells": [
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
+                },
+                {
+                  "label": "157 Equipment",
+                  "cells": [
+                    86400,
+                    null,
+                    86400,
+                    null
+                  ]
+                },
+                {
+                  "label": "158 Accumulated Depreciation—Equipment",
+                  "cells": [
+                    null,
+                    14400,
+                    null,
+                    21600
+                  ]
+                },
+                {
+                  "label": "200 Notes Payable",
+                  "cells": [
+                    null,
+                    27000,
+                    null,
+                    27000
+                  ]
+                },
+                {
+                  "label": "201 Accounts Payable",
+                  "cells": [
+                    null,
+                    2150,
+                    null,
+                    2150
+                  ]
+                },
+                {
+                  "label": "209 Unearned Service Revenue",
+                  "cells": [
+                    null,
+                    8700,
+                    null,
+                    5800
+                  ]
+                },
+                {
+                  "label": "212 Salaries and Wages Payable",
+                  "cells": [
+                    null,
+                    null,
+                    null,
+                    1320
+                  ]
+                },
+                {
+                  "label": "230 Interest Payable",
+                  "cells": [
+                    null,
+                    null,
+                    null,
+                    720
+                  ]
+                },
+                {
+                  "label": "311 Share Capital—Ordinary",
+                  "cells": [
+                    null,
+                    45000,
+                    null,
+                    45000
+                  ]
+                },
+                {
+                  "label": "320 Retained Earnings",
+                  "cells": [
+                    null,
+                    11640,
+                    null,
+                    11640
+                  ]
+                },
+                {
+                  "label": "332 Dividends",
+                  "cells": [
+                    7500,
+                    null,
+                    7500,
+                    null
+                  ]
+                },
+                {
+                  "label": "400 Service Revenue",
+                  "cells": [
+                    null,
+                    148600,
+                    null,
+                    155150
+                  ]
+                },
+                {
+                  "label": "405 Interest Revenue",
+                  "cells": [
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
+                },
+                {
+                  "label": "610 Advertising Expense",
+                  "cells": [
+                    2260,
+                    null,
+                    2260,
+                    null
+                  ]
+                },
+                {
+                  "label": "631 Supplies Expense",
+                  "cells": [
+                    null,
+                    null,
+                    2660,
+                    null
+                  ]
+                },
+                {
+                  "label": "711 Depreciation Expense",
+                  "cells": [
+                    null,
+                    null,
+                    7200,
+                    null
+                  ]
+                },
+                {
+                  "label": "722 Insurance Expense",
+                  "cells": [
+                    null,
+                    null,
+                    2100,
+                    null
+                  ]
+                },
+                {
+                  "label": "726 Salaries and Wages Expense",
+                  "cells": [
+                    96880,
+                    null,
+                    98200,
+                    null
+                  ]
+                },
+                {
+                  "label": "729 Rent Expense",
+                  "cells": [
+                    6480,
+                    null,
+                    6480,
+                    null
+                  ]
+                },
+                {
+                  "label": "732 Utilities Expense",
+                  "cells": [
+                    4910,
+                    null,
+                    4910,
+                    null
+                  ]
+                },
+                {
+                  "label": "905 Interest Expense",
+                  "cells": [
+                    null,
+                    null,
+                    720,
+                    null
+                  ]
+                },
+                {
+                  "label": "Totals",
+                  "cells": [
+                    257490,
+                    257490,
+                    270380,
+                    270380
+                  ],
+                  "total": true
+                }
+              ],
+              "given": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  1
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  1
+                ],
+                [
+                  7,
+                  0
+                ],
+                [
+                  7,
+                  1
+                ],
+                [
+                  8,
+                  0
+                ],
+                [
+                  8,
+                  1
+                ],
+                [
+                  9,
+                  0
+                ],
+                [
+                  9,
+                  1
+                ],
+                [
+                  10,
+                  0
+                ],
+                [
+                  10,
+                  1
+                ],
+                [
+                  11,
+                  0
+                ],
+                [
+                  11,
+                  1
+                ],
+                [
+                  12,
+                  0
+                ],
+                [
+                  12,
+                  1
+                ],
+                [
+                  13,
+                  0
+                ],
+                [
+                  13,
+                  1
+                ],
+                [
+                  14,
+                  0
+                ],
+                [
+                  14,
+                  1
+                ],
+                [
+                  15,
+                  0
+                ],
+                [
+                  15,
+                  1
+                ],
+                [
+                  16,
+                  0
+                ],
+                [
+                  16,
+                  1
+                ],
+                [
+                  17,
+                  0
+                ],
+                [
+                  17,
+                  1
+                ],
+                [
+                  18,
+                  0
+                ],
+                [
+                  18,
+                  1
+                ],
+                [
+                  19,
+                  0
+                ],
+                [
+                  19,
+                  1
+                ],
+                [
+                  20,
+                  0
+                ],
+                [
+                  20,
+                  1
+                ],
+                [
+                  21,
+                  0
+                ],
+                [
+                  21,
+                  1
+                ],
+                [
+                  22,
+                  0
+                ],
+                [
+                  22,
+                  1
+                ],
+                [
+                  23,
+                  0
+                ],
+                [
+                  23,
+                  1
+                ],
+                [
+                  24,
+                  0
+                ],
+                [
+                  24,
+                  1
+                ],
+                [
+                  25,
+                  0
+                ],
+                [
+                  25,
+                  1
+                ],
+                [
+                  26,
+                  0
+                ],
+                [
+                  26,
+                  1
+                ]
+              ],
+              "hint": "Adjusted columns only: enter each balance as a positive number in its Debit or Credit column. Leave both cells empty when the adjusted balance is zero.",
+              "explain": "Each adjusted balance = the unadjusted balance ± the adjusting entries. Changed lines: Accounts Receivable 6,300 + 3,650 = 9,950; Supplies 3,480 − 2,660 = 820; Prepaid Insurance 5,040 − 2,100 = 2,940; Accumulated Depreciation 14,400 + 7,200 = 21,600 (credit: it is a contra asset); Unearned Service Revenue 8,700 − 2,900 = 5,800; Salaries and Wages Payable 1,320 and Interest Payable 720 (new credit balances); Service Revenue 148,600 + 2,900 + 3,650 = 155,150; Salaries and Wages Expense 96,880 + 1,320 = 98,200; new expenses: Supplies 2,660, Depreciation 7,200, Insurance 2,100, Interest 720. Unchanged: Cash (adjusting entries never touch Cash), Equipment (depreciation goes to the contra account), Notes Payable (the interest has its own payable), Accounts Payable, Share Capital, Retained Earnings (still the 1 January balance: net income and dividends reach it only when the accounts are closed, in Chapter 4), Dividends, Rent, Utilities (item h) and Advertising. Totals: debits 270,380 = credits 270,380. Traps: Accumulated Depreciation in the debit column; Retained Earnings updated with the net income; numbers in Interest Receivable or Interest Revenue (Cap Bon has lent nothing)."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "topic": "Adjusted trial balance & statements",
+              "review": "../financial-accounting/ch3-adjusting-accounts.html#adjusted-tb",
+              "prompt": "<p>Net income for 2026.</p>",
+              "answer": 30620,
+              "unit": "TND",
+              "tol": 0.5,
+              "explain": "Revenues: Service Revenue 155,150. Expenses: salaries and wages 98,200 + depreciation 7,200 + rent 6,480 + utilities 4,910 + supplies 2,660 + advertising 2,260 + insurance 2,100 + interest 720 = 124,530. Net income = 155,150 − 124,530 = <b>30,620</b>. Traps: 38,070 (the unadjusted figure: 148,600 − 110,530); 23,120 (dividends subtracted, but dividends are not expenses)."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "topic": "Adjusted trial balance & statements",
+              "review": "../financial-accounting/ch3-adjusting-accounts.html#adjusted-tb",
+              "prompt": "<p>Retained earnings at 31 December 2026, as reported in the statement of financial position.</p>",
+              "answer": 34760,
+              "unit": "TND",
+              "tol": 0.5,
+              "explain": "Retained earnings statement: retained earnings on 1 January 11,640 + net income 30,620 − dividends 7,500 = <b>34,760</b>. Traps: 11,640 (the trial-balance figure, which is still the opening balance); 42,260 (dividends not subtracted); 23,120 (opening balance forgotten)."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "topic": "Adjusted trial balance & statements",
+              "review": "../financial-accounting/ch3-adjusting-accounts.html#adjusted-tb",
+              "prompt": "<p>Total assets at 31 December 2026.</p>",
+              "answer": 116750,
+              "unit": "TND",
+              "tol": 0.5,
+              "explain": "Equipment 86,400 − accumulated depreciation 21,600 = book value 64,800; + prepaid insurance 2,940 + supplies 820 + accounts receivable 9,950 + cash 38,240 = <b>116,750</b>. Check: liabilities 27,000 + 2,150 + 5,800 + 1,320 + 720 = 36,990; equity 45,000 + 34,760 = 79,760; 36,990 + 79,760 = 116,750. Traps: 159,950 (accumulated depreciation added instead of subtracted); 138,350 (accumulated depreciation ignored); 131,150 (only the 2026 depreciation subtracted); 125,060 (the assets before adjustments)."
+            },
+            {
+              "type": "tf",
+              "points": 0.5,
+              "topic": "Prepaid expenses & depreciation",
+              "review": "../financial-accounting/ch3-adjusting-accounts.html#prepaid",
+              "prompt": "<p><b>True or false? Justify.</b> “The book value of Cap Bon’s equipment in its statement of financial position at 31 December 2026 is the price for which the company could sell the equipment on that date.”</p>",
+              "answer": false,
+              "justify": {
+                "points": 0.5,
+                "model": "False. Book value = cost − accumulated depreciation = 86,400 − 21,600 = 64,800 TND: it is the part of the cost that has not yet been depreciated. Depreciation allocates the cost of the equipment to expense over its 12-year useful life; it does not try to measure its market value. The equipment could sell for more or for less than 64,800 TND.",
+                "rubric": [
+                  {
+                    "text": "Says that book value = cost − accumulated depreciation (the part of the cost not yet depreciated)",
+                    "points": 0.25
+                  },
+                  {
+                    "text": "Says that depreciation is a cost allocation, not a measure of market value (the selling price may be higher or lower)",
+                    "points": 0.25
+                  }
+                ]
+              },
+              "explain": "<b>False.</b> Depreciation is a <b>cost allocation</b>: it spreads the 86,400 cost over the 12 years of use. It is not an attempt to report the change in the value of the asset. The book value (also called carrying amount), 86,400 − 21,600 = 64,800, is only the cost not yet depreciated; a buyer might pay more or less. This is also one of the limitations of the statement of financial position: most assets are reported at historical cost, not at their current value."
+            },
+            {
+              "type": "mcq",
+              "points": 1,
+              "topic": "Adjusted trial balance & statements",
+              "review": "../financial-accounting/ch3-adjusting-accounts.html#adjusted-tb",
+              "prompt": "<p>Suppose the bookkeeper had forgotten item (e), the Korba invoice, and item (g), the technicians’ wages, but had made all the other adjusting entries correctly. Compared with the correct statements, which statement is true?</p>",
+              "options": [
+                "Net income understated by 4,970 TND; total assets understated by 3,650 TND; total liabilities understated by 1,320 TND",
+                "Net income overstated by 2,330 TND; total assets overstated by 3,650 TND; total liabilities overstated by 1,320 TND",
+                "Net income understated by 2,330 TND; total assets understated by 3,650 TND; total liabilities understated by 1,320 TND",
+                "Net income understated by 2,330 TND; total assets understated by 2,330 TND; total liabilities not affected"
+              ],
+              "answer": 2,
+              "explain": "<b>(c)</b>. Forgetting item (e), an accrued revenue: revenue is 3,650 too low, so net income is 3,650 too low; Accounts Receivable is missing, so assets are 3,650 too low; no liability is involved. Forgetting item (g), an accrued expense: an expense is 1,320 too low, so net income is 1,320 too high; Salaries and Wages Payable is missing, so liabilities are 1,320 too low; no asset is involved. Together: net income is 3,650 − 1,320 = <b>2,330 understated</b>, assets 3,650 understated, liabilities 1,320 understated. Check with the equation: assets −3,650 = liabilities −1,320 + equity −2,330. Traps: (a) adds the two effects on net income (3,650 + 1,320 = 4,970), but they go in opposite directions; (b) reverses every direction; (d) forgets that the wages accrual touches a liability and puts the net-income amount on assets."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Part V · Income statement and statement of financial position",
+      "intro": "A second company: Medi-Sahel Distribution SA, year 2026",
+      "questions": [
+        {
+          "id": "p5",
+          "type": "problem",
+          "topic": "Income statement (multi-step, EPS)",
+          "review": "../financial-accounting/ch3-adjusting-accounts.html#is-format",
+          "prompt": "<p><b>Medi-Sahel Distribution SA</b>, in Monastir, buys medical supplies (gloves, syringes, dressings) from manufacturers and resells them to clinics and pharmacies. It presents its expenses <b>by function</b>. Here are its figures for the year ended 31 December 2026, after all adjusting entries, in random order (TND):</p><div class=\"table-wrap\"><table><thead><tr><th>Item</th><th class=\"n\">TND</th><th>Item</th><th class=\"n\">TND</th></tr></thead><tbody><tr><td>Sales revenue (net)</td><td class=\"n\">980,000</td><td>Office salaries</td><td class=\"n\">72,000</td></tr><tr><td>Delivery expense</td><td class=\"n\">27,200</td><td>Cost of goods sold</td><td class=\"n\">612,500</td></tr><tr><td>Interest expense</td><td class=\"n\">10,700</td><td>Rent revenue (part of the warehouse sublet to a pharmacy)</td><td class=\"n\">8,400</td></tr><tr><td>Depreciation—delivery vans</td><td class=\"n\">13,800</td><td>Loss on sale of a delivery van</td><td class=\"n\">3,200</td></tr><tr><td>Advertising expense</td><td class=\"n\">18,500</td><td>Utilities expense (office)</td><td class=\"n\">9,450</td></tr><tr><td>Sales salaries and commissions</td><td class=\"n\">96,000</td><td>Insurance expense (office)</td><td class=\"n\">4,750</td></tr><tr><td>Depreciation—office equipment</td><td class=\"n\">6,300</td><td>Ordinary dividends paid</td><td class=\"n\">28,000</td></tr><tr><td>Preference dividends paid</td><td class=\"n\">6,600</td><td></td><td class=\"n\"></td></tr></tbody></table></div><p>The income tax rate is 20% of income before income tax. Ordinary shares: 45,000 outstanding on 1 January 2026, and 20,000 new shares issued on 1 April 2026; no other change during the year.</p>",
+          "parts": [
+            {
+              "type": "grid",
+              "points": 2,
+              "topic": "Income statement (multi-step, EPS)",
+              "review": "../financial-accounting/ch3-adjusting-accounts.html#is-format",
+              "prompt": "<p>Prepare Medi-Sahel’s multi-step income statement for 2026 on scrap paper, then enter these four subtotals.</p>",
+              "columns": [
+                "Amount (TND)"
+              ],
+              "rows": [
+                {
+                  "label": "Gross profit",
+                  "cells": [
+                    367500
+                  ]
+                },
+                {
+                  "label": "Income from operations",
+                  "cells": [
+                    124700
+                  ]
+                },
+                {
+                  "label": "Income before income tax",
+                  "cells": [
+                    114000
+                  ]
+                },
+                {
+                  "label": "Net income",
+                  "cells": [
+                    91200
+                  ]
+                }
+              ],
+              "hint": "Enter positive numbers, without currency signs.",
+              "explain": "Sales revenue (net) 980,000 − cost of goods sold 612,500 = <b>gross profit 367,500</b>. Selling expenses: sales salaries and commissions 96,000 + advertising 18,500 + delivery 27,200 + depreciation of delivery vans 13,800 = 155,500. Administrative expenses: office salaries 72,000 + depreciation of office equipment 6,300 + utilities 9,450 + insurance 4,750 = 92,500. Other income and expense: rent revenue 8,400 − loss on sale of a van 3,200 = +5,200. <b>Income from operations</b> = 367,500 − 155,500 − 92,500 + 5,200 = <b>124,700</b>. Financing costs: interest expense 10,700, so <b>income before income tax = 114,000</b>. Income tax = 20% × 114,000 = 22,800, so <b>net income = 91,200</b> (there are no discontinued operations, so income from continuing operations = net income). Traps: putting the interest expense among the operating expenses (income from operations 114,000: interest is a financing cost, below income from operations); leaving out other income and expense (119,500: under IFRS it is part of income from operations); subtracting the dividends (income before income tax 79,400: dividends are not expenses)."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "topic": "Income statement (multi-step, EPS)",
+              "review": "../financial-accounting/ch3-adjusting-accounts.html#is-format",
+              "prompt": "<p>Earnings per ordinary share for 2026, in TND, to two decimals.</p>",
+              "answer": 1.41,
+              "unit": "TND",
+              "tol": 0.005,
+              "explain": "Weighted-average number of ordinary shares = 45,000 × 12/12 + 20,000 × 9/12 (April to December) = 45,000 + 15,000 = 60,000. EPS = (net income − preference dividends) ÷ weighted-average number of shares = (91,200 − 6,600) ÷ 60,000 = 84,600 ÷ 60,000 = <b>1.41 TND</b>. Traps: 1.30 (the year-end number of shares, 65,000, instead of the weighted average); 1.52 (preference dividends not subtracted); 0.94 (ordinary dividends subtracted too: only preference dividends are subtracted, because EPS measures what the ordinary shareholders earned, paid out or not)."
+            },
+            {
+              "type": "match",
+              "pointsEach": 0.5,
+              "topic": "Statement of financial position",
+              "review": "../financial-accounting/ch3-adjusting-accounts.html#sfp-classify",
+              "prompt": "<p>Where does each item belong in Medi-Sahel’s classified statement of financial position at 31 December 2026?</p>",
+              "choices": [
+                "Non-current assets: long-term investments",
+                "Non-current assets: property, plant and equipment",
+                "Non-current assets: intangible assets",
+                "Current assets",
+                "Equity",
+                "Non-current liabilities",
+                "Current liabilities",
+                "Not reported in the statement of financial position"
+              ],
+              "items": [
+                {
+                  "text": "Accumulated depreciation—delivery vans",
+                  "answer": 1
+                },
+                {
+                  "text": "A plot of land bought in 2025 that the company does not use and plans to resell at a profit in a few years",
+                  "answer": 0
+                },
+                {
+                  "text": "A trademark bought from another company",
+                  "answer": 2
+                },
+                {
+                  "text": "The 23,000 TND of a five-year bank loan that must be repaid during 2027",
+                  "answer": 6
+                },
+                {
+                  "text": "The ordinary dividends paid during 2026",
+                  "answer": 7
+                }
+              ],
+              "explain": "1 · Accumulated depreciation is a <b>contra asset</b>: it is subtracted from Delivery vans inside property, plant and equipment. It is never a liability, even though it has a credit balance. 2 · Land that is not used in operations and is held to be resold is a <b>long-term investment</b> (the land under the warehouse would be property, plant and equipment). It is not a current asset, because it will be sold only in a few years. 3 · A trademark has no physical substance: an <b>intangible asset</b>. 4 · The part of a long-term loan that is due within one year is a <b>current liability</b> (the current portion of long-term debt); the rest of the loan stays non-current. 5 · Dividends are reported in the <b>retained earnings statement</b>, and their effect is already inside retained earnings; they are not a separate line of the statement of financial position, and they are not an expense."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../assets/exam.js"></script>
+</body>
+</html>

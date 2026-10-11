@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Quiz Chapter 1 · Practice A · Mathematics I</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/exam.css">
+</head>
+<body class="math">
+<div id="exam"></div>
+<script type="application/json" id="exam-data">
+{
+  "id": "math1-quiz1-A",
+  "title": "Quiz Chapter 1 · Practice A",
+  "shortTitle": "Math I Quiz Ch 1 · A",
+  "course": "Mathematics I",
+  "courseClass": "math",
+  "covers": "Chapter 1",
+  "duration": 30,
+  "hub": "../exams/index.html",
+  "description": "A 30-minute rehearsal of the Chapter 1 quiz (Friday 9 October), in the format of Dr. Elaoud’s Moodle quizzes: true/false statements like her T/F sheet, multiple choice and short calculations on the whole chapter, in Tunisian contexts. Every question hides one of the classic traps of the chapter, so your mistakes show your real weak spots.",
+  "instructions": [
+    "30 minutes, one attempt, no notes and no phone. A scientific calculator is allowed (you need the ln and e<sup>x</sup> keys). The real quiz is a Moodle quiz taken in class with a key, so do this first attempt in exam mode.",
+    "Part I: choose True or False. Questions 1 and 4 also ask for a justification in 1–2 sentences, which you mark yourself after you submit.",
+    "Part II: one correct answer per question. A wrong answer costs nothing, so answer every question.",
+    "Part III: work on paper, then type only the final number. Decimals with a point or a comma (0.25 or 0,25). Use a minus sign for a decrease or a loss. Percentages as a number of percent (type 6.5 for 6.5%). Round exactly as asked.",
+    "Keep at least 4 decimals for ln values and growth factors until the end (for example ln 1.05 ≈ 0.0488), and round only the final answer.",
+    "Suggested timing: Part I 7 min · Part II 8 min · Part III 13 min · 2 min to check.",
+    "All figures in the questions are illustrative (invented for practice), not official statistics."
+  ],
+  "sections": [
+    {
+      "title": "Part I · True or false",
+      "intro": "Six statements, like your teacher’s T/F sheet · questions 1 and 4 also need a short justification",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "tf",
+          "points": 1,
+          "topic": "Functions & graphs",
+          "review": "../mathematics-1/ch1-functions-and-change.html#functions",
+          "prompt": "<p>A louage company records the number N of passengers it carries between Tunis and Sousse on day t of one week (illustrative figures).</p><div class='table-wrap'><table><tbody><tr><td><strong>Day t</strong></td><td class='n'>1</td><td class='n'>2</td><td class='n'>3</td><td class='n'>4</td><td class='n'>5</td><td class='n'>6</td><td class='n'>7</td></tr><tr><td><strong>Passengers N</strong></td><td class='n'>412</td><td class='n'>388</td><td class='n'>388</td><td class='n'>455</td><td class='n'>520</td><td class='n'>610</td><td class='n'>587</td></tr></tbody></table></div><p>True or false: N is a function of t, but t is not a function of N.</p>",
+          "answer": true,
+          "justify": {
+            "points": 0.5,
+            "model": "True. Each day t has exactly one number of passengers, so N is a function of t (two days with the same output, f(2) = f(3) = 388, are allowed). But the input N = 388 gives two outputs, t = 2 and t = 3, so t is not a function of N.",
+            "rubric": [
+              {
+                "text": "Says N is a function of t because each day has exactly one value of N (a repeated value of N is allowed)",
+                "points": 0.25
+              },
+              {
+                "text": "Says t is not a function of N because N = 388 corresponds to two days (t = 2 and t = 3)",
+                "points": 0.25
+              }
+            ]
+          },
+          "explain": "A function gives exactly <b>one output for each input</b>.<br><b>N as a function of t</b> (input = the day): each day has exactly one passenger count. Two days with the same output, f(2) = f(3) = 388, are allowed (like f(11) = f(12) = 0 in the Syracuse snow table). So N is a function of t.<br><b>t as a function of N</b> (input = the number of passengers): the input N = 388 gives two outputs, t = 2 and t = 3. One input with two outputs is not allowed, so t is <b>not</b> a function of N.<br><b>Answer: True.</b><br>Trap: thinking that a repeated <i>output</i> breaks a function. Only an input with two different outputs does (vertical line test)."
+        },
+        {
+          "id": "q2",
+          "type": "tf",
+          "points": 1,
+          "topic": "Cost, revenue, profit",
+          "review": "../mathematics-1/ch1-functions-and-change.html#economics",
+          "prompt": "<p>An olive-oil mill in Sfax presses farmers’ olives for a fee of 0.150 TND per kg. For the season, its fixed costs are 27,000 TND and its variable cost is 0.060 TND per kg pressed (illustrative figures).</p><p>True or false: the mill breaks even when it presses 300,000 kg of olives.</p>",
+          "answer": true,
+          "explain": "R(q) = 0.150q and C(q) = 27,000 + 0.060q (q in kg).<br>Break-even: R(q) = C(q)<br>0.150q = 27,000 + 0.060q<br>0.090q = 27,000<br>q = 27,000 ÷ 0.090 = 300,000 kg.<br>Check: R = 0.150 × 300,000 = 45,000 TND and C = 27,000 + 0.060 × 300,000 = 27,000 + 18,000 = 45,000 TND ✓ (profit = 0).<br><b>Answer: True.</b><br>Trap: 27,000 ÷ 0.150 = 180,000 kg makes the revenue equal to the <i>fixed</i> cost only. At 180,000 kg the mill also pays 0.060 × 180,000 = 10,800 TND of variable cost, so it still makes a loss of 10,800 TND. Break-even means revenue = <b>total</b> cost (fixed + variable), so profit = 0."
+        },
+        {
+          "id": "q3",
+          "type": "tf",
+          "points": 1,
+          "topic": "Rates of change",
+          "review": "../mathematics-1/ch1-functions-and-change.html#rates",
+          "prompt": "<p>During a promotion, a café in Tunis lowers the price of a cappuccino from 3.00 TND to 2.40 TND. After the promotion, the price goes back up from 2.40 TND to 3.00 TND (illustrative prices).</p><p>True or false: the price first fell by 20% and then rose by 20%.</p>",
+          "answer": false,
+          "explain": "Relative change = (new − old) ÷ old, and the “old” value is the price <b>before each change</b>.<br>Fall: (2.40 − 3.00) ÷ 3.00 = −0.60 ÷ 3.00 = −0.20 = −20% ✓.<br>Rise: (3.00 − 2.40) ÷ 2.40 = 0.60 ÷ 2.40 = 0.25 = <b>+25%</b>, not +20%.<br>The total change is the same (0.60 TND) but the starting value is smaller, so the relative change is bigger (like +1,000 people for a village and for New York in the notes).<br><b>Answer: False.</b><br>Trap: dividing both changes by the same number (3.00). Each relative change is divided by its own old value, so a −20% fall needs a +25% rise to come back."
+        },
+        {
+          "id": "q4",
+          "type": "tf",
+          "points": 1,
+          "topic": "Exponential functions",
+          "review": "../mathematics-1/ch1-functions-and-change.html#exponential",
+          "prompt": "<p>The population of Greater Tunis is modelled by P = 2.8(1.015)<sup>t</sup> million people, where t is the number of years after 2020 (illustrative model).</p><p>True or false: the same model can be written P = 2.8e<sup>0.015t</sup>.</p>",
+          "answer": false,
+          "justify": {
+            "points": 0.5,
+            "model": "False. In the form P₀e<sup>kt</sup> the growth factor is a = e<sup>k</sup>, so k = ln 1.015 ≈ 0.0149, not 0.015. The formula 2.8e<sup>0.015t</sup> multiplies P by e<sup>0.015</sup> ≈ 1.0151 each year (1.51% per year), so it is a slightly different model. The correct form is P = 2.8e<sup>0.0149t</sup>.",
+            "rubric": [
+              {
+                "text": "Uses a = e^k (k = ln a) and finds k = ln 1.015 ≈ 0.0149, not 0.015 (or checks it the other way: e^0.015 ≈ 1.0151, not 1.015)",
+                "points": 0.25
+              },
+              {
+                "text": "Concludes that the two formulas are different models (2.8e^(0.015t) grows by about 1.51% per year instead of 1.5%), so the statement is false",
+                "points": 0.25
+              }
+            ]
+          },
+          "explain": "Any exponential P₀a<sup>t</sup> can be written P₀e<sup>kt</sup> with a = e<sup>k</sup>, so <b>k = ln a</b> (section 8).<br>Here a = 1.015, so k = ln 1.015 ≈ 0.0149 (not 0.015). The base-e form is P = 2.8e<sup>0.0149t</sup>.<br>The formula 2.8e<sup>0.015t</sup> multiplies P by e<sup>0.015</sup> ≈ 1.0151 each year: that is 1.51% per year instead of 1.5%, a slightly different model (after 50 years it gives 5.93 million instead of 5.89 million).<br><b>Answer: False.</b><br>Trap: a = 1 + r is the annual growth factor; the continuous rate is k = ln(1 + r). They are close but not equal (in the notes, 3.4% per year ↔ a continuous rate of 3.34%)."
+        },
+        {
+          "id": "q5",
+          "type": "tf",
+          "points": 1,
+          "topic": "Doubling time & half-life",
+          "review": "../mathematics-1/ch1-functions-and-change.html#base-e",
+          "prompt": "<p>A hotel in Djerba owns a minibus whose value decreases by 20% every year (illustrative).</p><p>True or false: the minibus loses half of its value in about 3.1 years.</p>",
+          "answer": true,
+          "explain": "Losing 20% per year means keeping 80%: V = V₀(0.8)<sup>t</sup> (factor a = 1 − 0.20 = 0.8).<br>Half of the value: V₀(0.8)<sup>t</sup> = 0.5V₀ → 0.8<sup>t</sup> = 0.5 (V₀ cancels)<br>t · ln 0.8 = ln 0.5<br>t = ln 0.5 ÷ ln 0.8 = (−0.6931) ÷ (−0.2231) ≈ 3.11 years.<br><b>Answer: True</b> (about 3.1 years).<br>Traps: 50% ÷ 20% = 2.5 years treats the loss as linear. But each year the minibus loses 20% of a <i>smaller</i> value: after 2.5 years it still keeps 0.8<sup>2.5</sup> ≈ 57% of its value. ln 2 ÷ 0.2 ≈ 3.47 treats 20% as a continuous rate k, and ln 0.5 ÷ ln 0.2 ≈ 0.43 uses the loss 0.2 instead of the factor 0.8."
+        },
+        {
+          "id": "q6",
+          "type": "tf",
+          "points": 1,
+          "topic": "New functions from old",
+          "review": "../mathematics-1/ch1-functions-and-change.html#transform",
+          "prompt": "<p>C(q) is the monthly cost, in TND, of making q sandwiches at a sandwich shop in Tunis. Next month the rent goes up by 200 TND, and nothing else changes.</p><p>True or false: next month’s cost function is C(q + 200).</p>",
+          "answer": false,
+          "explain": "The rent is a fixed cost: it adds 200 TND to the cost <b>whatever q is</b>. The new cost is C(q) + 200: the graph of C moves <b>up</b> 200, and its slope (the marginal cost) does not change (notes, Example 4).<br>C(q + 200) changes the <i>input</i>: it is the old cost of making q + 200 sandwiches (the graph moves 200 to the left). Example with C(q) = 1,500 + 0.8q: C(q) + 200 = 1,700 + 0.8q, but C(q + 200) = 1,500 + 0.8(q + 200) = 1,660 + 0.8q.<br><b>Answer: False.</b><br>Rule: f(x) + k changes the output (up or down); f(x + k) changes the input (left or right)."
+        }
+      ]
+    },
+    {
+      "title": "Part II · Multiple choice",
+      "intro": "One correct answer per question",
+      "questions": [
+        {
+          "id": "q7",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Exponential functions",
+          "review": "../mathematics-1/ch1-functions-and-change.html#exponential",
+          "prompt": "<p>A hotel in Djerba welcomed 18,000 guests in 2023 and 21,780 guests in 2025 (illustrative figures). Assume that the number of guests grows exponentially.</p><p>What is the annual growth rate of the number of guests?</p>",
+          "options": [
+            "21% per year",
+            "1.1% per year",
+            "10% per year",
+            "10.5% per year"
+          ],
+          "answer": 2,
+          "explain": "Exponential: G = G₀a<sup>t</sup>, with t = years after 2023. In 2025, t = 2:<br>18,000a<sup>2</sup> = 21,780<br>a<sup>2</sup> = 21,780 ÷ 18,000 = 1.21<br>a = √1.21 = 1.1, so r = a − 1 = 0.10 = <b>10% per year</b>.<br>Check: 18,000 × 1.1 = 19,800 in 2024, and 19,800 × 1.1 = 21,780 in 2025 ✓. <b>Answer (c).</b><br>(a) 21% is the growth over <i>two</i> years (factor 1.21), not per year.<br>(d) 10.5% = 21% ÷ 2 treats percentages as if they added up. Growth compounds: +10%, then +10% of a bigger number, gives +21% in total.<br>(b) 1.1% confuses the factor a = 1.1 with the rate: a factor of 1.1 means +10%, as 1.03 means +3%."
+        },
+        {
+          "id": "q8",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Supply, demand & depreciation",
+          "review": "../mathematics-1/ch1-functions-and-change.html#market",
+          "prompt": "<p>In a local market for olive oil in Sfax, the weekly demand is q = 5,200 − 160p and the weekly supply is q = 240p − 800, where p is the price in TND per litre and q is the quantity in litres (illustrative model). The authorities fix the price at 11 TND per litre.</p><p>What happens in this market at that price?</p>",
+          "options": [
+            "A surplus of 1,600 litres per week",
+            "A shortage of 1,600 litres per week",
+            "No surplus and no shortage: 11 TND is the equilibrium price",
+            "A shortage of 3,440 litres per week"
+          ],
+          "answer": 1,
+          "explain": "At p = 11:<br>Demand: q = 5,200 − 160 × 11 = 5,200 − 1,760 = 3,440 litres.<br>Supply: q = 240 × 11 − 800 = 2,640 − 800 = 1,840 litres.<br>Demand is larger than supply: a <b>shortage</b> of 3,440 − 1,840 = 1,600 litres per week. <b>Answer (b).</b><br>Check with the equilibrium: 5,200 − 160p = 240p − 800 → 6,000 = 400p → p* = 15 TND and q* = 2,800 litres. 11 TND is below p*, and a price below the equilibrium always gives a shortage ✓.<br>(a) A surplus means supply &gt; demand; here it is the opposite.<br>(c) comes from a sign slip when solving (5,200 − 800 = 400p gives p = 11), or from computing the supply as 240 × 11 + 800.<br>(d) 3,440 litres is the quantity demanded, not the gap between demand and supply."
+        },
+        {
+          "id": "q9",
+          "type": "mcq",
+          "points": 1,
+          "topic": "New functions from old",
+          "review": "../mathematics-1/ch1-functions-and-change.html#transform",
+          "prompt": "<p>The table gives some values of a function f.</p><div class='table-wrap'><table><tbody><tr><td><strong>x</strong></td><td class='n'>0</td><td class='n'>1</td><td class='n'>2</td><td class='n'>3</td><td class='n'>4</td><td class='n'>5</td><td class='n'>6</td></tr><tr><td><strong>f(x)</strong></td><td class='n'>5</td><td class='n'>1</td><td class='n'>−2</td><td class='n'>2</td><td class='n'>−1</td><td class='n'>−3</td><td class='n'>4</td></tr></tbody></table></div><p>Let g(x) = 2f(x − 1) + 3. What is g(4)?</p>",
+          "options": [
+            "0",
+            "10",
+            "−3",
+            "7"
+          ],
+          "answer": 3,
+          "explain": "Put x = 4 everywhere in g(x) = 2f(x − 1) + 3, and work from the inside out:<br>g(4) = 2f(4 − 1) + 3 = 2f(3) + 3.<br>From the table, f(3) = 2, so g(4) = 2 × 2 + 3 = 4 + 3 = <b>7</b>. <b>Answer (d).</b><br>In graph words: g is f shifted <b>right</b> 1, stretched vertically by 2, then shifted up 3. The value of g at x = 4 comes from the value of f at x = 3.<br>(c) −3 = 2f(5) + 3 moves the wrong way: f(x − 1) uses the input x − 1, not x + 1.<br>(a) 0 = 2f(4) − 1 + 3 puts the −1 outside the brackets: f(x − 1) changes the input, f(x) − 1 changes the output.<br>(b) 10 = 2 × (f(3) + 3) adds before multiplying. Multiply first, then add: 2f(3) + 3."
+        },
+        {
+          "id": "q10",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Power functions",
+          "review": "../mathematics-1/ch1-functions-and-change.html#power",
+          "prompt": "<p>Which statement about the function f(x) = 40 / (2x)<sup>3</sup> is correct?</p>",
+          "options": [
+            "It is a power function kx<sup>p</sup> with k = 5 and p = −3.",
+            "It is a power function kx<sup>p</sup> with k = 20 and p = −3.",
+            "It is a power function kx<sup>p</sup> with k = 5 and p = 3.",
+            "It is not a power function, because x is in the denominator."
+          ],
+          "answer": 0,
+          "explain": "(2x)<sup>3</sup> = 2<sup>3</sup>x<sup>3</sup> = 8x<sup>3</sup> (rule (ab)<sup>n</sup> = a<sup>n</sup>b<sup>n</sup>).<br>f(x) = 40 ÷ (8x<sup>3</sup>) = 5 · 1/x<sup>3</sup> = <b>5x<sup>−3</sup></b>: a power function with k = 5 and p = −3. <b>Answer (a).</b><br>Check with x = 1: 40 ÷ 2<sup>3</sup> = 5 ✓.<br>(b) cubes only the x (40 ÷ 2x<sup>3</sup> = 20x<sup>−3</sup>), but (2x)<sup>3</sup> = 2x · 2x · 2x.<br>(c) forgets that 1/x<sup>3</sup> = x<sup>−3</sup>: an x in the denominator gives a negative power.<br>(d) An x in the denominator is allowed: 1/x<sup>n</sup> = x<sup>−n</sup>, as in 5/x<sup>3</sup> = 5x<sup>−3</sup> in the notes."
+        },
+        {
+          "id": "q11",
+          "type": "mcq",
+          "points": 1,
+          "topic": "Logs & compound interest",
+          "review": "../mathematics-1/ch1-functions-and-change.html#ln",
+          "prompt": "<p>Amira wants to save 10,000 TND for 4 years. Bank A pays 6% per year, compounded annually. Bank B pays 5.9% per year, compounded continuously (illustrative rates).</p><p>Which bank gives the larger balance after 4 years, and what is that balance?</p>",
+          "options": [
+            "Bank A, with 12,624.77 TND",
+            "Bank B, with 12,661.74 TND",
+            "Bank A, with 12,712.49 TND",
+            "Bank B, with 12,577.20 TND"
+          ],
+          "answer": 1,
+          "explain": "Bank A, compounded annually: 10,000(1.06)<sup>4</sup> = 10,000 × 1.262477 = 12,624.77 TND.<br>Bank B, compounded continuously: 10,000e<sup>0.059 × 4</sup> = 10,000e<sup>0.236</sup> = 10,000 × 1.266174 = <b>12,661.74 TND</b>.<br>Bank B gives more although its rate is smaller: continuous compounding at 5.9% multiplies the balance by e<sup>0.059</sup> ≈ 1.0608 each year, which is more than 1.06. <b>Answer (b).</b><br>(a) 12,624.77 TND is Bank A’s correct balance, but it is not the larger one. If you found 12,577.20 TND for Bank B, you used the annual formula (1.059)<sup>4</sup> for a continuous rate.<br>(c) 12,712.49 = 10,000e<sup>0.24</sup> uses the continuous formula for Bank A, which is compounded annually.<br>(d) 12,577.20 = 10,000(1.059)<sup>4</sup> uses the annual formula for Bank B."
+        }
+      ]
+    },
+    {
+      "title": "Part III · Calculations",
+      "intro": "Work on paper, then type only the final number, rounded as asked",
+      "questions": [
+        {
+          "id": "q12",
+          "type": "problem",
+          "topic": "Linear functions",
+          "review": "../mathematics-1/ch1-functions-and-change.html#linear",
+          "prompt": "<p>A louage company sets its fares as a linear function of the distance. A 60-km trip costs 6.20 TND and a 150-km trip costs 13.40 TND (illustrative fares). Let F(d) be the fare, in TND, for a trip of d km.</p>",
+          "parts": [
+            {
+              "type": "numeric",
+              "points": 1,
+              "prompt": "<p>Find the slope of F, in TND per km.</p>",
+              "answer": 0.08,
+              "tol": 0.0005,
+              "unit": "TND per km",
+              "explain": "Slope = Δ fare ÷ Δ distance = (13.40 − 6.20) ÷ (150 − 60) = 7.20 ÷ 90 = <b>0.08 TND per km</b>: each extra km adds 0.08 TND (80 millimes) to the fare.<br>Traps: 90 ÷ 7.20 = 12.5 is in km per TND (units upside down: the output goes on top, the input below). 7.20 is the total change (you must divide by the 90 km). 13.40 ÷ 150 ≈ 0.089 or 6.20 ÷ 60 ≈ 0.103 is the average price per km of one trip, which includes the fixed part."
+            },
+            {
+              "type": "numeric",
+              "points": 0.5,
+              "prompt": "<p>Find F(0), the vertical intercept of F, in TND.</p>",
+              "answer": 1.4,
+              "tol": 0.005,
+              "unit": "TND",
+              "explain": "F(d) = b + 0.08d. Use the point (60, 6.20): 6.20 = b + 0.08 × 60 = b + 4.80, so b = <b>1.40 TND</b>.<br>Check with (150, 13.40): 1.40 + 0.08 × 150 = 1.40 + 12.00 = 13.40 ✓.<br>Meaning: F(0) = 1.40 TND is the fixed part of every fare, paid before the distance is counted. So F(d) = 1.40 + 0.08d.<br>Trap: 6.20 is F(60), not F(0): the line does not start at the first data point."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "topic": "Functions & graphs",
+              "review": "../mathematics-1/ch1-functions-and-change.html#functions",
+              "prompt": "<p>A passenger pays 17.00 TND for a trip. How long is the trip, in km?</p>",
+              "answer": 195,
+              "tol": 0.5,
+              "unit": "km",
+              "explain": "17.00 TND is an <b>output</b> (a fare), so solve F(d) = 17:<br>1.40 + 0.08d = 17<br>0.08d = 15.60<br>d = 15.60 ÷ 0.08 = <b>195 km</b>.<br>Check: F(195) = 1.40 + 0.08 × 195 = 1.40 + 15.60 = 17.00 ✓.<br>Traps: F(17) = 1.40 + 0.08 × 17 = 2.76 TND is the fare of a 17-km trip: it uses 17 as an input. 17 ÷ 0.08 = 212.5 km forgets the fixed 1.40 TND."
+            }
+          ]
+        },
+        {
+          "id": "q13",
+          "type": "problem",
+          "topic": "Rates of change",
+          "review": "../mathematics-1/ch1-functions-and-change.html#rates",
+          "prompt": "<p>The table gives the phosphate exports E of a Tunisian mining company, in million tonnes (illustrative figures).</p><div class='table-wrap'><table><tbody><tr><td><strong>Year</strong></td><td class='n'>2019</td><td class='n'>2020</td><td class='n'>2021</td><td class='n'>2022</td><td class='n'>2023</td><td class='n'>2024</td></tr><tr><td><strong>E (million tonnes)</strong></td><td class='n'>3.20</td><td class='n'>2.75</td><td class='n'>2.24</td><td class='n'>2.62</td><td class='n'>2.88</td><td class='n'>3.36</td></tr></tbody></table></div>",
+          "parts": [
+            {
+              "type": "numeric",
+              "points": 0.5,
+              "prompt": "<p>Find the average rate of change of E from 2019 to 2023, in million tonnes per year. Give the exact value, with a minus sign if it is a decrease.</p>",
+              "answer": -0.08,
+              "tol": 0.0005,
+              "unit": "million tonnes per year",
+              "explain": "Average rate of change = (E(2023) − E(2019)) ÷ (2023 − 2019) = (2.88 − 3.20) ÷ 4 = −0.32 ÷ 4 = <b>−0.08 million tonnes per year</b>.<br>In words: from 2019 to 2023, exports fell on average by 0.08 million tonnes (80,000 tonnes) per year. The average hides the fall until 2021 and the rise after it.<br>Traps: −0.32 is the total change (not divided by 4). +0.08 reverses only the top: keep the same order on top and bottom. −0.064 divides by 5, but 2019 → 2023 is 4 years (count the gaps, not the columns). −0.1 (or −10) is the relative change of part (b), not a rate per year."
+            },
+            {
+              "type": "numeric",
+              "points": 0.5,
+              "prompt": "<p>Find the relative change in E from 2019 to 2023, as a percentage to 1 decimal place, with a minus sign if it is a decrease.</p>",
+              "answer": -10,
+              "tol": 0.05,
+              "unit": "%",
+              "explain": "Relative change = (new − old) ÷ old = (2.88 − 3.20) ÷ 3.20 = −0.32 ÷ 3.20 = −0.10 = <b>−10.0%</b>: exports were 10% lower in 2023 than in 2019.<br>Same data, two different measures: the average rate of change (a) has units (million tonnes per year); the relative change (b) is a percentage with no units.<br>Traps: −0.32 ÷ 2.88 ≈ −11.1% divides by the new value (always divide by the old value). −0.1 is the decimal form: the question asks for a percentage (typing −0.1 means −0.1%). −0.32 is the total change and −0.08 is the average rate of change."
+            }
+          ]
+        },
+        {
+          "id": "q14",
+          "type": "problem",
+          "topic": "Cost, revenue, profit",
+          "review": "../mathematics-1/ch1-functions-and-change.html#economics",
+          "prompt": "<p>A bakery in Sousse makes and sells croissants. Its monthly cost C, in TND, is a linear function of the number q of croissants made: C = 2,340 TND when q = 3,000, and C = 2,790 TND when q = 4,000. Each croissant sells for 0.900 TND (illustrative figures).</p>",
+          "parts": [
+            {
+              "type": "numeric",
+              "points": 0.5,
+              "prompt": "<p>Find the marginal cost, in TND per croissant.</p>",
+              "answer": 0.45,
+              "tol": 0.0005,
+              "unit": "TND per croissant",
+              "explain": "For a linear cost function, the marginal cost is the slope:<br>MC = (2,790 − 2,340) ÷ (4,000 − 3,000) = 450 ÷ 1,000 = <b>0.45 TND per croissant</b>: each extra croissant adds 0.45 TND to the monthly cost.<br>Traps: 2,340 ÷ 3,000 = 0.78 (or 2,790 ÷ 4,000 ≈ 0.70) is the average cost per croissant. It includes a share of the fixed costs, so it is not the cost of <i>one more</i> croissant. 450 is the extra cost of 1,000 croissants (divide by Δq = 1,000)."
+            },
+            {
+              "type": "numeric",
+              "points": 1,
+              "prompt": "<p>Find the monthly profit if the bakery makes and sells 5,000 croissants. (Use a minus sign for a loss.)</p>",
+              "answer": 1260,
+              "tol": 0.5,
+              "unit": "TND",
+              "explain": "Fixed cost (the vertical intercept): 2,340 = FC + 0.45 × 3,000 = FC + 1,350, so FC = 990 TND and C(q) = 990 + 0.45q.<br>Revenue: R(q) = 0.90q.<br>Profit: π(5,000) = R − C = 0.90 × 5,000 − (990 + 0.45 × 5,000) = 4,500 − 3,240 = <b>1,260 TND</b> (a profit).<br>Check: break-even at 990 ÷ (0.90 − 0.45) = 2,200 croissants, and 5,000 &gt; 2,200 ✓.<br>Traps: 4,500 − 0.78 × 5,000 = 600 uses the average cost as if it were constant (it falls as q grows). (0.90 − 0.45) × 5,000 = 2,250 forgets the fixed cost. 4,500 − 2,790 = 1,710 uses the cost of 4,000 croissants."
+            }
+          ]
+        },
+        {
+          "id": "q15",
+          "type": "numeric",
+          "points": 1,
+          "topic": "Supply, demand & depreciation",
+          "review": "../mathematics-1/ch1-functions-and-change.html#market",
+          "prompt": "<p>A café in Tunis depreciates its espresso machine linearly. Two years after the purchase, the machine is worth 6,300 TND; five years after the purchase, it is worth 3,300 TND (illustrative figures).</p><p>What was the purchase price of the machine?</p>",
+          "answer": 8300,
+          "tol": 0.5,
+          "unit": "TND",
+          "explain": "Linear: V(t) = V₀ + mt.<br>Slope: m = (3,300 − 6,300) ÷ (5 − 2) = −3,000 ÷ 3 = −1,000 TND per year (negative: the machine loses 1,000 TND of value each year).<br>Purchase price = V(0): 6,300 = V₀ + (−1,000)(2) = V₀ − 2,000, so V₀ = <b>8,300 TND</b>.<br>Check: V(5) = 8,300 − 1,000 × 5 = 3,300 ✓. So V(t) = 8,300 − 1,000t.<br>Traps: 4,300 = 6,300 − 2,000 is the depreciation sign error: going back in time, the machine was worth <i>more</i>, not less. 7,300 goes back only 1 year instead of 2."
+        },
+        {
+          "id": "q16",
+          "type": "numeric",
+          "points": 1,
+          "topic": "Logs & compound interest",
+          "review": "../mathematics-1/ch1-functions-and-change.html#ln",
+          "prompt": "<p>Youssef deposits 3,500 TND in a savings account at a Tunisian bank. The account pays 6.75% per year, compounded annually (illustrative rate).</p><p>Using logarithms, find the time t, in years, at which the balance formula gives 5,000 TND. Give t to 2 decimal places.</p>",
+          "answer": 5.46,
+          "tol": 0.005,
+          "unit": "years",
+          "explain": "Annual compounding: B = 3,500(1.0675)<sup>t</sup>.<br>3,500(1.0675)<sup>t</sup> = 5,000<br>(1.0675)<sup>t</sup> = 5,000 ÷ 3,500 = 1.428571 (isolate first)<br>t · ln 1.0675 = ln 1.428571 (take ln, bring the exponent down)<br>t = 0.356675 ÷ 0.065319 = <b>5.46 years</b>.<br>In words: the formula reaches 5,000 TND after about 5.46 years. (With interest added once a year, the real balance is 4,851.85 TND after 5 years and first passes 5,000 TND when the 6th year’s interest is added: 5,179.35 TND.)<br>Traps: ln 1.428571 ÷ 0.0675 ≈ 5.28 uses the continuous formula e<sup>0.0675t</sup>, but this account is compounded annually. ln(1.428571 ÷ 1.0675) ≈ 0.29 uses a rule that does not exist: ln a ÷ ln b ≠ ln(a ÷ b). 1,500 ÷ (3,500 × 0.0675) ≈ 6.35 is simple interest. Rounding ln 1.0675 to 0.065 too early gives 5.49: keep 4 decimals (0.0653) until the end."
+        },
+        {
+          "id": "q17",
+          "type": "numeric",
+          "points": 1,
+          "topic": "Doubling time & half-life",
+          "review": "../mathematics-1/ch1-functions-and-change.html#base-e",
+          "prompt": "<p>During its launch year, the number of users of a new food-delivery app in Sousse grows by 18% per month (illustrative).</p><p>Assuming this exponential growth, how long does it take for the number of users to double? Give your answer in months, to 2 decimal places.</p>",
+          "answer": 4.19,
+          "tol": 0.005,
+          "unit": "months",
+          "explain": "U = U₀(1.18)<sup>t</sup>, with t in months (factor a = 1 + 0.18).<br>Double: U₀(1.18)<sup>t</sup> = 2U₀ → (1.18)<sup>t</sup> = 2 (U₀ cancels: the doubling time does not depend on the starting number)<br>t · ln 1.18 = ln 2<br>t = 0.693147 ÷ 0.165514 = <b>4.19 months</b>.<br>Traps: ln 2 ÷ 0.18 ≈ 3.85 treats 18% as a continuous rate k (that formula is for U₀e<sup>kt</sup>). The Rule of 70 (70 ÷ 18 ≈ 3.89) is only a rough check, not the answer. 100 ÷ 18 ≈ 5.56 assumes linear growth (+18% of the <i>starting</i> number every month). Rounding ln 1.18 to 0.17 too early gives 4.08: keep 4 decimals (0.1655) and round only at the end."
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="../assets/exam.js"></script>
+</body>
+</html>
