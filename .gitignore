@@ -2,3 +2,6 @@
 absences.html
 _authoring/
 .vercel
+
+.vercel
+.env*
