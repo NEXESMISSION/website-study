@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>MCQs Test 01 · Practice A · Financial Mathematics</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/exam.css">
+</head>
+<body class="finmath">
+<div id="exam"></div>
+<script type="application/json" id="exam-data">
+{
+ "id": "finmath-mcq1-A",
+ "title": "MCQs Test 01 · Practice A",
+ "shortTitle": "FinMath MCQs 01 · A",
+ "course": "Financial Mathematics",
+ "courseClass": "finmath",
+ "covers": "Chapter I · Simple interest",
+ "duration": 60,
+ "hub": "../exams/index.html",
+ "description": "Simulates Dr. Fersi’s Moodle quiz “MCQs Test 01” on Chapter I (simple interest): one hour, multiple choice only, as in Safe Exam Browser. It mixes concept questions with calculations: day counts, interest, present and future value, rate and time, average rate and two-capital equations.",
+ "instructions": [
+  "Duration: 60 minutes. 31 questions (multiple choice and one true/false), 0.5 or 1 point each, total 20 points.",
+  "Exactly one correct answer per question. In this practice a wrong answer or a blank simply earns 0.",
+  "Calculator allowed. Work on paper: the real test runs in Safe Exam Browser, so no notes, no other tabs, no phone.",
+  "All interest is simple interest. Use the commercial year of 360 days (ordinary interest) unless a question says exact interest (365 days).",
+  "Count days the course way: do not count the start day, count the end day. 2026 and 2027 are not leap years.",
+  "Amounts are shown to the millime (3 decimals) and rates to 2 decimals. Keep full precision while you calculate and round only at the end."
+ ],
+ "sections": [
+  {
+   "title": "Part I · Concepts (5 pts)",
+   "intro": "One correct answer per question",
+   "questions": [
+    {
+     "id": "q1",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Time value of money",
+     "review": "../financial-math/ch1-simple-interest.html#tvm",
+     "prompt": "<p>According to the <b>time value of money</b>, why does a rational person prefer 5,000 TND today to 5,000 TND in one year?</p>",
+     "options": [
+      "Because a sum received in one year is taxed, while a sum received today is never taxed.",
+      "Because the face value of every sum of money falls by the interest rate each year.",
+      "Because 5,000 TND today can be placed at interest and be worth more than 5,000 TND in one year.",
+      "Because future money always earns compound interest, and compound interest is risky."
+     ],
+     "answer": 2,
+     "explain": "<p><b>Today’s money can be invested.</b> Placed at interest, 5,000 TND today becomes more than 5,000 TND in one year, so it is worth more than 5,000 TND received in one year. This is the definition of the time value of money (plus the three reasons for interest: risk, liquidity, inflation).</p><p>Taxes are not part of the TVM principle. “Face value falls by the rate” is invented: the face value is the amount written on an instrument, it does not shrink. Future money does not “always earn compound interest”: money you have not received yet earns nothing for you.</p>"
+    },
+    {
+     "id": "q2",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Time value of money",
+     "review": "../financial-math/ch1-simple-interest.html#tvm",
+     "prompt": "<p>Hamza puts 4,000 TND into a 12-month <i>compte à terme</i>. During these 12 months he cannot use the money to buy the scooter he likes. This sacrifice is paid by interest. Which reason for interest is it?</p>",
+     "options": [
+      "Liquidity (opportunity cost)",
+      "Risk of default",
+      "Inflation (loss of purchasing power)",
+      "The borrower’s convenience"
+     ],
+     "answer": 0,
+     "explain": "<p><b>Liquidity / opportunity cost.</b> While the money is locked in the deposit, Hamza gives up the other things he could do with it (the scooter). Interest pays for this sacrifice.</p><p>Risk of default = the borrower may not pay back (not described here). Inflation = prices rise, so money buys less (not described here). The borrower’s convenience is <b>never</b> one of the three reasons: interest compensates the <b>lender</b> for risk, liquidity and inflation.</p>"
+    },
+    {
+     "id": "q3",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Financial instruments",
+     "review": "../financial-math/ch1-simple-interest.html#instruments",
+     "prompt": "<p>An investor pays 9,880 TND for a Tunisian Treasury bill (BTCT) with a face value of 10,000 TND. Which statement is correct?</p>",
+     "options": [
+      "At maturity the investor receives 9,880 TND plus a separate interest payment.",
+      "At maturity the investor receives 10,000 TND plus interest calculated on 10,000 TND.",
+      "The 120 TND difference is a fee kept by the Treasury, so the investor earns nothing.",
+      "At maturity the State pays 10,000 TND: the 120 TND difference is the investor’s interest."
+     ],
+     "answer": 3,
+     "explain": "<p>A T-bill is <b>sold below its face value</b>. The investor pays 9,880 TND today and receives the face value, 10,000 TND, at maturity. The difference, 10,000 − 9,880 = <b>120 TND</b>, is the interest. There is no separate interest payment.</p><p>“9,880 plus a separate interest payment” and “10,000 plus interest on 10,000” both forget that the interest is already inside the face value. “A fee kept by the Treasury” is the opposite: the investor gains the 120 TND.</p>"
+    },
+    {
+     "id": "q4",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Financial instruments",
+     "review": "../financial-math/ch1-simple-interest.html#instruments",
+     "prompt": "<p>Which instrument pays a <b>fixed rate higher than a savings account</b>, but charges a penalty if you take the money out before the end of the term?</p>",
+     "options": [
+      "A bank savings account",
+      "A certificate of deposit (compte à terme)",
+      "A short-term loan (crédit de trésorerie)",
+      "A Treasury bill bought by the bank"
+     ],
+     "answer": 1,
+     "explain": "<p><b>A certificate of deposit (CD)</b> is a time deposit: fixed term, fixed rate (usually simple interest), higher than a savings account, and a penalty for early withdrawal (less liquid).</p><p>A savings account is liquid: no penalty, but a lower rate. A short-term loan is money you <b>borrow</b>, not money you place. A T-bill is issued by the State and sold below face value; it has no early-withdrawal penalty.</p>"
+    },
+    {
+     "id": "q5",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Financial instruments",
+     "review": "../financial-math/ch1-simple-interest.html#instruments",
+     "prompt": "<p>Which statement about <b>short-term loans</b> is correct, according to the course?</p>",
+     "options": [
+      "They usually carry lower interest rates than long-term loans.",
+      "They are securities sold by the Treasury below their face value.",
+      "They are repaid within one year and are often unsecured (no collateral).",
+      "They are mainly used to save money for retirement or a house."
+     ],
+     "answer": 2,
+     "explain": "<p>Short-term loans are <b>repaid within one year</b>, meet immediate needs (urgent expenses, stock before a season, salaries before a client pays) and are often <b>unsecured</b>.</p><p>Their main disadvantage is a <b>higher</b> rate than long-term loans, so “lower rates” is the trap. “Sold by the Treasury below face value” describes a T-bill. Saving for retirement is the job of savings products, not of a loan.</p>"
+    },
+    {
+     "id": "q6",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Simple interest formulas",
+     "review": "../financial-math/ch1-simple-interest.html#formulas",
+     "prompt": "<p>3,000 TND is placed at 6% <b>simple</b> interest for 3 years. How much interest is earned in the <b>third year alone</b>?</p>",
+     "options": [
+      "202.248 TND",
+      "180 TND",
+      "540 TND",
+      "190.800 TND"
+     ],
+     "answer": 1,
+     "explain": "<p>With simple interest, every year gives the same interest on the <b>original</b> capital: 3,000 × 0.06 = <b>180 TND</b> in year 1, year 2 and year 3.</p><p>202.248 TND is the compound-interest third year (3,000 × 1.06² × 0.06): interest on interest is not simple interest. 190.800 TND is the compound second year (3,000 × 1.06 × 0.06). 540 TND is the total of the three years (3,000 × 0.06 × 3), not the third year alone.</p>"
+    },
+    {
+     "id": "q7",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Present & future value",
+     "review": "../financial-math/ch1-simple-interest.html#formulas",
+     "prompt": "<p>In the formula <b>A = P × (1 + r × n)</b>, what does A represent?</p>",
+     "options": [
+      "The interest earned during the period only",
+      "The annual interest rate, written as a decimal",
+      "The capital invested at the start of the period",
+      "The acquired value: capital plus interest at the end"
+     ],
+     "answer": 3,
+     "explain": "<p><b>A = acquired value</b> (valeur acquise, future value) = P + I = P + P × r × n = P × (1 + r × n). It is what you have at the end.</p><p>The interest alone is I = P × r × n. The annual rate is r. The capital invested at the start is P (the present value).</p>"
+    },
+    {
+     "id": "q8",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Day counting",
+     "review": "../financial-math/ch1-simple-interest.html#time",
+     "prompt": "<p>Same capital, same rate, same number of days. Which statement is correct?</p>",
+     "options": [
+      "Ordinary interest (360 days) is larger, because d/360 is larger than d/365.",
+      "Exact interest (365 days) is larger, because a 365-day year is longer.",
+      "The two methods give the same interest when the period is shorter than one year.",
+      "The two methods give the same interest when the rate is lower than 10%."
+     ],
+     "answer": 0,
+     "explain": "<p>I = P × r × d / 360 (ordinary) and I = P × r × d / 365 (exact). Dividing by a <b>smaller</b> number gives a <b>bigger</b> result, so <b>ordinary interest is always a little larger</b>, for any capital, rate and number of days. That is why banks like the 360-day year when they lend.</p><p>“365 is longer, so more interest” is the reverse logic: a longer year makes the same days a <b>smaller</b> fraction of a year. The length of the period and the size of the rate change nothing: the ratio between the two results is always 365/360.</p>"
+    },
+    {
+     "id": "q9",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Simple interest formulas",
+     "review": "../financial-math/ch1-simple-interest.html#formulas",
+     "prompt": "<p>You know the interest I, the capital P and the number of days d (360-day year). Which expression gives the <b>annual rate r</b>?</p>",
+     "options": [
+      "r = I × d / (P × 360)",
+      "r = P × d / (I × 360)",
+      "r = I / (P × d)",
+      "r = I × 360 / (P × d)"
+     ],
+     "answer": 3,
+     "explain": "<p>Start from I = P × r × d / 360. Multiply both sides by 360 and divide by P × d: <b>r = I × 360 / (P × d)</b>.</p><p>I × d / (P × 360) puts d and 360 the wrong way round. P × d / (I × 360) is the inverse of the right answer. I / (P × d) forgets the 360, so it gives a <b>daily</b> rate, not an annual one.</p>"
+    },
+    {
+     "id": "q10",
+     "type": "tf",
+     "points": 0.5,
+     "topic": "Present & future value",
+     "review": "../financial-math/ch1-simple-interest.html#formulas",
+     "prompt": "<p>True or false? At a positive simple rate, the <b>present value</b> of 8,000 TND due in 9 months is <b>greater</b> than 8,000 TND.</p>",
+     "answer": false,
+     "explain": "<p><b>False.</b> PV = 8,000 / (1 + r × 9/12). The denominator is bigger than 1, so the present value is <b>smaller</b> than 8,000 TND. Logic: you place less than 8,000 TND today and the interest brings it up to 8,000 TND in 9 months. A sum due in the future is worth less today (time value of money).</p>"
+    }
+   ]
+  },
+  {
+   "title": "Part II · Day counting (2.5 pts)",
+   "intro": "Do not count the start day; count the end day",
+   "questions": [
+    {
+     "id": "q11",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Day counting",
+     "review": "../financial-math/ch1-simple-interest.html#time",
+     "prompt": "<p>A deposit runs from <b>14 January 2027</b> to <b>3 March 2027</b> (2027 is not a leap year). How many days earn interest?</p>",
+     "options": [
+      "49 days",
+      "50 days",
+      "48 days",
+      "47 days"
+     ],
+     "answer": 2,
+     "explain": "<p>January: 31 − 14 = 17. February 2027: 28. March: 3 (the end day counts). Total 17 + 28 + 3 = <b>48 days</b>.</p><p>49 days counts the start day (or gives February 29 days: 2027 is not a leap year). 50 days gives February 30 days. 47 days forgets to count the end day (3 March).</p>"
+    },
+    {
+     "id": "q12",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Day counting",
+     "review": "../financial-math/ch1-simple-interest.html#time",
+     "prompt": "<p>A short-term loan starts on <b>28 February 2027</b> and is repaid on <b>31 May 2027</b>. How many days of interest?</p>",
+     "options": [
+      "92 days",
+      "90 days",
+      "93 days",
+      "91 days"
+     ],
+     "answer": 0,
+     "explain": "<p>February: 28 − 28 = 0 (28 February 2027 is the last day of February, and the start day is not counted). March 31 + April 30 + May 31 = <b>92 days</b>.</p><p>90 days is the “3 months × 30 days” shortcut: the course counts the real days of each month. 93 days counts the start day (or gives February 29 days). 91 days gives May only 30 days (May has 31: knuckle).</p>"
+    },
+    {
+     "id": "q13",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Day counting",
+     "review": "../financial-math/ch1-simple-interest.html#time",
+     "prompt": "<p>Sami opens a <i>compte à terme</i> on <b>19 November 2026</b> and closes it on <b>7 February 2027</b>. How many days earn interest?</p>",
+     "options": [
+      "78 days",
+      "81 days",
+      "79 days",
+      "80 days"
+     ],
+     "answer": 3,
+     "explain": "<p>November: 30 − 19 = 11. December 31. January 31. February 7. Total 11 + 31 + 31 + 7 = <b>80 days</b>. Crossing into a new year changes nothing in the method.</p><p>81 days counts the start day (19 November). 79 days forgets to count the end day. 78 days is the “30-day months” shortcut: 19 November → 19 February = 3 × 30 = 90, then 12 days back = 78.</p>"
+    },
+    {
+     "id": "q14",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Day counting",
+     "review": "../financial-math/ch1-simple-interest.html#time",
+     "prompt": "<p>A café in Hammamet borrows money on <b>10 July 2027</b> for <b>90 days</b>. On which date must it repay?</p>",
+     "options": [
+      "7 October 2027",
+      "8 October 2027",
+      "10 October 2027",
+      "9 October 2027"
+     ],
+     "answer": 1,
+     "explain": "<p>July: 31 − 10 = 21 days → 90 − 21 = 69 still to go. August 31 → 69 − 31 = 38. September 30 → 38 − 30 = 8. October has more than 8 days, so we stop: <b>8 October 2027</b>. Check: 21 + 31 + 30 + 8 = 90 ✓.</p><p>10 October is the “90 days = 3 months” trap: July and August both have 31 days. 9 October gives August only 30 days. 7 October counts the start day (10 July) as a day of interest.</p>"
+    },
+    {
+     "id": "q15",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Day counting",
+     "review": "../financial-math/ch1-simple-interest.html#time",
+     "prompt": "<p>Ines deposits her savings on <b>20 December 2026</b> for <b>75 days</b>. On which date can she withdraw them?</p>",
+     "options": [
+      "3 March 2027",
+      "4 March 2027",
+      "5 March 2027",
+      "6 March 2027"
+     ],
+     "answer": 2,
+     "explain": "<p>December: 31 − 20 = 11 → 75 − 11 = 64. January 31 → 64 − 31 = 33. February 2027 has 28 days → 33 − 28 = 5. So <b>5 March 2027</b>. Check: 11 + 31 + 28 + 5 = 75 ✓.</p><p>3 March gives February 30 days. 4 March counts the start day (or gives February 29 days: 2027 is not a leap year). 6 March gives December 30 days (31 − 20 = 11, not 10: December is a knuckle month).</p>"
+    }
+   ]
+  },
+  {
+   "title": "Part III · Interest, values, rate and time (7.5 pts)",
+   "intro": "One correct answer per question · show your working on paper",
+   "questions": [
+    {
+     "id": "q16",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Simple interest formulas",
+     "review": "../financial-math/ch1-simple-interest.html#formulas",
+     "prompt": "<p>Asma places <b>7,500 TND</b> at a simple rate of <b>5.6%</b> for <b>8 months</b>. How much interest does she earn?</p>",
+     "options": [
+      "280.000 TND",
+      "3,360.000 TND",
+      "9.333 TND",
+      "28,000.000 TND"
+     ],
+     "answer": 0,
+     "explain": "<p>Months → n = 8/12 year. I = P × r × n = 7,500 × 0.056 × 8/12 = 420 × 8/12 = <b>280 TND</b>.</p><p>3,360 TND uses n = 8 (months not divided by 12: that is 8 years). 9.333 TND divides months by 360 (8/360 treats the months as days). 28,000 TND uses r = 5.6 instead of 0.056 (the rate was not divided by 100).</p>"
+    },
+    {
+     "id": "q17",
+     "type": "mcq",
+     "points": 1,
+     "topic": "Simple interest formulas",
+     "review": "../financial-math/ch1-simple-interest.html#formulas",
+     "prompt": "<p>To buy stock before the summer, a bakery in Sousse borrows <b>18,000 TND</b> at <b>8.5%</b> simple interest from <b>22 March 2027</b> to <b>16 July 2027</b>. Ordinary interest (360-day year). How much interest does it pay?</p>",
+     "options": [
+      "497.250 TND",
+      "486.247 TND",
+      "18,493.000 TND",
+      "493.000 TND"
+     ],
+     "answer": 3,
+     "explain": "<p><b>Days:</b> March 31 − 22 = 9, April 30, May 31, June 30, July 16 → 9 + 30 + 31 + 30 + 16 = 116 days.</p><p><b>Interest:</b> I = 18,000 × 0.085 × 116/360 = 1,530 × 116/360 = 177,480/360 = <b>493 TND</b>.</p><p>497.250 TND uses 117 days (start day counted). 486.247 TND divides by 365 (exact interest; the question says ordinary). 18,493 TND is the amount repaid (C + I), not the interest.</p>"
+    },
+    {
+     "id": "q18",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Day counting",
+     "review": "../financial-math/ch1-simple-interest.html#time",
+     "prompt": "<p>A government contract uses <b>exact interest</b> (365-day year). What is the interest on <b>24,000 TND</b> at <b>7.3%</b> for <b>150 days</b>?</p>",
+     "options": [
+      "730.000 TND",
+      "720.000 TND",
+      "72,000.000 TND",
+      "24,720.000 TND"
+     ],
+     "answer": 1,
+     "explain": "<p>Exact interest: I = 24,000 × 0.073 × 150/365 = 1,752 × 150/365 = 262,800/365 = <b>720 TND</b>.</p><p>730 TND is ordinary interest (÷ 360), but the question asks for exact interest. 72,000 TND uses 7.3 instead of 0.073 (rate not divided by 100). 24,720 TND is the acquired value C + I, not the interest.</p>"
+    },
+    {
+     "id": "q19",
+     "type": "mcq",
+     "points": 1,
+     "topic": "Present & future value",
+     "review": "../financial-math/ch1-simple-interest.html#formulas",
+     "prompt": "<p>On <b>3 May 2027</b>, Rania places <b>6,400 TND</b> at <b>6.75%</b> simple interest. She withdraws everything on <b>19 November 2027</b>. What is the <b>acquired value</b>? (360-day year)</p>",
+     "options": [
+      "6,641.200 TND",
+      "6,636.712 TND",
+      "6,640.000 TND",
+      "240.000 TND"
+     ],
+     "answer": 2,
+     "explain": "<p><b>Days:</b> May 31 − 3 = 28, June 30, July 31, August 31, September 30, October 31, November 19 → 28 + 30 + 31 + 31 + 30 + 31 + 19 = 200 days.</p><p><b>Acquired value:</b> A = 6,400 × (1 + 0.0675 × 200/360) = 6,400 × 1.0375 = <b>6,640 TND</b> (interest 240 TND).</p><p>6,641.200 TND uses 201 days (start day counted). 6,636.712 TND divides by 365. 240 TND is only the interest I, not the acquired value C + I.</p>"
+    },
+    {
+     "id": "q20",
+     "type": "mcq",
+     "points": 1,
+     "topic": "Present & future value",
+     "review": "../financial-math/ch1-simple-interest.html#formulas",
+     "prompt": "<p>A phosphate transport company in Gafsa must pay a supplier <b>9,315 TND in 7 months</b>. Its bank pays <b>6%</b> simple interest. How much must it place <b>today</b> to have exactly 9,315 TND on the due date?</p>",
+     "options": [
+      "9,000.000 TND",
+      "8,988.975 TND",
+      "9,304.145 TND",
+      "2,070.000 TND"
+     ],
+     "answer": 0,
+     "explain": "<p>Present value: P = A / (1 + r × n) = 9,315 / (1 + 0.06 × 7/12) = 9,315 / 1.035 = <b>9,000 TND</b>. Check: 9,000 × 0.06 × 7/12 = 315, and 9,000 + 315 = 9,315 ✓.</p><p>8,988.975 TND subtracts interest calculated on the future sum: 9,315 − 9,315 × 0.035. That is wrong, because interest is earned on the amount placed (9,000), not on 9,315. 9,304.145 TND divides the months by 360 (7/360 treats the months as days). 2,070 TND uses r = 6 instead of 0.06.</p>"
+    },
+    {
+     "id": "q21",
+     "type": "mcq",
+     "points": 1,
+     "topic": "Simple interest formulas",
+     "review": "../financial-math/ch1-simple-interest.html#formulas",
+     "prompt": "<p>Mrs. Trabelsi places <b>15,000 TND</b> in a certificate of deposit on <b>6 September 2026</b>. On <b>4 January 2027</b> she withdraws <b>15,350 TND</b> (capital + interest). What annual simple rate did the bank pay? (360-day year)</p>",
+     "options": [
+      "6.94%",
+      "7.10%",
+      "7.00%",
+      "2.33%"
+     ],
+     "answer": 2,
+     "explain": "<p><b>Days:</b> September 30 − 6 = 24, October 31, November 30, December 31, January 4 → 24 + 31 + 30 + 31 + 4 = 120 days.</p><p><b>Interest:</b> I = 15,350 − 15,000 = 350 TND. <b>Rate:</b> r = I × 360 / (P × d) = 350 × 360 / (15,000 × 120) = 126,000 / 1,800,000 = 0.07 = <b>7.00%</b>.</p><p>6.94% uses 121 days (start day counted). 7.10% uses 365 instead of 360. 2.33% is 350/15,000: the interest for the whole period, not turned into an annual rate (the time is missing).</p>"
+    },
+    {
+     "id": "q22",
+     "type": "mcq",
+     "points": 1,
+     "topic": "Simple interest formulas",
+     "review": "../financial-math/ch1-simple-interest.html#formulas",
+     "prompt": "<p>On <b>17 August 2026</b>, Youssef lends <b>5,400 TND</b> at <b>8%</b> simple interest. He wants to earn exactly <b>144 TND</b> of interest. On which date must the loan end? (360-day year)</p>",
+     "options": [
+      "14 December 2026",
+      "15 December 2026",
+      "17 December 2026",
+      "16 December 2026"
+     ],
+     "answer": 1,
+     "explain": "<p><b>Time:</b> d = I × 360 / (P × r) = 144 × 360 / (5,400 × 0.08) = 51,840 / 432 = 120 days.</p><p><b>Date:</b> August 31 − 17 = 14 → 120 − 14 = 106. September 30 → 76. October 31 → 45. November 30 → 15. So <b>15 December 2026</b>. Check: 14 + 30 + 31 + 30 + 15 = 120 ✓.</p><p>17 December is the “120 days = 4 months” trap (September and November have 30 days, but August and October have 31). 16 December gives August only 30 days. 14 December counts the start day.</p>"
+    },
+    {
+     "id": "q23",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Simple interest formulas",
+     "review": "../financial-math/ch1-simple-interest.html#formulas",
+     "prompt": "<p>What capital, placed at <b>9%</b> simple interest for <b>5 months</b>, earns <b>300 TND</b> of interest?</p>",
+     "options": [
+      "8,300.000 TND",
+      "666.667 TND",
+      "240,000.000 TND",
+      "8,000.000 TND"
+     ],
+     "answer": 3,
+     "explain": "<p>P = I / (r × n) = 300 / (0.09 × 5/12) = 300 / 0.0375 = <b>8,000 TND</b>. Check: 8,000 × 0.09 × 5/12 = 300 ✓.</p><p>8,300 TND is P + I (the acquired value), but the question asks for the capital. 666.667 TND uses n = 5 (months not divided by 12). 240,000 TND divides the months by 360, as if they were days.</p>"
+    },
+    {
+     "id": "q24",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Simple interest formulas",
+     "review": "../financial-math/ch1-simple-interest.html#formulas",
+     "prompt": "<p>A placement of <b>3,600 TND</b> became <b>3,708 TND</b> after <b>4 months</b>, at simple interest. What is the annual rate?</p>",
+     "options": [
+      "9.00%",
+      "8.74%",
+      "3.00%",
+      "0.75%"
+     ],
+     "answer": 0,
+     "explain": "<p>FV / PV = 3,708 / 3,600 = 1.03. r = [(FV/PV) − 1] / n = 0.03 / (4/12) = 0.03 × 3 = <b>9.00%</b>. (Same in two steps: I = 108 TND, r = 108 / (3,600 × 4/12) = 108 / 1,200 = 0.09.)</p><p>8.74% divides the interest by the acquired value 3,708 instead of the capital 3,600. 3.00% is the rate for the 4 months, not per year (forgot to divide by n). 0.75% divides 3% by 4 instead of by 4/12 (months not converted into years).</p>"
+    },
+    {
+     "id": "q25",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Financial instruments",
+     "review": "../financial-math/ch1-simple-interest.html#instruments",
+     "prompt": "<p>A bank buys a Treasury bill with a face value of <b>24,480 TND</b> for <b>24,000 TND</b>. It matures in <b>120 days</b>. What annual simple rate does the bank earn? (360-day year)</p>",
+     "options": [
+      "5.88%",
+      "6.08%",
+      "2.00%",
+      "6.00%"
+     ],
+     "answer": 3,
+     "explain": "<p>Interest = face value − price paid = 24,480 − 24,000 = 480 TND. The money really invested is the <b>price paid</b>, 24,000 TND. r = 480 × 360 / (24,000 × 120) = 172,800 / 2,880,000 = <b>6.00%</b>.</p><p>5.88% divides by the face value 24,480 instead of the 24,000 TND invested. 6.08% uses 365 days. 2.00% is 480/24,000: the gain for 120 days, not an annual rate.</p>"
+    }
+   ]
+  },
+  {
+   "title": "Part IV · Average rate and equations (5 pts)",
+   "intro": "One correct answer per question",
+   "questions": [
+    {
+     "id": "q26",
+     "type": "mcq",
+     "points": 1,
+     "topic": "Average rate",
+     "review": "../financial-math/ch1-simple-interest.html#average",
+     "prompt": "<p>An olive-oil exporter in Sfax places three sums at simple interest:</p><table><thead><tr><th>Placement</th><th>Capital</th><th>Rate</th><th>Duration</th></tr></thead><tbody><tr><td>1</td><td>6,000 TND</td><td>5%</td><td>60 days</td></tr><tr><td>2</td><td>10,000 TND</td><td>6%</td><td>90 days</td></tr><tr><td>3</td><td>4,000 TND</td><td>8%</td><td>45 days</td></tr></tbody></table><p>What is the <b>average rate</b> r<sub>A</sub> of the three placements?</p>",
+     "options": [
+      "6.33%",
+      "6.00%",
+      "6.10%",
+      "6.15%"
+     ],
+     "answer": 1,
+     "explain": "<p>r<sub>A</sub> = Σ(C × r × n) / Σ(C × n) (the 360 cancels out).</p><p>Numerator: 6,000 × 0.05 × 60 = 18,000; 10,000 × 0.06 × 90 = 54,000; 4,000 × 0.08 × 45 = 14,400 → 86,400.<br>Denominator: 6,000 × 60 = 360,000; 10,000 × 90 = 900,000; 4,000 × 45 = 180,000 → 1,440,000.<br>r<sub>A</sub> = 86,400 / 1,440,000 = <b>6.00%</b>.</p><p>6.33% is the simple average (5 + 6 + 8)/3: it ignores the capitals and the durations. 6.10% weights by the capitals only. 6.15% weights by the durations only. The average rate must be weighted by <b>C × n</b>.</p>"
+    },
+    {
+     "id": "q27",
+     "type": "mcq",
+     "points": 1,
+     "topic": "Average rate",
+     "review": "../financial-math/ch1-simple-interest.html#average",
+     "prompt": "<p>Mr. Ben Salah, who owns a café in Tunis, places two sums at simple interest (2027 is not a leap year):</p><table><thead><tr><th>Placement</th><th>Capital</th><th>Rate</th><th>From</th><th>To</th></tr></thead><tbody><tr><td>1</td><td>12,000 TND</td><td>5%</td><td>15 January 2027</td><td>16 March 2027</td></tr><tr><td>2</td><td>6,000 TND</td><td>7%</td><td>1 March 2027</td><td>30 May 2027</td></tr></tbody></table><p>What is the average rate r<sub>A</sub> of the two placements (to 2 decimals)?</p>",
+     "options": [
+      "6.00%",
+      "5.67%",
+      "5.84%",
+      "5.86%"
+     ],
+     "answer": 3,
+     "explain": "<p><b>Days:</b> placement 1: January 31 − 15 = 16, February 28, March 16 → 60 days. Placement 2: March 31 − 1 = 30, April 30, May 30 → 90 days.</p><p>Numerator: 12,000 × 0.05 × 60 = 36,000; 6,000 × 0.07 × 90 = 37,800 → 73,800. Denominator: 12,000 × 60 = 720,000; 6,000 × 90 = 540,000 → 1,260,000. r<sub>A</sub> = 73,800 / 1,260,000 = 0.05857 = <b>5.86%</b>.</p><p>6.00% is the simple average of 5% and 7%. 5.67% weights by the capitals only (it forgets the durations). 5.84% gives February 30 days (62 days for placement 1).</p>"
+    },
+    {
+     "id": "q28",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Average rate",
+     "review": "../financial-math/ch1-simple-interest.html#average",
+     "prompt": "<p>Same sums and same dates as the previous question. Mr. Ben Salah’s bank offers instead a <b>flat 5.9%</b> on both sums, for the same durations. Which choice gives him more interest?</p>",
+     "options": [
+      "The flat 5.9%, because the average rate of the two placements is only about 5.86%.",
+      "The two placements, because the simple average of 5% and 7% is 6%, above 5.9%.",
+      "The two placements, because placement 2 earns 7%, which is above 5.9%.",
+      "Both give the same interest, because 5.9% is between 5% and 7%."
+     ],
+     "answer": 0,
+     "explain": "<p>Compare the flat rate with the <b>average rate</b> r<sub>A</sub>, the single rate that gives the same total interest. r<sub>A</sub> ≈ 5.86% &lt; 5.9%, so the <b>flat 5.9%</b> gives more interest. In money: 1,260,000 × 0.059 / 360 = 206.50 TND against 73,800 / 360 = 205.00 TND.</p><p>The simple average (6%) ignores that the 12,000 TND at 5% weighs more (C × n = 720,000 against 540,000). Looking at one rate only (7%) ignores the other placement. “Between 5% and 7%” says nothing about which one is bigger.</p>"
+    },
+    {
+     "id": "q29",
+     "type": "mcq",
+     "points": 1,
+     "topic": "Equations with two capitals",
+     "review": "../financial-math/ch1-simple-interest.html#equations",
+     "prompt": "<p>Leila splits <b>15,400 TND</b> into two capitals placed at the <b>same</b> simple rate: the first for <b>5 months</b>, the second for <b>9 months</b>. At maturity the two capitals have produced <b>the same interest</b>. What is the <b>first</b> capital (placed for 5 months)?</p>",
+     "options": [
+      "5,500.000 TND",
+      "7,700.000 TND",
+      "9,900.000 TND",
+      "9,871.795 TND"
+     ],
+     "answer": 2,
+     "explain": "<p>Equal interest: C<sub>1</sub> × r × 5/12 = C<sub>2</sub> × r × 9/12 → 5 C<sub>1</sub> = 9 C<sub>2</sub> → C<sub>2</sub> = 5/9 C<sub>1</sub>.<br>C<sub>1</sub> + 5/9 C<sub>1</sub> = 15,400 → 14/9 C<sub>1</sub> = 15,400 → C<sub>1</sub> = <b>9,900 TND</b>, so C<sub>2</sub> = 5,500 TND. Check: 9,900 × 5 = 49,500 = 5,500 × 9 ✓.</p><p>5,500 TND is the second capital: the shorter placement needs the <b>bigger</b> capital to earn the same interest. 7,700 TND is half of 15,400 (that would only work for equal durations). 9,871.795 TND comes from rounding 5/12 to 0.42 and 9/12 to 0.75 in the middle of the calculation (the slide’s Exercise 3 slip): keep exact fractions.</p>"
+    },
+    {
+     "id": "q30",
+     "type": "mcq",
+     "points": 0.5,
+     "topic": "Equations with two capitals",
+     "review": "../financial-math/ch1-simple-interest.html#equations",
+     "prompt": "<p>A capital of <b>6,000 TND</b> placed at a rate r for <b>8 months</b> produces the same simple interest as <b>4,000 TND</b> placed at <b>9%</b> for <b>10 months</b>. What is r?</p>",
+     "options": [
+      "6.00%",
+      "7.50%",
+      "4.80%",
+      "11.25%"
+     ],
+     "answer": 1,
+     "explain": "<p>Interest of the second capital: 4,000 × 0.09 × 10/12 = 300 TND. So 6,000 × r × 8/12 = 300 → 4,000 r = 300 → r = <b>7.50%</b>.</p><p>6.00% ignores the two durations (6,000 r = 4,000 × 0.09). 4.80% swaps the durations (8 months for the 4,000 and 10 for the 6,000). 11.25% ignores the capitals and only scales 9% by 10/8.</p>"
+    },
+    {
+     "id": "q31",
+     "type": "mcq",
+     "points": 1,
+     "topic": "Equations with two capitals",
+     "review": "../financial-math/ch1-simple-interest.html#equations",
+     "prompt": "<p>On <b>1 April 2027</b>, Amine places <b>10,000 TND</b> at <b>6%</b> simple interest. <b>Three months later</b>, his sister places <b>8,000 TND</b> at <b>9%</b> simple interest. When will the two placements have produced the <b>same total interest</b>?</p>",
+     "options": [
+      "After 15 months, on 1 July 2028",
+      "After 18 months, on 1 October 2028",
+      "After 21 months, on 1 January 2029",
+      "Never: Amine started 3 months earlier, so his interest always stays higher"
+     ],
+     "answer": 1,
+     "explain": "<p>Let n = number of months of Amine’s placement; the sister’s placement lasts n − 3 months.<br>Amine: 10,000 × 0.06 × n/12 = 50n. Sister: 8,000 × 0.09 × (n − 3)/12 = 60(n − 3).<br>50n = 60n − 180 → 10n = 180 → n = <b>18 months</b>. 18 months after 1 April 2027 = <b>1 October 2028</b>. Check: 50 × 18 = 900 TND; 60 × 15 = 900 TND ✓.</p><p>“15 months, 1 July 2028” adds the sister’s duration (n − 3 = 15) to Amine’s start date. “21 months, 1 January 2029” counts the 18 months from the sister’s start date (1 July 2027). “Never” forgets that the sister earns more each month (60 TND against 50 TND), so she catches up.</p>"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script src="../assets/exam.js"></script>
+</body>
+</html>

@@ -53,8 +53,8 @@ footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);paddin
 <div class="wrap">
   <header style="display:flex;flex-direction:column;gap:10px">
     <a class="back" href="index.html">← Course Folder</a>
-    <h1>Friday's Accounting exam</h1>
-    <p class="sub"><b>Accounting exam: Friday 16 October, 09:00.</b> Chapter 1 from zero tonight and tomorrow, then Micro and Math for the weekend.</p>
+    <h1>Micro exam Tuesday · Financial Math Wednesday</h1>
+    <p class="sub"><b>Micro (Ch 1–2) on Tuesday 20 Oct · Financial Math MCQ test (Ch I) on Wednesday 21 Oct.</b> Micro tonight and Monday morning, Financial Math Monday afternoon and Tuesday.</p>
     <div class="progress"><span id="count">0 / 0</span><div class="meter"><i id="bar"></i></div></div>
   </header>
 
@@ -75,50 +75,52 @@ footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);paddin
 const FA2 = 'financial-accounting/ch2-recording-process.html', FAE = 'financial-accounting/ch2-easy.html';
 const M2 = 'mathematics-1/ch2-derivative.html', ME = 'mathematics-1/ch2-easy.html';
 const MI3 = 'microeconomics/ch3-demand-supply.html', MIE = 'microeconomics/ch3-easy.html';
-const FA1E = 'financial-accounting/ch1-easy.html';
+const MI1E = 'microeconomics/ch1-easy.html', MI2E = 'microeconomics/ch2-easy.html', FME = 'financial-math/ch1-easy.html';
 const DAYS = [
-  { name: 'Wednesday 14 · Chapter 1, part 1 (tonight)', cls: 'fa', label: 'Accounting', steps: [
-    ['c1-1', FA1E + '#start', 'Accounting in 2 minutes', '', 10],
-    ['c1-2', FA1E + '#users', 'Who uses accounting information', '', 15],
-    ['c1-3', FA1E + '#rules', 'Ethics, IFRS, historical cost and fair value', '', 25],
-    ['c1-4', FA1E + '#assumptions', 'Monetary unit, economic entity, business forms', '', 25],
-    ['c1-5', FA1E + '#equation', 'Assets = Liabilities + Equity', 'Do every question.', 30],
-    ['c1-6', FA1E + '#equity-parts', 'Inside equity: revenues, expenses, dividends', '', 30]]},
-  { name: 'Thursday 15 · Chapter 1, part 2 + practice exam', cls: 'fa', label: 'Accounting', steps: [
-    ['c1-7', FA1E + '#transactions', 'Transaction analysis, step by step', 'The most important part of the exam.', 60],
-    ['c1-8', FA1E + '#statements', 'The four financial statements', '', 40],
-    ['c1-9', FA1E + '#full-example', 'A full month, from transactions to statements', '', 40],
-    ['c1-10', FA1E + '#exam-sheet', "Exam-style exercises (like your teacher's sheet)", 'Do them on paper first, then open the solutions.', 60],
-    ['c1-11', FA1E + '#final-test', 'Final test (25 questions)', 'Aim for 20/25.', 30],
-    ['c1-11b', 'https://moodle.isb.ens.tn/mod/quiz/view.php?id=20400', "Your teacher's Quiz Prep on Moodle (Ch 1)", '40 min, not graded. The closest thing to the real exam. Do it yourself on Moodle.', 40, 'exam'],
-    ['c1-12', 'exams/fa-test1-A.html', 'Accounting Test 1 · Practice A', '60 min, exam mode, Thursday evening. Paste your result to Claude.', 60, 'exam'],
-    ['c1-13', 'exams/fa-test1-B.html', 'Accounting Test 1 · Practice B', 'Optional second rehearsal if you have energy.', 60, 'deep']]},
-  { name: 'Friday 16 · ACCOUNTING EXAM 09:00', cls: 'fa', label: 'Accounting', steps: [
-    ['c1-16', 'exams/fa-test1-C.html', 'Practice exam C: final rehearsal (Ch 1)', '40 min, exam mode. Tonight after the lesson, or early Friday morning.', 40, 'exam'],
-    ['c1-14', FA1E + '#final-test', 'Morning: redo the final test quickly', '20 minutes. Look again at the traps you missed.', 20],
-    ['c1-15', FAE + '#debit-credit', 'If Chapter 2 is on the exam: debit and credit rules', 'Quick review.', 20]]},
-  { name: 'Sunday 11 – Tuesday 13 · Chapter 2 (already planned)', cls: 'fa', label: 'Accounting', steps: [
-    ['e-s2', FAE + '#equation', 'Ch 2 easy lesson: equation and accounts', '', 30, 'deep'],
-    ['e-s4', FAE + '#debit-credit', 'Debit and credit rules', '', 45, 'deep'],
-    ['e-m1', FAE + '#journal', 'Writing journal entries', '', 50, 'deep'],
-    ['e-t1', FAE + '#trial-balance', 'The trial balance', '', 30, 'deep'],
-    ['e-t3', FAE + '#final-test', 'Ch 2 final test', '', 30, 'deep'],
-    ['e-t4', 'exams/fa-quiz2-A.html', 'Accounting Q2 · Practice A (Ch 2)', '45 min.', 45, 'exam']]},
-  { name: 'Saturday 17 · Demand and supply', cls: 'micro', label: 'Micro', steps: [
-    ['e-f2', MIE + '#demand', 'Demand and the law of demand', '', 25],
-    ['e-f3', MIE + '#demand-shifters', 'What shifts demand', 'Memory trick: TRIBE.', 35],
-    ['e-f4', MIE + '#shift-vs-move', 'Shift of the curve vs move along it', '', 30],
-    ['e-f6', MIE + '#supply-shifters', 'Supply and what shifts it', 'Memory trick: ROTTEN.', 40],
-    ['e-a1', MIE + '#equilibrium', 'Equilibrium, shortage and surplus', '', 45],
-    ['e-a5', MIE + '#final-test', 'Final test (20 questions)', '', 30]]},
-  { name: 'Sunday 18 · The derivative', cls: 'math', label: 'Math', steps: [
-    ['e-w3', ME + '#average-rate', 'Average rate of change', '', 30],
-    ['e-w4', ME + '#instant', 'From average to instantaneous', '', 35],
-    ['e-w5', ME + '#estimate', 'Estimating f′(a) from a table', '', 40],
-    ['e-h2', ME + '#units', 'What f′ means, with units', '', 30],
-    ['e-h5', ME + '#final-test', 'Final test (20 questions)', '', 30],
-    ['e-h6', 'exams/math1-quiz2-A.html', 'Math Quiz Ch 2 · Practice A', '30 min, exam mode.', 30, 'exam']]}
-];const KEY = 'course-folder:this-week:2026-10-11';
+  { name: 'Sunday 18 (tonight) · Micro Chapter 1', cls: 'micro', label: 'Micro', steps: [
+    ['m1-1', MI1E + '#start', 'Economics in 2 minutes', '', 10],
+    ['m1-2', MI1E + '#scarcity', 'Scarcity and choice', '', 15],
+    ['m1-3', MI1E + '#oppcost', 'Opportunity cost', 'Only the BEST alternative counts.', 25],
+    ['m1-4', MI1E + '#micromacro', 'Micro vs macro', '', 10],
+    ['m1-5', MI1E + '#resources', 'The 4 factors of production', '', 15],
+    ['m1-6', MI1E + '#goods', 'Consumer vs capital goods', '', 10],
+    ['m1-7', MI1E + '#marginal', 'Marginal analysis: MB vs MC', '', 20],
+    ['m1-8', MI1E + '#positive', 'Positive vs normative', '', 15],
+    ['m1-9', MI1E + '#budget', 'The budget line', '', 20],
+    ['m1-10', MI1E + '#ppc', 'The PPC', 'Calculations: practice with a pen.', 30],
+    ['m1-11', MI1E + '#growth', 'Unemployment, growth and the PPC', '', 15],
+    ['m1-12', MI1E + '#final-test', 'Final test (25 questions)', '', 25]]},
+  { name: 'Monday 19 · Micro Chapter 2 (morning) + Financial Math (afternoon)', cls: 'micro', label: 'Micro', steps: [
+    ['m2-1', MI2E + '#start', 'Economic systems in 2 minutes', '', 10],
+    ['m2-2', MI2E + '#systems', 'Laissez-faire, command, market', "Your teacher's 3 systems.", 25],
+    ['m2-3', MI2E + '#features', 'The six characteristics of the market system', '', 30],
+    ['m2-4', MI2E + '#specialization', 'Specialization, money and barter', '', 20],
+    ['m2-5', MI2E + '#five-questions', 'The five fundamental questions (incl. risk)', '', 25],
+    ['m2-6', MI2E + '#least-cost', 'The least-cost technique', 'Calculations.', 25],
+    ['m2-7', MI2E + '#economic-profit', 'Profit, loss, consumer sovereignty and risk', '', 20],
+    ['m2-8', MI2E + '#invisible-hand', 'The invisible hand', '', 15],
+    ['m2-9', MI2E + '#command-failure', 'Why command systems failed', '', 15],
+    ['m2-10', MI2E + '#circular-flow', 'The circular flow model', '', 20],
+    ['m2-11', MI2E + '#final-test', 'Final test (25 questions)', '', 25],
+    ['m2-12', 'exams/micro-quiz1-A.html', 'Micro Quiz (Ch 1–2) · Practice A', '45 min, exam mode. Paste your result to Claude.', 45, 'exam']]},
+  { name: 'Monday 19 (afternoon) · Financial Math Chapter I', cls: 'fa', label: 'Fin. Math', steps: [
+    ['f1-1', FME + '#start', 'Interest in 2 minutes', '', 10],
+    ['f1-2', FME + '#tvm', 'Time value of money', '', 15],
+    ['f1-3', FME + '#instruments', 'The four instruments', '', 15],
+    ['f1-4', FME + '#days', 'Counting days', 'The #1 source of mistakes. Do every drill.', 35],
+    ['f1-5', FME + '#formula', 'I = C × r × n', '', 30],
+    ['f1-6', FME + '#ordinary-exact', 'Ordinary (360) vs exact (365)', '', 20]]},
+  { name: 'Tuesday 20 · MICRO EXAM, then Financial Math', cls: 'fa', label: 'Fin. Math', steps: [
+    ['m-x1', 'exams/micro-quiz1-B.html', 'Before the Micro exam: Practice B (optional)', 'Only if you have time in the morning.', 45, 'deep'],
+    ['f1-7', FME + '#future-present', 'Future value and present value', '', 30],
+    ['f1-8', FME + '#find-unknown', 'Finding the rate, the time or the capital', '', 30],
+    ['f1-9', FME + '#average-rate', 'The average rate', '', 25],
+    ['f1-10', FME + '#two-capitals', 'Equations with two capitals', '', 30],
+    ['f1-11', FME + '#final-test', 'Final test (25 MCQ)', '', 30],
+    ['f1-12', 'exams/finmath-mcq1-A.html', 'MCQs Test 01 · Practice A', '60 min, exam mode, like the real test.', 60, 'exam']]},
+  { name: 'Wednesday 21 · FINANCIAL MATH TEST (MCQs Test 01)', cls: 'fa', label: 'Fin. Math', steps: [
+    ['f1-13', FME + '#days', 'Morning: redo the day-counting drills', '15 minutes.', 15]]}
+];const KEY = 'course-folder:this-week:2026-10-18';
 let done = {};
 try { done = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { done = {}; }
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));

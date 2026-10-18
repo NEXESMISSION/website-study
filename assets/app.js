@@ -124,6 +124,30 @@
       `<span>Done <b>${pct}%</b></span><span class="bar" aria-hidden="true"><i style="width:${pct}%"></i></span>`;
   }
 
+  /* ---------- reset this lesson (answers + ticks), with a second click to confirm ---------- */
+  if (scoreEl) {
+    const rb = document.createElement("button");
+    rb.type = "button";
+    rb.className = "reset-lesson";
+    rb.textContent = "Reset";
+    rb.title = "Clear all your answers and ticks in this lesson";
+    let armed = null;
+    rb.addEventListener("click", () => {
+      if (!armed) {
+        rb.textContent = "Click again to reset";
+        rb.classList.add("armed");
+        armed = setTimeout(() => { armed = null; rb.textContent = "Reset"; rb.classList.remove("armed"); }, 4000);
+        return;
+      }
+      clearTimeout(armed); armed = null;
+      store.answers = {}; store.done = {}; save();
+      quizzes.forEach(paintQuiz); paintDone(); paintScore();
+      rb.textContent = "Reset done"; rb.classList.remove("armed");
+      setTimeout(() => { rb.textContent = "Reset"; }, 2000);
+    });
+    scoreEl.after(rb);
+  }
+
   quizzes.forEach(paintQuiz);
   paintDone();
   paintScore();
