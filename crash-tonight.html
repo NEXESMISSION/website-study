@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="assets/course-folder.ico">
+<title>Crash Sheet · Micro + Financial Math</title>
+<style>
+:root{--bg:#FFFFFF;--ink:#0F1726;--muted:#667085;--line:#E7E9EE;--tint:#F7F8FA;--accent:#2A4BD7;--micro:#C2410C;--fm:#0E7C66;--bad:#C4372D;--bad-soft:#FDEEEC;--ok:#12805C;--ok-soft:#EAF7F1;--f:"Figtree","Segoe UI",system-ui,sans-serif;--mono:"Cascadia Mono",Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);font-size:16px;line-height:1.5}
+.wrap{max-width:900px;margin:0 auto;padding-inline:20px;padding-block:24px 64px;display:flex;flex-direction:column;gap:26px}
+a{color:var(--accent)}
+h1{margin:0;font-size:2.1rem;letter-spacing:-.02em}
+h2{margin:0;font-size:1.3rem}
+h3{margin:0;font-size:1.05rem}
+.sub{margin:0;color:var(--muted)}
+.plan{border:2px solid var(--ink);border-radius:12px;padding:14px 16px}
+.plan ol{margin:6px 0 0;padding-left:22px}
+.plan li{margin:4px 0}
+.box{border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.box.micro{border-left:6px solid var(--micro)}
+.box.fm{border-left:6px solid var(--fm)}
+.box ul{margin:0;padding-left:20px}
+.box li{margin:3px 0}
+.f{font-family:var(--mono);background:var(--tint);border-radius:6px;padding:2px 6px;white-space:nowrap}
+.trap{background:var(--bad-soft);color:var(--bad);border-radius:8px;padding:8px 12px;font-size:15px}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#fff;border-radius:99px;padding:2px 10px}
+.tag.micro{background:var(--micro)} .tag.fm{background:var(--fm)}
+.table-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{border-top:1px solid var(--line);padding:7px 10px;text-align:left}
+th{background:var(--tint);font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+@media (max-width:480px){.wrap{padding-inline:16px} h1{font-size:1.7rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a href="index.html" style="font-size:14px;text-decoration:none">← Course Folder</a>
+  <header style="display:flex;flex-direction:column;gap:6px">
+    <h1>Tonight's crash sheet</h1>
+    <p class="sub">Micro (Ch 1–2) and Financial Math (Ch I) tomorrow. Learn this page, do the drills it links to, then sleep.</p>
+  </header>
+
+  <div class="plan"><b>Tonight, in this order (≈ 4 h)</b>
+    <ol>
+      <li><b>Financial Math (1 h 30)</b>: read the green part below, then do these drills in the easy lesson: <a href="financial-math/ch1-easy.html#days">counting days</a>, <a href="financial-math/ch1-easy.html#formula">I = C × r × n</a>, <a href="financial-math/ch1-easy.html#future-present">future/present value</a>, <a href="financial-math/ch1-easy.html#average-rate">average rate</a>.</li>
+      <li><b>Micro Ch 1 (1 h)</b>: read the orange part, then <a href="microeconomics/ch1-easy.html#oppcost">opportunity cost</a>, <a href="microeconomics/ch1-easy.html#ppc">PPC</a>, <a href="microeconomics/ch1-easy.html#positive">positive/normative</a>.</li>
+      <li><b>Micro Ch 2 (1 h)</b>: <a href="microeconomics/ch2-easy.html#systems">3 systems</a>, <a href="microeconomics/ch2-easy.html#five-questions">5 questions</a>, <a href="microeconomics/ch2-easy.html#least-cost">least-cost</a>, <a href="microeconomics/ch2-easy.html#circular-flow">circular flow</a>.</li>
+      <li><b>Last 30 min</b>: the two final tests: <a href="microeconomics/ch2-easy.html#final-test">Micro Ch 2</a> and <a href="financial-math/ch1-easy.html#final-test">Financial Math</a>. Then sleep. Sleep is worth more than a 5th hour.</li>
+    </ol>
+  </div>
+
+  <section class="box fm"><span class="tag fm">Financial Math · Ch I</span>
+    <h2>The 6 formulas (your slides write P for C)</h2>
+    <div class="table-wrap"><table>
+      <tr><th>What you want</th><th>Formula</th></tr>
+      <tr><td>Interest</td><td><span class="f">I = C × r × n</span></td></tr>
+      <tr><td>Acquired (future) value</td><td><span class="f">A = C + I = C × (1 + r × n)</span></td></tr>
+      <tr><td>Present value (capital today)</td><td><span class="f">C = A ÷ (1 + r × n)</span></td></tr>
+      <tr><td>Rate</td><td><span class="f">r = I ÷ (C × n)</span></td></tr>
+      <tr><td>Time</td><td><span class="f">n = I ÷ (C × r)</span></td></tr>
+      <tr><td>Average rate of several placements</td><td><span class="f">r = Σ(C × r × n) ÷ Σ(C × n)</span></td></tr>
+    </table></div>
+    <h3>n: always in YEARS</h3>
+    <ul>
+      <li>Days → <span class="f">n = days ÷ 360</span> (ordinary/commercial interest, the default)</li>
+      <li>Exact interest → <span class="f">n = days ÷ 365</span>, only when the question says "exact"</li>
+      <li>Months → <span class="f">n = months ÷ 12</span></li>
+      <li>Rate: 6% → <span class="f">r = 0.06</span></li>
+    </ul>
+    <h3>Counting days: the #1 source of mistakes</h3>
+    <ul>
+      <li>Do <b>not</b> count the first day, <b>do</b> count the last day.</li>
+      <li>Example, 23 April → 9 August: April 30 − 23 = 7, May 31, June 30, July 31, August 9 → <b>108 days</b>.</li>
+      <li>February has 28 days in 2026 and 2027, 29 in 2028.</li>
+      <li>Months with 31 days: Jan, Mar, May, Jul, Aug, Oct, Dec.</li>
+    </ul>
+    <div class="trap">Traps: counting the first day · using 365 when it's not "exact" · 6 instead of 0.06 · months ÷ 360 · giving I when they ask A · a simple average of the rates instead of the weighted one · present value = A − I computed on A (wrong: divide by 1 + r × n).</div>
+    <h3>Quick concepts</h3>
+    <ul>
+      <li>Time value of money: 1 TND today is worth more than 1 TND tomorrow (you can invest it; risk; inflation).</li>
+      <li>Simple interest is computed on the original capital only; compound interest adds interest to the capital.</li>
+      <li>Ordinary interest (360) gives a slightly bigger interest than exact interest (365).</li>
+    </ul>
+  </section>
+
+  <section class="box micro"><span class="tag micro">Micro · Ch 1</span>
+    <h2>Chapter 1 in 10 points</h2>
+    <ul>
+      <li><b>Economics</b>: how we use limited resources to satisfy unlimited wants. <b>Scarcity</b> = wants &gt; resources (rich countries too).</li>
+      <li><b>Opportunity cost</b> = the value of the <b>next best</b> alternative given up. Only ONE, never the sum.</li>
+      <li>"No free lunch": using resources for anything has an opportunity cost. Highway → the other goods sacrificed.</li>
+      <li><b>Micro</b> = one household, firm or market. <b>Macro</b> = whole economy (GDP, inflation, unemployment, growth).</li>
+      <li><b>Factors and payments</b>: land → rent, labor → wages, capital → interest, entrepreneurship → profit. Money is NOT capital; buildings and machines ARE capital.</li>
+      <li><b>3 questions</b>: what, how, for whom. Needs (survival) vs wants.</li>
+      <li><b>Goods</b>: free/economic, consumer/capital, durable/non-durable, private (rival, excludable)/public (non-rival, non-excludable). Services can't be stored.</li>
+      <li><b>MB vs MC</b>: MB &gt; MC → more · MB &lt; MC → fewer · MB = MC → best point.</li>
+      <li><b>Positive</b> = fact, can be tested ("is"). <b>Normative</b> = opinion ("should", "ought", "must", "will harm", "too", "fair").</li>
+      <li><b>PPC</b>: on the curve = efficient · inside = unemployment/inefficient · outside = impossible now, needs growth. Bowed out = increasing opportunity cost. More capital goods today → faster growth tomorrow.</li>
+    </ul>
+    <div class="trap">PPC calculation: the opportunity cost of the n-th unit = how many units of the other good you lose moving ONE step. Count the difference between two neighbouring rows, never the total.</div>
+  </section>
+
+  <section class="box micro"><span class="tag micro">Micro · Ch 2</span>
+    <h2>Chapter 2: your teacher's version</h2>
+    <ul>
+      <li><b>3 systems</b>: laissez-faire (private, free markets, government only protects property and contracts) · command (state owns, central planning board sets targets) · market = mixed (private markets + limited but active government).</li>
+      <li><b>6 characteristics</b>: private property · freedom of enterprise &amp; choice · self-interest · competition · markets &amp; prices · technology &amp; capital goods (+ specialization, division of labor, money).</li>
+      <li><b>Barter</b> needs a coincidence of wants. <b>Money</b> = medium of exchange accepted by all.</li>
+      <li><b>Market failure</b> (pollution, no lighthouse) vs <b>government failure</b> (a useless bridge from bad planning).</li>
+      <li><b>5 questions</b>: what (consumer sovereignty, "dinar votes") · how (least cost) · who gets the output (income from resources) · how will it change (creative destruction, capital accumulation) · how to deal with <b>risk</b> (businesses bear it: profit = reward, loss = penalty).</li>
+      <li><b>Least-cost</b>: total cost = labor × wage + capital × rental. Wage 8, rental 6: A (10 L, 2 K) = 92 · B (6 L, 5 K) = 78 · C (3 L, 9 K) = 78 → B and C tie.</li>
+      <li><b>Invisible hand</b> (Adam Smith): self-interest + competition → good for society, without intending it. Fails with pollution, monopoly, information gaps.</li>
+      <li><b>Command failure</b>: coordination problem (planners can't handle the information) · incentive problem (no profit, no reason to innovate).</li>
+      <li><b>Circular flow</b>: product market (top) = households BUY goods, money to businesses · resource market (bottom) = households SELL land, labor, capital; firms pay wages, rent, interest, profit.</li>
+    </ul>
+    <div class="trap">Least-cost = the lowest total cost, NOT the fewest workers or machines. Households SELL in the resource market and BUY in the product market.</div>
+  </section>
+
+  <section class="box"><h2>Tomorrow morning (20 min)</h2>
+    <ul>
+      <li>Read the 3 trap boxes on this page again.</li>
+      <li>Count days for 2 date pairs by hand.</li>
+      <li>Bring a calculator.</li>
+    </ul>
+  </section>
+</div>
+</body>
+</html>
