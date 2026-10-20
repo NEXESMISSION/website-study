@@ -3,6 +3,8 @@
    - makes multiple-choice / true-false exercises interactive (.ex[data-answer])
    - remembers answers and "section done" ticks in this browser (localStorage) */
 (function () {
+  /* load the "translate selected text" helper from the same folder */
+  try { const me = document.currentScript; if (me && me.src) { const s = document.createElement("script"); s.src = me.src.replace(/app\.js(\?.*)?$/, "translate.js"); document.head.appendChild(s); } } catch (e) {}
   const lessonId = document.body.dataset.lesson || location.pathname;
   const KEY = "course-folder:" + lessonId;
   let store = {};

@@ -4,6 +4,8 @@
    Question types: mcq, tf (optional justify), numeric, text (self-marked with a rubric), grid, journal, match, problem (parts). */
 (function () {
   'use strict';
+  /* load the "translate selected text" helper from the same folder */
+  try { const me = document.currentScript; if (me && me.src) { const s = document.createElement('script'); s.src = me.src.replace(/exam\.js(\?.*)?$/, 'translate.js'); document.head.appendChild(s); } } catch (e) {}
 
   const dataEl = document.getElementById('exam-data');
   const root = document.getElementById('exam');
