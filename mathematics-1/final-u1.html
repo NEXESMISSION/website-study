@@ -711,11 +711,11 @@
    "kind": "learn",
    "title": "The undo table",
    "why": "Almost every exam question that ends with “find x” (or q, t, p) is solved with these few undo moves. Learn this table once and you can solve them all.",
-   "html": "<p>Each operation has an <b>opposite</b> that cancels it:</p><div class=\"tbl\"><table><tr><th>Done to x</th><th>Undo it with</th></tr><tr><td>+ 5</td><td>− 5</td></tr><tr><td>− 5</td><td>+ 5</td></tr><tr><td>× 5</td><td>÷ 5</td></tr><tr><td>÷ 5</td><td>× 5</td></tr><tr><td>x²</td><td>√ (square root)</td></tr><tr><td>√x</td><td>square it ( )²</td></tr><tr><td>eˣ</td><td>ln</td></tr><tr><td>ln x</td><td>e<sup>□</sup></td></tr></table></div><div class=\"key\">Golden rule: whatever you do to one side, do exactly the same to the other side.</div>",
+   "html": "<p>Each operation has an <b>opposite</b> that cancels it:</p><div class=\"tbl\"><table><tr><th>Done to x</th><th>Undo it with</th></tr><tr><td>+ 5</td><td>− 5</td></tr><tr><td>− 5</td><td>+ 5</td></tr><tr><td>× 5</td><td>÷ 5</td></tr><tr><td>÷ 5</td><td>× 5</td></tr><tr><td>x²</td><td>√ (square root)</td></tr><tr><td>√x</td><td>square it ( )²</td></tr><tr><td>eˣ</td><td>ln</td></tr><tr><td>aᵗ (t in the power)</td><td>ln: the power t comes down</td></tr><tr><td>ln x</td><td>e<sup>□</sup></td></tr></table></div><div class=\"key\">Golden rule: whatever you do to one side, do exactly the same to the other side.</div>",
    "ar": {
     "title": "جدول التراجع",
     "why": "تقريبًا كل سؤال في الامتحان ينتهي بـ «جد x» (أو q أو t أو p) يُحلّ بهذه الحركات القليلة. تعلّم هذا الجدول مرة واحدة، وتستطيع حلّها كلها.",
-    "html": "<p>كل عملية لها <b>عكس</b> يلغيها:</p><div class=\"tbl\"><table><tr><th>ما فُعل بـ x</th><th>نلغيه بـ</th></tr><tr><td>+ 5</td><td>− 5</td></tr><tr><td>− 5</td><td>+ 5</td></tr><tr><td>× 5</td><td>÷ 5</td></tr><tr><td>÷ 5</td><td>× 5</td></tr><tr><td>x²</td><td>√ (الجذر التربيعي)</td></tr><tr><td>√x</td><td>( )² نربّعه</td></tr><tr><td>eˣ</td><td>ln</td></tr><tr><td>ln x</td><td>e<sup>□</sup></td></tr></table></div><div class=\"key\">القاعدة الذهبية: ما تفعله بجهة، افعله بالضبط بالجهة الأخرى.</div>"
+    "html": "<p>كل عملية لها <b>عكس</b> يلغيها:</p><div class=\"tbl\"><table><tr><th>ما فُعل بـ x</th><th>نلغيه بـ</th></tr><tr><td>+ 5</td><td>− 5</td></tr><tr><td>− 5</td><td>+ 5</td></tr><tr><td>× 5</td><td>÷ 5</td></tr><tr><td>÷ 5</td><td>× 5</td></tr><tr><td>x²</td><td>√ (الجذر التربيعي)</td></tr><tr><td>√x</td><td>( )² نربّعه</td></tr><tr><td>eˣ</td><td>ln</td></tr><tr><td>aᵗ (t في الأُسّ)</td><td>ln: الأُسّ t ينزل</td></tr><tr><td>ln x</td><td>e<sup>□</sup></td></tr></table></div><div class=\"key\">القاعدة الذهبية: ما تفعله بجهة، افعله بالضبط بالجهة الأخرى.</div>"
    }
   },
   {
@@ -1080,6 +1080,71 @@
     "title": "النموّ مثل 1.05ᵗ",
     "why": "فائدة البنك ونموّ الأسعار تستعمل (1 + النسبة)ᵗ. «بعد كم سنة يتضاعف مالي؟» سؤال نموذجي في الامتحان.",
     "html": "<p>المجهول t في الأُسّ، إذن نستعمل ln. ln يُنزل الأُسّ إلى الأمام.</p><div class=\"lad\"><span class=\"l\">1.05ᵗ</span><span class=\"e\">=</span><span class=\"rt\">2</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\" dir=\"rtl\">↓ خذ ln: الأُسّ ينزل إلى الأمام</span><span class=\"l\">t · ln 1.05</span><span class=\"e\">=</span><span class=\"rt\">ln 2</span><span class=\"l op\">÷ ln 1.05</span><span class=\"e\"></span><span class=\"rt op\">÷ ln 1.05</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l\">t</span><span class=\"e\">=</span><span class=\"rt\">ln 2 ÷ ln 1.05</span><span class=\"note\" dir=\"rtl\">↓ احسب: 0.6931 ÷ 0.0488</span><span class=\"l fin\">t</span><span class=\"e fin\">≈</span><span class=\"rt fin\">14.2</span></div><div class=\"key\">القاعدة: <span class=\"m\">ln(aᵗ) = t · ln a</span>. الأُسّ ينزل.</div>"
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "The ln rule: the power comes down",
+   "why": "This one rule answers every “after how many years…?” question: interest, growth, inflation. It is in Chapter 1 and in the exam.",
+   "html": "<p><b>1.</b> A power is just repeated multiplication:</p><div class=\"formula\">1.1³ = 1.1 × 1.1 × 1.1</div><p><b>2.</b> ln has one special skill: it turns <b>×</b> into <b>+</b>:</p><div class=\"formula\">ln(a × b) = ln a + ln b</div><p><b>3.</b> Put them together:</p><div class=\"formula\">ln(1.1³) = ln 1.1 + ln 1.1 + ln 1.1 = 3 × ln 1.1</div><div class=\"key\">The power comes down in front:<br>ln(aᵗ) = t × ln a</div>",
+   "ar": {
+    "title": "قاعدة ln: الأُسّ ينزل",
+    "why": "هذه القاعدة الواحدة تجيب عن كل سؤال «بعد كم سنة…؟»: الفائدة، النموّ، التضخّم. هي في الفصل 1 وفي الامتحان.",
+    "html": "<p><b>1.</b> الأُسّ مجرّد ضرب متكرّر:</p><div class=\"formula\">1.1³ = 1.1 × 1.1 × 1.1</div><p><b>2.</b> لـ ln مهارة خاصة واحدة: يحوّل <b><span class=\"m\">×</span></b> إلى <b><span class=\"m\">+</span></b>:</p><div class=\"formula\">ln(a × b) = ln a + ln b</div><p><b>3.</b> نجمعهما:</p><div class=\"formula\">ln(1.1³) = ln 1.1 + ln 1.1 + ln 1.1 = 3 × ln 1.1</div><div class=\"key\">الأُسّ ينزل إلى الأمام:<br><span class=\"m\">ln(aᵗ) = t × ln a</span></div>"
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Check the rule yourself",
+   "html": "<p>1.1² = 1.21. So the rule says ln(1.21) = 2 × ln 1.1.</p><p>On the calculator: <b>ln(1.21)</b> = ? (4 decimals)</p>",
+   "answer": 0.1906203596086497,
+   "tol": 0.001,
+   "hint": "Press ln, then 1.21, then =.",
+   "explain": "ln(1.21) ≈ <b>0.1906</b>. And 2 × ln 1.1 = 2 × 0.0953 = 0.1906. The same number ✓ The rule works.",
+   "ar": {
+    "title": "تحقّق من القاعدة بنفسك",
+    "html": "<p><span class=\"m\">1.1² = 1.21</span>. إذن القاعدة تقول <span class=\"m\">ln(1.21) = 2 × ln 1.1</span>.</p><p>بالآلة الحاسبة: <span class=\"m\"><b>ln(1.21)</b></span> = ؟ (4 أرقام بعد الفاصلة)</p>",
+    "hint": "اضغط ln، ثم 1.21، ثم =.",
+    "explain": "<span class=\"m\">ln(1.21) ≈ 0.1906</span>. و <span class=\"m\">2 × ln 1.1 = 2 × 0.0953 = 0.1906</span>. نفس الرقم ✓ القاعدة صحيحة."
+   }
+  },
+  {
+   "kind": "mcq",
+   "html": "<p>Using the rule: <b>ln(5ᵗ)</b> = ?</p>",
+   "options": [
+    "ln 5 + t",
+    "t × ln 5",
+    "5 × ln t",
+    "ln t ÷ 5"
+   ],
+   "answer": 1,
+   "hint": "The power t comes down in front of ln 5.",
+   "explain": "The power t comes down: ln(5ᵗ) = <b>t × ln 5</b>.",
+   "ar": {
+    "html": "<p>باستعمال القاعدة: <span class=\"m\"><b>ln(5ᵗ)</b></span> = ؟</p>",
+    "options": [
+     "<span class=\"m\">ln 5 + t</span>",
+     "<span class=\"m\">t × ln 5</span>",
+     "<span class=\"m\">5 × ln t</span>",
+     "<span class=\"m\">ln t ÷ 5</span>"
+    ],
+    "hint": "الأُسّ t ينزل أمام <span class=\"m\">ln 5</span>.",
+    "explain": "الأُسّ t ينزل: <span class=\"m\">ln(5ᵗ) = <b>t × ln 5</b></span>."
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Use it once",
+   "html": "<div class=\"lad\"><span class=\"l\">2ᵗ</span><span class=\"e\">=</span><span class=\"rt\">8</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\">↓ take ln of both sides (the power t comes down in front)</span><span class=\"l\">t · ln 2</span><span class=\"e\">=</span><span class=\"rt\">ln 8</span><span class=\"l op\">÷ ln 2</span><span class=\"e\"></span><span class=\"rt op\">÷ ln 2</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">t</span><span class=\"e fin\">=</span><span class=\"rt fin\">ln 8 ÷ ln 2</span></div><p>t = ln 8 ÷ ln 2 = ?</p>",
+   "answer": 3,
+   "tol": 0.01,
+   "hint": "ln 8 ≈ 2.0794 and ln 2 ≈ 0.6931. Divide.",
+   "explain": "<div class=\"lad\"><span class=\"l\">2ᵗ</span><span class=\"e\">=</span><span class=\"rt\">8</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\">↓ take ln of both sides (the power t comes down in front)</span><span class=\"l\">t · ln 2</span><span class=\"e\">=</span><span class=\"rt\">ln 8</span><span class=\"l op\">÷ ln 2</span><span class=\"e\"></span><span class=\"rt op\">÷ ln 2</span><span class=\"note\">↓ same move on both sides</span><span class=\"l\">t</span><span class=\"e\">=</span><span class=\"rt\">ln 8 ÷ ln 2</span><span class=\"note\">↓ calculate: 2.0794 ÷ 0.6931</span><span class=\"l fin\">t</span><span class=\"e fin\">=</span><span class=\"rt fin\">3</span></div><p>Check: 2³ = 2 × 2 × 2 = 8 ✓</p>",
+   "ar": {
+    "title": "استعملها مرة",
+    "html": "<div class=\"lad\"><span class=\"l\">2ᵗ</span><span class=\"e\">=</span><span class=\"rt\">8</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\" dir=\"rtl\">↓ خذ ln للجهتين (الأُسّ t ينزل إلى الأمام)</span><span class=\"l\">t · ln 2</span><span class=\"e\">=</span><span class=\"rt\">ln 8</span><span class=\"l op\">÷ ln 2</span><span class=\"e\"></span><span class=\"rt op\">÷ ln 2</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">t</span><span class=\"e fin\">=</span><span class=\"rt fin\">ln 8 ÷ ln 2</span></div><p><span class=\"m\">t = ln 8 ÷ ln 2 = ?</span></p>",
+    "hint": "<span class=\"m\">ln 8 ≈ 2.0794</span> و <span class=\"m\">ln 2 ≈ 0.6931</span>. اقسم.",
+    "explain": "<div class=\"lad\"><span class=\"l\">2ᵗ</span><span class=\"e\">=</span><span class=\"rt\">8</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\" dir=\"rtl\">↓ خذ ln للجهتين (الأُسّ t ينزل إلى الأمام)</span><span class=\"l\">t · ln 2</span><span class=\"e\">=</span><span class=\"rt\">ln 8</span><span class=\"l op\">÷ ln 2</span><span class=\"e\"></span><span class=\"rt op\">÷ ln 2</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l\">t</span><span class=\"e\">=</span><span class=\"rt\">ln 8 ÷ ln 2</span><span class=\"note\" dir=\"rtl\">↓ احسب: 2.0794 ÷ 0.6931</span><span class=\"l fin\">t</span><span class=\"e fin\">=</span><span class=\"rt fin\">3</span></div><p>تحقّق: <span class=\"m\">2³ = 2 × 2 × 2 = 8</span> ✓</p>"
    }
   },
   {
