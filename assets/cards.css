@@ -78,3 +78,20 @@ body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:18px;l
 [dir=rtl] .formula,[dir=rtl] .tbl{direction:ltr}
 [dir=rtl] .opt{text-align:right}
 [dir=rtl] .card .fr{direction:rtl}
+/* centred layout */
+.c-top-in{max-width:700px}
+.c-wrap{max-width:700px;min-height:calc(100vh - 58px);justify-content:center;padding:28px 18px 40px}
+.c-head{align-items:center;text-align:center}
+.card{padding:30px 32px 26px}
+.card .tag{align-self:center}
+.card h2{text-align:center}
+.card.qcard .body{text-align:center;align-items:center;font-size:1.12rem}
+.card .body .ex,.card .body .key,.card .body .why,.card .body ul,.card .fb{text-align:start}
+.actions{justify-content:center}
+.num{justify-content:center}
+.num input{text-align:center}
+.opts.short{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.opts.short .opt{justify-content:center;font-size:1.25rem;font-weight:600;padding:16px 14px;position:relative}
+.opts.short .opt .k{position:absolute;inset-inline-start:14px;top:50%;transform:translateY(-50%)}
+.c-foot{max-width:100%}
+@media (max-width:520px){.card{padding:22px 16px 18px}.opts.short{grid-template-columns:1fr 1fr}}

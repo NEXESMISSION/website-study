@@ -87,11 +87,11 @@
     const c = D.cards[st.i];
     const isQ = c.kind === 'mcq' || c.kind === 'number';
     const title = L(c, 'title'), why = L(c, 'why'), hint = L(c, 'hint'), explain = L(c, 'explain') || '';
-    let h = `<article class="card" aria-live="polite"><span class="tag${isQ ? ' q' : ''}">${isQ ? t('q') : t('learn')}</span>`;
+    let h = `<article class="card${isQ ? ' qcard' : ''}" aria-live="polite"><span class="tag${isQ ? ' q' : ''}">${isQ ? t('q') : t('learn')}</span>`;
     if (title) h += `<h2>${title}</h2>`;
     if (why) h += `<div class="why"><b>${t('why')}</b>${why}</div>`;
     h += `<div class="body">${L(c, 'html') || ''}</div>`;
-    if (c.kind === 'mcq') h += `<div class="opts">${L(c, 'options').map((o, k) => `<button type="button" class="opt" data-k="${k}"><span class="k">${'abcdefgh'[k]}</span><span>${o}</span></button>`).join('')}</div>`;
+    if (c.kind === 'mcq') h += `<div class="opts${L(c, 'options').every(o => o.replace(/<[^>]*>/g, '').length <= 14) ? ' short' : ''}">${L(c, 'options').map((o, k) => `<button type="button" class="opt" data-k="${k}"><span class="k">${'abcdefgh'[k]}</span><span>${o}</span></button>`).join('')}</div>`;
     if (c.kind === 'number') { const u = L(c, 'unit'); h += `<div class="num"><input type="text" inputmode="decimal" autocomplete="off" aria-label="${t('ph')}" placeholder="${t('ph')}">${u ? `<span class="unit">${esc(u)}</span>` : ''}<button type="button" class="btn" data-check>${t('check')}</button></div>`; }
     h += `<div class="fbslot"></div><div class="actions">`;
     h += isQ ? `<button type="button" class="btn" data-next hidden>${t('next')}</button>${hint ? `<button type="button" class="btn sec" data-hint>${t('hintBtn')}</button>` : ''}` : `<button type="button" class="btn" data-next>${t('gotit')}</button>`;
