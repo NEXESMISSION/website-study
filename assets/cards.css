@@ -28,7 +28,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:18px;l
 .card p{margin:0}
 .card .body{display:flex;flex-direction:column;gap:12px}
 .card .ex{background:var(--warn-soft);border-radius:12px;padding:12px 14px}
-.card .ex b:first-child{display:block;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--warn);margin-bottom:2px}
+.card .ex > b:first-child{display:block;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--warn);margin-bottom:2px}
 .card .key{background:var(--math-soft);border-radius:12px;padding:12px 14px;font-weight:600}
 .card .fr{font-size:14.5px;color:var(--muted)}
 .card .formula{font-family:var(--mono);font-size:1.05rem;background:var(--bg);border-radius:10px;padding:10px 14px;text-align:center}
@@ -62,3 +62,19 @@ body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:18px;l
 .c-foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .c-foot button{font:inherit;font-size:14px;background:none;border:0;color:var(--muted);cursor:pointer;text-decoration:underline}
 @media (max-width:520px){body{font-size:17px}.card{padding:20px 16px 18px;border-radius:14px}.c-head h1{font-size:1.3rem}}
+/* "Why learn this?" box */
+.card .why{background:#E6F6F3;color:#0B4F47;border-radius:12px;padding:12px 14px;font-size:16.5px}
+.card .why > b:first-child{display:block;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:#0E7C6B;margin-bottom:2px}
+/* language switch */
+.c-lang{font:inherit;font-size:14px;font-weight:700;background:#fff;color:var(--ink);border:2px solid var(--line);border-radius:99px;padding:4px 12px;cursor:pointer;white-space:nowrap}
+.c-lang:hover{border-color:var(--math)}
+.c-lang[lang=ar]{font-family:"Segoe UI",Tahoma,sans-serif}
+/* math stays left-to-right inside Arabic text */
+.m{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.num input{direction:ltr}
+/* Arabic */
+[dir=rtl] body{font-family:"Segoe UI",Tahoma,"Noto Naskh Arabic",sans-serif;line-height:1.85}
+[dir=rtl] *{letter-spacing:0 !important}
+[dir=rtl] .formula,[dir=rtl] .tbl{direction:ltr}
+[dir=rtl] .opt{text-align:right}
+[dir=rtl] .card .fr{direction:rtl}
