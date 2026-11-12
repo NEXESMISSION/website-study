@@ -95,3 +95,9 @@ body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:18px;l
 .opts.short .opt .k{position:absolute;inset-inline-start:14px;top:50%;transform:translateY(-50%)}
 .c-foot{max-width:100%}
 @media (max-width:520px){.card{padding:22px 16px 18px}.opts.short{grid-template-columns:1fr 1fr}}
+/* jumps row and small graphs */
+.steps{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;direction:ltr;font-family:var(--mono);font-size:1.15rem;margin:4px 0}
+.steps span{background:#fff;border:2px solid var(--line);border-radius:10px;padding:6px 12px;font-weight:700}
+.steps i{font-style:normal;color:var(--math);font-weight:800;font-size:.95rem}
+.graph svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.card .small{font-size:15px}

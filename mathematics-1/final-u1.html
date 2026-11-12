@@ -284,13 +284,50 @@
   },
   {
    "kind": "learn",
-   "title": "Linear function = same change every step",
-   "why": "Many real costs grow by the same amount each step: a salary per hour, a phone plan per minute, a taxi per km. When you see this, you can write the formula in 10 seconds and predict anything.",
-   "html": "<p>Look at the table again: 5, 8, 11, 14, 17. Each step adds <b>+3</b>.</p><p>When the output changes by the <b>same amount</b> each step, the function is <b>linear</b> (its graph is a straight line).</p><div class=\"formula\">f(x) = b + m·x</div><p><b>b</b> = the start (value when x = 0) = 5<br><b>m</b> = the change per step = <b>slope</b> = 3<br>So f(x) = 5 + 3x.</p><p class=\"fr\">Words: linear = خطّية = linéaire (affine) · slope = الميل = pente · intercept = القيمة الابتدائية = ordonnée à l'origine</p>",
+   "title": "Look at the jumps",
+   "why": "If a number always jumps by the same amount, you can predict it forever. A salary of 8 TND per hour: 1 h → 8, 2 h → 16, 3 h → 24… the jump is always 8.",
+   "html": "<p>Here is our table again. Look only at the bottom row, and at the <b>jump</b> from one number to the next:</p><div class=\"steps\"><span>5</span><i>+3</i><span>8</span><i>+3</i><span>11</span><i>+3</i><span>14</span><i>+3</i><span>17</span></div><p>The jump is <b>always +3</b>. Same jump every time.</p>",
    "ar": {
-    "title": "الدالّة الخطّية = نفس التغيّر في كل خطوة",
-    "why": "تكاليف حقيقية كثيرة تزيد بنفس المقدار في كل خطوة: أجر لكل ساعة، اشتراك هاتف لكل دقيقة، تاكسي لكل كيلومتر. عندما ترى هذا، تكتب الصيغة في 10 ثوانٍ وتتوقّع أيّ شيء.",
-    "html": "<p>انظر إلى الجدول مرة أخرى: <span class=\"m\">5, 8, 11, 14, 17</span>. كل خطوة تضيف <b class=\"m\">+3</b>.</p><p>عندما يتغيّر المُخرَج <b>بنفس المقدار</b> في كل خطوة، تكون الدالّة <b>خطّية</b> (linear)، ورسمها خط مستقيم.</p><div class=\"formula\">f(x) = b + m·x</div><p><b>b</b> = البداية (القيمة عندما <span class=\"m\">x = 0</span>) = 5<br><b>m</b> = التغيّر في كل خطوة = <b>الميل</b> (slope) = 3<br>إذن <span class=\"m\">f(x) = 5 + 3x</span>.</p><p class=\"fr\">كلمات: linear = خطّية · slope = الميل · intercept = القيمة الابتدائية</p>"
+    "title": "انظر إلى القفزات",
+    "why": "إذا كان رقم يقفز دائمًا بنفس المقدار، يمكنك أن تتوقّعه إلى الأبد. أجر 8 دنانير في الساعة: ساعة ← 8، ساعتان ← 16، 3 ساعات ← 24… القفزة دائمًا 8.",
+    "html": "<p>هذا جدولنا مرة أخرى. انظر فقط إلى السطر السفلي، وإلى <b>القفزة</b> من رقم إلى الذي بعده:</p><div class=\"steps\"><span>5</span><i>+3</i><span>8</span><i>+3</i><span>11</span><i>+3</i><span>14</span><i>+3</i><span>17</span></div><p>القفزة <b>دائمًا <span class=\"m\">+3</span></b>. نفس القفزة في كل مرة.</p>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"steps\"><span>10</span><i>?</i><span>12</span><i>?</i><span>14</span><i>?</i><span>16</span></div><p>What is the jump each time?</p>",
+   "answer": 2,
+   "tol": 0,
+   "hint": "12 − 10 = ?",
+   "explain": "12 − 10 = 2, 14 − 12 = 2, 16 − 14 = 2. The jump is always <b>+2</b>.",
+   "ar": {
+    "html": "<div class=\"steps\"><span>10</span><i>?</i><span>12</span><i>?</i><span>14</span><i>?</i><span>16</span></div><p>كم هي القفزة في كل مرة؟</p>",
+    "hint": "<span class=\"m\">12 − 10</span> = ؟",
+    "explain": "<span class=\"m\">12 − 10 = 2</span>، <span class=\"m\">14 − 12 = 2</span>، <span class=\"m\">16 − 14 = 2</span>. القفزة دائمًا <span class=\"m\"><b>+2</b></span>."
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"steps\"><span>50</span><i>?</i><span>45</span><i>?</i><span>40</span><i>?</i><span>35</span></div><p>And now? (Careful: the numbers go <b>down</b>.)</p>",
+   "answer": -5,
+   "tol": 0,
+   "hint": "45 − 50 = ? When the numbers go down, the jump has a minus.",
+   "explain": "45 − 50 = −5. The jump is <b>−5</b> every time: the number goes down by 5.",
+   "ar": {
+    "html": "<div class=\"steps\"><span>50</span><i>?</i><span>45</span><i>?</i><span>40</span><i>?</i><span>35</span></div><p>والآن؟ (انتبه: الأرقام <b>تنزل</b>.)</p>",
+    "hint": "<span class=\"m\">45 − 50</span> = ؟ عندما تنزل الأرقام، تكون القفزة بالسالب.",
+    "explain": "<span class=\"m\">45 − 50 = −5</span>. القفزة <span class=\"m\"><b>−5</b></span> في كل مرة: الرقم ينزل بـ 5."
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Same jump = “linear” = a straight line",
+   "why": "In the exam, “is this function linear?” is a classic question. Now you can answer it in 5 seconds: just check the jumps.",
+   "html": "<p>When the jump is <b>always the same</b>, we call the function <b>linear</b>.</p><p>Why “linear”? Because if you draw the points, they sit on one straight <b>line</b>:</p><div class=\"graph\"><svg viewBox=\"0 0 260 160\" width=\"260\" height=\"160\" role=\"img\" aria-label=\"The points of the table sit on one straight line\"><line x1=\"20\" y1=\"140\" x2=\"252\" y2=\"140\" stroke=\"#C9CEDA\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"140\" x2=\"20\" y2=\"8\" stroke=\"#C9CEDA\" stroke-width=\"1.5\"/><line x1=\"18\" y1=\"120\" x2=\"242\" y2=\"26\" stroke=\"#6D3FD1\" stroke-width=\"3\" stroke-opacity=\".35\"/><circle cx=\"30\" cy=\"115\" r=\"6\" fill=\"#6D3FD1\"/><text x=\"30\" y=\"104\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#0F1726\">5</text><text x=\"30\" y=\"155\" text-anchor=\"middle\" font-size=\"11\" fill=\"#667085\">x=0</text><circle cx=\"80\" cy=\"94\" r=\"6\" fill=\"#6D3FD1\"/><text x=\"80\" y=\"83\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#0F1726\">8</text><text x=\"80\" y=\"155\" text-anchor=\"middle\" font-size=\"11\" fill=\"#667085\">x=1</text><circle cx=\"130\" cy=\"73\" r=\"6\" fill=\"#6D3FD1\"/><text x=\"130\" y=\"62\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#0F1726\">11</text><text x=\"130\" y=\"155\" text-anchor=\"middle\" font-size=\"11\" fill=\"#667085\">x=2</text><circle cx=\"180\" cy=\"52\" r=\"6\" fill=\"#6D3FD1\"/><text x=\"180\" y=\"41\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#0F1726\">14</text><text x=\"180\" y=\"155\" text-anchor=\"middle\" font-size=\"11\" fill=\"#667085\">x=3</text><circle cx=\"230\" cy=\"31\" r=\"6\" fill=\"#6D3FD1\"/><text x=\"230\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#0F1726\">17</text><text x=\"230\" y=\"155\" text-anchor=\"middle\" font-size=\"11\" fill=\"#667085\">x=4</text></svg></div><p class=\"fr\">linear = خطّية = linéaire</p>",
+   "ar": {
+    "title": "نفس القفزة = «خطّية» = خط مستقيم",
+    "why": "في الامتحان، سؤال «هل هذه الدالّة خطّية؟» سؤال كلاسيكي. الآن يمكنك الإجابة في 5 ثوانٍ: فقط افحص القفزات.",
+    "html": "<p>عندما تكون القفزة <b>دائمًا نفسها</b>، نسمّي الدالّة <b>خطّية</b> (linear).</p><p>لماذا «خطّية»؟ لأنك إذا رسمت النقاط، تقع كلها على <b>خط</b> مستقيم واحد:</p><div class=\"graph\"><svg viewBox=\"0 0 260 160\" width=\"260\" height=\"160\" role=\"img\" aria-label=\"The points of the table sit on one straight line\"><line x1=\"20\" y1=\"140\" x2=\"252\" y2=\"140\" stroke=\"#C9CEDA\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"140\" x2=\"20\" y2=\"8\" stroke=\"#C9CEDA\" stroke-width=\"1.5\"/><line x1=\"18\" y1=\"120\" x2=\"242\" y2=\"26\" stroke=\"#6D3FD1\" stroke-width=\"3\" stroke-opacity=\".35\"/><circle cx=\"30\" cy=\"115\" r=\"6\" fill=\"#6D3FD1\"/><text x=\"30\" y=\"104\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#0F1726\">5</text><text x=\"30\" y=\"155\" text-anchor=\"middle\" font-size=\"11\" fill=\"#667085\">x=0</text><circle cx=\"80\" cy=\"94\" r=\"6\" fill=\"#6D3FD1\"/><text x=\"80\" y=\"83\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#0F1726\">8</text><text x=\"80\" y=\"155\" text-anchor=\"middle\" font-size=\"11\" fill=\"#667085\">x=1</text><circle cx=\"130\" cy=\"73\" r=\"6\" fill=\"#6D3FD1\"/><text x=\"130\" y=\"62\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#0F1726\">11</text><text x=\"130\" y=\"155\" text-anchor=\"middle\" font-size=\"11\" fill=\"#667085\">x=2</text><circle cx=\"180\" cy=\"52\" r=\"6\" fill=\"#6D3FD1\"/><text x=\"180\" y=\"41\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#0F1726\">14</text><text x=\"180\" y=\"155\" text-anchor=\"middle\" font-size=\"11\" fill=\"#667085\">x=3</text><circle cx=\"230\" cy=\"31\" r=\"6\" fill=\"#6D3FD1\"/><text x=\"230\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#0F1726\">17</text><text x=\"230\" y=\"155\" text-anchor=\"middle\" font-size=\"11\" fill=\"#667085\">x=4</text></svg></div>"
    }
   },
   {
@@ -318,53 +355,164 @@
    }
   },
   {
-   "kind": "number",
-   "html": "<div class=\"tbl\"><table><tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>f(x)</th><td>20</td><td>25</td><td>30</td><td>35</td></tr></table></div><p>This function is linear: f(x) = b + m·x. What is the slope <b>m</b>?</p>",
-   "answer": 5,
-   "tol": 0,
-   "hint": "How much does f(x) go up at each step? 20 → 25 → 30 …",
-   "explain": "Each step adds 5, so <b>m = 5</b>.",
+   "kind": "mcq",
+   "html": "<div class=\"steps\"><span>3</span><i>?</i><span>6</span><i>?</i><span>12</span><i>?</i><span>24</span></div><p>Is this function <b>linear</b>?</p>",
+   "options": [
+    "Yes, it is linear",
+    "No, it is not linear"
+   ],
+   "answer": 1,
+   "hint": "Compute the jumps: 6 − 3, then 12 − 6, then 24 − 12. Are they the same?",
+   "explain": "The jumps are +3, +6, +12: <b>not the same</b>, so it is <b>not linear</b>. Its points make a curve, not a straight line.",
    "ar": {
-    "html": "<div class=\"tbl\"><table><tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>f(x)</th><td>20</td><td>25</td><td>30</td><td>35</td></tr></table></div><p>هذه الدالّة خطّية: <span class=\"m\">f(x) = b + m·x</span>. ما هو الميل <b>m</b>؟</p>",
-    "hint": "بكم يزيد <span class=\"m\">f(x)</span> في كل خطوة؟ <span class=\"m\">20 → 25 → 30 …</span>",
-    "explain": "كل خطوة تضيف 5، إذن <span class=\"m\"><b>m = 5</b></span>."
-   }
-  },
-  {
-   "kind": "number",
-   "html": "<div class=\"tbl\"><table><tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>f(x)</th><td>20</td><td>25</td><td>30</td><td>35</td></tr></table></div><p>Same table. What is the start <b>b</b> (the value when x = 0)?</p>",
-   "answer": 20,
-   "tol": 0,
-   "hint": "Look under x = 0.",
-   "explain": "Under x = 0 we read 20, so <b>b = 20</b>. The function is <b>f(x) = 20 + 5x</b>.",
-   "ar": {
-    "html": "<div class=\"tbl\"><table><tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>f(x)</th><td>20</td><td>25</td><td>30</td><td>35</td></tr></table></div><p>نفس الجدول. ما هي البداية <b>b</b> (القيمة عندما <span class=\"m\">x = 0</span>)؟</p>",
-    "hint": "انظر تحت <span class=\"m\">x = 0</span>.",
-    "explain": "تحت <span class=\"m\">x = 0</span> نقرأ 20، إذن <span class=\"m\"><b>b = 20</b></span>. الدالّة هي <span class=\"m\"><b>f(x) = 20 + 5x</b></span>."
+    "html": "<div class=\"steps\"><span>3</span><i>?</i><span>6</span><i>?</i><span>12</span><i>?</i><span>24</span></div><p>هل هذه الدالّة <b>خطّية</b>؟</p>",
+    "options": [
+     "نعم، هي خطّية",
+     "لا، ليست خطّية"
+    ],
+    "hint": "احسب القفزات: <span class=\"m\">6 − 3</span>، ثم <span class=\"m\">12 − 6</span>، ثم <span class=\"m\">24 − 12</span>. هل هي متساوية؟",
+    "explain": "القفزات هي <span class=\"m\">+3, +6, +12</span>: <b>ليست متساوية</b>، إذن الدالّة <b>ليست خطّية</b>. نقاطها تكوّن منحنى، لا خطًّا مستقيمًا."
    }
   },
   {
    "kind": "learn",
-   "title": "Slope from two points",
-   "why": "Often you only know two moments: sales in 2020 and sales in 2024. The slope tells you the <b>speed</b> of change, and with the speed you can predict the future.",
-   "html": "<div class=\"formula\">m = (y₂ − y₁) ÷ (x₂ − x₁)</div><p>“Change in output ÷ change in input.”</p><div class=\"ex\"><b>Example</b>Points (2, 9) and (6, 21).<br>m = (21 − 9) ÷ (6 − 2) = 12 ÷ 4 = <b>3</b>.<br>Then b: 9 = b + 3×2 → b = 3.<br>Line: <b>y = 3 + 3x</b>.</div>",
+   "title": "Two numbers: the start and the jump",
+   "why": "With only 2 numbers you know the whole function. That is why managers and accountants love linear functions: easy to write, easy to predict.",
+   "html": "<p>Every linear function is made of <b>two numbers</b>:</p><div class=\"ex\"><b>1 · The start (b)</b>The value when x = 0. In our table: <b>5</b>.<br>Like the taxi’s 2 TND the moment you get in.</div><div class=\"ex\"><b>2 · The jump (m)</b>How much it changes at each step. In our table: <b>3</b>.<br>In math, the jump is called the <b>slope</b>.</div>",
    "ar": {
-    "title": "الميل من نقطتين",
-    "why": "غالبًا تعرف لحظتين فقط: المبيعات في 2020 والمبيعات في 2024. الميل يعطيك <b>سرعة</b> التغيّر، وبالسرعة يمكنك أن تتوقّع المستقبل.",
-    "html": "<div class=\"formula\">m = (y₂ − y₁) ÷ (x₂ − x₁)</div><p>«التغيّر في المُخرَج ÷ التغيّر في المُدخَل».</p><div class=\"ex\"><b>مثال</b>النقطتان <span class=\"m\">(2, 9)</span> و <span class=\"m\">(6, 21)</span>.<br><span class=\"m\">m = (21 − 9) ÷ (6 − 2) = 12 ÷ 4 = 3</span>.<br>ثم b: <span class=\"m\">9 = b + 3×2</span> ← <span class=\"m\">b = 3</span>.<br>المستقيم: <span class=\"m\"><b>y = 3 + 3x</b></span>.</div>"
+    "title": "رقمان: البداية والقفزة",
+    "why": "برقمين فقط تعرف الدالّة كلها. لهذا يحبّ المديرون والمحاسبون الدوال الخطّية: سهلة الكتابة، سهلة التوقّع.",
+    "html": "<p>كل دالّة خطّية مكوّنة من <b>رقمين</b>:</p><div class=\"ex\"><b>1 · البداية (b)</b>القيمة عندما <span class=\"m\">x = 0</span>. في جدولنا: <b>5</b>.<br>مثل 2 دينار في التاكسي لحظة الركوب.</div><div class=\"ex\"><b>2 · القفزة (m)</b>كم تتغيّر في كل خطوة. في جدولنا: <b>3</b>.<br>في الرياضيات، القفزة تُسمّى <b>الميل</b> (slope).</div>"
    }
   },
   {
    "kind": "number",
-   "html": "<p>What is the slope of the line through <b>(1, 4)</b> and <b>(5, 16)</b>?</p>",
+   "html": "<div class=\"tbl\"><table><tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>f(x)</th><td>7</td><td>11</td><td>15</td><td>19</td></tr></table></div><p>What is the <b>start b</b>?</p>",
+   "answer": 7,
+   "tol": 0,
+   "hint": "The start is the number under x = 0.",
+   "explain": "Under x = 0 we read 7. So <b>b = 7</b>.",
+   "ar": {
+    "html": "<div class=\"tbl\"><table><tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>f(x)</th><td>7</td><td>11</td><td>15</td><td>19</td></tr></table></div><p>ما هي <b>البداية b</b>؟</p>",
+    "hint": "البداية هي الرقم تحت <span class=\"m\">x = 0</span>.",
+    "explain": "تحت <span class=\"m\">x = 0</span> نقرأ 7. إذن <span class=\"m\"><b>b = 7</b></span>."
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"tbl\"><table><tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>f(x)</th><td>7</td><td>11</td><td>15</td><td>19</td></tr></table></div><p>What is the <b>jump m</b> (the slope)?</p>",
+   "answer": 4,
+   "tol": 0,
+   "hint": "11 − 7 = ?",
+   "explain": "11 − 7 = 4, 15 − 11 = 4, 19 − 15 = 4. So <b>m = 4</b>.",
+   "ar": {
+    "html": "<div class=\"tbl\"><table><tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>f(x)</th><td>7</td><td>11</td><td>15</td><td>19</td></tr></table></div><p>ما هي <b>القفزة m</b> (الميل)؟</p>",
+    "hint": "<span class=\"m\">11 − 7</span> = ؟",
+    "explain": "<span class=\"m\">11 − 7 = 4</span>، <span class=\"m\">15 − 11 = 4</span>، <span class=\"m\">19 − 15 = 4</span>. إذن <span class=\"m\"><b>m = 4</b></span>."
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Put them together: the formula",
+   "why": "The table stops at x = 3. The formula never stops: it gives the value for x = 10, 100 or 1000. That is the power of a formula.",
+   "html": "<div class=\"formula\">f(x) = start + jump × x</div><p>In math letters:</p><div class=\"formula\">f(x) = b + m·x</div><div class=\"ex\"><b>Our first table</b>start 5, jump 3 → <b>f(x) = 5 + 3x</b>.<br>Check: f(2) = 5 + 3×2 = 11 ✓ the same as the table.</div>",
+   "ar": {
+    "title": "نجمعهما: الصيغة",
+    "why": "الجدول يتوقّف عند x = 3. الصيغة لا تتوقّف: تعطيك القيمة من أجل x = 10 أو 100 أو 1000. هذه قوّة الصيغة.",
+    "html": "<div class=\"key\">f(x) = البداية + القفزة × x</div><p>بحروف الرياضيات:</p><div class=\"formula\">f(x) = b + m·x</div><div class=\"ex\"><b>جدولنا الأول</b>البداية 5، القفزة 3 ← <span class=\"m\"><b>f(x) = 5 + 3x</b></span>.<br>تحقّق: <span class=\"m\">f(2) = 5 + 3×2 = 11</span> ✓ نفس الجدول.</div>"
+   }
+  },
+  {
+   "kind": "mcq",
+   "html": "<div class=\"tbl\"><table><tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>f(x)</th><td>7</td><td>11</td><td>15</td><td>19</td></tr></table></div><p>Which formula is this table?</p>",
+   "options": [
+    "f(x) = 4 + 7x",
+    "f(x) = 7 + 4x",
+    "f(x) = 11 + 4x",
+    "f(x) = 7 + 11x"
+   ],
+   "answer": 1,
+   "hint": "You already found: start = 7, jump = 4. Formula = start + jump × x.",
+   "explain": "start 7, jump 4 → <b>f(x) = 7 + 4x</b>. Check: f(1) = 7 + 4 = 11 ✓.",
+   "ar": {
+    "html": "<div class=\"tbl\"><table><tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>f(x)</th><td>7</td><td>11</td><td>15</td><td>19</td></tr></table></div><p>أيّ صيغة تمثّل هذا الجدول؟</p>",
+    "options": [
+     "<span class=\"m\">f(x) = 4 + 7x</span>",
+     "<span class=\"m\">f(x) = 7 + 4x</span>",
+     "<span class=\"m\">f(x) = 11 + 4x</span>",
+     "<span class=\"m\">f(x) = 7 + 11x</span>"
+    ],
+    "hint": "وجدت من قبل: البداية = 7، القفزة = 4. الصيغة = البداية + القفزة × x.",
+    "explain": "البداية 7، القفزة 4 ← <span class=\"m\"><b>f(x) = 7 + 4x</b></span>. تحقّق: <span class=\"m\">f(1) = 7 + 4 = 11</span> ✓."
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<p>Use <b>f(x) = 7 + 4x</b>. What is <b>f(10)</b>?<br><span class=\"small\">The table doesn’t go that far. The formula does.</span></p>",
+   "answer": 47,
+   "tol": 0,
+   "hint": "7 + 4 × 10. Multiply first.",
+   "explain": "f(10) = 7 + 4 × 10 = 7 + 40 = <b>47</b>.",
+   "ar": {
+    "html": "<p>استعمل <span class=\"m\"><b>f(x) = 7 + 4x</b></span>. كم يساوي <span class=\"m\"><b>f(10)</b></span>؟<br><span class=\"small\">الجدول لا يصل إلى هناك. الصيغة تصل.</span></p>",
+    "hint": "<span class=\"m\">7 + 4 × 10</span>. الضرب أولًا.",
+    "explain": "<span class=\"m\">f(10) = 7 + 4 × 10 = 7 + 40 = 47</span>."
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "The jump when you only have two points",
+   "why": "Often you only know two moments: sales in 2020 and sales in 2024. The jump per year is the speed of change, and with the speed you can predict the future.",
+   "html": "<p>Sometimes there is no table, only <b>two points</b>.</p><div class=\"ex\"><b>Example</b>A shop sells 9 phones in week 2, and 21 phones in week 6.<br>1. Sales went up: 21 − 9 = <b>12</b> phones.<br>2. Time went up: 6 − 2 = <b>4</b> weeks.<br>3. Per week: 12 ÷ 4 = <b>3</b> phones per week. That is the slope.</div><div class=\"key\">slope = how much the output went up ÷ how much the input went up</div><p class=\"fr\">In the book: m = (y₂ − y₁) ÷ (x₂ − x₁). Same thing, with letters.</p>",
+   "ar": {
+    "title": "القفزة عندما تعرف نقطتين فقط",
+    "why": "غالبًا تعرف لحظتين فقط: المبيعات في 2020 والمبيعات في 2024. القفزة في السنة هي سرعة التغيّر، وبالسرعة يمكنك أن تتوقّع المستقبل.",
+    "html": "<p>أحيانًا لا يوجد جدول، فقط <b>نقطتان</b>.</p><div class=\"ex\"><b>مثال</b>متجر يبيع 9 هواتف في الأسبوع 2، و 21 هاتفًا في الأسبوع 6.<br>1. المبيعات زادت: <span class=\"m\">21 − 9 = 12</span> هاتفًا.<br>2. الوقت زاد: <span class=\"m\">6 − 2 = 4</span> أسابيع.<br>3. في الأسبوع: <span class=\"m\">12 ÷ 4 = 3</span> هواتف في الأسبوع. هذا هو الميل.</div><div class=\"key\">الميل = كم زاد المُخرَج ÷ كم زاد المُدخَل</div><p class=\"fr\">في الكتاب: <span class=\"m\">m = (y₂ − y₁) ÷ (x₂ − x₁)</span>. نفس الشيء، بالحروف.</p>"
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Step 1 of 3",
+   "html": "<p>Points <b>(1, 4)</b> and <b>(5, 16)</b>.<br>How much did the <b>output</b> (the second number) go up?</p>",
+   "answer": 12,
+   "tol": 0,
+   "hint": "16 − 4.",
+   "explain": "16 − 4 = <b>12</b>.",
+   "ar": {
+    "title": "الخطوة 1 من 3",
+    "html": "<p>النقطتان <span class=\"m\"><b>(1, 4)</b></span> و <span class=\"m\"><b>(5, 16)</b></span>.<br>كم زاد <b>المُخرَج</b> (الرقم الثاني)؟</p>",
+    "hint": "<span class=\"m\">16 − 4</span>.",
+    "explain": "<span class=\"m\">16 − 4 = 12</span>."
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Step 2 of 3",
+   "html": "<p>Same points <b>(1, 4)</b> and <b>(5, 16)</b>.<br>How much did the <b>input</b> (the first number) go up?</p>",
+   "answer": 4,
+   "tol": 0,
+   "hint": "5 − 1.",
+   "explain": "5 − 1 = <b>4</b>.",
+   "ar": {
+    "title": "الخطوة 2 من 3",
+    "html": "<p>نفس النقطتين <span class=\"m\"><b>(1, 4)</b></span> و <span class=\"m\"><b>(5, 16)</b></span>.<br>كم زاد <b>المُدخَل</b> (الرقم الأول)؟</p>",
+    "hint": "<span class=\"m\">5 − 1</span>.",
+    "explain": "<span class=\"m\">5 − 1 = 4</span>."
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Step 3 of 3",
+   "html": "<p>The output went up <b>12</b>, the input went up <b>4</b>. What is the <b>slope</b>?</p>",
    "answer": 3,
    "tol": 0,
-   "hint": "Top: 16 − 4. Bottom: 5 − 1. Then divide.",
-   "explain": "m = (16 − 4) ÷ (5 − 1) = 12 ÷ 4 = <b>3</b>.",
+   "hint": "12 ÷ 4.",
+   "explain": "12 ÷ 4 = <b>3</b>. The output goes up 3 for each step of x.",
    "ar": {
-    "html": "<p>ما هو ميل المستقيم الذي يمرّ بـ <span class=\"m\"><b>(1, 4)</b></span> و <span class=\"m\"><b>(5, 16)</b></span>؟</p>",
-    "hint": "في الأعلى: <span class=\"m\">16 − 4</span>. في الأسفل: <span class=\"m\">5 − 1</span>. ثم اقسم.",
-    "explain": "<span class=\"m\">m = (16 − 4) ÷ (5 − 1) = 12 ÷ 4 = 3</span>."
+    "title": "الخطوة 3 من 3",
+    "html": "<p>المُخرَج زاد <b>12</b>، والمُدخَل زاد <b>4</b>. ما هو <b>الميل</b>؟</p>",
+    "hint": "<span class=\"m\">12 ÷ 4</span>.",
+    "explain": "<span class=\"m\">12 ÷ 4 = 3</span>. المُخرَج يزيد 3 في كل خطوة من x."
    }
   },
   {
@@ -382,13 +530,50 @@
   },
   {
    "kind": "learn",
+   "title": "Find the start by walking back",
+   "why": "A classic exam question: “find the equation of the line through two points”. You need the slope AND the start. This trick gives the start with no hard algebra.",
+   "html": "<div class=\"ex\"><b>Example</b>The slope is 3, and the line passes through (2, 9).<br>We want the value at x = 0. From x = 2, walk back 2 steps. Each step back takes away 3:</div><div class=\"steps\"><span>9</span><i>−3</i><span>6</span><i>−3</i><span>3</span></div><p>9 − 3 × 2 = <b>3</b>. So the start b = 3, and the line is <b>y = 3 + 3x</b>.</p>",
+   "ar": {
+    "title": "جد البداية بالرجوع إلى الوراء",
+    "why": "سؤال كلاسيكي في الامتحان: «جد معادلة المستقيم الذي يمرّ بنقطتين». تحتاج الميل والبداية. هذه الحيلة تعطيك البداية بدون جبر صعب.",
+    "html": "<div class=\"ex\"><b>مثال</b>الميل 3، والمستقيم يمرّ بـ <span class=\"m\">(2, 9)</span>.<br>نريد القيمة عند <span class=\"m\">x = 0</span>. من <span class=\"m\">x = 2</span>، ارجع خطوتين إلى الوراء. كل خطوة إلى الوراء تنقص 3:</div><div class=\"steps\"><span>9</span><i>−3</i><span>6</span><i>−3</i><span>3</span></div><p><span class=\"m\">9 − 3 × 2 = 3</span>. إذن البداية <span class=\"m\">b = 3</span>، والمستقيم هو <span class=\"m\"><b>y = 3 + 3x</b></span>.</p>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<p>The slope is <b>4</b>, and the line passes through <b>(1, 10)</b>. What is the start <b>b</b>?</p>",
+   "answer": 6,
+   "tol": 0,
+   "hint": "From x = 1, walk back 1 step: 10 − 4.",
+   "explain": "10 − 4 × 1 = <b>6</b>. The line is y = 6 + 4x.",
+   "ar": {
+    "html": "<p>الميل <b>4</b>، والمستقيم يمرّ بـ <span class=\"m\"><b>(1, 10)</b></span>. ما هي البداية <b>b</b>؟</p>",
+    "hint": "من <span class=\"m\">x = 1</span>، ارجع خطوة واحدة: <span class=\"m\">10 − 4</span>.",
+    "explain": "<span class=\"m\">10 − 4 × 1 = 6</span>. المستقيم هو <span class=\"m\">y = 6 + 4x</span>."
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<p>The slope is <b>2</b>, and the line passes through <b>(3, 11)</b>. What is the start <b>b</b>?</p>",
+   "answer": 5,
+   "tol": 0,
+   "hint": "From x = 3, walk back 3 steps: 11 − 2 × 3.",
+   "explain": "11 − 2 × 3 = 11 − 6 = <b>5</b>. The line is y = 5 + 2x.",
+   "ar": {
+    "html": "<p>الميل <b>2</b>، والمستقيم يمرّ بـ <span class=\"m\"><b>(3, 11)</b></span>. ما هي البداية <b>b</b>؟</p>",
+    "hint": "من <span class=\"m\">x = 3</span>، ارجع 3 خطوات: <span class=\"m\">11 − 2 × 3</span>.",
+    "explain": "<span class=\"m\">11 − 2 × 3 = 11 − 6 = 5</span>. المستقيم هو <span class=\"m\">y = 5 + 2x</span>."
+   }
+  },
+  {
+   "kind": "learn",
    "title": "What slope and intercept MEAN",
    "why": "“How much more for one extra unit” is THE idea of this course. Later it becomes the derivative, and in Micro it's called marginal cost. Learn it once here, use it everywhere.",
-   "html": "<div class=\"ex\"><b>Example · taxi</b>C = 2 + 1.5d (C in TND, d in km)</div><p><b>Intercept 2</b> (TND): the cost when d = 0, the fixed charge to start.</p><p><b>Slope 1.5</b> (TND <b>per km</b>): each extra km adds 1.5 TND.</p><div class=\"key\">Slope units = output unit PER input unit. The teacher always asks for units: you lose points without them.</div>",
+   "html": "<div class=\"ex\"><b>Example · taxi</b>C = 2 + 1.5d (C in TND, d in km)</div><p><b>Start 2</b> (math word: <b>intercept</b>, TND): the cost when d = 0, the fixed charge to start.</p><p><b>Jump 1.5</b> (math word: <b>slope</b>, TND <b>per km</b>): each extra km adds 1.5 TND.</p><div class=\"key\">Slope units = output unit PER input unit. The teacher always asks for units: you lose points without them.</div>",
    "ar": {
     "title": "ماذا يعني الميل والقيمة الابتدائية",
     "why": "«كم يزيد مقابل وحدة إضافية واحدة» هي الفكرة الأهم في هذه المادة. لاحقًا تصبح المشتقة (derivative)، وفي مادة Micro تُسمّى التكلفة الحدّية (marginal cost). تعلّمها مرة هنا، واستعملها في كل مكان.",
-    "html": "<div class=\"ex\"><b>مثال · تاكسي</b><span class=\"m\">C = 2 + 1.5d</span> (C بالدينار، d بالكيلومتر)</div><p><b>القيمة الابتدائية 2</b> (intercept، بالدينار): التكلفة عندما <span class=\"m\">d = 0</span>، أي ثمن الانطلاق الثابت.</p><p><b>الميل 1.5</b> (slope، دينار <b>لكل كيلومتر</b>): كل كيلومتر إضافي يضيف 1.5 دينار.</p><div class=\"key\">وحدة الميل = وحدة المُخرَج <b>لكل</b> وحدة مُدخَل. الأستاذة تطلب الوحدات دائمًا: تخسر نقاطًا بدونها.</div>"
+    "html": "<div class=\"ex\"><b>مثال · تاكسي</b><span class=\"m\">C = 2 + 1.5d</span> (C بالدينار، d بالكيلومتر)</div><p><b>القيمة الابتدائية 2</b> (intercept، بالدينار): التكلفة عندما <span class=\"m\">d = 0</span>، أي ثمن الانطلاق الثابت.</p><p><b>القفزة 1.5</b> (الميل، slope، دينار <b>لكل كيلومتر</b>): كل كيلومتر إضافي يضيف 1.5 دينار.</p><div class=\"key\">وحدة الميل = وحدة المُخرَج <b>لكل</b> وحدة مُدخَل. الأستاذة تطلب الوحدات دائمًا: تخسر نقاطًا بدونها.</div>"
    }
   },
   {
@@ -450,27 +635,92 @@
   {
    "kind": "learn",
    "title": "Comparing two offers",
-   "why": "Choosing between two offers (two phone plans, two suppliers, renting or buying) is a real decision you'll make at work and at home. Setting A = B shows exactly where one offer becomes better.",
-   "html": "<div class=\"ex\"><b>Example · printing</b>Offer A: 30 TND + 0.05 TND per page → A = 30 + 0.05x<br>Offer B: 90 TND + 0.02 TND per page → B = 90 + 0.02x</div><p><b>Same cost when A = B:</b><br>30 + 0.05x = 90 + 0.02x<br>0.03x = 60 → x = <b>2000 pages</b>.</p><p>Fewer than 2000 pages → A is cheaper. More → B is cheaper.</p>",
+   "why": "Choosing between two offers (two phone plans, two suppliers, renting or buying) is a real decision you will make at work and at home.",
+   "html": "<div class=\"ex\"><b>Example · printing</b>Offer A: 30 TND + 0.05 TND per page<br>Offer B: 90 TND + 0.02 TND per page</div><p>A starts cheaper, but grows faster. Look:</p><div class=\"tbl\"><table><tr><th>pages</th><td>0</td><td>1000</td><td>2000</td><td>3000</td></tr><tr><th>A</th><td>30</td><td>80</td><td><b>130</b></td><td>180</td></tr><tr><th>B</th><td>90</td><td>110</td><td><b>130</b></td><td>150</td></tr></table></div><p>At <b>2000 pages</b> they cost the same. Fewer pages → A is cheaper. More pages → B is cheaper.</p>",
    "ar": {
     "title": "مقارنة عرضين",
-    "why": "الاختيار بين عرضين (اشتراكَي هاتف، مورّدَين، الكراء أو الشراء) قرار حقيقي ستتّخذه في العمل وفي البيت. وضع <span class=\"m\">A = B</span> يبيّن بالضبط متى يصبح عرض أفضل من الآخر.",
-    "html": "<div class=\"ex\"><b>مثال · طباعة</b>العرض A: 30 دينارًا + 0.05 دينار لكل صفحة ← <span class=\"m\">A = 30 + 0.05x</span><br>العرض B: 90 دينارًا + 0.02 دينار لكل صفحة ← <span class=\"m\">B = 90 + 0.02x</span></div><p><b>نفس التكلفة عندما <span class=\"m\">A = B</span>:</b><br><span class=\"m\">30 + 0.05x = 90 + 0.02x</span><br><span class=\"m\">0.03x = 60</span> ← <span class=\"m\">x = 2000</span> صفحة.</p><p>أقل من 2000 صفحة ← A أرخص. أكثر ← B أرخص.</p>"
+    "why": "الاختيار بين عرضين (اشتراكَي هاتف، مورّدَين، الكراء أو الشراء) قرار حقيقي ستتّخذه في العمل وفي البيت.",
+    "html": "<div class=\"ex\"><b>مثال · طباعة</b>العرض A: 30 دينارًا + 0.05 دينار لكل صفحة<br>العرض B: 90 دينارًا + 0.02 دينار لكل صفحة</div><p>A يبدأ أرخص، لكنه يكبر أسرع. انظر:</p><div class=\"tbl\"><table><tr><th>pages</th><td>0</td><td>1000</td><td>2000</td><td>3000</td></tr><tr><th>A</th><td>30</td><td>80</td><td><b>130</b></td><td>180</td></tr><tr><th>B</th><td>90</td><td>110</td><td><b>130</b></td><td>150</td></tr></table></div><p>عند <b>2000 صفحة</b> لهما نفس التكلفة. صفحات أقل ← A أرخص. صفحات أكثر ← B أرخص.</p>"
+   }
+  },
+  {
+   "kind": "mcq",
+   "html": "<p>Look at the table again. For <b>1000 pages</b>, which offer is cheaper?</p><div class=\"tbl\"><table><tr><th>pages</th><td>0</td><td>1000</td><td>2000</td><td>3000</td></tr><tr><th>A</th><td>30</td><td>80</td><td>130</td><td>180</td></tr><tr><th>B</th><td>90</td><td>110</td><td>130</td><td>150</td></tr></table></div>",
+   "options": [
+    "Offer A",
+    "Offer B",
+    "The same price"
+   ],
+   "answer": 0,
+   "hint": "Read the column 1000: A costs ?, B costs ?. The smaller number is cheaper.",
+   "explain": "At 1000 pages: A = 80 TND, B = 110 TND. <b>Offer A</b> is cheaper (1000 is less than 2000).",
+   "ar": {
+    "html": "<p>انظر إلى الجدول مرة أخرى. من أجل <b>1000 صفحة</b>، أيّ عرض أرخص؟</p><div class=\"tbl\"><table><tr><th>pages</th><td>0</td><td>1000</td><td>2000</td><td>3000</td></tr><tr><th>A</th><td>30</td><td>80</td><td>130</td><td>180</td></tr><tr><th>B</th><td>90</td><td>110</td><td>130</td><td>150</td></tr></table></div>",
+    "options": [
+     "العرض A",
+     "العرض B",
+     "نفس السعر"
+    ],
+    "hint": "اقرأ عمود 1000: كم يكلّف A؟ وكم يكلّف B؟ الرقم الأصغر هو الأرخص.",
+    "explain": "عند 1000 صفحة: A = 80 دينارًا، B = 110 دنانير. <b>العرض A</b> أرخص (1000 أقل من 2000)."
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "The exact way: write A = B",
+   "why": "A table can miss the exact point. The equation gives the exact answer, and the exam asks for the equation.",
+   "html": "<p>Write <b>A = B</b>, then solve in 3 small moves:</p><div class=\"formula\">30 + 0.05x = 90 + 0.02x</div><p><b>Move 1.</b> Take 0.02x away from both sides → 30 + 0.03x = 90</p><p><b>Move 2.</b> Take 30 away from both sides → 0.03x = 60</p><p><b>Move 3.</b> Divide by 0.03 → x = 60 ÷ 0.03 = <b>2000 pages</b> ✓</p>",
+   "ar": {
+    "title": "الطريقة الدقيقة: اكتب A = B",
+    "why": "الجدول قد لا يُظهر النقطة بالضبط. المعادلة تعطيك الجواب الدقيق، والامتحان يطلب المعادلة.",
+    "html": "<p>اكتب <span class=\"m\"><b>A = B</b></span>، ثم حلّ في 3 حركات صغيرة:</p><div class=\"formula\">30 + 0.05x = 90 + 0.02x</div><p><b>الحركة 1.</b> انزع <span class=\"m\">0.02x</span> من الجهتين ← <span class=\"m\">30 + 0.03x = 90</span></p><p><b>الحركة 2.</b> انزع 30 من الجهتين ← <span class=\"m\">0.03x = 60</span></p><p><b>الحركة 3.</b> اقسم على 0.03 ← <span class=\"m\">x = 60 ÷ 0.03 = 2000</span> صفحة ✓</p>"
    }
   },
   {
    "kind": "number",
-   "html": "<p>Offer A = 20 + 0.10x, Offer B = 50 + 0.04x (TND, x = pages).<br>For how many pages do they cost <b>the same</b>?</p>",
+   "title": "Move 1",
+   "html": "<p>A = 20 + 0.10x and B = 50 + 0.04x. We write:</p><div class=\"formula\">20 + 0.10x = 50 + 0.04x</div><p>Take 0.04x away from both sides: 20 + <b>?</b>x = 50. What is <b>?</b></p>",
+   "answer": 0.06,
+   "tol": 0.0001,
+   "hint": "0.10 − 0.04.",
+   "explain": "0.10 − 0.04 = <b>0.06</b>. Now: 20 + 0.06x = 50.",
+   "ar": {
+    "title": "الحركة 1",
+    "html": "<p><span class=\"m\">A = 20 + 0.10x</span> و <span class=\"m\">B = 50 + 0.04x</span>. نكتب:</p><div class=\"formula\">20 + 0.10x = 50 + 0.04x</div><p>انزع <span class=\"m\">0.04x</span> من الجهتين: <span class=\"m\">20 + <b>?</b>x = 50</span>. كم يساوي <b>؟</b></p>",
+    "hint": "<span class=\"m\">0.10 − 0.04</span>.",
+    "explain": "<span class=\"m\">0.10 − 0.04 = 0.06</span>. الآن: <span class=\"m\">20 + 0.06x = 50</span>."
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Move 2",
+   "html": "<div class=\"formula\">20 + 0.06x = 50</div><p>Take 20 away from both sides: 0.06x = <b>?</b></p>",
+   "answer": 30,
+   "tol": 0,
+   "hint": "50 − 20.",
+   "explain": "50 − 20 = <b>30</b>. Now: 0.06x = 30.",
+   "ar": {
+    "title": "الحركة 2",
+    "html": "<div class=\"formula\">20 + 0.06x = 50</div><p>انزع 20 من الجهتين: <span class=\"m\">0.06x = <b>?</b></span></p>",
+    "hint": "<span class=\"m\">50 − 20</span>.",
+    "explain": "<span class=\"m\">50 − 20 = 30</span>. الآن: <span class=\"m\">0.06x = 30</span>."
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Move 3",
+   "html": "<div class=\"formula\">0.06x = 30</div><p>Divide by 0.06. For how many pages do A and B cost the same?</p>",
    "answer": 500,
    "tol": 0,
    "unit": "pages",
-   "hint": "Put A = B. Move the x's to one side and the numbers to the other.",
-   "explain": "20 + 0.10x = 50 + 0.04x → 0.06x = 30 → x = 30 ÷ 0.06 = <b>500 pages</b>.",
+   "hint": "30 ÷ 0.06. (Tip: 30 ÷ 0.06 is the same as 3000 ÷ 6.)",
+   "explain": "x = 30 ÷ 0.06 = <b>500 pages</b>.",
    "ar": {
-    "html": "<p>العرض <span class=\"m\">A = 20 + 0.10x</span>، والعرض <span class=\"m\">B = 50 + 0.04x</span> (بالدينار، x = عدد الصفحات).<br>من أجل كم صفحة يكون لهما <b>نفس التكلفة</b>؟</p>",
+    "title": "الحركة 3",
+    "html": "<div class=\"formula\">0.06x = 30</div><p>اقسم على 0.06. من أجل كم صفحة يكون للعرضين نفس التكلفة؟</p>",
     "unit": "صفحة",
-    "hint": "ضع <span class=\"m\">A = B</span>. انقل حدود x إلى جهة والأرقام إلى الجهة الأخرى.",
-    "explain": "<span class=\"m\">20 + 0.10x = 50 + 0.04x</span> ← <span class=\"m\">0.06x = 30</span> ← <span class=\"m\">x = 30 ÷ 0.06 = 500</span> صفحة."
+    "hint": "<span class=\"m\">30 ÷ 0.06</span>. (حيلة: <span class=\"m\">30 ÷ 0.06</span> هي نفس <span class=\"m\">3000 ÷ 6</span>.)",
+    "explain": "<span class=\"m\">x = 30 ÷ 0.06 = 500</span> صفحة."
    }
   },
   {
