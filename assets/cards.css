@@ -51,7 +51,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:18px;l
 .fb.ok{background:var(--ok-soft);color:#0B5A40}
 .fb.bad{background:var(--bad-soft);color:#8E2820}
 .fb.hint{background:var(--warn-soft);color:#6E4100}
-.fb b{display:block;margin-bottom:2px}
+.fb > b:first-child{display:block;margin-bottom:2px}
 .actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .btn{font:inherit;font-size:16px;font-weight:700;border:0;border-radius:12px;padding:12px 20px;cursor:pointer;background:var(--ink);color:#fff}
 .btn.sec{background:#fff;color:var(--ink);border:2px solid var(--line)}
