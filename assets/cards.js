@@ -16,8 +16,6 @@
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const N = D.cards.length;
 
-  // translate helper (select text → French / Arabic)
-  try { const me = document.currentScript; if (me && me.src) { const s = document.createElement('script'); s.src = me.src.replace(/cards\.js(\?.*)?$/, 'translate.js'); document.head.appendChild(s); } } catch (e) {}
 
   function parseNum(raw) {
     let s = String(raw || '').trim().replace(/[−–—]/g, '-').replace(/\s/g, '');
