@@ -111,3 +111,6 @@ body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:18px;l
 .lad .fin{color:var(--ok);font-weight:800;font-size:1.2rem}
 .fb .lad{background:rgba(255,255,255,.75)}
 @media (max-width:520px){.lad{font-size:1rem;column-gap:8px;padding:10px 8px}}
+.lad .op{font-size:1.02rem;padding:2px 11px}
+.lad .note{font-size:14.5px}
+.card sup{font-size:.68em;line-height:0}

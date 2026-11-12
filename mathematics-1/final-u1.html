@@ -711,11 +711,11 @@
    "kind": "learn",
    "title": "The undo table",
    "why": "Almost every exam question that ends with “find x” (or q, t, p) is solved with these few undo moves. Learn this table once and you can solve them all.",
-   "html": "<p>Each operation has an <b>opposite</b> that cancels it:</p><div class=\"tbl\"><table><tr><th>Done to x</th><th>Undo it with</th></tr><tr><td>+ 5</td><td>− 5</td></tr><tr><td>− 5</td><td>+ 5</td></tr><tr><td>× 5</td><td>÷ 5</td></tr><tr><td>÷ 5</td><td>× 5</td></tr><tr><td>x²</td><td>√ (square root)</td></tr><tr><td>√x</td><td>square it ( )²</td></tr><tr><td>eˣ</td><td>ln</td></tr><tr><td>ln x</td><td>e^( )</td></tr></table></div><div class=\"key\">Golden rule: whatever you do to one side, do exactly the same to the other side.</div>",
+   "html": "<p>Each operation has an <b>opposite</b> that cancels it:</p><div class=\"tbl\"><table><tr><th>Done to x</th><th>Undo it with</th></tr><tr><td>+ 5</td><td>− 5</td></tr><tr><td>− 5</td><td>+ 5</td></tr><tr><td>× 5</td><td>÷ 5</td></tr><tr><td>÷ 5</td><td>× 5</td></tr><tr><td>x²</td><td>√ (square root)</td></tr><tr><td>√x</td><td>square it ( )²</td></tr><tr><td>eˣ</td><td>ln</td></tr><tr><td>ln x</td><td>e<sup>□</sup></td></tr></table></div><div class=\"key\">Golden rule: whatever you do to one side, do exactly the same to the other side.</div>",
    "ar": {
     "title": "جدول التراجع",
     "why": "تقريبًا كل سؤال في الامتحان ينتهي بـ «جد x» (أو q أو t أو p) يُحلّ بهذه الحركات القليلة. تعلّم هذا الجدول مرة واحدة، وتستطيع حلّها كلها.",
-    "html": "<p>كل عملية لها <b>عكس</b> يلغيها:</p><div class=\"tbl\"><table><tr><th>ما فُعل بـ x</th><th>نلغيه بـ</th></tr><tr><td>+ 5</td><td>− 5</td></tr><tr><td>− 5</td><td>+ 5</td></tr><tr><td>× 5</td><td>÷ 5</td></tr><tr><td>÷ 5</td><td>× 5</td></tr><tr><td>x²</td><td>√ (الجذر التربيعي)</td></tr><tr><td>√x</td><td>( )² نربّعه</td></tr><tr><td>eˣ</td><td>ln</td></tr><tr><td>ln x</td><td>e^( )</td></tr></table></div><div class=\"key\">القاعدة الذهبية: ما تفعله بجهة، افعله بالضبط بالجهة الأخرى.</div>"
+    "html": "<p>كل عملية لها <b>عكس</b> يلغيها:</p><div class=\"tbl\"><table><tr><th>ما فُعل بـ x</th><th>نلغيه بـ</th></tr><tr><td>+ 5</td><td>− 5</td></tr><tr><td>− 5</td><td>+ 5</td></tr><tr><td>× 5</td><td>÷ 5</td></tr><tr><td>÷ 5</td><td>× 5</td></tr><tr><td>x²</td><td>√ (الجذر التربيعي)</td></tr><tr><td>√x</td><td>( )² نربّعه</td></tr><tr><td>eˣ</td><td>ln</td></tr><tr><td>ln x</td><td>e<sup>□</sup></td></tr></table></div><div class=\"key\">القاعدة الذهبية: ما تفعله بجهة، افعله بالضبط بالجهة الأخرى.</div>"
    }
   },
   {
@@ -1043,32 +1043,32 @@
   {
    "kind": "number",
    "title": "Two moves · 1",
-   "html": "<div class=\"formula\">5e^(0.1t) = 15</div><p>First undo the ×5. e^(0.1t) = ?</p>",
+   "html": "<div class=\"formula\">5e<sup>0.1t</sup> = 15</div><p>First undo the ×5. e<sup>0.1t</sup> = ?</p>",
    "answer": 3,
    "tol": 0,
    "hint": "15 ÷ 5.",
-   "explain": "<div class=\"lad\"><span class=\"l\">5e^(0.1t)</span><span class=\"e\">=</span><span class=\"rt\">15</span><span class=\"l op\">÷ 5</span><span class=\"e\"></span><span class=\"rt op\">÷ 5</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">e^(0.1t)</span><span class=\"e fin\">=</span><span class=\"rt fin\">3</span></div>",
+   "explain": "<div class=\"lad\"><span class=\"l\">5e<sup>0.1t</sup></span><span class=\"e\">=</span><span class=\"rt\">15</span><span class=\"l op\">÷ 5</span><span class=\"e\"></span><span class=\"rt op\">÷ 5</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">e<sup>0.1t</sup></span><span class=\"e fin\">=</span><span class=\"rt fin\">3</span></div>",
    "ar": {
     "title": "حركتان · 1",
-    "html": "<div class=\"formula\">5e^(0.1t) = 15</div><p>أولًا تراجع عن <span class=\"m\">×5</span>. <span class=\"m\">e^(0.1t) = ?</span></p>",
+    "html": "<div class=\"formula\">5e<sup>0.1t</sup> = 15</div><p>أولًا تراجع عن <span class=\"m\">×5</span>. <span class=\"m\">e<sup>0.1t</sup> = ?</span></p>",
     "hint": "<span class=\"m\">15 ÷ 5</span>.",
-    "explain": "<div class=\"lad\"><span class=\"l\">5e^(0.1t)</span><span class=\"e\">=</span><span class=\"rt\">15</span><span class=\"l op\">÷ 5</span><span class=\"e\"></span><span class=\"rt op\">÷ 5</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">e^(0.1t)</span><span class=\"e fin\">=</span><span class=\"rt fin\">3</span></div>"
+    "explain": "<div class=\"lad\"><span class=\"l\">5e<sup>0.1t</sup></span><span class=\"e\">=</span><span class=\"rt\">15</span><span class=\"l op\">÷ 5</span><span class=\"e\"></span><span class=\"rt op\">÷ 5</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">e<sup>0.1t</sup></span><span class=\"e fin\">=</span><span class=\"rt fin\">3</span></div>"
    }
   },
   {
    "kind": "number",
    "title": "Two moves · 2",
-   "html": "<p>Here are the moves. Only the last calculation is left:</p><div class=\"lad\"><span class=\"l\">e^(0.1t)</span><span class=\"e\">=</span><span class=\"rt\">3</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\">↓ take ln of both sides (ln cancels e)</span><span class=\"l\">0.1t</span><span class=\"e\">=</span><span class=\"rt\">1.0986</span><span class=\"l op\">÷ 0.1</span><span class=\"e\"></span><span class=\"rt op\">÷ 0.1</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">t</span><span class=\"e fin\">=</span><span class=\"rt fin\">?</span></div><p>What is <b>t</b>?</p>",
+   "html": "<p>Here are the moves. Only the last calculation is left:</p><div class=\"lad\"><span class=\"l\">e<sup>0.1t</sup></span><span class=\"e\">=</span><span class=\"rt\">3</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\">↓ take ln of both sides (ln cancels e)</span><span class=\"l\">0.1t</span><span class=\"e\">=</span><span class=\"rt\">1.0986</span><span class=\"l op\">÷ 0.1</span><span class=\"e\"></span><span class=\"rt op\">÷ 0.1</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">t</span><span class=\"e fin\">=</span><span class=\"rt fin\">?</span></div><p>What is <b>t</b>?</p>",
    "answer": 10.986,
    "tol": 0.05,
    "hint": "Dividing by 0.1 is the same as multiplying by 10: 1.0986 × 10.",
-   "explain": "<div class=\"lad\"><span class=\"l\">e^(0.1t)</span><span class=\"e\">=</span><span class=\"rt\">3</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\">↓ take ln of both sides (ln cancels e)</span><span class=\"l\">0.1t</span><span class=\"e\">=</span><span class=\"rt\">1.0986</span><span class=\"l op\">÷ 0.1</span><span class=\"e\"></span><span class=\"rt op\">÷ 0.1</span><span class=\"note\">↓ same move on both sides</span><span class=\"l\">t</span><span class=\"e\">=</span><span class=\"rt\">1.0986 ÷ 0.1</span><span class=\"note\">↓ ÷ 0.1 is the same as × 10</span><span class=\"l fin\">t</span><span class=\"e fin\">≈</span><span class=\"rt fin\">10.99</span></div><p>Meaning: 5 TND growing at 10% (continuous interest) becomes 15 TND in about 11 years.</p>",
+   "explain": "<div class=\"lad\"><span class=\"l\">e<sup>0.1t</sup></span><span class=\"e\">=</span><span class=\"rt\">3</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\">↓ take ln of both sides (ln cancels e)</span><span class=\"l\">0.1t</span><span class=\"e\">=</span><span class=\"rt\">1.0986</span><span class=\"l op\">÷ 0.1</span><span class=\"e\"></span><span class=\"rt op\">÷ 0.1</span><span class=\"note\">↓ same move on both sides</span><span class=\"l\">t</span><span class=\"e\">=</span><span class=\"rt\">1.0986 ÷ 0.1</span><span class=\"note\">↓ ÷ 0.1 is the same as × 10</span><span class=\"l fin\">t</span><span class=\"e fin\">≈</span><span class=\"rt fin\">10.99</span></div><p>Meaning: 5 TND growing at 10% (continuous interest) becomes 15 TND in about 11 years.</p>",
    "ar": {
     "title": "حركتان · 2",
-    "html": "<p>هذه هي الحركات. بقي الحساب الأخير فقط:</p><div class=\"lad\"><span class=\"l\">e^(0.1t)</span><span class=\"e\">=</span><span class=\"rt\">3</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\" dir=\"rtl\">↓ خذ ln للجهتين (ln يلغي e)</span><span class=\"l\">0.1t</span><span class=\"e\">=</span><span class=\"rt\">1.0986</span><span class=\"l op\">÷ 0.1</span><span class=\"e\"></span><span class=\"rt op\">÷ 0.1</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">t</span><span class=\"e fin\">=</span><span class=\"rt fin\">?</span></div><p>كم يساوي <b>t</b>؟</p>",
+    "html": "<p>هذه هي الحركات. بقي الحساب الأخير فقط:</p><div class=\"lad\"><span class=\"l\">e<sup>0.1t</sup></span><span class=\"e\">=</span><span class=\"rt\">3</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\" dir=\"rtl\">↓ خذ ln للجهتين (ln يلغي e)</span><span class=\"l\">0.1t</span><span class=\"e\">=</span><span class=\"rt\">1.0986</span><span class=\"l op\">÷ 0.1</span><span class=\"e\"></span><span class=\"rt op\">÷ 0.1</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">t</span><span class=\"e fin\">=</span><span class=\"rt fin\">?</span></div><p>كم يساوي <b>t</b>؟</p>",
     "unit": "سنة",
     "hint": "القسمة على 0.1 هي نفس الضرب في 10: <span class=\"m\">1.0986 × 10</span>.",
-    "explain": "<div class=\"lad\"><span class=\"l\">e^(0.1t)</span><span class=\"e\">=</span><span class=\"rt\">3</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\" dir=\"rtl\">↓ خذ ln للجهتين (ln يلغي e)</span><span class=\"l\">0.1t</span><span class=\"e\">=</span><span class=\"rt\">1.0986</span><span class=\"l op\">÷ 0.1</span><span class=\"e\"></span><span class=\"rt op\">÷ 0.1</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l\">t</span><span class=\"e\">=</span><span class=\"rt\">1.0986 ÷ 0.1</span><span class=\"note\" dir=\"rtl\">↓ القسمة على 0.1 هي نفس الضرب في 10</span><span class=\"l fin\">t</span><span class=\"e fin\">≈</span><span class=\"rt fin\">10.99</span></div><p>المعنى: 5 دنانير تنمو بـ 10% (فائدة مستمرّة) تصبح 15 دينارًا في حوالي 11 سنة.</p>"
+    "explain": "<div class=\"lad\"><span class=\"l\">e<sup>0.1t</sup></span><span class=\"e\">=</span><span class=\"rt\">3</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\" dir=\"rtl\">↓ خذ ln للجهتين (ln يلغي e)</span><span class=\"l\">0.1t</span><span class=\"e\">=</span><span class=\"rt\">1.0986</span><span class=\"l op\">÷ 0.1</span><span class=\"e\"></span><span class=\"rt op\">÷ 0.1</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l\">t</span><span class=\"e\">=</span><span class=\"rt\">1.0986 ÷ 0.1</span><span class=\"note\" dir=\"rtl\">↓ القسمة على 0.1 هي نفس الضرب في 10</span><span class=\"l fin\">t</span><span class=\"e fin\">≈</span><span class=\"rt fin\">10.99</span></div><p>المعنى: 5 دنانير تنمو بـ 10% (فائدة مستمرّة) تصبح 15 دينارًا في حوالي 11 سنة.</p>"
    }
   },
   {
@@ -1114,11 +1114,11 @@
    "kind": "learn",
    "title": "When the equation has ln x: use e",
    "why": "Some formulas contain ln (some demand and utility functions do). Then e is the undo.",
-   "html": "<div class=\"lad\"><span class=\"l\">ln x</span><span class=\"e\">=</span><span class=\"rt\">3</span><span class=\"l op\">e^( )</span><span class=\"e\"></span><span class=\"rt op\">e^( )</span><span class=\"note\">↓ make both sides a power of e (e cancels ln)</span><span class=\"l\">x</span><span class=\"e\">=</span><span class=\"rt\">e³</span><span class=\"note\">↓ calculate (eˣ button)</span><span class=\"l fin\">x</span><span class=\"e fin\">≈</span><span class=\"rt fin\">20.09</span></div><div class=\"key\">e cancels ln: e^(ln x) = x.</div>",
+   "html": "<div class=\"lad\"><span class=\"l\">ln x</span><span class=\"e\">=</span><span class=\"rt\">3</span><span class=\"l op\">e<sup>□</sup></span><span class=\"e\"></span><span class=\"rt op\">e<sup>□</sup></span><span class=\"note\">↓ make both sides a power of e (e cancels ln)</span><span class=\"l\">x</span><span class=\"e\">=</span><span class=\"rt\">e³</span><span class=\"note\">↓ calculate (eˣ button)</span><span class=\"l fin\">x</span><span class=\"e fin\">≈</span><span class=\"rt fin\">20.09</span></div><div class=\"key\">e cancels ln: e<sup>ln x</sup> = x.</div>",
    "ar": {
     "title": "عندما تحتوي المعادلة على ln x: استعمل e",
     "why": "بعض الصيغ تحتوي على ln (بعض دوال الطلب والمنفعة). عندها e هو التراجع.",
-    "html": "<div class=\"lad\"><span class=\"l\">ln x</span><span class=\"e\">=</span><span class=\"rt\">3</span><span class=\"l op\">e^( )</span><span class=\"e\"></span><span class=\"rt op\">e^( )</span><span class=\"note\" dir=\"rtl\">↓ اجعل الجهتين أُسًّا لـ e (e يلغي ln)</span><span class=\"l\">x</span><span class=\"e\">=</span><span class=\"rt\">e³</span><span class=\"note\" dir=\"rtl\">↓ احسب (زر eˣ)</span><span class=\"l fin\">x</span><span class=\"e fin\">≈</span><span class=\"rt fin\">20.09</span></div><div class=\"key\">e يلغي ln: <span class=\"m\">e^(ln x) = x</span>.</div>"
+    "html": "<div class=\"lad\"><span class=\"l\">ln x</span><span class=\"e\">=</span><span class=\"rt\">3</span><span class=\"l op\">e<sup>□</sup></span><span class=\"e\"></span><span class=\"rt op\">e<sup>□</sup></span><span class=\"note\" dir=\"rtl\">↓ اجعل الجهتين أُسًّا لـ e (e يلغي ln)</span><span class=\"l\">x</span><span class=\"e\">=</span><span class=\"rt\">e³</span><span class=\"note\" dir=\"rtl\">↓ احسب (زر eˣ)</span><span class=\"l fin\">x</span><span class=\"e fin\">≈</span><span class=\"rt fin\">20.09</span></div><div class=\"key\">e يلغي ln: <span class=\"m\">e<sup>ln x</sup> = x</span>.</div>"
    }
   },
   {
@@ -1127,11 +1127,11 @@
    "answer": 7.389,
    "tol": 0.01,
    "hint": "x = e².",
-   "explain": "<div class=\"lad\"><span class=\"l\">ln x</span><span class=\"e\">=</span><span class=\"rt\">2</span><span class=\"l op\">e^( )</span><span class=\"e\"></span><span class=\"rt op\">e^( )</span><span class=\"note\">↓ make both sides a power of e (e cancels ln)</span><span class=\"l\">x</span><span class=\"e\">=</span><span class=\"rt\">e²</span><span class=\"note\">↓ calculate (eˣ button)</span><span class=\"l fin\">x</span><span class=\"e fin\">≈</span><span class=\"rt fin\">7.39</span></div>",
+   "explain": "<div class=\"lad\"><span class=\"l\">ln x</span><span class=\"e\">=</span><span class=\"rt\">2</span><span class=\"l op\">e<sup>□</sup></span><span class=\"e\"></span><span class=\"rt op\">e<sup>□</sup></span><span class=\"note\">↓ make both sides a power of e (e cancels ln)</span><span class=\"l\">x</span><span class=\"e\">=</span><span class=\"rt\">e²</span><span class=\"note\">↓ calculate (eˣ button)</span><span class=\"l fin\">x</span><span class=\"e fin\">≈</span><span class=\"rt fin\">7.39</span></div>",
    "ar": {
     "html": "<div class=\"formula\">ln x = 2</div><p><span class=\"m\">x = ?</span> (رقمان بعد الفاصلة)</p>",
     "hint": "<span class=\"m\">x = e²</span>.",
-    "explain": "<div class=\"lad\"><span class=\"l\">ln x</span><span class=\"e\">=</span><span class=\"rt\">2</span><span class=\"l op\">e^( )</span><span class=\"e\"></span><span class=\"rt op\">e^( )</span><span class=\"note\" dir=\"rtl\">↓ اجعل الجهتين أُسًّا لـ e (e يلغي ln)</span><span class=\"l\">x</span><span class=\"e\">=</span><span class=\"rt\">e²</span><span class=\"note\" dir=\"rtl\">↓ احسب (زر eˣ)</span><span class=\"l fin\">x</span><span class=\"e fin\">≈</span><span class=\"rt fin\">7.39</span></div>"
+    "explain": "<div class=\"lad\"><span class=\"l\">ln x</span><span class=\"e\">=</span><span class=\"rt\">2</span><span class=\"l op\">e<sup>□</sup></span><span class=\"e\"></span><span class=\"rt op\">e<sup>□</sup></span><span class=\"note\" dir=\"rtl\">↓ اجعل الجهتين أُسًّا لـ e (e يلغي ln)</span><span class=\"l\">x</span><span class=\"e\">=</span><span class=\"rt\">e²</span><span class=\"note\" dir=\"rtl\">↓ احسب (زر eˣ)</span><span class=\"l fin\">x</span><span class=\"e fin\">≈</span><span class=\"rt fin\">7.39</span></div>"
    }
   },
   {
@@ -1140,11 +1140,11 @@
    "answer": 2.718,
    "tol": 0.01,
    "hint": "Two moves: add 1 (ln x = 1), then x = e¹.",
-   "explain": "<div class=\"lad\"><span class=\"l\">ln x − 1</span><span class=\"e\">=</span><span class=\"rt\">0</span><span class=\"l op\">+ 1</span><span class=\"e\"></span><span class=\"rt op\">+ 1</span><span class=\"note\">↓ same move on both sides</span><span class=\"l\">ln x</span><span class=\"e\">=</span><span class=\"rt\">1</span><span class=\"l op\">e^( )</span><span class=\"e\"></span><span class=\"rt op\">e^( )</span><span class=\"note\">↓ make both sides a power of e (e cancels ln)</span><span class=\"l\">x</span><span class=\"e\">=</span><span class=\"rt\">e¹</span><span class=\"note\">↓ calculate</span><span class=\"l fin\">x</span><span class=\"e fin\">≈</span><span class=\"rt fin\">2.72</span></div>",
+   "explain": "<div class=\"lad\"><span class=\"l\">ln x − 1</span><span class=\"e\">=</span><span class=\"rt\">0</span><span class=\"l op\">+ 1</span><span class=\"e\"></span><span class=\"rt op\">+ 1</span><span class=\"note\">↓ same move on both sides</span><span class=\"l\">ln x</span><span class=\"e\">=</span><span class=\"rt\">1</span><span class=\"l op\">e<sup>□</sup></span><span class=\"e\"></span><span class=\"rt op\">e<sup>□</sup></span><span class=\"note\">↓ make both sides a power of e (e cancels ln)</span><span class=\"l\">x</span><span class=\"e\">=</span><span class=\"rt\">e¹</span><span class=\"note\">↓ calculate</span><span class=\"l fin\">x</span><span class=\"e fin\">≈</span><span class=\"rt fin\">2.72</span></div>",
    "ar": {
     "html": "<div class=\"formula\">ln x − 1 = 0</div><p><span class=\"m\">x = ?</span> (رقمان بعد الفاصلة)</p>",
     "hint": "حركتان: أضف 1 (<span class=\"m\">ln x = 1</span>)، ثم <span class=\"m\">x = e¹</span>.",
-    "explain": "<div class=\"lad\"><span class=\"l\">ln x − 1</span><span class=\"e\">=</span><span class=\"rt\">0</span><span class=\"l op\">+ 1</span><span class=\"e\"></span><span class=\"rt op\">+ 1</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l\">ln x</span><span class=\"e\">=</span><span class=\"rt\">1</span><span class=\"l op\">e^( )</span><span class=\"e\"></span><span class=\"rt op\">e^( )</span><span class=\"note\" dir=\"rtl\">↓ اجعل الجهتين أُسًّا لـ e (e يلغي ln)</span><span class=\"l\">x</span><span class=\"e\">=</span><span class=\"rt\">e¹</span><span class=\"note\" dir=\"rtl\">↓ احسب</span><span class=\"l fin\">x</span><span class=\"e fin\">≈</span><span class=\"rt fin\">2.72</span></div>"
+    "explain": "<div class=\"lad\"><span class=\"l\">ln x − 1</span><span class=\"e\">=</span><span class=\"rt\">0</span><span class=\"l op\">+ 1</span><span class=\"e\"></span><span class=\"rt op\">+ 1</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l\">ln x</span><span class=\"e\">=</span><span class=\"rt\">1</span><span class=\"l op\">e<sup>□</sup></span><span class=\"e\"></span><span class=\"rt op\">e<sup>□</sup></span><span class=\"note\" dir=\"rtl\">↓ اجعل الجهتين أُسًّا لـ e (e يلغي ln)</span><span class=\"l\">x</span><span class=\"e\">=</span><span class=\"rt\">e¹</span><span class=\"note\" dir=\"rtl\">↓ احسب</span><span class=\"l fin\">x</span><span class=\"e fin\">≈</span><span class=\"rt fin\">2.72</span></div>"
    }
   },
   {
@@ -1229,16 +1229,16 @@
   {
    "kind": "number",
    "title": "Mix 3 / 4",
-   "html": "<div class=\"formula\">e^(2x) = 9</div><p>x = ? (2 decimals)</p>",
+   "html": "<div class=\"formula\">e<sup>2x</sup> = 9</div><p>x = ? (2 decimals)</p>",
    "answer": 1.0986122886681098,
    "tol": 0.01,
    "hint": "Take ln: 2x = ln 9 ≈ 2.197. Then divide by 2.",
-   "explain": "<div class=\"lad\"><span class=\"l\">e^(2x)</span><span class=\"e\">=</span><span class=\"rt\">9</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\">↓ take ln of both sides (ln cancels e)</span><span class=\"l\">2x</span><span class=\"e\">=</span><span class=\"rt\">2.197</span><span class=\"l op\">÷ 2</span><span class=\"e\"></span><span class=\"rt op\">÷ 2</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">x</span><span class=\"e fin\">≈</span><span class=\"rt fin\">1.10</span></div>",
+   "explain": "<div class=\"lad\"><span class=\"l\">e<sup>2x</sup></span><span class=\"e\">=</span><span class=\"rt\">9</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\">↓ take ln of both sides (ln cancels e)</span><span class=\"l\">2x</span><span class=\"e\">=</span><span class=\"rt\">2.197</span><span class=\"l op\">÷ 2</span><span class=\"e\"></span><span class=\"rt op\">÷ 2</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">x</span><span class=\"e fin\">≈</span><span class=\"rt fin\">1.10</span></div>",
    "ar": {
     "title": "مختلط 3 / 4",
-    "html": "<div class=\"formula\">e^(2x) = 9</div><p><span class=\"m\">x = ?</span> (رقمان بعد الفاصلة)</p>",
+    "html": "<div class=\"formula\">e<sup>2x</sup> = 9</div><p><span class=\"m\">x = ?</span> (رقمان بعد الفاصلة)</p>",
     "hint": "خذ ln: <span class=\"m\">2x = ln 9 ≈ 2.197</span>. ثم اقسم على 2.",
-    "explain": "<div class=\"lad\"><span class=\"l\">e^(2x)</span><span class=\"e\">=</span><span class=\"rt\">9</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\" dir=\"rtl\">↓ خذ ln للجهتين (ln يلغي e)</span><span class=\"l\">2x</span><span class=\"e\">=</span><span class=\"rt\">2.197</span><span class=\"l op\">÷ 2</span><span class=\"e\"></span><span class=\"rt op\">÷ 2</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">x</span><span class=\"e fin\">≈</span><span class=\"rt fin\">1.10</span></div>"
+    "explain": "<div class=\"lad\"><span class=\"l\">e<sup>2x</sup></span><span class=\"e\">=</span><span class=\"rt\">9</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\" dir=\"rtl\">↓ خذ ln للجهتين (ln يلغي e)</span><span class=\"l\">2x</span><span class=\"e\">=</span><span class=\"rt\">2.197</span><span class=\"l op\">÷ 2</span><span class=\"e\"></span><span class=\"rt op\">÷ 2</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">x</span><span class=\"e fin\">≈</span><span class=\"rt fin\">1.10</span></div>"
    }
   },
   {
