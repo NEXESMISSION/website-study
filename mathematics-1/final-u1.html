@@ -1194,18 +1194,103 @@
    "title": "Step 3 of 3"
   },
   {
+   "kind": "learn",
+   "title": "Where does 1.08 come from?",
+   "why": "Bank savings, salaries, prices and populations grow by a percent each year. This is Chapter 1 (exponential functions), and the exam always has a question like it.",
+   "html": "<p><b>+8%</b> means: keep everything you have (100%) and add 8% → 108% → <b>× 1.08</b>.</p><p>1000 TND in the bank, year after year:</p><div class=\"steps\"><span>1000</span><i>×1.08</i><span>1080</span><i>×1.08</i><span>1166.4</span><i>×1.08</i><span>1259.7</span></div><p>After 1 year: 1000 × 1.08<br>After 2 years: 1000 × 1.08 × 1.08 = 1000 · 1.08²<br>After t years:</p><div class=\"formula\">M = 1000 · 1.08ᵗ</div><div class=\"key\">money = start × (1 + rate)ᵗ<br>8% → 1.08 · 5% → 1.05 · 12% → 1.12<br>A loss of 3% → 0.97</div>",
+   "ar": {
+    "title": "من أين تأتي 1.08؟",
+    "why": "الادّخار في البنك، الأجور، الأسعار والسكان تنمو بنسبة مئوية كل سنة. هذا هو الفصل 1 (الدوال الأُسّية)، والامتحان فيه دائمًا سؤال مثله.",
+    "html": "<p><b><span class=\"m\">+8%</span></b> تعني: احتفظ بكل ما لديك (100%) وأضف 8% ← 108% ← <b><span class=\"m\">× 1.08</span></b>.</p><p>1000 دينار في البنك، سنة بعد سنة:</p><div class=\"steps\"><span>1000</span><i>×1.08</i><span>1080</span><i>×1.08</i><span>1166.4</span><i>×1.08</i><span>1259.7</span></div><p>بعد سنة: <span class=\"m\">1000 × 1.08</span><br>بعد سنتين: <span class=\"m\">1000 × 1.08 × 1.08 = 1000 · 1.08²</span><br>بعد t سنة:</p><div class=\"formula\">M = 1000 · 1.08ᵗ</div><div class=\"key\">المال = البداية × <span class=\"m\">(1 + النسبة)ᵗ</span><br>8% ← 1.08 · 5% ← 1.05 · 12% ← 1.12<br>خسارة 3% ← 0.97</div>"
+   }
+  },
+  {
+   "kind": "mcq",
+   "html": "<p>Money grows <b>5% per year</b>. Each year you multiply by…</p>",
+   "options": [
+    "5",
+    "0.05",
+    "1.05",
+    "1.5"
+   ],
+   "answer": 2,
+   "hint": "Keep 100% and add 5%: 105% = ?",
+   "explain": "100% + 5% = 105% = <b>1.05</b>. Careful: 1.5 would mean +50%!",
+   "ar": {
+    "html": "<p>المال ينمو <b>5% في السنة</b>. كل سنة تضرب في…</p>",
+    "hint": "احتفظ بـ 100% وأضف 5%: 105% = ؟",
+    "explain": "<span class=\"m\">100% + 5% = 105% = 1.05</span>. انتبه: 1.5 تعني <span class=\"m\">+50%</span>!"
+   }
+  },
+  {
+   "kind": "mcq",
+   "html": "<p>A car <b>loses 15%</b> of its value each year. Each year you multiply by…</p>",
+   "options": [
+    "1.15",
+    "0.85",
+    "0.15",
+    "−15"
+   ],
+   "answer": 1,
+   "hint": "It keeps 100% − 15% = 85%.",
+   "explain": "100% − 15% = 85% = <b>0.85</b>. A number smaller than 1 means the value goes down.",
+   "ar": {
+    "html": "<p>سيارة <b>تخسر 15%</b> من قيمتها كل سنة. كل سنة تضرب في…</p>",
+    "options": [
+     "<span class=\"m\">1.15</span>",
+     "<span class=\"m\">0.85</span>",
+     "<span class=\"m\">0.15</span>",
+     "<span class=\"m\">−15</span>"
+    ],
+    "hint": "تحتفظ بـ 100% − 15% = 85%.",
+    "explain": "<span class=\"m\">100% − 15% = 85% = 0.85</span>. رقم أصغر من 1 يعني أن القيمة تنزل."
+   }
+  },
+  {
    "kind": "number",
-   "html": "<p>You put 1000 TND in a bank at 8% per year:</p><div class=\"formula\">1000 · 1.08ᵗ = 2000</div><p>After how many years do you have 2000 TND? (1 decimal)</p>",
+   "html": "<p>500 TND in the bank at <b>10% per year</b>. How much after <b>2 years</b>?</p>",
+   "answer": 605,
+   "tol": 0.01,
+   "unit": "TND",
+   "hint": "10% → × 1.1. Two years: 500 × 1.1 × 1.1.",
+   "explain": "500 × 1.1 = 550, then 550 × 1.1 = <b>605 TND</b>. Same as 500 · 1.1² = 605.",
+   "ar": {
+    "html": "<p>500 دينار في البنك بـ <b>10% في السنة</b>. كم يصبح بعد <b>سنتين</b>؟</p>",
+    "unit": "دينار",
+    "hint": "10% ← <span class=\"m\">× 1.1</span>. سنتان: <span class=\"m\">500 × 1.1 × 1.1</span>.",
+    "explain": "<span class=\"m\">500 × 1.1 = 550</span>، ثم <span class=\"m\">550 × 1.1 = 605</span> دينارًا. نفس <span class=\"m\">500 · 1.1² = 605</span>."
+   }
+  },
+  {
+   "kind": "number",
+   "title": "The bank · step 1 of 2",
+   "html": "<p>Now the question: 1000 TND at 8%. When do you have <b>2000 TND</b>? First undo the × 1000:</p><div class=\"lad\"><span class=\"l\">1000 · 1.08ᵗ</span><span class=\"e\">=</span><span class=\"rt\">2000</span><span class=\"l op\">÷ 1000</span><span class=\"e\"></span><span class=\"rt op\">÷ 1000</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">1.08ᵗ</span><span class=\"e fin\">=</span><span class=\"rt fin\">?</span></div>",
+   "answer": 2,
+   "tol": 0,
+   "hint": "2000 ÷ 1000.",
+   "explain": "<div class=\"lad\"><span class=\"l\">1000 · 1.08ᵗ</span><span class=\"e\">=</span><span class=\"rt\">2000</span><span class=\"l op\">÷ 1000</span><span class=\"e\"></span><span class=\"rt op\">÷ 1000</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">1.08ᵗ</span><span class=\"e fin\">=</span><span class=\"rt fin\">2</span></div><p>The money has to <b>double</b> (× 2).</p>",
+   "ar": {
+    "title": "البنك · الخطوة 1 من 2",
+    "html": "<p>الآن السؤال: 1000 دينار بـ 8%. متى يصبح لديك <b>2000 دينار</b>؟ أولًا تراجع عن الضرب في 1000:</p><div class=\"lad\"><span class=\"l\">1000 · 1.08ᵗ</span><span class=\"e\">=</span><span class=\"rt\">2000</span><span class=\"l op\">÷ 1000</span><span class=\"e\"></span><span class=\"rt op\">÷ 1000</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">1.08ᵗ</span><span class=\"e fin\">=</span><span class=\"rt fin\">?</span></div>",
+    "hint": "<span class=\"m\">2000 ÷ 1000</span>.",
+    "explain": "<div class=\"lad\"><span class=\"l\">1000 · 1.08ᵗ</span><span class=\"e\">=</span><span class=\"rt\">2000</span><span class=\"l op\">÷ 1000</span><span class=\"e\"></span><span class=\"rt op\">÷ 1000</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">1.08ᵗ</span><span class=\"e fin\">=</span><span class=\"rt fin\">2</span></div><p>المال يجب أن <b>يتضاعف</b> (× 2).</p>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<p>Now the ln rule (the power t comes down):</p><div class=\"lad\"><span class=\"l\">1.08ᵗ</span><span class=\"e\">=</span><span class=\"rt\">2</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\">↓ take ln of both sides (the power t comes down in front)</span><span class=\"l\">t · ln 1.08</span><span class=\"e\">=</span><span class=\"rt\">ln 2</span><span class=\"l op\">÷ ln 1.08</span><span class=\"e\"></span><span class=\"rt op\">÷ ln 1.08</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">t</span><span class=\"e fin\">=</span><span class=\"rt fin\">ln 2 ÷ ln 1.08</span></div><p>ln 2 ≈ 0.6931 and ln 1.08 ≈ 0.0770. t = ? (1 decimal)</p>",
    "answer": 9.006,
    "tol": 0.06,
-   "hint": "First undo ×1000: 1.08ᵗ = 2. Then t = ln 2 ÷ ln 1.08.",
+   "hint": "0.6931 ÷ 0.0770 on the calculator.",
    "explain": "<div class=\"lad\"><span class=\"l\">1000 · 1.08ᵗ</span><span class=\"e\">=</span><span class=\"rt\">2000</span><span class=\"l op\">÷ 1000</span><span class=\"e\"></span><span class=\"rt op\">÷ 1000</span><span class=\"note\">↓ same move on both sides</span><span class=\"l\">1.08ᵗ</span><span class=\"e\">=</span><span class=\"rt\">2</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\">↓ take ln: the power comes down in front</span><span class=\"l\">t · ln 1.08</span><span class=\"e\">=</span><span class=\"rt\">ln 2</span><span class=\"l op\">÷ ln 1.08</span><span class=\"e\"></span><span class=\"rt op\">÷ ln 1.08</span><span class=\"note\">↓ same move on both sides</span><span class=\"l\">t</span><span class=\"e\">=</span><span class=\"rt\">ln 2 ÷ ln 1.08</span><span class=\"note\">↓ calculate: 0.6931 ÷ 0.0770</span><span class=\"l fin\">t</span><span class=\"e fin\">≈</span><span class=\"rt fin\">9.0</span></div><p>Your money doubles in about 9 years.</p>",
    "ar": {
-    "html": "<p>تضع 1000 دينار في بنك بفائدة 8% في السنة:</p><div class=\"formula\">1000 · 1.08ᵗ = 2000</div><p>بعد كم سنة يصبح لديك 2000 دينار؟ (رقم واحد بعد الفاصلة)</p>",
+    "html": "<p>الآن قاعدة ln (الأُسّ t ينزل):</p><div class=\"lad\"><span class=\"l\">1.08ᵗ</span><span class=\"e\">=</span><span class=\"rt\">2</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\" dir=\"rtl\">↓ خذ ln للجهتين (الأُسّ t ينزل إلى الأمام)</span><span class=\"l\">t · ln 1.08</span><span class=\"e\">=</span><span class=\"rt\">ln 2</span><span class=\"l op\">÷ ln 1.08</span><span class=\"e\"></span><span class=\"rt op\">÷ ln 1.08</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">t</span><span class=\"e fin\">=</span><span class=\"rt fin\">ln 2 ÷ ln 1.08</span></div><p><span class=\"m\">ln 2 ≈ 0.6931</span> و <span class=\"m\">ln 1.08 ≈ 0.0770</span>. <span class=\"m\">t = ?</span> (رقم واحد بعد الفاصلة)</p>",
     "unit": "سنة",
-    "hint": "أولًا تراجع عن <span class=\"m\">×1000</span>: <span class=\"m\">1.08ᵗ = 2</span>. ثم <span class=\"m\">t = ln 2 ÷ ln 1.08</span>.",
-    "explain": "<div class=\"lad\"><span class=\"l\">1000 · 1.08ᵗ</span><span class=\"e\">=</span><span class=\"rt\">2000</span><span class=\"l op\">÷ 1000</span><span class=\"e\"></span><span class=\"rt op\">÷ 1000</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l\">1.08ᵗ</span><span class=\"e\">=</span><span class=\"rt\">2</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\" dir=\"rtl\">↓ خذ ln: الأُسّ ينزل إلى الأمام</span><span class=\"l\">t · ln 1.08</span><span class=\"e\">=</span><span class=\"rt\">ln 2</span><span class=\"l op\">÷ ln 1.08</span><span class=\"e\"></span><span class=\"rt op\">÷ ln 1.08</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l\">t</span><span class=\"e\">=</span><span class=\"rt\">ln 2 ÷ ln 1.08</span><span class=\"note\" dir=\"rtl\">↓ احسب: 0.6931 ÷ 0.0770</span><span class=\"l fin\">t</span><span class=\"e fin\">≈</span><span class=\"rt fin\">9.0</span></div><p>مالك يتضاعف في حوالي 9 سنوات.</p>"
-   }
+    "hint": "<span class=\"m\">0.6931 ÷ 0.0770</span> بالآلة الحاسبة.",
+    "explain": "<div class=\"lad\"><span class=\"l\">1000 · 1.08ᵗ</span><span class=\"e\">=</span><span class=\"rt\">2000</span><span class=\"l op\">÷ 1000</span><span class=\"e\"></span><span class=\"rt op\">÷ 1000</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l\">1.08ᵗ</span><span class=\"e\">=</span><span class=\"rt\">2</span><span class=\"l op\">ln</span><span class=\"e\"></span><span class=\"rt op\">ln</span><span class=\"note\" dir=\"rtl\">↓ خذ ln: الأُسّ ينزل إلى الأمام</span><span class=\"l\">t · ln 1.08</span><span class=\"e\">=</span><span class=\"rt\">ln 2</span><span class=\"l op\">÷ ln 1.08</span><span class=\"e\"></span><span class=\"rt op\">÷ ln 1.08</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l\">t</span><span class=\"e\">=</span><span class=\"rt\">ln 2 ÷ ln 1.08</span><span class=\"note\" dir=\"rtl\">↓ احسب: 0.6931 ÷ 0.0770</span><span class=\"l fin\">t</span><span class=\"e fin\">≈</span><span class=\"rt fin\">9.0</span></div><p>مالك يتضاعف في حوالي 9 سنوات.</p>",
+    "title": "البنك · الخطوة 2 من 2"
+   },
+   "title": "The bank · step 2 of 2"
   },
   {
    "kind": "learn",
