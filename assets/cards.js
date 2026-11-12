@@ -78,7 +78,7 @@
 
   function paintTop() {
     bar.style.width = (Math.min(st.i, N) / N * 100) + '%';
-    count.textContent = st.i >= N ? t('finished') : `${t('card')} ${st.i + 1} / ${N}`;
+    count.innerHTML = st.i >= N ? t('finished') : `${t('card')} <span class="m">${st.i + 1} / ${N}</span>`;
   }
 
   function show() {
