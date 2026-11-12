@@ -23,13 +23,13 @@
 
   const T = {
     en: { learn: 'Learn', q: 'Your turn', why: 'Why learn this?', gotit: 'Got it →', next: 'Next →', check: 'Check',
-      ph: 'Your answer', hintBtn: 'Give me a hint', hint: 'Hint:', notYet: 'Not yet. Hint:', notYet2: 'Not yet. Read the hint again and try once more.',
+      ph: 'Your answer', hintBtn: 'Give me a hint', skip: 'Skip →', hint: 'Hint:', notYet: 'Not yet. Hint:', notYet2: 'Not yet. Read the hint again and try once more.',
       answer: 'Here is the answer, step by step:', correct: 'Correct!', typeNum: 'Type a number.', typeNumEx: 'For example 12 or 3.5 (a comma also works: 3,5).',
       back: '← Back', prev: '← Previous card', restart: 'Start this unit again', arm: 'Click again to start over',
       card: 'Card', finished: 'Finished', unitDone: 'Unit finished', well: (a, b) => `Well done! ${a} / ${b} right on the first try.`,
       again: 'Look again at these cards:', perfect: 'Perfect. You can go to the next unit.', tell: 'Tell Claude your score in the chat:', toggle: 'عربي' },
     ar: { learn: 'تعلّم', q: 'دورك', why: 'لماذا نتعلّم هذا؟', gotit: 'فهمت ←', next: 'التالي ←', check: 'تحقّق',
-      ph: 'إجابتك', hintBtn: 'أعطني تلميحًا', hint: 'تلميح:', notYet: 'ليس بعد. تلميح:', notYet2: 'ليس بعد. اقرأ التلميح مرة أخرى وحاول من جديد.',
+      ph: 'إجابتك', hintBtn: 'أعطني تلميحًا', skip: 'تخطَّ ←', hint: 'تلميح:', notYet: 'ليس بعد. تلميح:', notYet2: 'ليس بعد. اقرأ التلميح مرة أخرى وحاول من جديد.',
       answer: 'هذا هو الحل خطوة بخطوة:', correct: 'صحيح!', typeNum: 'اكتب رقمًا.', typeNumEx: 'مثلًا 12 أو 3.5 (الفاصلة تعمل أيضًا: 3,5).',
       back: '→ رجوع', prev: '→ البطاقة السابقة', restart: 'ابدأ هذه الوحدة من جديد', arm: 'اضغط مرة أخرى للبدء من جديد',
       card: 'البطاقة', finished: 'انتهت', unitDone: 'انتهت الوحدة', well: (a, b) => `أحسنت! ${a} من ${b} صحيحة من المحاولة الأولى.`,
@@ -94,15 +94,16 @@
     if (c.kind === 'mcq') h += `<div class="opts${L(c, 'options').every(o => o.replace(/<[^>]*>/g, '').length <= 14) ? ' short' : ''}">${L(c, 'options').map((o, k) => `<button type="button" class="opt" data-k="${k}"><span class="k">${'abcdefgh'[k]}</span><span>${o}</span></button>`).join('')}</div>`;
     if (c.kind === 'number') { const u = L(c, 'unit'); h += `<div class="num"><input type="text" inputmode="decimal" autocomplete="off" aria-label="${t('ph')}" placeholder="${t('ph')}">${u ? `<span class="unit">${esc(u)}</span>` : ''}<button type="button" class="btn" data-check>${t('check')}</button></div>`; }
     h += `<div class="fbslot"></div><div class="actions">`;
-    h += isQ ? `<button type="button" class="btn" data-next hidden>${t('next')}</button>${hint ? `<button type="button" class="btn sec" data-hint>${t('hintBtn')}</button>` : ''}` : `<button type="button" class="btn" data-next>${t('gotit')}</button>`;
+    h += isQ ? `<button type="button" class="btn" data-next hidden>${t('next')}</button>${hint ? `<button type="button" class="btn sec" data-hint>${t('hintBtn')}</button>` : ''}<button type="button" class="btn sec skip" data-skip>${t('skip')}</button>` : `<button type="button" class="btn" data-next>${t('gotit')}</button>`;
     h += `</div></article>`;
     slot.innerHTML = h;
-    const card = slot.querySelector('.card'), fb = card.querySelector('.fbslot'), next = card.querySelector('[data-next]'), hb = card.querySelector('[data-hint]');
+    const card = slot.querySelector('.card'), fb = card.querySelector('.fbslot'), next = card.querySelector('[data-next]'), hb = card.querySelector('[data-hint]'), sk = card.querySelector('[data-skip]');
     let tries = 0, hintShown = false;
     next.onclick = () => { st.done[st.i] = true; st.i++; show(); window.scrollTo({ top: 0 }); };
     const hideHint = () => { if (hb) hb.hidden = true; };
     if (hb) hb.onclick = () => { hintShown = true; hideHint(); fb.innerHTML = `<div class="fb hint"><b>${t('hint')}</b>${hint}</div>`; };
-    const finish = ok => { if (!ok) st.wrong[st.i] = true; hideHint(); next.hidden = false; next.focus(); };
+    if (sk) sk.onclick = () => { st.wrong[st.i] = true; st.i++; show(); window.scrollTo({ top: 0 }); };
+    const finish = ok => { if (!ok) st.wrong[st.i] = true; hideHint(); if (sk) sk.hidden = true; next.hidden = false; next.focus(); };
     const verdict = ok => {
       if (ok) { fb.innerHTML = `<div class="fb ok"><b>${t('correct')}</b>${explain}</div>`; finish(tries === 0); return; }
       tries++;

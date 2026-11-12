@@ -114,3 +114,5 @@ body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:18px;l
 .lad .op{font-size:1.02rem;padding:2px 11px}
 .lad .note{font-size:14.5px}
 .card sup{font-size:.68em;line-height:0}
+.btn.skip{color:var(--muted);border-color:transparent;background:transparent}
+.btn.skip:hover{color:var(--ink);border-color:var(--line)}
