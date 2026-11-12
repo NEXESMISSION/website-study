@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Math Final · Unit 2 · Cost, revenue, profit</title>
+<link rel="stylesheet" href="../assets/cards.css">
+</head>
+<body>
+<div id="cards"></div>
+<script type="application/json" id="cards-data">
+{
+ "id": "math-final-u2",
+ "kicker": "Math I final · Unit 2",
+ "title": "Cost, revenue and profit",
+ "back": "../index.html",
+ "ar": {
+  "kicker": "Math I · الامتحان النهائي · الوحدة 2",
+  "title": "التكلفة، الإيراد والربح"
+ },
+ "cards": [
+  {
+   "kind": "learn",
+   "title": "A business in 3 numbers",
+   "why": "This is the part of Math I that is pure business: every company, from a sandwich shop to a factory, lives with these 3 numbers. And it is a sure question in the exam.",
+   "html": "<p>You open a small <b>sandwich shop</b> in Sfax.</p><div class=\"ex\"><b>Cost</b>The money that goes <b>out</b>: rent, bread, cheese…</div><div class=\"ex\"><b>Revenue</b>The money that comes <b>in</b>: what customers pay you.</div><div class=\"ex\"><b>Profit</b>What you <b>keep</b>: revenue − cost.</div><p class=\"fr\">Words: cost = التكلفة = coût · revenue = الإيراد = recette · profit = الربح = bénéfice</p>",
+   "ar": {
+    "title": "مشروع تجاري في 3 أرقام",
+    "why": "هذا هو الجزء الأكثر ارتباطًا بالأعمال في Math I: كل شركة، من محلّ سندويتشات إلى مصنع، تعيش بهذه الأرقام الثلاثة. وهو سؤال مؤكَّد في الامتحان.",
+    "html": "<p>تفتح <b>محلّ سندويتشات</b> صغيرًا في صفاقس.</p><div class=\"ex\"><b>التكلفة (cost)</b>المال الذي <b>يخرج</b>: الكراء، الخبز، الجبن…</div><div class=\"ex\"><b>الإيراد (revenue)</b>المال الذي <b>يدخل</b>: ما يدفعه لك الزبائن.</div><div class=\"ex\"><b>الربح (profit)</b>ما <b>يبقى لك</b>: الإيراد − التكلفة.</div>"
+   }
+  },
+  {
+   "kind": "mcq",
+   "html": "<p>Which one is a <b>fixed</b> cost for the shop (the same every month, even if you sell nothing)?</p>",
+   "options": [
+    "The bread for each sandwich",
+    "The monthly rent of the shop",
+    "The cheese in each sandwich",
+    "The paper bag for each sandwich"
+   ],
+   "answer": 1,
+   "hint": "If you sell 0 sandwiches this month, which one do you still pay?",
+   "explain": "The <b>rent</b>: you pay it even with 0 sandwiches. Bread, cheese and bags grow with each sandwich: they are <b>variable</b> costs.",
+   "ar": {
+    "html": "<p>أيّها تكلفة <b>ثابتة</b> للمحلّ (نفسها كل شهر، حتى لو لم تبع شيئًا)؟</p>",
+    "options": [
+     "الخبز لكل سندويتش",
+     "كراء المحلّ الشهري",
+     "الجبن في كل سندويتش",
+     "الكيس الورقي لكل سندويتش"
+    ],
+    "hint": "إذا بعت 0 سندويتش هذا الشهر، ماذا تدفع رغم ذلك؟",
+    "explain": "<b>الكراء</b>: تدفعه حتى مع 0 سندويتش. الخبز والجبن والأكياس تزيد مع كل سندويتش: هي تكاليف <b>متغيّرة</b> (variable)."
+   }
+  },
+  {
+   "kind": "mcq",
+   "html": "<p>Profit = ?</p>",
+   "options": [
+    "Revenue + Cost",
+    "Revenue − Cost",
+    "Cost − Revenue",
+    "Price + Quantity"
+   ],
+   "answer": 1,
+   "hint": "Money in, minus money out.",
+   "explain": "Profit = <b>Revenue − Cost</b>. (The teacher’s true/false list has the trap “profit = cost + revenue”: FALSE.)",
+   "ar": {
+    "html": "<p>الربح = ؟</p>",
+    "options": [
+     "الإيراد + التكلفة",
+     "الإيراد − التكلفة",
+     "التكلفة − الإيراد",
+     "السعر + الكمية"
+    ],
+    "hint": "المال الداخل ناقص المال الخارج.",
+    "explain": "الربح = <b>الإيراد − التكلفة</b>. (في قائمة صحيح/خطأ للأستاذة يوجد الفخّ «الربح = التكلفة + الإيراد»: خطأ.)"
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "The cost function C(q)",
+   "why": "The first line of every business plan: how much will it cost to make q products? Banks ask for it before giving a loan.",
+   "html": "<p>q = the number of products (quantity).</p><div class=\"formula\">C(q) = fixed cost + (cost per unit) × q</div><div class=\"ex\"><b>Sandwich shop</b>Rent 600 TND per month. Each sandwich costs 2 TND to make.<br><b>C(q) = 600 + 2q</b></div><p>You know this shape from Unit 1: <b>start + jump × q</b>.<br>The start 600 = the <b>fixed cost</b> = C(0).<br>The jump 2 = the cost of one more sandwich.</p>",
+   "ar": {
+    "title": "دالّة التكلفة C(q)",
+    "why": "السطر الأول في كل خطّة عمل: كم سيكلّف صنع q منتج؟ البنوك تطلبه قبل إعطاء قرض.",
+    "html": "<p>q = عدد المنتجات (الكمية).</p><div class=\"formula\">C(q) = fixed cost + (cost per unit) × q</div><div class=\"ex\"><b>محلّ السندويتشات</b>الكراء 600 دينار في الشهر. كل سندويتش يكلّف 2 دينار لصنعه.<br><span class=\"m\"><b>C(q) = 600 + 2q</b></span></div><p>تعرف هذا الشكل من الوحدة 1: <b>البداية + القفزة × q</b>.<br>البداية 600 = <b>التكلفة الثابتة</b> (fixed cost) = <span class=\"m\">C(0)</span>.<br>القفزة 2 = تكلفة سندويتش إضافي.</p>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">C(q) = 600 + 2q</div><p>How much does it cost to make <b>100 sandwiches</b>? C(100) = ?</p>",
+   "answer": 800,
+   "tol": 0,
+   "unit": "TND",
+   "hint": "600 + 2 × 100.",
+   "explain": "C(100) = 600 + 2 × 100 = 600 + 200 = <b>800 TND</b>.",
+   "ar": {
+    "html": "<div class=\"formula\">C(q) = 600 + 2q</div><p>كم يكلّف صنع <b>100 سندويتش</b>؟ <span class=\"m\">C(100) = ?</span></p>",
+    "unit": "دينار",
+    "hint": "<span class=\"m\">600 + 2 × 100</span>.",
+    "explain": "<span class=\"m\">C(100) = 600 + 2 × 100 = 600 + 200 = 800</span> دينار."
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">C(q) = 600 + 2q</div><p>What is the <b>fixed cost</b>? (Tip: the cost when q = 0.)</p>",
+   "answer": 600,
+   "tol": 0,
+   "unit": "TND",
+   "hint": "C(0) = 600 + 2 × 0.",
+   "explain": "C(0) = 600 + 0 = <b>600 TND</b>. The fixed cost is the start of the line (the intercept).",
+   "ar": {
+    "html": "<div class=\"formula\">C(q) = 600 + 2q</div><p>ما هي <b>التكلفة الثابتة</b>؟ (حيلة: التكلفة عندما <span class=\"m\">q = 0</span>.)</p>",
+    "unit": "دينار",
+    "hint": "<span class=\"m\">C(0) = 600 + 2 × 0</span>.",
+    "explain": "<span class=\"m\">C(0) = 600 + 0 = 600</span> دينار. التكلفة الثابتة هي بداية المستقيم (intercept)."
+   }
+  },
+  {
+   "kind": "mcq",
+   "title": "Teacher’s true/false",
+   "html": "<p>“A cost function always passes through the origin (0, 0).”</p>",
+   "options": [
+    "True",
+    "False"
+   ],
+   "answer": 1,
+   "hint": "If you make 0 products, do you pay 0? Think of the rent.",
+   "explain": "<b>False.</b> With 0 products you still pay the fixed cost, so C(0) = fixed cost, not 0.",
+   "ar": {
+    "title": "صحيح/خطأ من الأستاذة",
+    "html": "<p>«دالّة التكلفة تمرّ دائمًا بالأصل (0, 0).»</p>",
+    "options": [
+     "صحيح",
+     "خطأ"
+    ],
+    "hint": "إذا صنعت 0 منتج، هل تدفع 0؟ فكّر في الكراء.",
+    "explain": "<b>خطأ.</b> مع 0 منتج تدفع رغم ذلك التكلفة الثابتة، إذن <span class=\"m\">C(0)</span> = التكلفة الثابتة، وليس 0."
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "The teacher’s example: radios",
+   "why": "This exact example is in the teacher’s notes, and the problem set has the same shape (problems 12 and 13). Learn to read it fast.",
+   "html": "<div class=\"ex\"><b>Radios</b>Fixed costs $24,000. Labor and materials $7 per radio.</div><div class=\"formula\">C(q) = 24,000 + 7q</div><p><b>24,000</b> = fixed cost = the start (intercept).<br><b>7</b> = the cost of one more radio = the slope. It has a name: the <b>marginal cost</b>, in $ per radio.</p><p class=\"fr\">marginal cost = التكلفة الحدّية = coût marginal</p>",
+   "ar": {
+    "title": "مثال الأستاذة: أجهزة الراديو",
+    "why": "هذا المثال بالضبط موجود في دروس الأستاذة، وسلسلة التمارين فيها نفس الشكل (التمرينان 12 و 13). تعلّم أن تقرأه بسرعة.",
+    "html": "<div class=\"ex\"><b>أجهزة الراديو</b>تكاليف ثابتة 24,000 دولار. يد عاملة ومواد 7 دولارات لكل راديو.</div><div class=\"formula\">C(q) = 24,000 + 7q</div><p><b>24,000</b> = التكلفة الثابتة = البداية (intercept).<br><b>7</b> = تكلفة راديو إضافي = الميل. لها اسم: <b>التكلفة الحدّية</b> (marginal cost)، بالدولار لكل راديو.</p>"
+   }
+  },
+  {
+   "kind": "mcq",
+   "html": "<p>G-pods: fixed costs <b>$2,600</b>, variable cost <b>$3.50</b> per G-pod. Which is the cost function?</p>",
+   "options": [
+    "C(q) = 3.5 + 2,600q",
+    "C(q) = 2,600 + 3.5q",
+    "C(q) = 2,600q",
+    "C(q) = 10q"
+   ],
+   "answer": 1,
+   "hint": "Fixed cost = the start (alone). Cost per unit = the jump (next to q).",
+   "explain": "Start 2,600, jump 3.5 → <b>C(q) = 2,600 + 3.5q</b>.",
+   "ar": {
+    "html": "<p>G-pods: تكاليف ثابتة <b>2,600 دولار</b>، تكلفة متغيّرة <b>3.50 دولار</b> لكل G-pod. ما هي دالّة التكلفة؟</p>",
+    "options": [
+     "<span class=\"m\">C(q) = 3.5 + 2,600q</span>",
+     "<span class=\"m\">C(q) = 2,600 + 3.5q</span>",
+     "<span class=\"m\">C(q) = 2,600q</span>",
+     "<span class=\"m\">C(q) = 10q</span>"
+    ],
+    "hint": "التكلفة الثابتة = البداية (وحدها). تكلفة الوحدة = القفزة (بجانب q).",
+    "explain": "البداية 2,600، القفزة 3.5 ← <span class=\"m\"><b>C(q) = 2,600 + 3.5q</b></span>."
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">C(q) = 2,600 + 3.5q</div><p>Cost of making <b>200 G-pods</b>?</p>",
+   "answer": 3300,
+   "tol": 0,
+   "unit": "$",
+   "hint": "2,600 + 3.5 × 200.",
+   "explain": "C(200) = 2,600 + 700 = <b>$3,300</b>.",
+   "ar": {
+    "html": "<div class=\"formula\">C(q) = 2,600 + 3.5q</div><p>تكلفة صنع <b>200 G-pod</b>؟</p>",
+    "unit": "$",
+    "hint": "<span class=\"m\">2,600 + 3.5 × 200</span>.",
+    "explain": "<span class=\"m\">C(200) = 2,600 + 700 = 3,300</span> دولار."
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Revenue: price × quantity",
+   "why": "Revenue is the money that comes in. Careful: big revenue does not mean big profit. Many shops sell a lot and still lose money.",
+   "html": "<div class=\"formula\">R(q) = price × q</div><div class=\"ex\"><b>Sandwich shop</b>Each sandwich sells for 5 TND → <b>R(q) = 5q</b><br>R(100) = 5 × 100 = 500 TND.</div><p>Revenue <b>starts at 0</b>: sell nothing, earn nothing. The jump (slope) is the price.</p>",
+   "ar": {
+    "title": "الإيراد: السعر × الكمية",
+    "why": "الإيراد هو المال الذي يدخل. انتبه: إيراد كبير لا يعني ربحًا كبيرًا. محلّات كثيرة تبيع كثيرًا ومع ذلك تخسر.",
+    "html": "<div class=\"formula\">R(q) = price × q</div><div class=\"ex\"><b>محلّ السندويتشات</b>كل سندويتش يُباع بـ 5 دنانير ← <span class=\"m\"><b>R(q) = 5q</b></span><br><span class=\"m\">R(100) = 5 × 100 = 500</span> دينار.</div><p>الإيراد <b>يبدأ من 0</b>: لا تبيع شيئًا، لا تكسب شيئًا. القفزة (الميل) هي السعر.</p>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">R(q) = 5q</div><p>Revenue from <b>100 sandwiches</b>?</p>",
+   "answer": 500,
+   "tol": 0,
+   "unit": "TND",
+   "hint": "5 × 100.",
+   "explain": "R(100) = 5 × 100 = <b>500 TND</b>.",
+   "ar": {
+    "html": "<div class=\"formula\">R(q) = 5q</div><p>الإيراد من <b>100 سندويتش</b>؟</p>",
+    "unit": "دينار",
+    "hint": "<span class=\"m\">5 × 100</span>.",
+    "explain": "<span class=\"m\">R(100) = 5 × 100 = 500</span> دينار."
+   }
+  },
+  {
+   "kind": "mcq",
+   "html": "<p>The radios sell for <b>$15</b> each. Revenue R(q) = ?</p>",
+   "options": [
+    "R(q) = 15 + q",
+    "R(q) = 15q",
+    "R(q) = 24,000 + 15q",
+    "R(q) = q ÷ 15"
+   ],
+   "answer": 1,
+   "hint": "Revenue = price × quantity. No fixed part: selling 0 radios brings $0.",
+   "explain": "<b>R(q) = 15q</b>. (24,000 is a cost, it has nothing to do with revenue.)",
+   "ar": {
+    "html": "<p>أجهزة الراديو تُباع بـ <b>15 دولارًا</b> للواحد. الإيراد <span class=\"m\">R(q) = ?</span></p>",
+    "options": [
+     "<span class=\"m\">R(q) = 15 + q</span>",
+     "<span class=\"m\">R(q) = 15q</span>",
+     "<span class=\"m\">R(q) = 24,000 + 15q</span>",
+     "<span class=\"m\">R(q) = q ÷ 15</span>"
+    ],
+    "hint": "الإيراد = السعر × الكمية. لا يوجد جزء ثابت: بيع 0 راديو يجلب 0 دولار.",
+    "explain": "<span class=\"m\"><b>R(q) = 15q</b></span>. (24,000 تكلفة، لا علاقة لها بالإيراد.)"
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Profit = revenue − cost",
+   "why": "Profit is what you keep at the end of the month. The teacher writes it π (“pi”) so it is not confused with the price p.",
+   "html": "<div class=\"ex\"><b>Sandwich shop</b>R = 5q and C = 600 + 2q</div><div class=\"lad\"><span class=\"l\">π</span><span class=\"e\">=</span><span class=\"rt\">5q − (600 + 2q)</span><span class=\"note\">↓ the minus hits BOTH numbers in the bracket</span><span class=\"l\">π</span><span class=\"e\">=</span><span class=\"rt\">5q − 600 − 2q</span><span class=\"note\">↓ 5q − 2q = 3q (apples!)</span><span class=\"l fin\">π</span><span class=\"e fin\">=</span><span class=\"rt fin\">3q − 600</span></div><p>Careful with the minus in front of the bracket: you take away the rent <b>and</b> the 2 TND per sandwich.</p>",
+   "ar": {
+    "title": "الربح = الإيراد − التكلفة",
+    "why": "الربح هو ما يبقى لك في آخر الشهر. الأستاذة تكتبه π («باي») حتى لا يختلط بالسعر p.",
+    "html": "<div class=\"ex\"><b>محلّ السندويتشات</b><span class=\"m\">R = 5q</span> و <span class=\"m\">C = 600 + 2q</span></div><div class=\"lad\"><span class=\"l\">π</span><span class=\"e\">=</span><span class=\"rt\">5q − (600 + 2q)</span><span class=\"note\" dir=\"rtl\">↓ الناقص يصيب الرقمين معًا داخل القوس</span><span class=\"l\">π</span><span class=\"e\">=</span><span class=\"rt\">5q − 600 − 2q</span><span class=\"note\" dir=\"rtl\">↓ 5q − 2q = 3q (تفّاح!)</span><span class=\"l fin\">π</span><span class=\"e fin\">=</span><span class=\"rt fin\">3q − 600</span></div><p>انتبه للناقص أمام القوس: تنزع الكراء <b>و</b> 2 دينار لكل سندويتش.</p>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">π = 3q − 600</div><p>Profit if you sell <b>100 sandwiches</b>?</p>",
+   "answer": -300,
+   "tol": 0,
+   "unit": "TND",
+   "hint": "3 × 100 − 600. The answer can be negative!",
+   "explain": "π(100) = 300 − 600 = <b>−300 TND</b>. Negative profit = a <b>loss</b>: 100 sandwiches are not enough to pay the rent.",
+   "ar": {
+    "html": "<div class=\"formula\">π = 3q − 600</div><p>الربح إذا بعت <b>100 سندويتش</b>؟</p>",
+    "unit": "دينار",
+    "hint": "<span class=\"m\">3 × 100 − 600</span>. الجواب يمكن أن يكون سالبًا!",
+    "explain": "<span class=\"m\">π(100) = 300 − 600 = −300</span> دينار. ربح سالب = <b>خسارة</b>: 100 سندويتش لا تكفي لدفع الكراء."
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">π = 3q − 600</div><p>Profit if you sell <b>300 sandwiches</b>?</p>",
+   "answer": 300,
+   "tol": 0,
+   "unit": "TND",
+   "hint": "3 × 300 − 600.",
+   "explain": "π(300) = 900 − 600 = <b>300 TND</b> of profit.",
+   "ar": {
+    "html": "<div class=\"formula\">π = 3q − 600</div><p>الربح إذا بعت <b>300 سندويتش</b>؟</p>",
+    "unit": "دينار",
+    "hint": "<span class=\"m\">3 × 300 − 600</span>.",
+    "explain": "<span class=\"m\">π(300) = 900 − 600 = 300</span> دينار ربحًا."
+   }
+  },
+  {
+   "kind": "mcq",
+   "html": "<p>G-pods: <b>R = 10q</b> and <b>C = 2,600 + 3.5q</b>. Profit π(q) = ?</p>",
+   "options": [
+    "6.5q + 2,600",
+    "6.5q − 2,600",
+    "13.5q − 2,600",
+    "10q − 2,600"
+   ],
+   "answer": 1,
+   "hint": "π = 10q − (2,600 + 3.5q). The minus hits both numbers. Then 10q − 3.5q.",
+   "explain": "<div class=\"lad\"><span class=\"l\">π</span><span class=\"e\">=</span><span class=\"rt\">10q − (2,600 + 3.5q)</span><span class=\"note\">↓ the minus hits both</span><span class=\"l\">π</span><span class=\"e\">=</span><span class=\"rt\">10q − 2,600 − 3.5q</span><span class=\"note\">↓ 10q − 3.5q = 6.5q</span><span class=\"l fin\">π</span><span class=\"e fin\">=</span><span class=\"rt fin\">6.5q − 2,600</span></div>",
+   "ar": {
+    "html": "<p>G-pods: <span class=\"m\"><b>R = 10q</b></span> و <span class=\"m\"><b>C = 2,600 + 3.5q</b></span>. الربح <span class=\"m\">π(q) = ?</span></p>",
+    "options": [
+     "<span class=\"m\">6.5q + 2,600</span>",
+     "<span class=\"m\">6.5q − 2,600</span>",
+     "<span class=\"m\">13.5q − 2,600</span>",
+     "<span class=\"m\">10q − 2,600</span>"
+    ],
+    "hint": "<span class=\"m\">π = 10q − (2,600 + 3.5q)</span>. الناقص يصيب الرقمين. ثم <span class=\"m\">10q − 3.5q</span>.",
+    "explain": "<div class=\"lad\"><span class=\"l\">π</span><span class=\"e\">=</span><span class=\"rt\">10q − (2,600 + 3.5q)</span><span class=\"note\" dir=\"rtl\">↓ الناقص يصيب الاثنين</span><span class=\"l\">π</span><span class=\"e\">=</span><span class=\"rt\">10q − 2,600 − 3.5q</span><span class=\"note\" dir=\"rtl\">↓ 10q − 3.5q = 6.5q</span><span class=\"l fin\">π</span><span class=\"e fin\">=</span><span class=\"rt fin\">6.5q − 2,600</span></div>"
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Break-even: when R = C",
+   "why": "The first question of every investor: “how many must we sell before we stop losing money?” That number is the break-even point.",
+   "html": "<p>Break-even = profit is exactly <b>0</b> = revenue equals cost.</p><div class=\"formula\">R = C</div><p>Sandwich shop: x on both sides, like in Unit 1:</p><div class=\"lad\"><span class=\"l\">5q</span><span class=\"e\">=</span><span class=\"rt\">600 + 2q</span><span class=\"l op\">− 2q</span><span class=\"e\"></span><span class=\"rt op\">− 2q</span><span class=\"note\">↓ same move on both sides</span><span class=\"l\">3q</span><span class=\"e\">=</span><span class=\"rt\">600</span><span class=\"l op\">÷ 3</span><span class=\"e\"></span><span class=\"rt op\">÷ 3</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">q</span><span class=\"e fin\">=</span><span class=\"rt fin\">200</span></div><div class=\"tbl\"><table><tr><th>sandwiches q</th><td>100</td><td>200</td><td>300</td></tr><tr><th>profit π</th><td>−300</td><td><b>0</b></td><td>+300</td></tr></table></div><p>Fewer than 200 sandwiches → loss. More than 200 → profit.</p><p class=\"fr\">break-even = نقطة التعادل = seuil de rentabilité</p>",
+   "ar": {
+    "title": "نقطة التعادل: عندما R = C",
+    "why": "السؤال الأول لكل مستثمر: «كم يجب أن نبيع لنتوقّف عن الخسارة؟» هذا الرقم هو نقطة التعادل (break-even).",
+    "html": "<p>نقطة التعادل = الربح يساوي <b>0</b> بالضبط = الإيراد يساوي التكلفة.</p><div class=\"formula\">R = C</div><p>محلّ السندويتشات: x في الجهتين، مثل الوحدة 1:</p><div class=\"lad\"><span class=\"l\">5q</span><span class=\"e\">=</span><span class=\"rt\">600 + 2q</span><span class=\"l op\">− 2q</span><span class=\"e\"></span><span class=\"rt op\">− 2q</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l\">3q</span><span class=\"e\">=</span><span class=\"rt\">600</span><span class=\"l op\">÷ 3</span><span class=\"e\"></span><span class=\"rt op\">÷ 3</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">q</span><span class=\"e fin\">=</span><span class=\"rt fin\">200</span></div><div class=\"tbl\"><table><tr><th>sandwiches q</th><td>100</td><td>200</td><td>300</td></tr><tr><th>profit π</th><td>−300</td><td><b>0</b></td><td>+300</td></tr></table></div><p>أقل من 200 سندويتش ← خسارة. أكثر من 200 ← ربح.</p>"
+   }
+  },
+  {
+   "kind": "number",
+   "title": "G-pods · step 1",
+   "html": "<div class=\"formula\">10q = 2,600 + 3.5q</div><p>Take 3.5q away from both sides: <b>?</b>q = 2,600. What is ?</p>",
+   "answer": 6.5,
+   "tol": 0.001,
+   "hint": "10 apples − 3.5 apples.",
+   "explain": "<div class=\"lad\"><span class=\"l\">10q</span><span class=\"e\">=</span><span class=\"rt\">2,600 + 3.5q</span><span class=\"l op\">− 3.5q</span><span class=\"e\"></span><span class=\"rt op\">− 3.5q</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">6.5q</span><span class=\"e fin\">=</span><span class=\"rt fin\">2,600</span></div>",
+   "ar": {
+    "title": "G-pods · الخطوة 1",
+    "html": "<div class=\"formula\">10q = 2,600 + 3.5q</div><p>انزع <span class=\"m\">3.5q</span> من الجهتين: <span class=\"m\"><b>?</b>q = 2,600</span>. كم يساوي ؟</p>",
+    "hint": "10 تفّاحات − 3.5 تفّاحة.",
+    "explain": "<div class=\"lad\"><span class=\"l\">10q</span><span class=\"e\">=</span><span class=\"rt\">2,600 + 3.5q</span><span class=\"l op\">− 3.5q</span><span class=\"e\"></span><span class=\"rt op\">− 3.5q</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">6.5q</span><span class=\"e fin\">=</span><span class=\"rt fin\">2,600</span></div>"
+   }
+  },
+  {
+   "kind": "number",
+   "title": "G-pods · step 2",
+   "html": "<div class=\"formula\">6.5q = 2,600</div><p>Break-even quantity q = ?</p>",
+   "answer": 400,
+   "tol": 0,
+   "unit": "G-pods",
+   "hint": "2,600 ÷ 6.5.",
+   "explain": "<div class=\"lad\"><span class=\"l\">6.5q</span><span class=\"e\">=</span><span class=\"rt\">2,600</span><span class=\"l op\">÷ 6.5</span><span class=\"e\"></span><span class=\"rt op\">÷ 6.5</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">q</span><span class=\"e fin\">=</span><span class=\"rt fin\">400</span></div><p>Selling 400 G-pods covers all costs. More → profit, fewer → loss.</p>",
+   "ar": {
+    "title": "G-pods · الخطوة 2",
+    "html": "<div class=\"formula\">6.5q = 2,600</div><p>كمية التعادل <span class=\"m\">q = ?</span></p>",
+    "unit": "G-pod",
+    "hint": "<span class=\"m\">2,600 ÷ 6.5</span>.",
+    "explain": "<div class=\"lad\"><span class=\"l\">6.5q</span><span class=\"e\">=</span><span class=\"rt\">2,600</span><span class=\"l op\">÷ 6.5</span><span class=\"e\"></span><span class=\"rt op\">÷ 6.5</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">q</span><span class=\"e fin\">=</span><span class=\"rt fin\">400</span></div><p>بيع 400 G-pod يغطّي كل التكاليف. أكثر ← ربح، أقل ← خسارة.</p>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<p>Radios: R = 15q and C = 24,000 + 7q. Break-even quantity?</p><div class=\"formula\">15q = 24,000 + 7q</div>",
+   "answer": 3000,
+   "tol": 0,
+   "unit": "radios",
+   "hint": "Take 7q away from both sides, then divide.",
+   "explain": "<div class=\"lad\"><span class=\"l\">15q</span><span class=\"e\">=</span><span class=\"rt\">24,000 + 7q</span><span class=\"l op\">− 7q</span><span class=\"e\"></span><span class=\"rt op\">− 7q</span><span class=\"note\">↓ same move on both sides</span><span class=\"l\">8q</span><span class=\"e\">=</span><span class=\"rt\">24,000</span><span class=\"l op\">÷ 8</span><span class=\"e\"></span><span class=\"rt op\">÷ 8</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">q</span><span class=\"e fin\">=</span><span class=\"rt fin\">3,000</span></div>",
+   "ar": {
+    "html": "<p>الراديو: <span class=\"m\">R = 15q</span> و <span class=\"m\">C = 24,000 + 7q</span>. كمية التعادل؟</p><div class=\"formula\">15q = 24,000 + 7q</div>",
+    "unit": "راديو",
+    "hint": "انزع <span class=\"m\">7q</span> من الجهتين، ثم اقسم.",
+    "explain": "<div class=\"lad\"><span class=\"l\">15q</span><span class=\"e\">=</span><span class=\"rt\">24,000 + 7q</span><span class=\"l op\">− 7q</span><span class=\"e\"></span><span class=\"rt op\">− 7q</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l\">8q</span><span class=\"e\">=</span><span class=\"rt\">24,000</span><span class=\"l op\">÷ 8</span><span class=\"e\"></span><span class=\"rt op\">÷ 8</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">q</span><span class=\"e fin\">=</span><span class=\"rt fin\">3,000</span></div>"
+   }
+  },
+  {
+   "kind": "mcq",
+   "title": "Like the problem set",
+   "html": "<p>C = 1,000 + 3.75q and R = 6.25q. The break-even point is q = 400. Which statement is true?</p>",
+   "options": [
+    "Selling 200 items gives a profit",
+    "Selling 400 items gives a profit of exactly 0",
+    "Selling 300 items gives a profit",
+    "You must sell 1,000 items to break even"
+   ],
+   "answer": 1,
+   "hint": "At the break-even point, profit = 0. Before it: loss.",
+   "explain": "At q = 400, R = C, so profit = <b>0</b>. 200 and 300 are below 400 → a loss.",
+   "ar": {
+    "title": "مثل سلسلة التمارين",
+    "html": "<p><span class=\"m\">C = 1,000 + 3.75q</span> و <span class=\"m\">R = 6.25q</span>. نقطة التعادل هي <span class=\"m\">q = 400</span>. أيّ عبارة صحيحة؟</p>",
+    "options": [
+     "بيع 200 وحدة يعطي ربحًا",
+     "بيع 400 وحدة يعطي ربحًا يساوي 0 بالضبط",
+     "بيع 300 وحدة يعطي ربحًا",
+     "يجب بيع 1,000 وحدة للتعادل"
+    ],
+    "hint": "عند نقطة التعادل، الربح = 0. قبلها: خسارة.",
+    "explain": "عند <span class=\"m\">q = 400</span>، <span class=\"m\">R = C</span>، إذن الربح = <b>0</b>. 200 و 300 أقل من 400 ← خسارة."
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Marginal = “one more”",
+   "why": "Managers decide with marginal numbers: “should we make one more?” If one more brings in more than it costs, yes. Later, the derivative is exactly this idea.",
+   "html": "<p><b>Marginal cost (MC)</b> = the cost of one more product = the slope of C.<br><b>Marginal revenue (MR)</b> = the money from one more product = the slope of R (the price).<br><b>Marginal profit (MP)</b> = MR − MC.</p><div class=\"ex\"><b>Sandwich shop</b>MC = 2 TND per sandwich<br>MR = 5 TND per sandwich<br>MP = 5 − 2 = 3 TND per sandwich</div><div class=\"key\">Units: TND (or $) <b>per</b> product. MC and MR always have the same units.</div>",
+   "ar": {
+    "title": "الحدّي = «واحد إضافي»",
+    "why": "المديرون يقرّرون بالأرقام الحدّية: «هل نصنع واحدًا إضافيًا؟» إذا كان الإضافي يجلب أكثر مما يكلّف، نعم. لاحقًا، المشتقة هي بالضبط هذه الفكرة.",
+    "html": "<p><b>التكلفة الحدّية (MC)</b> = تكلفة منتج إضافي = ميل C.<br><b>الإيراد الحدّي (MR)</b> = المال من منتج إضافي = ميل R (السعر).<br><b>الربح الحدّي (MP)</b> = MR − MC.</p><div class=\"ex\"><b>محلّ السندويتشات</b>MC = 2 دينار لكل سندويتش<br>MR = 5 دنانير لكل سندويتش<br>MP = 5 − 2 = 3 دنانير لكل سندويتش</div><div class=\"key\">الوحدات: دينار (أو دولار) <b>لكل</b> منتج. MC و MR لهما دائمًا نفس الوحدات.</div>"
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Problem set 13",
+   "html": "<p>Chairs: fixed costs $5,000, variable cost <b>$30</b> per chair, price <b>$50</b> per chair.</p><p>Marginal cost MC = ?</p>",
+   "answer": 30,
+   "tol": 0,
+   "unit": "$ per chair",
+   "hint": "The cost of one more chair (the variable cost per chair).",
+   "explain": "C = 5,000 + 30q, so MC = <b>$30 per chair</b>.",
+   "ar": {
+    "title": "التمرين 13",
+    "html": "<p>الكراسي: تكاليف ثابتة 5,000 دولار، تكلفة متغيّرة <b>30 دولارًا</b> لكل كرسي، السعر <b>50 دولارًا</b> للكرسي.</p><p>التكلفة الحدّية MC = ؟</p>",
+    "unit": "$ لكل كرسي",
+    "hint": "تكلفة كرسي إضافي (التكلفة المتغيّرة لكل كرسي).",
+    "explain": "<span class=\"m\">C = 5,000 + 30q</span>، إذن MC = <b>30 دولارًا لكل كرسي</b>."
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<p>Same chairs: MR = $50, MC = $30. Marginal profit MP = ?</p>",
+   "answer": 20,
+   "tol": 0,
+   "unit": "$ per chair",
+   "hint": "MP = MR − MC.",
+   "explain": "MP = 50 − 30 = <b>$20 per chair</b>: each extra chair adds $20 of profit.",
+   "ar": {
+    "html": "<p>نفس الكراسي: MR = 50، MC = 30. الربح الحدّي MP = ؟</p>",
+    "unit": "$ لكل كرسي",
+    "hint": "MP = MR − MC.",
+    "explain": "MP = 50 − 30 = <b>20 دولارًا لكل كرسي</b>: كل كرسي إضافي يضيف 20 دولارًا من الربح."
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<p>Same chairs: R = 50q and C = 5,000 + 30q. Break-even: how many chairs?</p><div class=\"formula\">50q = 5,000 + 30q</div>",
+   "answer": 250,
+   "tol": 0,
+   "unit": "chairs",
+   "hint": "Take 30q away from both sides, then divide.",
+   "explain": "<div class=\"lad\"><span class=\"l\">50q</span><span class=\"e\">=</span><span class=\"rt\">5,000 + 30q</span><span class=\"l op\">− 30q</span><span class=\"e\"></span><span class=\"rt op\">− 30q</span><span class=\"note\">↓ same move on both sides</span><span class=\"l\">20q</span><span class=\"e\">=</span><span class=\"rt\">5,000</span><span class=\"l op\">÷ 20</span><span class=\"e\"></span><span class=\"rt op\">÷ 20</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">q</span><span class=\"e fin\">=</span><span class=\"rt fin\">250</span></div><p>Revenue = cost = 50 × 250 = $12,500.</p>",
+   "ar": {
+    "html": "<p>نفس الكراسي: <span class=\"m\">R = 50q</span> و <span class=\"m\">C = 5,000 + 30q</span>. التعادل: كم كرسيًا؟</p><div class=\"formula\">50q = 5,000 + 30q</div>",
+    "unit": "كرسي",
+    "hint": "انزع <span class=\"m\">30q</span> من الجهتين، ثم اقسم.",
+    "explain": "<div class=\"lad\"><span class=\"l\">50q</span><span class=\"e\">=</span><span class=\"rt\">5,000 + 30q</span><span class=\"l op\">− 30q</span><span class=\"e\"></span><span class=\"rt op\">− 30q</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l\">20q</span><span class=\"e\">=</span><span class=\"rt\">5,000</span><span class=\"l op\">÷ 20</span><span class=\"e\"></span><span class=\"rt op\">÷ 20</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">q</span><span class=\"e fin\">=</span><span class=\"rt fin\">250</span></div><p>الإيراد = التكلفة = <span class=\"m\">50 × 250 = 12,500</span> دولار.</p>"
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Depreciation: value going down",
+   "why": "Machines, cars and computers lose value every year. Accountants write this loss in the books (in Financial Accounting too!).",
+   "html": "<div class=\"ex\"><b>Teacher’s example</b>A machine costs $20,000. After 10 years it is sold for $3,000. The value goes down in a straight line.</div><div class=\"lad\"><span class=\"l\">slope</span><span class=\"e\">=</span><span class=\"rt\">(3,000 − 20,000) ÷ 10</span><span class=\"note\">↓ end value − start value, divided by the years</span><span class=\"l\">slope</span><span class=\"e\">=</span><span class=\"rt\">−17,000 ÷ 10</span><span class=\"note\">↓ calculate</span><span class=\"l fin\">slope</span><span class=\"e fin\">=</span><span class=\"rt fin\">−1,700</span></div><div class=\"formula\">V(t) = 20,000 − 1,700t</div><p>The slope is <b>negative</b>: the value goes <b>down</b> $1,700 each year.</p><p class=\"fr\">depreciation = الاهتلاك = amortissement</p>",
+   "ar": {
+    "title": "الاهتلاك: القيمة تنزل",
+    "why": "الآلات والسيارات والحواسيب تفقد من قيمتها كل سنة. المحاسبون يسجّلون هذه الخسارة في الدفاتر (في مادة المحاسبة أيضًا!).",
+    "html": "<div class=\"ex\"><b>مثال الأستاذة</b>آلة ثمنها 20,000 دولار. بعد 10 سنوات تُباع بـ 3,000 دولار. القيمة تنزل في خط مستقيم.</div><div class=\"lad\"><span class=\"l\">slope</span><span class=\"e\">=</span><span class=\"rt\">(3,000 − 20,000) ÷ 10</span><span class=\"note\" dir=\"rtl\">↓ القيمة النهائية − القيمة الأولى، مقسومة على السنوات</span><span class=\"l\">slope</span><span class=\"e\">=</span><span class=\"rt\">−17,000 ÷ 10</span><span class=\"note\" dir=\"rtl\">↓ احسب</span><span class=\"l fin\">slope</span><span class=\"e fin\">=</span><span class=\"rt fin\">−1,700</span></div><div class=\"formula\">V(t) = 20,000 − 1,700t</div><p>الميل <b>سالب</b>: القيمة <b>تنزل</b> 1,700 دولار كل سنة.</p>"
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Problem set 14",
+   "html": "<p>A robot costs <b>$15,000</b>. Its value goes down in a straight line to <b>$0</b> after <b>10 years</b>. Slope = ?</p>",
+   "answer": -1500,
+   "tol": 0,
+   "unit": "$ per year",
+   "hint": "(0 − 15,000) ÷ 10. Going down → negative.",
+   "explain": "<div class=\"lad\"><span class=\"l\">slope</span><span class=\"e\">=</span><span class=\"rt\">(0 − 15,000) ÷ 10</span><span class=\"note\">↓ calculate</span><span class=\"l fin\">slope</span><span class=\"e fin\">=</span><span class=\"rt fin\">−1,500</span></div><p>V(t) = 15,000 − 1,500t.</p>",
+   "ar": {
+    "title": "التمرين 14",
+    "html": "<p>روبوت ثمنه <b>15,000 دولار</b>. قيمته تنزل في خط مستقيم إلى <b>0</b> بعد <b>10 سنوات</b>. الميل = ؟</p>",
+    "unit": "$ في السنة",
+    "hint": "<span class=\"m\">(0 − 15,000) ÷ 10</span>. ينزل ← سالب.",
+    "explain": "<div class=\"lad\"><span class=\"l\">slope</span><span class=\"e\">=</span><span class=\"rt\">(0 − 15,000) ÷ 10</span><span class=\"note\" dir=\"rtl\">↓ احسب</span><span class=\"l fin\">slope</span><span class=\"e fin\">=</span><span class=\"rt fin\">−1,500</span></div><p><span class=\"m\">V(t) = 15,000 − 1,500t</span>.</p>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">V(t) = 15,000 − 1,500t</div><p>Value of the robot after <b>3 years</b>?</p>",
+   "answer": 10500,
+   "tol": 0,
+   "unit": "$",
+   "hint": "15,000 − 1,500 × 3. Multiply first.",
+   "explain": "V(3) = 15,000 − 4,500 = <b>$10,500</b>.",
+   "ar": {
+    "html": "<div class=\"formula\">V(t) = 15,000 − 1,500t</div><p>قيمة الروبوت بعد <b>3 سنوات</b>؟</p>",
+    "unit": "$",
+    "hint": "<span class=\"m\">15,000 − 1,500 × 3</span>. الضرب أولًا.",
+    "explain": "<span class=\"m\">V(3) = 15,000 − 4,500 = 10,500</span> دولار."
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Supply and demand",
+   "why": "This is where Math meets Microeconomics: the market price is where supply meets demand. The teacher’s notes have an example and the exam can ask it.",
+   "html": "<p><b>Demand</b>: how many buyers want at price p. Price up → demand <b>down</b>.<br><b>Supply</b>: how many sellers offer at price p. Price up → supply <b>up</b>.<br><b>Equilibrium</b>: supply = demand.</p><div class=\"ex\"><b>Teacher’s example · steaks</b>Demand q = 20,000 − 50p · Supply q = 450p</div><div class=\"lad\"><span class=\"l\">20,000 − 50p</span><span class=\"e\">=</span><span class=\"rt\">450p</span><span class=\"l op\">+ 50p</span><span class=\"e\"></span><span class=\"rt op\">+ 50p</span><span class=\"note\">↓ same move on both sides</span><span class=\"l\">20,000</span><span class=\"e\">=</span><span class=\"rt\">500p</span><span class=\"l op\">÷ 500</span><span class=\"e\"></span><span class=\"rt op\">÷ 500</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">40</span><span class=\"e fin\">=</span><span class=\"rt fin\">p</span></div><p>Price p = <b>$40</b>, quantity q = 450 × 40 = <b>18,000</b> steaks.</p><p class=\"fr\">supply = العرض = offre · demand = الطلب = demande · equilibrium = التوازن = équilibre</p>",
+   "ar": {
+    "title": "العرض والطلب",
+    "why": "هنا تلتقي الرياضيات بالاقتصاد الجزئي: سعر السوق هو حيث يلتقي العرض بالطلب. في دروس الأستاذة مثال، ويمكن أن يأتي في الامتحان.",
+    "html": "<p><b>الطلب</b> (demand): كم يريد المشترون عند السعر p. السعر يرتفع ← الطلب <b>ينزل</b>.<br><b>العرض</b> (supply): كم يعرض البائعون عند السعر p. السعر يرتفع ← العرض <b>يرتفع</b>.<br><b>التوازن</b> (equilibrium): العرض = الطلب.</p><div class=\"ex\"><b>مثال الأستاذة · شرائح اللحم</b>الطلب <span class=\"m\">q = 20,000 − 50p</span> · العرض <span class=\"m\">q = 450p</span></div><div class=\"lad\"><span class=\"l\">20,000 − 50p</span><span class=\"e\">=</span><span class=\"rt\">450p</span><span class=\"l op\">+ 50p</span><span class=\"e\"></span><span class=\"rt op\">+ 50p</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l\">20,000</span><span class=\"e\">=</span><span class=\"rt\">500p</span><span class=\"l op\">÷ 500</span><span class=\"e\"></span><span class=\"rt op\">÷ 500</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">40</span><span class=\"e fin\">=</span><span class=\"rt fin\">p</span></div><p>السعر <span class=\"m\">p = 40</span> دولارًا، الكمية <span class=\"m\">q = 450 × 40 = 18,000</span> شريحة.</p>"
+   }
+  },
+  {
+   "kind": "mcq",
+   "html": "<p>When the price goes <b>up</b>, demand usually…</p>",
+   "options": [
+    "goes up",
+    "goes down",
+    "stays the same"
+   ],
+   "answer": 1,
+   "hint": "If sandwiches cost 20 TND, do more or fewer people buy?",
+   "explain": "Demand <b>goes down</b>: higher price → fewer buyers. (Supply goes up: sellers like high prices.)",
+   "ar": {
+    "html": "<p>عندما يرتفع السعر، الطلب عادةً…</p>",
+    "options": [
+     "يرتفع",
+     "ينزل",
+     "يبقى كما هو"
+    ],
+    "hint": "إذا صار السندويتش بـ 20 دينارًا، هل يشتري ناس أكثر أم أقل؟",
+    "explain": "الطلب <b>ينزل</b>: سعر أعلى ← مشترون أقل. (العرض يرتفع: البائعون يحبّون الأسعار المرتفعة.)"
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Equilibrium · step 1",
+   "html": "<p>Demand q = 1,000 − 20p · Supply q = 30p</p><div class=\"formula\">1,000 − 20p = 30p</div><p>Add 20p to both sides: 1,000 = <b>?</b>p</p>",
+   "answer": 50,
+   "tol": 0,
+   "hint": "−20p + 20p = 0 on the left. On the right: 30p + 20p.",
+   "explain": "<div class=\"lad\"><span class=\"l\">1,000 − 20p</span><span class=\"e\">=</span><span class=\"rt\">30p</span><span class=\"l op\">+ 20p</span><span class=\"e\"></span><span class=\"rt op\">+ 20p</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">1,000</span><span class=\"e fin\">=</span><span class=\"rt fin\">50p</span></div>",
+   "ar": {
+    "title": "التوازن · الخطوة 1",
+    "html": "<p>الطلب <span class=\"m\">q = 1,000 − 20p</span> · العرض <span class=\"m\">q = 30p</span></p><div class=\"formula\">1,000 − 20p = 30p</div><p>أضف <span class=\"m\">20p</span> إلى الجهتين: <span class=\"m\">1,000 = <b>?</b>p</span></p>",
+    "hint": "في اليسار <span class=\"m\">−20p + 20p = 0</span>. في اليمين: <span class=\"m\">30p + 20p</span>.",
+    "explain": "<div class=\"lad\"><span class=\"l\">1,000 − 20p</span><span class=\"e\">=</span><span class=\"rt\">30p</span><span class=\"l op\">+ 20p</span><span class=\"e\"></span><span class=\"rt op\">+ 20p</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">1,000</span><span class=\"e fin\">=</span><span class=\"rt fin\">50p</span></div>"
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Equilibrium · step 2",
+   "html": "<div class=\"formula\">1,000 = 50p</div><p>Equilibrium price p = ?</p>",
+   "answer": 20,
+   "tol": 0,
+   "unit": "$",
+   "hint": "1,000 ÷ 50.",
+   "explain": "<div class=\"lad\"><span class=\"l\">1,000</span><span class=\"e\">=</span><span class=\"rt\">50p</span><span class=\"l op\">÷ 50</span><span class=\"e\"></span><span class=\"rt op\">÷ 50</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">20</span><span class=\"e fin\">=</span><span class=\"rt fin\">p</span></div>",
+   "ar": {
+    "title": "التوازن · الخطوة 2",
+    "html": "<div class=\"formula\">1,000 = 50p</div><p>سعر التوازن <span class=\"m\">p = ?</span></p>",
+    "unit": "$",
+    "hint": "<span class=\"m\">1,000 ÷ 50</span>.",
+    "explain": "<div class=\"lad\"><span class=\"l\">1,000</span><span class=\"e\">=</span><span class=\"rt\">50p</span><span class=\"l op\">÷ 50</span><span class=\"e\"></span><span class=\"rt op\">÷ 50</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">20</span><span class=\"e fin\">=</span><span class=\"rt fin\">p</span></div>"
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Equilibrium · step 3",
+   "html": "<p>p = 20. Supply q = 30p. Equilibrium quantity q = ?</p>",
+   "answer": 600,
+   "tol": 0,
+   "hint": "30 × 20. (Check with demand: 1,000 − 20 × 20.)",
+   "explain": "q = 30 × 20 = <b>600</b>. Check with demand: 1,000 − 400 = 600 ✓",
+   "ar": {
+    "title": "التوازن · الخطوة 3",
+    "html": "<p><span class=\"m\">p = 20</span>. العرض <span class=\"m\">q = 30p</span>. كمية التوازن <span class=\"m\">q = ?</span></p>",
+    "hint": "<span class=\"m\">30 × 20</span>. (تحقّق بالطلب: <span class=\"m\">1,000 − 20 × 20</span>.)",
+    "explain": "<span class=\"m\">q = 30 × 20 = 600</span>. تحقّق بالطلب: <span class=\"m\">1,000 − 400 = 600</span> ✓"
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Unit 2 in 7 lines",
+   "why": "These 7 lines are a full exam question: write C, write R, find π, the break-even, the marginals, and explain in words.",
+   "html": "<ul><li>C(q) = fixed cost + cost per unit × q. Fixed cost = C(0).</li><li>R(q) = price × q. Starts at 0.</li><li>π = R − C. The minus hits the whole bracket.</li><li>Break-even: R = C (profit = 0).</li><li>MC = slope of C, MR = slope of R, MP = MR − MC. Units: per product.</li><li>Depreciation: a negative slope.</li><li>Equilibrium: supply = demand.</li></ul><div class=\"key\">Now: 4 final questions.</div>",
+   "ar": {
+    "title": "الوحدة 2 في 7 أسطر",
+    "why": "هذه الأسطر السبعة سؤال امتحان كامل: اكتب C، اكتب R، جد π، نقطة التعادل، القيم الحدّية، واشرح بالكلمات.",
+    "html": "<ul><li><span class=\"m\">C(q)</span> = التكلفة الثابتة + تكلفة الوحدة × q. التكلفة الثابتة = <span class=\"m\">C(0)</span>.</li><li><span class=\"m\">R(q)</span> = السعر × q. يبدأ من 0.</li><li><span class=\"m\">π = R − C</span>. الناقص يصيب القوس كاملًا.</li><li>التعادل: <span class=\"m\">R = C</span> (الربح = 0).</li><li>MC = ميل C، MR = ميل R، MP = MR − MC. الوحدات: لكل منتج.</li><li>الاهتلاك: ميل سالب.</li><li>التوازن: العرض = الطلب.</li></ul><div class=\"key\">الآن: 4 أسئلة أخيرة.</div>"
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Final check 1 / 4",
+   "html": "<p>C = 800 + 12q and R = 20q. Break-even quantity?</p>",
+   "answer": 100,
+   "tol": 0,
+   "hint": "20q = 800 + 12q. Take 12q away, then divide.",
+   "explain": "<div class=\"lad\"><span class=\"l\">20q</span><span class=\"e\">=</span><span class=\"rt\">800 + 12q</span><span class=\"l op\">− 12q</span><span class=\"e\"></span><span class=\"rt op\">− 12q</span><span class=\"note\">↓ same move on both sides</span><span class=\"l\">8q</span><span class=\"e\">=</span><span class=\"rt\">800</span><span class=\"l op\">÷ 8</span><span class=\"e\"></span><span class=\"rt op\">÷ 8</span><span class=\"note\">↓ same move on both sides</span><span class=\"l fin\">q</span><span class=\"e fin\">=</span><span class=\"rt fin\">100</span></div>",
+   "ar": {
+    "title": "المراجعة الأخيرة 1 / 4",
+    "html": "<p><span class=\"m\">C = 800 + 12q</span> و <span class=\"m\">R = 20q</span>. كمية التعادل؟</p>",
+    "hint": "<span class=\"m\">20q = 800 + 12q</span>. انزع <span class=\"m\">12q</span>، ثم اقسم.",
+    "explain": "<div class=\"lad\"><span class=\"l\">20q</span><span class=\"e\">=</span><span class=\"rt\">800 + 12q</span><span class=\"l op\">− 12q</span><span class=\"e\"></span><span class=\"rt op\">− 12q</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l\">8q</span><span class=\"e\">=</span><span class=\"rt\">800</span><span class=\"l op\">÷ 8</span><span class=\"e\"></span><span class=\"rt op\">÷ 8</span><span class=\"note\" dir=\"rtl\">↓ نفس الحركة على الجهتين</span><span class=\"l fin\">q</span><span class=\"e fin\">=</span><span class=\"rt fin\">100</span></div>"
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Final check 2 / 4",
+   "html": "<p>Same business. Profit if you sell <b>150</b> products?</p>",
+   "answer": 400,
+   "tol": 0,
+   "hint": "π = 20q − (800 + 12q) = 8q − 800. Then put q = 150.",
+   "explain": "π = 8q − 800 → π(150) = 1,200 − 800 = <b>400</b>.",
+   "ar": {
+    "title": "المراجعة الأخيرة 2 / 4",
+    "html": "<p>نفس المشروع. الربح إذا بعت <b>150</b> منتجًا؟</p>",
+    "hint": "<span class=\"m\">π = 20q − (800 + 12q) = 8q − 800</span>. ثم ضع <span class=\"m\">q = 150</span>.",
+    "explain": "<span class=\"m\">π = 8q − 800</span> ← <span class=\"m\">π(150) = 1,200 − 800 = 400</span>."
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Final check 3 / 4",
+   "html": "<p>Same business. Marginal profit MP = ?</p>",
+   "answer": 8,
+   "tol": 0,
+   "unit": "per product",
+   "hint": "MR = 20, MC = 12.",
+   "explain": "MP = 20 − 12 = <b>8 per product</b>.",
+   "ar": {
+    "title": "المراجعة الأخيرة 3 / 4",
+    "html": "<p>نفس المشروع. الربح الحدّي MP = ؟</p>",
+    "unit": "لكل منتج",
+    "hint": "MR = 20، MC = 12.",
+    "explain": "MP = 20 − 12 = <b>8 لكل منتج</b>."
+   }
+  },
+  {
+   "kind": "mcq",
+   "title": "Final check 4 / 4",
+   "html": "<p>A shop makes a profit of <b>−500 TND</b> this month. This means…</p>",
+   "options": [
+    "it earned 500 TND",
+    "it lost 500 TND",
+    "its fixed cost is 500 TND",
+    "it sold 500 products"
+   ],
+   "answer": 1,
+   "hint": "Negative profit = ?",
+   "explain": "A negative profit is a <b>loss</b>: the shop lost 500 TND (it is below the break-even point).",
+   "ar": {
+    "title": "المراجعة الأخيرة 4 / 4",
+    "html": "<p>محلّ ربحه <b>−500 دينار</b> هذا الشهر. هذا يعني…</p>",
+    "options": [
+     "كسب 500 دينار",
+     "خسر 500 دينار",
+     "تكلفته الثابتة 500 دينار",
+     "باع 500 منتج"
+    ],
+    "hint": "ربح سالب = ؟",
+    "explain": "الربح السالب <b>خسارة</b>: المحلّ خسر 500 دينار (هو تحت نقطة التعادل)."
+   }
+  }
+ ]
+}
+</script>
+<script src="../assets/cards.js"></script>
+</body>
+</html>
