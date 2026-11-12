@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../assets/course-folder.ico">
+<title>Math Final · Undo toolbox</title>
+<link rel="stylesheet" href="../assets/cards.css">
+</head>
+<body>
+<div id="cards"></div>
+<script type="application/json" id="cards-data">
+{
+ "id": "math-undo-toolbox",
+ "kicker": "Math I final · Toolbox",
+ "title": "Solving equations: the undo toolbox",
+ "back": "../index.html",
+ "next": {
+  "href": "final-u1.html",
+  "label": "Back to Unit 1",
+  "ar": {
+   "label": "العودة إلى الوحدة 1"
+  }
+ },
+ "ar": {
+  "kicker": "Math I · الامتحان النهائي · صندوق الأدوات",
+  "title": "حلّ المعادلات: صندوق التراجع"
+ },
+ "cards": [
+  {
+   "kind": "learn",
+   "title": "The undo table",
+   "why": "Almost every exam question that ends with “find x” (or q, t, p) is solved with these few undo moves. Learn this table once and you can solve them all.",
+   "html": "<p>Each operation has an <b>opposite</b> that cancels it:</p><div class=\"tbl\"><table><tr><th>Done to x</th><th>Undo it with</th></tr><tr><td>+ 5</td><td>− 5</td></tr><tr><td>− 5</td><td>+ 5</td></tr><tr><td>× 5</td><td>÷ 5</td></tr><tr><td>÷ 5</td><td>× 5</td></tr><tr><td>x²</td><td>√ (square root)</td></tr><tr><td>√x</td><td>square it ( )²</td></tr><tr><td>eˣ</td><td>ln</td></tr><tr><td>ln x</td><td>e^( )</td></tr></table></div><div class=\"key\">Golden rule: whatever you do to one side, do exactly the same to the other side.</div>",
+   "ar": {
+    "title": "جدول التراجع",
+    "why": "تقريبًا كل سؤال في الامتحان ينتهي بـ «جد x» (أو q أو t أو p) يُحلّ بهذه الحركات القليلة. تعلّم هذا الجدول مرة واحدة، وتستطيع حلّها كلها.",
+    "html": "<p>كل عملية لها <b>عكس</b> يلغيها:</p><div class=\"tbl\"><table><tr><th>ما فُعل بـ x</th><th>نلغيه بـ</th></tr><tr><td>+ 5</td><td>− 5</td></tr><tr><td>− 5</td><td>+ 5</td></tr><tr><td>× 5</td><td>÷ 5</td></tr><tr><td>÷ 5</td><td>× 5</td></tr><tr><td>x²</td><td>√ (الجذر التربيعي)</td></tr><tr><td>√x</td><td>( )² نربّعه</td></tr><tr><td>eˣ</td><td>ln</td></tr><tr><td>ln x</td><td>e^( )</td></tr></table></div><div class=\"key\">القاعدة الذهبية: ما تفعله بجهة، افعله بالضبط بالجهة الأخرى.</div>"
+   }
+  },
+  {
+   "kind": "mcq",
+   "html": "<p>To undo <b>× 4</b>, you…</p>",
+   "options": [
+    "add 4",
+    "divide by 4",
+    "take the square root",
+    "multiply by 4"
+   ],
+   "answer": 1,
+   "hint": "Look at the table: what cancels a multiplication?",
+   "explain": "<b>÷ cancels ×.</b> Example: 4x = 20 → divide both sides by 4 → x = 5.",
+   "ar": {
+    "html": "<p>لإلغاء <span class=\"m\"><b>× 4</b></span>، …</p>",
+    "options": [
+     "تضيف 4",
+     "تقسم على 4",
+     "تأخذ الجذر التربيعي",
+     "تضرب في 4"
+    ],
+    "hint": "انظر إلى الجدول: ما الذي يلغي الضرب؟",
+    "explain": "<b>القسمة تلغي الضرب.</b> مثال: <span class=\"m\">4x = 20</span> ← اقسم الجهتين على 4 ← <span class=\"m\">x = 5</span>."
+   }
+  },
+  {
+   "kind": "mcq",
+   "html": "<p>To undo <b>x²</b> (x squared), you…</p>",
+   "options": [
+    "divide by 2",
+    "multiply by 2",
+    "take the square root √",
+    "use ln"
+   ],
+   "answer": 2,
+   "hint": "x² is NOT x × 2. Look at the table.",
+   "explain": "<b>√ cancels the square:</b> √(x²) = x. Example: x² = 25 → x = √25 = 5. (Dividing by 2 is the classic trap.)",
+   "ar": {
+    "html": "<p>لإلغاء <span class=\"m\"><b>x²</b></span> (x مربّع)، …</p>",
+    "options": [
+     "تقسم على 2",
+     "تضرب في 2",
+     "تأخذ الجذر التربيعي √",
+     "تستعمل ln"
+    ],
+    "hint": "<span class=\"m\">x²</span> ليست <span class=\"m\">x × 2</span>. انظر إلى الجدول.",
+    "explain": "<b>الجذر يلغي المربّع:</b> <span class=\"m\">√(x²) = x</span>. مثال: <span class=\"m\">x² = 25</span> ← <span class=\"m\">x = √25 = 5</span>. (القسمة على 2 هي الفخّ الكلاسيكي.)"
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Plus and minus",
+   "why": "The simplest move, used in every equation. Example: total cost − 500 TND of fixed cost = what the products cost.",
+   "html": "<div class=\"formula\">x + 7 = 20</div><p>Undo <b>+7</b>: take 7 away from both sides → <b>x = 13</b></p><div class=\"formula\">x − 4 = 10</div><p>Undo <b>−4</b>: add 4 to both sides → <b>x = 14</b></p>",
+   "ar": {
+    "title": "الجمع والطرح",
+    "why": "أبسط حركة، وتُستعمل في كل معادلة. مثال: التكلفة الكلية − 500 دينار تكلفة ثابتة = ما تكلّفه المنتجات.",
+    "html": "<div class=\"formula\">x + 7 = 20</div><p>تراجع عن <span class=\"m\"><b>+7</b></span>: انزع 7 من الجهتين ← <span class=\"m\"><b>x = 13</b></span></p><div class=\"formula\">x − 4 = 10</div><p>تراجع عن <span class=\"m\"><b>−4</b></span>: أضف 4 إلى الجهتين ← <span class=\"m\"><b>x = 14</b></span></p>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">x + 9 = 25</div><p>x = ?</p>",
+   "answer": 16,
+   "tol": 0,
+   "hint": "Undo +9: 25 − 9.",
+   "explain": "x = 25 − 9 = <b>16</b>. Check: 16 + 9 = 25 ✓",
+   "ar": {
+    "html": "<div class=\"formula\">x + 9 = 25</div><p><span class=\"m\">x = ?</span></p>",
+    "hint": "تراجع عن <span class=\"m\">+9</span>: <span class=\"m\">25 − 9</span>.",
+    "explain": "<span class=\"m\">x = 25 − 9 = 16</span>. تحقّق: <span class=\"m\">16 + 9 = 25</span> ✓"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">x − 6 = 15</div><p>x = ?</p>",
+   "answer": 21,
+   "tol": 0,
+   "hint": "Undo −6: add 6 to both sides. 15 + 6.",
+   "explain": "x = 15 + 6 = <b>21</b>. Check: 21 − 6 = 15 ✓",
+   "ar": {
+    "html": "<div class=\"formula\">x − 6 = 15</div><p><span class=\"m\">x = ?</span></p>",
+    "hint": "تراجع عن <span class=\"m\">−6</span>: أضف 6 إلى الجهتين. <span class=\"m\">15 + 6</span>.",
+    "explain": "<span class=\"m\">x = 15 + 6 = 21</span>. تحقّق: <span class=\"m\">21 − 6 = 15</span> ✓"
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Times and divide",
+   "why": "Prices work like this: 5 shirts cost 40 TND, so 1 shirt = 40 ÷ 5. Every “price per unit” question is a divide-undo.",
+   "html": "<div class=\"formula\">5x = 40</div><p>Undo <b>×5</b>: divide both sides by 5 → <b>x = 8</b></p><p>Why does the 5 disappear? Because 5 ÷ 5 = 1, and 1·x is just x. You said it right: divide it by itself!</p><div class=\"formula\">x ÷ 4 = 3</div><p>Undo <b>÷4</b>: multiply both sides by 4 → <b>x = 12</b></p>",
+   "ar": {
+    "title": "الضرب والقسمة",
+    "why": "الأسعار تعمل هكذا: 5 قمصان بـ 40 دينارًا، إذن القميص الواحد = 40 ÷ 5. كل سؤال عن «سعر الوحدة» هو تراجع بالقسمة.",
+    "html": "<div class=\"formula\">5x = 40</div><p>تراجع عن <span class=\"m\"><b>×5</b></span>: اقسم الجهتين على 5 ← <span class=\"m\"><b>x = 8</b></span></p><p>لماذا تختفي الـ 5؟ لأن <span class=\"m\">5 ÷ 5 = 1</span>، و <span class=\"m\">1·x</span> هو x فقط. قلتها صحيحًا: اقسمه على نفسه!</p><div class=\"formula\">x ÷ 4 = 3</div><p>تراجع عن <span class=\"m\"><b>÷4</b></span>: اضرب الجهتين في 4 ← <span class=\"m\"><b>x = 12</b></span></p>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">0.5x = 20</div><p>x = ?</p>",
+   "answer": 40,
+   "tol": 0,
+   "hint": "20 ÷ 0.5. Dividing by 0.5 is the same as doubling.",
+   "explain": "x = 20 ÷ 0.5 = <b>40</b>. Check: 0.5 × 40 = 20 ✓",
+   "ar": {
+    "html": "<div class=\"formula\">0.5x = 20</div><p><span class=\"m\">x = ?</span></p>",
+    "hint": "<span class=\"m\">20 ÷ 0.5</span>. القسمة على 0.5 هي نفس المضاعفة.",
+    "explain": "<span class=\"m\">x = 20 ÷ 0.5 = 40</span>. تحقّق: <span class=\"m\">0.5 × 40 = 20</span> ✓"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">x ÷ 3 = 7</div><p>x = ?</p>",
+   "answer": 21,
+   "tol": 0,
+   "hint": "Undo ÷3: multiply both sides by 3.",
+   "explain": "x = 7 × 3 = <b>21</b>. Check: 21 ÷ 3 = 7 ✓",
+   "ar": {
+    "html": "<div class=\"formula\">x ÷ 3 = 7</div><p><span class=\"m\">x = ?</span></p>",
+    "hint": "تراجع عن <span class=\"m\">÷3</span>: اضرب الجهتين في 3.",
+    "explain": "<span class=\"m\">x = 7 × 3 = 21</span>. تحقّق: <span class=\"m\">21 ÷ 3 = 7</span> ✓"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">−2x = 10</div><p>x = ?</p>",
+   "answer": -5,
+   "tol": 0,
+   "hint": "Divide both sides by −2 (the whole “−2”, with its minus).",
+   "explain": "x = 10 ÷ (−2) = <b>−5</b>. Check: −2 × (−5) = 10 ✓",
+   "ar": {
+    "html": "<div class=\"formula\">−2x = 10</div><p><span class=\"m\">x = ?</span></p>",
+    "hint": "اقسم الجهتين على <span class=\"m\">−2</span> (كاملة، مع الناقص).",
+    "explain": "<span class=\"m\">x = 10 ÷ (−2) = −5</span>. تحقّق: <span class=\"m\">−2 × (−5) = 10</span> ✓"
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Two moves: undo in reverse order",
+   "why": "Real formulas have several steps (cost = fixed cost + price × quantity). To go back, undo them in reverse, like taking off your shoes before your socks.",
+   "html": "<p>To compute 3x + 5 we do <b>×3 first, then +5</b>. To undo, go backwards: <b>undo +5 first, then ×3</b>.</p><div class=\"formula\">3x + 5 = 26</div><p><b>1.</b> Take 5 away from both sides → 3x = 21</p><p><b>2.</b> Divide both sides by 3 → <b>x = 7</b></p><p>Check: 3×7 + 5 = 26 ✓</p>",
+   "ar": {
+    "title": "حركتان: تراجع بالترتيب المعاكس",
+    "why": "الصيغ الحقيقية فيها عدّة خطوات (التكلفة = التكلفة الثابتة + السعر × الكمية). للرجوع، تراجع عنها بالعكس، مثل نزع الحذاء قبل الجوارب.",
+    "html": "<p>لحساب <span class=\"m\">3x + 5</span> نقوم بـ <b><span class=\"m\">×3</span> أولًا، ثم <span class=\"m\">+5</span></b>. للتراجع، ارجع إلى الوراء: <b>تراجع عن <span class=\"m\">+5</span> أولًا، ثم عن <span class=\"m\">×3</span></b>.</p><div class=\"formula\">3x + 5 = 26</div><p><b>1.</b> انزع 5 من الجهتين ← <span class=\"m\">3x = 21</span></p><p><b>2.</b> اقسم الجهتين على 3 ← <span class=\"m\"><b>x = 7</b></span></p><p>تحقّق: <span class=\"m\">3×7 + 5 = 26</span> ✓</p>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">4x − 3 = 25</div><p>x = ?</p>",
+   "answer": 7,
+   "tol": 0,
+   "hint": "First undo −3 (add 3): 4x = 28. Then divide by 4.",
+   "explain": "4x = 28 → x = 28 ÷ 4 = <b>7</b>. Check: 4×7 − 3 = 25 ✓",
+   "ar": {
+    "html": "<div class=\"formula\">4x − 3 = 25</div><p><span class=\"m\">x = ?</span></p>",
+    "hint": "أولًا تراجع عن <span class=\"m\">−3</span> (أضف 3): <span class=\"m\">4x = 28</span>. ثم اقسم على 4.",
+    "explain": "<span class=\"m\">4x = 28</span> ← <span class=\"m\">x = 28 ÷ 4 = 7</span>. تحقّق: <span class=\"m\">4×7 − 3 = 25</span> ✓"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">x ÷ 2 + 1 = 6</div><p>x = ?</p>",
+   "answer": 10,
+   "tol": 0,
+   "hint": "First take 1 away: x ÷ 2 = 5. Then multiply by 2.",
+   "explain": "x ÷ 2 = 5 → x = 5 × 2 = <b>10</b>. Check: 10 ÷ 2 + 1 = 6 ✓",
+   "ar": {
+    "html": "<div class=\"formula\">x ÷ 2 + 1 = 6</div><p><span class=\"m\">x = ?</span></p>",
+    "hint": "أولًا انزع 1: <span class=\"m\">x ÷ 2 = 5</span>. ثم اضرب في 2.",
+    "explain": "<span class=\"m\">x ÷ 2 = 5</span> ← <span class=\"m\">x = 5 × 2 = 10</span>. تحقّق: <span class=\"m\">10 ÷ 2 + 1 = 6</span> ✓"
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Like the derivative chapters",
+   "html": "<div class=\"formula\">10 − 2q = 0</div><p>q = ?</p>",
+   "answer": 5,
+   "tol": 0,
+   "hint": "Take 10 away from both sides: −2q = −10. Then divide by −2.",
+   "explain": "−2q = −10 → q = −10 ÷ (−2) = <b>5</b>. Later, you will solve exactly this kind of equation to find the quantity that gives the biggest profit.",
+   "ar": {
+    "title": "مثل فصول المشتقة",
+    "html": "<div class=\"formula\">10 − 2q = 0</div><p><span class=\"m\">q = ?</span></p>",
+    "hint": "انزع 10 من الجهتين: <span class=\"m\">−2q = −10</span>. ثم اقسم على <span class=\"m\">−2</span>.",
+    "explain": "<span class=\"m\">−2q = −10</span> ← <span class=\"m\">q = −10 ÷ (−2) = 5</span>. لاحقًا، ستحلّ بالضبط هذا النوع من المعادلات لتجد الكمية التي تعطي أكبر ربح."
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Brackets",
+   "why": "Brackets appear when one number multiplies a whole group, like 2 × (price + tax).",
+   "html": "<div class=\"formula\">2(x + 3) = 16</div><p>The 2 multiplies the <b>whole</b> bracket, so undo it first: divide both sides by 2 → x + 3 = 8</p><p>Then take 3 away → <b>x = 5</b></p><p>Check: 2 × (5 + 3) = 16 ✓</p>",
+   "ar": {
+    "title": "الأقواس",
+    "why": "الأقواس تظهر عندما يضرب رقم مجموعة كاملة، مثل 2 × (السعر + الضريبة).",
+    "html": "<div class=\"formula\">2(x + 3) = 16</div><p>الـ 2 يضرب القوس <b>كاملًا</b>، إذن تراجع عنه أولًا: اقسم الجهتين على 2 ← <span class=\"m\">x + 3 = 8</span></p><p>ثم انزع 3 ← <span class=\"m\"><b>x = 5</b></span></p><p>تحقّق: <span class=\"m\">2 × (5 + 3) = 16</span> ✓</p>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">3(x − 1) = 12</div><p>x = ?</p>",
+   "answer": 5,
+   "tol": 0,
+   "hint": "Divide by 3 first: x − 1 = 4. Then add 1.",
+   "explain": "x − 1 = 4 → x = <b>5</b>. Check: 3 × (5 − 1) = 12 ✓",
+   "ar": {
+    "html": "<div class=\"formula\">3(x − 1) = 12</div><p><span class=\"m\">x = ?</span></p>",
+    "hint": "اقسم على 3 أولًا: <span class=\"m\">x − 1 = 4</span>. ثم أضف 1.",
+    "explain": "<span class=\"m\">x − 1 = 4</span> ← <span class=\"m\">x = 5</span>. تحقّق: <span class=\"m\">3 × (5 − 1) = 12</span> ✓"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">4(x + 2) = 36</div><p>x = ?</p>",
+   "answer": 7,
+   "tol": 0,
+   "hint": "Divide by 4 first: x + 2 = 9. Then take 2 away.",
+   "explain": "x + 2 = 9 → x = <b>7</b>. Check: 4 × (7 + 2) = 36 ✓",
+   "ar": {
+    "html": "<div class=\"formula\">4(x + 2) = 36</div><p><span class=\"m\">x = ?</span></p>",
+    "hint": "اقسم على 4 أولًا: <span class=\"m\">x + 2 = 9</span>. ثم انزع 2.",
+    "explain": "<span class=\"m\">x + 2 = 9</span> ← <span class=\"m\">x = 7</span>. تحقّق: <span class=\"m\">4 × (7 + 2) = 36</span> ✓"
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Square and square root",
+   "why": "Many cost and revenue formulas have a square (q²). To get q back, you need the square root.",
+   "html": "<div class=\"formula\">x² = 49</div><p>Undo the square: take √ of both sides → <b>x = 7</b></p><p>Careful: (−7)² = 49 too. In pure math, x = 7 <b>or</b> x = −7. In business a quantity or a price can’t be negative, so we keep <b>7</b>.</p><div class=\"formula\">√x = 6</div><p>Undo √: square both sides → x = 6² = <b>36</b></p>",
+   "ar": {
+    "title": "المربّع والجذر التربيعي",
+    "why": "صيغ كثيرة للتكلفة والإيراد فيها مربّع (q²). لتسترجع q، تحتاج الجذر التربيعي.",
+    "html": "<div class=\"formula\">x² = 49</div><p>تراجع عن المربّع: خذ الجذر √ للجهتين ← <span class=\"m\"><b>x = 7</b></span></p><p>انتبه: <span class=\"m\">(−7)² = 49</span> أيضًا. في الرياضيات البحتة، <span class=\"m\">x = 7</span> <b>أو</b> <span class=\"m\">x = −7</span>. في الأعمال، الكمية أو السعر لا يمكن أن يكون سالبًا، إذن نحتفظ بـ <b>7</b>.</p><div class=\"formula\">√x = 6</div><p>تراجع عن الجذر: ربّع الجهتين ← <span class=\"m\">x = 6² = 36</span></p>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">x² = 81</div><p>x = ? (the positive answer)</p>",
+   "answer": 9,
+   "tol": 0,
+   "hint": "Which number times itself gives 81?",
+   "explain": "x = √81 = <b>9</b>, because 9 × 9 = 81.",
+   "ar": {
+    "html": "<div class=\"formula\">x² = 81</div><p><span class=\"m\">x = ?</span> (الجواب الموجب)</p>",
+    "hint": "أيّ رقم مضروب في نفسه يعطي 81؟",
+    "explain": "<span class=\"m\">x = √81 = 9</span>، لأن <span class=\"m\">9 × 9 = 81</span>."
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">2x² = 50</div><p>x = ? (the positive answer)</p>",
+   "answer": 5,
+   "tol": 0,
+   "hint": "Two moves: first divide by 2 (x² = 25), then √.",
+   "explain": "x² = 25 → x = √25 = <b>5</b>.",
+   "ar": {
+    "html": "<div class=\"formula\">2x² = 50</div><p><span class=\"m\">x = ?</span> (الجواب الموجب)</p>",
+    "hint": "حركتان: أولًا اقسم على 2 (<span class=\"m\">x² = 25</span>)، ثم الجذر.",
+    "explain": "<span class=\"m\">x² = 25</span> ← <span class=\"m\">x = √25 = 5</span>."
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">√x = 9</div><p>x = ?</p>",
+   "answer": 81,
+   "tol": 0,
+   "hint": "Undo √ by squaring both sides: 9².",
+   "explain": "x = 9² = <b>81</b>. Check: √81 = 9 ✓",
+   "ar": {
+    "html": "<div class=\"formula\">√x = 9</div><p><span class=\"m\">x = ?</span></p>",
+    "hint": "تراجع عن الجذر بتربيع الجهتين: <span class=\"m\">9²</span>.",
+    "explain": "<span class=\"m\">x = 9² = 81</span>. تحقّق: <span class=\"m\">√81 = 9</span> ✓"
+   }
+  },
+  {
+   "kind": "mcq",
+   "html": "<div class=\"formula\">x² = 36</div><p>In pure math, which numbers solve it?</p>",
+   "options": [
+    "only 6",
+    "6 and −6",
+    "18",
+    "only −6"
+   ],
+   "answer": 1,
+   "hint": "Try (−6) × (−6). Minus times minus is plus.",
+   "explain": "6 × 6 = 36 and (−6) × (−6) = 36, so <b>6 and −6</b>. In a business question (a quantity), you keep 6.",
+   "ar": {
+    "html": "<div class=\"formula\">x² = 36</div><p>في الرياضيات البحتة، أيّ الأعداد تحلّها؟</p>",
+    "options": [
+     "<span class=\"m\">6 فقط</span>",
+     "<span class=\"m\">6 و −6</span>",
+     "<span class=\"m\">18</span>",
+     "<span class=\"m\">−6 فقط</span>"
+    ],
+    "hint": "جرّب <span class=\"m\">(−6) × (−6)</span>. سالب في سالب يعطي موجبًا.",
+    "explain": "<span class=\"m\">6 × 6 = 36</span> و <span class=\"m\">(−6) × (−6) = 36</span>، إذن <b>6 و <span class=\"m\">−6</span></b>. في سؤال أعمال (كمية)، نحتفظ بـ 6."
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "When x is in the power: use ln",
+   "why": "Money growing with interest, populations, prices with inflation: they use eˣ. The question “when will it reach…?” is solved with ln. This is Chapter 1 of the course.",
+   "html": "<p>When x is <b>up in the power</b>, bring it down with <b>ln</b> (the ln button on your calculator).</p><div class=\"formula\">eˣ = 20</div><p>Take ln of both sides. ln(eˣ) = x, so <b>x = ln 20 ≈ 3.00</b></p><div class=\"key\">ln undoes e: ln(eˣ) = x.</div>",
+   "ar": {
+    "title": "عندما يكون x في الأُسّ: استعمل ln",
+    "why": "المال الذي ينمو بالفائدة، السكان، الأسعار مع التضخّم: كلها تستعمل eˣ. سؤال «متى يصل إلى…؟» يُحلّ بـ ln. هذا هو الفصل 1 من المادة.",
+    "html": "<p>عندما يكون x <b>في الأُسّ</b> (فوق)، أنزله بـ <b>ln</b> (زر ln في الآلة الحاسبة).</p><div class=\"formula\">eˣ = 20</div><p>خذ ln للجهتين. <span class=\"m\">ln(eˣ) = x</span>، إذن <span class=\"m\"><b>x = ln 20 ≈ 3.00</b></span></p><div class=\"key\">ln يلغي e: <span class=\"m\">ln(eˣ) = x</span>.</div>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">eˣ = 10</div><p>x = ? (use the ln button, 2 decimals)</p>",
+   "answer": 2.303,
+   "tol": 0.01,
+   "hint": "x = ln 10.",
+   "explain": "x = ln 10 ≈ <b>2.30</b>. Check: e^2.30 ≈ 10 ✓",
+   "ar": {
+    "html": "<div class=\"formula\">eˣ = 10</div><p><span class=\"m\">x = ?</span> (استعمل زر ln، رقمان بعد الفاصلة)</p>",
+    "hint": "<span class=\"m\">x = ln 10</span>.",
+    "explain": "<span class=\"m\">x = ln 10 ≈ 2.30</span>. تحقّق: <span class=\"m\">e^2.30 ≈ 10</span> ✓"
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Two moves · 1",
+   "html": "<div class=\"formula\">5e^(0.1t) = 15</div><p>First undo the ×5. e^(0.1t) = ?</p>",
+   "answer": 3,
+   "tol": 0,
+   "hint": "15 ÷ 5.",
+   "explain": "e^(0.1t) = 15 ÷ 5 = <b>3</b>.",
+   "ar": {
+    "title": "حركتان · 1",
+    "html": "<div class=\"formula\">5e^(0.1t) = 15</div><p>أولًا تراجع عن <span class=\"m\">×5</span>. <span class=\"m\">e^(0.1t) = ?</span></p>",
+    "hint": "<span class=\"m\">15 ÷ 5</span>.",
+    "explain": "<span class=\"m\">e^(0.1t) = 15 ÷ 5 = 3</span>."
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Two moves · 2",
+   "html": "<div class=\"formula\">e^(0.1t) = 3</div><p>Take ln: 0.1t = ln 3 ≈ 1.0986. So t = ?</p>",
+   "answer": 10.986,
+   "tol": 0.05,
+   "hint": "t = 1.0986 ÷ 0.1.",
+   "explain": "t = ln 3 ÷ 0.1 ≈ <b>10.99</b>. If 5 is money growing at 10% (continuous interest), it triples in about 11 years.",
+   "ar": {
+    "title": "حركتان · 2",
+    "html": "<div class=\"formula\">e^(0.1t) = 3</div><p>خذ ln: <span class=\"m\">0.1t = ln 3 ≈ 1.0986</span>. إذن <span class=\"m\">t = ?</span></p>",
+    "unit": "سنة",
+    "hint": "<span class=\"m\">t = 1.0986 ÷ 0.1</span>.",
+    "explain": "<span class=\"m\">t = ln 3 ÷ 0.1 ≈ 10.99</span>. إذا كانت 5 مبلغًا ينمو بـ 10% (فائدة مستمرّة)، فإنه يتضاعف ثلاث مرات في حوالي 11 سنة."
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Growth like 1.05ᵗ",
+   "why": "Bank interest and price growth use (1 + rate)ᵗ. “After how many years will my money double?” is a typical exam question.",
+   "html": "<div class=\"formula\">1.05ᵗ = 2</div><p>Take ln of both sides. ln brings the power down in front:</p><div class=\"formula\">t · ln 1.05 = ln 2</div><p>Divide: t = ln 2 ÷ ln 1.05 = 0.6931 ÷ 0.0488 ≈ <b>14.2 years</b></p><div class=\"key\">Rule: ln(aᵗ) = t · ln a. The power comes down.</div>",
+   "ar": {
+    "title": "النموّ مثل 1.05ᵗ",
+    "why": "فائدة البنك ونموّ الأسعار تستعمل (1 + النسبة)ᵗ. «بعد كم سنة يتضاعف مالي؟» سؤال نموذجي في الامتحان.",
+    "html": "<div class=\"formula\">1.05ᵗ = 2</div><p>خذ ln للجهتين. ln يُنزل الأُسّ إلى الأمام:</p><div class=\"formula\">t · ln 1.05 = ln 2</div><p>اقسم: <span class=\"m\">t = ln 2 ÷ ln 1.05 = 0.6931 ÷ 0.0488 ≈ 14.2</span> سنة</p><div class=\"key\">القاعدة: <span class=\"m\">ln(aᵗ) = t · ln a</span>. الأُسّ ينزل.</div>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">1.1ᵗ = 3</div><p>t = ? (1 decimal)</p>",
+   "answer": 11.527,
+   "tol": 0.06,
+   "hint": "t = ln 3 ÷ ln 1.1.",
+   "explain": "t = 1.0986 ÷ 0.0953 ≈ <b>11.5 years</b>. At 10% per year, money triples in about 11.5 years.",
+   "ar": {
+    "html": "<div class=\"formula\">1.1ᵗ = 3</div><p><span class=\"m\">t = ?</span> (رقم واحد بعد الفاصلة)</p>",
+    "unit": "سنة",
+    "hint": "<span class=\"m\">t = ln 3 ÷ ln 1.1</span>.",
+    "explain": "<span class=\"m\">t = 1.0986 ÷ 0.0953 ≈ 11.5</span> سنة. بـ 10% في السنة، يتضاعف المال ثلاث مرات في حوالي 11.5 سنة."
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<p>You put 1000 TND in a bank at 8% per year:</p><div class=\"formula\">1000 · 1.08ᵗ = 2000</div><p>After how many years do you have 2000 TND? (1 decimal)</p>",
+   "answer": 9.006,
+   "tol": 0.06,
+   "hint": "First undo ×1000: 1.08ᵗ = 2. Then t = ln 2 ÷ ln 1.08.",
+   "explain": "1.08ᵗ = 2 → t = 0.6931 ÷ 0.0770 ≈ <b>9.0 years</b>. Your money doubles in about 9 years.",
+   "ar": {
+    "html": "<p>تضع 1000 دينار في بنك بفائدة 8% في السنة:</p><div class=\"formula\">1000 · 1.08ᵗ = 2000</div><p>بعد كم سنة يصبح لديك 2000 دينار؟ (رقم واحد بعد الفاصلة)</p>",
+    "unit": "سنة",
+    "hint": "أولًا تراجع عن <span class=\"m\">×1000</span>: <span class=\"m\">1.08ᵗ = 2</span>. ثم <span class=\"m\">t = ln 2 ÷ ln 1.08</span>.",
+    "explain": "<span class=\"m\">1.08ᵗ = 2</span> ← <span class=\"m\">t = 0.6931 ÷ 0.0770 ≈ 9.0</span> سنوات. مالك يتضاعف في حوالي 9 سنوات."
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "When the equation has ln x: use e",
+   "why": "Some formulas contain ln (some demand and utility functions do). Then e is the undo.",
+   "html": "<div class=\"formula\">ln x = 3</div><p>Undo ln: make both sides a power of e → x = e³ ≈ <b>20.09</b> (use the eˣ button)</p><div class=\"key\">e undoes ln: e^(ln x) = x.</div>",
+   "ar": {
+    "title": "عندما تحتوي المعادلة على ln x: استعمل e",
+    "why": "بعض الصيغ تحتوي على ln (بعض دوال الطلب والمنفعة). عندها e هو التراجع.",
+    "html": "<div class=\"formula\">ln x = 3</div><p>تراجع عن ln: اجعل الجهتين أُسًّا لـ e ← <span class=\"m\">x = e³ ≈ 20.09</span> (استعمل زر eˣ)</p><div class=\"key\">e يلغي ln: <span class=\"m\">e^(ln x) = x</span>.</div>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">ln x = 2</div><p>x = ? (2 decimals)</p>",
+   "answer": 7.389,
+   "tol": 0.01,
+   "hint": "x = e².",
+   "explain": "x = e² ≈ <b>7.39</b>.",
+   "ar": {
+    "html": "<div class=\"formula\">ln x = 2</div><p><span class=\"m\">x = ?</span> (رقمان بعد الفاصلة)</p>",
+    "hint": "<span class=\"m\">x = e²</span>.",
+    "explain": "<span class=\"m\">x = e² ≈ 7.39</span>."
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">ln x − 1 = 0</div><p>x = ? (2 decimals)</p>",
+   "answer": 2.718,
+   "tol": 0.01,
+   "hint": "Two moves: add 1 (ln x = 1), then x = e¹.",
+   "explain": "ln x = 1 → x = e ≈ <b>2.72</b>.",
+   "ar": {
+    "html": "<div class=\"formula\">ln x − 1 = 0</div><p><span class=\"m\">x = ?</span> (رقمان بعد الفاصلة)</p>",
+    "hint": "حركتان: أضف 1 (<span class=\"m\">ln x = 1</span>)، ثم <span class=\"m\">x = e¹</span>.",
+    "explain": "<span class=\"m\">ln x = 1</span> ← <span class=\"m\">x = e ≈ 2.72</span>."
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "x at the bottom of a fraction",
+   "why": "Average cost = total cost ÷ quantity. When the question asks “for which quantity is the average cost 5 TND?”, the unknown is at the bottom.",
+   "html": "<div class=\"formula\">12 ÷ x = 4</div><p>Undo “÷ x”: multiply both sides by x → 12 = 4x</p><p>Then divide by 4 → <b>x = 3</b></p><p>Check: 12 ÷ 3 = 4 ✓</p>",
+   "ar": {
+    "title": "x في أسفل الكسر",
+    "why": "متوسّط التكلفة = التكلفة الكلية ÷ الكمية. عندما يسأل السؤال «من أجل أيّ كمية يكون متوسّط التكلفة 5 دنانير؟»، المجهول في الأسفل.",
+    "html": "<div class=\"formula\">12 ÷ x = 4</div><p>تراجع عن <span class=\"m\">÷ x</span>: اضرب الجهتين في x ← <span class=\"m\">12 = 4x</span></p><p>ثم اقسم على 4 ← <span class=\"m\"><b>x = 3</b></span></p><p>تحقّق: <span class=\"m\">12 ÷ 3 = 4</span> ✓</p>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<div class=\"formula\">60 ÷ x = 5</div><p>x = ?</p>",
+   "answer": 12,
+   "tol": 0,
+   "hint": "Multiply by x: 60 = 5x. Then divide by 5.",
+   "explain": "60 = 5x → x = <b>12</b>. Check: 60 ÷ 12 = 5 ✓",
+   "ar": {
+    "html": "<div class=\"formula\">60 ÷ x = 5</div><p><span class=\"m\">x = ?</span></p>",
+    "hint": "اضرب في x: <span class=\"m\">60 = 5x</span>. ثم اقسم على 5.",
+    "explain": "<span class=\"m\">60 = 5x</span> ← <span class=\"m\">x = 12</span>. تحقّق: <span class=\"m\">60 ÷ 12 = 5</span> ✓"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<p>A shop’s fixed cost is 200 TND. Shared over q products, each product carries 200 ÷ q TND. For which q is that <b>8 TND</b>?</p><div class=\"formula\">200 ÷ q = 8</div>",
+   "answer": 25,
+   "tol": 0,
+   "hint": "Multiply by q: 200 = 8q. Then divide by 8.",
+   "explain": "200 = 8q → q = <b>25</b> products.",
+   "ar": {
+    "html": "<p>التكلفة الثابتة لمتجر هي 200 دينار. إذا وُزّعت على q منتج، يحمل كل منتج <span class=\"m\">200 ÷ q</span> دينارًا. من أجل أيّ q تكون <b>8 دنانير</b>؟</p><div class=\"formula\">200 ÷ q = 8</div>",
+    "unit": "منتج",
+    "hint": "اضرب في q: <span class=\"m\">200 = 8q</span>. ثم اقسم على 8.",
+    "explain": "<span class=\"m\">200 = 8q</span> ← <span class=\"m\">q = 25</span> منتجًا."
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Your undo plan",
+   "why": "With this plan you can face any equation in the exam, even one you have never seen.",
+   "html": "<ol><li>Look at what was done to x, in order.</li><li>Undo the <b>last</b> thing first.</li><li>Same move on <b>both</b> sides.</li><li>Check: put your answer back in the equation.</li></ol><div class=\"key\">Now: 4 mixed questions.</div>",
+   "ar": {
+    "title": "خطّتك للتراجع",
+    "why": "بهذه الخطّة يمكنك مواجهة أيّ معادلة في الامتحان، حتى واحدة لم ترها من قبل.",
+    "html": "<ol><li>انظر إلى ما فُعل بـ x، بالترتيب.</li><li>تراجع عن <b>آخر</b> شيء أولًا.</li><li>نفس الحركة على <b>الجهتين</b>.</li><li>تحقّق: عوّض جوابك في المعادلة.</li></ol><div class=\"key\">الآن: 4 أسئلة مختلطة.</div>"
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Mix 1 / 4",
+   "html": "<div class=\"formula\">3x − 7 = 20</div><p>x = ?</p>",
+   "answer": 9,
+   "tol": 0,
+   "hint": "Add 7, then divide by 3.",
+   "explain": "3x = 27 → x = <b>9</b>.",
+   "ar": {
+    "title": "مختلط 1 / 4",
+    "html": "<div class=\"formula\">3x − 7 = 20</div><p><span class=\"m\">x = ?</span></p>",
+    "hint": "أضف 7، ثم اقسم على 3.",
+    "explain": "<span class=\"m\">3x = 27</span> ← <span class=\"m\">x = 9</span>."
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Mix 2 / 4",
+   "html": "<div class=\"formula\">x² + 1 = 50</div><p>x = ? (positive)</p>",
+   "answer": 7,
+   "tol": 0,
+   "hint": "Take 1 away (x² = 49), then √.",
+   "explain": "x² = 49 → x = <b>7</b>.",
+   "ar": {
+    "title": "مختلط 2 / 4",
+    "html": "<div class=\"formula\">x² + 1 = 50</div><p><span class=\"m\">x = ?</span> (موجب)</p>",
+    "hint": "انزع 1 (<span class=\"m\">x² = 49</span>)، ثم الجذر.",
+    "explain": "<span class=\"m\">x² = 49</span> ← <span class=\"m\">x = 7</span>."
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Mix 3 / 4",
+   "html": "<div class=\"formula\">e^(2x) = 9</div><p>x = ? (2 decimals)</p>",
+   "answer": 1.0986122886681098,
+   "tol": 0.01,
+   "hint": "Take ln: 2x = ln 9 ≈ 2.197. Then divide by 2.",
+   "explain": "2x = ln 9 ≈ 2.197 → x ≈ <b>1.10</b>.",
+   "ar": {
+    "title": "مختلط 3 / 4",
+    "html": "<div class=\"formula\">e^(2x) = 9</div><p><span class=\"m\">x = ?</span> (رقمان بعد الفاصلة)</p>",
+    "hint": "خذ ln: <span class=\"m\">2x = ln 9 ≈ 2.197</span>. ثم اقسم على 2.",
+    "explain": "<span class=\"m\">2x = ln 9 ≈ 2.197</span> ← <span class=\"m\">x ≈ 1.10</span>."
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Mix 4 / 4",
+   "html": "<div class=\"formula\">100 ÷ x − 5 = 15</div><p>x = ?</p>",
+   "answer": 5,
+   "tol": 0,
+   "hint": "Add 5 (100 ÷ x = 20). Then multiply by x and divide by 20.",
+   "explain": "100 ÷ x = 20 → 100 = 20x → x = <b>5</b>.",
+   "ar": {
+    "title": "مختلط 4 / 4",
+    "html": "<div class=\"formula\">100 ÷ x − 5 = 15</div><p><span class=\"m\">x = ?</span></p>",
+    "hint": "أضف 5 (<span class=\"m\">100 ÷ x = 20</span>). ثم اضرب في x واقسم على 20.",
+    "explain": "<span class=\"m\">100 ÷ x = 20</span> ← <span class=\"m\">100 = 20x</span> ← <span class=\"m\">x = 5</span>."
+   }
+  }
+ ]
+}
+</script>
+<script src="../assets/cards.js"></script>
+</body>
+</html>
