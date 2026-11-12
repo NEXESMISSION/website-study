@@ -618,19 +618,94 @@
    }
   },
   {
+   "kind": "learn",
+   "title": "Solving = undoing",
+   "why": "Every “when will…?” or “how many…?” question ends with an equation: when will the profit reach 13 million? How many pages for the same price? Solving is how you get the answer.",
+   "html": "<p>An equation is a <b>balance</b>: both sides weigh the same. Whatever you do to one side, do it to the other side too.</p><p>To find x, <b>undo</b> what was done to x, one move at a time:</p><div class=\"formula\">2 + 3x = 14</div><p><b>Move 1.</b> Undo “+2”: take 2 away from both sides → <b>3x = 12</b></p><p><b>Move 2.</b> Undo “×3”: divide both sides by 3 → <b>x = 4</b></p><p>Check: 2 + 3×4 = 14 ✓</p><div class=\"key\">Opposite moves: + undoes −, and × undoes ÷.<br>“Move the 2 to the other side and it flips to −2” means exactly Move 1.</div>",
+   "ar": {
+    "title": "الحلّ = التراجع",
+    "why": "كل سؤال «متى…؟» أو «كم…؟» ينتهي بمعادلة: متى يصل الربح إلى 13 مليونًا؟ كم صفحة لنفس السعر؟ الحلّ هو طريقك إلى الجواب.",
+    "html": "<p>المعادلة <b>ميزان</b>: الجهتان لهما نفس الوزن. ما تفعله بجهة، افعله بالجهة الأخرى أيضًا.</p><p>لتجد x، <b>تراجع</b> عمّا فُعل بـ x، حركة بعد حركة:</p><div class=\"formula\">2 + 3x = 14</div><p><b>الحركة 1.</b> تراجع عن <span class=\"m\">+2</span>: انزع 2 من الجهتين ← <span class=\"m\"><b>3x = 12</b></span></p><p><b>الحركة 2.</b> تراجع عن <span class=\"m\">×3</span>: اقسم الجهتين على 3 ← <span class=\"m\"><b>x = 4</b></span></p><p>تحقّق: <span class=\"m\">2 + 3×4 = 14</span> ✓</p><div class=\"key\">الحركات المتعاكسة: الطرح يلغي الجمع، والقسمة تلغي الضرب.<br>«انقل 2 إلى الجهة الأخرى فتصبح −2» تعني بالضبط الحركة 1.</div>"
+   }
+  },
+  {
    "kind": "number",
-   "html": "<p>Same company: in what <b>year</b> does the profit reach <b>13 million TND</b>?</p>",
+   "title": "Practice · Move 1",
+   "html": "<div class=\"formula\">5 + 2x = 17</div><p>Undo “+5” (take 5 away from both sides): 2x = <b>?</b></p>",
+   "answer": 12,
+   "tol": 0,
+   "hint": "17 − 5.",
+   "explain": "17 − 5 = <b>12</b>. Now: 2x = 12.",
+   "ar": {
+    "title": "تمرين · الحركة 1",
+    "html": "<div class=\"formula\">5 + 2x = 17</div><p>تراجع عن <span class=\"m\">+5</span> (انزع 5 من الجهتين): <span class=\"m\">2x = <b>?</b></span></p>",
+    "hint": "<span class=\"m\">17 − 5</span>.",
+    "explain": "<span class=\"m\">17 − 5 = 12</span>. الآن: <span class=\"m\">2x = 12</span>."
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Practice · Move 2",
+   "html": "<div class=\"formula\">2x = 12</div><p>Undo “×2” (divide both sides by 2): x = <b>?</b></p>",
+   "answer": 6,
+   "tol": 0,
+   "hint": "12 ÷ 2.",
+   "explain": "12 ÷ 2 = <b>6</b>. Check: 5 + 2×6 = 17 ✓",
+   "ar": {
+    "title": "تمرين · الحركة 2",
+    "html": "<div class=\"formula\">2x = 12</div><p>تراجع عن <span class=\"m\">×2</span> (اقسم الجهتين على 2): <span class=\"m\">x = <b>?</b></span></p>",
+    "hint": "<span class=\"m\">12 ÷ 2</span>.",
+    "explain": "<span class=\"m\">12 ÷ 2 = 6</span>. تحقّق: <span class=\"m\">5 + 2×6 = 17</span> ✓"
+   }
+  },
+  {
+   "kind": "number",
+   "title": "The company · Move 1",
+   "html": "<p>Back to the company: when is the profit 13? We write:</p><div class=\"formula\">4 + 0.6t = 13</div><p>Undo “+4” (take 4 away from both sides): 0.6t = <b>?</b></p>",
+   "answer": 9,
+   "tol": 0,
+   "hint": "13 − 4.",
+   "explain": "13 − 4 = <b>9</b>. Now: 0.6t = 9.",
+   "ar": {
+    "title": "الشركة · الحركة 1",
+    "html": "<p>نرجع إلى الشركة: متى يكون الربح 13؟ نكتب:</p><div class=\"formula\">4 + 0.6t = 13</div><p>تراجع عن <span class=\"m\">+4</span> (انزع 4 من الجهتين): <span class=\"m\">0.6t = <b>?</b></span></p>",
+    "hint": "<span class=\"m\">13 − 4</span>.",
+    "explain": "<span class=\"m\">13 − 4 = 9</span>. الآن: <span class=\"m\">0.6t = 9</span>."
+   }
+  },
+  {
+   "kind": "number",
+   "title": "The company · Move 2",
+   "html": "<div class=\"formula\">0.6t = 9</div><p>Undo “×0.6” (divide both sides by 0.6): t = <b>?</b></p>",
+   "answer": 15,
+   "tol": 0,
+   "unit": "years",
+   "hint": "9 ÷ 0.6. Trick: multiply both by 10 → 90 ÷ 6.",
+   "explain": "t = 9 ÷ 0.6 = 90 ÷ 6 = <b>15 years</b>.",
+   "ar": {
+    "title": "الشركة · الحركة 2",
+    "html": "<div class=\"formula\">0.6t = 9</div><p>تراجع عن <span class=\"m\">×0.6</span> (اقسم الجهتين على 0.6): <span class=\"m\">t = <b>?</b></span></p>",
+    "unit": "سنة",
+    "hint": "<span class=\"m\">9 ÷ 0.6</span>. حيلة: اضرب الاثنين في 10 ← <span class=\"m\">90 ÷ 6</span>.",
+    "explain": "<span class=\"m\">t = 9 ÷ 0.6 = 90 ÷ 6 = 15</span> سنة."
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<p>You found <b>t = 15</b>: 15 years after 2020. In what <b>year</b> does the profit reach 13 million TND?</p>",
    "answer": 2035,
    "tol": 0.5,
    "unit": "(year)",
-   "hint": "Solve 4 + 0.6t = 13 to get t, then add t to 2020.",
-   "explain": "4 + 0.6t = 13 → 0.6t = 9 → t = 9 ÷ 0.6 = 15. Year = 2020 + 15 = <b>2035</b>.",
+   "hint": "The year = 2020 + t.",
+   "explain": "2020 + 15 = <b>2035</b>. Full solution: 4 + 0.6t = 13 → 0.6t = 9 → t = 15 → year 2035.",
    "ar": {
-    "html": "<p>نفس الشركة: في أيّ <b>سنة</b> يصل الربح إلى <b>13 مليون دينار</b>؟</p>",
+    "html": "<p>وجدت <span class=\"m\"><b>t = 15</b></span>: أي 15 سنة بعد 2020. في أيّ <b>سنة</b> يصل الربح إلى 13 مليون دينار؟</p>",
     "unit": "(السنة)",
-    "hint": "حلّ <span class=\"m\">4 + 0.6t = 13</span> لتجد t، ثم أضف t إلى 2020.",
-    "explain": "<span class=\"m\">4 + 0.6t = 13</span> ← <span class=\"m\">0.6t = 9</span> ← <span class=\"m\">t = 9 ÷ 0.6 = 15</span>. السنة = <span class=\"m\">2020 + 15 = 2035</span>."
-   }
+    "hint": "السنة = <span class=\"m\">2020 + t</span>.",
+    "explain": "<span class=\"m\">2020 + 15 = 2035</span>. الحلّ كاملًا: <span class=\"m\">4 + 0.6t = 13</span> ← <span class=\"m\">0.6t = 9</span> ← <span class=\"m\">t = 15</span> ← سنة 2035.",
+    "title": "الشركة · الخطوة الأخيرة"
+   },
+   "title": "The company · last step"
   },
   {
    "kind": "learn",
