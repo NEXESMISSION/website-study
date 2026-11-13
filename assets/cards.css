@@ -116,3 +116,5 @@ body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:18px;l
 .card sup{font-size:.68em;line-height:0}
 .btn.skip{color:var(--muted);border-color:transparent;background:transparent}
 .btn.skip:hover{color:var(--ink);border-color:var(--line)}
+.graph svg{width:100%;max-width:440px;height:auto}
+.fb .graph svg{max-width:380px}
