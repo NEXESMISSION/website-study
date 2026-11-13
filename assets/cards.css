@@ -118,3 +118,4 @@ body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:18px;l
 .btn.skip:hover{color:var(--ink);border-color:var(--line)}
 .graph svg{width:100%;max-width:440px;height:auto}
 .fb .graph svg{max-width:380px}
+.graph svg text{font-family:var(--f)}
