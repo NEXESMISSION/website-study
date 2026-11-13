@@ -440,17 +440,45 @@
    }
   },
   {
+   "kind": "learn",
+   "title": "Why divide by the tiny step?",
+   "why": "This one division turns “how much it changed in a tiny step” into “how fast it changes”, which is the derivative.",
+   "html": "<p><b>Speed = how much it changed ÷ how long the step was.</b> Like km per hour.</p><div class=\"ex\"><b>Walking</b>In 0.01 hour you walk 0.05 km. Your speed per <b>1</b> hour?<br>0.05 ÷ 0.01 = <b>5 km per hour</b>.</div><div class=\"steps\"><span>0.05 km</span><i>in 0.01 h</i><span>→</span><i>× 100</i><span>5 km in 1 h</span></div><p>0.01 is a hundredth of 1, so a whole step is 100 times bigger: <b>÷ 0.01 is the same as × 100</b>. Move the decimal point 2 places to the right:</p><div class=\"steps\"><span>0.0601</span><i>×10</i><span>0.601</span><i>×10</i><span>6.01</span></div>",
+   "ar": {
+    "title": "لماذا نقسم على الخطوة الصغيرة؟",
+    "why": "هذه القسمة الواحدة تحوّل «كم تغيّر في خطوة صغيرة» إلى «بأيّ سرعة يتغيّر»، وهذه هي المشتقة.",
+    "html": "<p><b>السرعة = كم تغيّر ÷ طول الخطوة.</b> مثل كم في الساعة.</p><div class=\"ex\"><b>المشي</b>في 0.01 ساعة تمشي 0.05 كم. سرعتك في ساعة <b>واحدة</b>؟<br><span class=\"m\">0.05 ÷ 0.01 = 5</span> كم في الساعة.</div><div class=\"steps\"><span>0.05 km</span><i>in 0.01 h</i><span>→</span><i>× 100</i><span>5 km in 1 h</span></div><p>0.01 هي جزء من مئة من 1، إذن الخطوة الكاملة أكبر بـ 100 مرة: <b>القسمة على 0.01 هي نفس الضرب في 100</b>. حرّك الفاصلة مرتبتين إلى اليمين:</p><div class=\"steps\"><span>0.0601</span><i>×10</i><span>0.601</span><i>×10</i><span>6.01</span></div>"
+   }
+  },
+  {
    "kind": "number",
-   "html": "<p>f(x) = x². Estimate f′(3) with h = 0.01. We know 3.01² = 9.0601 and 3² = 9.</p><div class=\"formula\">f′(3) ≈ (9.0601 − 9) ÷ 0.01</div>",
+   "title": "Step 1 of 2",
+   "html": "<p>f(x) = x². x moves a tiny step from 3 to 3.01.</p><p>f(3) = 9 and f(3.01) = 9.0601. How much did f <b>change</b>?</p>",
+   "answer": 0.0601,
+   "tol": 0.00005,
+   "hint": "9.0601 − 9.",
+   "explain": "9.0601 − 9 = <b>0.0601</b>. In a step of 0.01, f grew by 0.0601.",
+   "ar": {
+    "title": "الخطوة 1 من 2",
+    "html": "<p><span class=\"m\">f(x) = x²</span>. x يتحرّك خطوة صغيرة من 3 إلى 3.01.</p><p><span class=\"m\">f(3) = 9</span> و <span class=\"m\">f(3.01) = 9.0601</span>. كم <b>تغيّرت</b> f؟</p>",
+    "hint": "<span class=\"m\">9.0601 − 9</span>.",
+    "explain": "<span class=\"m\">9.0601 − 9 = 0.0601</span>. في خطوة طولها 0.01، كبرت f بـ 0.0601."
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<p>In a step of <b>0.01</b>, f changed by <b>0.0601</b>. How much per <b>1</b> whole step?</p><div class=\"formula\">f′(3) ≈ 0.0601 ÷ 0.01</div><p>(÷ 0.01 = × 100)</p>",
    "answer": 6.01,
    "tol": 0.005,
-   "hint": "9.0601 − 9 = 0.0601. Then ÷ 0.01 (same as × 100).",
+   "hint": "0.0601 × 100: move the decimal point 2 places to the right.",
    "explain": "<div class=\"lad\"><span class=\"l\">f′(3)</span><span class=\"e\">≈</span><span class=\"rt\">(9.0601 − 9) ÷ 0.01</span><span class=\"note\">↓ top: 9.0601 − 9 = 0.0601</span><span class=\"l\">f′(3)</span><span class=\"e\">≈</span><span class=\"rt\">0.0601 ÷ 0.01</span><span class=\"note\">↓ ÷ 0.01 is the same as × 100</span><span class=\"l fin\">f′(3)</span><span class=\"e fin\">≈</span><span class=\"rt fin\">6.01</span></div><p>So f′(3) is about 6 (exactly 6).</p>",
    "ar": {
-    "html": "<p><span class=\"m\">f(x) = x²</span>. قدّر <span class=\"m\">f′(3)</span> بـ <span class=\"m\">h = 0.01</span>. نعرف أن <span class=\"m\">3.01² = 9.0601</span> و <span class=\"m\">3² = 9</span>.</p><div class=\"formula\">f′(3) ≈ (9.0601 − 9) ÷ 0.01</div>",
-    "hint": "<span class=\"m\">9.0601 − 9 = 0.0601</span>. ثم <span class=\"m\">÷ 0.01</span> (نفس <span class=\"m\">× 100</span>).",
-    "explain": "<div class=\"lad\"><span class=\"l\">f′(3)</span><span class=\"e\">≈</span><span class=\"rt\">(9.0601 − 9) ÷ 0.01</span><span class=\"note\" dir=\"rtl\">↓ الأعلى: 9.0601 − 9 = 0.0601</span><span class=\"l\">f′(3)</span><span class=\"e\">≈</span><span class=\"rt\">0.0601 ÷ 0.01</span><span class=\"note\" dir=\"rtl\">↓ القسمة على 0.01 هي نفس الضرب في 100</span><span class=\"l fin\">f′(3)</span><span class=\"e fin\">≈</span><span class=\"rt fin\">6.01</span></div><p>إذن <span class=\"m\">f′(3)</span> حوالي 6 (بالضبط 6).</p>"
-   }
+    "html": "<p>في خطوة طولها <b>0.01</b>، تغيّرت f بـ <b>0.0601</b>. كم في خطوة كاملة <b>واحدة</b>؟</p><div class=\"formula\">f′(3) ≈ 0.0601 ÷ 0.01</div><p>(<span class=\"m\">÷ 0.01 = × 100</span>)</p>",
+    "hint": "<span class=\"m\">0.0601 × 100</span>: حرّك الفاصلة مرتبتين إلى اليمين.",
+    "explain": "<div class=\"lad\"><span class=\"l\">f′(3)</span><span class=\"e\">≈</span><span class=\"rt\">(9.0601 − 9) ÷ 0.01</span><span class=\"note\" dir=\"rtl\">↓ الأعلى: 9.0601 − 9 = 0.0601</span><span class=\"l\">f′(3)</span><span class=\"e\">≈</span><span class=\"rt\">0.0601 ÷ 0.01</span><span class=\"note\" dir=\"rtl\">↓ القسمة على 0.01 هي نفس الضرب في 100</span><span class=\"l fin\">f′(3)</span><span class=\"e fin\">≈</span><span class=\"rt fin\">6.01</span></div><p>إذن <span class=\"m\">f′(3)</span> حوالي 6 (بالضبط 6).</p>",
+    "title": "الخطوة 2 من 2"
+   },
+   "title": "Step 2 of 2"
   },
   {
    "kind": "mcq",
