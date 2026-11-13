@@ -429,79 +429,63 @@
    }
   },
   {
-   "kind": "learn",
-   "title": "Estimate f′(a) with a tiny step",
-   "why": "When there is no formula for the derivative yet (the rules come in Unit 4), you can still estimate it with a calculator. The teacher’s notes do exactly this.",
-   "html": "<p>Take a tiny step h, and compute the average rate over it:</p><div class=\"formula\">f′(a) ≈ (f(a + h) − f(a)) ÷ h</div><div class=\"ex\"><b>Teacher’s example · f(x) = x³ at a = 2</b>h = 0.1 → 12.61<br>h = 0.01 → 12.06<br>h = 0.001 → 12.006</div><p>The smaller h, the closer to <b>12</b>. So f′(2) = 12.</p><div class=\"lad\"><span class=\"l\">f′(2)</span><span class=\"e\">≈</span><span class=\"rt\">(2.01³ − 2³) ÷ 0.01</span><span class=\"note\">↓ 2.01³ = 8.120601 and 2³ = 8</span><span class=\"l\">f′(2)</span><span class=\"e\">≈</span><span class=\"rt\">0.120601 ÷ 0.01</span><span class=\"note\">↓ calculate</span><span class=\"l fin\">f′(2)</span><span class=\"e fin\">≈</span><span class=\"rt fin\">12.06</span></div>",
+   "kind": "mcq",
+   "title": "Quick check",
+   "html": "<p>Your phone battery is at 80% at 3 pm and is going <b>down 10% per hour</b>. The derivative of the battery level at 3 pm is…</p>",
+   "options": [
+    "+10% per hour",
+    "−10% per hour",
+    "80%",
+    "0"
+   ],
+   "answer": 1,
+   "hint": "Derivative = how fast it changes right now. Going down → negative.",
+   "explain": "<b>−10% per hour</b>: it changes at 10% per hour, and it goes down, so it is negative. (80% is where the battery is, not how fast it changes.)",
    "ar": {
-    "title": "قدّر f′(a) بخطوة صغيرة جدًّا",
-    "why": "عندما لا توجد بعد صيغة للمشتقة (القواعد تأتي في الوحدة 4)، يمكنك تقديرها بالآلة الحاسبة. دروس الأستاذة تفعل هذا بالضبط.",
-    "html": "<p>خذ خطوة صغيرة جدًّا h، واحسب متوسّط المعدّل عليها:</p><div class=\"formula\">f′(a) ≈ (f(a + h) − f(a)) ÷ h</div><div class=\"ex\"><b>مثال الأستاذة · <span class=\"m\">f(x) = x³</span> عند <span class=\"m\">a = 2</span></b><span class=\"m\">h = 0.1</span> ← 12.61<br><span class=\"m\">h = 0.01</span> ← 12.06<br><span class=\"m\">h = 0.001</span> ← 12.006</div><p>كلّما صغرت h، اقتربنا من <b>12</b>. إذن <span class=\"m\">f′(2) = 12</span>.</p><div class=\"lad\"><span class=\"l\">f′(2)</span><span class=\"e\">≈</span><span class=\"rt\">(2.01³ − 2³) ÷ 0.01</span><span class=\"note\" dir=\"rtl\">↓ 2.01³ = 8.120601 و 2³ = 8</span><span class=\"l\">f′(2)</span><span class=\"e\">≈</span><span class=\"rt\">0.120601 ÷ 0.01</span><span class=\"note\" dir=\"rtl\">↓ احسب</span><span class=\"l fin\">f′(2)</span><span class=\"e fin\">≈</span><span class=\"rt fin\">12.06</span></div>"
+    "title": "تحقّق سريع",
+    "html": "<p>بطارية هاتفك 80% على الساعة 3 بعد الظهر و<b>تنزل 10% في الساعة</b>. مشتقة مستوى البطارية على الساعة 3…</p>",
+    "options": [
+     "+10% في الساعة",
+     "−10% في الساعة",
+     "80%",
+     "0"
+    ],
+    "hint": "المشتقة = بأيّ سرعة يتغيّر الآن. ينزل ← سالبة.",
+    "explain": "<b>−10% في الساعة</b>: يتغيّر بـ 10% في الساعة، وينزل، إذن سالبة. (80% هي أين البطارية، لا بأيّ سرعة تتغيّر.)"
    }
   },
   {
    "kind": "learn",
-   "title": "Why divide by the tiny step?",
-   "why": "This one division turns “how much it changed in a tiny step” into “how fast it changes”, which is the derivative.",
-   "html": "<p><b>Speed = how much it changed ÷ how long the step was.</b> Like km per hour.</p><div class=\"ex\"><b>Walking</b>In 0.01 hour you walk 0.05 km. Your speed per <b>1</b> hour?<br>0.05 ÷ 0.01 = <b>5 km per hour</b>.</div><div class=\"steps\"><span>0.05 km in 0.01 h</span><i>× 100</i><span>5 km in 1 h</span></div><p>0.01 is a hundredth of 1, so a whole step is 100 times bigger: <b>÷ 0.01 is the same as × 100</b>. Move the decimal point 2 places to the right:</p><div class=\"steps\"><span>0.0601</span><i>×10</i><span>0.601</span><i>×10</i><span>6.01</span></div>",
+   "title": "The big picture: why we learn derivatives",
+   "why": "You asked “why are we doing this?”. Here is the answer for the whole chapter, and for the next two units.",
+   "html": "<p>A company wants the price that gives the <b>biggest profit</b>. Profit as a function of the price looks like a <b>hill</b>:</p><div class=\"graph\"><svg viewBox=\"-60 0 400 200\" width=\"400\" height=\"200\" role=\"img\" aria-label=\"Profit as a hill: climbing on the left, the top is the best price, going down on the right\">\n<line x1=\"25\" y1=\"165\" x2=\"290\" y2=\"165\" stroke=\"#C9CEDA\" stroke-width=\"1.5\"/><line x1=\"28\" y1=\"170\" x2=\"28\" y2=\"20\" stroke=\"#C9CEDA\" stroke-width=\"1.5\"/>\n<text x=\"290\" y=\"182\" text-anchor=\"end\" font-size=\"12\" fill=\"#667085\">price →</text><text x=\"22\" y=\"20\" text-anchor=\"end\" font-size=\"12\" fill=\"#667085\">profit</text>\n<polyline points=\"33.8,154.0 37.7,147.9 41.6,141.9 45.4,135.9 49.3,130.0 53.2,124.1 57.1,118.4 60.9,112.7 64.8,107.2 68.7,101.8 72.5,96.6 76.4,91.5 80.3,86.6 84.2,81.9 88.0,77.4 91.9,73.1 95.8,69.0 99.7,65.1 103.5,61.5 107.4,58.2 111.3,55.1 115.1,52.3 119.0,49.7 122.9,47.5 126.8,45.5 130.6,43.8 134.5,42.5 138.4,41.4 142.3,40.6 146.1,40.2 150.0,40.0 153.9,40.2 157.7,40.6 161.6,41.4 165.5,42.5 169.4,43.8 173.2,45.5 177.1,47.5 181.0,49.7 184.9,52.3 188.7,55.1 192.6,58.2 196.5,61.5 200.3,65.1 204.2,69.0 208.1,73.1 212.0,77.4 215.8,81.9 219.7,86.6 223.6,91.5 227.5,96.6 231.3,101.8 235.2,107.2 239.1,112.7 242.9,118.4 246.8,124.1 250.7,130.0 254.6,135.9 258.4,141.9 262.3,147.9 266.2,154.0\" fill=\"none\" stroke=\"#0F1726\" stroke-width=\"3\"/>\n<circle cx=\"75.8\" cy=\"92.2\" r=\"7\" fill=\"#12805C\"/><text x=\"63.836623610465864\" y=\"97.24290319259576\" text-anchor=\"end\" font-size=\"12\" font-weight=\"800\" fill=\"#12805C\">f′ > 0: climbing</text>\n<circle cx=\"150.0\" cy=\"40.0\" r=\"7\" fill=\"#6D3FD1\"/><text x=\"150\" y=\"26\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#6D3FD1\">f′ = 0: the top = MAX profit</text>\n<circle cx=\"224.2\" cy=\"92.2\" r=\"7\" fill=\"#C4372D\"/><text x=\"236.16337638953414\" y=\"97.24290319259575\" font-size=\"12\" font-weight=\"800\" fill=\"#C4372D\">f′ < 0: falling</text></svg></div><p><b>Climbing</b> (f′ &gt; 0): raise the price, profit goes up. Keep going.<br><b>The top</b> (f′ = 0): the best price. <b>Maximum profit.</b><br><b>Falling</b> (f′ &lt; 0): the price is too high, profit goes down.</p><div class=\"key\">So the derivative tells you where the best decision is: at the top of the hill, where f′ = 0. In Units 4 and 5 you will find that top with a calculation. Today you only learn what f′ means.</div>",
    "ar": {
-    "title": "لماذا نقسم على الخطوة الصغيرة؟",
-    "why": "هذه القسمة الواحدة تحوّل «كم تغيّر في خطوة صغيرة» إلى «بأيّ سرعة يتغيّر»، وهذه هي المشتقة.",
-    "html": "<p><b>السرعة = كم تغيّر ÷ طول الخطوة.</b> مثل كم في الساعة.</p><div class=\"ex\"><b>المشي</b>في 0.01 ساعة تمشي 0.05 كم. سرعتك في ساعة <b>واحدة</b>؟<br><span class=\"m\">0.05 ÷ 0.01 = 5</span> كم في الساعة.</div><div class=\"steps\"><span>0.05 km in 0.01 h</span><i>× 100</i><span>5 km in 1 h</span></div><p>0.01 هي جزء من مئة من 1، إذن الخطوة الكاملة أكبر بـ 100 مرة: <b>القسمة على 0.01 هي نفس الضرب في 100</b>. حرّك الفاصلة مرتبتين إلى اليمين:</p><div class=\"steps\"><span>0.0601</span><i>×10</i><span>0.601</span><i>×10</i><span>6.01</span></div>"
+    "title": "الصورة الكاملة: لماذا نتعلّم المشتقات",
+    "why": "سألت «لماذا نفعل هذا؟». هذا هو الجواب للفصل كله، وللوحدتين القادمتين.",
+    "html": "<p>شركة تريد السعر الذي يعطي <b>أكبر ربح</b>. الربح كدالّة في السعر يشبه <b>تلّة</b>:</p><div class=\"graph\"><svg viewBox=\"-60 0 400 200\" width=\"400\" height=\"200\" role=\"img\" aria-label=\"Profit as a hill: climbing on the left, the top is the best price, going down on the right\">\n<line x1=\"25\" y1=\"165\" x2=\"290\" y2=\"165\" stroke=\"#C9CEDA\" stroke-width=\"1.5\"/><line x1=\"28\" y1=\"170\" x2=\"28\" y2=\"20\" stroke=\"#C9CEDA\" stroke-width=\"1.5\"/>\n<text x=\"290\" y=\"182\" text-anchor=\"end\" font-size=\"12\" fill=\"#667085\">السعر →</text><text x=\"22\" y=\"20\" text-anchor=\"end\" font-size=\"12\" fill=\"#667085\">الربح</text>\n<polyline points=\"33.8,154.0 37.7,147.9 41.6,141.9 45.4,135.9 49.3,130.0 53.2,124.1 57.1,118.4 60.9,112.7 64.8,107.2 68.7,101.8 72.5,96.6 76.4,91.5 80.3,86.6 84.2,81.9 88.0,77.4 91.9,73.1 95.8,69.0 99.7,65.1 103.5,61.5 107.4,58.2 111.3,55.1 115.1,52.3 119.0,49.7 122.9,47.5 126.8,45.5 130.6,43.8 134.5,42.5 138.4,41.4 142.3,40.6 146.1,40.2 150.0,40.0 153.9,40.2 157.7,40.6 161.6,41.4 165.5,42.5 169.4,43.8 173.2,45.5 177.1,47.5 181.0,49.7 184.9,52.3 188.7,55.1 192.6,58.2 196.5,61.5 200.3,65.1 204.2,69.0 208.1,73.1 212.0,77.4 215.8,81.9 219.7,86.6 223.6,91.5 227.5,96.6 231.3,101.8 235.2,107.2 239.1,112.7 242.9,118.4 246.8,124.1 250.7,130.0 254.6,135.9 258.4,141.9 262.3,147.9 266.2,154.0\" fill=\"none\" stroke=\"#0F1726\" stroke-width=\"3\"/>\n<circle cx=\"75.8\" cy=\"92.2\" r=\"7\" fill=\"#12805C\"/><text x=\"63.836623610465864\" y=\"97.24290319259576\" text-anchor=\"end\" font-size=\"12\" font-weight=\"800\" fill=\"#12805C\">f′ > 0: يصعد</text>\n<circle cx=\"150.0\" cy=\"40.0\" r=\"7\" fill=\"#6D3FD1\"/><text x=\"150\" y=\"26\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#6D3FD1\">f′ = 0: القمّة = أكبر ربح</text>\n<circle cx=\"224.2\" cy=\"92.2\" r=\"7\" fill=\"#C4372D\"/><text x=\"236.16337638953414\" y=\"97.24290319259575\" font-size=\"12\" font-weight=\"800\" fill=\"#C4372D\">f′ < 0: ينزل</text></svg></div><p><b>الصعود</b> (<span class=\"m\">f′ > 0</span>): ارفع السعر، يزيد الربح. واصل.<br><b>القمّة</b> (<span class=\"m\">f′ = 0</span>): أفضل سعر. <b>أكبر ربح.</b><br><b>النزول</b> (<span class=\"m\">f′ < 0</span>): السعر مرتفع جدًّا، ينقص الربح.</p><div class=\"key\">إذن المشتقة تخبرك أين يوجد أفضل قرار: في قمّة التلّة، حيث <span class=\"m\">f′ = 0</span>. في الوحدتين 4 و 5 ستجد هذه القمّة بالحساب. اليوم تتعلّم فقط ماذا تعني f′.</div>"
    }
-  },
-  {
-   "kind": "number",
-   "title": "Step 1 of 2",
-   "html": "<p>f(x) = x². x moves a tiny step from 3 to 3.01.</p><p>f(3) = 9 and f(3.01) = 9.0601. How much did f <b>change</b>?</p>",
-   "answer": 0.0601,
-   "tol": 0.00005,
-   "hint": "9.0601 − 9.",
-   "explain": "9.0601 − 9 = <b>0.0601</b>. In a step of 0.01, f grew by 0.0601.",
-   "ar": {
-    "title": "الخطوة 1 من 2",
-    "html": "<p><span class=\"m\">f(x) = x²</span>. x يتحرّك خطوة صغيرة من 3 إلى 3.01.</p><p><span class=\"m\">f(3) = 9</span> و <span class=\"m\">f(3.01) = 9.0601</span>. كم <b>تغيّرت</b> f؟</p>",
-    "hint": "<span class=\"m\">9.0601 − 9</span>.",
-    "explain": "<span class=\"m\">9.0601 − 9 = 0.0601</span>. في خطوة طولها 0.01، كبرت f بـ 0.0601."
-   }
-  },
-  {
-   "kind": "number",
-   "html": "<p>In a step of <b>0.01</b>, f changed by <b>0.0601</b>. How much per <b>1</b> whole step?</p><div class=\"formula\">f′(3) ≈ 0.0601 ÷ 0.01</div><p>(÷ 0.01 = × 100)</p>",
-   "answer": 6.01,
-   "tol": 0.005,
-   "hint": "0.0601 × 100: move the decimal point 2 places to the right.",
-   "explain": "<div class=\"lad\"><span class=\"l\">f′(3)</span><span class=\"e\">≈</span><span class=\"rt\">(9.0601 − 9) ÷ 0.01</span><span class=\"note\">↓ top: 9.0601 − 9 = 0.0601</span><span class=\"l\">f′(3)</span><span class=\"e\">≈</span><span class=\"rt\">0.0601 ÷ 0.01</span><span class=\"note\">↓ ÷ 0.01 is the same as × 100</span><span class=\"l fin\">f′(3)</span><span class=\"e fin\">≈</span><span class=\"rt fin\">6.01</span></div><p>So f′(3) is about 6 (exactly 6).</p>",
-   "ar": {
-    "html": "<p>في خطوة طولها <b>0.01</b>، تغيّرت f بـ <b>0.0601</b>. كم في خطوة كاملة <b>واحدة</b>؟</p><div class=\"formula\">f′(3) ≈ 0.0601 ÷ 0.01</div><p>(<span class=\"m\">÷ 0.01 = × 100</span>)</p>",
-    "hint": "<span class=\"m\">0.0601 × 100</span>: حرّك الفاصلة مرتبتين إلى اليمين.",
-    "explain": "<div class=\"lad\"><span class=\"l\">f′(3)</span><span class=\"e\">≈</span><span class=\"rt\">(9.0601 − 9) ÷ 0.01</span><span class=\"note\" dir=\"rtl\">↓ الأعلى: 9.0601 − 9 = 0.0601</span><span class=\"l\">f′(3)</span><span class=\"e\">≈</span><span class=\"rt\">0.0601 ÷ 0.01</span><span class=\"note\" dir=\"rtl\">↓ القسمة على 0.01 هي نفس الضرب في 100</span><span class=\"l fin\">f′(3)</span><span class=\"e fin\">≈</span><span class=\"rt fin\">6.01</span></div><p>إذن <span class=\"m\">f′(3)</span> حوالي 6 (بالضبط 6).</p>",
-    "title": "الخطوة 2 من 2"
-   },
-   "title": "Step 2 of 2"
   },
   {
    "kind": "mcq",
-   "html": "<p>To estimate f′(a), which step h gives the <b>best</b> estimate?</p>",
+   "keep": true,
+   "html": "<div class=\"graph\"><svg viewBox=\"-60 0 400 200\" width=\"400\" height=\"200\" role=\"img\" aria-label=\"Profit as a hill: climbing on the left, the top is the best price, going down on the right\">\n<line x1=\"25\" y1=\"165\" x2=\"290\" y2=\"165\" stroke=\"#C9CEDA\" stroke-width=\"1.5\"/><line x1=\"28\" y1=\"170\" x2=\"28\" y2=\"20\" stroke=\"#C9CEDA\" stroke-width=\"1.5\"/>\n<text x=\"290\" y=\"182\" text-anchor=\"end\" font-size=\"12\" fill=\"#667085\">price →</text><text x=\"22\" y=\"20\" text-anchor=\"end\" font-size=\"12\" fill=\"#667085\">profit</text>\n<polyline points=\"33.8,154.0 37.7,147.9 41.6,141.9 45.4,135.9 49.3,130.0 53.2,124.1 57.1,118.4 60.9,112.7 64.8,107.2 68.7,101.8 72.5,96.6 76.4,91.5 80.3,86.6 84.2,81.9 88.0,77.4 91.9,73.1 95.8,69.0 99.7,65.1 103.5,61.5 107.4,58.2 111.3,55.1 115.1,52.3 119.0,49.7 122.9,47.5 126.8,45.5 130.6,43.8 134.5,42.5 138.4,41.4 142.3,40.6 146.1,40.2 150.0,40.0 153.9,40.2 157.7,40.6 161.6,41.4 165.5,42.5 169.4,43.8 173.2,45.5 177.1,47.5 181.0,49.7 184.9,52.3 188.7,55.1 192.6,58.2 196.5,61.5 200.3,65.1 204.2,69.0 208.1,73.1 212.0,77.4 215.8,81.9 219.7,86.6 223.6,91.5 227.5,96.6 231.3,101.8 235.2,107.2 239.1,112.7 242.9,118.4 246.8,124.1 250.7,130.0 254.6,135.9 258.4,141.9 262.3,147.9 266.2,154.0\" fill=\"none\" stroke=\"#0F1726\" stroke-width=\"3\"/>\n<circle cx=\"75.8\" cy=\"92.2\" r=\"7\" fill=\"#12805C\"/><text x=\"63.836623610465864\" y=\"97.24290319259576\" text-anchor=\"end\" font-size=\"12\" font-weight=\"800\" fill=\"#12805C\">f′ > 0: climbing</text>\n<circle cx=\"150.0\" cy=\"40.0\" r=\"7\" fill=\"#6D3FD1\"/><text x=\"150\" y=\"26\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#6D3FD1\">f′ = 0: the top = MAX profit</text>\n<circle cx=\"224.2\" cy=\"92.2\" r=\"7\" fill=\"#C4372D\"/><text x=\"236.16337638953414\" y=\"97.24290319259575\" font-size=\"12\" font-weight=\"800\" fill=\"#C4372D\">f′ < 0: falling</text></svg></div><p>Where is the profit the <b>biggest</b>?</p>",
    "options": [
-    "h = 1",
-    "h = 0.1",
-    "h = 0.001",
-    "h = 10"
+    "where f′ > 0",
+    "where f′ = 0 (the top)",
+    "where f′ < 0"
    ],
-   "answer": 2,
-   "hint": "The derivative is the rate RIGHT NOW: the smaller the step, the closer to “now”.",
-   "explain": "<b>h = 0.001</b>: the smallest step is the closest to the rate at exactly that point.",
+   "answer": 1,
+   "hint": "Look at the hill: where is it the highest?",
+   "explain": "At the <b>top</b>, where the hill is flat: <b>f′ = 0</b>. That is the best price.",
    "ar": {
-    "html": "<p>لتقدير <span class=\"m\">f′(a)</span>، أيّ خطوة h تعطي <b>أفضل</b> تقدير؟</p>",
+    "html": "<div class=\"graph\"><svg viewBox=\"-60 0 400 200\" width=\"400\" height=\"200\" role=\"img\" aria-label=\"Profit as a hill: climbing on the left, the top is the best price, going down on the right\">\n<line x1=\"25\" y1=\"165\" x2=\"290\" y2=\"165\" stroke=\"#C9CEDA\" stroke-width=\"1.5\"/><line x1=\"28\" y1=\"170\" x2=\"28\" y2=\"20\" stroke=\"#C9CEDA\" stroke-width=\"1.5\"/>\n<text x=\"290\" y=\"182\" text-anchor=\"end\" font-size=\"12\" fill=\"#667085\">السعر →</text><text x=\"22\" y=\"20\" text-anchor=\"end\" font-size=\"12\" fill=\"#667085\">الربح</text>\n<polyline points=\"33.8,154.0 37.7,147.9 41.6,141.9 45.4,135.9 49.3,130.0 53.2,124.1 57.1,118.4 60.9,112.7 64.8,107.2 68.7,101.8 72.5,96.6 76.4,91.5 80.3,86.6 84.2,81.9 88.0,77.4 91.9,73.1 95.8,69.0 99.7,65.1 103.5,61.5 107.4,58.2 111.3,55.1 115.1,52.3 119.0,49.7 122.9,47.5 126.8,45.5 130.6,43.8 134.5,42.5 138.4,41.4 142.3,40.6 146.1,40.2 150.0,40.0 153.9,40.2 157.7,40.6 161.6,41.4 165.5,42.5 169.4,43.8 173.2,45.5 177.1,47.5 181.0,49.7 184.9,52.3 188.7,55.1 192.6,58.2 196.5,61.5 200.3,65.1 204.2,69.0 208.1,73.1 212.0,77.4 215.8,81.9 219.7,86.6 223.6,91.5 227.5,96.6 231.3,101.8 235.2,107.2 239.1,112.7 242.9,118.4 246.8,124.1 250.7,130.0 254.6,135.9 258.4,141.9 262.3,147.9 266.2,154.0\" fill=\"none\" stroke=\"#0F1726\" stroke-width=\"3\"/>\n<circle cx=\"75.8\" cy=\"92.2\" r=\"7\" fill=\"#12805C\"/><text x=\"63.836623610465864\" y=\"97.24290319259576\" text-anchor=\"end\" font-size=\"12\" font-weight=\"800\" fill=\"#12805C\">f′ > 0: يصعد</text>\n<circle cx=\"150.0\" cy=\"40.0\" r=\"7\" fill=\"#6D3FD1\"/><text x=\"150\" y=\"26\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#6D3FD1\">f′ = 0: القمّة = أكبر ربح</text>\n<circle cx=\"224.2\" cy=\"92.2\" r=\"7\" fill=\"#C4372D\"/><text x=\"236.16337638953414\" y=\"97.24290319259575\" font-size=\"12\" font-weight=\"800\" fill=\"#C4372D\">f′ < 0: ينزل</text></svg></div><p>أين يكون الربح <b>أكبر</b>؟</p>",
     "options": [
-     "<span class=\"m\">h = 1</span>",
-     "<span class=\"m\">h = 0.1</span>",
-     "<span class=\"m\">h = 0.001</span>",
-     "<span class=\"m\">h = 10</span>"
+     "<span class=\"m\">حيث f′ > 0</span>",
+     "<span class=\"m\">حيث f′ = 0 (القمّة)</span>",
+     "<span class=\"m\">حيث f′ < 0</span>"
     ],
-    "hint": "المشتقة هي المعدّل الآن: كلّما صغرت الخطوة، اقتربنا من «الآن».",
-    "explain": "<span class=\"m\"><b>h = 0.001</b></span>: أصغر خطوة هي الأقرب إلى المعدّل عند تلك النقطة بالضبط."
+    "hint": "انظر إلى التلّة: أين هي الأعلى؟",
+    "explain": "في <b>القمّة</b>، حيث التلّة مسطّحة: <span class=\"m\"><b>f′ = 0</b></span>. هذا هو أفضل سعر."
    }
   },
   {
@@ -924,6 +908,82 @@
     ],
     "hint": "MR − MC.",
     "explain": "MR > MC: الربح <b>يزيد بحوالي 8 − 5 = 3 دولارات</b>."
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Extra (optional) · Estimate f′(a) with a tiny step",
+   "why": "Optional: the teacher shows this in her notes, but the exam questions are mostly about the meaning of f′. Do it only if you have time. When there is no formula for the derivative yet (the rules come in Unit 4), you can still estimate it with a calculator. The teacher’s notes do exactly this.",
+   "html": "<p>Take a tiny step h, and compute the average rate over it:</p><div class=\"formula\">f′(a) ≈ (f(a + h) − f(a)) ÷ h</div><div class=\"ex\"><b>Teacher’s example · f(x) = x³ at a = 2</b>h = 0.1 → 12.61<br>h = 0.01 → 12.06<br>h = 0.001 → 12.006</div><p>The smaller h, the closer to <b>12</b>. So f′(2) = 12.</p><div class=\"lad\"><span class=\"l\">f′(2)</span><span class=\"e\">≈</span><span class=\"rt\">(2.01³ − 2³) ÷ 0.01</span><span class=\"note\">↓ 2.01³ = 8.120601 and 2³ = 8</span><span class=\"l\">f′(2)</span><span class=\"e\">≈</span><span class=\"rt\">0.120601 ÷ 0.01</span><span class=\"note\">↓ calculate</span><span class=\"l fin\">f′(2)</span><span class=\"e fin\">≈</span><span class=\"rt fin\">12.06</span></div>",
+   "ar": {
+    "title": "إضافي (اختياري) · قدّر f′(a) بخطوة صغيرة جدًّا",
+    "why": "اختياري: الأستاذة تعرض هذا في دروسها، لكن أسئلة الامتحان تتعلّق في الغالب بمعنى f′. افعله فقط إذا كان لديك وقت. عندما لا توجد بعد صيغة للمشتقة (القواعد تأتي في الوحدة 4)، يمكنك تقديرها بالآلة الحاسبة. دروس الأستاذة تفعل هذا بالضبط.",
+    "html": "<p>خذ خطوة صغيرة جدًّا h، واحسب متوسّط المعدّل عليها:</p><div class=\"formula\">f′(a) ≈ (f(a + h) − f(a)) ÷ h</div><div class=\"ex\"><b>مثال الأستاذة · <span class=\"m\">f(x) = x³</span> عند <span class=\"m\">a = 2</span></b><span class=\"m\">h = 0.1</span> ← 12.61<br><span class=\"m\">h = 0.01</span> ← 12.06<br><span class=\"m\">h = 0.001</span> ← 12.006</div><p>كلّما صغرت h، اقتربنا من <b>12</b>. إذن <span class=\"m\">f′(2) = 12</span>.</p><div class=\"lad\"><span class=\"l\">f′(2)</span><span class=\"e\">≈</span><span class=\"rt\">(2.01³ − 2³) ÷ 0.01</span><span class=\"note\" dir=\"rtl\">↓ 2.01³ = 8.120601 و 2³ = 8</span><span class=\"l\">f′(2)</span><span class=\"e\">≈</span><span class=\"rt\">0.120601 ÷ 0.01</span><span class=\"note\" dir=\"rtl\">↓ احسب</span><span class=\"l fin\">f′(2)</span><span class=\"e fin\">≈</span><span class=\"rt fin\">12.06</span></div>"
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "Why divide by the tiny step?",
+   "why": "This one division turns “how much it changed in a tiny step” into “how fast it changes”, which is the derivative.",
+   "html": "<p><b>Speed = how much it changed ÷ how long the step was.</b> Like km per hour.</p><div class=\"ex\"><b>Walking</b>In 0.01 hour you walk 0.05 km. Your speed per <b>1</b> hour?<br>0.05 ÷ 0.01 = <b>5 km per hour</b>.</div><div class=\"steps\"><span>0.05 km in 0.01 h</span><i>× 100</i><span>5 km in 1 h</span></div><p>0.01 is a hundredth of 1, so a whole step is 100 times bigger: <b>÷ 0.01 is the same as × 100</b>. Move the decimal point 2 places to the right:</p><div class=\"steps\"><span>0.0601</span><i>×10</i><span>0.601</span><i>×10</i><span>6.01</span></div>",
+   "ar": {
+    "title": "لماذا نقسم على الخطوة الصغيرة؟",
+    "why": "هذه القسمة الواحدة تحوّل «كم تغيّر في خطوة صغيرة» إلى «بأيّ سرعة يتغيّر»، وهذه هي المشتقة.",
+    "html": "<p><b>السرعة = كم تغيّر ÷ طول الخطوة.</b> مثل كم في الساعة.</p><div class=\"ex\"><b>المشي</b>في 0.01 ساعة تمشي 0.05 كم. سرعتك في ساعة <b>واحدة</b>؟<br><span class=\"m\">0.05 ÷ 0.01 = 5</span> كم في الساعة.</div><div class=\"steps\"><span>0.05 km in 0.01 h</span><i>× 100</i><span>5 km in 1 h</span></div><p>0.01 هي جزء من مئة من 1، إذن الخطوة الكاملة أكبر بـ 100 مرة: <b>القسمة على 0.01 هي نفس الضرب في 100</b>. حرّك الفاصلة مرتبتين إلى اليمين:</p><div class=\"steps\"><span>0.0601</span><i>×10</i><span>0.601</span><i>×10</i><span>6.01</span></div>"
+   }
+  },
+  {
+   "kind": "number",
+   "title": "Step 1 of 2",
+   "html": "<p>f(x) = x². x moves a tiny step from 3 to 3.01.</p><p>f(3) = 9 and f(3.01) = 9.0601. How much did f <b>change</b>?</p>",
+   "answer": 0.0601,
+   "tol": 0.00005,
+   "hint": "9.0601 − 9.",
+   "explain": "9.0601 − 9 = <b>0.0601</b>. In a step of 0.01, f grew by 0.0601.",
+   "ar": {
+    "title": "الخطوة 1 من 2",
+    "html": "<p><span class=\"m\">f(x) = x²</span>. x يتحرّك خطوة صغيرة من 3 إلى 3.01.</p><p><span class=\"m\">f(3) = 9</span> و <span class=\"m\">f(3.01) = 9.0601</span>. كم <b>تغيّرت</b> f؟</p>",
+    "hint": "<span class=\"m\">9.0601 − 9</span>.",
+    "explain": "<span class=\"m\">9.0601 − 9 = 0.0601</span>. في خطوة طولها 0.01، كبرت f بـ 0.0601."
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<p>In a step of <b>0.01</b>, f changed by <b>0.0601</b>. How much per <b>1</b> whole step?</p><div class=\"formula\">f′(3) ≈ 0.0601 ÷ 0.01</div><p>(÷ 0.01 = × 100)</p>",
+   "answer": 6.01,
+   "tol": 0.005,
+   "hint": "0.0601 × 100: move the decimal point 2 places to the right.",
+   "explain": "<div class=\"lad\"><span class=\"l\">f′(3)</span><span class=\"e\">≈</span><span class=\"rt\">(9.0601 − 9) ÷ 0.01</span><span class=\"note\">↓ top: 9.0601 − 9 = 0.0601</span><span class=\"l\">f′(3)</span><span class=\"e\">≈</span><span class=\"rt\">0.0601 ÷ 0.01</span><span class=\"note\">↓ ÷ 0.01 is the same as × 100</span><span class=\"l fin\">f′(3)</span><span class=\"e fin\">≈</span><span class=\"rt fin\">6.01</span></div><p>So f′(3) is about 6 (exactly 6).</p>",
+   "ar": {
+    "html": "<p>في خطوة طولها <b>0.01</b>، تغيّرت f بـ <b>0.0601</b>. كم في خطوة كاملة <b>واحدة</b>؟</p><div class=\"formula\">f′(3) ≈ 0.0601 ÷ 0.01</div><p>(<span class=\"m\">÷ 0.01 = × 100</span>)</p>",
+    "hint": "<span class=\"m\">0.0601 × 100</span>: حرّك الفاصلة مرتبتين إلى اليمين.",
+    "explain": "<div class=\"lad\"><span class=\"l\">f′(3)</span><span class=\"e\">≈</span><span class=\"rt\">(9.0601 − 9) ÷ 0.01</span><span class=\"note\" dir=\"rtl\">↓ الأعلى: 9.0601 − 9 = 0.0601</span><span class=\"l\">f′(3)</span><span class=\"e\">≈</span><span class=\"rt\">0.0601 ÷ 0.01</span><span class=\"note\" dir=\"rtl\">↓ القسمة على 0.01 هي نفس الضرب في 100</span><span class=\"l fin\">f′(3)</span><span class=\"e fin\">≈</span><span class=\"rt fin\">6.01</span></div><p>إذن <span class=\"m\">f′(3)</span> حوالي 6 (بالضبط 6).</p>",
+    "title": "الخطوة 2 من 2"
+   },
+   "title": "Step 2 of 2"
+  },
+  {
+   "kind": "mcq",
+   "html": "<p>To estimate f′(a), which step h gives the <b>best</b> estimate?</p>",
+   "options": [
+    "h = 1",
+    "h = 0.1",
+    "h = 0.001",
+    "h = 10"
+   ],
+   "answer": 2,
+   "hint": "The derivative is the rate RIGHT NOW: the smaller the step, the closer to “now”.",
+   "explain": "<b>h = 0.001</b>: the smallest step is the closest to the rate at exactly that point.",
+   "ar": {
+    "html": "<p>لتقدير <span class=\"m\">f′(a)</span>، أيّ خطوة h تعطي <b>أفضل</b> تقدير؟</p>",
+    "options": [
+     "<span class=\"m\">h = 1</span>",
+     "<span class=\"m\">h = 0.1</span>",
+     "<span class=\"m\">h = 0.001</span>",
+     "<span class=\"m\">h = 10</span>"
+    ],
+    "hint": "المشتقة هي المعدّل الآن: كلّما صغرت الخطوة، اقتربنا من «الآن».",
+    "explain": "<span class=\"m\"><b>h = 0.001</b></span>: أصغر خطوة هي الأقرب إلى المعدّل عند تلك النقطة بالضبط."
    }
   }
  ]
