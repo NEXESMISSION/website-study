@@ -3,7 +3,7 @@
      { id, kicker, title, back, next?:{href,label}, ar?:{kicker,title}, cards:[...] }</script>
    Card kinds:
      learn  { title, why?, html }                                  → "Got it" button
-     mcq    { title?, html, options:[...], answer:index, hint, explain }
+     mcq    { title?, html, options:[...], answer:index, hint, explain, keep? (true = do not shuffle the options) }
      number { title?, html, answer:number, tol?, unit?, hint, explain }
    Every card may carry  ar:{ ...same text fields in Arabic... }  — used when the reader switches to Arabic.
    In Arabic text, wrap math in <span class="m">…</span> so it stays left-to-right.
@@ -100,7 +100,7 @@
     if (title) h += `<h2>${title}</h2>`;
     if (why) h += `<div class="why"><b>${t('why')}</b>${why}</div>`;
     h += `<div class="body">${L(c, 'html') || ''}</div>`;
-    if (c.kind === 'mcq') { const ops = L(c, 'options'), ord = order(ops.length, D.id + ':' + st.i); h += `<div class="opts${ops.every(o => o.replace(/<[^>]*>/g, '').length <= 14) ? ' short' : ''}">${ord.map((k, pos) => `<button type="button" class="opt" data-k="${k}"><span class="k">${'abcdefgh'[pos]}</span><span>${ops[k]}</span></button>`).join('')}</div>`; }
+    if (c.kind === 'mcq') { const ops = L(c, 'options'), ord = c.keep ? [...ops.keys()] : order(ops.length, D.id + ':' + st.i); h += `<div class="opts${ops.every(o => o.replace(/<[^>]*>/g, '').length <= 14) ? ' short' : ''}">${ord.map((k, pos) => `<button type="button" class="opt" data-k="${k}"><span class="k">${'abcdefgh'[pos]}</span><span>${ops[k]}</span></button>`).join('')}</div>`; }
     if (c.kind === 'number') { const u = L(c, 'unit'); h += `<div class="num"><input type="text" inputmode="decimal" autocomplete="off" aria-label="${t('ph')}" placeholder="${t('ph')}">${u ? `<span class="unit">${esc(u)}</span>` : ''}<button type="button" class="btn" data-check>${t('check')}</button></div>`; }
     h += `<div class="fbslot"></div><div class="actions">`;
     h += isQ ? `<button type="button" class="btn" data-next hidden>${t('next')}</button>${hint ? `<button type="button" class="btn sec" data-hint>${t('hintBtn')}</button>` : ''}<button type="button" class="btn sec skip" data-skip>${t('skip')}</button>` : `<button type="button" class="btn" data-next>${t('gotit')}</button>`;
