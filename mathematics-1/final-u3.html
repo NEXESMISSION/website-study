@@ -348,6 +348,65 @@
    "keep": true
   },
   {
+   "kind": "learn",
+   "title": "The derivative in one sentence",
+   "why": "If you keep only one thing from this chapter, keep this sentence. Every question about f′ is a question about it.",
+   "html": "<div class=\"key\">The derivative = how fast something is changing <b>at one moment</b>.</div><div class=\"ex\"><b>Like a speedometer</b>It does not tell you where the car is. It tells you how fast it moves <b>right now</b>. The derivative is the speedometer of a function.</div><p><b>Positive</b> → the number is <b>growing</b> right now.<br><b>Negative</b> → it is <b>shrinking</b> right now.<br><b>0</b> → it is <b>not moving</b> right now.</p>",
+   "ar": {
+    "title": "المشتقة في جملة واحدة",
+    "why": "إذا احتفظت بشيء واحد من هذا الفصل، فاحتفظ بهذه الجملة. كل سؤال عن f′ هو سؤال عنها.",
+    "html": "<div class=\"key\">المشتقة = بأيّ سرعة يتغيّر شيء ما <b>في لحظة واحدة</b>.</div><div class=\"ex\"><b>مثل عدّاد السرعة</b>لا يقول لك أين السيارة. يقول لك بأيّ سرعة تتحرّك <b>الآن</b>. المشتقة هي عدّاد سرعة الدالّة.</div><p><b>موجبة</b> ← الرقم <b>يكبر</b> الآن.<br><b>سالبة</b> ← الرقم <b>يصغر</b> الآن.<br><b>0</b> ← الرقم <b>لا يتحرّك</b> الآن.</p>"
+   }
+  },
+  {
+   "kind": "learn",
+   "title": "The little-step test",
+   "why": "A test you can always do with a calculator, even when you do not remember any rule: it tells you the sign of the derivative.",
+   "html": "<p>To know if f′(a) is positive or negative: move x a <b>little</b> to the right, and look at what f does.</p><div class=\"ex\"><b>f(x) = x² at x = 1</b></div><div class=\"lad\"><span class=\"l\">f(1)</span><span class=\"e\">=</span><span class=\"rt\">1² = 1</span><span class=\"note\">↓ take a little step: x from 1 to 1.1</span><span class=\"l\">f(1.1)</span><span class=\"e\">=</span><span class=\"rt\">1.1² = 1.21</span><span class=\"note\">↓ f went UP (1 → 1.21) → f′(1) is positive</span><span class=\"l fin\">change</span><span class=\"e fin\">=</span><span class=\"rt fin\">+0.21</span></div><p>f grows at x = 1, so <b>f′(1) is positive</b>.</p>",
+   "ar": {
+    "title": "اختبار الخطوة الصغيرة",
+    "why": "اختبار يمكنك القيام به دائمًا بالآلة الحاسبة، حتى لو لم تتذكّر أيّ قاعدة: يعطيك إشارة المشتقة.",
+    "html": "<p>لتعرف هل <span class=\"m\">f′(a)</span> موجبة أم سالبة: حرّك x <b>قليلًا</b> إلى اليمين، وانظر ماذا تفعل f.</p><div class=\"ex\"><b><span class=\"m\">f(x) = x²</span> عند <span class=\"m\">x = 1</span></b></div><div class=\"lad\"><span class=\"l\">f(1)</span><span class=\"e\">=</span><span class=\"rt\">1² = 1</span><span class=\"note\" dir=\"rtl\">↓ خطوة صغيرة: x من 1 إلى 1.1</span><span class=\"l\">f(1.1)</span><span class=\"e\">=</span><span class=\"rt\">1.1² = 1.21</span><span class=\"note\" dir=\"rtl\">↓ f صعدت (1 ← 1.21) ← f′(1) موجبة</span><span class=\"l fin\">change</span><span class=\"e fin\">=</span><span class=\"rt fin\">+0.21</span></div><p>f تكبر عند <span class=\"m\">x = 1</span>، إذن <b><span class=\"m\">f′(1)</span> موجبة</b>.</p>"
+   }
+  },
+  {
+   "kind": "mcq",
+   "html": "<p>f(x) = 10 − x². Little step at x = 2: f(2) = 6 and f(2.1) = 5.59.</p><p>So f′(2) is…</p>",
+   "options": [
+    "positive",
+    "negative",
+    "0"
+   ],
+   "answer": 1,
+   "hint": "Did f go up or down when x went from 2 to 2.1?",
+   "explain": "<div class=\"lad\"><span class=\"l\">f(2)</span><span class=\"e\">=</span><span class=\"rt\">10 − 2² = 6</span><span class=\"note\">↓ little step: x from 2 to 2.1</span><span class=\"l\">f(2.1)</span><span class=\"e\">=</span><span class=\"rt\">10 − 2.1² = 5.59</span><span class=\"note\">↓ f went DOWN (6 → 5.59)</span><span class=\"l fin\">change</span><span class=\"e fin\">=</span><span class=\"rt fin\">−0.41</span></div><p>f went <b>down</b>, so f is shrinking at x = 2: <b>f′(2) is negative</b>.</p>",
+   "ar": {
+    "html": "<p><span class=\"m\">f(x) = 10 − x²</span>. خطوة صغيرة عند <span class=\"m\">x = 2</span>: <span class=\"m\">f(2) = 6</span> و <span class=\"m\">f(2.1) = 5.59</span>.</p><p>إذن <span class=\"m\">f′(2)</span>…</p>",
+    "options": [
+     "موجبة",
+     "سالبة",
+     "0"
+    ],
+    "hint": "هل صعدت f أم نزلت عندما ذهب x من 2 إلى 2.1؟",
+    "explain": "<div class=\"lad\"><span class=\"l\">f(2)</span><span class=\"e\">=</span><span class=\"rt\">10 − 2² = 6</span><span class=\"note\" dir=\"rtl\">↓ خطوة صغيرة: x من 2 إلى 2.1</span><span class=\"l\">f(2.1)</span><span class=\"e\">=</span><span class=\"rt\">10 − 2.1² = 5.59</span><span class=\"note\" dir=\"rtl\">↓ f نزلت (6 ← 5.59)</span><span class=\"l fin\">change</span><span class=\"e fin\">=</span><span class=\"rt fin\">−0.41</span></div><p>f <b>نزلت</b>، إذن f تصغر عند <span class=\"m\">x = 2</span>: <b><span class=\"m\">f′(2)</span> سالبة</b>.</p>"
+   }
+  },
+  {
+   "kind": "number",
+   "html": "<p>Your savings: S(t) TND after t days. S(10) = 500 and <b>S′(10) = 20</b>.</p><p>Right now (day 10), by about how many TND per day are your savings growing?</p>",
+   "answer": 20,
+   "tol": 0,
+   "unit": "TND per day",
+   "hint": "The derivative IS the speed of change: S′(10) = 20.",
+   "explain": "S′(10) = 20 means: on day 10, your savings grow by about <b>20 TND per day</b>. S(10) = 500 is where you are; S′(10) = 20 is how fast you move.",
+   "ar": {
+    "html": "<p>مدّخراتك: <span class=\"m\">S(t)</span> دينارًا بعد t يومًا. <span class=\"m\">S(10) = 500</span> و <span class=\"m\"><b>S′(10) = 20</b></span>.</p><p>الآن (اليوم 10)، بكم دينارًا في اليوم تقريبًا تكبر مدّخراتك؟</p>",
+    "unit": "دينار في اليوم",
+    "hint": "المشتقة هي سرعة التغيّر: <span class=\"m\">S′(10) = 20</span>.",
+    "explain": "<span class=\"m\">S′(10) = 20</span> تعني: في اليوم 10، مدّخراتك تكبر بحوالي <b>20 دينارًا في اليوم</b>. <span class=\"m\">S(10) = 500</span> هو أين أنت؛ <span class=\"m\">S′(10) = 20</span> هو بأيّ سرعة تتحرّك."
+   }
+  },
+  {
    "kind": "mcq",
    "title": "Teacher’s true/false",
    "html": "<p>“If f(x) = x², then f′(1) is positive.”</p>",
@@ -356,8 +415,8 @@
     "False"
    ],
    "answer": 0,
-   "hint": "Picture x²: at x = 1, is the curve going up or down?",
-   "explain": "<b>True.</b> At x = 1 the curve x² is going up, so the slope is positive (it is 2).",
+   "hint": "Use the little-step test: f(1) = 1 and f(1.1) = 1.21. Did f go up or down?",
+   "explain": "<b>True.</b> Little step: f(1) = 1 → f(1.1) = 1.21, f goes up, so f′(1) is positive (it is exactly 2).",
    "ar": {
     "title": "صحيح/خطأ من الأستاذة",
     "html": "<p>«إذا كانت <span class=\"m\">f(x) = x²</span>، فإن <span class=\"m\">f′(1)</span> موجبة.»</p>",
@@ -365,8 +424,8 @@
      "صحيح",
      "خطأ"
     ],
-    "hint": "تخيّل <span class=\"m\">x²</span>: عند <span class=\"m\">x = 1</span>، هل المنحنى يصعد أم ينزل؟",
-    "explain": "<b>صحيح.</b> عند <span class=\"m\">x = 1</span> المنحنى <span class=\"m\">x²</span> يصعد، إذن الميل موجب (يساوي 2)."
+    "hint": "استعمل اختبار الخطوة الصغيرة: <span class=\"m\">f(1) = 1</span> و <span class=\"m\">f(1.1) = 1.21</span>. هل صعدت f أم نزلت؟",
+    "explain": "<b>صحيح.</b> خطوة صغيرة: <span class=\"m\">f(1) = 1</span> ← <span class=\"m\">f(1.1) = 1.21</span>، f تصعد، إذن <span class=\"m\">f′(1)</span> موجبة (تساوي 2 بالضبط)."
    }
   },
   {
